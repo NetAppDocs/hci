@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+permalink: index.html
+summary: hci test
+---
+
+= HCI Test
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: hci, test
+
+This is a sample HCI page.
