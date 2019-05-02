@@ -26,9 +26,9 @@ NetApp Hybrid Cloud Infrastructure (HCI) in the cloud uses Kubernetes containers
 
 == NetApp HCI architecture overview
 NetApp HCI uses the following NetApp cloud services: 
-*	NetApp Kubernetes Service: Provides a Kubernetes application marketplace, Compute as a Service, and application orchestration from NetApp HCI
-*	NetApp Cloud Volumes Service: Provides ONTAP on-premise or private cloud as a service 
-*	NetApp Cloud Insights: Provides analytics for the compute, network, and storage stack for cloud services, including NetApp HCI. 
+* NetApp Kubernetes Service: Provides a Kubernetes application marketplace, Compute as a Service, and application orchestration from NetApp HCI
+* NetApp Cloud Volumes Service: Provides ONTAP on-premise or private cloud as a service 
+* NetApp Cloud Insights: Provides analytics for the compute, network, and storage stack for cloud services, including NetApp HCI. 
 
 
 == Getting started
