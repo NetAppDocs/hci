@@ -4,7 +4,7 @@ permalink: index.html
 summary: hci, cloud, onpremise, on prem
 ---
 
-= NetApp HCI in the Cloud
+= Before you begin
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,18 +13,21 @@ summary: hci, cloud, onpremise, on prem
 :keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
-NetApp Hybrid Cloud Infrastructure (HCI) in the cloud uses Kubernetes containers to stand up a system quickly and easily. NetApp HCI deploys across multiple public cloud providers and on premise. You can use NetApp HCI to deploy your services similar to what you might do with a cloud provider—all in a self-service mode without IT involvement.​
+Before you use NetApp HCI in the cloud, your cloud administrator should have prepared networking and completed other requirements.​
 
-== What you can do with NetApp HCI
+== Networking requirements
 
-*	Deploy services across cloud providers and maybe retain some on premise.
-*	Work with multiple cloud providers and avoid getting locked into one provider.
-*	Spin services up yourself without the need to involve DevOps and IT.
-*	Spin up prepared applications on demand. Maybe even your own app.
-*	Deploy services on premise as easily as you can with cloud providers.
-*	Monitor data across cloud providers and on premise with one app or service.
+*	abc
+*	abc
+*	abc
+*	abc
+*	abc
+*	abc
 
-
+== Browser requirements
+*	abc
+*	abc
+*	abc
 
 [discrete]
 == Top Links
