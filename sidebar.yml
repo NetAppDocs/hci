@@ -9,7 +9,7 @@ entries:
         url: /concept_architecture.html
   - title: Getting started
     url: /concept_gettingstarted.html
-  - title: Deploying NetApp HCI in the cloud_volumes_ontap    entries:
+  - title: Deploying NetApp HCI in the cloud_volumes_ontap
     entries:
     - title: Before you begin
       url: /reference_before.html
