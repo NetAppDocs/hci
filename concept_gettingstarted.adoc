@@ -1,7 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_gettingstarted.html
-summary: hci, cloud, onpremise, on prem
+summary: Deploying NetApp HCI is easy with the NetApp Deployment Engine.
+keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 ---
 
 = Getting started
@@ -10,7 +11,7 @@ summary: hci, cloud, onpremise, on prem
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: hci, cloud, onprem, documentation, help
+
 
 [.lead]
 Deploying NetApp HCI involves the following components:

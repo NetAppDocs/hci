@@ -1,7 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_deploying_overview.html
-summary: hci, cloud, onpremise, on prem
+summary: Deploying NetApp HCI involves using NetApp Kubernetes Service.
+keywords: netapp, hci, on premise, cloud services
 ---
 
 = Deploying NetApp HCI in the cloud
@@ -10,7 +11,6 @@ summary: hci, cloud, onpremise, on prem
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
 NetApp HCI​ installations connect to, register with, and become a deployable region with NetApp Cloud Central. Then, you can centrally manage Cloud Services for NetApp HCI on prem systems in the same way that you do in public clouds.
@@ -23,6 +23,21 @@ Deploying and configuring a NetApp HCI solution in the cloud involves these step
 * Using the updated management node along with a new NetApp Hybrid Cloud Control wizard, you enable cloud services, establish a connection to NetApp Cloud Central, and then authenticate and register your NetApp HCI installation to your Cloud Central account.
 * Manage your NetApp HCI clusters using NetApp Cloud Volumes Service, one of many services located in NetApp Cloud Central.
 
+== What happens behind the scenes?
+
+Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the initial communication tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster. The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself.
+
+The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters, and maintains previously deployed services.
+
+== Deploying NetApp HCI with the NetApp Deployment Engine.
+(brief description and then link to doc)
+
+== Enabling cloud services with the management networking_cloud_volumes_ontap
+(brief description and then link to our NKS wizard > enable cloud services doc)
+
+== Viewing new clusters in NetApp Cloud Volumes Services
+(brief description of how HCI shows in CVS. Or, describe steps you have to do in CVS to have HCI clusters show up.
+  Link to CVS docs)
 
 *	nnn
 *	mmm
@@ -31,11 +46,6 @@ Deploying and configuring a NetApp HCI solution in the cloud involves these step
 *	abc
 *	nnn
 
-== What happens behind the scenes?
-
-Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the initial communication tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster. The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself.
-
-The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters, and maintains previously deployed services.
 
 
 
