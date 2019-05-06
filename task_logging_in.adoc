@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: task_logging_in.html
+summary: hci, cloud, onpremise, on prem
+---
+
+= Logging in to NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: hci, cloud, onprem, documentation, help
+
+[.lead]
+You can log in to NetApp HCI from any web browser that has a connection to the NetApp HCI system. You should log in using a NetApp Cloud Central user account.
+
+== Steps
+
+. Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
+. Click *Go to Cloud Data Services* and select *NetApp HCI*.
++TIP: If you do not see any systems listed, make sure that the NetApp HCI administrator is added to your NetApp Cloud Central account.
+
+
+
+*	nnn
+*	mmm
+*	nnn
+*	nnn
+*	abc
+*	nnn
+
+== What happens behind the scenes?
+
+Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the initial communication tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster. The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself.
+
+The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters, and maintains previously deployed services.
+
+
+
+[discrete]
+== Top Links
+* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
+* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
+* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+
+[discrete]
+== Find more information
+
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: concept_overview.html
 summary: hci, cloud, onpremise, on prem
 ---
 
-= NetApp HCI in the Cloud
+= NetApp HCI in the cloud overview
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -23,6 +23,7 @@ NetApp Hybrid Cloud Infrastructure (HCI) in the cloud uses Kubernetes containers
 *	Spin up prepared applications on demand. Maybe even your own app.
 *	Deploy services on premise as easily as you can with cloud providers.
 *	Monitor data across cloud providers and on premise with one app or service.
+
 
 
 
