@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: index.html
+summary: hci, cloud, onpremise, on prem
+---
+
+= Getting started
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: hci, cloud, onprem, documentation, help
+
+[.lead]
+Deploying NetApp HCI involves the following:
+
+*	NetApp Deployment Engine: Deploys NetApp HCI.
+* NetApp Hybrid Cloud Controller: Deploys and configures HCI Element and enables NetApp Cloud Services for NetApp HCI.
+*	NetApp HCI management node: Establishes a connection to NetApp Cloud Central and authenticates and registers the NetApp HCI installation to a Cloud Central account.
+*	NetApp Kubernetes Service Agent: Maintains the communication tunnel, creates user clusters, and maintains deployed services such as NetApp Cloud Services.
+
+
+
+
+[discrete]
+== Top Links
+* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
+* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
+* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+
+[discrete]
+== Find more information
+
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]
