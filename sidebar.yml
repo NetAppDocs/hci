@@ -1,19 +1,17 @@
 entries:
-- title: NetApp HCI 19.1 documentation
-  url: /index.html
--title: Release notes
--title: Concepts
-  entries:
-     - title: Product overview
-       url: /concept_overview.html
-     - title: Architecture concept_overview
-       url: /concept_architecture.html
--title: Getting started
-    url: /concept_gettingstarted.html
--title: Deploying NetApp HCI in the cloud_volumes_ontap
-    url: /task_deploying_overview.html
+  - title: NetApp HCI 19.1 documentation
+    url: /index.html
+  - title: Concepts
     entries:
-        - title: Before you begin
-          url: /reference_before.html
-        - title: Logging in to Cloud Volume Services
-          url: /task_logging_in.html
+      - title: Product overview
+        url: /concept_overview.html
+      - title: Architecture concept_overview
+        url: /concept_architecture.html
+  - title: Getting started
+    url: /concept_gettingstarted.html
+  - title: Deploying NetApp HCI in the cloud_volumes_ontap    entries:
+    entries:
+    - title: Before you begin
+      url: /reference_before.html
+    - title: Logging in to Cloud Volume Services
+      url: /task_logging_in.html
