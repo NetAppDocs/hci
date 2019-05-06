@@ -1,4 +1,4 @@
-entries
+entries:
 - title: NetApp HCI 19.1 documentation
   url: /index.html
 -title: Release notes
@@ -16,4 +16,4 @@ entries
         - title: Before you begin
           url: /reference_before.html
         - title: Logging in to Cloud Volume Services
-          url: /task_logging_in.html 
+          url: /task_logging_in.html
