@@ -32,7 +32,7 @@ The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters,
 == Deploying NetApp HCI with the NetApp Deployment Engine.
 (brief description and then link to doc)
 
-== Enabling cloud services with the management networking_cloud_volumes_ontap
+== Enabling cloud services with the NetApp Hybrid Cloud Control
 (brief description and then link to our NKS wizard > enable cloud services doc)
 
 == Viewing new clusters in NetApp Cloud Volumes Services

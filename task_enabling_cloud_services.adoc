@@ -35,11 +35,13 @@ The process includes the following tasks:
 . If you do not have a NetApp Cloud Central account, click cloud.netapp.com and do these steps:
 .. On the Cloud Central page, register your NetApp HCI installation and get an authentication token.
 +
-TIP: The token is a NetApp Cloud Central general API access refresh token, which enables you to access the NetApp Cloud Central API.
-+
+The token is a NetApp Cloud Central general API access refresh token, which enables you to access the NetApp Cloud Central API.
+
 .. After you finish with the token, click Next? to return to the Hybrid Cloud Control wizard.
 . On the Enable Cloud Services page, enter your new NetApp Cloud Central region name.
-+Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
++
+Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
+
 . Select the services that you want to enable:
 .. NetApp Kubernetes Service: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers. This is required to enable NetApp HCI on the cloud.
 ..	NetApp Cloud Volumes Service for NetApp HCI: To manage NetApp HCI services in the cloud, select this.
@@ -56,7 +58,7 @@ TIP: The token is a NetApp Cloud Central general API access refresh token, which
 .	On the Review page, review your choices by expanding each option. and click *Enable*.
 NetApp Hybrid Cloud Control enables NetApp Cloud Services.
 
-[WHAT HAPPENS NEXT?]
+WHAT HAPPENS NEXT?
 
 
 
