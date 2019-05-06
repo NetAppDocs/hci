@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: concept_gettingstarted.html
 summary: hci, cloud, onpremise, on prem
 ---
 
