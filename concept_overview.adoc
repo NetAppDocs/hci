@@ -5,7 +5,7 @@ summary: NetApp HCI  with NetApp Kubernetes Service enables you to deploy servic
 keywords: netapp, hci, on premise, cloud services
 ---
 
-= NetApp HCI in the cloud overview
+= NetApp HCI in the cloud product overview
 :hardbreaks:
 :nofooter:
 :icons: font
