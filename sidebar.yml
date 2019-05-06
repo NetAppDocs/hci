@@ -5,13 +5,21 @@ entries:
     entries:
       - title: Product overview
         url: /concept_overview.html
-      - title: Architecture concept_overview
+      - title: Architecture overview
         url: /concept_architecture.html
+      - title: Real-time analytics with NetApp Cloud Insights
+        url: /concept_architecture_cloudinsights.html
+      - title: Cluster types
+        url: /concept_cluster_types.html
   - title: Getting started
     url: /concept_gettingstarted.html
-  - title: Deploying NetApp HCI in the cloud_volumes_ontap
+  - title: Deploying NetApp HCI
     entries:
     - title: Before you begin
-      url: /reference_before.html
+      url: /reference_beforeyoubegin.html
+    - title: Deploying NetApp HCI in the cloud
+      url: /task_deploying_overview.html
+    - title: Enabling cloud services with NetApp Kubernetes Services
+      url: /task_enabling_cloud_services.html
     - title: Logging in to Cloud Volume Services
       url: /task_logging_in.html
