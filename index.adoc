@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: index.html
-summary: testsummary
-keywords: hci, on premise
+summary: NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider--all in a self-service mode without IT involvement.
+keywords: netapp, hci, on premise, cloud services
 ---
 
 = NetApp HCI in the Cloud2

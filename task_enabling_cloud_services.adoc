@@ -1,0 +1,88 @@
+---
+sidebar: sidebar
+permalink: task_enabling_cloud_services.html
+summary: Using the cloud services wizard in NetApp Hybrid Cloud Control, you can enable cloud services for NetApp HCI.
+keywords: netapp, hci, on premise, cloud services, hybrid cloud control
+---
+
+= Logging in to NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Using the cloud services wizard in NetApp Hybrid Cloud Control, you can enable cloud services for NetApp HCI.
+
+.About this task
+
+Enabling NetApp Cloud Services provides access to Cloud Volumes Service with NetApp HCI. You also gain the ability to use NetApp Kubernetes Services to deploy and manage Kubernetes clusters.
+This process enables Cloud Volumes Service with a 90-day trial license. You can later upload the NetApp license file (.nlf file) to convert the trial license.
+
+The process includes the following tasks:
+*	Register your installation with NetApp Cloud Central.
+*	Select the Cloud Services you want to enable.
+*	Select the vCenter resources for NetApp Cloud Services.
+*	Configure networking.
+
+
+.Steps
+
+. Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
+. Access the HCC wizard (HOW?)
+. From the Hybrid Cloud Control wizard, click *Enable Cloud Services*.
+. If you do not have a NetApp Cloud Central account, click cloud.netapp.com and do these steps:
+.. On the Cloud Central page, register your NetApp HCI installation and get an authentication token.
++
+TIP: The token is a NetApp Cloud Central general API access refresh token, which enables you to access the NetApp Cloud Central API.
++
+.. After you finish with the token, click Next? to return to the Hybrid Cloud Control wizard.
+. On the Enable Cloud Services page, enter your new NetApp Cloud Central region name.
++Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
+. Select the services that you want to enable:
+.. NetApp Kubernetes Service: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers. This is required to enable NetApp HCI on the cloud.
+..	NetApp Cloud Volumes Service for NetApp HCI: To manage NetApp HCI services in the cloud, select this.
+..	NetApp Cloud Insights: To monitor NetApp HCI services in the cloud, select this.
+. Click *Continue*.
+.	On the vCenter page, data center and cluster information.
+. Click *Continue*.
+.	On the Networking page, review the hover text for each of the following an configure networking information for each. [The hover text explains each of these and includes the text below, so suggest not including the text below and letting the hover text do the work of explaining. I put it in just for now until we see the hover text in action.]
+* NetApp Kubernetes Service Management Network: Enter network information needed to manage the NetApp Kubernetes Service. (Not very helpful)
+*	Cloud Volumes Service Management Network: Enter network information needed to manage the Cloud Volumes Service.
+*	Cloud Volumes Service Cluster Network: Enter network information for all internal communication between nodes in the Cloud Volumes Service Cluster.
+*	Cloud Volumes Service Storage Network: Enter network information for all communication between the Cloud Volumes Service Cluster and the NetApp HCI storage cluster.
+.	Click *Continue*.
+.	On the Review page, review your choices by expanding each option. and click *Enable*.
+NetApp Hybrid Cloud Control enables NetApp Cloud Services.
+
+[WHAT HAPPENS NEXT?]
+
+
+
+*	nnn
+*	mmm
+*	nnn
+*	nnn
+*	abc
+*	nnn
+
+== What happens behind the scenes?
+
+Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the initial communication tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster. The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself.
+
+The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters, and maintains previously deployed services.
+
+
+
+[discrete]
+== Top Links
+* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
+* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
+* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+
+[discrete]
+== Find more information
+
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]

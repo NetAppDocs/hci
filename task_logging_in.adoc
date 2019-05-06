@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar
 permalink: task_logging_in.html
-summary: hci, cloud, onpremise, on prem
+summary: You can log in to NetApp HCI from any web browser that has a connection to the NetApp HCI system.
+keywords: netapp, hci, on premise, cloud services
 ---
 
-= Logging in to NetApp HCI
+= Logging in to NetApp Cloud Data Services
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
 You can log in to NetApp HCI from any web browser that has a connection to the NetApp HCI system. You should log in using a NetApp Cloud Central user account.

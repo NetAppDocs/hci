@@ -1,7 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_architecture.html
-summary: hci, cloud, onpremise, on prem
+summary: NetApp HCI in the cloud works with NetApp Kubernetes Service.
+keywords: netapp, hci, on premise, cloud services
 ---
 
 = NetApp HCI architecture
@@ -10,7 +11,6 @@ summary: hci, cloud, onpremise, on prem
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
 NetApp HCI in the cloud works with NetApp Kubernetes Service, NetApp Cloud Volumes Service, and NetApp Cloud Insights.
@@ -31,12 +31,6 @@ Deploying NetApp HCI involves the following:
 *	NetApp HCI management node: Establishes a connection to NetApp Cloud Central and authenticates and registers the NetApp HCI installation to a Cloud Central account.
 *	NetApp Kubernetes Service Agent: Maintains the communication tunnel, creates user clusters, and maintains deployed services such as NetApp Cloud Services.
 
-== Types of clusters
-Types of clusters you'll encounter:
-
-*	Bootstrap agent: Establishes an initial tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster.
-*	Service cluster: Deploys services. The service cluster connects to NetApp Kubernetes Service and takes care of itself.
-* User clusters:
 
 [discrete]
 == Top Links
