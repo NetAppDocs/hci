@@ -26,14 +26,14 @@ You can quickly ascertain the health of your cloud services and see information 
 * and much more
 
 This NetApp Cloud Insights Dashboard shows analytics for NetApp Kubernetes Service clusters and pods.
-image::cloudinsights_K8S_overview.gif[Cloud Insights dashboard image]
+image:cloudinsights_K8S_overview.png[Cloud Insights dashboard image]
 
 == A unique NetApp HCI Data Collector
 
 Each vendor for which Cloud Insights provides analytics has its own Data Collector running on a central Acquisition Unit that connects with and collects stack metrics. Similarly, Cloud Insights employs a unique Data Collector for NetApp HCI. Getting a new Data Collector deployed is easy with a task of less than a minute.
 Enter just the Data Collector-specific information in a web form and then the Data Collector is up and running.
 
-image::cloudinsights_data_collector[Cloud Insights Data Collector for NetApp HCI]
+image:cloudinsights_data_collector.png[Cloud Insights Data Collector for NetApp HCI]
 
 [discrete]
 == Top Links
