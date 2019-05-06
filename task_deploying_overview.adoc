@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: task_deploying_overview.html
 summary: hci, cloud, onpremise, on prem
 ---
 
@@ -31,7 +31,7 @@ Deploying and configuring a NetApp HCI solution in the cloud involves these step
 *	abc
 *	nnn
 
-== What happens behind the scenes? 
+== What happens behind the scenes?
 
 Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the initial communication tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster. The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself.
 

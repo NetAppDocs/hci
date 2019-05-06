@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: reference_beforeyoubegin.html
 summary: hci, cloud, onpremise, on prem
 ---
 
