@@ -13,7 +13,7 @@ summary: hci, cloud, onpremise, on prem
 :keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
-Deploying NetApp HCI involves the following:
+Deploying NetApp HCI involves the following components:
 
 *	NetApp Deployment Engine: Deploys NetApp HCI.
 * NetApp Hybrid Cloud Controller: Deploys and configures HCI Element and enables NetApp Cloud Services for NetApp HCI.
