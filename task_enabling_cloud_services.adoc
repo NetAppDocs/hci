@@ -5,7 +5,7 @@ summary: Using the cloud services wizard in NetApp Hybrid Cloud Control, you can
 keywords: netapp, hci, on premise, cloud services, hybrid cloud control
 ---
 
-= Logging in to NetApp HCI
+= Enabling cloud services
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -26,11 +26,10 @@ The process includes the following tasks:
 *	Select the vCenter resources for NetApp Cloud Services.
 *	Configure networking.
 
-
 .Steps
 
 . Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
-. Access the HCC wizard (HOW?)
+. Access the Hybrid Cloud Control wizard (HOW?)
 . From the Hybrid Cloud Control wizard, click *Enable Cloud Services*.
 . If you do not have a NetApp Cloud Central account, click cloud.netapp.com and do these steps:
 .. On the Cloud Central page, register your NetApp HCI installation and get an authentication token.
@@ -49,13 +48,15 @@ Note: This region name will be used to identify this NetApp HCI installation and
 . Click *Continue*.
 .	On the vCenter page, data center and cluster information.
 . Click *Continue*.
-.	On the Networking page, review the hover text for each of the following an configure networking information for each. [The hover text explains each of these and includes the text below, so suggest not including the text below and letting the hover text do the work of explaining. I put it in just for now until we see the hover text in action.]
-* NetApp Kubernetes Service Management Network: Enter network information needed to manage the NetApp Kubernetes Service. (Not very helpful)
+.	On the Networking page, review the hover text for each of the following an configure networking information for each.
+* NetApp Kubernetes Service Management Network: Enter network information needed to manage the NetApp Kubernetes Service.
 *	Cloud Volumes Service Management Network: Enter network information needed to manage the Cloud Volumes Service.
 *	Cloud Volumes Service Cluster Network: Enter network information for all internal communication between nodes in the Cloud Volumes Service Cluster.
 *	Cloud Volumes Service Storage Network: Enter network information for all communication between the Cloud Volumes Service Cluster and the NetApp HCI storage cluster.
 .	Click *Continue*.
 .	On the Review page, review your choices by expanding each option. and click *Enable*.
+
+.Results
 NetApp Hybrid Cloud Control enables NetApp Cloud Services.
 
 WHAT HAPPENS NEXT?
@@ -69,11 +70,6 @@ WHAT HAPPENS NEXT?
 *	abc
 *	nnn
 
-== What happens behind the scenes?
-
-Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the initial communication tunnel to the NetApp Kubernetes Service Controller, builds a temporary bootstrap cluster, and creates a service cluster. The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself.
-
-The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters, and maintains previously deployed services.
 
 
 
