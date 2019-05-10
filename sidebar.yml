@@ -19,7 +19,24 @@ entries:
       url: /reference_beforeyoubegin.html
     - title: Deploying NetApp HCI in the cloud
       url: /task_deploying_overview.html
-    - title: Enabling cloud services with NetApp Kubernetes Services
+    - title: Enabling cloud services using NetApp Hybrid Cloud Control
       url: /task_enabling_cloud_services.html
+    - title: Creating a Kubernetes cluster using NetApp Kubernetes Service
+      url: /task_NKS_create_cluster.html
     - title: Logging in to Cloud Volume Services
       url: /task_logging_in.html
+    - title: Creating cloud volumes using Cloud Volumes Service
+      url: /task_cvs_create_cloud_volumes.html
+  - title: Managing clusters and NetApp HCI cloud volumes
+    entries:
+    - title: Managing Kubernetes clusters and NetApp HCI cloud volumes
+      url: /concept_managing_overview.html
+    - title: Adding applications to your Kubernetes clusters
+      url: /task_NKS_adding_application.html
+      s.html
+  -title: Updating management services
+    entries:
+    - title: Updating management services with the management node
+      url:/task_mnode_updating_management_services.html
+    - title: Management node service listing
+      url:/reference_mnode_management_services_listing.html

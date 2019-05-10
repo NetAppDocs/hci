@@ -19,9 +19,10 @@ NetApp HCI​ installations connect to, register with, and become a deployable r
 
 Deploying and configuring a NetApp HCI solution in the cloud involves these steps.  And, our updated user interfaces help you every step of the way:
 
-* Deploy and configure NetApp HCI using the quick and easy NetApp Deployment Engine that you’ve used previously.
-* Using the updated management node along with a new NetApp Hybrid Cloud Control wizard, you enable cloud services, establish a connection to NetApp Cloud Central, and then authenticate and register your NetApp HCI installation to your Cloud Central account.
-* Manage your NetApp HCI clusters using NetApp Cloud Volumes Service, one of many services located in NetApp Cloud Central.
+* Deploy and configure NetApp HCI using the quick and easy NetApp Deployment Engine that you’ve used previously. [Link to NDE Guide in Doc Center]
+* link:task_enabling_cloud_services.html[Enable cloud services] using the updated management node along with a new NetApp Hybrid Cloud Control wizard. You establish a connection to NetApp Cloud Central and authenticate and register your NetApp HCI installation to your Cloud Central account.
+* link:task_NKS_create_cluster.html[Create a Kubernetes cluster] using the NetApp Kubernetes Service, one of many services located on NetApp Cloud Central.
+* link:task_cvs_create_cloud_volumes.html[Create cloud volumes] using NetApp Cloud Volumes Service, another service on NetApp Cloud Central.
 
 == What happens behind the scenes?
 
@@ -29,15 +30,6 @@ Behind the scenes, NetApp HCI creates a bootstrap agent that establishes the ini
 
 The NetApp Kubernetes Service agent maintains the tunnel, creates user clusters, and maintains previously deployed services.
 
-== Deploying NetApp HCI with the NetApp Deployment Engine.
-(brief description and then link to doc)
-
-== Enabling cloud services with the NetApp Hybrid Cloud Control
-(brief description and then link to our NKS wizard > enable cloud services doc)
-
-== Viewing new clusters in NetApp Cloud Volumes Services
-(brief description of how HCI shows in CVS. Or, describe steps you have to do in CVS to have HCI clusters show up.
-  Link to CVS docs)
 
 *	nnn
 *	nnn
