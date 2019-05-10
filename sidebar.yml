@@ -33,10 +33,9 @@ entries:
       url: /concept_managing_overview.html
     - title: Adding applications to your Kubernetes clusters
       url: /task_NKS_adding_application.html
-      s.html
-  -title: Updating management services
+  - title: Updating management services
     entries:
     - title: Updating management services with the management node
-      url:/task_mnode_updating_management_services.html
+      url: /task_mnode_updating_management_services.html
     - title: Management node service listing
-      url:/reference_mnode_management_services_listing.html
+      url: /reference_mnode_management_services_listing.html
