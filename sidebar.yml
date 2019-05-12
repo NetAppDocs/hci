@@ -13,6 +13,7 @@ entries:
         url: /concept_cluster_types.html
   - title: Getting started
     url: /concept_gettingstarted.html
+    url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2850370
   - title: Deploying NetApp HCI
     entries:
     - title: Before you begin
