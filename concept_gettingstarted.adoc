@@ -14,12 +14,11 @@ keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 
 
 [.lead]
-Deploying NetApp HCI involves the following components:
+You might want to consider the following to get started:
 
-*	NetApp Deployment Engine: Deploys NetApp HCI.
-* NetApp Hybrid Cloud Controller: Deploys and configures HCI Element and enables NetApp Cloud Services for NetApp HCI.
-*	NetApp HCI management node: Establishes a connection to NetApp Cloud Central and authenticates and registers the NetApp HCI installation to a Cloud Central account.
-*	NetApp Kubernetes Service Agent: Maintains the communication tunnel, creates user clusters, and maintains deployed services such as NetApp Cloud Services.
+*	Review port, networking, and browser requirements.
+* Review your  NetApp Cloud Central account information or sign up, if you don't already have an account.
+* Check out licensing requirements.
 
 
 
