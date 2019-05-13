@@ -14,7 +14,7 @@ entries:
   - title: Getting started
     entries:
       -title: Getting started
-       url: /concept_gettingstarted.html
+        url: /concept_gettingstarted.html
       - title: Before you begin
         url: /reference_beforeyoubegin.html
   - title: Deploying NetApp HCI
