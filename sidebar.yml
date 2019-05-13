@@ -12,13 +12,13 @@ entries:
       - title: Cluster types
         url: /concept_cluster_types.html
   - title: Getting started
-    url: /concept_gettingstarted.html
-    url: /https://library.netapp.com/ecm/ecm_download_file/ECMLP2850370
-    url: /https://library.netapp.com/ecm/ecm_download_file/ECMLP2850917
+    entries:
+      -title: Getting started
+        url: /concept_gettingstarted.html
+      - title: Before you begin
+        url: /reference_beforeyoubegin.html
   - title: Deploying NetApp HCI
     entries:
-    - title: Before you begin
-      url: /reference_beforeyoubegin.html
     - title: Deploying NetApp HCI in the cloud
       url: /task_deploying_overview.html
     - title: Enabling cloud services using NetApp Hybrid Cloud Control

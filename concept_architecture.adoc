@@ -21,10 +21,11 @@ NetApp HCI uses the following NetApp cloud services:
 * NetApp Cloud Volumes Service: Provides ONTAP on-premise or private cloud as a service
 * NetApp Cloud Insights: Provides analytics for the compute, network, and storage stack for cloud services, including NetApp HCI.
 
+image:architecture_overview.png[Architecture image for NetApp HCI]
 
 == Components
 
-Deploying NetApp HCI involves the following:
+NetApp HCI includes the following components:
 
 *	NetApp Deployment Engine: Deploys NetApp HCI.
 * NetApp Hybrid Cloud Controller: Deploys and configures HCI Element and enables NetApp Cloud Services for NetApp HCI.

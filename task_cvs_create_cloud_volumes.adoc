@@ -13,63 +13,38 @@ keywords: netapp, hci, on premise, cloud services, cloud volumes
 :imagesdir: ./media/
 
 [.lead]
-FIX Using the cloud services wizard in NetApp Hybrid Cloud Control, you can enable cloud services for NetApp HCI.
+After you create your Kubernetes cluster, you typically want to add cloud volumes to the cluster.
+These cloud volumes will reside on NetApp HCI.
 
 .About this task
 
-Enabling NetApp Cloud Services provides access to Cloud Volumes Service with NetApp HCI. You also gain the ability to use NetApp Kubernetes Services to deploy and manage Kubernetes clusters.
-This process enables Cloud Volumes Service with a 90-day trial license. You can later upload the NetApp license file (.nlf file) to convert the trial license.
-
-The process includes the following tasks:
-*	Register your installation with NetApp Cloud Central.
-*	Select the Cloud Services you want to enable.
-*	Select the vCenter resources for NetApp Cloud Services.
-*	Configure networking.
+You can access NetApp Cloud Volumes Service in several ways:
+*	Directly from NetApp Kubernetes Service
+*	From NetApp Cloud Central
+*	From any NetApp Cloud service
 
 .Steps
 
 . Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
-. Access the Hybrid Cloud Control wizard (HOW?)
-. From the Hybrid Cloud Control wizard, click *Enable Cloud Services*.
-. If you do not have a NetApp Cloud Central account, click cloud.netapp.com and do these steps:
-.. On the Cloud Central page, register your NetApp HCI installation and get an authentication token.
+. Access the NetApp Kubernetes Service.
+. From the NetApp Kubernetes Service, click the *NetApp* icon in the upper left to show the NetApp Cloud Central services list.
 +
-The token is a NetApp Cloud Central general API access refresh token, which enables you to access the NetApp Cloud Central API.
+image:cvs_cloud_central_menu.png[NetApp Cloud Central menu image]
+. Click *Cloud Volumes Service*.
++The Cloud Volumes Service Volumes page appears:
+image:cvs_volumes_page.png[NetApp Cloud Volumes Service - Volumes page image]
 
-.. After you finish with the token, click Next? to return to the Hybrid Cloud Control wizard.
-. On the Enable Cloud Services page, enter your new NetApp Cloud Central region name.
-+
-Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
-
-. Select the services that you want to enable:
-.. NetApp Kubernetes Service: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers. This is required to enable NetApp HCI on the cloud.
-..	NetApp Cloud Volumes Service for NetApp HCI: To manage NetApp HCI services in the cloud, select this.
-..	NetApp Cloud Insights: To monitor NetApp HCI services in the cloud, select this.
-. Click *Continue*.
-.	On the vCenter page, data center and cluster information.
-. Click *Continue*.
-.	On the Networking page, review the hover text for each of the following an configure networking information for each.
-* NetApp Kubernetes Service Management Network: Enter network information needed to manage the NetApp Kubernetes Service.
-*	Cloud Volumes Service Management Network: Enter network information needed to manage the Cloud Volumes Service.
-*	Cloud Volumes Service Cluster Network: Enter network information for all internal communication between nodes in the Cloud Volumes Service Cluster.
-*	Cloud Volumes Service Storage Network: Enter network information for all communication between the Cloud Volumes Service Cluster and the NetApp HCI storage cluster.
-.	Click *Continue*.
-.	On the Review page, review your choices by expanding each option. and click *Enable*.
+. Click *Create New Volume*.
+.	On the Volumes page, review the hover text for each field and enter or select the following:
+.. Enter the volume name, service level, and time zone for the volume.
+.. For the provider, choose *NetApp Private Cloud*.
+.. Choose the region.
+. Click *Create Cloud Volume*.
 
 .Results
-NetApp Hybrid Cloud Control enables NetApp Cloud Services.
+The volume appears in the Volumes page showing the NetApp icon in the Provider column.
 
-WHAT HAPPENS NEXT?
-
-
-
-*	nnn
-*	mmm
-*	nnn
-*	nnn
-*	abc
-*	nnn
-
+For details, see NetApp Cloud Volumes Services information about creating cloud volumes.
 
 
 
