@@ -13,8 +13,8 @@ entries:
         url: /concept_cluster_types.html
   - title: Getting started
     entries:
-      -title: Getting started
-       url: /concept_gettingstarted.html
+      - title: Getting started
+        url: /concept_gettingstarted.html
       - title: Before you begin
         url: /reference_beforeyoubegin.html
   - title: Deploying NetApp HCI
