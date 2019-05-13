@@ -18,18 +18,21 @@ Using the cloud services wizard in NetApp Hybrid Cloud Control, you can enable c
 .About this task
 
 Enabling NetApp Cloud Services provides access to Cloud Volumes Service with NetApp HCI. You also gain the ability to use NetApp Kubernetes Services to deploy and manage Kubernetes clusters.
+
 This process enables Cloud Volumes Service with a 90-day trial license. You can later upload the NetApp license file (.nlf file) to convert the trial license.
 
 The process includes the following tasks:
-*	Register your installation with NetApp Cloud Central.
+
+* Sign in to or register with NetApp Cloud Central.
 *	Select the Cloud Services you want to enable.
+*	Register your installation with NetApp Cloud Central.
 *	Select the vCenter resources for NetApp Cloud Services.
 *	Configure networking.
 
-.Steps
+== Signing in to or registering with NetApp Cloud Central
 
 . Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
-. Access the Hybrid Cloud Control wizard (HOW?)
+. Access the Hybrid Cloud Control wizard.
 +
 image::hcc_enable_cloud_services.png[NetApp Hybrid Cloud Control wizard image]
 +
@@ -40,17 +43,33 @@ image::hcc_enable_cloud_services.png[NetApp Hybrid Cloud Control wizard image]
 The token is a NetApp Cloud Central general API access refresh token, which enables you to access the NetApp Cloud Central API.
 
 .. After you finish with the token, click Next? to return to the Hybrid Cloud Control wizard.
-. On the Enable Cloud Services page, enter your new NetApp Cloud Central region name.
-+
-Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
 
-. Select the services that you want to enable:
+== Selecting the Cloud Services you want to enable
+. On the Enable Cloud Services > Services page, select the services that you want to enable:
 .. NetApp Kubernetes Service: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers. This is required to enable NetApp HCI on the cloud.
 ..	NetApp Cloud Volumes Service for NetApp HCI: To manage NetApp HCI services in the cloud, select this.
 ..	NetApp Cloud Insights: To monitor NetApp HCI services in the cloud, select this.
 . Click *Continue*.
 .	On the vCenter page, data center and cluster information.
 . Click *Continue*.
+
+== Registering your installation with NetApp Cloud Central
+. On the Enable Cloud Services page, enter your new NetApp Cloud Central region name.
++
+Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
+
+== Selecting the vCenter resources
+
+. On the vCenter page, enter the following:
+.. Datacenter
+.. Cluster:
++
+The vCenter instance and administrative user connected to it is displayed.
++
+. Click *Continue*.
+
+== Selecting networking options
+
 .	On the Networking page, review the hover text for each of the following an configure networking information for each.
 * NetApp Kubernetes Service Management Network: Enter network information needed to manage the NetApp Kubernetes Service.
 *	Cloud Volumes Service Management Network: Enter network information needed to manage the Cloud Volumes Service.
@@ -61,20 +80,10 @@ Note: This region name will be used to identify this NetApp HCI installation and
 
 .Results
 NetApp Hybrid Cloud Control enables NetApp Cloud Services and returns to the first page showing that cloud services have been enabled.
-+
-image::hcc_enable_cloud_services_enabled.png[NetApp Hybrid Cloud Control wizard image showing cloud services enabled]
-+
+image:hcc_enable_cloud_services_enabled.png[NetApp Hybrid Cloud Control wizard image showing cloud services enabled]
 
-.Next Steps
-link:task_NKS_create_cluster.html[Create a Kubernetes cluster] using the NetApp Kubernetes Service.
-
-
-*	nnn
-*	mmm
-*	nnn
-*	nnn
-*	abc
-*	nnn
+.After you finish
+Continue with link:task_NKS_create_cluster.html[Creating a Kubernetes cluster] using the NetApp Kubernetes Service.
 
 
 
