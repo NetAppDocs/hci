@@ -17,9 +17,9 @@ entries:
         url: /concept_gettingstarted.html
       - title: Before you begin
         url: /reference_beforeyoubegin.html
-  - title: Deploying NetApp HCI
+  - title: Enabling cloud services on NetApp HCI
     entries:
-    - title: Deploying NetApp HCI in the cloud
+    - title: Deploying cloud services on NetApp HCI overview
       url: /task_deploying_overview.html
     - title: Enabling cloud services using NetApp Hybrid Cloud Control
       url: /task_enabling_cloud_services.html
