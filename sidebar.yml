@@ -24,9 +24,9 @@ entries:
       - title: Requirements before you begin
         url: /reference_requirements_beforeyoubegin.html
       - title: Licensing
-        url: /concept_licensing.html 
+        url: /concept_licensing.html
       - title: Getting a NetApp Kubernetes Service API token
-        url: /task_getting_a_netapp_kubernetes_service_api_token
+        url: /task_getting_a_netapp_kubernetes_service_api_token.html
   - title: Enabling cloud services on NetApp HCI
     entries:
     - title: Deploying cloud services on NetApp HCI overview
