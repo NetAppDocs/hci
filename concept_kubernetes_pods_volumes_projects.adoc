@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: concept_kubernetes_pods_volumes_projects.html
+summary: Cloud services on NetApp HCI involves pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service.
+keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
+---
+
+= Kubernetes pods, volumes, and projects
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud services on NetApp HCI involves pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service.
+
+Each Kubernetes _pod_ is a set of one or more containers. Pods run in several replicas of each service ensuring no single point of failure for critical services. In the Kubernetes architecture, a set of containers can be deployed and scaled together. This is achieved by using pods, which are the minimum unit of deployment in a Kubernetes cluster that enable more than one container to share the same resources, such as IP address and file systems.
+
+A Kubernetes _volume_ is storage provisioned directly to a pod. The NetApp Kubernetes Service supports a wide variety of volume types, including Amazon EBS, Azure Disk Storage, Google Persistent Disk, NFS, and many more. Volumes enable the containers within a pod to share information and are destroyed when their parent pod is deleted.
+
+With the NetApp Kubernetes Service, you can use a _persistent volume_, one that exists independently of any specific pod and with its own lifetime. Persistent volumes can be used to support stateful applications, such as database services, enabling all components of an enterprise solution to be deployed and managed by the NetApp Kubernetes Service. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
+
+A Kubernetes _project_ is a construct for grouping applications, for example, Wordspace or MySQL. A project is a namespace with RBAC on the Kubernetes cluster.
+
+[discrete]
+== Top Links
+* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
+* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
+* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+
+[discrete]
+== Find more information
+
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar
+permalink: concept_behind_the_scenes.html
+summary: What happens behind the scenes when you enable cloud services on NetApp HCI
+keywords: netapp, hci, on premise, cloud services, cluster
+---
+
+= What happens behind the scenes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Behind the scenes, NetApp HCI creates a bootstrap agent that establishes an encrypted communication tunnel to the NetApp Kubernetes Service control plane and creates a service cluster.
+
+The _service cluster_, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself. The NetApp Kubernetes Service agent maintains the tunnel, maintains deployed service clusters, and enables you to create _workload clusters_ on which you can place applications or solutions.
+
+After a service cluster is deployed on your system, NetApp HCI is able to push requested software along with updates to your NetApp HCI systems.
+
+
+
+[discrete]
+== Top Links
+* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
+* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
+* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+
+[discrete]
+== Find more information
+
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]

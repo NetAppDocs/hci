@@ -9,14 +9,24 @@ entries:
         url: /concept_architecture.html
       - title: Real-time analytics with NetApp Cloud Insights
         url: /concept_architecture_cloudinsights.html
-      - title: Cluster types
+      - title: What happens behind the scenes
+        url: /concept_behind_the_scenes.html
+      - title: Cluster types on NetApp HCI
         url: /concept_cluster_types.html
-  - title: Getting started
+      - title: Kubernetes pods, volumes, and projects
+        url: /concept_kubernetes_pods_volumes_projects.html
+  - title: Getting started with cloud services on NetApp HCI
     entries:
-      - title: Getting started
+      - title: Getting started overview
         url: /concept_gettingstarted.html
-      - title: Before you begin
-        url: /reference_beforeyoubegin.html
+      - title: Cloud Central accounts
+        url: /concept_cloud_central_accounts.html
+      - title: Requirements before you begin
+        url: /reference_requirements_beforeyoubegin.html
+      - title: Licensing
+        url: /concept_licensing.html 
+      - title: Getting a NetApp Kubernetes Service API token
+        url: /task_getting_a_netapp_kubernetes_service_api_token
   - title: Enabling cloud services on NetApp HCI
     entries:
     - title: Deploying cloud services on NetApp HCI overview

@@ -1,27 +1,21 @@
 ---
 sidebar: sidebar
-permalink: concept_gettingstarted.html
-summary: Deploying NetApp HCI is easy with the NetApp Deployment Engine.
-keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
+permalink: concept_licensing.html
+summary: NetApp HCI with NetApp Kubernetes Service shows you different types of clusters.
+keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 ---
 
-= Getting started overview
+= Licensing
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
 
-
 [.lead]
-You might want to consider the following to get started:
+You can use a 30-day trial license and later convert it to a production license.
 
-*	Review port, networking, and browser requirements.
-* Review your  NetApp Cloud Central account information or sign up, if you don't already have an account.
-* Check out licensing requirements.
-* Get a NetApp Kubernetes Service API token. You can obtain this token before enable cloud services or during the process.
-
-
+[MORE ABOUT LICENSING?? LINK to topic about converting license.]
 
 [discrete]
 == Top Links

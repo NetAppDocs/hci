@@ -1,0 +1,49 @@
+---
+sidebar: sidebar
+permalink: task_getting_a_netapp_kubernetes_service_api_token.html
+summary: Enabling cloud services for NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your NetApp Cloud Central account.
+keywords: netapp, hci, on premise, cloud services
+---
+
+= Getting a NetApp Kubernetes Service API token
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Enabling cloud services for NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your NetApp Cloud Central account.
+
+You can complete these steps before enabling cloud services or during the process, when a wizard displays a link to get the API token.
+
+== Steps
+
+. Open a web browser and browse to NetApp Cloud Central for NetApp Kubernetes Service. https://nks.netapp.io
+. Log in to the NetApp Kubernetes Service by providing the NetApp HCI storage cluster administrator credentials.
++
+If you do not have an account, click Sign Up and provide the required information.
+. Click *Go to Cloud Data Services* and select *NetApp HCI*.
+. Click the user icon at the top right of the screen.
+. In the resulting menu, click *Edit Profile*.
+. In the API Tokens section, click *Add Token*, enter a token name, and click *Create*.
++
+A new token is created; the cURL command changes to include the new token string.
+. Run the displayed cURL command in a Unix or Mac command terminal.
++
+A response of [] indicates that the token registration was a success.
+. Copy the token and save it in a file so that you can later paste it when needed.
+
+
+
+[discrete]
+== Top Links
+* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
+* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
+* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+
+[discrete]
+== Find more information
+
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]
