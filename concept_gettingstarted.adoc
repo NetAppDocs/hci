@@ -20,25 +20,12 @@ You might want to consider the following to get started:
 * Review port, networking, and browser requirements.
 * Check out licensing requirements.
 * Get a NetApp Kubernetes Service API token.
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can get the NetApp Kubernetes Service API token before enabling cloud services or during the process when a wizard provides a link.
-</td>
-</tr>
-</table>
-</div>
-
 
 
 [discrete]
 == Top Links
-* link:task_deploying_overview[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights[Real-time analytics with NetApp Cloud Insights]
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]

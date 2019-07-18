@@ -35,10 +35,11 @@ Enter just the Data Collector-specific information in a web form and then the Da
 
 image:cloudinsights_data_collector.png[Cloud Insights Data Collector for NetApp HCI]
 
+
 [discrete]
 == Top Links
-* link:task_deploying_overview[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights[Real-time analytics with NetApp Cloud Insights]
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]
