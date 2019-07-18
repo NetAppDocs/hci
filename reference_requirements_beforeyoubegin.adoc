@@ -14,16 +14,17 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 [.lead]
 Before you use cloud services on NetApp HCI, your cloud administrator should have prepared networking and completed other requirements.​
+
 == System requirements
-* A deployed NetApp HCI using the NetApp Deployment Engine.
-* Upgraded NetApp HCI management services. See management services information in the NetApp Element User Guide.
-* NetApp Hybrid Cloud Control available on the management node of your system.
+* A deployed NetApp HCI using the NetApp Deployment Engine
+* Upgraded NetApp HCI management services. See management services information in the NetApp Element User Guide
+* NetApp Hybrid Cloud Control available on the management node of your system
 * NetApp HCI management node 2.1 (requires updates from the 2.0 version shipped with the 19.1 release)
-* Your version of VMware vCenter supported by the NetApp HCI Deployment Engine (NDE).
+* Your version of VMware vCenter supported by the NetApp HCI Deployment Engine (NDE)
 
 == NetApp Kubernetes Service requirements
-* An NKS account.
-* An NKS API token, which authorizes the installer to access the NKS organization. You can create this before or duing the process of enabling cloud services on NetApp HCI.  
+* An NKS account
+* An NKS API token, which authorizes the installer to access the NKS organization. You can create this before or duing the process of enabling cloud services on NetApp HCI
 
 == Networking requirements
 
