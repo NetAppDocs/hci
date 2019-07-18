@@ -30,7 +30,7 @@ You might want to consider the following to get started:
 
 [discrete]
 == Find more information
-
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
 * https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
 * https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
