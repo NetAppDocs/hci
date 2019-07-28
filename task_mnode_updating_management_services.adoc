@@ -13,66 +13,39 @@ keywords: netapp, hci, on premise, cloud services, mnode, management services
 :imagesdir: ./media/
 
 [.lead]
-FIX Using the cloud services wizard in NetApp Hybrid Cloud Control, you can enable cloud services for NetApp HCI.
+The Element 11.3 management node is based on a new modular architecture that provides individual services. You can manually update management services using the REST API UI from the management node. Management services updates are available as service bundles from an online software repository.
 
 .About this task
 
-Enabling NetApp Cloud Services provides access to Cloud Volumes Service with NetApp HCI. You also gain the ability to use NetApp Kubernetes Services to deploy and manage Kubernetes clusters.
-This process enables Cloud Volumes Service with a 90-day trial license. You can later upload the NetApp license file (.nlf file) to convert the trial license.
+These modular services provide central and extended management functionality for NetApp HCI and SolidFire all-flash storage systems. Services include system telemetry, logging, and update services, the QoSSIOC service for Element Plug-in for vCenter Server, as well as capabilities relevant to on-premises cloud solutions, such as NetApp Hybrid Cloud Control and the NetApp Kubernetes Service, provided by NetApp HCI.
 
-The process includes the following tasks:
-*	Register your installation with NetApp Cloud Central.
-*	Select the Cloud Services you want to enable.
-*	Select the vCenter resources for NetApp Cloud Services.
-*	Configure networking.
+You should perform management services updates from the NetApp Deployment Engine monitoring page.
+
+Management services include the SIOC service for the Element Plug-in for vCenter, the Active IQ collector service, the NetApp HCI monitoring service (for NetApp HCI installations only) and additional services. Updates to non-service-based components of the management node are provided as updated images (OVA or ISO) and cannot be updated using this procedure.
 
 .Steps
 
-. Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
-. Access the Hybrid Cloud Control wizard (HOW?)
-. From the Hybrid Cloud Control wizard, click *Enable Cloud Services*.
-. If you do not have a NetApp Cloud Central account, click cloud.netapp.com and do these steps:
-.. On the Cloud Central page, register your NetApp HCI installation and get an authentication token.
-+
-The token is a NetApp Cloud Central general API access refresh token, which enables you to access the NetApp Cloud Central API.
-
-.. After you finish with the token, click Next? to return to the Hybrid Cloud Control wizard.
-. On the Enable Cloud Services page, enter your new NetApp Cloud Central region name.
-+
-Note: This region name will be used to identify this NetApp HCI installation and will be used as the site name for any NetApp Kubernetes clusters created on this installation.
-
-. Select the services that you want to enable:
-.. NetApp Kubernetes Service: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers. This is required to enable NetApp HCI on the cloud.
-..	NetApp Cloud Volumes Service for NetApp HCI: To manage NetApp HCI services in the cloud, select this.
-..	NetApp Cloud Insights: To monitor NetApp HCI services in the cloud, select this.
-. Click *Continue*.
-.	On the vCenter page, data center and cluster information.
-. Click *Continue*.
-.	On the Networking page, review the hover text for each of the following an configure networking information for each.
-* NetApp Kubernetes Service Management Network: Enter network information needed to manage the NetApp Kubernetes Service.
-*	Cloud Volumes Service Management Network: Enter network information needed to manage the Cloud Volumes Service.
-*	Cloud Volumes Service Cluster Network: Enter network information for all internal communication between nodes in the Cloud Volumes Service Cluster.
-*	Cloud Volumes Service Storage Network: Enter network information for all communication between the Cloud Volumes Service Cluster and the NetApp HCI storage cluster.
-.	Click *Continue*.
-.	On the Review page, review your choices by expanding each option. and click *Enable*.
+. Open the REST API UI on the management node: 'https://[management node IP]/mnode'
+. Click *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as mnode-client if the value is not already populated.
+.. Copy the token URL string and paste it into another browser tab to initiate a token request.
+.. Click *Authorize* to begin a session.
+.	(Optional) Confirm available versions of management node services: 'GET /services/versions'
+. (Optional) Get detailed information about the latest version: 'GET /services/versions/latest'
+.	(Optional) Get detailed information about a specific version: 'GET /services/versions/{version}/info'
+. Perform one of the following management services update options:
+.. Update to the most recent version of management node services: 'PUT /services/update/latest'
+.. Update to a specific version of management node services: 'PUT /services/update/{version}''
+. Monitor the status of the update: 'GET/services/update/status'
 
 .Results
-NetApp Hybrid Cloud Control enables NetApp Cloud Services.
-
-WHAT HAPPENS NEXT?
-
-
-
-*	nnn
-*	mmm
-*	nnn
-*	nnn
-*	abc
-*	nnn
-
-
-
-
+A successful update returns a result similar to the following example:
+''{
+    "current_version": "2.0.442",
+    "details": "Updated to version 2.0.442",
+    "status": "success"
+}''
 
 [discrete]
 == Top Links
