@@ -40,7 +40,7 @@ entries:
     - title: Adding applications to your Kubernetes clusters
       url: /task_NKS_adding_application.html
     - title: Creating cloud volumes with NetApp Fabric Orchestrator
-      url: /task_dfo_creating_cloud_volumes.html    
+      url: /task_dfo_creating_cloud_volumes.html
     - title: Creating cloud volumes using Cloud Volumes Service
       url: /task_cvs_create_cloud_volumes.html
   - title: Managing clusters and NetApp HCI cloud volumes
@@ -49,9 +49,3 @@ entries:
       url: /concept_managing_overview.html
     - title: Adding applications to your Kubernetes clusters
       url: /task_NKS_adding_application.html
-  - title: Updating management services
-    entries:
-    - title: Updating management services with the management node
-      url: /task_mnode_updating_management_services.html
-    - title: Management node service listing
-      url: /reference_mnode_management_services_listing.html

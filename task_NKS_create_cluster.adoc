@@ -38,7 +38,7 @@ image:icon_blue_wheel.png[NetApp Kubernetes Service icon]
 +
 A list of providers appears, including NetApp HCI.
 +
-image:nks_provider_choose2.png[NetApp Kubernetes Service image choosing NetApp as your provider.]
+image:nks_provider_choose3_hci.png[NetApp Kubernetes Service image choosing NetApp as your provider.]
 
 . Choose *NetApp HCI* as the provider.
 +
@@ -53,7 +53,7 @@ image:nks_provider_configure.png[NetApp Kubernetes Service configuring NetApp as
 The NetApp Kubernetes Service creates the cluster and displays it on the Clusters page.
 
 == After you finish
-Continue with link:task_nks_creating_projects.html[Creating a project within a NetApp Kubernetes Service] workspace you specified so that you can later add applications or solutions to the project. 
+Continue with link:task_nks_creating_projects.html[Creating a project within a NetApp Kubernetes Service] workspace you specified so that you can later add applications or solutions to the project.
 
 
 [discrete]
