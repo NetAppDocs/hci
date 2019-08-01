@@ -3,15 +3,15 @@ entries:
     url: /index.html
   - title: Concepts
     entries:
-      - title: Product overview
+      - title: Cloud services on NetApp HCI overview
         url: /concept_overview.html
-      - title: Architecture overview
+      - title: Architecture overview for cloud services on NetApp HCI
         url: /concept_architecture.html
       - title: Real-time analytics with NetApp Cloud Insights
         url: /concept_architecture_cloudinsights.html
-      - title: What happens behind the scenes
+      - title: What happens behind the cloud services scenes
         url: /concept_behind_the_scenes.html
-      - title: Cluster types on NetApp HCI
+      - title: Cluster types in cloud services on NetApp HCI
         url: /concept_cluster_types.html
       - title: Kubernetes pods, volumes, and projects
         url: /concept_kubernetes_pods_volumes_projects.html
@@ -21,7 +21,7 @@ entries:
         url: /concept_gettingstarted.html
       - title: Cloud Central accounts
         url: /concept_cloud_central_accounts.html
-      - title: Requirements before you begin
+      - title: System requirements before you begin
         url: /reference_requirements_beforeyoubegin.html
       - title: Licensing
         url: /concept_licensing.html
@@ -43,9 +43,9 @@ entries:
       url: /task_dfo_creating_cloud_volumes.html
     - title: Creating cloud volumes using Cloud Volumes Service
       url: /task_cvs_create_cloud_volumes.html
-  - title: Managing clusters and NetApp HCI cloud volumes
+  - title: Managing clusters and cloud volumes on NetApp HCI
     entries:
-    - title: Managing Kubernetes clusters and NetApp HCI cloud volumes
+    - title: Managing Kubernetes clusters and cloud volumes on NetApp HCI
       url: /concept_managing_overview.html
     - title: Adding applications to your Kubernetes clusters
       url: /task_NKS_adding_application.html

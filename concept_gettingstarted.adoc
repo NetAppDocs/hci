@@ -14,7 +14,7 @@ keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 
 
 [.lead]
-You might want to consider the following to get started:
+You might want to get started with the following items:
 
 *	Review your NetApp Cloud Central account information or sign up, if you don't already have an account.
 * Review port, networking, and browser requirements.

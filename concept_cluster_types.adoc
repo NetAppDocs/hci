@@ -5,7 +5,7 @@ summary: NetApp HCI with NetApp Kubernetes Service shows you different types of 
 keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 ---
 
-= Cluster types
+= Cluster types in cloud services on NetApp HCI
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 :imagesdir: ./media/
 
 [.lead]
-You'll encounter different types of clusters when using cloud services on NetApp HCI with NetApp Kubernetes Service.
+You'll encounter different types of clusters when using cloud services on NetApp HCI.
 
 Types of clusters you'll encounter:
 
