@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, cloud services, kubernetes
 :imagesdir: ./media/
 
 [.lead]
-After you enable cloud services, you can create a Kubernetes workload cluster. You want to create clusters on which you can later place pre-designed or your own applications. After you create the clusters, those clusters are ready to accept application workloads.
+After you enable cloud services, you can create a Kubernetes workload cluster. After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.
 
 .About this task
 You create Kubernetes clusters, add them to a workspace, create a project within that workspace, and later add a solution to the project.
@@ -22,9 +22,7 @@ The NetApp Kubernetes Service is installed on a VMware virtual machine on a comp
 
 .Steps
 
-. From NetApp Cloud Central, select *Products* > *NetApp Kubernetes Service*.
-+
-https://cloud.netapp.com[NetApp Cloud Central^].
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Kubernetes Service*.
 . Log in using your Cloud Central credentials.
 +
 image:nks_organization_menu.png[NetApp Kubernetes Service image showing Organization menu]
@@ -47,7 +45,7 @@ image:nks_provider_configure.png[NetApp Kubernetes Service configuring NetApp as
 . To edit any of the default values for the cluster nodes, click *Edit* and customize the number, size, and disk space allotted to the cluster nodes. If there is more than one NetApp HCI installation in the organization, you can select additional systems.
 . Click *Submit* to configure your cluster.
 .	Configure your Kubernetes cluster by entering the cluster name and typically, by using the default settings.
-.. Click *Submit*.
+. Click *Submit*.
 
 .Result
 The NetApp Kubernetes Service creates the cluster and displays it on the Clusters page.

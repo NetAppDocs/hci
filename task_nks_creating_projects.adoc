@@ -17,9 +17,7 @@ When you create Kubernetes workload clusters, you select a workspace in the NetA
 
 .Steps
 
-. From NetApp Cloud Central, select *Products* > *NetApp Kubernetes Service*.
-+
-https://cloud.netapp.com[NetApp Cloud Central^].
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Kubernetes Service*.
 . Log in using your Cloud Central credentials.
 +
 image:nks_organization_menu.png[NetApp Kubernetes Service image showing Organization menu]

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept_licensing.html
-summary: NetApp HCI with NetApp Kubernetes Service shows you different types of clusters.
+summary: You can use a 30-day trial license and later convert it to a production license.
 keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 ---
 
@@ -17,13 +17,6 @@ You can use a 30-day trial license and later convert it to a production license.
 
 For details, see link:task_hcc_license_convert.html[Converting your trial license to a production license]
 
-[MORE ABOUT LICENSING?? LINK to topic about converting license.]
-
-
-[discrete]
-== Top Links
-* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]

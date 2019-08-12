@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, cloud services, kubernetes, applications
 :imagesdir: ./media/
 
 [.lead]
-After you create your Kubernetes cluster, you can easily add any number of applications to the cluster.  Using this feature, you gain tremendous efficiency of spinning up or down applications as needed.
+After you create your Kubernetes workload cluster, you can easily add any number of applications to the cluster.  Using this feature, you gain tremendous efficiency of spinning up or down applications as needed.
 
 
 .About this task
@@ -23,9 +23,7 @@ You can deploy applications on the cluster that resides on NetApp HCI by using t
 
 .Steps
 
-. From NetApp Cloud Central, select *Products* > *NetApp Kubernetes Service*.
-+
-https://cloud.netapp.com[NetApp Cloud Central^].
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Kubernetes Service*.
 . To add an application to your existing Kubernetes cluster, click *Solutions*.
 +
 image:nks_solutions_samples_small.png[NetApp Kubernetes Service image showing Solutions]

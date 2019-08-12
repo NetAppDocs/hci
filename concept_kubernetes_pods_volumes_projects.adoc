@@ -24,10 +24,6 @@ With the NetApp Kubernetes Service, you can use a _persistent volume_, one that 
 A Kubernetes _project_ is a construct for grouping applications, for example, Wordspace or MySQL. A project is a namespace with RBAC on the Kubernetes cluster.
 
 
-[discrete]
-== Top Links
-* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]

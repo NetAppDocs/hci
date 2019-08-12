@@ -27,7 +27,6 @@ After a service cluster is deployed on your system, NetApp HCI is able to push r
 [discrete]
 == Top Links
 * link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]

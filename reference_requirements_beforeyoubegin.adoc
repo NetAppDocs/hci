@@ -16,35 +16,31 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 Before you use cloud services on NetApp HCI, your cloud administrator should have prepared networking and completed other requirements.​
 
 == System requirements
-* A deployed NetApp HCI system v1.6 or later using the NetApp Deployment Engine
-* Upgraded NetApp HCI management services. See management services information in the NetApp Element User Guide.
+* A NetApp HCI 1.6 or later system deployed by the NetApp Deployment Engine
+* Upgraded NetApp HCI management services. See management services information in the
+http://docs.netapp.com/sfe-113/topic/com.netapp.doc.sfe-ug/home.html[NetApp Element User Guide]^].
 * NetApp Hybrid Cloud Control available on the management node of your system
-* NetApp HCI management node 2.1 (requires updates from the 2.0 version shipped with the 19.1 release)
+* NetApp HCI management node 2.1 (requires updates from the 2.0 version)
 * Your version of VMware vCenter supported by the NetApp HCI Deployment Engine (NDE)
 
-== System size Requirements
+== System size requirements
 * 2x4 systems are not supported for production use. However, you can use these for demo work.
 * 3x4 systems are the minimum production system size we support.
 * 4x4 systems are the recommended minimum size.
 
 == NetApp Kubernetes Service requirements
-* An NKS account
-* An NKS API token, which authorizes the installer to access the NKS organization. You can create this before or during the process of enabling cloud services on NetApp HCI.
+* A NetApp Kubernetes Service (NKS) account
+* A NetApp Kubernetes Service API token, which authorizes the installer to access the NKS organization. You can create this before or during the process of enabling cloud services on NetApp HCI.
 
 == Networking requirements
 
 * You must have already configured the required vSphere distributed switches (VDS). We do not support installing to other switches.
-* You must have already configured the port groups (ports between the vCenter and the management node) in the NetApp Element Plug-in for vCenter Server. A VDS port group is required for NetApp Kubernetes Service. We recommend creating three Kubernetes-specific port groups.
+* You must have already configured the port groups (ports between the vCenter and the management node) in the NetApp Element Plug-in for vCenter Server. A VDS port group is required for NKS. We recommend creating three NKS-specific port groups.
 * You must have already configured the management node port group.
 
 == Browser requirements
 *	Any modern browser
 
-
-[discrete]
-== Top Links
-* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]

@@ -17,8 +17,7 @@ You can create cloud volumes on the Kubernetes cluster by using another cloud se
 
 .Steps
 
-. From NetApp Cloud Central, select *Products* > *NetApp Fabric Orchestrator*.
-+ https://cloud.netapp.com[NetApp Cloud Central^].
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Fabric Orchestrator*.
 . Click *Create Cloud Volumes*.
 . On the Create Cloud volumes page, enter or select the following:
 .. Choose *NetApp Private Cloud* as the provider.
@@ -28,7 +27,6 @@ You can create cloud volumes on the Kubernetes cluster by using another cloud se
 .. Edit the export policy and protection policy.
 . Click *Create Cloud Volumes*.
 
-For details, see NetApp Data Fabric Orchestrator documentation.
 
 
 

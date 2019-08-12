@@ -21,11 +21,6 @@ Types of clusters you'll encounter:
 * *Workload clusters*: These are clusters on which you add any number of applications. These clusters are maintained in the NetApp Kubernetes Service.
 
 
-[discrete]
-== Top Links
-* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
-
 
 [discrete]
 == Find more information

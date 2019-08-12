@@ -38,14 +38,9 @@ entries:
     - title: Creating a project within your Kubernetes workspace
       url: /task_nks_creating_projects.html
     - title: Adding applications to your Kubernetes clusters
-      url: /task_NKS_adding_application.html
+      url: /task_NKS_adding_applications.html
     - title: Creating cloud volumes with NetApp Fabric Orchestrator
       url: /task_dfo_creating_cloud_volumes.html
     - title: Creating cloud volumes using Cloud Volumes Service
       url: /task_cvs_create_cloud_volumes.html
-  - title: Managing clusters and cloud volumes on NetApp HCI
-    entries:
-    - title: Managing Kubernetes clusters and cloud volumes on NetApp HCI
-      url: /concept_managing_overview.html
-    - title: Adding applications to your Kubernetes clusters
-      url: /task_NKS_adding_application.html
+  
