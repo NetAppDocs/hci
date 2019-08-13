@@ -18,9 +18,9 @@ Before you use cloud services on NetApp HCI, your cloud administrator should hav
 == Return to NetApp HCI Doc Center
 You can review documentation about NetApp HCI in the NetApp HCI Documentation Center.
 
-[#img-btn-view-in-doc-center]
+[#img-btn2]
 [link=http://docs.netapp.com/hci/index.jsp]
-image:btn-view-in-doc-center.png[Architecture image for NetApp HCI]
+image::btn-view-in-doc-center.png[Return to NetApp HCI Doc Center]
 
 
 == System requirements
