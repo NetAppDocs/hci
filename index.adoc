@@ -17,7 +17,12 @@ Using NetApp Kubernetes Service, NetApp HCI deploys across multiple public cloud
 
 THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW. 
 
+== Return to NetApp HCI Doc Center
+You can review documentation about NetApp HCI in the NetApp HCI Documentation Center.
 
+[#img-btn-view-in-doc-center]
+[link=http://docs.netapp.com/hci/index.jsp]
+image:btn-view-in-doc-center.png[Architecture image for NetApp HCI]
 
 [discrete]
 == Find more information
