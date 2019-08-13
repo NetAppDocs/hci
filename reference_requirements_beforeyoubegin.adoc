@@ -19,7 +19,7 @@ Before you use cloud services on NetApp HCI, your cloud administrator should hav
 Want details about NetApp HCI? See the NetApp HCI Documentation Center.
 
 [#img-btn2]
-[link=http://docs.netapp.com/hci/index.jsp^]
+[link=http://docs.netapp.com/hci/index.jsp]
 image::btn-view-in-doc-center.png[Go to the NetApp HCI Doc Center^]
 
 
