@@ -22,7 +22,7 @@ You can review documentation about NetApp HCI in the NetApp HCI Documentation Ce
 
 [#img-btn2]
 [link=http://docs.netapp.com/hci/index.jsp]
-image::btn-view-in-doc-center.png[Return to NetApp HCI Doc Center]
+image::btn-view-in-doc-center.png[Return to NetApp HCI Doc Center^]
 
 [discrete]
 == Find more information
