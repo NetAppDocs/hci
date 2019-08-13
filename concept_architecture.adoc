@@ -33,6 +33,12 @@ The following components are used for cloud services on NetApp HCI:
 * *NetApp Hybrid Cloud Control*: Deploys and configures NetApp HCI Element and enables cloud services on NetApp HCI.
 *	*NetApp Kubernetes Service agent*: Maintains a communication tunnel between NKS and NetApp HCI, creates user clusters, and maintains deployed cloud services.
 
+== View information in the NetApp HCI Doc Center
+Want details about NetApp HCI? See the NetApp HCI Documentation Center.
+
+[#img-btn2]
+[link=http://docs.netapp.com/hci/index.jsp^]
+image::btn-view-in-doc-center.png[Go to the NetApp HCI Doc Center]
 
 
 [discrete]

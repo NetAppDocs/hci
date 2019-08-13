@@ -15,12 +15,12 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 [.lead]
 Before you use cloud services on NetApp HCI, your cloud administrator should have prepared networking and completed other requirements.​
 
-== Return to NetApp HCI Doc Center
-You can review documentation about NetApp HCI in the NetApp HCI Documentation Center.
+== View information in the NetApp HCI Doc Center
+Want details about NetApp HCI? See the NetApp HCI Documentation Center.
 
 [#img-btn2]
-[link=http://docs.netapp.com/hci/index.jsp]
-image::btn-view-in-doc-center.png[Return to NetApp HCI Doc Center^]
+[link=http://docs.netapp.com/hci/index.jsp^]
+image::btn-view-in-doc-center.png[Go to the NetApp HCI Doc Center^]
 
 
 == System requirements
