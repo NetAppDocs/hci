@@ -18,7 +18,7 @@ Before you use cloud services on NetApp HCI, your cloud administrator should hav
 == System requirements
 * A NetApp HCI 1.6 or later system deployed by the NetApp Deployment Engine
 * Upgraded NetApp HCI management services. See management services information in the
-http://docs.netapp.com/sfe-113/topic/com.netapp.doc.sfe-ug/home.html[NetApp Element User Guide]^].
+http://docs.netapp.com/sfe-113/topic/com.netapp.doc.sfe-ug/home.html[NetApp Element User Guide^].
 * NetApp Hybrid Cloud Control available on the management node of your system
 * NetApp HCI management node 2.1 (requires updates from the 2.0 version)
 * Your version of VMware vCenter supported by the NetApp HCI Deployment Engine (NDE)

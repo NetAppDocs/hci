@@ -15,6 +15,8 @@ keywords: netapp, hci, on premise, cloud services, cloud insights
 [.lead]
 You can quickly ascertain the health of your cloud services on NetApp HCI with NetApp Cloud Insights.
 
+THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW. 
+
 NetApp Cloud Insights monitors compute, network, storage stack and application statuses for multi-vendor, heterogenous services and now provides analytics on many cloud services, including on NetApp HCI.
 
 You can see information like this:

@@ -41,6 +41,7 @@ entries:
       url: /task_NKS_adding_applications.html
     - title: Creating cloud volumes with NetApp Fabric Orchestrator
       url: /task_dfo_creating_cloud_volumes.html
-    - title: Creating cloud volumes using Cloud Volumes Service
+    - title: Creating cloud volumes using NetApp Cloud Volumes
       url: /task_cvs_create_cloud_volumes.html
-  
+    - title: Converting your trial license to a production license
+      url: /task_hcc_license_convert.html

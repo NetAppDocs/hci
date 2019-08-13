@@ -31,7 +31,7 @@ You can access NetApp Cloud Volumes Service in several ways:
 +
 image:cvs_cloud_central_menu.png[NetApp Cloud Central menu image]
 . Click *Cloud Volumes Service*.
-+The Cloud Volumes Service Volumes page appears:
++ The Cloud Volumes Service Volumes page appears:
 image:cvs_volumes_page.png[NetApp Cloud Volumes Service - Volumes page image]
 
 . Click *Create New Volume*.

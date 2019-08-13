@@ -22,12 +22,12 @@ You can upload the NetApp license file (.nlf file) via NetApp Hybrid Cloud Contr
 
 .Steps
 
-. Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node.
- + https://<_ManagementNodeIP_>
+. Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node: https://<_ManagementNodeIP_>
+
 +
 image::hcc_enable_cloud_services_banner_license_link.png[NetApp Hybrid Cloud Control showing license link image]
 +
-. On the NetApp Hybrid Cloud Control banner, click *Upload a License* link.
+. On the NetApp Hybrid Cloud Control banner, click *Upload a License*.
 . Browse to locate your license file and Click *Upload License*.
 
 .Result
@@ -37,7 +37,7 @@ The updated license information is displayed in the NetApp Hybrid Cloud Control 
 [discrete]
 == Top Links
 * link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+* link:concept_licensing.html[Licensing]
 
 
 [discrete]
