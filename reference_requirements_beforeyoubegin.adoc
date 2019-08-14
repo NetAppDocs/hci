@@ -22,6 +22,9 @@ Want information about how to install, deploy, and manage a NetApp HCI system? S
 [link=http://docs.netapp.com/hci/index.jsp]
 image::btn-view-in-doc-center.png[Go to the NetApp HCI Doc Center^]
 
+Button try 2
+image:btn-view-in-doc-center.png[alt=Go to the NetApp HCI Doc Center, link=http://docs.netapp.com/hci/index.jsp,window=_blank]
+
 
 == System requirements
 * A NetApp HCI 1.6 or later system deployed by the NetApp Deployment Engine
