@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: concept_cloud_central_accounts.html
+summary: Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account.
+keywords: netapp, hci, on premise, cloud services, cluster
+---
+
+= Cloud Central accounts
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account. A Cloud Central account is a container for your systems and the workspaces in which you deploy cloud services on NetApp HCI.
+
+The account is maintained in Cloud Central, so any changes that you make to it are available to other NetApp cloud data services.
+
+A Cloud Central account enables multi-tenancy:
+
+*	A single Cloud Central account can include multiple NetApp HCI systems that serve different business needs. Because users are associated with the Cloud Central account, there’s no need to configure users for each individual NetApp HCI system.
+*	Within each NetApp HCI system, multiple users can deploy and manage NetApp HCI systems in isolated environments called _workspaces_. These workspaces are invisible to other users, unless they are shared.
+
+When you deploy NetApp HCI and enable cloud services, you select the Cloud Central account to associate with the system. Account admins can then modify the settings for this account by managing users, workspaces, and service connectors.
+
+Using Cloud Central, you can set up accounts as individual accounts or as Federated accounts:
+
+* You can make a new account with name, email, and password and then you are logged in. This is the simplest type of account.
+* If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
+
+
+
+[discrete]
+== Top Links
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

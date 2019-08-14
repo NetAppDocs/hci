@@ -1,0 +1,48 @@
+---
+sidebar: sidebar
+permalink: task_nks_creating_projects.html
+summary: Create a Kubernetes project within a NetApp Kubernetes Service workspace.
+keywords: netapp, hci, on premise, cloud services, kubernetes
+---
+
+= Creating a project within a NetApp Kubernetes Service workspace
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When you create Kubernetes workload clusters, you select a workspace in the NetApp Kubernetes Service. You can create a project within that workspace and later add a solution to the project.
+
+.Steps
+
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Kubernetes Service*.
+. Log in using your Cloud Central credentials.
++
+image:nks_organization_menu.png[NetApp Kubernetes Service image showing Organization menu]
+
+. Click *Organization*.
++
+image:icon_blue_wheel.png[NetApp Kubernetes Service icon]
+
+. To add a team, to which you can later add to your workspace, click *Teams*, click *Add Team*, add a team name, select members, and click *Submit*.
+. To add a workspace, to which you can later add projects, click *Workspaces*, click *Add Workspace*, add a workspace name, select teams, and click *Submit*.
+
+
+== After you finish
+Continue with link:task_adding_applications.html[Adding applications to your Kubernetes cluster].
+
+
+[discrete]
+== Top Links
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

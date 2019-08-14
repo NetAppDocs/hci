@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: concept_kubernetes_pods_volumes_projects.html
+summary: Cloud services on NetApp HCI involves pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service.
+keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
+---
+
+= Kubernetes pods, volumes, and projects
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud services on NetApp HCI involve pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service.
+
+* *Kubernetes pod*: Each Kubernetes _pod_ is a set of one or more containers. Pods run in several replicas of each service ensuring no single point of failure for critical services. In the Kubernetes architecture, a set of containers can be deployed and scaled together. This is achieved by using pods, which are the minimum unit of deployment in a Kubernetes cluster that enable more than one container to share the same resources, such as IP address and file systems.
+* *Kubernetes volume*: A Kubernetes _volume_ is storage provisioned directly to a pod. The NetApp Kubernetes Service supports a wide variety of volume types, including Amazon EBS, Azure Disk Storage, Google Persistent Disk, NFS, and many more. Volumes enable the containers within a pod to share information and are destroyed when their parent pod is deleted.
+* *Kubernetes persistent volume*: With the NetApp Kubernetes Service, you can use a _persistent volume_, one that exists independently of any specific pod and with its own lifetime. Persistent volumes can be used to support stateful applications, such as database services, enabling all components of an enterprise solution to be deployed and managed by the NetApp Kubernetes Service. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
+* *Kubernetes project*: A Kubernetes _project_ is a construct for grouping applications, for example, Wordspace or MySQL. A project is a namespace with RBAC on the Kubernetes cluster.
+
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

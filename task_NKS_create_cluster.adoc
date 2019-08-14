@@ -5,7 +5,7 @@ summary: Create a Kubernetes cluster using NetApp Kubernetes Service.
 keywords: netapp, hci, on premise, cloud services, kubernetes
 ---
 
-= Creating a Kubernetes cluster
+= Creating a Kubernetes cluster using the NetApp Kubernetes Service
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,53 +13,61 @@ keywords: netapp, hci, on premise, cloud services, kubernetes
 :imagesdir: ./media/
 
 [.lead]
-After you enable cloud services, you can create a Kubernetes cluster.
+After you enable cloud services, you can create a Kubernetes workload cluster. After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.
 
-NetApp Kubernetes is installed on a VMware virtual machine on a compute node using the NetApp HCI management node.
+== About this task
+You create Kubernetes clusters, add them to a workspace, create a project within that workspace, and later add a solution to the project.
 
-.Steps
+The NetApp Kubernetes Service is installed on a VMware virtual machine on a compute node using the NetApp HCI management node.
 
-. Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
-. Click the *NetApp Kubernetes Service.*
-. Log in using your NetApp Kubernetes Service credentials.
+== Logging in to NetApp Cloud Central
+
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Kubernetes Service*.
+. Log in using your Cloud Central credentials.
 +
 image:nks_organization_menu.png[NetApp Kubernetes Service image showing Organization menu]
 
-. In NetApp Kubernetes Service, click *Organizations* and choose your organization.
+== Choosing a provider
+. Click *Organizations* and choose your organization.
 +
 image:icon_blue_wheel.png[NetApp Kubernetes Service icon]
 
-. Click *Add a Cluster Now.*
+. Click *Control Plane*.
+. Click *Add Cluster*.
 +
-image:nks_provider_choose.png[NetApp Kubernetes Service image choosing NetApp as your provider.]
+A list of providers appears, including NetApp HCI.
++
+image:nks_provider_choose3_hci.png[NetApp Kubernetes Service image choosing NetApp as your provider.]
 
-. Choose *NetApp* as the provider.
+. Choose *NetApp HCI* as the provider.
 +
 image:nks_provider_configure.png[NetApp Kubernetes Service configuring NetApp as your provider.]
-. Configure your provider.
-. Click *Submit*.
-.	Configure your Kubernetes cluster.
-.. Enter the cluster name.
-.. Typically, use the default settings.
-.. Click *Submit*.
 
-.Results
-NetApp Kubernetes Service creates the cluster and displays it on the Clusters page.
+== Configuring your provider
+. Select the region, the workspace in which the cluster will be located, and SSH key pair for the cluster.
+. To edit any of the default values for the cluster nodes, click *Edit* and customize the number, size, and disk space allotted to the cluster nodes. If there is more than one NetApp HCI installation in the organization, you can select additional systems.
+. Click *Submit*.
+
+== Configuring your cluster
+.	Configure your Kubernetes cluster by entering the cluster name
+. Typically, use the default settings.
+. Click *Submit*.
+
+.Result
+The NetApp Kubernetes Service creates the cluster and displays it on the Clusters page.
 
 == After you finish
-Continue with link:task_cvs_create_cloud_volumes.html[Creating cloud volumes].
-
-
+Continue with link:task_nks_creating_projects.html[Creating a project within a NetApp Kubernetes Service] workspace you specified so that you can later add applications or solutions to the project.
 
 
 [discrete]
 == Top Links
-* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
-* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
-* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+
 
 [discrete]
 == Find more information
-
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]

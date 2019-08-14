@@ -13,29 +13,57 @@ keywords: netapp, hci, on premise, cloud services, mnode, management services
 :imagesdir: ./media/
 
 [.lead]
-FIX Before you use NetApp HCI in the cloud, your cloud administrator should have prepared networking and completed other requirements.​
+The NetApp Element management node enables you to use modular services that provide central and extended management functionality for NetApp HCI and SolidFire all-flash storage systems. Services include system telemetry, logging, and update services, the QoSSIOC service for Element Plug-in for vCenter Server, as well as capabilities relevant to on-premises cloud solutions, such as NetApp Hybrid Cloud Control and the NetApp Kubernetes Service, provided by NetApp HCI.
 
+These are the updates:
 
-*	abc
-*	abc
-*	abc
-*	abc
-*	abc
-*	abc
+*	<<Management services update 11.3_2.1 released July 11, 2019>>
+* <<Management services update 11.3_2.0 released July 11, 2019>>
 
-== Browser requirements
-*	abc
-*	abc
-*	abc
+== Management services update 11.3_2.1 released July 11, 2019
+Service bundle version: 2.1.326
+
+What's new
+*	Active IQ collector service (updated) mnode-svc-aiq-collector:1.6.1
+*	Management node REST API (updated) mnode-api:11.24
+* NetApp HCI monitoring (updated) hci-monitor:1.5.19
+* NetApp Hybrid Cloud Control (new) mnode-svc-hmu:1.7.119
+* NetApp Kubernetes Service (new) hci-nks-service:1.0.80
+* Orchestration service for cloud services (new) hci-cloud-service:1.0.47
+*	vCenter Plug-in QoSSIOC service (updated) vcp-sioc:4.3.233
+
+Persistent volumes:
+* NetApp-HCI-cloud-service (new)
+* NetApp-HCI-credential-svc (updated)
+* NetApp-HCI-hci-monitor (updated)
+* NetApp-HCI-mnode-api (updated)
+* NetApp-HCI-nks-service (new)
+* NetApp-Simple-data (new)
+
+== Management services update 11.3_2.0 released July 11, 2019
+Service bundle version: 2.0.725
+
+What's new
+*	Active IQ collector service
+*	Management node REST API
+* NetApp HCI monitoring
+*	vCenter Plug-in QoSSIOC service
+
+Persistent volumes:
+* NetApp-HCI-credential-svc
+* NetApp-HCI-mnode-api
+* NetApp-HCI-hci-monitor
+
 
 [discrete]
 == Top Links
-* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
-* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
-* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+
 
 [discrete]
 == Find more information
-
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
