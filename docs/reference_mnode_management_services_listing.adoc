@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: reference_mnode_management_services_listing.html
+sidebar: docs_sidebar
+permalink: docs/reference_mnode_management_services_listing.html
 summary: These are the current management services available with NetApp HCI.
 keywords: netapp, hci, on premise, cloud services, mnode, management services
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services, mnode, management services
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 The NetApp Element management node enables you to use modular services that provide central and extended management functionality for NetApp HCI and SolidFire all-flash storage systems. Services include system telemetry, logging, and update services, the QoSSIOC service for Element Plug-in for vCenter Server, as well as capabilities relevant to on-premises cloud solutions, such as NetApp Hybrid Cloud Control and the NetApp Kubernetes Service, provided by NetApp HCI.

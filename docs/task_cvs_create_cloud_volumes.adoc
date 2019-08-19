@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_cvs_create_cloud_volumes.html
+sidebar: docs_sidebar
+permalink: docs/task_cvs_create_cloud_volumes.html
 summary: Create cloud volumes using Cloud Volumes Service.
 keywords: netapp, hci, on premise, cloud services, cloud volumes
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services, cloud volumes
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 After you create your Kubernetes cluster, you typically want to add cloud volumes to the cluster.

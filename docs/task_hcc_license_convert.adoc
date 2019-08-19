@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_hcc_license_convert.html
+sidebar: docs_sidebar
+permalink: docs/task_hcc_license_convert.html
 summary: Create a Kubernetes cluster using NetApp Kubernetes Service.
 keywords: netapp, hci, on premise, license, cloud services, kubernetes
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, license, cloud services, kubernetes
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 When you first enable cloud services on NetApp HCI, the installation process configures a 90-day trial license. After that time elapses, you must convert the trial license to a production license for continued use.

@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_kubernetes_pods_volumes_projects.html
+sidebar: docs_sidebar
+permalink: docs/concept_kubernetes_pods_volumes_projects.html
 summary: Cloud services on NetApp HCI involves pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service.
 keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Cloud services on NetApp HCI involve pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service. Persistent volumes are managed by Trident software.

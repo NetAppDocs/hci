@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_deploying_overview.html
+sidebar: docs_sidebar
+permalink: docs/task_deploying_overview.html
 summary: Deploying NetApp HCI involves using NetApp Kubernetes Service.
 keywords: netapp, hci, on premise, cloud services
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 NetApp HCI​ installations connect to, register with, and become a deployable region with NetApp Cloud Central. With this, you can centrally manage cloud services for NetApp HCI on-premise systems in the same way that you do in public clouds.

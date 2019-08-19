@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_cluster_types.html
+sidebar: docs_sidebar
+permalink: docs/concept_cluster_types.html
 summary: NetApp HCI with NetApp Kubernetes Service shows you different types of clusters.
 keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 You'll encounter different types of clusters when using cloud services on NetApp HCI.

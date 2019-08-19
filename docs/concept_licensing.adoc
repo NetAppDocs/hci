@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_licensing.html
+sidebar: docs_sidebar
+permalink: docs/concept_licensing.html
 summary: You can use a 30-day trial license and later convert it to a production license.
 keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 You can use a 30-day trial license and later convert it to a production license.
