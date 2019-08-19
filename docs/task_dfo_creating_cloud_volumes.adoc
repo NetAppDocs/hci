@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_dfo_creating_cloud_volumes.html
+sidebar: docs_sidebar
+permalink: docs/task_dfo_creating_cloud_volumes.html
 summary: Create cloud volumes using Cloud Volumes Service.
 keywords: netapp, hci, on premise, orchestrator, fabric, kubernetes, cloud services, cloud volumes
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, orchestrator, fabric, kubernetes, cloud servi
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 You can create cloud volumes on the Kubernetes cluster by using another cloud service, the NetApp Fabric Orchestrator.

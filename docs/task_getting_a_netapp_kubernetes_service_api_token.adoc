@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_getting_a_netapp_kubernetes_service_api_token.html
+sidebar: docs_sidebar
+permalink: docs/task_getting_a_netapp_kubernetes_service_api_token.html
 summary: Enabling cloud services for NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your NetApp Cloud Central account.
 keywords: netapp, hci, on premise, cloud services
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Enabling cloud services for NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your NetApp Cloud Central account.

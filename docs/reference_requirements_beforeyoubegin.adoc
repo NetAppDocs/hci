@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: reference_requirements_beforeyoubegin.html
+sidebar: docs_sidebar
+permalink: docs/reference_requirements_beforeyoubegin.html
 summary: Before you begin using cloud services on NetApp HCI, look at these prerequisites.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Before you use cloud services on NetApp HCI, your cloud administrator should have prepared networking and completed other requirements.​

@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_gettingstarted.html
+sidebar: docs_sidebar
+permalink: docs/concept_gettingstarted.html
 summary: Deploying NetApp HCI is easy with the NetApp Deployment Engine.
 keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [.lead]

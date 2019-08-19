@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_cloud_central_accounts.html
+sidebar: docs_sidebar
+permalink: docs/concept_cloud_central_accounts.html
 summary: Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account.
 keywords: netapp, hci, on premise, cloud services, cluster
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services, cluster
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account. A Cloud Central account is a container for your systems and the workspaces in which you deploy cloud services on NetApp HCI.

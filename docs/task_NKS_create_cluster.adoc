@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_NKS_create_cluster.html
+sidebar: docs_sidebar
+permalink: docs/task_NKS_create_cluster.html
 summary: Create a Kubernetes cluster using NetApp Kubernetes Service.
 keywords: netapp, hci, on premise, cloud services, kubernetes
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services, kubernetes
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 After you enable cloud services, you can create a Kubernetes workload cluster. After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.

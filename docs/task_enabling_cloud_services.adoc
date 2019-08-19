@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: task_enabling_cloud_services.html
+sidebar: docs_sidebar
+permalink: docs/task_enabling_cloud_services.html
 summary: Using the cloud services wizard in NetApp Hybrid Cloud Control, you can enable cloud services for NetApp HCI.
 keywords: netapp, hci, on premise, cloud services, hybrid cloud control
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services, hybrid cloud control
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Enabling NetApp cloud services on NetApp HCI provides access to Kubernetes clusters and cloud volumes on NetApp HCI.

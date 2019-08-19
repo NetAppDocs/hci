@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_architecture.html
+sidebar: docs_sidebar
+permalink: docs/concept_architecture.html
 summary: NetApp HCI in the cloud works with multiple cloud services, including NetApp Kubernetes Service.
 keywords: netapp, hci, on premise, cloud services
 ---
@@ -10,7 +10,7 @@ keywords: netapp, hci, on premise, cloud services
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 NetApp HCI works with multiple NetApp cloud services.
