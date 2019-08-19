@@ -1,0 +1,47 @@
+entries:
+  - title: Cloud Services on NetApp HCI
+    url: /index.html
+  - title: Concepts
+    entries:
+      - title: Cloud services on NetApp HCI overview
+        url: /concept_overview.html
+      - title: Architecture overview for cloud services on NetApp HCI
+        url: /concept_architecture.html
+      - title: Real-time analytics with NetApp Cloud Insights
+        url: /concept_architecture_cloudinsights.html
+      - title: What happens behind the cloud services scenes
+        url: /concept_behind_the_scenes.html
+      - title: Cluster types in cloud services on NetApp HCI
+        url: /concept_cluster_types.html
+      - title: Kubernetes pods, volumes, and projects
+        url: /concept_kubernetes_pods_volumes_projects.html
+  - title: Getting started with cloud services on NetApp HCI
+    entries:
+      - title: Getting started overview
+        url: /concept_gettingstarted.html
+      - title: Cloud Central accounts
+        url: /concept_cloud_central_accounts.html
+      - title: System requirements before you begin
+        url: /reference_requirements_beforeyoubegin.html
+      - title: Licensing
+        url: /concept_licensing.html
+      - title: Getting a NetApp Kubernetes Service API token
+        url: /task_getting_a_netapp_kubernetes_service_api_token.html
+  - title: Enabling cloud services on NetApp HCI
+    entries:
+    - title: Deploying cloud services on NetApp HCI overview
+      url: /task_deploying_overview.html
+    - title: Enabling cloud services using NetApp Hybrid Cloud Control
+      url: /task_enabling_cloud_services.html
+    - title: Creating a Kubernetes cluster using NetApp Kubernetes Service
+      url: /task_NKS_create_cluster.html
+    - title: Creating a project within your Kubernetes workspace
+      url: /task_nks_creating_projects.html
+    - title: Adding applications to your Kubernetes clusters
+      url: /task_NKS_adding_applications.html
+    - title: Creating cloud volumes with NetApp Fabric Orchestrator
+      url: /task_dfo_creating_cloud_volumes.html
+    - title: Creating cloud volumes using NetApp Cloud Volumes
+      url: /task_cvs_create_cloud_volumes.html
+    - title: Converting your trial license to a production license
+      url: /task_hcc_license_convert.html
