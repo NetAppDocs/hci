@@ -5,13 +5,13 @@ entries:
       - title: Private Cloud
         entries:
           - title: VMware Private Cloud
-            url: /concept_architecture.html
+            url: 
           - title: Red Hat Private Cloud
-            url: /concept_architecture_cloudinsights.html
+            url: 
       - title: DevOps
         entries:
           - title: CI / CD Pipeline
-            url: /netapp_hci_devops_cicd_pipleline.html
+            url: /netapp_hci_devops_cicd.html
       - title: End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
         entries:
           - title:
