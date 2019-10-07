@@ -11,7 +11,7 @@ keywords: hci, devops, ci/cd, ci, cd, continuous integration, continuous deliver
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
 This series of blogs and demos will explore how _NetApp HCI_ satisfies the requirements of the *_DevOps_* *_Continuous Integration (CI)_* and *_Continuous Delivery (CD)_* pipeline.
