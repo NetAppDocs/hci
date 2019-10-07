@@ -1,7 +1,6 @@
 entries:
   - title: NetApp HCI Solutions
     url: /index.html
-  - title: Concepts
     entries:
       - title: Private Cloud
         entries:
