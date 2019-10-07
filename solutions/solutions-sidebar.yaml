@@ -1,0 +1,29 @@
+entries:
+  - title: NetApp HCI Solutions
+    url: /index.html
+    entries:
+      - title: Private Cloud
+        entries:
+          - title: VMware Private Cloud
+            url:
+          - title: Red Hat Private Cloud
+            url:
+      - title: DevOps
+        entries:
+          - title: CI / CD Pipeline
+            url: /netapp_hci_devops_cicd.html
+      - title: End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
+        entries:
+          - title:
+            url:
+      - title: Enterprise Applications
+        entries:
+          - title:
+            url:
+          - title:
+            utl:
+      - title: Backup
+        entries:
+          - title:
+            url:
+            
