@@ -14,25 +14,25 @@ entries:
             url: https://fieldportal.netapp.com/collections/810434?assetComponentId=812059
       - title: DevOps
         entries:
-          - title: CI / CD Pipeline
+          - title: DevOps CI / CD Pipeline
             url: /nhci_devops_cicd.html
+          - title: Infrastructure as Code with Red Hat Ansible
+            url: https://fieldportal.netapp.com/content/884331?assetComponentId=886140
+          - title: DevOps with NetApp Kubernetes Service
+            url: https://fieldportal.netapp.com/content/900748?assetComponentId=902611
       - title: End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
         entries:
           - title: End User Computing (EUC) Collection
-            url: https://fieldportal.netapp.com/collections/639656?assetComponentId=640940
-          - title:
-            url:           
+            url: https://fieldportal.netapp.com/collections/639656?assetComponentId=640940         
       - title: Enterprise Applications
         entries:
           - title: Database Collection
             url: https://fieldportal.netapp.com/collections/901760?assetComponentId=903633
-          - title:
-            utl:
       - title: Data Protection
         entries:
           - title: Data Protection Collection
             url: https://fieldportal.netapp.com/collections/901766?assetComponentId=903639
-      - title: Data Fabric
-        entries:
-          - title:
-            url: 
+          - title: Splunk Enterprise with Arrow Appliance
+            url: https://fieldportal.netapp.com/content/889729?assetComponentId=891554
+          - title: Multi-cloud Data Protection with Cloud Volumes ONTAP
+            url: https://fieldportal.netapp.com/content/900751?assetComponentId=902614
