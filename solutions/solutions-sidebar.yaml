@@ -2,28 +2,37 @@ entries:
   - title: NetApp HCI Solutions
     url: /index.html
     entries:
+      - title: Solution Collection
+        url: https://fieldportal.netapp.com/collections/810434?assetComponentId=812059
       - title: Private Cloud
         entries:
-          - title: VMware Private Cloud
-            url:
-          - title: Red Hat Private Cloud
-            url:
+          - title: VMware Private Cloud Collection
+            url: https://fieldportal.netapp.com/collections/783084?assetComponentId=784678
+          - title: Red Hat Private Cloud Collection
+            url: https://fieldportal.netapp.com/collections/884534?assetComponentId=886344
+          - title: Red Hat Openshift Container Platform Collection
+            url: https://fieldportal.netapp.com/collections/810434?assetComponentId=812059
       - title: DevOps
         entries:
           - title: CI / CD Pipeline
-            url: /netapp_hci_devops_cicd.html
+            url: /nhci_devops_cicd.html
       - title: End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
         entries:
+          - title: End User Computing (EUC) Collection
+            url: https://fieldportal.netapp.com/collections/639656?assetComponentId=640940
           - title:
-            url:
+            url:           
       - title: Enterprise Applications
         entries:
-          - title:
-            url:
+          - title: Database Collection
+            url: https://fieldportal.netapp.com/collections/901760?assetComponentId=903633
           - title:
             utl:
-      - title: Backup
+      - title: Data Protection
+        entries:
+          - title: Data Protection Collection
+            url: https://fieldportal.netapp.com/collections/901766?assetComponentId=903639
+      - title: Data Fabric
         entries:
           - title:
-            url:
-            
+            url: 
