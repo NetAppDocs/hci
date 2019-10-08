@@ -40,7 +40,7 @@ image:cicd-feedback.jpg[width=808,link=#feedback]
 === Configuration Management
 Configuration management refers to the process of setting up the virtual infrastructure for a DevOps CI/CD pipeline. Automation of the infrastructure configuration is a key tenant in DevOps where automation tools such as Ansible and Puppet are widely used to perform the required automation steps.
 
-*Automate configuration on your Virtual Infrastructure: https//:my.netapp.com[blog] | https://my.netapp.com[demo]*
+*Automate configuration on your Virtual Infrastructure: https://my.netapp.com[blog] | https://my.netapp.com[video]*
 *Automate configuration on your Virtual Infrastructure:* image:coming-soon.jpg[]
 
 
