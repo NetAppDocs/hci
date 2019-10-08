@@ -1,7 +1,7 @@
 ---
 sidebar: solutions_sidebar
 permalink: solutions/index.html
-summary: NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider--all in a self-service mode without IT involvement.
+summary: NetApp HCI solutions allow you to expand the NetApp HCI infrastructure to build out public, private and multi cloud solutions in a simple, repeatable way.
 keywords: netapp, hci, solutions, solution
 ---
 
@@ -13,7 +13,7 @@ keywords: netapp, hci, solutions, solution
 :imagesdir: ./media/
 
 [.lead]
-Built on top of the NetApp HCI infrastructure, a variety of solutions are available to address critical business needs.​  NetApp HCI solutions are developed to address common business themes in areas such as:
+Built on top of the NetApp HCI infrastructure, a wide variety of NetApp HCI solutions are available to address common business themes in areas such as:
 
 * Private and Hybrid Cloud
 * Public and Multi Cloud
