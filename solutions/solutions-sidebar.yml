@@ -1,0 +1,44 @@
+entries:
+  - title: NetApp HCI Solutions
+    url: /index.html
+    entries:
+      - title: Solution Collection
+        url: https://fieldportal.netapp.com/collections/810434?assetComponentId=812059
+      - title: Private Cloud
+        entries:
+          - title: VMware Private Cloud Collection
+            url: https://fieldportal.netapp.com/collections/783084?assetComponentId=784678
+          - title: Red Hat Private Cloud Collection
+            url: https://fieldportal.netapp.com/collections/884534?assetComponentId=886344
+          - title: Red Hat Openshift Container Platform Collection
+            url: https://fieldportal.netapp.com/collections/810434?assetComponentId=812059
+      - title: DevOps
+        entries:
+          - title: DevOps CI / CD Pipeline
+            url: /nhci_devops_cicd.html
+          - title: Infrastructure as Code with Red Hat Ansible
+            url: https://fieldportal.netapp.com/content/884331?assetComponentId=886140
+          - title: DevOps with NetApp Kubernetes Service
+            url: https://fieldportal.netapp.com/content/900748?assetComponentId=902611
+      - title: End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
+        entries:
+          - title: End User Computing (EUC) Collection
+            url: https://fieldportal.netapp.com/collections/639656?assetComponentId=640940
+      - title: Enterprise Applications
+        entries:
+          - title: Database Collection
+            url: https://fieldportal.netapp.com/collections/901760?assetComponentId=903633
+          - title: NetApp HCI for Oracle
+            url: https://fieldportal.netapp.com/content/879390
+      - title: Data Protection / Data Fabric
+        entries:
+          - title: Data Protection Collection
+            url: https://fieldportal.netapp.com/collections/901766?assetComponentId=903639
+          - title: Splunk Enterprise with Arrow Appliance
+            url: https://fieldportal.netapp.com/content/889729?assetComponentId=891554
+          - title: Multi-cloud Data Protection with Cloud Volumes ONTAP
+            url: https://fieldportal.netapp.com/content/900751?assetComponentId=902614
+          - title: Build your Data Fabric with NetApp HCI, ONTAP and Converged Infrastructure
+            url: https://fieldportal.netapp.com/content/852388
+          - title: StorageGrid on NetApp HCI
+            url: https://fieldportal.netapp.com/content/829368

@@ -1,0 +1,32 @@
+---
+sidebar: solutions_sidebar
+permalink: solutions/index.html
+summary: NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider--all in a self-service mode without IT involvement.
+keywords: netapp, hci, on premise, kubernetes, cloud services
+---
+
+= Solutions Catalog for NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Built on top of the NetApp HCI infrastructure, a variety of solutions are available to address critical business needs.​  NetApp HCI solutions are developed to address common business themes in areas such as:
+
+* Private and Hybrid Cloud
+* Public and Multi Cloud
+* DevOps
+* Enterprise Applications
+* AI and GPU
+* End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
+* Data Fabric / Data Protection
+
+[discrete]
+== Find more information:
+* https://fieldportal.netapp.com/collections/895975[NetApp HCI Solutions Collection^]
+* https://fieldportal.netapp.com/collections/783084[NetApp HCI VMware Private Cloud Collection^]
+* https://fieldportal.netapp.com/collections/884534[NetApp HCI Red Hat Private Cloud Collection^]
+* https://fieldportal.netapp.com/collections/810434[NetApp HCI Red Hat Openshift Container Platform Collection^]
+* https://fieldportal.netapp.com/collections/639656[NetApp HCI End User Computing (EUC) Collection^]
