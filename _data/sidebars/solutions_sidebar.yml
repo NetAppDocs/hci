@@ -1,0 +1,59 @@
+entries:
+  - title: NetApp HCI Solutions
+    url: ./index.html
+  - title: Solution Collection (login required)
+    url: https://fieldportal.netapp.com/collections/810434
+  - title: Private Cloud
+    entries:
+      - title: VMware Private Cloud (Design Guide)
+        url: https://www.netapp.com/us/media/nva-1122-design.pdf
+      - title: VMware Private Cloud (Deployment Guide)
+        url: https://www.netapp.com/us/media/nva-1122-deploy.pdf
+      - title: VMware Validated Design
+        url: https://www.netapp.com/us/media/nva-1128-design.pdf
+      - title: Private Cloud with Red Hat (Design Guide)
+        url: https://www.netapp.com/us/media/nva-1133-design.pdf
+      - title: Private Cloud with Red Hat (Deployment Guide)
+        url: https://www.netapp.com/us/media/nva-1133-deploy.pdf
+  - title: DevOps
+    entries:
+      - title: DevOps CI / CD Pipeline
+        url: ./nhci_devops_cicd.html
+      - title: Infrastructure as Code with Red Hat Ansible
+        url: https://www.netapp.com/us/media/wp-7304.pdf
+      - title: Red Hat Openshift Container Platform (Design Guide)
+        url: https://www.netapp.com/us/media/nva-1124-design.pdf
+      - title: Red Hat Openshift Container Platform (Deployment Guide)
+        url: https://www.netapp.com/us/media/nva-1124-deploy.pdf
+  - title: End User Computing (EUC)
+    entries:
+      - title: VMware Horizon View 7
+        url: https://www.netapp.com/us/media/tr-4630.pdf
+      - title: VMware EUC (Design Guide)
+        url: https://www.netapp.com/us/media/nva-1132-design.pdf
+      - title: VMware EUC (Deployment Guide)
+        url: https://www.netapp.com/us/media/nva-1132-deploy.pdf
+      - title: VMware EUC with NVIDA GPUs (Design Guide)
+        url: https://www.netapp.com/us/media/nva-1129-design.pdf
+      - title: VMware EUC with NVIDA GPUs (Deployment Guide)
+        url: https://www.netapp.com/us/media/nva-1129-deploy.pdf
+  - title: Database
+    entries:
+      - title: MongoDB
+        url: https://www.netapp.com/us/media/tr-4633.pdf
+      - title: Oracle
+        url: https://www.netapp.com/us/media/tr-4768.pdf
+      - title: Sybase ASE
+        url: https://www.netapp.com/us/media/tr-4721.pdf
+      - title: SQL Server
+        url: https://www.netapp.com/us/media/tr-4638.pdf
+  - title: Data Protection / Data Fabric
+    entries:
+      - title: Data Protection
+        url: https://www.netapp.com/us/media/tr-4641.pdf
+      - title: StorageGrid
+        url: https://www.netapp.com/us/media/tr-4734.pdf
+      - title: Build your Data Fabric with NetApp HCI, ONTAP and Converged Infrastructure
+        url: https://www.netapp.com/us/media/tr-4748.pdf
+      - title: Disaster Receovery and Replication with VMware SRM
+        url: https://www.netapp.com/us/media/tr-4795.pdf
