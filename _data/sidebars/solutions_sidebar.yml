@@ -27,8 +27,8 @@ entries:
         url: https://www.netapp.com/us/media/nva-1124-deploy.pdf
   - title: End User Computing (EUC)
     entries:
-      - title: VMware Horizon View 7
-        url: https://www.netapp.com/us/media/tr-4630.pdf
+      - title: VMware Horizon 7 with 3D Graphics
+        url: https://www.netapp.com/us/media/tr-4792.pdf
       - title: VMware EUC (Design Guide)
         url: https://www.netapp.com/us/media/nva-1132-design.pdf
       - title: VMware EUC (Deployment Guide)
@@ -37,6 +37,9 @@ entries:
         url: https://www.netapp.com/us/media/nva-1129-design.pdf
       - title: VMware EUC with NVIDA GPUs (Deployment Guide)
         url: https://www.netapp.com/us/media/nva-1129-deploy.pdf
+      - title: VMware Horizon View 7
+        url: https://www.netapp.com/us/media/tr-4630.pdf
+
   - title: Database
     entries:
       - title: MongoDB
@@ -49,11 +52,15 @@ entries:
         url: https://www.netapp.com/us/media/tr-4638.pdf
   - title: Data Protection / Data Fabric
     entries:
-      - title: Data Protection
-        url: https://www.netapp.com/us/media/tr-4641.pdf
+      - title: Multicloud Data Protection with Cloud Volumes ONTAP
+        url: https://www.netapp.com/us/media/nva-1137.pdf
       - title: StorageGrid
         url: https://www.netapp.com/us/media/tr-4734.pdf
       - title: Build your Data Fabric with NetApp HCI, ONTAP and Converged Infrastructure
         url: https://www.netapp.com/us/media/tr-4748.pdf
       - title: Disaster Receovery and Replication with VMware SRM
         url: https://www.netapp.com/us/media/tr-4795.pdf
+      - title: Splunk Enterprise with Arrow Appliance
+        url: https://www.netapp.com/us/media/tr-4778.pdf
+      - title: Veeam Backup and Replication 9.5 v4
+        url: https://www.netapp.com/us/media/tr-4634.pdf
