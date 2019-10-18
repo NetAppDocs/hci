@@ -43,7 +43,7 @@ Configuration management refers to the process of setting up the virtual infrast
 // *Automate configuration on your Virtual Infrastructure: https://[blog] | https://[demo]*
 *Automate configuration on your Virtual Infrastructure:*
 
-* _Deploy Kubernetes on NetApp HCI with NKS, Part I:_ &sp; &sp; &sp;https://netapp.io/2019/10/15/deploy-k8s-netapp-hci-nks-part-1/[Blog] | Video TBA
+* _Deploy Kubernetes on NetApp HCI with NKS, Part I:_ https://netapp.io/2019/10/15/deploy-k8s-netapp-hci-nks-part-1/[  Blog  ] | Video TBA
 
 === Source Repository
 
