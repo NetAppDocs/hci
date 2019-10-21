@@ -22,6 +22,7 @@ Built on top of the NetApp HCI infrastructure, NetApp HCI solutions are availabl
 * AI and GPU
 * End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
 * Data Fabric / Data Protection
+* Security
 
 [discrete]
 == Find more information:

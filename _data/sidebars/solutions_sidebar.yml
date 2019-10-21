@@ -39,7 +39,8 @@ entries:
         url: https://www.netapp.com/us/media/nva-1129-deploy.pdf
       - title: VMware Horizon View 7
         url: https://www.netapp.com/us/media/tr-4630.pdf
-
+      - title: Citrix Virtual Apps and Desktops with VMware vSphere (Design Guide)
+        url: https://www.netapp.com/us/media/nva-1140-design.pdf
   - title: Database
     entries:
       - title: MongoDB
@@ -64,3 +65,5 @@ entries:
         url: https://www.netapp.com/us/media/tr-4778.pdf
       - title: Veeam Backup and Replication 9.5 v4
         url: https://www.netapp.com/us/media/tr-4634.pdf
+  - title: Security
+    entries:
