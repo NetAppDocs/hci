@@ -16,6 +16,7 @@ keywords: netapp, hci, on premise, kubernetes, cloud services
 
 With NetApp® HCI, hybrid cloud infrastructure is a reality.
 
+
 It starts with the combination of cloud services technology on NetApp HCI along with NetApp HCI Solutions. With the technology and the team behind you, you can deploy and operate hybrid clouds on-premise and off-premise.
 •	*NetApp Kubernetes Service* enables you to deploy clusters and applications to any premises that your NetApp HCI installations are at with the same tools that you deploy to public clouds and treat your HCI installation as a deployable region in the cloud.
 •	*Cloud Volumes on NetApp HCI* offers a simple, on-demand shared filesystems feature on your premises, backed by NetApp ONTAP® data management software.
