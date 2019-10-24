@@ -1,0 +1,73 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_NKS_create_cluster.html
+summary: Create a Kubernetes cluster using NetApp Kubernetes Service.
+keywords: netapp, hci, on premise, cloud services, kubernetes
+---
+
+= Creating a Kubernetes cluster using the NetApp Kubernetes Service
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you enable cloud services, you can create a Kubernetes workload cluster. After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.
+
+== About this task
+You create Kubernetes clusters, add them to a workspace, create a project within that workspace, and later add a solution to the project.
+
+The NetApp Kubernetes Service is installed on a VMware virtual machine on a compute node using the NetApp HCI management node.
+
+== Logging in to NetApp Cloud Central
+
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Kubernetes Service*.
+. Log in using your Cloud Central credentials.
++
+image:nks_organization_menu.png[NetApp Kubernetes Service image showing Organization menu]
+
+== Choosing a provider
+. Click *Organizations* and choose your organization.
++
+image:icon_blue_wheel.png[NetApp Kubernetes Service icon]
+
+. Click *Control Plane*.
+. Click *Add Cluster*.
++
+A list of providers appears, including NetApp HCI.
++
+image:nks_provider_choose3_hci.png[NetApp Kubernetes Service image choosing NetApp as your provider.]
+
+. Choose *NetApp HCI* as the provider.
++
+image:nks_provider_configure.png[NetApp Kubernetes Service configuring NetApp as your provider.]
+
+== Configuring your provider
+. Select the region, the workspace in which the cluster will be located, and SSH key pair for the cluster.
+. To edit any of the default values for the cluster nodes, click *Edit* and customize the number, size, and disk space allotted to the cluster nodes. If there is more than one NetApp HCI installation in the organization, you can select additional systems.
+. Click *Submit*.
+
+== Configuring your cluster
+.	Configure your Kubernetes cluster by entering the cluster name
+. Typically, use the default settings.
+. Click *Submit*.
+
+.Result
+The NetApp Kubernetes Service creates the cluster and displays it on the Clusters page.
+
+== After you finish
+Continue with link:task_nks_creating_projects.html[Creating a project within a NetApp Kubernetes Service] workspace you specified so that you can later add applications or solutions to the project.
+
+
+[discrete]
+== Top Links
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]

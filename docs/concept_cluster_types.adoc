@@ -1,0 +1,30 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_cluster_types.html
+summary: NetApp HCI with NetApp Kubernetes Service shows you different types of clusters.
+keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
+---
+
+= Cluster types in cloud services on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You'll encounter different types of clusters when using cloud services on NetApp HCI.
+
+Types of clusters you'll encounter:
+
+*	*Service cluster*: Connected to the NetApp Kubernetes Service, a service cluster acts as an orchestrator to deploy services and take care of itself. The service cluster is a set of compute nodes and storage resources that form a Kubernetes environment. Each cluster has at least one master node, which is responsible for overall management of the cluster, and three worker nodes, on which containers are scheduled to execute.
+* *Workload clusters*: These are clusters on which you add any number of applications. These clusters are maintained in the NetApp Kubernetes Service.
+
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

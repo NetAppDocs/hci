@@ -1,0 +1,44 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_dfo_creating_cloud_volumes.html
+summary: Create cloud volumes using Cloud Volumes Service.
+keywords: netapp, hci, on premise, orchestrator, fabric, kubernetes, cloud services, cloud volumes
+---
+
+= Creating cloud volumes with NetApp Fabric Orchestrator
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can create cloud volumes on the Kubernetes cluster by using another cloud service, the NetApp Fabric Orchestrator.
+
+.Steps
+
+. From https://cloud.netapp.com[NetApp Cloud Central^], select *Products* > *NetApp Fabric Orchestrator*.
+. Click *Create Cloud Volumes*.
+. On the Create Cloud volumes page, enter or select the following:
+.. Choose *NetApp Private Cloud* as the provider.
+.. On the NetApp HCI tab, select the cloud volume.
+.. Select the service level and region.
+.. Enter any tags or labels.
+.. Edit the export policy and protection policy.
+. Click *Create Cloud Volumes*.
+
+
+
+
+[discrete]
+== Top Links
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

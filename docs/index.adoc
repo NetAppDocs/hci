@@ -1,0 +1,26 @@
+---
+sidebar: docs_sidebar
+permalink: docs/index.html
+summary: NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider--all in a self-service mode without IT involvement.
+keywords: netapp, hci, on premise, kubernetes, cloud services
+---
+
+= Cloud services on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Using NetApp Kubernetes Service, NetApp HCI deploys across multiple public cloud providers and on premise. You can use NetApp HCI to deploy your services similar to what you might do with a cloud provider—all in a self-service mode without IT involvement.​
+
+THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW.
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

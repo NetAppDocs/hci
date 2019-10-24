@@ -1,6 +1,6 @@
 ---
-sidebar: sidebar
-permalink: concept_architecture_cloudinsights.html
+sidebar: docs_sidebar
+permalink: docs/concept_architecture_cloudinsights.html
 summary: NetApp Cloud Insights provides real-time analytics on NetApp HCI cloud services.
 keywords: netapp, hci, on premise, cloud services, cloud insights
 ---
@@ -10,12 +10,16 @@ keywords: netapp, hci, on premise, cloud services, cloud insights
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
-NetApp Cloud Insights monitors compute, network, storage stack and application statuses for multi-vendor, heterogenous services and now provides analytics on NetApp HCI services.
+You can quickly ascertain the health of your cloud services on NetApp HCI with NetApp Cloud Insights.
 
-You can quickly ascertain the health of your cloud services and see information like this:
+THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW. 
+
+NetApp Cloud Insights monitors compute, network, storage stack and application statuses for multi-vendor, heterogenous services and now provides analytics on many cloud services, including on NetApp HCI.
+
+You can see information like this:
 
 * Number of Kubernetes clusters
 * Number of pods
@@ -25,6 +29,7 @@ You can quickly ascertain the health of your cloud services and see information 
 * IOPs
 * and much more
 
+== The Cloud Insights Dashboard
 This NetApp Cloud Insights Dashboard shows analytics for NetApp Kubernetes Service clusters and pods.
 image:cloudinsights_K8S_overview.png[Cloud Insights dashboard image]
 
@@ -35,14 +40,15 @@ Enter just the Data Collector-specific information in a web form and then the Da
 
 image:cloudinsights_data_collector.png[Cloud Insights Data Collector for NetApp HCI]
 
+
 [discrete]
 == Top Links
-* link:cloud_volumes_service/snapshot_cloud_volumes.html[Durability, Availability, Encryption and Snapshots on Cloud Volumes Service]
-* link:cloud_volumes_ontap/networking_cloud_volumes_ontap.html[NetApp Cloud Volumes ONTAP And Enhanced Networking Support]
-* link:NPS/gdpr_and_hybrid_cloud.html[GDPR and Hybrid Cloud: A More Perfect Union]
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+
 
 [discrete]
 == Find more information
-
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://www.netapp.com/us/forms/campaign/register-for-netapp-cloud-volumes-for-aws.aspx?hsCtaTracking=4f67614a-8c97-4c15-bd01-afa38bd31696%7C5e536b53-9371-4ce1-8e38-efda436e592e[Get a first look at the new NetApp Cloud Volumes Service for AWS^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

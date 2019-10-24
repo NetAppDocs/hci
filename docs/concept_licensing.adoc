@@ -1,0 +1,27 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_licensing.html
+summary: You can use a 30-day trial license and later convert it to a production license.
+keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
+---
+
+= Licensing
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can use a 30-day trial license and later convert it to a production license.
+
+For details, see link:task_hcc_license_convert.html[Converting your trial license to a production license]
+
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
+* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
