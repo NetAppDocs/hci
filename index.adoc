@@ -18,9 +18,13 @@ With NetApp® HCI, hybrid cloud infrastructure is a reality.
 
 
 It starts with the combination of cloud services technology on NetApp HCI along with NetApp HCI Solutions. With the technology and the team behind you, you can deploy and operate hybrid clouds on-premise and off-premise.
+
 * *NetApp Kubernetes Service* enables you to deploy clusters and applications to any premises that your NetApp HCI installations are at with the same tools that you deploy to public clouds and treat your HCI installation as a deployable region in the cloud.
+
 *	*Cloud Volumes on NetApp HCI* offers a simple, on-demand shared filesystems feature on your premises, backed by NetApp ONTAP® data management software.
+
 * *NetApp Cloud Insights* gives you detailed analytics for your cloud environment, including Amazon Web Services, Microsoft Azure, Google Cloud Platform, and NetApp HCI systems. _Coming soon_.
+
 *	*NetApp Fabric Orchestrator* is a centralized storage and data management control plane to discover and manage your storage assets and data estate, anywhere.
 
 *NetApp HCI Solutions* provides customers with the information needed to deploy and operate private clouds, supporting a wide variety of use cases spanning both on-premise and off-premise.  NetApp HCI Solutions deliver value-add capabilities across public, private, hybrid and multi-cloud in technology areas such as DevOps, end user computing, enterprise applications, artificial intelligence, data protection and Data Fabric management.
