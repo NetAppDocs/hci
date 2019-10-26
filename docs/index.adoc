@@ -20,7 +20,7 @@ THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW.
 
 [discrete]
 == Find more information
-* https://docs.netapp.com/hci/us-en/index.html[NetApp Cloud Services and Solutions^]
+* link:../../index.html[NetApp Cloud Services and Solutions^]
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
 * https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
