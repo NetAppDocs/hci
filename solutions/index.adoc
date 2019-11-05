@@ -15,13 +15,13 @@ keywords: netapp, hci, on premise, kubernetes, cloud services
 [.lead]
 Built on top of the NetApp HCI infrastructure, NetApp HCI solutions are available to address common business themes in areas such as:
 
-* Private and Hybrid Cloud
-* Public and Multi Cloud
+* Public, Private, Hybrid and Multi Cloud
 * DevOps
 * Enterprise Applications
 * AI and GPU
-* End User Computing (EUC) / Virtual Desktop Infrastructure (VDI)
-* Data Fabric / Data Protection
+* End User Computing (EUC)
+* Data Fabric
+* Data Protection
 * Security
 
 [discrete]
