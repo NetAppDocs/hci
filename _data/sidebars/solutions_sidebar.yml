@@ -51,14 +51,16 @@ entries:
         url: https://www.netapp.com/us/media/tr-4721.pdf
       - title: SQL Server
         url: https://www.netapp.com/us/media/tr-4638.pdf
-  - title: Data Protection / Data Fabric
+  - title: Data Fabric
+    entries:
+      - title: Build your Data Fabric with NetApp HCI, ONTAP and Converged Infrastructure
+        url: https://www.netapp.com/us/media/tr-4748.pdf
+      - title: StorageGrid Deployment on NetApp HCI
+        url: https://www.netapp.com/us/media/tr-4734.pdf
+  - title: Data Protection
     entries:
       - title: Multicloud Data Protection with Cloud Volumes ONTAP
         url: https://www.netapp.com/us/media/nva-1137.pdf
-      - title: StorageGrid
-        url: https://www.netapp.com/us/media/tr-4734.pdf
-      - title: Build your Data Fabric with NetApp HCI, ONTAP and Converged Infrastructure
-        url: https://www.netapp.com/us/media/tr-4748.pdf
       - title: Disaster Receovery and Replication with VMware SRM
         url: https://www.netapp.com/us/media/tr-4795.pdf
       - title: Splunk Enterprise with Arrow Appliance
