@@ -16,10 +16,10 @@ keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 [.lead]
 You might want to get started with the following items:
 
-*	<<concept_cloud_central_accounts,Review your NetApp Cloud Central account>> information or sign up, if you don't already have an account.
-* <<reference_requirements_beforeyoubegin,Review requirements>> for your system, port, networking, and browser.
-* Check out <<concept_licensing,licensing>> requirements.
-* Get a <<task_getting_a_netapp_kubernetes_service_api_token,NetApp Kubernetes Service API token>>.
+*	link:concept_cloud_central_accounts.html[Review your NetApp Cloud Central account] information or sign up, if you don't already have an account.
+* link:reference_requirements_beforeyoubegin.html[Review requirements] for your system, port, networking, and browser.
+* Check out link:concept_licensing.html[licensing] requirements.
+* Get a link:task_getting_a_netapp_kubernetes_service_api_token.html[NetApp Kubernetes Service API token].
 
 
 
