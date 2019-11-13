@@ -43,8 +43,7 @@ For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUI
 An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled.
 . In the Cloud Services popup, review the services that are available and click *Enable Cloud Services*.
 +
-image::hcc_cloud_enablecloudservices_Services_2.2.png[NetApp HCC Enable cloud services page]
-
+image::hcc_enablecloudservices_Services_2.2.png[NetApp HCC Enable cloud services page]
 
 
 == Selecting the Cloud Services you want to enable
@@ -158,8 +157,6 @@ The process can take up to 30 minutes for NKS and 60 minutes for NKS along with 
 
 NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which is a Kubernetes cluster that consists of four VMs (one Kubernetes master node and three Kubernetes worker compute
 nodes).
-
-image:hcc_enable_cloud_services_enabled.png[NetApp Hybrid Cloud Control wizard image showing cloud services enabled]
 
 
 .After you finish
