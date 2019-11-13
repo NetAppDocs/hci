@@ -25,19 +25,13 @@ Deploying and configuring a NetApp HCI solution in the cloud involves these step
 * link:task_nks_creating_projects[Create a Kubernetes project]
 * link:task_NKS_adding_application[Add applications to your Kubernetes clusters]
 * link:task_dfo_creating_cloud_volumes[Create cloud volumes] using NetApp Fabric Orchestrator.
-* link:task_cvs_create_cloud_volumes.html[Create cloud volumes] using NetApp Cloud Volumes Service, another service on NetApp Cloud Central.
 
 
 
-[discrete]
-== Top Links
-* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
 
 
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
