@@ -13,7 +13,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 :imagesdir: ../media/
 
 [.lead]
-Before you use cloud services on NetApp HCI, your cloud administrator should have completed networking and completed other requirements.​
+Before you use cloud services on NetApp HCI, your cloud administrator should have completed networking and other requirements.​
 
 
 == System requirements

@@ -19,25 +19,23 @@ The following NetApp cloud services are supported on NetApp HCI.
 * *NetApp Cloud Volumes*: To manage Cloud Volumes on NetApp HCI, select this service. This service offers an ondemand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds. Cloud Volumes on NetApp HCI can be deployed only on a vCenter with a single datacenter. _Available in Preview mode_.
 * *NetApp Fabric Orchestrator*: Provides a centralized storage and data management control plane for fabric-wide, multi-cloud visibility, monitoring, policies, administration and workflow orchestration for NetApp storage systems on-premises and in the cloud.
 
-Using NetApp Fabric Orchestrator, you can discover, manage, and govern your storage assets and data estate, anywhere. Use Fabric Orchestrator to create and manage Cloud Volumes on NetApp HCI. 
++Using NetApp Fabric Orchestrator, you can discover, manage, and govern your storage assets and data estate, anywhere. Use Fabric Orchestrator to create and manage Cloud Volumes on NetApp HCI.
 
 == Notice of functional preview
 
 NetApp Kubernetes Service and Cloud Volumes on HCI are presently available as a functional preview. While in preview, the services are only for non-production environments and noncommercial use. By participating in the preview, participants agree to be bound by the cloud services link:https://www.netapp.com/us/media/cloud-data-services-terms.pdf[terms of service].
 
-https://www.netapp.com/us/media/cloud-data-services-terms.pdf
+
 
 
 
 [discrete]
 == Top Links
 * link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-
+* https://www.netapp.com/us/media/cloud-data-services-terms.pdf[Functional Preview Terms of Service^]
 
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* link=http://docs.netapp.com/hci/index.jsp,window=_blank]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

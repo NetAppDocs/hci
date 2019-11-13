@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, cloud services, kubernetes
 :imagesdir: ../media/
 
 [.lead]
-When you create Kubernetes workload clusters, you select a workspace in the NetApp Kubernetes Service. You can create a project within that workspace and later add a solution to the project.
+When you create Kubernetes user clusters, you select a workspace in the NetApp Kubernetes Service. You can create a project within that workspace and later add a solution to the project.
 
 .Steps
 

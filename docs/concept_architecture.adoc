@@ -14,8 +14,7 @@ keywords: netapp, hci, on premise, cloud services
 
 [.lead]
 NetApp HCI along with NetApp Kubernetes Service enables you to deploy your applications as you would with a public
-cloud provider—all in a self-service mode without IT involvement. This enables you to treat your
-datacenter as a deployable region of your multi-cloud.
+cloud provider—all in a self-service mode without IT involvement. This enables you to treat your datacenter as a deployable region of your multi-cloud.
 
 image:architecture_overview.png[Architecture image for NetApp HCI]
 
@@ -33,9 +32,9 @@ The following components are used for cloud services on NetApp HCI:
 [discrete]
 == Top Links
 * link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link=http://docs.netapp.com/hci/index.jsp,window=_blank]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

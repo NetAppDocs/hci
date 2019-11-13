@@ -15,14 +15,6 @@ keywords: netapp, hci, on premise, cloud services, cloud volumes,
 [.lead]
 Using Fabric Orchestrator, you can create and manage cloud volumes anywhere using a single interface, whether you need them to reside on a private cloud or many public clouds.
 
-== Steps
-
-. Open a web browser and log in to https://cloud.netapp.com[NetApp Cloud Central^].
-. Click *Go to Cloud Data Services* and select *NetApp HCI*.
-
-TIP: If you do not see any systems listed, make sure that the NetApp HCI administrator is added to your NetApp Cloud Central account.
-
-
 
 
 [discrete]

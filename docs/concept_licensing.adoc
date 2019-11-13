@@ -24,7 +24,7 @@ Because Cloud Volumes on NetApp HCI is supported by NetApp ONTAP HA clusters and
 
 The NetApp licensing files use the following format:
 
-'NLF<serialnumber>.txt'
+NLF<_serialnumber_>.txt
 
 == Licensing requirements for NetApp Kubernetes Service
 NetApp Kubernetes Service does not require an additional license.
@@ -33,4 +33,4 @@ NetApp Kubernetes Service does not require an additional license.
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

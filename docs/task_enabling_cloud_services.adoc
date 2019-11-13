@@ -14,6 +14,7 @@ keywords: netapp, hci, on premise, cloud services, hybrid cloud control
 
 [.lead]
 Enabling NetApp cloud services adds your local NetApp HCI system as a region to NetApp Cloud Central.
+
 Enabling cloud services is performed using the NetApp Hybrid Cloud Control.
 
 .About this task
@@ -32,17 +33,15 @@ A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 
 . Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node:
 "https://<_ManagementNodeIP_>"
-
 +
 image::hcc_enable_cloud_services.png[NetApp Hybrid Cloud Control wizard image]
-
-+ For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUID-6FC998B8-C6D4-48CF-A1A4-A762CC19092C.html[Accessing NetApp Hybrid Cloud Control^].
++
+For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUID-6FC998B8-C6D4-48CF-A1A4-A762CC19092C.html[Accessing NetApp Hybrid Cloud Control^].
 
 . Click the *Cloud* icon.
-
-+ An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled.
++
+An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled.
 . In the Cloud Services popup, review the services that are available and click *Enable Cloud Services*.
-
 +
 image::hcc_cloud_enable_cloud_services_page.png[NetApp HCC Enable cloud services page]
 
@@ -115,12 +114,12 @@ appear and you should skip the Licensing steps and enter networking information 
 Networking page instead.
 
 The NetApp license files use the following format:
-'NLF<serialnumber>.txt'
+NLF<_serialnumber_>.txt'
 
 . If you already have obtained license files, click *Browse* to locate them.
 Select both licenses and click *Choose* so they can be uploaded.
 . If you have not obtained license files, complete the following to obtain or retrieve them:
-.. Serial number information is provided in an email after ordering software. Go to the mysupport.netapp.com[NetApp Support Site^] and click *Products* > *Software Licenses*, and
+.. Serial number information is provided in an email after ordering software. Go to the https://mysupport.netapp.com[NetApp Support Site^], click *Products* > *Software Licenses*, and
 enter product and serial number.
 .. Return to the Hybrid Cloud Control Licensing page, click the link to the NetApp License File Generator, supply your password, select “ONTAP Select-Premium” as the product line, and supply the product serial number that you obtained from the NetApp Support Site.
 .. Acknowledge the Global Data Privacy Policy and click *Submit*.
@@ -138,8 +137,7 @@ network requires outbound Internet access.
 *	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you
 place your applications. This network requires outbound Internet access.
 *	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NetApp Kubernetes Service user clusters.
-
-+If you enabled Cloud Volumes on the Services page, the following additional fields appear:
+. If you enabled Cloud Volumes on the Services page, the following additional fields appear:
 * *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the
 installation to configure Cloud Volumes enablement.
 * *Cloud Volumes Cluster Network*: Enter network information used by the cluster nodes used by Cloud Volumes deployment to communicate with each other.

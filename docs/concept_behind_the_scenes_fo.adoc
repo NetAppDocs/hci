@@ -17,7 +17,8 @@ When you enable Cloud Volumes on NetApp HCI using Hybrid Cloud Control, several 
 
 
 * NetApp HCI initiates an API call that creates a new organization (workspace) in Fabric Orchestrator. The organization is the same organization used in NetApp Kubernetes Service.
-+ Cloud Volumes is a Kubernetes application that runs in the NetApp Kubernetes Service service cluster.
++
+Cloud Volumes is a Kubernetes application that runs in the NetApp Kubernetes Service service cluster.
 * The Cloud Central account used during installation in NetApp Hybrid Cloud Control becomes the owner assigned to the Fabric Orchestrator organization.
 * The region in NetApp Kubernetes Service becomes the same region in the Fabric Orchestrator organization.
 * Within the datacenter in vCenter, a new folder called "NetApp-HCI-CloudVolumeFoundation" is created. This folder contains the cluster and deployment VMs.
