@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: index.html
-summary: With cloud services technology on NetApp HCI along with NetApp HCI Solutions, you can deploy cloud services across multiple public cloud providers and on premise. 
+summary: With cloud services technology on NetApp HCI along with NetApp HCI Solutions, you can deploy cloud services across multiple public cloud providers and on premise.
 keywords: netapp, hci, on premise, kubernetes, cloud services
 ---
 
@@ -34,5 +34,3 @@ It starts with the combination of cloud services technology on NetApp HCI along 
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]

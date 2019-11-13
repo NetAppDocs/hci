@@ -26,6 +26,7 @@ TIP: If you do not see any systems listed, make sure that the NetApp HCI adminis
 
 +
 Using Cloud Central, you can set up accounts either as individual accounts or as Federated accounts:
+
 .. You can make a new account with name, email, and password and then you will be logged in. This is the simplest type of account.
 .. If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
 . From other Cloud Central products, select *Products* > *NetApp Fabric Orchestrator*.
