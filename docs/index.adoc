@@ -18,6 +18,8 @@ Service, you can set up a cloud native development pipeline quickly and easily.
 
 THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW.
 
+image:cloud_all_services_diagram2.2.png[Cloud services on NetApp HCI]
+
 
 [discrete]
 == Find more information

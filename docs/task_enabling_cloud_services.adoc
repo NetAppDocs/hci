@@ -34,7 +34,7 @@ A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 . Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node:
 "https://<_ManagementNodeIP_>"
 +
-image::hcc_enable_cloud_services.png[NetApp Hybrid Cloud Control wizard image]
+image::hcc_topbar.png[NetApp Hybrid Cloud Control options image]
 +
 For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUID-6FC998B8-C6D4-48CF-A1A4-A762CC19092C.html[Accessing NetApp Hybrid Cloud Control^].
 
@@ -43,7 +43,7 @@ For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUI
 An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled.
 . In the Cloud Services popup, review the services that are available and click *Enable Cloud Services*.
 +
-image::hcc_cloud_enable_cloud_services_page.png[NetApp HCC Enable cloud services page]
+image::hcc_cloud_enablecloudservices_Services_2.2.png[NetApp HCC Enable cloud services page]
 
 
 
@@ -66,7 +66,8 @@ Enabling cloud services for NetApp HCI requires a NetApp Kubernetes Service API 
 If you already have a NetApp Kubernetes Service API token, you can skip this procedure.
 
 . On the Enable Cloud Services > NetApp Cloud Central page, click the *API token* link to get a Kubernetes Service API token if you do not already have one.
-
++
+image::hcc_enablecloudservices_cloudcentral.png[Enable Cloud Services Cloud Central page]
 . Enter a token name and click *Create*.
 +
 image::nks_api_token_copy.png[NKS API token page]
@@ -74,15 +75,12 @@ image::nks_api_token_copy.png[NKS API token page]
 . Copy the token.
 . Return to NetApp Hybrid Cloud Control and paste it into the NetApp Kubernetes Service API Token field.
 
-+
-image::nks_api_token_paste_small.png[Enable Cloud Services paste API token page]
-+
 . Click *Connect*.
 +
 The registration is now established and you are connected to Cloud Central. The Organization and Region Name fields appear listing the datacenters and regions available for this Cloud Central connection.
-+
-image::hcc_enable_cloud_services_connected.png[Enable Cloud Services connected page]
 
++
+image::hcc_enablecloudservices_cloudcentral_token_entered.png[Enable Cloud Services page showing pasted API token]
 
 
 
@@ -102,7 +100,7 @@ Because the management node is connected to the vCenter, the vCenter used for de
 +
 The vCenter instance and admin user connected to it are displayed.
 +
-image::hcc_enable_cloud_services_vcenter.png[Enable Cloud Services vCenter Resources page]
+image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resources page]
 +
 . Click *Continue*.
 
@@ -122,6 +120,9 @@ Select both licenses and click *Choose* so they can be uploaded.
 .. Serial number information is provided in an email after ordering software. Go to the https://mysupport.netapp.com[NetApp Support Site^], click *Products* > *Software Licenses*, and
 enter product and serial number.
 .. Return to the Hybrid Cloud Control Licensing page, click the link to the NetApp License File Generator, supply your password, select “ONTAP Select-Premium” as the product line, and supply the product serial number that you obtained from the NetApp Support Site.
++
+image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licensing page]
+
 .. Acknowledge the Global Data Privacy Policy and click *Submit*.
 .. Download the license files either directly from the NetApp License File Generator or from the email.
 .. Do this twice for the two licenses, one for each of the HA clusters.
@@ -143,6 +144,9 @@ installation to configure Cloud Volumes enablement.
 * *Cloud Volumes Cluster Network*: Enter network information used by the cluster nodes used by Cloud Volumes deployment to communicate with each other.
 * *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned
 cloud volumes.
++
+image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control Networking page]
+
 .	Click *Continue*.
 .	On the Review page, review your choices by expanding each option. and click *Continue*.
 
