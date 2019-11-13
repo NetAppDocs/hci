@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, cloud services, kubernetes
 :imagesdir: ../media/
 
 [.lead]
-When you create Kubernetes workload clusters, you select a workspace in the NetApp Kubernetes Service. You can create a project within that workspace and later add a solution to the project.
+When you create Kubernetes user clusters, you select a workspace in the NetApp Kubernetes Service. You can create a project within that workspace and later add a solution to the project.
 
 .Steps
 
@@ -35,14 +35,6 @@ Continue with link:task_adding_applications.html[Adding applications to your Kub
 
 
 [discrete]
-== Top Links
-* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
-* link:concept_architecture_cloudinsights.html[Real-time analytics with NetApp Cloud Insights]
-
-
-[discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

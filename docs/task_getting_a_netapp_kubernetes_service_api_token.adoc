@@ -20,27 +20,18 @@ You can complete these steps before enabling cloud services or during the proces
 == Steps
 
 . Open a web browser and browse to NetApp Cloud Central for NetApp Kubernetes Service. https://nks.netapp.io
-. Log in to the NetApp Kubernetes Service by providing the NetApp HCI storage cluster administrator credentials.
+. Log in by providing the NetApp HCI storage cluster administrator credentials.
 +
-If you do not have an account, click *Sign Up* and provide the required information.
+If you do not have an account, click *Sign Up* and provide the account information.
 . Click *Go to Cloud Data Services* and select *NetApp HCI*.
-. Click the user icon at the top right of the screen.
-. In the resulting menu, click *Edit Profile*.
+. Click the user icon at the top right of the screen and select *Edit Profile*.
 . In the API Tokens section, click *Add Token*, enter a token name, and click *Create*.
-+
-A new token is created; the cURL command changes to include the new token string.
-. Run the displayed cURL command in a Unix or Mac command terminal.
-+
-A response of [] indicates that the token registration was a success.
 . Copy the token and save it in a file so that you can later paste it when needed.
-
-
 
 
 
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* https://nks.netapp.io[NetApp Kubernetes Service^] 

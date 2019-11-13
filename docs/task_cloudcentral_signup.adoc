@@ -1,0 +1,31 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_cloudcentral_signup.html
+summary: You can log in to NetApp HCI from any web browser that has a connection to the NetApp HCI system.
+keywords: netapp, hci, on premise, cloud services
+---
+
+= Signing up for a Cloud Central account
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Before you enable cloud services on NetApp HCI, you must have a Cloud Central account.
+
+== Steps
+
+. Go to https://cloud.netapp.com[NetApp Cloud Central^].
+. Click *Sign Up*.
+. Enter a valid business email address and choose a password.
+. Enter your company name and your full name.
+. Accept the terms and conditions and click *Sign Up*.
+
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]

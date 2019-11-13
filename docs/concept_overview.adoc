@@ -18,13 +18,10 @@ NetApp HCI​ installations connect to, register with, and become a deployable r
 
 == What you can do with cloud services on NetApp HCI
 
-*	Deploy services across cloud providers and maybe retain some on premise.
-*	Work with multiple cloud providers and avoid getting locked into one provider.
-*	Spin services up yourself without the need to involve DevOps and IT.
-*	Spin up prepared applications on demand. Maybe even your own app.
-*	Deploy services on premise as easily as you can with cloud providers.
-*	Monitor data across cloud providers and on premise with one app or service.
-
+*	Deploy services across cloud providers and your private cloud.
+*	Interact with NetApp HCI as you would with any other supported cloud provider.
+*	Port the apps and data across a hybrid cloud architecture regardless of cloud location without compromising service-level agreements.
+*	Spin up cloud-native applications yourself without involving IT.
 
 
 
@@ -38,6 +35,4 @@ NetApp HCI​ installations connect to, register with, and become a deployable r
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

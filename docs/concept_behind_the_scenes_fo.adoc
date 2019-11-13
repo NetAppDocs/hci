@@ -1,0 +1,37 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_behind_the_scenes_fo.html
+summary: What happens behind the scenes with NetApp HCI and NetApp Fabric Orchestrator
+keywords: netapp, hci, on premise, cloud services, cluster, orchestrator, fabric
+---
+
+= What happens behind scenes with NetApp Fabric Orchestrator and NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+When you enable Cloud Volumes on NetApp HCI using Hybrid Cloud Control, several events occur in NetApp Fabric Orchestrator, the interface you use to create and manage cloud volumes.
+
+
+* NetApp HCI initiates an API call that creates a new organization (workspace) in Fabric Orchestrator. The organization is the same organization used in NetApp Kubernetes Service.
++
+Cloud Volumes is a Kubernetes application that runs in the NetApp Kubernetes Service service cluster.
+* The Cloud Central account used during installation in NetApp Hybrid Cloud Control becomes the owner assigned to the Fabric Orchestrator organization.
+* The region in NetApp Kubernetes Service becomes the same region in the Fabric Orchestrator organization.
+* Within the datacenter in vCenter, a new folder called "NetApp-HCI-CloudVolumeFoundation" is created. This folder contains the cluster and deployment VMs.
+* Cloud Volumes installs the port groups required in vCenter. The following three networks are created:
+** NetApp-HCI-CVF-Cluster
+** NetApp-HCI-CVF-Mgmt
+** NetApp-HCI-CVF-Storage
+* Cloud Volumes creates the following datastores, which should not be modified:
+** NetApp-HCI-CVF-Deploy-DS
+** NetApp-HCI-CVF-Cluster-DS-01
+** NetApp-HCI-CVF-Cluster-DS-02
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

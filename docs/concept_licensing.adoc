@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/concept_licensing.html
-summary: You can use a 30-day trial license and later convert it to a production license.
+summary: Before you begin using Cloud Volumes on NetApp HCI, you will need to obtain licenses..
 keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 ---
 
-= Licensing
+= Licensing requirements
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,15 +13,24 @@ keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 :imagesdir: ../media/
 
 [.lead]
-You can use a 30-day trial license and later convert it to a production license.
+Before you begin using Cloud Volumes on NetApp HCI, you will need to obtain licenses. You can obtain the licenses before or during the use of the Cloud Services wizard.
 
-For details, see link:task_hcc_license_convert.html[Converting your trial license to a production license]
+The Cloud Services wizard provides a link to obtain the licenses; however, you will need your software license serial numbers. You can get the serial numbers from the NetApp Support Site at
+mysupport.netapp.com.
 
+
+== Licensing requirements for Cloud Volumes on NetApp HCI
+Because Cloud Volumes on NetApp HCI is supported by NetApp ONTAP HA clusters and each requires a license, Cloud Volumes on NetApp HCI requires two “ONTAP Select Premium” licenses.
+
+The NetApp licensing files use the following format:
+
+NLF<_serialnumber_>.txt
+
+== Licensing requirements for NetApp Kubernetes Service
+NetApp Kubernetes Service does not require an additional license.
 
 
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* https://docs.netapp.com/us-en/hybridcloudsolutions/[Hybrid Cloud Solutions documentation^]
-* https://docs.netapp.com/us-en/cloudinsights/[Cloud Insights documentation^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
