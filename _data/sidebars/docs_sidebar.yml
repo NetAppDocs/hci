@@ -7,10 +7,10 @@ entries:
     entries:
       - title: Cloud services on NetApp HCI overview
         url: /concept_overview.html
-      - title: Architecture overview for cloud services on NetApp HCI
-        url: /concept_architecture.html
       - title: Types of cloud services on NetApp HCI
         url: /concept_types_cloudservices.html
+      - title: Architecture overview for cloud services on NetApp HCI
+        url: /concept_architecture.html
       - title: What happens behind the cloud services scenes
         url: /concept_behind_the_scenes.html
       - title: Cluster types in cloud services on NetApp HCI
