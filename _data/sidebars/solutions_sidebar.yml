@@ -25,6 +25,8 @@ entries:
         url: https://www.netapp.com/us/media/nva-1124-design.pdf
       - title: Red Hat Openshift Container Platform (Deployment Guide)
         url: https://www.netapp.com/us/media/nva-1124-deploy.pdf
+      - title: NetApp HCI with Anthos
+        url: https://www.netapp.com/us/media/nva-1141-deploy.pdf
   - title: End User Computing (EUC)
     entries:
       - title: VMware Horizon 7 with 3D Graphics
@@ -61,7 +63,7 @@ entries:
     entries:
       - title: Multicloud Data Protection with Cloud Volumes ONTAP
         url: https://www.netapp.com/us/media/nva-1137.pdf
-      - title: Disaster Receovery and Replication with VMware SRM
+      - title: Disaster Recovery and Replication with VMware SRM
         url: https://www.netapp.com/us/media/tr-4795.pdf
       - title: Splunk Enterprise with Arrow Appliance
         url: https://www.netapp.com/us/media/tr-4778.pdf

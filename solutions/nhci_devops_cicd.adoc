@@ -28,12 +28,13 @@ As DevOps is intended to be a cross-functional mode of working, those that pract
 
 == Addressing the CI/CD Pipeline with NetApp HCI
 
+// NOTE: PLEASE DO NOT mess with sizing of the following images
+
 image:cicd-config-mgmt.jpg[width=402,link=#configuration-management] image:cicd-src-repo.jpg[width=402,link=#source-repository]
 
 image:cicd-develop.jpg[width=131,link=#develop] image:cicd-commit.jpg[width=131,link=#commit] image:cicd-test.jpg[width=131,link=#test] image:cicd-deploy.jpg[width=131,link=#deploy] image:cicd-prod.jpg[width=131,link=#production] image:cicd-analyze.jpg[width=131,link=#analyze]
 
 image:cicd-feedback.jpg[width=808,link=#feedback]
-
 
 [small]#*_Figure 1:_* _DevOps CI/CD Pipeline - Click on any component of the CI/CD pipeline to learn more about the capabilities._#
 
@@ -49,23 +50,23 @@ Configuration management refers to the process of setting up the virtual infrast
 
 A source repository is where the “code” is stored throughout the CI/CD pipeline. Developers “check-out” code to make changes, test the changes and “check-in” the code to be built and deployed. Examples of source repositories that will be referenced in the DevOps video/blog series include jFrog and Bitbucket.
 
-// *Choose and setup a Source Repository: https://[blog] | https://[demo]*
-*Choose and setup a Source Repository:* image:coming-soon.jpg[]
+*Choose and setup a Source Repository:*
+
+* Configuring Jenkins with a new pipeline to run jobs in Kubernetes: https://netapp.io/2019/11/12/netapp-hci-nks-devops-end-to-end-pipeline-part-3/[*_Blog_*] | [*_Video_*]
 
 === Develop
 
 In order to develop code in a CI/CD pipeline, a code and binary management system must be defined. The management system defines the practices for developing and introducing code into the pipeline. Tools such as Artifactory help in managing this process for DevOps.
 
-// *Behind the scenes of Artifactory and HCI: https://[blog] | https://[demo]*
 *Behind the scenes of Artifactory and HCI:* image:coming-soon.jpg[]
-
 
 === Commit
 
 Once code is developed and tested, it must be built before it can be deployed. The commit phase of the CI/CD pipeline addresses how the code it committed into the code management system and built so that it can be deployed.
 
-// *Setup your CI pipeline and Run your first builds: https://[blog] | https://[demo]*
-*Setup your CI pipeline and Run your first builds:* image:coming-soon.jpg[]
+*Setup your CI pipeline and Run your first builds:*
+
+* Configuring Jenkins with a new pipeline to run jobs in Kubernetes: https://netapp.io/2019/11/12/netapp-hci-nks-devops-end-to-end-pipeline-part-3/[*_Blog_*] | [*_Video_*]
 
 === Test
 
@@ -75,31 +76,25 @@ Testing is a critical component in any development process. In a CI/CD pipeline,
 
 Deployment of code occurs once the code has been developed, tested and built. Once built and verified, code can be deployed into a production or pre-production environment.
 
-// *Deploy blue/green environments with Kubernetes: https://[blog] | https://[demo]*
 *Deploy blue/green environments with Kubernetes:* image:coming-soon.jpg[]
 
 === Production
 
 Once code is deployed into the production environment, it can be utilized to meet a customer use case. This topic will touch on how the DevOps CI/CD pipeline introduces code into production to solve a business need.
 
-// *Data Protection, and DR to any place: on premise, off premise and the Cloud: https://[blog] | https://[demo]*
 *Data Protection, and DR to any place: on premise, off premise and the Cloud:* image:coming-soon.jpg[]
 
 === Analyze
 
 Throughout the lifecycle of a CI/CD pipeline, analysis and metrics surrounding the code provide an effective means of evaluating the performance and effectiveness in meeting a business need. This section will touch on metrics and analytics using tools such as ServiceNow (as a self-service portal) and Cloud Insights.
 
-// *Metrics are king: https://[blog] | https://[demo]*
 *Metrics are king:* image:coming-soon.jpg[]
 
-// *ServiceNow for a self-service Portal: https://[blog] | https://[demo]*
 *ServiceNow for a self-service Portal:* image:coming-soon.jpg[]
 
-// *Using Cloud Insights: https://[blog] | https://[demo]*
 *Using Cloud Insights:* image:coming-soon.jpg[]
 
 === Feedback
 Feedback is a fundamental tenant of a successful CI/CD pipeline. At every point in the pipeline, feedback is given to ensure that the code is meeting the expectations. There are a variety of feedback options including, but not limited to, email, reports, blogs, source management notifications and execution logs.
 
-// *Communicate status to your developers: https://[blog] | https://[demo]*
 *Communicate status to your developers:* image:coming-soon.jpg[]
