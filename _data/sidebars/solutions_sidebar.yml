@@ -1,8 +1,8 @@
 entries:
   - title: Cloud Services and Solutions on NetApp HCI
-    url: ../index.html
+    url: ./../index.html
   - title: NetApp HCI Solutions
-    url: index.html
+    url: ./index.html
   - title: Private Cloud
     entries:
       - title: VMware Private Cloud (Design Guide)
@@ -18,7 +18,7 @@ entries:
   - title: DevOps
     entries:
       - title: DevOps CI / CD Pipeline
-        url: nhci_devops_cicd.html
+        url: ./nhci_devops_cicd.html
       - title: Infrastructure as Code with Red Hat Ansible
         url: https://www.netapp.com/us/media/wp-7304.pdf
       - title: Red Hat Openshift Container Platform (Design Guide)
