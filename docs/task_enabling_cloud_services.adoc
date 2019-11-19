@@ -111,7 +111,7 @@ appear and you should skip the Licensing steps and enter networking information 
 Networking page instead.
 
 The NetApp license files use the following format:
-NLF<_serialnumber_>.txt'
+NLF<_serialnumber_>.txt
 
 . If you already have obtained license files, click *Browse* to locate them.
 Select both licenses and click *Choose* so they can be uploaded.
