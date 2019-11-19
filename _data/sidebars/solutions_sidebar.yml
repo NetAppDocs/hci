@@ -1,8 +1,8 @@
 entries:
+  - title: Cloud Services and Solutions on NetApp HCI
+    url: ../index.html
   - title: NetApp HCI Solutions
     url: index.html
-  - title: Solution Collection (login required)
-    url: https://fieldportal.netapp.com/collections/810434
   - title: Private Cloud
     entries:
       - title: VMware Private Cloud (Design Guide)
@@ -71,3 +71,5 @@ entries:
         url: https://www.netapp.com/us/media/tr-4634.pdf
   - title: Security
     entries:
+  - title: Solution Collection (login required)
+    url: https://fieldportal.netapp.com/collections/810434
