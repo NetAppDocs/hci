@@ -15,14 +15,13 @@ keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 [.lead]
 You'll encounter different types of clusters when using cloud services on NetApp HCI.
 
-These are the types of clusters you'll encounter:
 
 * *Service cluster*: Connected to NetApp Kubernetes Service (NKS), a service cluster acts as an orchestrator to deploy services and update itself. The service cluster is a set of compute nodes and storage resources that form a Kubernetes environment. Each cluster has at least one master node, which is responsible for overall management of the cluster, and three worker nodes, on which containers are scheduled to execute. Service clusters are for internal NKS use and are not available for running your applications. Service clusters are not listed in the NKS UI.
 
-* *User cluster*: These are clusters on which you add any number of applications. These clusters are maintained in NetApp Kubernetes Service.
+* *User cluster*: These are workload clusters on which you add any number of applications. These clusters are maintained in NetApp Kubernetes Service.
 
 [discrete]
 == Find more information
-* https://nks.netapp.io[NetApp Kubernetes Service^]
+* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service documentation^]
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

@@ -17,9 +17,7 @@ After you enable cloud services, you can create Kubernetes user clusters on a Ne
 
 
 == About this task
-You create Kubernetes clusters, add them to a workspace, create a project within that workspace, and later add a solution to the project.
-After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.
-
+You create Kubernetes clusters, add them to a workspace, create a project within that workspace, and later add a solution to the project. After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.
 
 == Logging in to NetApp Cloud Central
 
@@ -46,6 +44,7 @@ image:nks_provider_configure.png[NetApp Kubernetes Service configuring NetApp as
 
 == Configuring your provider
 . Select the region, the workspace in which the cluster will be located, and SSH key pair for the cluster.
++
 TIP: In most cases you can just accept the defaults.
 
 . To edit any of the default values for the cluster nodes, click *Edit* and customize the number, size, and disk space allotted to the cluster nodes. If there is more than one NetApp HCI installation in the organization, you can select additional systems.
@@ -68,3 +67,4 @@ Continue with link:task_nks_creating_projects.html[Creating a project within a N
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service Documentation^]

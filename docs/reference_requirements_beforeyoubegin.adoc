@@ -36,17 +36,14 @@ NOTE: Running NKS services through a proxy server is not supported.
 ** NetApp HCI VDS 01-HCI_Internal_NKS_Data
 * Using VDS requires a vSphere Enterprise Plus license. You must have this license.
 
-
 == System size requirements
 * 2x4 systems are not supported for production use. However, you can use these for demo work.
 * 3x4 systems are the minimum production system size we support.
 * 4x4 systems are the recommended minimum size.
 
-
 == NetApp Kubernetes Service requirements
 * A NetApp Kubernetes Service (NKS) account
 * A NetApp Kubernetes Service API token, which authorizes the installer to access the NKS organization. You can create this before or during the process of enabling cloud services on NetApp HCI.
-
 
 == Requirements for Cloud Volumes on NetApp HCI and NetApp Fabric Orchestrator
 * An NKS account. NetApp HCI installs the service cluster on NKS, which in turn installs the Kubernetes pods, which is a set of one or more containers used for Cloud Volumes on NetApp HCI.
