@@ -29,5 +29,6 @@ For details, visit the https://netapp.io/persistent-storage-provisioner-for-kube
 
 [discrete]
 == Find more information
+* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service documentation^]
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]

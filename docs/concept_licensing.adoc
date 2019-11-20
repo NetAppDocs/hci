@@ -15,8 +15,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 [.lead]
 Before you begin using Cloud Volumes on NetApp HCI, you will need to obtain licenses. You can obtain the licenses before or during the use of the Cloud Services wizard.
 
-The Cloud Services wizard provides a link to obtain the licenses; however, you will need your software license serial numbers. You can get the serial numbers from the NetApp Support Site at
-mysupport.netapp.com.
+The Cloud Services wizard provides a link to obtain the licenses; however, you will need your software license serial numbers. You can get the serial numbers from the NetApp Support Site at mysupport.netapp.com.
 
 
 == Licensing requirements for Cloud Volumes on NetApp HCI
@@ -24,7 +23,7 @@ Because Cloud Volumes on NetApp HCI is supported by NetApp ONTAP HA clusters and
 
 The NetApp licensing files use the following format:
 
-NLF<_serialnumber_>.txt
+NLF<serialnumber>.txt
 
 == Licensing requirements for NetApp Kubernetes Service
 NetApp Kubernetes Service does not require an additional license.

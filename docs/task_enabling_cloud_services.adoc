@@ -50,17 +50,15 @@ image::hcc_enablecloudservices_Services_2.2.png[NetApp HCC Enable cloud services
 SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a different set of services than those listed here.
 
 . On the Services page, select the services that you want to enable.
-* *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and
-also with a NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as a VM on a NetApp HCI compute node.
-* *Cloud Volumes*: To install Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option
-will enable Data Fabric replication to and from public clouds.
+* *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with a NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as a VM on a NetApp HCI compute node.
+* *Cloud Volumes*: To install Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds.
 * *Cloud Insights*: This option will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
 
 . Click *Continue*.
 
 
 == Getting a Kubernetes API token
-Enabling cloud services for NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your Cloud Central account. You can complete these steps prior to enabling cloud services or during the process.
+Enabling cloud services on NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your Cloud Central account. You can complete these steps prior to enabling cloud services or during the process.
 
 If you already have a NetApp Kubernetes Service API token, you can skip this procedure.
 
@@ -106,12 +104,10 @@ image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resourc
 
 
 == Entering license information
-If you enabled Cloud Volumes, a Licensing page appears. If not, the Licensing page does not
-appear and you should skip the Licensing steps and enter networking information on the
-Networking page instead.
+If you enabled Cloud Volumes, a Licensing page appears. If not, the Licensing page does not appear and you should skip the Licensing steps and enter networking information on the Networking page instead.
 
 The NetApp license files use the following format:
-NLF<_serialnumber_>.txt
+NLF<serialnumber>.txt
 
 . If you already have obtained license files, click *Browse* to locate them.
 Select both licenses and click *Choose* so they can be uploaded.
@@ -132,14 +128,11 @@ image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licen
 == Selecting networking options
 
 .	On the Networking page, review the hover text for each of the following and configure networking information:
-* *NetApp Kubernetes Service Management Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service service cluster. This
-network requires outbound Internet access.
-*	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you
-place your applications. This network requires outbound Internet access.
+* *NetApp Kubernetes Service Management Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service service cluster. This network requires outbound Internet access.
+*	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you place your applications. This network requires outbound Internet access.
 *	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NetApp Kubernetes Service user clusters.
 . If you enabled Cloud Volumes on the Services page, the following additional fields appear:
-* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the
-installation to configure Cloud Volumes enablement.
+* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the installation to configure Cloud Volumes enablement.
 * *Cloud Volumes Cluster Network*: Enter network information used by the cluster nodes used by Cloud Volumes deployment to communicate with each other.
 * *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned
 cloud volumes.
@@ -155,8 +148,7 @@ NetApp HCI cloud services are enabled and the NetApp Hybrid Cloud Control openin
 Click the cloud icon to see the number of services enabled.
 The process can take up to 30 minutes for NKS and 60 minutes for NKS along with Cloud Volumes on NetApp HCI.
 
-NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which is a Kubernetes cluster that consists of four VMs (one Kubernetes master node and three Kubernetes worker compute
-nodes).
+NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which is a Kubernetes cluster that consists of four VMs (one Kubernetes master node and three Kubernetes worker compute nodes).
 
 
 .After you finish
@@ -165,7 +157,7 @@ Next, continue with link:task_NKS_create_cluster.html[Creating Kubernetes cluste
 Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing[Managing data in NetApp Cloud Volumes].
 
 [discrete]
-== Top Links
+== Top Link
 * link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
 
 

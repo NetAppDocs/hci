@@ -13,8 +13,7 @@ keywords: netapp, hci, on premise, kubernetes, cloud services
 :imagesdir: ../media/
 
 [.lead]
-With NetApp HCI, a hybrid cloud infrastructure that serves as a deployment engine supporting NetApp Kubernetes
-Service, you can set up a cloud native development pipeline quickly and easily.
+With NetApp HCI, a hybrid cloud infrastructure that serves as a deployment engine supporting NetApp Kubernetes Service, you can set up a cloud native development pipeline quickly and easily.
 
 THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW.
 
