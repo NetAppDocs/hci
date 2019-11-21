@@ -3,15 +3,15 @@ sidebar: solutions_sidebar
 permalink: solutions/nhci_devops_cicd.html
 summary: An introduction to the DevOps CI/CD pipeline for NetApp HCI
 keywords: hci, devops, ci/cd, ci, cd, continuous integration, continuous delivery
-
 ---
+
+= NetApp HCI for DevOps
+
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-
-= NetApp HCI for DevOps
 
 [.lead]
 Building an End-to-End CI/CD Pipeline
