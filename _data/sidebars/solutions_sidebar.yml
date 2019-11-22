@@ -15,7 +15,7 @@ entries:
         url: https://www.netapp.com/us/media/nva-1133-design.pdf
       - title: Private Cloud with Red Hat (Deployment Guide)
         url: https://www.netapp.com/us/media/nva-1133-deploy.pdf
-  - title: DevOps
+  - title: Containers and DevOps
     entries:
       - title: DevOps CI / CD Pipeline
         url: nhci_devops_cicd.html

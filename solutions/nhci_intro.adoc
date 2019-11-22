@@ -14,9 +14,11 @@ keywords: hci, infrastructure, overview
 :imagesdir: ./media/
 
 [.lead]
-NetApp HCI is an enterprise-scale infrastructure that consists of a mix of storage nodes and compute nodes. NetApp HCI delivers predictable performance on a highly flexible, efficient architecture, making it easy to manage. With NetApp Element software, you unlock the power of the data fabric, enabling NetApp HCI to participate in hybrid cloud services.
+NetApp HCI provides great flexibility combined with enterprise level capabilities.  Let's delve into the features and benefits of the platform.
 
 == Overview
+NetApp HCI is an enterprise-scale infrastructure that consists of a mix of storage nodes and compute nodes. NetApp HCI delivers predictable performance on a highly flexible, efficient architecture, making it easy to manage. With NetApp Element software, you unlock the power of the data fabric, enabling NetApp HCI to participate in hybrid cloud services.
+
 The installation and configuration required to deploy VMs are automated with NDE. Compute clusters are managed with VMware vCenter, and storage clusters are managed with the vCenter plug-in that is deployed with NDE. A management VM called mNode that deploys as part of NDE handles version upgrades, pushing events to vCenter, vCenter plug-in management, the VPN tunnel for support, and the NetApp Active IQ® collector. It also enables you to extend NetApp cloud services to on-premises environments, thus enabling hybrid cloud infrastructure. With multiple options for compute and storage nodes,
 
 NetApp HCI is suitable for multiple workloads, including:
@@ -53,7 +55,8 @@ NetApp HCI provides enterprise reliability and availability. Some of the importa
 ** Data and performance availability regardless of system condition or application activity
 ** Data safeguarded with 256-bit encryption
 
-image:nhci_infrastructure.jpg[]
+.NetApp HCI Infrastructure components
+image::nhci_infrastructure.jpg[width=800]
 
 == NetApp HCI Design Principles: Predictability, Flexibility, Simplicity
 NetApp HCI gives you flexible and straight forward control over your enterprise-class workloads. It is designed to provide predictable performance, linear scalability, and a simple deployment and management experience.
