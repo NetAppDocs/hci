@@ -20,7 +20,7 @@ link:nhci_intro.html[Learn more] about NetApp HCI.
 
 == NetApp Validated Architecture: Design & Deployment Guide
 
-Support for Anthos on NetApp HCI is a fully validated and supported solution.  Details of design and deployment are located in the NetApp Validated Architecture (NVA).
+NetApp HCI with Anthos is a fully validated and supported solution.  Details of the design and deployment considerations are documented in the NetApp Validated Architecture (NVA).
 
 link:https://www.netapp.com/us/media/nva-1141.pdf[NVA: NetApp HCI with Anthos]
 
