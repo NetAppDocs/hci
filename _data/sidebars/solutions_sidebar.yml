@@ -1,5 +1,5 @@
 entries:
-  - title: Cloud Services and Solutions on NetApp HCI
+  - title: NetApp HCI Cloud Services and Solutions
     url: ../../../../index.html
   - title: NetApp HCI Solutions
     url: index.html
@@ -26,7 +26,7 @@ entries:
       - title: Red Hat Openshift Container Platform (Deployment Guide)
         url: https://www.netapp.com/us/media/nva-1124-deploy.pdf
       - title: NetApp HCI with Anthos
-        url: https://www.netapp.com/us/media/nva-1141.pdf
+        url: nchi_containers_anthos.html
   - title: End User Computing (EUC)
     entries:
       - title: VMware Horizon 7 with 3D Graphics
