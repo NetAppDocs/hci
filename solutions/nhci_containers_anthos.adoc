@@ -5,7 +5,7 @@ summary: An introduction to containers on NetApp HCI with Anthos
 keywords: hci, containers, anthos, kubernetes, google
 ---
 
-= NetApp HCI for Anthos
+= NetApp HCI with Anthos
 
 :hardbreaks:
 :nofooter:
@@ -22,7 +22,7 @@ link:nhci_intro.html[Learn more] about NetApp HCI.
 
 Support for Anthos on NetApp HCI is a fully validated and supported solution.  Details of design and deployment are located in the NetApp Validated Architecture (NVA).
 
-link:https://www.netapp.com/us/media/nva-1141.pdf[NVA: NetApp HCI for Anthos]
+link:https://www.netapp.com/us/media/nva-1141.pdf[NVA: NetApp HCI with Anthos]
 
 == Demos of Anthos Deployment on NetApp HCI
 
