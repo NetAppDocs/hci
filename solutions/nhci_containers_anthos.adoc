@@ -1,0 +1,33 @@
+---
+sidebar: solutions_sidebar
+permalink: solutions/nhci_containers_anthos.html
+summary: An introduction to containers on NetApp HCI with Anthos
+keywords: hci, containers, anthos, kubernetes, google
+---
+
+= NetApp HCI with Anthos
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Overview of the on-premise Google Kubernetes Engine environment on NetApp HCI.
+
+link:nhci_intro.html[Learn more] about NetApp HCI.
+
+== NetApp Validated Architecture: Design & Deployment Guide
+
+NetApp HCI with Anthos is a fully validated and supported solution.  Details of the design and deployment considerations are documented in the NetApp Validated Architecture (NVA).
+
+link:https://www.netapp.com/us/media/nva-1141.pdf[NVA: NetApp HCI with Anthos]
+
+== Demos of Anthos Deployment on NetApp HCI
+
+The following videos demonstrate portions of the capabilities documented in the NVA.  For more information on the specific topics, click the *_Demo_* link to watch the demo.
+
+* Deploying an application from the Google Cloud Application Marketplace to Anthos: link:./media/Anthos-Deploy-App-Demo.mp4[*_Demo_*]
+* Dynamic scaling of Kubernetes clusters deployed on Anthos on VMware: link:./media/Anthos-Scaling-Demo.mp4[*_Demo_*]
+* Using NetApp Trident to provision and attach a persistent volume to a Kubernetes pod on Anthos: link:./media/Anthos-Trident-Demo.mp4[*_Demo_*]
