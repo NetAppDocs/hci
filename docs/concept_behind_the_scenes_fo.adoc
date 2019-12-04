@@ -5,7 +5,7 @@ summary: What happens behind the scenes with NetApp HCI and NetApp Fabric Orches
 keywords: netapp, hci, on premise, cloud services, cluster, orchestrator, fabric
 ---
 
-= What happens behind scenes with NetApp Fabric Orchestrator and NetApp HCI
+= What happens when you enable Cloud Volumes on NetApp HCI?
 :hardbreaks:
 :nofooter:
 :icons: font

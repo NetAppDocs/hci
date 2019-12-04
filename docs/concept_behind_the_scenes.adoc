@@ -2,10 +2,10 @@
 sidebar: docs_sidebar
 permalink: docs/concept_behind_the_scenes.html
 summary: What happens behind the scenes when you enable cloud services on NetApp HCI
-keywords: netapp, hci, on premise, cloud services, cluster
+keywords: netapp, hci, on premise, cloud services, cluster, kubernetes, nks
 ---
 
-= What happens behind the cloud services scenes
+= What happens when you enable NetApp Kubernetes Service?
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, cloud services, cluster
 :imagesdir: ../media/
 
 [.lead]
-Behind the scenes, NetApp HCI creates a bootstrap agent that establishes an encrypted communication tunnel to the NetApp Kubernetes Service control plane and creates a _service cluster_.
+NetApp HCI creates a bootstrap agent that establishes an encrypted communication tunnel to the NetApp Kubernetes Service control plane and creates a _service cluster_.
 
 The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself. The NetApp Kubernetes Service agent maintains the tunnel, maintains deployed service clusters, and enables you to create _user clusters_ on which you can place applications or solutions.
 
