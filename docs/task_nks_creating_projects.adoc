@@ -31,7 +31,7 @@ image:icon_blue_wheel.png[NetApp Kubernetes Service icon]
 
 
 == After you finish
-Continue with link:task_adding_applications.html[Adding applications to your Kubernetes cluster].
+Continue with link:task_NKS_adding_applications.html[Adding applications to your Kubernetes cluster].
 
 
 [discrete]
