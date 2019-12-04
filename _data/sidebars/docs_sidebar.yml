@@ -11,7 +11,7 @@ entries:
         url: /concept_types_cloudservices.html
       - title: Architecture overview for cloud services on NetApp HCI
         url: /concept_architecture.html
-      - title: What happens behind the cloud services scenes
+      - title: What happens when you enable NetApp Kubernetes Service?
         url: /concept_behind_the_scenes.html
       - title: Cluster types in cloud services on NetApp HCI
         url: /concept_cluster_types.html
@@ -51,7 +51,7 @@ entries:
     entries:
     - title: Managing data in NetApp Cloud Volumes
       url: /task_cv_managing.html
-    - title: What happens behind the scenes with NetApp Fabric Orchestrator and NetApp HCI
+    - title: What happens when you enable Cloud Volumes on NetApp HCI?
       url: /concept_behind_the_scenes_fo.html
     - title: Accessing NetApp Fabric Orchestrator
       url: /task_fo_accessing.html
