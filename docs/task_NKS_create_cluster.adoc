@@ -15,6 +15,10 @@ keywords: netapp, hci, on premise, cloud services, kubernetes
 [.lead]
 After you enable cloud services, you can create Kubernetes user clusters on a NetApp HCI on-premise system using the NetApp Kubernetes Service.
 
+== Prerequisites
+Before you use NetApp Kubernetes Service with NetApp HCI, you must enable the service using the NetApp Hybrid Cloud Control.
+See information on link:task_deploying_overview.html[deploying cloud services on NetApp HCI].
+
 
 == About this task
 You create Kubernetes clusters, add them to a workspace, create a project within that workspace, and later add a solution to the project. After you create the clusters, those clusters are ready to accept application workloads, including predesigned or your own applications.

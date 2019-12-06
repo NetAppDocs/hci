@@ -17,9 +17,9 @@ entries:
         url: /concept_cluster_types.html
       - title: Kubernetes pods, volumes, and projects
         url: /concept_kubernetes_pods_volumes_projects.html
-  - title: Getting started with cloud services on NetApp HCI
+  - title: Prerequisites for cloud services on NetApp HCI
     entries:
-      - title: Getting started overview
+      - title: Prerequisites overview
         url: /concept_gettingstarted.html
       - title: Cloud Central accounts
         url: /concept_cloud_central_accounts.html
