@@ -34,4 +34,5 @@ If you do not have an account, click *Sign Up* and provide the account informati
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
-* https://nks.netapp.io[NetApp Kubernetes Service^] 
+* https://nks.netapp.io[NetApp Kubernetes Service^]
+* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service Documentation^]

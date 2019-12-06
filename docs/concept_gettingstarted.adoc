@@ -5,7 +5,7 @@ summary: Deploying NetApp HCI is easy with the NetApp Deployment Engine.
 keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 ---
 
-= Getting started overview
+= Prerequisites overview
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,7 +14,7 @@ keywords: netapp, hci, cloud, onprem, documentation, help, Kubernetes
 
 
 [.lead]
-You might want to get started with the following items:
+Before you begin with cloud services on NetApp HCI, you should review the following items:
 
 *	link:concept_cloud_central_accounts.html[Review your NetApp Cloud Central account] information or sign up, if you don't already have an account.
 * link:reference_requirements_beforeyoubegin.html[Review requirements] for your system, port, networking, and browser.
