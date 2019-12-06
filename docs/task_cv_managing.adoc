@@ -5,7 +5,7 @@ summary: You can create cloud volumes with Cloud Volumes on NetApp HCI.
 keywords: netapp, hci, on premise, cloud services, cloud volumes,
 ---
 
-= Managing data with Cloud Volumes on NetApp HCI
+= Managing data with Cloud Volumes on NetApp HCI overview
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -18,6 +18,11 @@ Using Fabric Orchestrator, you can create and manage cloud volumes anywhere usin
 == Prerequisites
 Before you use Cloud Volumes on NetApp HCI, you must enable the service using the NetApp Hybrid Cloud Control.
 See information on link:task_deploying_overview.html[deploying cloud services on NetApp HCI].
+
+== Workflow overview
+To create and manage cloud volumes using Fabric Orchestrator, do the following:
+* link:task_fo_accessing.html[Access Fabric Orchestrator] on NetApp Cloud Central.
+* link:task_dfo_creating_cloud_volumes.html[Create Cloud Volumes on NetApp HCI] using Fabric Orchestrator.
 
 [discrete]
 == Find more information

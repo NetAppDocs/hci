@@ -19,6 +19,11 @@ THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW.
 
 image:cloud_all_services_diagram2.2.png[Cloud services on NetApp HCI]
 
+To use cloud services on NetApp HCI, do the following:
+* link:reference_requirements_beforeyoubegin.html[Review prerequisite information].
+* link:task_deploying_overview.html[Enable cloud services], such as the NetApp Kubernetes Service and Cloud Volumes on NetApp HCI, using the NetApp Hybrid Cloud Control
+* link:task_nks_create_cluster.html[Create and manage Kubernetes clusters] using the NetApp Kubernetes Service on NetApp Cloud Central.
+* link:task_dfo_creating_cloud_volumes.html[Create and manage Cloud Volumes] on NetApp HCI using NetApp Fabric Orchestrator on NetApp Cloud Central. 
 
 [discrete]
 == Find more information
