@@ -25,6 +25,8 @@ The NetApp licensing files use the following format:
 
 NLF<serialnumber>.txt
 
+NOTE: Fabric Orchestrator is in Preview mode. When you enable Cloud Volumes on NetApp HCI, you automatically have access to the Preview environment.
+
 == Licensing requirements for NetApp Kubernetes Service
 NetApp Kubernetes Service does not require an additional license.
 
