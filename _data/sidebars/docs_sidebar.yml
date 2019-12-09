@@ -15,7 +15,7 @@ entries:
         url: /concept_behind_the_scenes.html
       - title: Cluster types in cloud services on NetApp HCI
         url: /concept_cluster_types.html
-      - title: Kubernetes pods, volumes, and projects
+      - title: Kubernetes terminology
         url: /concept_kubernetes_pods_volumes_projects.html
   - title: Prerequisites for cloud services on NetApp HCI
     entries:
