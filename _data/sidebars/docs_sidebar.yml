@@ -39,6 +39,8 @@ entries:
       url: /task_enabling_cloud_services.html
   - title: Enabling Kubernetes clusters on NetApp HCI
     entries:
+    - title: Managing Kubernetes clusters on NetApp HCI overview
+      url: /task_nks_overview.html
     - title: Accessing NetApp Kubernetes Service
       url: /task_nks_accessing.html
     - title: Creating a Kubernetes cluster using NetApp Kubernetes Service
@@ -49,7 +51,7 @@ entries:
       url: /task_NKS_adding_applications.html
   - title: Managing data in Cloud Volumes with NetApp Fabric Orchestrator
     entries:
-    - title: Managing data in NetApp Cloud Volumes
+    - title: Managing data in NetApp Cloud Volumes overview
       url: /task_cv_managing.html
     - title: What happens when you enable Cloud Volumes on NetApp HCI?
       url: /concept_behind_the_scenes_fo.html
