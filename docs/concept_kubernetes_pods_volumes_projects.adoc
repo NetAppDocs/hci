@@ -5,7 +5,7 @@ summary: Cloud services on NetApp HCI involves pods, volumes, and projects that 
 keywords: netapp, hci, on premise, kubernetes, cloud services, cluster
 ---
 
-= Kubernetes pods, volumes, and projects
+= Kubernetes terminology
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,6 +17,8 @@ Cloud services on NetApp HCI involves pods, volumes, and projects that you creat
 
 
 
+* *Kubernetes workspace*: The NetApp Kubernetes Service workspace enables you to group together projects, teams, and members. This lets you tailor access to the exact needs of a group of users. For example, you may want to allow a certain team access to build and manage clusters at one particular provider. This can be accomplished by creating a workspace for that team (or teams). Then assign specific Provider Credentials to that workspace.
+* *Kubernetes clusters*: NetApp Kubernetes Service enables you to create and manage clusters at the provider of your choice. You can customize defaults, such as the region, size, and number of nodes. And, you can add packaged Helm charts.
 * *Kubernetes pod*: A _pod_ is the Kubernetes atomic unit. It is the smallest unit that can be deployed. A pod consists of one or more containers that share the same namespace, IP addresses, and volume. It can exist only on a single node.
 * *Kubernetes project*: A Kubernetes _project_ is a construct for grouping applications, for example, Wordspace or MySQL. A project is a namespace with RBAC on the Kubernetes cluster.
 * *Kubernetes volume*: A Kubernetes _volume_ is storage provisioned directly to a pod. The NetApp Kubernetes Service supports a wide variety of volume types, including Amazon EBS, Azure Disk Storage, volumes managed by NetApp Element, NFS, and many more. Volumes enable the containers within a pod to share information and are destroyed when their parent pod is deleted.
