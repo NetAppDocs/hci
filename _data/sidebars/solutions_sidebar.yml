@@ -61,6 +61,8 @@ entries:
         url: https://www.netapp.com/us/media/tr-4734.pdf
   - title: Data Protection
     entries:
+      - title: NetApp HCI Data Protection Overview
+        url: https://www.netapp.com/us/media/tr-4641.pdf
       - title: Multicloud Data Protection with Cloud Volumes ONTAP
         url: https://www.netapp.com/us/media/nva-1137.pdf
       - title: Disaster Recovery and Replication with VMware SRM
