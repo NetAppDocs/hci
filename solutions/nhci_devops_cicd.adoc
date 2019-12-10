@@ -48,7 +48,6 @@ Configuration management refers to the process of setting up the virtual infrast
 *Automate configuration on your Virtual Infrastructure:*
 
 * Deploy Kubernetes on NetApp HCI with NKS: https://netapp.io/2019/10/15/deploy-k8s-netapp-hci-nks-part-1/[*_Blog_*] | https://www.youtube.com/watch?v=LFyU2Oh-clA&feature=youtu.be[*_Video_*]
-* Deploy an application on a NetApp HCI cluster using curated NKS Helm charts: https://netapp.io/2019/10/24/netapp-hci-nks-devops-end-to-end-pipeline-part-2/[*_Blog_*] | https://www.youtube.com/watch?v=JUlVZ19yArI&feature=youtu.be[*_Video_*]
 
 === Source Repository
 
@@ -82,7 +81,8 @@ Deployment of code occurs once the code has been developed, tested and built. On
 
 *Deploy blue/green environments with Kubernetes:*
 
-* Deploy a custom application with Kubernetes: https://netapp.io/2019/12/10/netapp-hci-nks-devops-end-to-end-pipeline-part-4/[*_Blog_*] | https://www.youtube.com/watch?v=bYOlqogvyzw&feature=youtu.be[*_Video_*]
+* Deploy an application on a NetApp HCI cluster using curated NKS Helm charts: https://netapp.io/2019/10/24/netapp-hci-nks-devops-end-to-end-pipeline-part-2/[*_Blog_*] | https://www.youtube.com/watch?v=JUlVZ19yArI&feature=youtu.be[*_Video_*]
+* Deploy a custom application on a NetApp HCI cluster using a custom helm chart: https://netapp.io/2019/12/10/netapp-hci-nks-devops-end-to-end-pipeline-part-4/[*_Blog_*] | https://www.youtube.com/watch?v=bYOlqogvyzw&feature=youtu.be[*_Video_*]
 
 === Production
 
