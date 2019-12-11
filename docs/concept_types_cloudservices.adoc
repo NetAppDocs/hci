@@ -26,8 +26,8 @@ See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] inf
 *NetApp Fabric Orchestrator* provides a centralized storage and data management control plane for fabric-wide, multi-cloud visibility, monitoring, policies, administration and workflow orchestration for NetApp storage systems on-premises and in the cloud.
 Using NetApp Fabric Orchestrator, you can discover, manage, and govern your storage assets and data estate, anywhere. Use Fabric Orchestrator to create and manage Cloud Volumes on NetApp HCI.
 
-Using NetApp Fabric Orchestrator, you can enable these services:
-* Cloud Volumes on NetApp HCI: NetApp HCI provides the platform for the NetApp Kubernetes Service and Cloud Volumes. This documentation provides information only on this service. 
+Using Fabric Orchestrator, you can enable these services:
+* Cloud Volumes on NetApp HCI: NetApp HCI provides the platform for the NetApp Kubernetes Service and Cloud Volumes. This documentation provides information only on this service.
 * Cloud Volumes Service for On-Premises: This option is a fully managed private cloud storage service that is available for customers within their own on-premises data centers. NetApp configures and manages your infrastructure so you don‘t have to. This alternate storage consumption model offers high-performance storage for customers and partners wanting a cloud-like OPEX billing model managed by our NetApp cloud operations experts.
 
 See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
