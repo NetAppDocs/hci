@@ -31,7 +31,7 @@ Cloud services on NetApp HCI involves pods, volumes, and projects that you creat
 ** Trident is another solution that’s preinstalled with the NetApp Kubernetes Service. With Trident, NetApp solutions such as Cloud Volumes Service can meet persistent volume claims that are made by Kubernetes clusters.
 * *NKS volume*: An NKS _volume_ is storage provisioned directly to a pod. NKS supports a wide variety of volume types, including Amazon EBS, Azure Disk Storage, volumes managed by NetApp Element, NFS, and many more. Volumes enable the containers within a pod to share information and are destroyed when their parent pod is deleted.
 
-= Trident software and persistent storage
+== Trident software and persistent storage
 * *Persistent storage*: With NKS, you can use a _persistent volume_, one that exists independently of any specific pod and with its own lifetime. Persistent volumes can be used to support stateful applications, such as database services, enabling all components of an enterprise solution to be deployed and managed by NKS. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
 * *Trident software with NKS*: The NetApp Kubernetes Service on NetApp HCI employs Trident software to provision storage automatically to containerized applications. Trident is automatically deployed and configured when new NKS clusters are created. When a containerized application issues a PVC request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
 
