@@ -22,14 +22,16 @@ Cloud services on NetApp HCI involves pods, volumes, and projects that you creat
 * *NKS pod*: A _pod_ is the NKS atomic unit. It is the smallest unit that can be deployed. A pod consists of one or more containers that share the same namespace, IP addresses, and volume. It can exist only on a single node.
 * *NKS project*: An NKS _project_ is a construct for grouping applications, for example, Wordspace or MySQL. A project is a namespace with RBAC on the Kubernetes cluster. Projects are the heart of application lifecycle management. Clusters can have many projects, and each project can have many solutions, including applications and packages. Clusters can represent different environments, like a test, staging, and production environment. In this case, each cluster environment will be running a similar version of the same project.
 * *Solutions on NKS*: With NKS, you can move workloads with predesigned solutions or applications to the cloud platform that suits your needs, with any of the major hyperscalers or an on-premises environment. This list of open-source technologies includes:
-** Istio
-** Helm
-** GitLab
 ** fabric8
-** Prometheus
+** GitLab
+** Helm
+** Istio
 ** Linkerd
+** Prometheus
+
 ** Trident is another solution that’s preinstalled with the NetApp Kubernetes Service. With Trident, NetApp solutions such as Cloud Volumes Service can meet persistent volume claims that are made by Kubernetes clusters.
 * *NKS volume*: An NKS _volume_ is storage provisioned directly to a pod. NKS supports a wide variety of volume types, including Amazon EBS, Azure Disk Storage, volumes managed by NetApp Element, NFS, and many more. Volumes enable the containers within a pod to share information and are destroyed when their parent pod is deleted.
+
 
 == Trident software and persistent storage
 * *Persistent storage*: With NKS, you can use a _persistent volume_, one that exists independently of any specific pod and with its own lifetime. Persistent volumes can be used to support stateful applications, such as database services, enabling all components of an enterprise solution to be deployed and managed by NKS. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
