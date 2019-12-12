@@ -32,6 +32,8 @@ NOTE: Fabric Orchestrator is in Preview mode. When you enable Cloud Volumes on N
 NetApp Kubernetes Service does not require an additional license.
 
 NetApp Kubernetes Service is metered and billed by the number of worker nodes in the managed Kubernetes clusters. While these Kubernetes worker nodes are virtual machines that are running on a cluster and NetApp HCI compute nodes, the number of physical compute nodes in the NetApp HCI environment are an unrelated entity for metering and billing purposes.
+//Ok'd by TD and RE, PMs.  
+
 
 [discrete]
 == Find more information
