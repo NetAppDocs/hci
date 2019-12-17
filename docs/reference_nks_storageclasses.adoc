@@ -43,11 +43,12 @@ Storage classes affect storage pools, QoS values, and persistent volume claims i
 * Trident creates the PV with the storage class and the storage pool attributes.
 * Kubernetes mounts the volume to the pod.
 
-== Example of PVC using a storage classes
+== Example of PVC using a storage class
 
 This example shows a volume created with the _solidfire-gold_ storage class IOPS values on Element.
 When a pod uses this PVC, the new volume with the _solidfire-gold_ IOPS values is mounted to the pod.
 
+....
 ----
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -62,6 +63,7 @@ spec:
   storageClassName: solidfire-gold
 
 ----
+....
 
 
 [discrete]
