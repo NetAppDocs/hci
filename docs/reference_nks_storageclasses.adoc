@@ -33,6 +33,7 @@ The following table lists the storage classes and the associated provisioners.
 
 == Storage class impact
 Storage classes affect storage pools, QoS values, and persistent volume claims in the following ways:
+
 * Each NetApp Element storage class uses a unique storage pool.
 * Each storage pool defines unique QoS (IOPS) values.
 * When a Persistent Volume Claim (PVC) uses one of the "solidfire" storage classes, a volume within the referred storage pool is created on Element.
