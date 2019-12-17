@@ -1,0 +1,47 @@
+---
+sidebar: docs_sidebar
+permalink: docs/reference_nks_storageclasses.html
+summary: Before you begin using cloud services on NetApp HCI, look at these prerequisites.
+keywords: netapp, hci, kubernetes, nks, storage class, on premise, cloud services
+---
+
+= Storage classes with NetApp Kubernetes Service on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you enable cloud services on NetApp HCI and enable NetApp Kubernetes Service (NKS), Kubernetes storage classes are created.
+
+When you add applications in NKS, you need to know the storage class and its provisioner.
+
+
+== Storage classes with NKS
+The following table lists the storage classes and the associated provisioners.
+
+[cols=2*,options="header",cols="25,75"]
+|===
+| Storage class
+| Provisioner
+| solidfire-bronze | netapp.io/trident
+| solidfire-gold | netapp.io/trident
+| solidfire-silver | netapp.io/trident
+| vsphere (default) | kubernetes.io/vsphere-volume
+|===
+
+== Storage class impact
+Storage classes affect storage pools, QoS values, and persistent volume claims in the following ways:
+* Each NetApp Element storage class uses a unique storage pool.
+* Each storage pool defines unique QoS (IOPS) values.
+* When a Persistent Volume Claim (PVC) uses one of the "solidfire" storage classes, a volume within the referred storage pool is created on Element.
+* Kubernetes mounts the volume to the pod.
+
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
