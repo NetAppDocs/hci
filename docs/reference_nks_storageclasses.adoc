@@ -25,20 +25,43 @@ The following table lists the storage classes and the associated provisioners.
 |===
 | Storage class
 | Provisioner
-| solidfire-bronze | netapp.io/trident
-| solidfire-gold | netapp.io/trident
-| solidfire-silver | netapp.io/trident
-| vsphere (default) | kubernetes.io/vsphere-volume
+| IOPS minimum
+| IOPS maximum
+| IOPS burst
+| solidfire-bronze | netapp.io/trident | 1000 | 4000 | 6000
+| solidfire-silver | netapp.io/trident | 5000 | 25,000 | 40,000
+| solidfire-gold | netapp.io/trident |15,000 | 180,000 | 200,000
+| vsphere (default) | kubernetes.io/vsphere-volume | NA | NA | NA
 |===
 
 == Storage class impact
 Storage classes affect storage pools, QoS values, and persistent volume claims in the following ways:
 
 * Each NetApp Element storage class uses a unique storage pool.
-* Each storage pool defines unique QoS (IOPS) values.
+* Storage pools are identified by a set of unique QoS (IOPS) values.
 * When a Persistent Volume Claim (PVC) uses one of the "solidfire" storage classes, a volume within the referred storage pool is created on Element.
+* Trident creates the PV with the storage class and the storage pool attributes.
 * Kubernetes mounts the volume to the pod.
 
+== Example of PVC using a storage classes
+
+This example shows a volume created with the _solidfire-gold_ storage class IOPS values on Element.
+When a pod uses this PVC, the new volume with the _solidfire-gold_ IOPS values is mounted to the pod.
+
+----
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+      name: pvcclaim-gold
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+	requests:
+	  storage: 10Gi
+  storageClassName: solidfire-gold
+
+----
 
 
 [discrete]
