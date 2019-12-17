@@ -19,9 +19,9 @@ When you add applications in NKS, you need to know the storage class and its pro
 
 
 == Storage classes with NKS
-The following table lists the storage classes and the associated provisioners.
+The following table lists the storage classes and the associated provisioners and IOPS values.
 
-[cols=2*,options="header",cols="25,75"]
+[cols=5*,options="header",cols="25,25,15,15,15"]
 |===
 | Storage class
 | Provisioner
