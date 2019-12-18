@@ -49,7 +49,6 @@ This example shows a volume created with the _solidfire-gold_ storage class IOPS
 When a pod uses this PVC, the new volume with the _solidfire-gold_ IOPS values is mounted to the pod.
 
 ....
-----
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -61,8 +60,6 @@ spec:
 	requests:
 	  storage: 10Gi
   storageClassName: solidfire-gold
-
-----
 ....
 
 
