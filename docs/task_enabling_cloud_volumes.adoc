@@ -38,8 +38,8 @@ For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUI
 
 . Click the *Cloud* icon.
 +
-An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled. This image shows that NKS has already been enabled, but Cloud Volumes has not yet been enabled. 
-. In the Cloud Services popup, review the services that are available and click *Enable Cloud Services*.
+An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled. This image shows that NKS has already been enabled, but Cloud Volumes has not yet been enabled.
+. In the Cloud Services popup, review the services that are available.
 +
 image::hcc_cloudpopup_nks_enabled2.png[NetApp HCC Enable cloud services popup showing NKS enabled]
 
@@ -86,7 +86,7 @@ image::hcc_nks_enabled_licensing_for_cv.png[Enable Cloud Services Licensing page
 * *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned
 cloud volumes.
 +
-image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control Networking page]
+image:hcc_enablecloudservices_networking_only_CV.png[NetApp Hybrid Cloud Control Networking page]
 
 .	Click *Continue*.
 .	On the Review page, review your choices by expanding each option. and click *Continue*.
