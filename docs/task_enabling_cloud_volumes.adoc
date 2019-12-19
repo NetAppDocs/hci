@@ -18,8 +18,8 @@ After you enable NetApp Kubernetes Service (NKS) on NetApp HCI, you might want t
 Enabling cloud services is performed using the NetApp Hybrid Cloud Control.
 
 .About this task
-This lets you use NetApp Kubernetes Service and Cloud Volumes on NetApp HCI on your on-premises private cloud. With the NetApp Kubernetes Service, you can deploy and manage
-Kubernetes clusters.
+This lets you use Cloud Volumes on NetApp HCI on your on-premises private cloud.
+
 
 A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 
@@ -27,7 +27,7 @@ A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 * Enable licenses using a link to the NetApp License Generator.
 *	Configure networking.
 
-== Signing in to or registering with NetApp Cloud Central
+== Signing in to NetApp Cloud Central
 
 . Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node:
 "https://<_ManagementNodeIP_>"
@@ -38,72 +38,27 @@ For details, see http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-170/GUI
 
 . Click the *Cloud* icon.
 +
-An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled.
+An outline of a cloud indicates that no services have been enabled. A filled in cloud indicates that some services have been enabled. This image shows that NKS has already been enabled, but Cloud Volumes has not yet been enabled. 
 . In the Cloud Services popup, review the services that are available and click *Enable Cloud Services*.
 +
-image::hcc_enablecloudservices_Services_2.2.png[NetApp HCC Enable cloud services page]
+image::hcc_cloudpopup_nks_enabled2.png[NetApp HCC Enable cloud services popup showing NKS enabled]
 
+. Click *Enable cloud services*.
 
 == Selecting the Cloud Services you want to enable
 SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a different set of services than those listed here.
 
 . On the Services page, select the services that you want to enable.
-* *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with a NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as a VM on a NetApp HCI compute node.
+* *NetApp Kubernetes Service*: This is enabled already. You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with a NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as a VM on a NetApp HCI compute node.
 * *Cloud Volumes*: To install Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds.
 * *Cloud Insights*: This option will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
 
 . Click *Continue*.
 
 
-== Getting a Kubernetes API token
-Enabling cloud services on NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your Cloud Central account. You can complete these steps prior to enabling cloud services or during the process.
-
-If you already have a NetApp Kubernetes Service API token, you can skip this procedure.
-
-. On the Enable Cloud Services > NetApp Cloud Central page, click the *API token* link to get a Kubernetes Service API token if you do not already have one.
-+
-image::hcc_enablecloudservices_cloudcentral.png[Enable Cloud Services Cloud Central page]
-. Enter a token name and click *Create*.
-+
-image::nks_api_token_copy.png[NKS API token page]
-
-. Copy the token.
-. Return to NetApp Hybrid Cloud Control and paste it into the NetApp Kubernetes Service API Token field.
-
-. Click *Connect*.
-+
-The registration is now established and you are connected to Cloud Central. The Organization and Region Name fields appear listing the datacenters and regions available for this Cloud Central connection.
-
-+
-image::hcc_enablecloudservices_cloudcentral_token_entered.png[Enable Cloud Services page showing pasted API token]
-
-
-
-== Registering your installation with NetApp Cloud Central
-
-. On the NetApp Cloud Central page, select your Cloud Central organization and region name.
-+
-NOTE: This region name is used to identify this NetApp HCI installation and is used as the site name for any NetApp Kubernetes clusters created on this installation.
-. Click *Continue* to go to the vCenter Resources page.
-
-== Selecting the vCenter resources
-Because the management node is connected to the vCenter, the vCenter used for deployment is displayed.
-
-. On the vCenter page, enter or select the following:
-.. *Datacenter*:  Select a datacenter from those configured on the NetApp HCI system.
-.. *Cluster*: Select a cluster from those configured on the NetApp HCI system.
-+
-The vCenter instance and admin user connected to it are displayed.
-+
-image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resources page]
-+
-. Click *Continue*.
-
-
 
 == Entering license information
-If you enabled Cloud Volumes, a Licensing page appears. If not, the Licensing page does not appear and you should skip the Licensing steps and enter networking information on the Networking page instead.
-
+If you enabled Cloud Volumes, a Licensing page appears.
 The NetApp license files use the following format:
 NLF<serialnumber>.txt
 
@@ -114,7 +69,7 @@ Select both licenses and click *Choose* so they can be uploaded.
 enter product and serial number.
 .. Return to the Hybrid Cloud Control Licensing page, click the link to the NetApp License File Generator, supply your password, select “ONTAP Select-Premium” as the product line, and supply the product serial number that you obtained from the NetApp Support Site.
 +
-image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licensing page]
+image::hcc_nks_enabled_licensing_for_cv.png[Enable Cloud Services Licensing page for Cloud Volumes only]
 
 .. Acknowledge the Global Data Privacy Policy and click *Submit*.
 .. Download the license files either directly from the NetApp License File Generator or from the email.
@@ -125,10 +80,6 @@ image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licen
 
 == Selecting networking options
 
-.	On the Networking page, review the hover text for each of the following and configure networking information:
-* *NetApp Kubernetes Service Management Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service service cluster. This network requires outbound Internet access.
-*	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you place your applications. This network requires outbound Internet access.
-*	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NetApp Kubernetes Service user clusters.
 . If you enabled Cloud Volumes on the Services page, the following additional fields appear:
 * *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the installation to configure Cloud Volumes enablement.
 * *Cloud Volumes Cluster Network*: Enter network information used by the cluster nodes used by Cloud Volumes deployment to communicate with each other.
@@ -141,18 +92,15 @@ image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control
 .	On the Review page, review your choices by expanding each option. and click *Continue*.
 
 .Result
-NetApp HCI cloud services are enabled and the NetApp Hybrid Cloud Control opening page reappears.
+Cloud Volumes on NetApp HCI are enabled and the NetApp Hybrid Cloud Control opening page reappears.
 
 Click the cloud icon to see the number of services enabled.
-The process can take up to 30 minutes for NKS and 60 minutes for NKS along with Cloud Volumes on NetApp HCI.
+The process can take up to 30 minutes for Cloud Volumes on NetApp HCI.
 
-NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which is a Kubernetes cluster that consists of four VMs (one Kubernetes master node and three Kubernetes worker compute nodes).
 
 
 == After you finish
-Next, continue with link:task_NKS_create_cluster.html[Creating Kubernetes clusters] on your NetApp HCI system by using the NetApp Kubernetes Service.
-
-Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing[Managing data in NetApp Cloud Volumes].
+To create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing[Managing data in NetApp Cloud Volumes].
 
 [discrete]
 == Top Link
