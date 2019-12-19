@@ -48,7 +48,7 @@ Storage classes affect storage pools, QoS values, and persistent volume claims i
 This example shows a volume created with the _solidfire-gold_ storage class IOPS values on Element.
 When a pod uses this PVC, the new volume with the _solidfire-gold_ IOPS values is mounted to the pod.
 
-....
+----
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -60,8 +60,7 @@ spec:
 	requests:
 	  storage: 10Gi
   storageClassName: solidfire-gold
-....
-
+----
 
 [discrete]
 == Find more information

@@ -37,6 +37,8 @@ entries:
       url: /task_deploying_overview.html
     - title: Enabling cloud services using NetApp Hybrid Cloud Control
       url: /task_enabling_cloud_services.html
+    - title: Enabling Cloud Volumes after NKS is already enabled
+      url: /task_enabling_cloud_volumes.html
   - title: Enabling Kubernetes clusters on NetApp HCI
     entries:
     - title: Managing Kubernetes clusters on NetApp HCI overview
