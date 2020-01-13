@@ -100,7 +100,7 @@ The process can take up to 30 minutes for Cloud Volumes on NetApp HCI.
 
 
 == After you finish
-To create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing[Managing data in NetApp Cloud Volumes].
+To create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing.adoc[Managing data in NetApp Cloud Volumes].
 
 [discrete]
 == Top Link
