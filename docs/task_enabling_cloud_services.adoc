@@ -155,7 +155,7 @@ NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which
 == After you finish
 Next, continue with link:task_NKS_create_cluster.html[Creating Kubernetes clusters] on your NetApp HCI system by using the NetApp Kubernetes Service.
 
-Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing[Managing data in NetApp Cloud Volumes].
+Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing.html[Managing data in NetApp Cloud Volumes].
 
 [discrete]
 == Top Link

@@ -46,6 +46,7 @@ image::hcc_cloudpopup_nks_enabled2.png[NetApp HCC Enable cloud services popup sh
 . Click *Enable cloud services*.
 
 == Select the Cloud Services you want to enable
+
 SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a different set of services than those listed here.
 
 . On the Services page, select the services that you want to enable.
