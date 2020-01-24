@@ -31,7 +31,7 @@ Using Fabric Orchestrator, you can enable these services:
 
 
 * *Cloud Volumes on NetApp HCI*: NetApp HCI provides the platform for the NetApp Kubernetes Service and Cloud Volumes. This documentation provides information only on this service.
-* *Cloud Volumes Service for On-Premises*: This option is a fully managed private cloud storage service that is available for customers within their own on-premises data centers. NetApp configures and manages your infrastructure so you don‘t have to. This alternate storage consumption model offers high-performance storage for customers and partners wanting a cloud-like OPEX billing model managed by our NetApp cloud operations experts.
+* *Cloud Volumes Service for On Premises*: This option is a fully managed private cloud storage service that is available for customers within their own on-premises data centers. NetApp configures and manages your infrastructure so you don‘t have to. This alternate storage consumption model offers high-performance storage for customers and partners wanting a cloud-like OPEX billing model managed by our NetApp cloud operations experts.
 
 See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
 
