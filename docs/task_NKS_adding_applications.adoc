@@ -5,7 +5,7 @@ summary: Adding applications to a Kubernetes cluster using NetApp Kubernetes Ser
 keywords: netapp, hci, on premise, cloud services, kubernetes, applications
 ---
 
-= Adding applications to a Kubernetes cluster
+= Add applications to a Kubernetes cluster
 :hardbreaks:
 :nofooter:
 :icons: font

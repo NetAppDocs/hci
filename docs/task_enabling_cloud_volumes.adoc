@@ -5,7 +5,7 @@ summary: Using the cloud services wizard in NetApp Hybrid Cloud Control, you can
 keywords: netapp, hci, on premise, cloud volumes, hybrid cloud control, fabric orchestrator
 ---
 
-= Enabling Cloud Volumes on NetApp HCI after NKS is already enabled
+= Enable Cloud Volumes on NetApp HCI after NKS is already enabled
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -27,7 +27,7 @@ A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 * Enable licenses using a link to the NetApp License Generator.
 *	Configure networking.
 
-== Signing in to NetApp Cloud Central
+== Sign in to NetApp Cloud Central
 
 . Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node:
 "https://<_ManagementNodeIP_>"
@@ -45,7 +45,8 @@ image::hcc_cloudpopup_nks_enabled2.png[NetApp HCC Enable cloud services popup sh
 
 . Click *Enable cloud services*.
 
-== Selecting the Cloud Services you want to enable
+== Select the Cloud Services you want to enable
+
 SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a different set of services than those listed here.
 
 . On the Services page, select the services that you want to enable.
@@ -57,7 +58,7 @@ SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a d
 
 
 
-== Entering license information
+== Enter license information
 If you enabled Cloud Volumes, a Licensing page appears.
 The NetApp license files use the following format:
 NLF<serialnumber>.txt
@@ -78,7 +79,7 @@ image::hcc_nks_enabled_licensing_for_cv.png[Enable Cloud Services Licensing page
 . Click *Continue*.
 
 
-== Selecting networking options
+== Select networking options
 
 . If you enabled Cloud Volumes on the Services page, the following additional fields appear:
 * *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the installation to configure Cloud Volumes enablement.
