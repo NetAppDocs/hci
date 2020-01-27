@@ -32,7 +32,7 @@ As DevOps is intended to be a cross-functional mode of working, those that pract
 
 == Addressing the CI/CD Pipeline with NetApp HCI
 
-image:cicd-pipeline.jpg
+image:cicd-pipeline.jpg[width=800]
 
 [small]#*_Figure 1:_* _DevOps CI/CD Pipeline - Use the navigation panel (at the right) to learn more about each of the components of the CI/CD pipeline._#
 
