@@ -41,6 +41,23 @@ NOTE: Running NKS services through a proxy server is not supported.
 * 3x4 systems are the minimum production system size we support.
 * 4x4 systems are the recommended minimum size.
 
+== IP requirements for NetApp Kubernetes Service
+A minimum total of 16 IPs are required:
+
+* Management network IP requirements (Total: 10 IPs)
+** 1 IP for the bootstrap VM (released after successful registration)
+** 6 service cluster machines (3 master nodes and 3 worker nodes)
+** 1 virtual IP between the load balancer machines
+
+*	Workload network IP requirements (Total minimum of 3 IP addresses plus at least one per service, per workload cluster)
+** 1 IP for each worker node (default is 2 worker nodes)
+** Pool of IPs for load balancer (depending upon your deployment intent and defined at installation time)
+
+*	Data (iSCSI Storage) network (Total minimum of 3 IP addresses per workload cluster)
+**	1 IP for each master node (default is 1 master node)
+**	1 IP for each of the worker nodes (default is 2 worker nodes)
+
+
 == NetApp Kubernetes Service requirements
 * A NetApp Kubernetes Service (NKS) account
 * A NetApp Kubernetes Service API token, which authorizes the installer to access the NKS organization. You can create this before or during the process of enabling cloud services on NetApp HCI.
