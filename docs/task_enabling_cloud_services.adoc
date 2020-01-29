@@ -133,10 +133,9 @@ image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licen
 *	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you place your applications. This network requires outbound Internet access.
 *	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NetApp Kubernetes Service user clusters.
 . If you enabled Cloud Volumes on the Services page, the following additional fields appear:
-* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the installation to configure Cloud Volumes enablement.
-* *Cloud Volumes Cluster Network*: Enter network information used by the cluster nodes used by Cloud Volumes deployment to communicate with each other.
-* *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned
-cloud volumes.
+* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes management VM and its deployed nodes.
+* *Cloud Volumes Cluster Network*: Enter network information used by the nodes in the Cloud Volumes cluster to communicate with each other.
+* *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned cloud volumes.
 +
 image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control Networking page]
 
