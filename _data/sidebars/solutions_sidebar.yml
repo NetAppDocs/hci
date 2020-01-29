@@ -29,18 +29,8 @@ entries:
         url: nhci_containers_anthos.html
   - title: End User Computing (EUC)
     entries:
-      - title: VMware Horizon 7 with 3D Graphics
-        url: https://www.netapp.com/us/media/tr-4792.pdf
-      - title: VMware EUC (Design Guide)
-        url: https://www.netapp.com/us/media/nva-1132-design.pdf
-      - title: VMware EUC (Deployment Guide)
-        url: https://www.netapp.com/us/media/nva-1132-deploy.pdf
-      - title: VMware EUC with NVIDA GPUs (Design Guide)
-        url: https://www.netapp.com/us/media/nva-1129-design.pdf
-      - title: VMware EUC with NVIDA GPUs (Deployment Guide)
-        url: https://www.netapp.com/us/media/nva-1129-deploy.pdf
-      - title: VMware Horizon View 7
-        url: https://www.netapp.com/us/media/tr-4630.pdf
+      - title: EUC with VMware Horizon
+        url: nhci_euc_vmware.html
       - title: Citrix Virtual Apps and Desktops with VMware vSphere (Design Guide)
         url: https://www.netapp.com/us/media/nva-1140-design.pdf
   - title: Database
@@ -73,5 +63,7 @@ entries:
         url: https://www.netapp.com/us/media/tr-4634.pdf
   - title: Security
     entries:
+      - title: NIST Security Controls for FISMA with HyTrust for Multitenant Infrastructure
+        url: https://www.netapp.com/us/media/nva-1143.pdf
   - title: Solution Collection (login required)
     url: https://fieldportal.netapp.com/collections/810434
