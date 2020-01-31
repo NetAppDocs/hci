@@ -62,6 +62,10 @@ TIP: In most cases you can just accept the defaults.
 .Result
 The NetApp Kubernetes Service creates the cluster and displays it on the Clusters page.
 
+== Deleting a Kubernetes cluster
+In the NKS preview environment, if you want to delete a Kubernetes cluster, contact NetApp Technical Support for assistance.
+The NKS preview environment will be removed.
+
 == After you finish
 Continue with link:task_nks_creating_projects.html[Creating a project within a NetApp Kubernetes Service] workspace you specified so that you can later add applications or solutions to the project.
 

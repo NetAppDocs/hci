@@ -5,7 +5,7 @@ summary: You can log in to NetApp HCI from any web browser that has a connection
 keywords: netapp, hci, on premise, cloud services
 ---
 
-= Signing up for a Cloud Central account
+= Sign up for a Cloud Central account
 :hardbreaks:
 :nofooter:
 :icons: font

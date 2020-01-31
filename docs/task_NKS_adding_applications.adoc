@@ -5,7 +5,7 @@ summary: Adding applications to a Kubernetes cluster using NetApp Kubernetes Ser
 keywords: netapp, hci, on premise, cloud services, kubernetes, applications
 ---
 
-= Adding applications to a Kubernetes cluster
+= Add applications to a Kubernetes cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -20,6 +20,8 @@ After you create your Kubernetes user cluster, you can easily add any number of 
 
 You can deploy applications on the cluster that resides on NetApp HCI by using the NetApp Kubernetes Service.
 
+When you add applications to your Kubernetes cluster, you need to know about storage classes.
+See link:reference_nks_storageclasses.html[Storage classes with NKS on NetApp HCI].
 
 .Steps
 

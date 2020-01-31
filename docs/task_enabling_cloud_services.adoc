@@ -5,7 +5,7 @@ summary: Using the cloud services wizard in NetApp Hybrid Cloud Control, you can
 keywords: netapp, hci, on premise, cloud services, hybrid cloud control
 ---
 
-= Enabling cloud services
+= Enable cloud services
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -29,7 +29,7 @@ A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 * If you enabled Cloud Volumes on NetApp HCI, enable licenses using a link to the NetApp License Generator.
 *	Configure networking.
 
-== Signing in to or registering with NetApp Cloud Central
+== Sign in to or register with NetApp Cloud Central
 
 . Access NetApp Hybrid Cloud Control (HCC) by opening a web browser and browsing to the IP address of the management node:
 "https://<_ManagementNodeIP_>"
@@ -46,7 +46,7 @@ An outline of a cloud indicates that no services have been enabled. A filled in 
 image::hcc_enablecloudservices_Services_2.2.png[NetApp HCC Enable cloud services page]
 
 
-== Selecting the Cloud Services you want to enable
+== Select the Cloud Services you want to enable
 SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a different set of services than those listed here.
 
 . On the Services page, select the services that you want to enable.
@@ -57,7 +57,7 @@ SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a d
 . Click *Continue*.
 
 
-== Getting a Kubernetes API token
+== Get a Kubernetes API token
 Enabling cloud services on NetApp HCI requires a NetApp Kubernetes Service API token that is associated with your Cloud Central account. You can complete these steps prior to enabling cloud services or during the process.
 
 If you already have a NetApp Kubernetes Service API token, you can skip this procedure.
@@ -81,19 +81,20 @@ image::hcc_enablecloudservices_cloudcentral_token_entered.png[Enable Cloud Servi
 
 
 
-== Registering your installation with NetApp Cloud Central
+== Register your installation with NetApp Cloud Central
 
 . On the NetApp Cloud Central page, select your Cloud Central organization and region name.
 +
 NOTE: This region name is used to identify this NetApp HCI installation and is used as the site name for any NetApp Kubernetes clusters created on this installation.
 . Click *Continue* to go to the vCenter Resources page.
 
-== Selecting the vCenter resources
+== Select the vCenter resources
 Because the management node is connected to the vCenter, the vCenter used for deployment is displayed.
 
 . On the vCenter page, enter or select the following:
 .. *Datacenter*:  Select a datacenter from those configured on the NetApp HCI system.
 .. *Cluster*: Select a cluster from those configured on the NetApp HCI system.
+.. *Switch*: Select a switch. Only switches that meet the redundant management and storage uplinks are displayed.
 +
 The vCenter instance and admin user connected to it are displayed.
 +
@@ -103,7 +104,7 @@ image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resourc
 
 
 
-== Entering license information
+== Enter license information
 If you enabled Cloud Volumes, a Licensing page appears. If not, the Licensing page does not appear and you should skip the Licensing steps and enter networking information on the Networking page instead.
 
 The NetApp license files use the following format:
@@ -125,17 +126,16 @@ image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licen
 . Click *Continue*.
 
 
-== Selecting networking options
+== Select networking options
 
 .	On the Networking page, review the hover text for each of the following and configure networking information:
 * *NetApp Kubernetes Service Management Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service service cluster. This network requires outbound Internet access.
 *	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you place your applications. This network requires outbound Internet access.
 *	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NetApp Kubernetes Service user clusters.
 . If you enabled Cloud Volumes on the Services page, the following additional fields appear:
-* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes deployment VM and its deployed nodes. These IP addresses are used during the installation to configure Cloud Volumes enablement.
-* *Cloud Volumes Cluster Network*: Enter network information used by the cluster nodes used by Cloud Volumes deployment to communicate with each other.
-* *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned
-cloud volumes.
+* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes management VM and its deployed nodes.
+* *Cloud Volumes Cluster Network*: Enter network information used by the nodes in the Cloud Volumes cluster to communicate with each other.
+* *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned cloud volumes.
 +
 image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control Networking page]
 
@@ -154,7 +154,7 @@ NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which
 == After you finish
 Next, continue with link:task_NKS_create_cluster.html[Creating Kubernetes clusters] on your NetApp HCI system by using the NetApp Kubernetes Service.
 
-Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing[Managing data in NetApp Cloud Volumes].
+Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing.html[Managing data in NetApp Cloud Volumes].
 
 [discrete]
 == Top Link
