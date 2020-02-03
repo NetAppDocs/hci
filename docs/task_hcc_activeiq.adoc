@@ -1,0 +1,49 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_activeiq.html
+summary: You can monitor your cluster health with SolidFire Active IQ.
+keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
+---
+
+= Monitor performance, capacity, and cluster health with SolidFire Active IQ
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+By using the SolidFire Active IQ, you can monitor the risks, performance, and capacity of your clusters. You can access SolidFire Active IQ from the NetApp Hybrid Control Dashboard.
+
+== Before you begin
+
+* You must have authorization to use management node REST APIs.
++ See how to enable Active IQ in the NetApp HCI Documentation Center.
+Read how to enable this at https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
+* You have deployed a management node running version 12.0 or later.
+* Your cluster version is running NetApp Element software 12.0 or later.
+* You have Internet access. The Active IQ collector service cannot be used from dark sites.
+
+
+== About this task
+Obtain continually updated historical views of cluster-wide statistics. You can set up notifications to alert you about specified events, thresholds, or metrics on a cluster so that they can be addressed quickly.
+
+== Steps
+
+. Open a web browser and browse to the IP address of the management node. For example:
++ https://_management_node_IP_[NetApp HCI Management Node IP^].
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. From the Dashboard, click the menu on the upper right.
+. Select *Active IQ*.
++ The SolidFire Active IQ Dashboard appears.
+. To find out details about SolidFire Active IQ, from the Dashboard, click the menu icon on the upper right and click *Documentation*.
+
+TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
+
+
+
+[discrete]
+== Find more information
+* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
