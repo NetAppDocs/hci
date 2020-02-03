@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/concept_licensing.html
-summary: Before you begin using Cloud Volumes on NetApp HCI, you will need to obtain licenses..
+summary: Before you begin using Cloud Volumes on NetApp HCI, it might be helpful to understand licensing.
 keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 ---
 
@@ -13,18 +13,13 @@ keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 :imagesdir: ../media/
 
 [.lead]
-Before you begin using Cloud Volumes on NetApp HCI, you will need to obtain licenses. You can obtain the licenses before or during the use of the Cloud Services wizard.
-
+Before you begin using Cloud Volumes on NetApp HCI, it might be helpful to understand licensing.
 The Cloud Services wizard provides a link to obtain the licenses; however, you will need your software license serial numbers. You can get the serial numbers from the NetApp Support Site at mysupport.netapp.com.
 
 
 
 == Licensing requirements for Cloud Volumes on NetApp HCI
-Because Cloud Volumes on NetApp HCI is supported by NetApp ONTAP HA clusters and each requires a license, Cloud Volumes on NetApp HCI requires two “ONTAP Select Premium” licenses.
-
-The NetApp licensing files use the following format:
-
-NLF<serialnumber>.txt
+Cloud Volumes on NetApp HCI does not require any licenses. To view and manage Cloud Volumes on NetApp HCI, you use NetApp Fabric Orchestrator. 
 
 NOTE: Fabric Orchestrator is in Preview mode. When you enable Cloud Volumes on NetApp HCI, you automatically have access to the Preview environment.
 
@@ -32,7 +27,7 @@ NOTE: Fabric Orchestrator is in Preview mode. When you enable Cloud Volumes on N
 NetApp Kubernetes Service does not require an additional license.
 
 NetApp Kubernetes Service is metered and billed by the number of worker nodes in the managed Kubernetes clusters. While these Kubernetes worker nodes are virtual machines that are running on a cluster and NetApp HCI compute nodes, the number of physical compute nodes in the NetApp HCI environment are an unrelated entity for metering and billing purposes.
-//Ok'd by TD and RE, PMs.  
+//Ok'd by TD and RE, PMs.
 
 
 [discrete]

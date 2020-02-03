@@ -26,7 +26,6 @@ A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 * Select the cloud services you want to enable.
 * Obtain a Kubernetes API token and register your installation with NetApp Cloud Central.
 *	Select the vCenter resources.
-* If you enabled Cloud Volumes on NetApp HCI, enable licenses using a link to the NetApp License Generator.
 *	Configure networking.
 
 == Sign in to or register with NetApp Cloud Central
@@ -94,7 +93,7 @@ Because the management node is connected to the vCenter, the vCenter used for de
 . On the vCenter page, enter or select the following:
 .. *Datacenter*:  Select a datacenter from those configured on the NetApp HCI system.
 .. *Cluster*: Select a cluster from those configured on the NetApp HCI system.
-.. *Switch*: Select a switch. Only switches that meet the redundant management and storage uplinks are displayed.
+.. *Switch*: Select a switch. Only switches that meet the redundant management, vMotion, and storage uplinks are displayed.
 +
 The vCenter instance and admin user connected to it are displayed.
 +
@@ -103,35 +102,23 @@ image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resourc
 . Click *Continue*.
 
 
-
-== Enter license information
-If you enabled Cloud Volumes, a Licensing page appears. If not, the Licensing page does not appear and you should skip the Licensing steps and enter networking information on the Networking page instead.
-
-The NetApp license files use the following format:
-NLF<serialnumber>.txt
-
-. If you already have obtained license files, click *Browse* to locate them.
-Select both licenses and click *Choose* so they can be uploaded.
-. If you have not obtained license files, complete the following to obtain or retrieve them:
-.. Serial number information is provided in an email after ordering software. Go to the https://mysupport.netapp.com[NetApp Support Site^], click *Products* > *Software Licenses*, and
-enter product and serial number.
-.. Return to the Hybrid Cloud Control Licensing page, click the link to the NetApp License File Generator, supply your password, select “ONTAP Select-Premium” as the product line, and supply the product serial number that you obtained from the NetApp Support Site.
-+
-image::hcc_enablecloudservices_licensing_blurred.png[Enable Cloud Services Licensing page]
-
-.. Acknowledge the Global Data Privacy Policy and click *Submit*.
-.. Download the license files either directly from the NetApp License File Generator or from the email.
-.. Do this twice for the two licenses, one for each of the HA clusters.
-.. You can now upload the license files. In the Licensing page, click *Browse* to locate both license files that you downloaded. Select both licenses and click *Choose* to upload them.
-. Click *Continue*.
-
-
 == Select networking options
 
-.	On the Networking page, review the hover text for each of the following and configure networking information:
-* *NetApp Kubernetes Service Management Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service service cluster. This network requires outbound Internet access.
-*	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NetApp Kubernetes Service user clusters, on which you place your applications. This network requires outbound Internet access.
-*	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NetApp Kubernetes Service user clusters.
+.	On the Networking page, enter values for fields in each section:
+* *NetApp Kubernetes Service Management Network*: Select the vSphere distributed port group to use for management traffic for the NKS service cluster. This network requires outbound Internet access.
+*	*NetApp Kubernetes Service Workload Network*: Select the vSphere distributed port group to use for management traffic for the NKS user clusters, on which you place your applications. This network should have outbound Internet access.
+*	*NetApp Kubernetes Service Data Network*: Select the vSphere distributed port group to use for persistent volume data traffic for the NKS user clusters. Storage or data networks require jumbo frames.
+. Optionally, create a port group for all three NKS networks (management, workload, and data) or continue to create them separately in each section.
+. Enter or select data in the fields in each section. Here are some tips. Default IP address, subnet, start and end IPs are provided for the data network.
+* *NTP Server*: Enter the IP address or fully qualified domain name for the primary Network Time Protocol (NTP) server for NKS. Required only for the management and workload networks.
+* *DNS Server*: Enter the primary DNS server IP address used for cluster communication for NKS. Required only for the management and workload networks.
+* *DNS Search Domain*: Enter any additional domain name text for NKS. Required only for the management and workload networks.
+* *Port Group*: The wizard provides three recommended NKS port groups and displays them in each section.
+* *VLAN ID*: The VLAN must be in one of the port groups that you selected. The VLAN can be the same or different for the management and workload networks; however, the VLAN must be different for the data network.
+* *Subnet*: Enter subnet definitions in CIDR format for each type of network traffic in each network, for example, 192.168.1.0/24
+* *Default Gateway*: Enter the IP address of the default gateway for each type of network traffic in each section. Required only for the management and workload networks.
+* *IP Addresses*: Enter starting and ending IP addresses. You must select a block of continuous IP addresses and they must be in the subnet. For the minimum IP requirements, see link:reference_requirements_beforeyoubegin.html[System requirements before you begin.]
+
 . If you enabled Cloud Volumes on the Services page, the following additional fields appear:
 * *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes management VM and its deployed nodes.
 * *Cloud Volumes Cluster Network*: Enter network information used by the nodes in the Cloud Volumes cluster to communicate with each other.
@@ -152,9 +139,10 @@ NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which
 
 
 == After you finish
-Next, continue with link:task_NKS_create_cluster.html[Creating Kubernetes clusters] on your NetApp HCI system by using the NetApp Kubernetes Service.
+Next, continue with link:task_NKS_create_cluster.html[Create a Kubernetes clusters] on your NetApp HCI system by using the NetApp Kubernetes Service.
 
-Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing.html[Managing data in NetApp Cloud Volumes].
+Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing.html[Manage data in NetApp Cloud Volumes].
+
 
 [discrete]
 == Top Link

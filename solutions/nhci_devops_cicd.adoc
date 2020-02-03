@@ -32,15 +32,9 @@ As DevOps is intended to be a cross-functional mode of working, those that pract
 
 == Addressing the CI/CD Pipeline with NetApp HCI
 
-// NOTE: PLEASE DO NOT mess with sizing of the following images
+image:cicd-pipeline.jpg[width=800]
 
-image:cicd-config-mgmt.jpg[width=402,link=#configuration-management] image:cicd-src-repo.jpg[width=402,link=#source-repository]
-
-image:cicd-develop.jpg[width=131,link=#develop] image:cicd-commit.jpg[width=131,link=#commit] image:cicd-test.jpg[width=131,link=#test] image:cicd-deploy.jpg[width=131,link=#deploy] image:cicd-prod.jpg[width=131,link=#production] image:cicd-analyze.jpg[width=131,link=#analyze]
-
-image:cicd-feedback.jpg[width=808,link=#feedback]
-
-[small]#*_Figure 1:_* _DevOps CI/CD Pipeline - Click on any component of the CI/CD pipeline to learn more about the capabilities._#
+[small]#*_Figure 1:_* _DevOps CI/CD Pipeline - Use the navigation panel (at the right) to learn more about each of the components of the CI/CD pipeline._#
 
 === Configuration Management
 Configuration management refers to the process of setting up the virtual infrastructure for a DevOps CI/CD pipeline. Automation of the infrastructure configuration is a key tenant in DevOps where automation tools such as Ansible and Puppet are widely used to perform the required automation steps.
