@@ -1,11 +1,12 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/hcc_dashboard.html
-summary: You can view resources on the Hybrid Cloud Control Dashboard.
-keywords: netapp, hci, hcc, on premise, cloud services
+permalink: docs/task_hcc_dashboard.html
+summary: You can view storage and compute resources on the NetApp Hybrid Cloud Control Dashboard.
+keywords: netapp, hci, on premise, hcc, hybrid cloud control
 ---
 
-= View resources on the Hybrid Cloud Control Dashboard
+= View storage and compute resources on the HCC Dashboard
+
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,6 +14,19 @@ keywords: netapp, hci, hcc, on premise, cloud services
 :imagesdir: ../media/
 
 [.lead]
+With the NetApp Hybrid Control Dashboard, you can view all your storage and compute resources at a glance.
+
+== Steps
+
+. Open a web browser and browse to the IP address of the management node. For example:
++ https://_management_node_IP_[NetApp HCI Management Node IP^].
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. View the Dashboard:
+* *Storage*: Displays the number of storage clusters, storage nodes, and total volumes.
+* *Compute*: Displays the number of compute clusters and total compute nodes.
+
+TIP: To view cluster health, look at the SolidFire Active IQ Dashboard. See See link:task_hcc_activeiq.html[Viewing performance, capacity, and cluster health in SolidFire Active IQ]
+
 You can view storage and compute resources at a glance on the Hybrid Cloud Control Dashboard.
 
 == Steps
@@ -31,8 +45,7 @@ Using Cloud Central, you can set up accounts either as individual accounts or as
 .. If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
 . From other Cloud Central products, select *Products* > *NetApp Fabric Orchestrator*.
 
-
 [discrete]
 == Find more information
-* https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
