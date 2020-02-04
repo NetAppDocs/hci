@@ -6,6 +6,7 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 ---
 
 = Monitor performance, capacity, and cluster health with SolidFire Active IQ
+
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -40,7 +41,24 @@ Obtain continually updated historical views of cluster-wide statistics. You can 
 
 TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
 
+=======
+From the NetApp HCI Hybrid Cloud Control you can identify risks, performance, and updates by using NetApp Active IQ.
 
+== Steps
+
+. Go to the https://fabric.netapp.io[NetApp Fabric Orchestrator^] Login page.
+. Enter your Cloud Central login credentials and click *Login*.
++
+TIP: If you do not see any systems listed, make sure that the NetApp HCI administrator is added to your NetApp Cloud Central account.
+
+. If you do not have a Cloud Central account, on the Cloud Central Login page, click *Sign Up*.
+
++
+Using Cloud Central, you can set up accounts either as individual accounts or as Federated accounts:
+
+.. You can make a new account with name, email, and password and then you will be logged in. This is the simplest type of account.
+.. If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
+. From other Cloud Central products, select *Products* > *NetApp Fabric Orchestrator*.
 
 [discrete]
 == Find more information
