@@ -13,10 +13,10 @@ entries:
         url: /task_hcc_access.html
   - title: Enable NetApp HCI cloud services
     entries:
+      - title: Cloud services on NetApp HCI overview
+        url: /concept_overview.html
       - title: Concepts
         entries:
-          - title: Cloud services on NetApp HCI overview
-            url: /concept_overview.html
           - title: Types of cloud services on NetApp HCI
             url: /concept_types_cloudservices.html
           - title: Architecture overview for cloud services on NetApp HCI
@@ -73,10 +73,6 @@ entries:
     entries:
       - title: View resources on the HCC Dashboard
         url: /task_hcc_dashboard.html
-      - title: Respond to alerts on the HCC Dashboard
-        url: /task_hcc_alerts_respond.html
-      - title: View your system's inventory in HCC
-        url: /task_hcc_inventory.html
       - title: Identify risks, performance, and updates with Active IQ
         url: /task_hcc_activeiq.html
   - title: Upgrade your NetApp HCI system
@@ -86,4 +82,4 @@ entries:
   - title: Expand your NetApp HCI system
     entries:
      - title: Expand overview
-       url: /concept_expand_overview.html
+       url: /concept_hcc_expandoverview.html
