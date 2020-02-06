@@ -78,7 +78,7 @@ entries:
   - title: Upgrade your NetApp HCI system
     entries:
       - title: Upgrade overview
-        url: /concept_upgrade_overview.html
+        url: /concept_hci_upgrade_overview.html
   - title: Expand your NetApp HCI system
     entries:
      - title: Expand overview
