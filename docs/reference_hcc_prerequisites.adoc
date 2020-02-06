@@ -1,8 +1,8 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/reference_reference_hcc_prerequisites.html
+permalink: docs/reference_hcc_prerequisites.html
 summary: Before you begin using Hybrid Cloud Control on NetApp HCI, look at these prerequisites.
-keywords: netapp, hci, kubernetes, on premise, cloud services
+keywords: netapp, hci, hcc, hybrid cloud control, on premise, cloud services
 ---
 
 = Requirements before you begin with NetApp Hybrid Cloud Control
@@ -14,7 +14,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 [.lead]
 Before you use NetApp HCI Hybrid Cloud Control (HCC), you should have completed networking and other requirements.​
-*(NEED TO CHANGE for HCC)*
+*(NEED TO CHANGE for HCC. The info here is prerequisites for Cloud Services!!*
 
 == System requirements
 * A NetApp HCI 1.6 or later system deployed by the NetApp Deployment Engine (NDE)
