@@ -73,7 +73,7 @@ entries:
     entries:
       - title: View resources on the HCC Dashboard
         url: /task_hcc_dashboard.html
-      - title: Identify risks, performance, and updates with Active IQ
+      - title: Monitor performance, capacity, and cluster health with Active IQ
         url: /task_hcc_activeiq.html
   - title: Upgrade your NetApp HCI system
     entries:
