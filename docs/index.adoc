@@ -15,8 +15,9 @@ keywords: netapp, hci, on premise, hybrid cloud control, hcc, kubernetes, cloud 
 [.lead]
 NetApp HCI provides both storage and compute resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software.
 
+You can manage resources using a vSphere plug-in and perform other operations using the NetApp Hybrid Cloud Control interface,
 
-== Performing operaions with NetApp Element Plug-in for vCenter Server
+== Performing operations with NetApp Element Plug-in for vCenter Server
 After deploying NetApp HCI, you manage storage and compute resources from the VMware vSphere Web Client:
 
 * You manage _storage_ resources, including, datastores, volumes, Quality of Service, storage cluster components, and data protection by using the NetApp Element Plug-in for vCenter Server (also referred to as the vCenter Plug-in or VCP).
@@ -34,7 +35,6 @@ One of the components of NetApp HCI is the NetApp Hybrid Cloud Control, which en
 
 [discrete]
 == Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * link:../../index.html[NetApp Cloud Services and Solutions^]
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

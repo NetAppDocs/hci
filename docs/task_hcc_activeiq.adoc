@@ -31,11 +31,13 @@ Obtain continually updated historical views of cluster-wide statistics. You can 
 *Steps*
 
 . Open a web browser and browse to the IP address of the management node. For example:
-+ https://_management_node_IP_
++
+https://_management_node_IP_
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . From the Dashboard, click the menu on the upper right.
 . Select *Active IQ*.
-+ The SolidFire Active IQ Dashboard appears.
++
+The SolidFire Active IQ Dashboard appears.
 . To learn about SolidFire Active IQ, from the Dashboard, click the menu icon on the upper right and click *Documentation*.
 
 TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
