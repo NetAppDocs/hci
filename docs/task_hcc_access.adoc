@@ -17,7 +17,7 @@ NetApp Hybrid Cloud Control enables you to manage NetApp HCI. You can upgrade ma
 
 You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
 
-== Steps
+*Steps*
 
 . Open a web browser and browse to the IP address of the management node. For example:
 + https://<ManagementNodeIP>
