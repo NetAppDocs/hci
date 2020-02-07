@@ -26,6 +26,7 @@ After deploying NetApp HCI, you manage storage and compute resources from the VM
 
 == Performing operations with NetApp Hybrid Cloud Control
 One of the components of NetApp HCI is the NetApp Hybrid Cloud Control interface, which enables you to do the following:
+
 * link:concept_overview.html[Enable Cloud Services on NetApp HCI]
 * link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
 * link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
