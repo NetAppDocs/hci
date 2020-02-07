@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, hcc, hybrid cloud control
 :imagesdir: ../media/
 
 [.lead]
-With the NetApp Hybrid Control Dashboard, you can view all your storage and compute resources at a glance.
+With the NetApp Hybrid Control (HCC) Dashboard, you can view all your storage and compute resources at a glance.
 
 *Steps*
 
@@ -27,23 +27,6 @@ With the NetApp Hybrid Control Dashboard, you can view all your storage and comp
 
 TIP: To view cluster health, look at the SolidFire Active IQ Dashboard. See link:task_hcc_activeiq.html[Viewing performance, capacity, and cluster health in SolidFire Active IQ].
 
-You can view storage and compute resources at a glance on the Hybrid Cloud Control Dashboard.
-
-== Steps
-
-. Go to the https://fabric.netapp.io[NetApp Fabric Orchestrator^] Login page.
-. Enter your Cloud Central login credentials and click *Login*.
-+
-TIP: If you do not see any systems listed, make sure that the NetApp HCI administrator is added to your NetApp Cloud Central account.
-
-. If you do not have a Cloud Central account, on the Cloud Central Login page, click *Sign Up*.
-
-+
-Using Cloud Central, you can set up accounts either as individual accounts or as Federated accounts:
-
-.. You can make a new account with name, email, and password and then you will be logged in. This is the simplest type of account.
-.. If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
-. From other Cloud Central products, select *Products* > *NetApp Fabric Orchestrator*.
 
 [discrete]
 == Find more information
