@@ -13,16 +13,24 @@ keywords: netapp, hci, on premise, cloud services, hybrid cloud control, hcc
 :imagesdir: ../media/
 
 [.lead]
-NetApp Hybrid Cloud Control enables you to manage NetApp HCI. You can upgrade management services, expand and monitor your installation, and enable NetApp Cloud Services.
+NetApp Hybrid Cloud Control enables you to manage NetApp HCI.
 
 You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
+
+Using the Hybrid Cloud Control, you can do the following:
+* link:concept_overview.html[Enable Cloud Services on NetApp HCI]
+* link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
+* link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
+* link:concept_hcc_expandoverview.html[Expand your NetApp HCI storage or compute resources]
 
 *Steps*
 
 . Open a web browser and browse to the IP address of the management node. For example:
-+ https://_<ManagementNodeIP>_
++
+https://_<ManagementNodeIP>_
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
-+ The NetApp Hybrid Cloud Control interface appears.
++
+The NetApp Hybrid Cloud Control interface appears.
 
 
 [discrete]
