@@ -14,15 +14,23 @@ keywords: netapp, hci, on premise, expand, hcc, hybrid cloud control
 :keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
-You can expand your NetApp HCI system using NetApp Hybrid Cloud Control. ​
-After deployment, you can expand NetApp HCI storage and compute resources either separately or at the same time. After installing the node in the NetApp HCI chassis, you use NetApp Hybrid Cloud Control to configure NetApp HCI to utilize the new resources. NetApp HCI detects the existing network configuration and offers you configuration options within the existing networks and VLANs, if any.
-Note that NetApp HCI uses VMware Enhanced vMotion Compatibility (EVC) to ensure vMotion functionality when there are compute nodes with different CPU generations in the vSphere cluster. When EVC is required for expansion, NetApp HCI enables it automatically whenever possible. In the following situations, you might need to manually change EVC settings in the vSphere client to complete expansion:
+You can expand your NetApp HCI system using NetApp Hybrid Cloud Control. You can expand storage or compute resources separately or expand them at the same time.
 
+ ​
+After installing the node in the NetApp HCI chassis, you use NetApp Hybrid Cloud Control to configure NetApp HCI to utilize the new resources. NetApp HCI detects the existing network configuration and offers you configuration options within the existing networks and VLANs, if any.
+
+
+NetApp HCI uses VMware Enhanced vMotion Compatibility (EVC) to ensure vMotion functionality when there are compute nodes with different CPU generations in the vSphere cluster. When EVC is required for expansion, NetApp HCI enables it automatically whenever possible.
+
+In the following situations, you might need to manually change EVC settings in the vSphere client to complete expansion:
+
+* Th existing compute nodes have a newer CPU generation than the compute nodes you are trying to add.
 * The controlling vCenter instance does not support the required EVC level.
 
 * The compute nodes you are trying to add have an older CPU generation than the EVC setting of the controlling vCenter instance.
 
 NOTE: When expanding NetApp HCI compute or storage resources in the NetApp Deployment Engine, you should connect to the vCenter instance that manages your existing NetApp HCI compute nodes.
+
 
 [discrete]
 == Find more information
