@@ -83,3 +83,9 @@ entries:
     entries:
      - title: Expand overview
        url: /concept_hcc_expandoverview.html
+     - title: Expand NetApp HCI storage resources
+       url: /task_hcc_expand_storage.html
+     - title: Expand NetApp HCI compute resources
+       url: /task_hcc_expand_compute.html
+     - title: Expand NetApp storage and compute resources
+       url: /task_hcc_expand_compute_and_storage.html
