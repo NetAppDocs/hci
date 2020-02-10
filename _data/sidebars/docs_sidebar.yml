@@ -41,12 +41,10 @@ entries:
             url: /concept_licensing.html
           - title: Get a NetApp Kubernetes Service API token
             url: /task_getting_a_netapp_kubernetes_service_api_token.html
-      - title: Enable cloud services on NetApp HCI
-        entries:
-          - title: Deploy cloud services on NetApp HCI overview
-            url: /task_deploying_overview.html
-          - title: Enable cloud services using NetApp Hybrid Cloud Control
-            url: /task_enabling_cloud_services.html
+      - title: Cloud services deployment overview
+        url: /task_deploying_overview.html
+      - title: Enable cloud services using NetApp Hybrid Cloud Control
+        url: /task_enabling_cloud_services.html
       - title: Enable Kubernetes clusters on NetApp HCI
         entries:
           - title: Manage Kubernetes clusters on NetApp HCI overview
