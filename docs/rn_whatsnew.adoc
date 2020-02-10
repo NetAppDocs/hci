@@ -16,15 +16,6 @@ keywords: netapp, hci, on premise, cloud services
 [.lead]
 NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
 
-== NetApp HCI 1.9
-This update includes the following new features and enhancements.
-
-=== Feature A
-(blurb)
-
-=== Feature B
-(blurb)
-
 
 == NetApp HCI 1.8
 This update includes the following new features and enhancements.
