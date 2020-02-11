@@ -27,6 +27,7 @@ NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle 
 
 
 *Steps*
+
 . Determine the Element version on your storage cluster.
 . Use HealthTools to run pre-upgrade checks.
 . Upgrade your Element software version.

@@ -25,6 +25,7 @@ NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle 
 
 
 *Steps*
+
 . Log in to your management node.
 . View the Element version number in the login banner.
 +
