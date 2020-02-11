@@ -26,6 +26,7 @@ To upgrade the NetApp Element software, you must use the 'sfinstall' file includ
 IMPORTANT: Before you upgrade Element software, check upgrade path information for the Element version you are upgrading to and verify that the upgrade path is valid.
 https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp Knowledgebase Answer 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 
+== Upgrade Element software at connected sites
 
 .Steps
 
@@ -36,25 +37,26 @@ https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp Knowledgebase 
 TIP: You can do this by using, for example, SCP.
 
 +
- When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
+When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
 
 . *Optional*: Download the ISO from the management node to the cluster nodes before the upgrade.
 +
 This step reduces the upgrade time by pre-staging the ISO on the storage nodes and running additional internal checks to ensure that the cluster is in a good state to be upgraded. Performing this operation will not put the cluster into "upgrade" mode or restrict any of the cluster operations.
 +
 `sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO> --stage`
-
 NOTE: For passwords that contain special characters, add a backslash (\) before each special character. For example, 'mypass!@1' should be entered as 'mypass\!\@'. Alternatively, omit the password from the command line to allow 'sfinstall' to prompt for the information.
 
 +
 *Example*
 See the following sample input:
++
 ----
 sfinstall 10.117.0.244 -u admin -p admin
 /tmp/solidfire-rtfisodium-11.0.0.345.iso --stage
 ----
 +
 The output for the sample shows that sfinstall attempts to verify if a newer version of sfinstall is available:
++
 ----
 sfinstall 10.117.0.244 -u admin -p admin
 /tmp/solidfire-rtfisodium-11.0.0.345.iso 2018-10-01 16:52:15:
@@ -124,6 +126,7 @@ https://mysupport.netapp.com/NOW/cgi-bin/software/ or rerun with --skip-version-
 ----
 +
 See the following sample excerpt from a successful upgrade. Upgrade events can be used to monitor the progress of the upgrade.
++
 ----
 # sfinstall 10.117.0.161 -u admin -p admin solidfire-rtfi-sodium-11.0.0.761.iso
 2018-10-11 18:28
@@ -174,7 +177,7 @@ Starting light cluster block service check
 
 
 
-== Upgrading Element software at dark sites
+== Upgrade Element software at dark sites
 You must use the HealthTools suite of tools to update NetApp Element software at a dark site.
 
 .What you'll need
@@ -205,15 +208,15 @@ See the following sample input command:
 sfinstall -u admin -p admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/tmp/metadata.json
 ----
 +
-*Optional* You can add the ''--stage' flag to the 'sfinstall' command to pre-stage the upgrade in advance.
+*Optional* You can add the ``--stage` flag to the `'sfinstall` command to pre-stage the upgrade in advance.
 
 
-== What happens when an upgrade fails
+== What happens if an upgrade fails
 In the case of a software upgrade failure, you can pause the upgrade.
 
 TIP: You should pause an upgrade only with Ctrl-C. This enables the system to clean itself up.
 
-When `sfinstall` waits for cluster faults to clear and if any failure causes the faults to remain, 'sfinstall' will not proceed to the next node.
+When `sfinstall` waits for cluster faults to clear and if any failure causes the faults to remain, `sfinstall` will not proceed to the next node.
 
 * You should stop `sfinstall` with Ctrl+C.
 * Contact NetApp Support to assist with the failure investigation.
