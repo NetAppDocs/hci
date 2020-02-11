@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/concept_hci_upgrade_overview.html
 summary: This upgrade content introduces upgrade processes for components in a NetApp HCI system.
-keywords: netapp, hci, on premise, Upgrade, hcc, hybrid cloud control
+keywords: netapp, hci, on premise, upgrade, hcc, hybrid cloud control
 ---
 
 = Upgrade overview
@@ -15,6 +15,7 @@ keywords: netapp, hci, on premise, Upgrade, hcc, hybrid cloud control
 
 [.lead]
 This upgrade content introduces upgrade processes for components in a NetApp HCI system. ​
+
 It focuses on sequential, end-to-end upgrades for NetApp HCI and also addresses best practices for updating individual components and the dependencies that exist. You can use this content to quickly update your fully racked and powered NetApp HCI.
 
 == Upgrade components
@@ -23,9 +24,14 @@ It focuses on sequential, end-to-end upgrades for NetApp HCI and also addresses 
 *	Cloud services. See link:task_enabling_cloud_services.html[Enabling cloud services].
 * Management node. See (link).
 * Element software. See (link).
+* NetApp Element Plug-in for vCenter Server (VCP)
+* Compute node firmware
+* Compute node drivers
 
 
-== Upgrade process
+== Upgrade process overview
+You can update the entire set of components or you can upgrade individual components.
+
 
 
 [discrete]

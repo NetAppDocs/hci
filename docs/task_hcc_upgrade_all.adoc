@@ -1,0 +1,45 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_all.html
+summary: You can upgrade NetApp HCI and all of its components.
+keywords: netapp, hci, on premise, cluster, upgrade, element
+---
+
+= Upgrade overview for the entire NetApp HCI installation
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can keep the entire NetApp HCI installation up-to-date after deployment by sequentially upgrading each NetApp HCI software component.
+
+These components include management services, management node, Element software, firmware, drivers, and the Element Plug-in for vCenter Server.
+
+*Before you begin*
+
+* You are running management node 11.3 or later.
+* You have upgraded your management services to at least version 2.1.326.
++
+NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle versions.
+
+
+
+*Steps*
+. Update management services from Hybrid Cloud Control.
+. Upgrade your Element software version.
+. Upgrade your management node.
+. Update your compute node firmware.
+. Update your compute node drivers.
+
+
+TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
