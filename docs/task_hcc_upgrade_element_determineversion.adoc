@@ -16,15 +16,15 @@ keywords: netapp, hci, on premise, cluster, element
 [.lead]
 Before you begin the upgrade, you should determine which Element version you have on your management node.
 
-*Before you begin*
+.What you'll need
 
 * You are running management node 11.0, 11.1 or later.
 * You have upgraded your management services to at least version 2.1.326.
 +
-NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle versions.
+NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
 
 
-*Steps*
+.Steps
 
 . Log in to your management node.
 . View the Element version number in the login banner.
