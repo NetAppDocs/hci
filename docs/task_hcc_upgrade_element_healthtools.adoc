@@ -29,18 +29,20 @@ The HealthTools suite includes the components required for the software upgrade:
 * You have upgraded your management services to at least version 2.1.326.
 +
 NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle versions.
-* To use HealthTools, you must download a JSON file from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
-+
-https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file]
+* To use HealthTools, you must download a https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
+
 
 *About this task*
+
 The commands in the HealthTools suite require escalated privileges to run. Either preface commands with 'sudo' or escalate your user to root privileges.
 
 == Check the installed version of HealthTools
+
 You can run the 'sfupdate-healthtools' command to check the version of HealthTools installed on your management node. This will compare the currently installed version with the newest available version.
 
 
 *Steps*
+
 . View the installed version by entering:
 +
 'sfupdate-healthtools -v'
@@ -63,20 +65,22 @@ https://mysupport.netapp.com/NOW/cgi-bin/software/
 For management nodes isolated from external Internet access, the verification check for the latest version of the HealthTools always fails. You must manually verify if the latest version available is the same as the installed version.
 
 *Before you begin*
+
 * You have a management node on a dark site.
 * When you run sfupdate-healthtools -l, you are unable to verify the latest available version of HealthTools.
 
 *Steps*
-. Download a JSON file from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
-+
-https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file]
+
+. Download a https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
 . Run the 'sfupdate-healthtools' command.
 +
 'sfupdate-healthtools <path-to-healthtools-package>'
+
 . Check the installed version by running the sfupdate-healthtools -v command:
 +
 'sfupdate-healthtools -v'
-5. Check the latest version against the metadata json file by running, the sfupdate-healthtools -l command:
+
+. Check the latest version against the metadata json file by running, the sfupdate-healthtools -l command:
 +
 'sfupdate-healthtools -l --metadata=<path-to-metadata-json>'
 +
@@ -89,6 +93,7 @@ sfupdate-healthtools -l --metadata=/tmp/metadata.json
 You can use the sfupdate-healthtools command to update the version of HealthTools that is installed on the management node.
 
 *Steps*
+
 . Log in to the NetApp Support Site at https://mysupport.netapp.com/products/p/healthtools.html.
 . Download the latest version of HealthTools to a computer that is not the management node.
 . Copy the installation file to the management node.
@@ -135,6 +140,7 @@ You can verify that the cluster is ready to be upgraded by using the 'sfupgradec
 If your management node is at a dark site, the upgrade readiness check needs the metadata JSON file to run successfully.
 
 *About this task*
+
 This procedure describes how to address upgrade checks that yield any of the following results:
 
 * Running the 'sfupgradecheck' command runs successfully. Your cluster is upgrade ready.
@@ -143,6 +149,7 @@ This procedure describes how to address upgrade checks that yield any of the fol
 * Your upgrade check fails because your management node is on a dark site.
 
 *Steps*
+
 . Run the 'sfupgradecheck' command.
 
 +
