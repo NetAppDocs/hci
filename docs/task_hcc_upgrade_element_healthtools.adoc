@@ -181,7 +181,7 @@ Node ID: 1 Upload speed: 90063.90 KBs/sec
 Node ID: 3 Upload speed: 106511.44 KBs/sec
 Node ID: 2 Upload speed: 85038.75 KBs/sec
 ----
-. If there are errors, additional actions are required
+. If there are errors, additional actions are required. See the next sections for details.
 
 === Your cluster is not upgrade ready
 If you see this message, follow these steps.
@@ -189,6 +189,7 @@ If you see this message, follow these steps.
 . Review the `sfupgradecheck` error message.
 +
 Here is some sample output:
++
 ----
 The following tests failed:
 check_root_disk_space:

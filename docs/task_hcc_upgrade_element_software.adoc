@@ -212,17 +212,17 @@ sfinstall -u admin -p admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --m
 
 
 == What happens if an upgrade fails
-In the case of a software upgrade failure, you can pause the upgrade.
+If the software upgrade fails, you can pause the upgrade.
 
 TIP: You should pause an upgrade only with Ctrl-C. This enables the system to clean itself up.
 
 When `sfinstall` waits for cluster faults to clear and if any failure causes the faults to remain, `sfinstall` will not proceed to the next node.
 
-* You should stop `sfinstall` with Ctrl+C.
-* Contact NetApp Support to assist with the failure investigation.
-* Resume the upgrade with the same `sfinstall` command.
-
-When an upgrade is paused byusing Ctrl+C, if the upgrade is currently upgrading a node, you will see a list of options:
+.Steps
+. You should stop `sfinstall` with Ctrl+C.
+. Contact NetApp Support to assist with the failure investigation.
+. Resume the upgrade with the same `sfinstall` command.
+. When an upgrade is paused by using Ctrl+C, if the upgrade is currently upgrading a node, choose one of these options:
 
 * *Wait*: Allow the currently upgrading node to finish before resetting the cluster constants.
 * *Continue*: Continue the upgrade, which cancels the pause.
