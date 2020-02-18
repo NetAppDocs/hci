@@ -127,7 +127,9 @@ image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resourc
 image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control Networking page]
 
 .	Click *Continue*.
-.	On the Review page, review your choices by expanding each option. and click *Continue*.
+.	On the Review page, review your choices by expanding each option, and click *Continue*.
++
+NetApp Hybrid Cloud Control conducts precheck validations to check your environment. Checks include identifying the installation, the vCenter instance, the vSphere datacenter and cluster, the Cloud Central organization, and the NetApp Kubernetes Service data. If any of the prechecks fail, you are prompted to return to the page in the wizard to change the information.  
 
 .Result
 NetApp HCI cloud services are enabled and the NetApp Hybrid Cloud Control opening page reappears.
