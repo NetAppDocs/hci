@@ -16,6 +16,7 @@ keywords: netapp, hci, on premise, hcc, hybrid cloud control
 [.lead]
 With the NetApp Hybrid Control (HCC) Dashboard, you can view all your storage and compute resources at a glance.
 
+Only compute nodes that are managed and clusters with at least one managed node in H-series hardware appear on the Dashboard. 
 *Steps*
 
 . Open a web browser and browse to the IP address of the management node. For example:
