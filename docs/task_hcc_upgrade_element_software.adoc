@@ -62,7 +62,7 @@ sfinstall 10.117.0.244 -u admin -p admin
 /tmp/solidfire-rtfisodium-11.0.0.345.iso 2018-10-01 16:52:15:
 Newer version of sfinstall available.
 This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
+The latest version of the HealthTools can be downloaded from: 
 https:// mysupport.netapp.com/NOW/cgi-bin/software/
 or rerun with --skip-version-check
 ----
@@ -104,7 +104,7 @@ After the upgrade has started, the de-stage option is no longer available.
 
 . Start the upgrade with the `sfinstall` command and the path to the ISO file:
 +
-`sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO>``
+`sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO>`
 
 +
 *Example*
@@ -141,8 +141,6 @@ You are about to start a new upgrade
 10.3.0.161
 solidfire-rtfi-sodium-11.0.0.761.iso
 Nodes:
-Upgrading the entire NetApp HCI installation to version 1.8 | 13
-Draft • Highly Confidential - ProdOps Restricted • Processed: Tuesday February 11 2020 07:29:59
 10.117.0.23 nlabp1023 SF3010 10.3.0.161
 10.117.0.24 nlabp1025 SF3010 10.3.0.161
 10.117.0.26 nlabp1027 SF3010 10.3.0.161
