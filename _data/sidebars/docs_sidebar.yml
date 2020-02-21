@@ -1,10 +1,20 @@
 entries:
-  - title: NetApp HCI Management, Cloud Services, and Solutions
+  - title: NetApp HCI Documentation
     url: ../../../../index.html
   - title: NetApp HCI Management and Cloud Services
     url: /index.html
   - title: What's new in NetApp HCI
     url: /rn_whatsnew.html
+  - title: Concepts
+    entries:
+     - title: Product concept_overview
+     - title: Accounts 
+     - title: Cloud Services
+     - title: Data protection
+     - title: Storage
+     - title: Licensing
+     - title: Security
+     - title: Performance
   - title: Get started with Hybrid Cloud Control
     entries:
       - title: Prerequisites to using Hybrid Cloud Control
