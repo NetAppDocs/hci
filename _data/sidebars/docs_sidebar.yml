@@ -7,7 +7,7 @@ entries:
     url: /rn_whatsnew.html
   - title: Concepts
     entries:
-     - title: Product concept_overview
+     - title: Product overview
        url: concept_hci_product_overview.html
      - title: Accounts
        url: concept_hci_accounts.html
@@ -29,7 +29,7 @@ entries:
         url: /reference_hcc_prerequisites.html
       - title: Access Hybrid Cloud Control
         url: /task_hcc_access.html
-  - title: Enable NetApp HCI cloud services
+  - title: Enable cloud services on NetApp HCI
     entries:
       - title: Cloud services on NetApp HCI overview
         url: /concept_overview.html
