@@ -5,7 +5,7 @@ summary: With cloud services technology on NetApp HCI along with NetApp HCI Solu
 keywords: netapp, hci, on premise, kubernetes, cloud services
 ---
 
-= NetApp HCI Management, Cloud Services, and Solutions
+= NetApp HCI Documentation
 :hardbreaks:
 :nofooter:
 :icons: font
