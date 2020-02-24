@@ -1,8 +1,7 @@
 entries:
- - title: NetApp HCI Documentation
-   url: /index.html
-   entries:
-    - title: NetApp HCI Management and Cloud Services
-      url: /docs/index.html
-    - title: NetApp HCI Solutions
-      url: /solutions/index.html
+  - title: NetApp HCI Documentation
+    entries:
+     - title: NetApp HCI Management and Cloud Services
+       url: /docs/index.html
+     - title: NetApp HCI Solutions
+       url: /solutions/index.html
