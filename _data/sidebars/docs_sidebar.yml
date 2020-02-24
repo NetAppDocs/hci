@@ -7,21 +7,29 @@ entries:
     url: /rn_whatsnew.html
   - title: Concepts
     entries:
-     - title: Product concept_overview
-     - title: Accounts 
-     - title: Cloud Services
+     - title: Product overview
+       url: concept_hci_product_overview.html
+     - title: Accounts
+       url: concept_hci_accounts.html
+     - title: Cloud services
+       url: concept_hci_cloud_services.html
      - title: Data protection
+       url: concept_hci_dataprotection.html
      - title: Storage
+       url: concept_hci_storage.html
      - title: Licensing
+       url: concept_hci_licensing.html
      - title: Security
+       url: concept_hci_security.html
      - title: Performance
+       url: concept_hci_performance.html
   - title: Get started with Hybrid Cloud Control
     entries:
       - title: Prerequisites to using Hybrid Cloud Control
         url: /reference_hcc_prerequisites.html
       - title: Access Hybrid Cloud Control
         url: /task_hcc_access.html
-  - title: Enable NetApp HCI cloud services
+  - title: Enable cloud services on NetApp HCI
     entries:
       - title: Cloud services on NetApp HCI overview
         url: /concept_overview.html
