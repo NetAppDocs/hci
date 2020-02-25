@@ -1,0 +1,6 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_cg_hci_security.html
+summary: NetApp HCI in the cloud is a secure on-prem cloud provider.
+keywords: netapp, hci, on premise, cloud services, security
+---
