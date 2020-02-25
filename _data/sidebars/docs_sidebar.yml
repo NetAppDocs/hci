@@ -20,7 +20,7 @@ entries:
      - title: Licensing
        url: concept_hci_licensing.html
      - title: Security
-       url: hci_concepts_guide/concept_cg_hci_security.html
+       url: hci_concepts_guide\\concept_cg_hci_security.html
      - title: Performance
        url: concept_hci_performance.html
   - title: Get started with Hybrid Cloud Control
