@@ -15,7 +15,7 @@ keywords: netapp, hci, on premise, cloud services, cluster, kubernetes, nks
 [.lead]
 NetApp HCI creates a bootstrap agent that establishes an encrypted communication tunnel to the NetApp Kubernetes Service control plane and creates a _service cluster_.
 
-The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself. The NetApp Kubernetes Service agent maintains the tunnel, maintains deployed service clusters, and enables you to create _user clusters_ on which you can place applications or solutions.
+The service cluster, connected to NetApp Kubernetes Service, acts as a service orchestrator to deploy services and update itself. The NetApp Kubernetes Service agent maintains the tunnel, maintains deployed service clusters, and enables you to create _workload_ or _user clusters_ on which you can place applications or solutions.
 
 After a service cluster is deployed on your system, requested software along with updates can be updated on your NetApp HCI systems.
 

@@ -15,7 +15,7 @@ keywords: netapp, hci, on premise, cloud services
 [.lead]
 The following NetApp cloud services are supported on NetApp HCI.
 
-* *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service (NKS), a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as VMs on a NetApp HCI compute node or nodes. _Available in Preview mode_.
+* *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service (NKS), a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as VMs on a NetApp HCI compute node or nodes.
 +
 See link:task_nks_overview.html[Managing Kubernetes clusters on NetApp HCI overview] information.
 * *NetApp Cloud Volumes*: To manage Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds. Cloud Volumes on NetApp HCI can be deployed only on a vCenter with a single datacenter. _Available in Preview mode_.
@@ -23,24 +23,32 @@ See link:task_nks_overview.html[Managing Kubernetes clusters on NetApp HCI overv
 See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
 * *NetApp Cloud Insights*: This service will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
 
+
+
 *NetApp Fabric Orchestrator* provides a centralized storage and data management control plane for fabric-wide, multi-cloud visibility, monitoring, policies, administration and workflow orchestration for NetApp storage systems on-premises and in the cloud.
 Using NetApp Fabric Orchestrator, you can discover, manage, and govern your storage assets and data estate, anywhere. Use Fabric Orchestrator to create and manage Cloud Volumes on NetApp HCI.
 
-
-Using Fabric Orchestrator, you can enable these services:
-
-
-* *Cloud Volumes on NetApp HCI*: NetApp HCI provides the platform for the NetApp Kubernetes Service and Cloud Volumes. This documentation provides information only on this service.
-* *Cloud Volumes Service for On Premises*: This option is a fully managed private cloud storage service that is available for customers within their own on-premises data centers. NetApp configures and manages your infrastructure so you don‘t have to. This alternate storage consumption model offers high-performance storage for customers and partners wanting a cloud-like OPEX billing model managed by our NetApp cloud operations experts.
 
 See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
 
 == Notice of functional preview
 
-NetApp Kubernetes Service and Cloud Volumes on NetApp HCI are presently available as a functional preview. While in preview, the services are only for non-production environments and noncommercial use. By participating in the preview, participants agree to be bound by the cloud services link:https://www.netapp.com/us/media/cloud-data-services-terms.pdf[terms of service].
+Cloud Volumes on NetApp HCI is presently available as a functional preview. While in preview, the services are only for non-production environments and noncommercial use. By participating in the preview, participants agree to be bound by the cloud services link:https://www.netapp.com/us/media/cloud-data-services-terms.pdf[terms of service].
 
 
+== Differences between preview and production modes
+Some cloud services are provided in a preview mode. While in preview, the services are only for non-production environments and noncommercial use.
 
+
+=== NetApp Kubernetes Service preview and production modes
+
+.Load balancing
+* *Preview mode*: Does not provide load balancing, which impacts Helm charts. Many Kubernetes applications and Helm charts require load balancing for availability and scalability.
+* *Production mode*: Provides load balancing for Kubernetes pods. The load balancing provides basic high availability and scalability and enables application management and Helm chart features.
+
+.Multiple master Kubernetes cluster support
+* *Preview mode*: Supports only single master Kubernetes clusters, which in turn does not enable high availability.
+* *Production mode*: Supports multiple master clusters that provide high availability for both the service cluster and workload or user clusters.
 
 
 [discrete]
