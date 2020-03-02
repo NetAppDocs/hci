@@ -1,0 +1,75 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_cg_hci_security.html
+summary: Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account.
+keywords: netapp, hci, on premise, security
+---
+
+= NetApp HCI security
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+To use NetApp HCI and to enable cloud services on NetApp HCI, you'll need to set up some user and Cloud Central accounts.
+
+== Storage cluster administrator account types
+
+There are two types of administrator accounts that can exist in a storage cluster running NetApp Element software: the primary cluster administrator account and a cluster administrator account.
+
+* *Primary cluster administrator account*: This administrator account is created when the cluster is created. This account is the primary administrative account with the highest level of access to the cluster. This account is analogous to a root user in a Linux system. You can change the password for this administrator account.
+* *Cluster administrator account*: You can give a cluster administrator account a limited range of administrative access to perform specific tasks within a cluster. The credentials assigned to each cluster administrator account are used to authenticate API and Element UI requests within the storage system.
+
+NOTE: A local (non-LDAP) cluster administrator account is required to access active nodes in a cluster via the per-node UI. Account credentials are not required to access a node that is not yet part of a cluster.
+
+You can manage cluster administrator accounts by creating, deleting, and editing cluster administrator accounts, changing the cluster administrator password, and configuring LDAP settings to manage system access for users.
+
+For details, see the SolidFire and Element Documentation Center.
+
+https://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[SolidFire and Element Documentation Center^]
+
+
+== User account management
+
+User accounts are used to control access to the storage resources on a NetApp Element software-based network. At least one user account is required before a volume can be created.
+
+When you create a volume, it is assigned to an account. If you have created a virtual volume, the account is the storage container.
+
+Here are some additional considerations:
+
+* The account contains the CHAP authentication required to access the volumes assigned to it.
+* An account can have up to two thousand volumes assigned to it, but a volume can belong to only one account.
+* User accounts can be managed from NetApp Element Management extension point.
+
+For details, see user account information in the SolidFire and Element Documentation Center.
+
+https://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^]
+
+
+== Cloud Central accounts
+
+Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account. A Cloud Central account is  the _workspace_ in which you deploy cloud services on NetApp HCI.
+
+The account is maintained in Cloud Central, so any changes that you make to it are available to other NetApp cloud data services.
+
+A Cloud Central account enables multi-tenancy:
+
+*	A single Cloud Central account can include multiple NetApp HCI systems that serve different business needs. Because users are associated with the Cloud Central account, there’s no need to configure users for each individual NetApp HCI system.
+*	Within each NetApp HCI system, multiple users can deploy and manage NetApp HCI systems in isolated environments called _workspaces_. These workspaces are invisible to other users, unless they are shared.
+
+When you deploy NetApp HCI and enable cloud services, you select the Cloud Central account to associate with the system. Account admins can then modify the settings for this account by managing users, workspaces, and service connectors.
+
+Using Cloud Central, you can set up accounts as individual accounts or as Federated accounts:
+
+* You can make a new account with name, email, and password and then you are logged in. This is the simplest type of account.
+* If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
+
+
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
