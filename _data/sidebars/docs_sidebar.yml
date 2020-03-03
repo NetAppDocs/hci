@@ -10,7 +10,7 @@ entries:
      - title: Product overview
        url: concept_hci_product_overview.html
      - title: Accounts
-       url: hci_concepts_guide\concept_cg_hci_accounts.html
+       url: concept_cg_hci_accounts.html
      - title: Cloud services
        url: hci_concepts_guide\concept_cg_hci_cloud_services.html
      - title: Data protection
