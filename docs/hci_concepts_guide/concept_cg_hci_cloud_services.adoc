@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/concept_cg_hci_cloud_services.html
+permalink: docs/hci_concepts_guide/concept_cg_hci_cloud_services.html
 summary: NetApp HCI supports several cloud services.
 keywords: netapp, hci, on premise, cloud services
 ---
