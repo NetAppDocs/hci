@@ -1,0 +1,50 @@
+---
+sidebar: docs_sidebar
+permalink: docs/hci_concepts_guide/concept_cg_hci_security.html
+summary: NetApp HCI has multiple features designed to enhance security of on-premises cloud deployments.
+keywords: netapp, hci, security
+---
+
+= NetApp HCI security
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+To use NetApp HCI and to enable cloud services on NetApp HCI, you'll need to set up some user and Cloud Central accounts.
+
+== Encryption at Rest for storage nodes
+
+NetApp HCI enables you to encrypt all data stored on the storage cluster.
+
+All drives in storage nodes capable of encryption leverage AES 256-bit encryption at the drive level. Each drive has its own encryption key, which is created when the drive is first initialized. When you enable the encryption feature, a storage-cluster-wide password is created, and chunks of the password are then distributed to all nodes in the cluster. No single node stores the entire password. The password is then used to password-protect all access to the drives. The password is needed to unlock the drive and then not needed unless power is removed from the drive or the drive is locked.*
+
+When you enable Encryption at Rest, performance and efficiency of the cluster is not affected. Additionally, if you remove an encryption-enabled drive or node from the cluster with the Element API or Element UI, Encryption at Rest is disabled on the drives. After you remove the drive, you can securely erase the drive wtih the SecureEraseDrives API method. If you forcibly remove a drive or node from the cluster, the data remains protected by the cluster-wide password and the drive’s individual encryption keys.
+
+== User account management
+
+For details, see user account information in the SolidFire and Element Documentation Center.
+
+https://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^]
+
+== Cloud Central accounts
+
+A Cloud Central account enables multi-tenancy:
+
+*	A single Cloud Central account can include multiple NetApp HCI systems that serve different business needs. Because users are associated with the Cloud Central account, there’s no need to configure users for each individual NetApp HCI system.
+*	Within each NetApp HCI system, multiple users can deploy and manage NetApp HCI systems in isolated environments called _workspaces_. These workspaces are invisible to other users, unless they are shared.
+
+When you deploy NetApp HCI and enable cloud services, you select the Cloud Central account to associate with the system. Account admins can then modify the settings for this account by managing users, workspaces, and service connectors.
+
+Using Cloud Central, you can set up accounts as individual accounts or as Federated accounts:
+
+* You can make a new account with name, email, and password and then you are logged in. This is the simplest type of account.
+* If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
+
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]

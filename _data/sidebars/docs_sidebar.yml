@@ -10,9 +10,9 @@ entries:
      - title: Product overview
        url: concept_hci_product_overview.html
      - title: Accounts
-       url: concept_hci_accounts.html
+       url: concept_cg_hci_accounts.html
      - title: Cloud services
-       url: concept_hci_cloud_services.html
+       url: concept_cg_hci_cloud_services.html
      - title: Data protection
        url: concept_hci_dataprotection.html
      - title: Storage
@@ -20,7 +20,7 @@ entries:
      - title: Licensing
        url: concept_hci_licensing.html
      - title: Security
-       url: concept_hci_security.html
+       url: concept_cg_hci_security.html
      - title: Performance
        url: concept_hci_performance.html
   - title: Get started with Hybrid Cloud Control
