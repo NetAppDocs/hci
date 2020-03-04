@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/hci_concepts_guide/concept_cg_hci_security.html
+permalink: docs/concept_cg_hci_security.html
 summary: NetApp HCI has multiple features designed to enhance security of on-premises cloud deployments.
 keywords: netapp, hci, security
 ---
