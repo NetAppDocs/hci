@@ -38,12 +38,6 @@ A Cloud Central account enables multi-tenancy:
 
 When you deploy NetApp HCI and enable cloud services, you select the Cloud Central account to associate with the system. Account admins can then modify the settings for this account by managing users, workspaces, and service connectors.
 
-Using Cloud Central, you can set up accounts as individual accounts or as Federated accounts:
-
-* You can make a new account with name, email, and password and then you are logged in. This is the simplest type of account.
-* If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
-
-
 [discrete]
 == Find more information
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
