@@ -23,13 +23,13 @@ All drives in storage nodes capable of encryption leverage AES 256-bit encryptio
 
 When you enable Encryption at Rest, performance and efficiency of the cluster is not affected. Additionally, if you remove an encryption-enabled drive or node from the cluster with the Element API or Element UI, Encryption at Rest is disabled on the drives. After you remove the drive, you can securely erase the drive wtih the SecureEraseDrives API method. If you forcibly remove a drive or node from the cluster, the data remains protected by the cluster-wide password and the drive’s individual encryption keys.
 
-== User account management
+== External key management
 
 For details, see user account information in the SolidFire and Element Documentation Center.
 
 https://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^]
 
-== Cloud Central accounts
+== Multi-factor authentication
 
 A Cloud Central account enables multi-tenancy:
 
