@@ -43,12 +43,12 @@ Some cloud services are provided in a preview mode. While in preview, the servic
 === NetApp Kubernetes Service preview and production modes
 
 .Load balancing
-* *Preview mode*: Does not provide load balancing, which impacts Helm charts. Many Kubernetes applications and Helm charts require load balancing for availability and scalability.
-* *Production mode*: Provides load balancing for Kubernetes pods. The load balancing provides basic high availability and scalability and enables application management and Helm chart features.
+* *Preview mode*: Does not provide load balancing, which impacts Helm charts. Many Kubernetes applications and Helm charts require load balancing for resiliency and scalability.
+* *Production mode*: Provides load balancing for Kubernetes pods. The load balancing provides basic resiliency and scalability and enables application management and Helm chart features.
 
 .Multiple master Kubernetes cluster support
-* *Preview mode*: Supports only single master Kubernetes clusters, which in turn does not enable high availability.
-* *Production mode*: Supports multiple master clusters that provide high availability for both the service cluster and workload or user clusters.
+* *Preview mode*: Supports only single master Kubernetes clusters, which in turn does not enable resiliency.
+* *Production mode*: Supports multiple master clusters that provide resiliency for both the service cluster and user clusters.
 
 
 [discrete]

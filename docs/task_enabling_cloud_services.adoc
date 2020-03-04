@@ -18,8 +18,7 @@ Enabling NetApp cloud services adds your local NetApp HCI system as a region to 
 Enabling cloud services is performed using the NetApp Hybrid Cloud Control.
 
 .About this task
-This lets you use NetApp Kubernetes Service and Cloud Volumes on NetApp HCI on your on-premises private cloud. With the NetApp Kubernetes Service, you can deploy and manage
-Kubernetes clusters.
+This lets you use NetApp Kubernetes Service and Cloud Volumes on NetApp HCI on your on-premises private cloud. With the NetApp Kubernetes Service, you can deploy and manage Kubernetes clusters.
 
 A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 
@@ -50,7 +49,7 @@ SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a d
 
 . On the Services page, select the services that you want to enable.
 * *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with a NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as a VM on a NetApp HCI compute node.
-* *Cloud Volumes*: To install Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds.
+* *Cloud Volumes*: To install Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds. _Preview mode_
 * *Cloud Insights*: This option will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
 
 . Click *Continue*.
@@ -93,7 +92,7 @@ Because the management node is connected to the vCenter, the vCenter used for de
 . On the vCenter page, enter or select the following:
 .. *Datacenter*:  Select a datacenter from those configured on the NetApp HCI system.
 .. *Cluster*: Select a cluster from those configured on the NetApp HCI system.
-.. *Switch*: Select a switch. Only switches that meet the redundant management, vMotion, and storage uplinks are displayed.
+.. *Switch*: Select a virtual vSphere distributed switch (VDS). Only switches that meet the redundant management, vMotion, and storage uplinks are displayed. 
 +
 The vCenter instance and admin user connected to it are displayed.
 +
