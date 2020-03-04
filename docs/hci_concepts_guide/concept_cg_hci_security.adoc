@@ -1,8 +1,8 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/hci_concepts_guide/concept_cg_hci_security.html
-summary: Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account.
-keywords: netapp, hci, on premise, security
+summary: NetApp HCI has multiple features designed to enhance security of on-premises cloud deployments.
+keywords: netapp, hci, security
 ---
 
 = NetApp HCI security
@@ -15,44 +15,21 @@ keywords: netapp, hci, on premise, security
 [.lead]
 To use NetApp HCI and to enable cloud services on NetApp HCI, you'll need to set up some user and Cloud Central accounts.
 
-== Storage cluster administrator account types
+== Encryption at Rest for storage nodes
 
-There are two types of administrator accounts that can exist in a storage cluster running NetApp Element software: the primary cluster administrator account and a cluster administrator account.
+NetApp HCI enables you to encrypt all data stored on the storage cluster.
 
-* *Primary cluster administrator account*: This administrator account is created when the cluster is created. This account is the primary administrative account with the highest level of access to the cluster. This account is analogous to a root user in a Linux system. You can change the password for this administrator account.
-* *Cluster administrator account*: You can give a cluster administrator account a limited range of administrative access to perform specific tasks within a cluster. The credentials assigned to each cluster administrator account are used to authenticate API and Element UI requests within the storage system.
+All drives in storage nodes capable of encryption leverage AES 256-bit encryption at the drive level. Each drive has its own encryption key, which is created when the drive is first initialized. When you enable the encryption feature, a storage-cluster-wide password is created, and chunks of the password are then distributed to all nodes in the cluster. No single node stores the entire password. The password is then used to password-protect all access to the drives. The password is needed to unlock the drive and then not needed unless power is removed from the drive or the drive is locked.*
 
-NOTE: A local (non-LDAP) cluster administrator account is required to access active nodes in a cluster via the per-node UI. Account credentials are not required to access a node that is not yet part of a cluster.
-
-You can manage cluster administrator accounts by creating, deleting, and editing cluster administrator accounts, changing the cluster administrator password, and configuring LDAP settings to manage system access for users.
-
-For details, see the SolidFire and Element Documentation Center.
-
-https://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[SolidFire and Element Documentation Center^]
-
+When you enable Encryption at Rest, performance and efficiency of the cluster is not affected. Additionally, if you remove an encryption-enabled drive or node from the cluster with the Element API or Element UI, Encryption at Rest is disabled on the drives. After you remove the drive, you can securely erase the drive wtih the SecureEraseDrives API method. If you forcibly remove a drive or node from the cluster, the data remains protected by the cluster-wide password and the drive’s individual encryption keys.
 
 == User account management
-
-User accounts are used to control access to the storage resources on a NetApp Element software-based network. At least one user account is required before a volume can be created.
-
-When you create a volume, it is assigned to an account. If you have created a virtual volume, the account is the storage container.
-
-Here are some additional considerations:
-
-* The account contains the CHAP authentication required to access the volumes assigned to it.
-* An account can have up to two thousand volumes assigned to it, but a volume can belong to only one account.
-* User accounts can be managed from NetApp Element Management extension point.
 
 For details, see user account information in the SolidFire and Element Documentation Center.
 
 https://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^]
 
-
 == Cloud Central accounts
-
-Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account. A Cloud Central account is  the _workspace_ in which you deploy cloud services on NetApp HCI.
-
-The account is maintained in Cloud Central, so any changes that you make to it are available to other NetApp cloud data services.
 
 A Cloud Central account enables multi-tenancy:
 
@@ -65,8 +42,6 @@ Using Cloud Central, you can set up accounts as individual accounts or as Federa
 
 * You can make a new account with name, email, and password and then you are logged in. This is the simplest type of account.
 * If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
-
-
 
 
 [discrete]
