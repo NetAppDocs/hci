@@ -16,9 +16,9 @@ keywords: netapp, hci, hcc, hybrid cloud control, on premise, cloud services
 Before you use NetApp HCI Hybrid Cloud Control (HCC), you should have successfully deployed NetApp HCI.​
 
 == System requirements
-* A NetApp HCI 1.6 or later system deployed by the NetApp Deployment Engine (NDE)
-* Upgraded NetApp HCI management services to version 2.1.326 or later. See management services information in the http://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-ug/home.html[NetApp Element User Guide^].
-* NetApp HCI management node 11.3 or later
+* A NetApp HCI 1.6 or later system deployed using the NetApp Deployment Engine
+* NetApp HCI management services version 2.1.326 or later (See management services information in the http://docs.netapp.com/sfe-117/topic/com.netapp.doc.sfe-ug/home.html[NetApp Element User Guide^].)
+* A NetApp HCI management node at version 11.3 or later
 
 == Browser requirements
 *	Any modern browser
