@@ -18,7 +18,7 @@ Enabling NetApp cloud services adds your local NetApp HCI system as a region to 
 Enabling cloud services is performed using the NetApp Hybrid Cloud Control.
 
 .About this task
-This lets you use NetApp Kubernetes Service and Cloud Volumes on NetApp HCI on your on-premises private cloud. With the NetApp Kubernetes Service, you can deploy and manage Kubernetes clusters.
+This lets you use NetApp Kubernetes Service on NetApp HCI on your on-premises private cloud. With the NetApp Kubernetes Service, you can deploy and manage Kubernetes clusters.
 
 A NetApp Hybrid Cloud Control wizard takes you through the following tasks:
 
@@ -49,7 +49,6 @@ SERVICES and INFORMATION ARE PROVIDED as a TECHNOLOGY PREVIEW. You might see a d
 
 . On the Services page, select the services that you want to enable.
 * *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service, a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with a NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as a VM on a NetApp HCI compute node.
-* *Cloud Volumes*: To install Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds. _Preview mode_
 * *Cloud Insights*: This option will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
 
 . Click *Continue*.
@@ -92,7 +91,7 @@ Because the management node is connected to the vCenter, the vCenter used for de
 . On the vCenter page, enter or select the following:
 .. *Datacenter*:  Select a datacenter from those configured on the NetApp HCI system.
 .. *Cluster*: Select a cluster from those configured on the NetApp HCI system.
-.. *Switch*: Select a virtual vSphere distributed switch (VDS). Only switches that meet the redundant management, vMotion, and storage uplinks are displayed. 
+.. *Switch*: Select a virtual vSphere distributed switch (VDS). Only switches that meet the redundant management, vMotion, and storage uplinks are displayed. The switch must be a distributed switch and have two uplinks on the switch.
 +
 The vCenter instance and admin user connected to it are displayed.
 +
@@ -112,16 +111,16 @@ image::hcc_enablecloudservices_vcenter.png[Enable Cloud Services vCenter Resourc
 * *NTP Server*: Enter the IP address or fully qualified domain name for the primary Network Time Protocol (NTP) server for NKS. Required only for the management and workload networks.
 * *DNS Server*: Enter the primary DNS server IP address used for cluster communication for NKS. Required only for the management and workload networks.
 * *DNS Search Domain*: Enter any additional domain name text for NKS. Required only for the management and workload networks.
-* *Port Group*: The wizard provides three recommended NKS port groups and displays them in each section.
-* *VLAN ID*: The VLAN must be in one of the port groups that you selected. The VLAN can be the same or different for the management and workload networks; however, the VLAN must be different for the data network.
+* *Port Group*: The wizard provides three recommended NKS port groups and displays them in each section. You should not select iSCSI-A or iSCSI-B as a port group for the data network.
++
+You can create your own port group providing it meets the requirements. See link:reference_requirements_beforeyoubegin.html[System requirements before you begin.]
+
+* *VLAN ID*: The VLAN must be in one of the port groups that you selected. The VLAN can be the same or different for the management and workload networks; however, the VLAN must be different for the data network. The VLAN must exist. Do not enter a VLAN ID of "0."
 * *Subnet*: Enter subnet definitions in CIDR format for each type of network traffic in each network, for example, 192.168.1.0/24
 * *Default Gateway*: Enter the IP address of the default gateway for each type of network traffic in each section. Required only for the management and workload networks.
-* *IP Addresses*: Enter starting and ending IP addresses. You must select a block of continuous IP addresses and they must be in the subnet. For the minimum IP requirements, see link:reference_requirements_beforeyoubegin.html[System requirements before you begin.]
+* *IP Addresses*: Enter starting and ending IP addresses. In the management network, ending IPs automatically appear. The starting IP address for the data network appears based on other values you enter; however, you can change it. You must select a block of continuous IP addresses and they must be in the subnet. For the minimum IP requirements, see link:reference_requirements_beforeyoubegin.html[System requirements before you begin.]
 
-. If you enabled Cloud Volumes on the Services page, the following additional fields appear:
-* *Cloud Volumes Management Network*: Enter the IP addresses for managing the Cloud Volumes management VM and its deployed nodes.
-* *Cloud Volumes Cluster Network*: Enter network information used by the nodes in the Cloud Volumes cluster to communicate with each other.
-* *Cloud Volumes Storage Network*: Enter network information to serve data from Cloud Volumes on NetApp HCI. This will become the network from which you access provisioned cloud volumes.
+
 +
 image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control Networking page]
 
@@ -132,7 +131,7 @@ image:hcc_enablecloudservices_networking_with_CV.png[NetApp Hybrid Cloud Control
 NetApp HCI cloud services are enabled and the NetApp Hybrid Cloud Control opening page reappears.
 
 Click the cloud icon to see the number of services enabled.
-The process can take up to 30 minutes for NKS and 60 minutes for NKS along with Cloud Volumes on NetApp HCI.
+The process can take up to 30 minutes for NKS.
 
 NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which is a Kubernetes cluster that consists of four VMs (one Kubernetes master node and three Kubernetes worker compute nodes).
 
@@ -140,7 +139,6 @@ NetApp HCI uses the NetApp Kubernetes Service to create a service cluster, which
 == After you finish
 Next, continue with link:task_NKS_create_cluster.html[Create a Kubernetes clusters] on your NetApp HCI system by using the NetApp Kubernetes Service.
 
-Or, to create cloud volumes, create custom data management workflows, and manage data across volumes, use NetApp Fabric Orchestrator. See link:task_cv_managing.html[Manage data in NetApp Cloud Volumes].
 
 
 [discrete]

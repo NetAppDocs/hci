@@ -22,7 +22,6 @@ NetApp HCI​ installations connect to, register with, and become a deployable r
 *	Interact with NetApp HCI as you would with any other supported cloud provider.
 *	Port the apps and data across a hybrid cloud architecture regardless of cloud location without compromising service-level agreements.
 *	Spin up cloud-native applications yourself. See link:task_NKS_adding_applications.html[Adding applications to your Kubernetes cluster] using the NetApp Kubernetes Service.
-* Create cloud volumes on the Kubernetes cluster by using the NetApp Fabric Orchestrator. See link:task_nks_overview.html[Managing Cloud Volumes on NetApp HCI overview] information.
 
 
 

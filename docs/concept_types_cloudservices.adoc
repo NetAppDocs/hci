@@ -18,23 +18,16 @@ The following NetApp cloud services are supported on NetApp HCI.
 * *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service (NKS), a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as VMs on a NetApp HCI compute node or nodes.
 +
 See link:task_nks_overview.html[Managing Kubernetes clusters on NetApp HCI overview] information.
-* *NetApp Cloud Volumes*: To manage Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds. Cloud Volumes on NetApp HCI can be deployed only on a vCenter with a single datacenter. _Available in Preview mode_.
-+
-See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
 * *NetApp Cloud Insights*: This service will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
-
 
 
 *NetApp Fabric Orchestrator* provides a centralized storage and data management control plane for fabric-wide, multi-cloud visibility, monitoring, policies, administration and workflow orchestration for NetApp storage systems on-premises and in the cloud.
 Using NetApp Fabric Orchestrator, you can discover, manage, and govern your storage assets and data estate, anywhere. Use Fabric Orchestrator to create and manage Cloud Volumes on NetApp HCI.
 
 
-See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
-
 == Notice of functional preview
 
-Cloud Volumes on NetApp HCI is presently available as a functional preview. While in preview, the services are only for non-production environments and noncommercial use. By participating in the preview, participants agree to be bound by the cloud services link:https://www.netapp.com/us/media/cloud-data-services-terms.pdf[terms of service].
-
+Some cloud services might be available as a functional preview. While in preview, the services are only for non-production environments and noncommercial use. By participating in the preview, participants agree to be bound by the cloud services link:https://www.netapp.com/us/media/cloud-data-services-terms.pdf[terms of service].
 
 == Differences between preview and production modes
 Some cloud services are provided in a preview mode. While in preview, the services are only for non-production environments and noncommercial use.

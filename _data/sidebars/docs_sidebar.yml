@@ -59,16 +59,6 @@ entries:
             url: /task_nks_creating_projects.html
           - title: Add applications to your Kubernetes clusters
             url: /task_NKS_adding_applications.html
-      - title: Manage data in Cloud Volumes with NetApp Fabric Orchestrator
-        entries:
-          - title: Manage data in NetApp Cloud Volumes overview
-            url: /task_cv_managing.html
-          - title: What happens when you enable Cloud Volumes on NetApp HCI?
-            url: /concept_behind_the_scenes_fo.html
-          - title: Access NetApp Fabric Orchestrator
-            url: /task_fo_accessing.html
-          - title: Create cloud volumes with NetApp Fabric Orchestrator
-            url: /task_dfo_creating_cloud_volumes.html
   - title: Monitor your NetApp HCI system
     entries:
       - title: View resources on the HCC Dashboard

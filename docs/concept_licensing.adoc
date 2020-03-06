@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/concept_licensing.html
-summary: Before you begin using Cloud Volumes on NetApp HCI, it might be helpful to understand licensing.
+summary: Before you begin using cloud services on NetApp HCI, it might be helpful to understand licensing.
 keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 ---
 
@@ -13,15 +13,8 @@ keywords: netapp, hci, kubernetes, on premise, cloud services, cluster
 :imagesdir: ../media/
 
 [.lead]
-Before you begin using Cloud Volumes on NetApp HCI, it might be helpful to understand licensing.
-The Cloud Services wizard provides a link to obtain the licenses; however, you will need your software license serial numbers. You can get the serial numbers from the NetApp Support Site at mysupport.netapp.com.
+Before you begin using cloud services on NetApp HCI, it might be helpful to understand licensing.
 
-
-
-== Licensing requirements for Cloud Volumes on NetApp HCI
-Cloud Volumes on NetApp HCI does not require any licenses. To view and manage Cloud Volumes on NetApp HCI, you use NetApp Fabric Orchestrator. 
-
-NOTE: Fabric Orchestrator is in Preview mode. When you enable Cloud Volumes on NetApp HCI, you automatically have access to the Preview environment.
 
 == Licensing requirements for NetApp Kubernetes Service
 NetApp Kubernetes Service does not require an additional license.
