@@ -1,0 +1,42 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_element_determineversion.html
+summary: As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software.
+keywords: netapp, hci, on premise, cluster, element
+---
+
+= Determine the Element version on the management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Before you begin the upgrade, you should determine which Element version you have on your management node.
+
+.What you'll need
+
+* You are running management node 11.0, 11.1 or later.
+* You have upgraded your management services to at least version 2.1.326.
++
+NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
+
+
+.Steps
+
+. Log in to your management node.
+. View the Element version number in the login banner.
++
+----
+login as: <username>
+SolidFire Element 11.0.0.781
+----
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -50,9 +50,11 @@ Several IPs are required:
 ** 6 service cluster machines (3 master nodes and 3 worker nodes)
 ** 1 virtual IP shared between the load balancer machines. There are two load balancers each having its own assigned IP.
 
+
 *	Workload network IP requirements (Total minimum of 5 IP addresses with a recommendation of 256 to meet potential workload increase)
 ** 1 IP for each worker node (default is 2 worker nodes)
 ** Pool of IPs for load balancer (depending upon your deployment intent and defined at installation time)
+
 
 *	Data (iSCSI Storage) network (Total of 111 IP addresses per workload cluster, default is /16 or 65534 IPs)
 ** 1 IP for each master node (default is 1 master node)

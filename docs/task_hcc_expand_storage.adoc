@@ -1,0 +1,69 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_expand_storage.html
+summary: After you finish NetApp HCI deployment, you can expand and configure NetApp HCI storage resources by using NetApp Hybrid Cloud Control.
+keywords: netapp, hci, on premise, expand, storage, cluster
+---
+
+= Expand NetApp HCI storage resources
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you finish NetApp HCI deployment, you can expand and configure NetApp HCI storage resources by using NetApp Hybrid Cloud Control.
+
+*Before you begin*
+
+* Ensure that you have free and unused IPv4 addresses on the same network segment as existing nodes (each new node must be installed on the same network as existing nodes of its type).
+* Ensure that you have one of the following types of SolidFire storage cluster accounts:
+** The native administrator account that was created during initial deployment
+** A custom user account with Cluster Admin, Drives, Volumes, and Nodes permissions
+* Ensure that you have performed the following actions with each new node:
+** Installed the new node in the NetApp HCI chassis by following the installation instructions available in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
+** Cabled and powered on the new node
+* Ensure that you have the management IPv4 address of an already installed storage node. You can find the IP address in the *NetApp Element Management* > *Cluster* > *Nodes* tab of the NetApp Element Plug-in for vCenter Server.
+* Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.
+
+TIP: When you are expanding storage resources, storage capacity should be split evenly across all chassis for the best reliability.
+
+
+*Steps*
+
+. Open a web browser and browse to the IP address of the management node. For example:
++
+https://_management_node_IP_
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. Click *Expand* at the top right corner of the interface.
++
+The browser opens the NetApp Deployment Engine.
+. Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
+. On the *Welcome* page, click *No* and click *Continue*.
+. On the *Available Inventory* page, select the storage nodes you want to add and click *Continue*.
+. On the *Network Settings* page, some of the network information has been detected from the initial deployment. Each new storage node is listed by serial number, and you need to assign the new network information to it. For each new storage node, complete the following steps:
+.. *Hostname*: If NetApp HCI detected a naming prefix, copy it from the Detected Naming Prefix field, and insert it as the prefix for the new unique hostname you add in the Hostname field.
+.. *Management Address*: Enter a management IP address for the new storage node that is within the management network subnet.
+.. *Storage (iSCSI) IP Address*: Enter an iSCSI IP address for the new storage node that is within the iSCSI network subnet.
+.. Click *Continue*.
++
+NOTE: NetApp HCI might take some time to validate the IP addresses you enter. The Continue button becomes available when IP address validation completes.
+
+. On the *Review* page in the Network Settings section, new nodes are shown in the bold text. To make changes in any section, do the following:
+.. Click *Edit* for that section.
+.. After you finish, click *Continue* on any subsequent pages to return to the Review page.
+. *Optional*: If you do not want to send cluster statistics and support information to NetApp hosted Active IQ servers, clear the final checkbox.
++
+This disables real-time health and diagnostic monitoring for NetApp HCI. Disabling this feature removes the ability for NetApp to proactively support and monitor NetApp HCI to detect and resolve issues before production is impacted.
+. Click *Add Nodes*.
++
+You can monitor the progress while NetApp HCI adds and configures the resources.
+. *Optional*: Verify that any new storage nodes are visible in the VMware vSphere Web Client.
+
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

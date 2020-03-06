@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/index.html
-summary: NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider--all in a self-service mode without IT involvement.
-keywords: netapp, hci, on premise, kubernetes, cloud services
+summary: NetApp HCI provides both storage and compute resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software.
+keywords: netapp, hci, on premise, hybrid cloud control, hcc, kubernetes, cloud services
 ---
 
-= NetApp HCI Cloud Services
+= NetApp HCI Management and Cloud Services
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,26 +13,26 @@ keywords: netapp, hci, on premise, kubernetes, cloud services
 :imagesdir: ../media/
 
 [.lead]
-With NetApp HCI, a hybrid cloud infrastructure that serves as a deployment engine supporting NetApp Kubernetes Service, you can set up a cloud native development pipeline quickly and easily.
+NetApp HCI provides both storage and compute resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software.
 
-THIS DOCUMENTATION IS PROVIDED AS A TECHNOLOGY PREVIEW.
+You can upgrade, expand, and monitor your system and enable cloud services with the NetApp Hybrid Cloud Control interface and manage NetApp HCI resources with a vCenter plug-in.
 
-image:cloud_all_services_diagram2.2.png[Cloud services on NetApp HCI]
+== Performing operations with NetApp Hybrid Cloud Control
+One of the components of NetApp HCI is the NetApp Hybrid Cloud Control interface, which enables you to:
 
+* link:concept_overview.html[Enable cloud services on NetApp HCI]
+* link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
+* link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
+* link:concept_hcc_expandoverview.html[Expand your NetApp HCI storage or compute resources]
 
+== Performing operations with NetApp Element Plug-in for vCenter Server
+After deploying NetApp HCI, you manage storage and compute resources from the VMware vSphere Web Client:
 
-
-To use cloud services on NetApp HCI, do the following:
-
-
-* link:reference_requirements_beforeyoubegin.html[Review prerequisite information].
-* link:task_deploying_overview.html[Enable cloud services], such as the NetApp Kubernetes Service and Cloud Volumes on NetApp HCI, using the NetApp Hybrid Cloud Control
-* link:task_nks_create_cluster.html[Create and manage Kubernetes clusters] using the NetApp Kubernetes Service on NetApp Cloud Central.
-* link:task_dfo_creating_cloud_volumes.html[Create and manage Cloud Volumes] on NetApp HCI using NetApp Fabric Orchestrator on NetApp Cloud Central.
+* You manage _storage_ resources, including, datastores, volumes, Quality of Service, storage cluster components, and data protection by using the NetApp Element Plug-in for vCenter Server (also referred to as the vCenter Plug-in or VCP).
+* You also manage _compute_ nodes in vSphere. They appear as ESXi hosts.
 
 [discrete]
 == Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * link:../../index.html[NetApp Cloud Services and Solutions^]
 * https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
