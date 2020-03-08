@@ -14,7 +14,8 @@ keywords: netapp, hci, element, vcp, vcenter plugin, storage, management service
 :keywords: hci, release notes, vcp, element, management services
 
 [.lead]
-You can find links to release notes for various components that are part of the NetApp HCI environment.
+You can find links to the release notes for various components of the NetApp HCI environment. You can also find the links to release notes for earlier versions of NetApp HCI.
+
 NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.8 Release Notes]
