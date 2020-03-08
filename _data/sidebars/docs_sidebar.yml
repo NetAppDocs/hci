@@ -3,8 +3,12 @@ entries:
     url: ../../../../index.html
   - title: NetApp HCI Management and Cloud Services
     url: /index.html
-  - title: What's new in NetApp HCI
-    url: /rn_whatsnew.html
+  - title: Release Notes
+    entries:
+      - title: What's new in NetApp HCI
+        url: /rn_whatsnew.html
+      - title: Links to release notes
+        url: /rn_relatedrn.html
   - title: Get started with Hybrid Cloud Control
     entries:
       - title: Prerequisites to using Hybrid Cloud Control
