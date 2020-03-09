@@ -25,12 +25,15 @@ This update includes the following new features and enhancements.
 === Feature B
 (blurb)
 
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.9 Release Notes] [PLACEHOLDER; update link]
 
 == NetApp HCI 1.8
 This update includes the following new features and enhancements.
 
 === NetApp HCI and NetApp Kubernetes Service changes from Preview to Production
 (blurb)
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.8 Release Notes] [PLACEHOLDER; update link]
 
 === Self licensing for Cloud Volumes on NetApp HCI
 (Blurb)
