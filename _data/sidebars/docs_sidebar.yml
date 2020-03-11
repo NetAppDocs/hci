@@ -1,22 +1,40 @@
 entries:
-  - title: NetApp HCI Management, Cloud Services, and Solutions
+  - title: NetApp HCI Documentation
     url: ../../../../index.html
   - title: NetApp HCI Management and Cloud Services
     url: /index.html
   - title: What's new in NetApp HCI
     url: /rn_whatsnew.html
+  - title: Concepts
+    entries:
+     - title: Product overview
+       url: /concept_hci_product_overview.html
+     - title: Accounts
+       url: /concept_cg_hci_accounts.html
+     - title: Cloud services
+       url: /concept_cg_hci_cloud_services.html
+     - title: Data protection
+       url: /concept_hci_dataprotection.html
+     - title: Storage
+       url: /concept_hci_storage.html
+     - title: Licensing
+       url: /concept_hci_licensing.html
+     - title: Security
+       url: /concept_cg_hci_security.html
+     - title: Performance
+       url: /concept_hci_performance.html
   - title: Get started with Hybrid Cloud Control
     entries:
       - title: Prerequisites to using Hybrid Cloud Control
         url: /reference_hcc_prerequisites.html
       - title: Access Hybrid Cloud Control
         url: /task_hcc_access.html
-  - title: Enable NetApp HCI cloud services
+  - title: Enable cloud services on NetApp HCI
     entries:
+      - title: Cloud services on NetApp HCI overview
+        url: /concept_overview.html
       - title: Concepts
         entries:
-          - title: Cloud services on NetApp HCI overview
-            url: /concept_overview.html
           - title: Types of cloud services on NetApp HCI
             url: /concept_types_cloudservices.html
           - title: Architecture overview for cloud services on NetApp HCI
@@ -41,12 +59,10 @@ entries:
             url: /concept_licensing.html
           - title: Get a NetApp Kubernetes Service API token
             url: /task_getting_a_netapp_kubernetes_service_api_token.html
-      - title: Enable cloud services on NetApp HCI
-        entries:
-          - title: Deploy cloud services on NetApp HCI overview
-            url: /task_deploying_overview.html
-          - title: Enable cloud services using NetApp Hybrid Cloud Control
-            url: /task_enabling_cloud_services.html
+      - title: Cloud services deployment overview
+        url: /task_deploying_overview.html
+      - title: Enable cloud services using NetApp Hybrid Cloud Control
+        url: /task_enabling_cloud_services.html
       - title: Enable Kubernetes clusters on NetApp HCI
         entries:
           - title: Manage Kubernetes clusters on NetApp HCI overview
@@ -63,17 +79,31 @@ entries:
     entries:
       - title: View resources on the HCC Dashboard
         url: /task_hcc_dashboard.html
-      - title: Respond to alerts on the HCC Dashboard
-        url: /task_hcc_alerts_respond.html
-      - title: View your system's inventory in HCC
-        url: /task_hcc_inventory.html
-      - title: Identify risks, performance, and updates with Active IQ
+      - title: Monitor performance, capacity, and cluster health with Active IQ
         url: /task_hcc_activeiq.html
   - title: Upgrade your NetApp HCI system
     entries:
       - title: Upgrade overview
-        url: /concept_upgrade_overview.html
+        url: /concept_hci_upgrade_overview.html
+      - title: Upgrade the entire NetApp HCI installation
+        entries:
+          - title: Upgrade overview of the entire NetApp HCI installation
+            url: /task_hcc_upgrade_all.html
+          - title: Determine the Element version
+            url: /task_hcc_upgrade_element_determineversion.html
+          - title: Use HealthTools to run pre-upgrade health checks
+            url: /task_hcc_upgrade_element_healthtools.html
+          - title: Upgrade Element software
+            url: /task_hcc_upgrade_element_software.html
+      - title: Upgrade components of your NetApp HCI system
+        entries:
   - title: Expand your NetApp HCI system
     entries:
      - title: Expand overview
-       url: /concept_expand_overview.html
+       url: /concept_hcc_expandoverview.html
+     - title: Expand NetApp HCI storage resources
+       url: /task_hcc_expand_storage.html
+     - title: Expand NetApp HCI compute resources
+       url: /task_hcc_expand_compute.html
+     - title: Expand NetApp storage and compute resources
+       url: /task_hcc_expand_compute_and_storage.html

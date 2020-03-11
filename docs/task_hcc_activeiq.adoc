@@ -1,11 +1,12 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/hcc_activeiq.html
-summary: You can view your system's risks, performance, and updates in Active IQ.
-keywords: netapp, hci, hcc, on premise, active iq, hybrid cloud control
+permalink: docs/task_hcc_activeiq.html
+summary: You can monitor your cluster health with SolidFire Active IQ.
+keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 ---
 
-= Identify risks, performance, and updates with Active IQ
+= Monitor performance, capacity, and cluster health with SolidFire Active IQ
+
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,26 +14,46 @@ keywords: netapp, hci, hcc, on premise, active iq, hybrid cloud control
 :imagesdir: ../media/
 
 [.lead]
-From the NetApp HCI Hybrid Cloud Control you can identify risks, performance, and updates by using NetApp Active IQ.
+By using the SolidFire Active IQ, you can monitor the risks, performance, and capacity of your clusters. You can access SolidFire Active IQ from the NetApp Hybrid Control Dashboard.
 
-== Steps
+*Before you begin*
 
-. Go to the https://fabric.netapp.io[NetApp Fabric Orchestrator^] Login page.
-. Enter your Cloud Central login credentials and click *Login*.
+* You must have a NetApp Support account to take advantage of this service.
+* You must have authorization to use management node REST APIs.
 +
-TIP: If you do not see any systems listed, make sure that the NetApp HCI administrator is added to your NetApp Cloud Central account.
+Read how to enable Active IQ in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
+* You have deployed a management node running version 12.0 or later.
+* Your cluster version is running NetApp Element software 12.0 or later.
+* You have Internet access. The Active IQ collector service cannot be used from dark sites.
 
-. If you do not have a Cloud Central account, on the Cloud Central Login page, click *Sign Up*.
 
+*About this task*
+You can obtain continually updated historical views of cluster-wide statistics. You can set up notifications to alert you about specified events, thresholds, or metrics on a cluster so that they can be addressed quickly.
+
+By default, NetApp HCI sends performance and alert statistics to the NetApp SolidFire Active IQ service. As part of your normal support contract, NetApp Support monitors this data and alerts you to any performance bottlenecks or potential system issues.
+
+*Steps*
+
+. Open a web browser and browse to the IP address of the management node. For example:
 +
-Using Cloud Central, you can set up accounts either as individual accounts or as Federated accounts:
+https://_management_node_IP_
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. From the Dashboard, click the menu on the upper right.
+. Select *Active IQ*.
++
+The SolidFire Active IQ Dashboard appears at link:https://activeiq.solidfire.com [SolidFire Active IQ address].
+. To learn about SolidFire Active IQ, from the Dashboard, click the menu icon on the upper right and click *Documentation*.
+. From the SolidFire Active IQ interface, verify that the NetApp HCI compute and storage nodes are reporting telemetry correctly to Active IQ:
+.. If you have more than one NetApp HCI installation, click *Select a Cluster* and choose the cluster from the list.
+.. In the left navigation pane, click *Nodes*.
+.. Click *Storage* or *Compute* to see a list of all storage or compute nodes that are properly reporting data from this installation to SolidFire Active IQ.
+. If a node or nodes are missing from the list, contact NetApp Support. 
 
-.. You can make a new account with name, email, and password and then you will be logged in. This is the simplest type of account.
-.. If you are part of a Cloud Central Federated organization, you enter your email and are then routed to the organization login.
-. From other Cloud Central products, select *Products* > *NetApp Fabric Orchestrator*.
+TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
 
 
 [discrete]
 == Find more information
-* https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

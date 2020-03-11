@@ -1,0 +1,115 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_cg_hci_cloud_services.html
+summary: NetApp HCI supports several cloud services.
+keywords: netapp, hci, on premise, cloud services
+---
+
+= Cloud services concepts
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You might benefit by reviewing the types of cloud services on NetApp HCI, cluster types in cloud services on NetApp HCI, and NetApp Kubernetes Service terminology,
+
+
+== Types of cloud services on NetApp HCI
+The following NetApp cloud services are supported on NetApp HCI.
+
+* *NetApp Kubernetes Service*: You must use NetApp Kubernetes Service (NKS), a SaaS platform that enables you to deploy a Kubernetes cluster in the cloud with the major cloud providers and also with NetApp private cloud. This is required to enable cloud services on NetApp HCI. This service is installed as VMs on a NetApp HCI compute node or nodes. _Available in Preview mode_.
++
+See link:task_nks_overview.html[Managing Kubernetes clusters on NetApp HCI overview] information.
+* *NetApp Cloud Volumes*: To manage Cloud Volumes on NetApp HCI, select this service. This service offers an on-demand shared file systems feature on your premises. The Cloud Volumes option will enable Data Fabric replication to and from public clouds. Cloud Volumes on NetApp HCI can be deployed only on a vCenter with a single datacenter. _Available in Preview mode_.
++
+See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
+* *NetApp Cloud Insights*: This service will enable you to monitor cloud services on NetApp HCI. _Coming soon_.
+
+*NetApp Fabric Orchestrator* provides a centralized storage and data management control plane for fabric-wide, multi-cloud visibility, monitoring, policies, administration and workflow orchestration for NetApp storage systems on-premises and in the cloud.
+Using NetApp Fabric Orchestrator, you can discover, manage, and govern your storage assets and data estate, anywhere. Use Fabric Orchestrator to create and manage Cloud Volumes on NetApp HCI.
+
+
+Using Fabric Orchestrator, you can enable these services:
+
+
+* *Cloud Volumes on NetApp HCI*: NetApp HCI provides the platform for the NetApp Kubernetes Service and Cloud Volumes. This documentation provides information only on this service.
+* *Cloud Volumes Service for On Premises*: This option is a fully managed private cloud storage service that is available for customers within their own on-premises data centers. NetApp configures and manages your infrastructure so you don‘t have to. This alternate storage consumption model offers high-performance storage for customers and partners wanting a cloud-like OPEX billing model managed by our NetApp cloud operations experts.
+
+See link:task_cv_managing.html[Managing data in Cloud Volumes on NetApp HCI] information.
+
+== Notice of functional preview
+
+NetApp Kubernetes Service and Cloud Volumes on NetApp HCI are presently available as a functional preview. While in preview, the services are only for non-production environments and noncommercial use. By participating in the preview, participants agree to be bound by the cloud services link:https://www.netapp.com/us/media/cloud-data-services-terms.pdf[terms of service].
+
+== Architectural overview for cloud services on NetApp HCI
+NetApp HCI along with NetApp Kubernetes Service enables you to deploy your applications as you would with a public cloud provider—all in a self-service mode. This enables you to treat your datacenter as a deployable region of your multi-cloud.
+
+image:architecture_overview.png[Architecture image for NetApp HCI]
+
+
+The following components are used for cloud services on NetApp HCI:
+
+*	*NetApp Deployment Engine*: Deploys NetApp HCI.
+*	*NetApp HCI management node*: Establishes a connection to NetApp Cloud Central and authenticates and registers the NetApp HCI installation to a Cloud Central account. You can use the management node also to update management service bundles.
+* *NetApp Hybrid Cloud Control*: Deploys and configures NetApp HCI Element and enables cloud services on NetApp HCI.
+*	*NetApp Kubernetes Service agent*: Maintains a communication tunnel between NKS and NetApp HCI, creates user clusters, and maintains deployed cloud services.
+
+
+== Cluster types in cloud services on NetApp HCI
+You'll encounter different types of clusters when using cloud services on NetApp HCI.
+
+* *Service cluster*: Connected to NetApp Kubernetes Service (NKS), a service cluster acts as an orchestrator to deploy services and update itself. The service cluster is a set of compute nodes and storage resources that form a Kubernetes environment. Each cluster has at least one master node, which is responsible for overall management of the cluster, and three worker nodes, on which containers are scheduled to execute. Service clusters are for internal NKS use and are not available for running your applications. Service clusters are not listed in the NKS UI. Service clusters should not be modified or deleted.
+
+* *User cluster*: These are workload clusters on which you add any number of applications. These clusters are maintained in NetApp Kubernetes Service.
+
+
+
+== Kubernetes terminology
+
+Cloud services on NetApp HCI involves pods, volumes, and projects that you create and manage by using the NetApp Kubernetes Service (NKS). Persistent volumes are managed by Trident software.
+
+
+* *NKS workspace*: The NKS _workspace_ enables you to group together projects, teams, and members. This lets you tailor access to the exact needs of a group of users. For example, you may want to allow a certain team access to build and manage clusters at one particular provider. This can be accomplished by creating a workspace for that team (or teams). Then assign specific Provider Credentials to that workspace.
+* *NKS clusters*: NKS enables you to create and manage _clusters_ at the provider of your choice. You can customize defaults, such as the region, size, and number of nodes. And, you can add packaged Helm charts.
+* *NKS pod*: A _pod_ is the NKS atomic unit. It is the smallest unit that can be deployed. A pod consists of one or more containers that share the same namespace, IP addresses, and volume. It can exist only on a single node.
+* *NKS project*: An NKS _project_ is a construct for grouping applications, for example, Wordspace or MySQL. A project is a namespace with RBAC on the Kubernetes cluster. Projects are the heart of application lifecycle management. Clusters can have many projects, and each project can have many solutions, including applications and packages. Clusters can represent different environments, like a test, staging, and production environment. In this case, each cluster environment will be running a similar version of the same project.
+* *NKS volume*: An NKS _volume_ is storage provisioned directly to a pod. NKS supports a wide variety of volume types, including Amazon EBS, Azure Disk Storage, volumes managed by NetApp Element, NFS, and many more. Volumes enable the containers within a pod to share information and are destroyed when their parent pod is deleted.
+* *Solutions on NKS*: With NKS, you can move workloads with predesigned solutions or applications to the cloud platform that suits your needs, with any of the major hyperscalers or an on-premises environment. This list of open-source technologies includes:
+** fabric8
+** GitLab
+** Helm
+** Istio
+** Linkerd
+** Prometheus
+** Trident is another solution that’s preinstalled with the NetApp Kubernetes Service.
+
+
+== Trident software and persistent storage
+
+With Trident, NetApp solutions such as Cloud Volumes Service can meet persistent volume claims that are made by Kubernetes clusters.
+
+* *Persistent storage*: With NKS, you can use a _persistent volume_, one that exists independently of any specific pod and with its own lifetime. Persistent volumes can be used to support stateful applications, such as database services, enabling all components of an enterprise solution to be deployed and managed by NKS. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
+* *Trident software with NKS*: The NetApp Kubernetes Service on NetApp HCI employs Trident software to provision storage automatically to containerized applications. Trident is automatically deployed and configured when new NKS clusters are created. When a containerized application issues a PVC request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
+
+Trident, itself a Kubernetes-native application, runs directly within a Kubernetes cluster. With Trident, Kubernetes users (such as developers, data scientists, and Kubernetes administrators) can create, manage, and interact with persistent storage volumes in the standard Kubernetes format that they are already familiar with.
+
+With Trident, NetApp solutions such as Cloud Volumes Service can meet persistent volume claims that are made by Kubernetes clusters
+
+For details, visit the https://netapp.io/persistent-storage-provisioner-for-kubernetes/[Trident website].
+
+
+
+
+[discrete]
+== Top Links
+* link:task_deploying_overview.html[Deploying cloud services on NetApp HCI overview]
+* https://www.netapp.com/us/media/cloud-data-services-terms.pdf[Functional Preview Terms of Service^]
+
+[discrete]
+== Find more information
+* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service Documentation^]
