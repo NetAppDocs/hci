@@ -30,25 +30,12 @@ image:cloud_all_services_diagram2.2.png[Cloud services on NetApp HCI]
 *	Spin up cloud-native applications yourself. See link:task_NKS_adding_applications.html[Adding applications to your Kubernetes cluster] using the NetApp Kubernetes Service.
 
 == How to set up and manage cloud services on NetApp HCI overview
-<<<<<<< HEAD
 
 To set up and manage cloud services on NetApp HCI, do the following:
 
 * Review link:reference_requirements_before_you_begin.html[prerequisite information].
 * link:task_deploying_overview.html[Enable cloud services], such as the NetApp Kubernetes Service and Cloud Volumes on NetApp HCI, using the NetApp Hybrid Cloud Control
 * link:task_nks_create_cluster.html[Create and manage Kubernetes clusters] using the NetApp Kubernetes Service on NetApp Cloud Central.
-=======
-To set up and manage cloud services on NetApp HCI, do the following:
-
-
-* link:reference_requirements_beforeyoubegin.html[Review prerequisite information].
-* link:task_deploying_overview.html[Enable cloud services], such as the NetApp Kubernetes Service and Cloud Volumes on NetApp HCI, using the NetApp Hybrid Cloud Control
-* link:task_nks_create_cluster.html[Create and manage Kubernetes clusters] using the NetApp Kubernetes Service on NetApp Cloud Central.
-* link:task_dfo_creating_cloud_volumes.html[Create and manage Cloud Volumes] on NetApp HCI using NetApp Fabric Orchestrator on NetApp Cloud Central.
-
-
-
->>>>>>> c895e62e55215949a536ac63ace4d035d3e14d41
 
 
 [discrete]
