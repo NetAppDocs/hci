@@ -29,12 +29,9 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2863854[NetApp Element Software 11.5.1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2859857[NetApp Element Software 11.3P1 Release Notes]
 
-== NetApp Element Plug-in for vCenter Server
-* vCenter Plug-in 4.5 (?) Release Notes
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
-
 == Management services
 * https://kb.netapp.com/app/answers/answer_view/a_id/1087586/loc/en_US#__highlight[Management Services Release Notes]
 
-== Compute firmware
-* Compute firmware release notes TBD
+== NetApp Element Plug-in for vCenter Server
+* vCenter Plug-in 4.5 (?) Release Notes
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
