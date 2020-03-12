@@ -41,7 +41,9 @@ Configuration management refers to the process of setting up the virtual infrast
 
 *Automate configuration on your Virtual Infrastructure:*
 
-* Deploy Kubernetes on NetApp HCI with NKS: https://netapp.io/2019/10/15/deploy-k8s-netapp-hci-nks-part-1/[*_Blog_*] | https://www.youtube.com/watch?v=LFyU2Oh-clA&feature=youtu.be[*_Video_*]
+* Deploy Kubernetes on NetApp HCI with NKS: https://netapp.io/2019/10/15/deploy-k8s-netapp-hci-nks-part-1/[*_Blog_*]
+
+video::LFyU2Oh-clAe[youtube]
 
 === Source Repository
 
@@ -49,7 +51,9 @@ A source repository is where the “code” is stored throughout the CI/CD pipel
 
 *Choose and setup a Source Repository:*
 
-* Configuring Jenkins with a new pipeline to run jobs in Kubernetes: https://netapp.io/2019/11/12/netapp-hci-nks-devops-end-to-end-pipeline-part-3/[*_Blog_*] | https://www.youtube.com/watch?v=zp5zWHupJZ8&feature=youtu.be[*_Video_*]
+* Configuring Jenkins with a new pipeline to run jobs in Kubernetes: https://netapp.io/2019/11/12/netapp-hci-nks-devops-end-to-end-pipeline-part-3/[*_Blog_*]
+
+video::zp5zWHupJZ8[youtube]
 
 === Develop
 
@@ -63,7 +67,9 @@ Once code is developed and tested, it must be built before it can be deployed. T
 
 *Setup your CI pipeline and Run your first builds:*
 
-* Configuring Jenkins with a new pipeline to run jobs in Kubernetes: https://netapp.io/2019/11/12/netapp-hci-nks-devops-end-to-end-pipeline-part-3/[*_Blog_*] | https://www.youtube.com/watch?v=zp5zWHupJZ8&feature=youtu.be[*_Video_*]
+* Configuring Jenkins with a new pipeline to run jobs in Kubernetes: https://netapp.io/2019/11/12/netapp-hci-nks-devops-end-to-end-pipeline-part-3/[*_Blog_*]
+
+video::zp5zWHupJZ8[youtube]
 
 === Test
 
@@ -75,8 +81,13 @@ Deployment of code occurs once the code has been developed, tested and built. On
 
 *Deploy blue/green environments with Kubernetes:*
 
-* Deploy an application on a NetApp HCI cluster using curated NKS Helm charts: https://netapp.io/2019/10/24/netapp-hci-nks-devops-end-to-end-pipeline-part-2/[*_Blog_*] | https://www.youtube.com/watch?v=JUlVZ19yArI&feature=youtu.be[*_Video_*]
-* Deploy a custom application on a NetApp HCI cluster using a custom helm chart: https://netapp.io/2019/12/10/netapp-hci-nks-devops-end-to-end-pipeline-part-4/[*_Blog_*] | https://www.youtube.com/watch?v=bYOlqogvyzw&feature=youtu.be[*_Video_*]
+* Deploy an application on a NetApp HCI cluster using curated NKS Helm charts: https://netapp.io/2019/10/24/netapp-hci-nks-devops-end-to-end-pipeline-part-2/[*_Blog_*]
+
+video::JUlVZ19yArI&[youtube]
+
+* Deploy a custom application on a NetApp HCI cluster using a custom helm chart: https://netapp.io/2019/12/10/netapp-hci-nks-devops-end-to-end-pipeline-part-4/[*_Blog_*]
+
+video::bYOlqogvyzw[youtube]
 
 === Production
 
