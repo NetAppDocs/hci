@@ -23,6 +23,10 @@ entries:
        url: /concept_cg_hci_security.html
      - title: Performance
        url: /concept_hci_performance.html
+  - title: Get started with NetApp HCI
+    entries:
+      - title: Quick Start Guide for NetApp HCI
+        url: /task_hci_getstarted.html
   - title: Get started with Hybrid Cloud Control
     entries:
       - title: Prerequisites to using Hybrid Cloud Control
