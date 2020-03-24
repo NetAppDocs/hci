@@ -61,6 +61,10 @@ entries:
         url: https://www.netapp.com/us/media/tr-4778.pdf
       - title: Veeam Backup and Replication 9.5 v4
         url: https://www.netapp.com/us/media/tr-4634.pdf
+  - title: Artificial Intelligence (AI)
+    entries:
+      - title: AI Inferencing on the Edge Data Center with H615c and NVIDIA T4
+        url: http://www.netapp.com/us/media/nva-1144.pdf
   - title: Security
     entries:
       - title: NIST Security Controls for FISMA with HyTrust for Multitenant Infrastructure
