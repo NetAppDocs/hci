@@ -16,7 +16,7 @@ keywords: netapp, hci, storage nodes, volumes, compute nodes, witness nodes, man
 Nodes are the hardware that is grouped into a cluster to be accessed as block storage or compute resources.
 
 Element software defines various node roles for a cluster. Regardless of whether it is a four-node storage cluster or a two-node storage cluster, the minimum number of compute nodes remains two for a NetApp HCI deployment. The four types of node roles
-are *management node,* *storage node,* *compute node,* and *witness node.*
+are *management node,* *storage node,* *compute node,* and *NetApp HCI Witness Nodes.*
 
 == Management node
 The management node (mNode) interacts with a storage cluster to perform management actions, but is not a member of the storage cluster. Management nodes periodically collect information about the cluster through API calls and report this information. Management nodes are also responsible for coordinating software upgrades of the cluster nodes.
@@ -30,11 +30,12 @@ NetApp HCI storage nodes are hardware that provide the storage resources for a N
 == Compute nodes
 NetApp HCI compute nodes are node hardware that provide the resources, such as CPU, memory, and networking, that are needed for virtualization in the NetApp HCI installation. Because each server runs VMware ESXi, NetApp HCI compute node management (adding or removing hosts) must be done outside of the plug-in within the Hosts and Clusters menu in vSphere. Compute nodes are not members of a storage cluster.
 
-== Witness nodes
-A witness node is a virtual node that does not have any drives, but is a member of a storage cluster. A witness node enables storage cluster redundancy in the event of a storage node failure. You can manage and upgrade witness nodes in the same way as other storage nodes. A storage cluster can have up to four witness nodes.
+== Witness Nodes
+A Witness Node is a virtual node that does not have any drives, but is a member of a storage cluster. A witness node enables storage cluster redundancy in the event of a storage node failure. You can manage and upgrade witness nodes in the same way as other storage nodes. A storage cluster can have up to four witness nodes.
 Witness nodes do not host slice or block services. Their primary purpose is to ensure that enough cluster nodes exist to form a valid ensemble quorum.
 
-NOTE: In a two-node storage cluster, a minimum of two witness nodes are deployed for redundancy in the event of a witness node failure.
+NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure.
 
 == Find more information
+* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster|TR-4823]
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
