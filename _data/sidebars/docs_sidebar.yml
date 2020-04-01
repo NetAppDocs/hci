@@ -1,7 +1,7 @@
 entries:
   - title: NetApp HCI Documentation
     url: ../../../../index.html
-  - title: NetApp HCI Management and Cloud Services
+  - title: NetApp HCI Management
     url: /index.html
   - title: What's new in NetApp HCI
     url: /rn_whatsnew.html
@@ -11,8 +11,6 @@ entries:
        url: /concept_hci_product_overview.html
      - title: Accounts
        url: /concept_cg_hci_accounts.html
-     - title: Cloud services
-       url: /concept_cg_hci_cloud_services.html
      - title: Data protection
        url: /concept_hci_dataprotection.html
      - title: Storage
@@ -25,10 +23,8 @@ entries:
        url: /concept_hci_performance.html
   - title: Get started with NetApp HCI
     entries:
-      - title: Quick Start Guide for NetApp HCI
+      - title: Quick start for NetApp HCI
         url: /task_hci_getstarted.html
-  - title: Get started with Hybrid Cloud Control
-    entries:
       - title: Prerequisites to using Hybrid Cloud Control
         url: /reference_hcc_prerequisites.html
       - title: Access Hybrid Cloud Control
