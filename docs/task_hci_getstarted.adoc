@@ -16,7 +16,7 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 [.lead]
 Use these instructions to install and deploy NetApp HCI. These instructions include links to more details.
 
-NetApp HCI is an enterprise-wide hybrid cloud infrastructure that provides both compute and storage resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element Software. NetApp HCI enables you to access data across any cloud—public, private, or hybrid.
+NetApp HCI is an enterprise-wide hybrid cloud infrastructure that provides both compute and storage resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software. NetApp HCI enables you to access data across any cloud—public, private, or hybrid.
 
 Here is an overview of the process.
 
@@ -35,7 +35,9 @@ Here is a simplified NetApp HCI network topology installation:
 
 image::hci_topology_simple_network[Simplified NetApp HCI Network Topology diagram]
 
-This is the simplified network topology for a single storage node and single compute node.  The minimum cluster size for NetApp HCI is two storage and two compute nodes.
+This is the simplified network topology for a single storage node and single compute node.  The minimum cluster for NetApp HCI is two storage and two compute nodes.
+
+For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
 
 
 
@@ -56,9 +58,7 @@ This mode requires vSphere Distributed Switches (vDS), which require VMware vSph
 * NDE requires separate networks for Management, iSCSI and vMotion that are preconfigured on the switch network.
 
 
-For details and other supported network configurations, see  _TR-4820: NetApp HCI Networking Quick Planning Guide_.
-
-[Fix link to  Mike Geroche’s Networking Guide TR. https://netapp-my.sharepoint.com/:w:/r/personal/mgeroche_netapp_com/_layouts/15/guestaccess.aspx?e=4%3AcEq2AQ&share=ESJdKEwVd9dCl3JymGCDYoUBOXa9Oe6xkQehA55jHTtSYw
+For details and other supported network configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^].
 
 
 
@@ -132,7 +132,7 @@ image::hci_nde_network_settings_ui.png[NDE Network Settings page]
 ..	Click *Apply to Network Settings*.
 .	Join an existing vCenter (optional). See the _NetApp HCI Deployment Guide_.
 .	Record node serial numbers in the _NetApp HCI Installation Discovery Workbook_.
-.	Specify a VLAN ID for the vMotion Network and any network that requires VLAN tagging. See the _NetApp HCI Installation Workbook_.
+.	Specify a VLAN ID for the vMotion Network and any network that requires VLAN tagging. See the _NetApp HCI Installation Discovery Workbook_.
 .	Download your configuration as .CSV file.
 .	Click *Start Deployment*.
 .	Copy and save the URL that appears.
@@ -157,8 +157,9 @@ You must append @vsphere.local to the user name.
 
 == Manage NetApp HCI using the vCenter Plug-in
 
-After you install NetApp HCI, you can configure clusters, volumes, datastores, logs, access groups, initiators, and Quality of Service (QoS) policies by using the SolidFire Plug-in for VMware vCenter Server Web Client.
-For details, see the http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_SolidFire Plug-in for VMware vSphere Guide_^].
+After you install NetApp HCI, you can configure clusters, volumes, datastores, logs, access groups, initiators, and Quality of Service (QoS) policies by using the NetApp Element Plug-in for vCenter Server.
+
+For details, see the http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-180/home.html[_NetApp Element Plug-in for vCenter Server Guide_^].
 
 image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 
@@ -171,9 +172,9 @@ For details, see link:/reference_hcc_prerequisites.html[Prerequisites to using H
 [discrete]
 == Find more information
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^]
-* <link to TR networking guide] _TR-4820: NetApp HCI Networking Quick Planning Guide_
+* https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_SolidFire Plug-in for VMware vSphere Guide_^].
+* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_NetApp Element Plug-in for vCenter Server Guide_^].
 * https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
 * https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp HCI Configuration Advisor^] 5.8.1 or later network validation tool
