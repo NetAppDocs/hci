@@ -16,8 +16,6 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 [.lead]
 Use these instructions to install and deploy NetApp HCI. These instructions include links to more details.
 
-NetApp HCI is an enterprise-wide hybrid cloud infrastructure that provides both compute and storage resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software. NetApp HCI enables you to access data across any cloud—public, private, or hybrid.
-
 Here is an overview of the process.
 
 image::hci_flowchart_QSG.png[NetApp HCI Quick Start overview diagram]
@@ -84,11 +82,10 @@ CAUTION: For precautions and details, see the https://library.netapp.com/ecm/ecm
 . Connect the power cords.
 . Power on the NetApp HCI nodes.
 
-=== Validate network readiness
+== Validate network readiness
 
-Install the NetApp HCI Configuration Advisor 5.8.1 or later network validation tool located on the link:https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^] to ensure network readiness. The tool validates connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
+Install the NetApp Configuration Advisor 5.8.1 or later network validation tool located on the link:https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^] to ensure network readiness. The tool validates connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
 
-NSS link: https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2
 
 == Deploy NetApp HCI using the NetApp Deployment Engine (NDE)
 
@@ -155,7 +152,7 @@ You must append `@vsphere.local` to the user name.
 .. Migrate the vCenter Server to NetApp-HCI-Datastore-02 (storage only vMotion).
 .. Migrate the vCenter Server to each of the Compute Nodes (compute only vMotion).
 .	Go to the NetApp SolidFire Management Plug-in vCenter and ensure that the cluster is visible.
-.	Log into NetApp Element Software. `http://<<mvip>>//`
+.	Log into NetApp Element Software. `http://<mvip>//`
 .	Ensure no alerts appear on the Dashboard.
 
 == Manage NetApp HCI using the vCenter Plug-in
