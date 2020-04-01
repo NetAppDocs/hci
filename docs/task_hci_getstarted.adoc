@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_getstarted.html
+permalink: docs/task_hci_getstarted.html
 summary: Use these instructions to install and deploy NetApp HCI.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 ---
