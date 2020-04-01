@@ -1,0 +1,37 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_hci_cluster.html
+summary: A cluster is made up of a collection of storage nodes. A NetApp HCI storage cluster needs to have a minimum of two storage nodes. A cluster appears on the network as a single logical group and can then be accessed as block storage.
+keywords: netapp, hci, storage nodes, clusters, two-node cluster, three-node cluster, 2-node cluster, 3-node cluster
+---
+
+= Cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+A cluster is made up of a collection of storage nodes. A NetApp HCI storage cluster needs to have a minimum of two storage nodes. A cluster appears on the network as a single logical group and can then be accessed as block storage.
+
+
+You can add clusters and manage them from the NetApp Element Management extension point in the NetApp Element Plug-in for vCenter Server (VCP).
+
+== Two-node storage cluster features
+
+* Two-node storage clusters include two compute nodes and two storage nodes. You can use H410C, H610C, and H615C for compute nodes, and H410S and H610S for storage nodes.
++
+NOTE: The storage nodes in a two-node cluster must be the same model type.
+
+* A two-node cluster is suitable for workloads that are not dependent on larger capacity requirements and maximum IOPS ratings.
+
+* In addition to the two storage nodes, the two-node cluster also includes two NetApp HCI Witness Nodes.
+
+NOTE: What are Witness Nodes? See http://vmwvatapp01-stg.corp.netapp.com/hci_hci_concepts_march17_an/us-en/docs/concept_hci_nodes.html#storage-nodes[Nodes].
+
+* You can scale a two-node cluster to a three-node cluster. However, you get the benefit of more usable capacity if you scale from a two-node cluster to a four-node cluster.
+
+== Find more information
+* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster|TR-4823]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
