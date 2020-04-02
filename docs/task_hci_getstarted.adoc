@@ -84,7 +84,7 @@ CAUTION: For precautions and details, see the https://library.netapp.com/ecm/ecm
 
 == Validate network readiness
 
-To ensure network readiness for NetApp HCI, install the NetApp Configuration Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
+To ensure network readiness for NetApp HCI, install the NetApp Configuration Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
 
 
 == Deploy NetApp HCI using the NetApp Deployment Engine (NDE)
