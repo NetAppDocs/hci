@@ -5,7 +5,7 @@ summary: Use these instructions to install and deploy NetApp HCI.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 ---
 
-= Get started with NetApp HCI
+= Quick start for NetApp HCI
 
 :hardbreaks:
 :nofooter:
@@ -16,8 +16,6 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 [.lead]
 Use these instructions to install and deploy NetApp HCI. These instructions include links to more details.
 
-NetApp HCI is an enterprise-wide hybrid cloud infrastructure that provides both compute and storage resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software. NetApp HCI enables you to access data across any cloud—public, private, or hybrid.
-
 Here is an overview of the process.
 
 image::hci_flowchart_QSG.png[NetApp HCI Quick Start overview diagram]
@@ -25,6 +23,7 @@ image::hci_flowchart_QSG.png[NetApp HCI Quick Start overview diagram]
 == Prepare for installation
 
 Before you begin the installation, do the following:
+
 * Read the https://www.netapp.com/us/media/wp-7261.pdf[_Theory of Operations_^] whitepaper.
 * Complete the _NetApp HCI Workbook_ Pre-Flight checklist sent to you prior to receiving the hardware.
 
@@ -33,7 +32,7 @@ Use the _NetApp HCI Workbook_ to configure your network before the installation.
 
 Here is a simplified NetApp HCI network topology installation:
 
-image::hci_topology_simple_network[Simplified NetApp HCI Network Topology diagram]
+image::hci_topology_simple_network.png[Simplified NetApp HCI Network Topology diagram]
 
 This is the simplified network topology for a single storage node and single compute node.  The minimum cluster for NetApp HCI is two storage and two compute nodes.
 
@@ -74,6 +73,8 @@ NetApp HCI can be installed in different configurations:
 
 CAUTION: For precautions and details, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^].
 
+.Steps
+
 . Install the rails and the chassis.
 . Install nodes in the chassis and install drives for storage nodes. (Applies only if you are installing H410C and H410S in a NetApp H-series chassis.)
 . Cable the compute node.
@@ -81,11 +82,10 @@ CAUTION: For precautions and details, see the https://library.netapp.com/ecm/ecm
 . Connect the power cords.
 . Power on the NetApp HCI nodes.
 
-=== Validate network readiness
+== Validate network readiness
 
-Install the NetApp HCI Configuration Advisor 5.8.1 or later network validation tool located on the link:https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^] to ensure network readiness. The tool validates connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
+Install the NetApp Configuration Advisor 5.8.1 or later network validation tool located on the link:https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^] to ensure network readiness. The tool validates connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
 
-NSS link: https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2
 
 == Deploy NetApp HCI using the NetApp Deployment Engine (NDE)
 
@@ -106,7 +106,7 @@ NetApp HCI uses a storage node management network IPv4 address for initial acces
 For details, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hci-ude-17P1%2FGUID-511EA889-41D6-471A-BE84-C3146350A082.html[_Accessing the NetApp Deployment Engine_^].
 . If you do know the IP address, from a web browser, connect to the Bond1G address of the primary node via HTTP, not HTTPS.
 +
-*Example*: http://<_IP_address_>:442/nde/
+*Example*: `http://<IP_address>:442/nde/`
 
 The NDE landing page appears.
 
@@ -116,7 +116,7 @@ The NDE landing page appears.
 .	Optionally, enable Data Fabric File Services by ONTAP Select and accept the ONTAP Select license.
 .	Configure a new vCenter deployment. Click *Configure Using a Fully Qualified Domain Name* and enter both the vCenter Server Domain Name and DNS Server IP address.
 +
-Note: It is strongly recommended to use the FQDN approach for vCenter installation.
+NOTE: It is strongly recommended to use the FQDN approach for vCenter installation.
 .	Review that the inventory assessment of all nodes completed successfully.
 +
 The storage node that is running the NDE is already checked.
@@ -128,9 +128,9 @@ image::hci_nde_network_settings_ui.png[NDE Network Settings page]
 .	On the Network Settings Easy Form:
 ..	Type the Naming Prefix. (Refer to the System Details of the HCI Installation Workbook.)
 ..	Click *No* for Will you assign VLAN IDs? (You assign them later in the main Network Settings page.)
-..	Type the subnet CIDR, default gateway, and starting IP address for the management, vMotion, and iSCI networks according to your workbook. (Refer to the IP Assignment Method section of the HCI Installation Discovery Workbook for these values.)
+..	Type the subnet CIDR, default gateway, and starting IP address for the management, vMotion, and iSCI networks according to your workbook. (Refer to the IP Assignment Method section of the _NetApp HCI Installation Discovery Workbook_ for these values.)
 ..	Click *Apply to Network Settings*.
-.	Join an existing vCenter (optional). See the _NetApp HCI Deployment Guide_.
+.	Join an existing vCenter (optional). See the _NetApp HCI Deployment Guide_ in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
 .	Record node serial numbers in the _NetApp HCI Installation Discovery Workbook_.
 .	Specify a VLAN ID for the vMotion Network and any network that requires VLAN tagging. See the _NetApp HCI Installation Discovery Workbook_.
 .	Download your configuration as .CSV file.
@@ -143,7 +143,7 @@ It can take about 45 minutes to complete the deployment.
 
 .	Launch the vSphere Web Client and log in using the credentials specified during NDE.
 +
-You must append @vsphere.local to the user name.
+You must append `@vsphere.local` to the user name.
 .	Verify that no alarms are present.
 .	Verify that the vCenter, mNode, and ONTAP Select (optional) appliances are running without warning icons.
 .	Observe that the two default datastores (NetApp-HCI-Datastore_01 & 02) are created.
@@ -152,7 +152,7 @@ You must append @vsphere.local to the user name.
 .. Migrate the vCenter Server to NetApp-HCI-Datastore-02 (storage only vMotion).
 .. Migrate the vCenter Server to each of the Compute Nodes (compute only vMotion).
 .	Go to the NetApp SolidFire Management Plug-in vCenter and ensure that the cluster is visible.
-.	Log into NetApp Element Software. http://<<mvip>>//
+.	Log into NetApp Element Software. `http://<mvip>//`
 .	Ensure no alerts appear on the Dashboard.
 
 == Manage NetApp HCI using the vCenter Plug-in
