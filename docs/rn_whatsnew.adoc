@@ -29,7 +29,7 @@ http://docs.netapp.com/sfe-120/index.jsp[What's new with NetApp Element software
 
 
 == Management services 2.4 for Element software and NetApp HCI
-(blurb)
+https://kb.netapp.com/app/answers/answer_view/a_id/1087586[_Management Services Release Notes_^]
 
 * abc
 * abc
