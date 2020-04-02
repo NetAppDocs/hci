@@ -5,7 +5,7 @@ summary:
 keywords: netapp, hci, on premise, cloud,
 ---
 
-= Upgrade overview
+= NetApp HCI product overview
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -25,3 +25,4 @@ NetApp’s disaggregated hybrid cloud infrastructure allows independent scaling 
 [discrete]
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
