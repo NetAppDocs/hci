@@ -1,0 +1,51 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_management_services.html
+summary: As part of the entire NetApp HCI upgrade, you also upgrade management services.
+keywords: netapp, hci, on premise, cluster, management services
+---
+
+= Update management services
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Using NetApp Hybrid Cloud Control, you can update your NetApp management services.
+
+Management service bundles provide functionality and fixes to your installation outside of major releases.
+
+.Before you begin
+
+* You must be running management node 11.3 or later.
+* You must have upgraded your management services to at least version 2.1.326. NetApp Hybrid Cloud Control upgrades are not available in earlier service bundles.
+
+NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/app/answers/answer_view/a_id/1087586[_Management Services Release Notes_^].
+
+.Steps
+. Open a web browser and browse to the IP address of the management node:
++`https://<ManagementNodeIP>`
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the Upgrades page, select the *Management Services* tab.
++
+The Management Services tab shows the current and available versions of management services software.
+
+NOTE: If your installation cannot access the internet, only the current software version is shown.
+
+. If your installation can access the internet and if a management services upgrade is available, click *Begin Upgrade*.
+. If your installation cannot access the internet, do the following:
+.. Follow the instructions on the page to download and save a management services upgrade package to your computer.
+.. Click *Browse* to locate the package you saved and upload it.
++
+The upgrade begins, and you can see the upgrade status on this page.
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -1,0 +1,282 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_management_node.html
+summary: As part of the entire NetApp HCI upgrade, you also upgrade the management node.
+keywords: netapp, hci, on premise, cluster, management node
+---
+
+= Upgrade a management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Using NetApp Hybrid Cloud Control, you can update your NetApp management services.
+
+Management service bundles provide functionality and fixes to your installation outside of major releases.
+
+The following procedures are provided:
+
+* Upgrade a management node to version 12.0 from 11.3
+* Upgrade a management node to version 12.0 from 11.1 or 11.0
+* Migrating from management node version 10.x to 11.x
+
+.Before you begin
+
+* You must be running management node 11.3 or later.
+* You must have upgraded your management services to at least version 2.1.326. NetApp Hybrid Cloud Control upgrades are not available in earlier service bundles.
+
+NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/app/answers/answer_view/a_id/1087586[_Management Services Release Notes_^].
+
+
+== Upgrade a management node to version 12.0 from 11.3
+You can perform an in-place upgrade of the management node from 11.3 to version 12.0 without needing to provision a new management node virtual machine.
+
+.Before you begin
+
+* The management node you are intending to upgrade is version 11.3 or later and uses IPv4 networking. The management node version 12.0 does not support IPv6.
++
+TIP: To check the version of your management node, log in to your management node and viewthe Element version number in the login banner.
+
+* You have updated your management services bundle to the latest version using Hybrid Cloud Control (HCC): `https://<ManagementNodeIP>`
++
+NOTE: HCC is available with management services bundle 2.1.326. For NetApp HCI, the HCC option is only available if you have performed the one-time upgrade from the NetApp Deployment Engine: `https://<StorageNodeMIP>:442/nde`
+
+* You have configured an additional network adapter (if required) using the instructions for configuring a storage NIC (eth1) in the management node user guide your product.
++
+NOTE: Persistent volumes might require an additional network adapter if eth0 is not able to be routed to the SVIP. Configure a new network adapter on the iSCSI storage network to allow the configuration of persistent volumes.
+
+* Storage nodes are running Element 11.3 or later. Use the latest HealthTools to upgrade Element software.
+
+.Steps
+
+. Log in to the management node virtual machine using SSH or console access.
+. Download the management node ISO for NetApp HCI or Element software from the NetApp Support Site to the management node virtual machine.
++
+NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. Check the integrity of the download by running md5sum on the downloaded file and compare the output to what is available on NetApp Support Site for NetApp HCI or Element software, as in the following example:
++
+`sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. Mount the management node ISO image and copy the contents to the file system using the following commands:
++
+`sudo mkdir -p /upgradesudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt`
+`sudo cp -r /mnt/* /upgrade`
+
+. Change to the home directory, and unmount the ISO file from /mnt:
++
+`sudo umount /mnt`
+. Delete the ISO to conserve space on the management node:
++
+`sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. On an 11.3 or later management node, run the following command to upgrade your management node OS version. The script retains all necessary configuration files after the upgrade, such as Active IQ collector and proxy settings.
++
+`sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1`
++
+The management node reboots with a new OS after the upgrade process completes.
+
+. On the 11.3 or later management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
+
+NOTE: The script retains previous management services configuration, including configuration from the Active IQ collector service, controllers (vCenters), or proxy, depending on your settings.
+
++
+`sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>``
+
+
+== Upgrade a management node to version 12.0 from 11.1 or 11.0
+You can perform an in-place upgrade of the management node from 11.0 or 11.1 to version 12.0 without needing to provision a new management node virtual machine.
+
+.Before you begin
+
+*  Storage nodes are running Element 11.3 or later.
++
+NOTE: Use the latest HealthTools to upgrade Element software.
+
+* The management node you are intending to upgrade is version 11.0 or 11.1 and uses IPv4 networking. The management node version 12.0 does not support IPv6.
++
+TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner. For management node 11.0, the VM memory needs to be manually increased to 12GB.
+
+* You have configured an additional network adapter (if required) using the instructions for configuring a storage NIC (eth1) in the management node user guide your product.
++
+NOTE: Persistent volumes might require an additional network adapter if eth0 is not able to be routed to the SVIP. Configure a new network adapter on the iSCSI storage network to allow the configuration of persistent volumes.
+
+.Steps
+
+. Log in to the management node virtual machine using SSH or console access.
+. Download the management node ISO for NetApp HCI or Element software from the NetApp Support Site to the management node virtual machine.
++
+NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. Check the integrity of the download by running md5sum on the downloaded file and compare the output to what is available on NetApp Support Site for NetApp HCI or Element software, as in the following example:
++
+`sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. Mount the management node ISO image and copy the contents to the file system using the following commands:
++
+`sudo mkdir -p /upgrade`
+`sudo mount solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso /mntsudo cp -r /mnt/* /upgrade`
+
+. Change to the home directory, and unmount the ISO file from /mnt:
++
+`sudo umount /mnt`
+
+. Delete the ISO to conserve space on the management node:
++
+`sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. Run one of the following scripts with options to upgrade your management node OS version. Only run the script that is appropriate for your version. Each script retains all necessary configuration files after the upgrade, such as Active IQ collector and proxy settings.
+.. On an 11.1 (11.1.0.73) management node, run the following command:
++
+`sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.3.2288 /sf/packages/solidfire-nma-1.4.10/conf /sf/packages/sioc /sf/packages/nma"`
+
+.. On an 11.1 (11.1.0.72) management node, run the following command:
++
+`sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.1.2281 /sf/packages/solidfire-nma-1.4.10/conf /sf/packages/sioc /sf/packages/nma"`
+
+. On an 11.0 (11.0.0.781) management node, run the following command:
++
+`sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.0.2253 /sf/packages/solidfire-nma-1.4.8/conf /sf/packages/sioc /sf/packages/nma"`
++
+The management node reboots with a new OS after the upgrade process completes.
+
+. On the 12.0 management node, run the upgrade-mnode script to retain previous configuration settings.
++
+NOTE: If you are migrating from an 11.0 or 11.1 management node, the script copies the Active IQ collector to the new configuration format.
+
+.. For a single storage cluster managed by an existing management node 11.0 or 11.1 with persistent volumes
++
+``:sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account>`
+
+.. For a single storage cluster managed by an existing management node 11.0 or 11.1 with no persistent volumes:
++
+`sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user>`
+
+.. For multiple storage clusters managed by an existing management node 11.0 or 11.1 with persistent volumes:
++
+`sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account> -pvm <persistent volumes mvip>`
+
+.. For multiple storage clusters managed by an existing management node 11.0 or 11.1 with no persistent volumes (-pvm flag is just to provide one of the cluster's MVIP addresses):
++
+`sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent volumes>`
+
+. (For all NetApp HCI installations and SolidFire stand-alone storage installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.0 management node:
+.. Log out of the vSphere Web Client.
++
+NOTE: The web client will not recognize updates made during this process to your vCenter Plug-in if you do not log out.
+
+.. Browse to the registration utility (https://<ManagementNodeIP>:9443).
+.. Click the *vCenter Plug-in Registration* tab.
+.. Within Manage vCenter Plug-in, select *Update Plug-in*.
+
+.. Update the vCenter address, vCenter administrator user name, and vCenter administrator password.
+.. Click *Update*.
+.. Log in to the vSphere Web Client and verify that the plug-in information has been updated by browsing to *Home* > *NetApp Element Configuration* > *About*.
++
+NOTE: Logging into vSphere Web Client after updating registration installs the new plug-in updates and creates a new database.
+
++
+You should see the following version details or details of a more recent version:
+
+`NetApp Element Plug-in Version: 4.3.0`
+`NetApp Element Plug-in Build Number: 233`
+
+. Use the management node API to add assets:
+.. Using a browser, go to the storage MVIP and log in. This action causes certificate to be accepted for the next step.
+.. Using a browser, go to `https://<ManagementNodeIP>/mnode.`
+.. Add a vCenter controller asset to the management node known assets for HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (HCC).
+.. Click *Authorize* and enter your MVIP user name and password credentials. Close the pop-up window.
+.. Run *GET /assets* to pull the base asset ID needed to add the vCenter/controller asset.
+.. Run *POST /assets/{ASSET_ID}/controllers* to add a controller asset with vCenter credentials.
+.. For NetApp HCI, add a compute asset to the management node known assets:
+.. Click *Authorize* and enter your MVIP user name and password credentials. Close the pop-up window.
+.. Run *GET /assets* to pull the base asset ID needed to add the compute asset.
+.. Run *POST/assets/{asset_id}/compute-nodes* to add a compute asset with credentials for the compute asset. The type is ESXi Host.
++
+IMPORTANT: For compute node assets, remove the "hardware_tag" parameter suggested in the payload example.
+
+== Migrating from management node version 10.x to 11.x
+If you have a management node at version 10.x, you cannot upgrade from 10.x to 11.x. You can instead use this migration procedure to copy over the configuration from 10.x to a newly deployed 11.1 management node. If your management node is currently at 11.0 or higher, you should skip this procedure. You need management node 11.0 or 11.1 and the latest HealthTools to upgrade Element software from 10.3 + through 11.x.
+
+.Steps
+
+. From the VMware vSphere interface, deploy the management node 11.1 OVA and power it on.
+. Open the management node VM console, which brings up the terminal user interface (TUI).
+. Use the TUI to create a new administrator ID and assign a password.
+. In the management node TUI, log in to the management node with the new ID and password and validate that it works.
+. From the vCenter or management node TUI, get the management node 11.1 IP address and browse to the IP address on port 9443 to open the management node UI.
++
+`https://<mNode 11.1 IP address>:94435`
+
+. In vSphere, select *NetApp Element Configuration* > *mNode Settings*. (In older versions, the top-level menu is *NetApp SolidFire Configuration*.)
+. Click *Actions* > *Clear*.
+. To confirm, click *Yes*. The mNode Status field should report Not Configured.
++
+NOTE: When you go to the *mNode Settings* tab for the first time, the mNode Status field might display as *Not Configured* instead of the expected *UP*; you might not be able to choose *Actions* > *Clear*. Refresh the browser. The mNode Status field will eventually display *UP*.
+
+. Log out of vSphere.
+. In a web browser, open the management node registration utility (`https://<mNode 11.1 IPaddress>:9443`) and select *QoSSIOC Service Management*.
+. Set the new QoSSIOC password.
++
+NOTE: The default password is solidfire. This password is required to set the new password.
+
+. Click the *vCenter Plug-in Registration* tab.
+. Select *Update Plug-in*.
+. Enter required values. When you are finished, click *UPDATE*.
+. Log in to vSphere and select *NetApp Element Configuration* > *mNode Settings*.
+. Click *Actions* > *Configure*.
+. Provide the management node IP address, management node user ID (the user name is admin), password that you set on the QoSSIOC Service Management tab of the registration utility, and vCenter user ID and password.
++
+In vSphere, the *mNode Settings* tab should display the mNode Status as *UP*, which indicates management node 11.1 is registered to vCenter.
+
+. From the management node registration utility (`https://<mNode 11.1 IP address>:9443`), restart the SIOC service from *QoSSIOC Service Management*.
+
+. Wait for one minute and check the *NetApp Element Configuration* > *mNode Settings* tab. This should display the mNode Status as *UP*.
++
+If the status is *DOWN*, check the permissions for `/sf/packages/sioc/app.properties`. The file should have read, write, and execute permissions for the file owner. The correct permissions should appear as follows:
++
+``-rwx------`
+
+. After the SIOC process starts and vCenter displays mNode Status as *UP*, check the logs for the `sf-hci-nma` service on the management node. There should be no error messages.
+
+. (For management node 11.1 only) SSH into the management node version 11.1 with root privileges and start the NMA service with the following commands:
++
+`# systemctl enable /sf/packages/nma/systemd/sf-hci-nma.service`
+`# systemctl start sf-hci-nma21`
+
+. Perform actions from vCenter to remove a drive, add a drive or reboot nodes. This triggers storage alerts, which should be reported in vCenter. If this is working, NMA system alerts are functioning as expected.
+. If ONTAP Select is configured in vCenter, configure ONTAP Select alerts in NMA by copying the ``.ots.properties` file from the previous management node to the management node version 11.1 `/sf/packages/nma/conf/.ots.properties` file, and restart the NMA service using the following command:
++
+`systemctl restart sf-hci-nma`
+
+. Verify that ONTAP Select is working by viewing the logs with the following command:
++
+`journalctl -f | grep -i ots`
+
+. Configure AIQ by doing the following:
+.. SSH in to the management node version 11.1 and go to the ``/sf/packages/collector` directory.
+.. Run the following command:
++
+`sudo ./manage-collector.py --set-username netapp --set-password --set-mvip <MVIP>`
+
+.. Enter the management node UI password when prompted.
+.. Run the following commands:
++
+`./manage-collector.py --get-all`
+`sudo systemctl restart sfcollector`
+
+.. Verify `sfcollector` logs to confirm it is working.
+. In vSphere, the *NetApp Element Configuration* > *mNode Settings* tab should display the mNode Status as *UP*.
+. Verify NMA is reporting system alerts and ONTAP Select alerts.
+. If everything is working as expected, shut down and delete management node 10.x VM.
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
