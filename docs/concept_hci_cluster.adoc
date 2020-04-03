@@ -13,13 +13,13 @@ keywords: netapp, hci, storage nodes, clusters, two-node cluster, three-node clu
 :imagesdir: ../media/
 
 [.lead]
-A cluster is made up of a collection of storage nodes. Starting with NetApp HCI 1.8, you can have a cluster with two storage nodes. A cluster appears on the network as a single logical group and can then be accessed as block storage.
+A cluster is made up of a collection of nodes, which can be accessed as storage or compute resources. Starting with NetApp HCI 1.8, you can have a storage cluster with two nodes. A storage cluster appears on the network as a single logical group and can then be accessed as block storage.
 
 
 You can add clusters and manage them from the NetApp Element Management extension point in the NetApp Element Plug-in for vCenter Server (VCP).
 
 == Two-node storage cluster features
-Starting with NetApp HCI 1.8, you can set up your NetApp HCI storage cluster with two storage nodes.
+Starting with NetApp HCI 1.8, you can set up a storage cluster with two storage nodes.
 
 * You can use H410S and H610S nodes to form the two-node storage cluster.
 +
