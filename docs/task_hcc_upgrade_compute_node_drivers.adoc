@@ -1,0 +1,57 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_compute_node_drivers.html
+summary: As part of the entire NetApp HCI upgrade, you can also upgrade compute node drivers.
+keywords: netapp, hci, on premise, cluster, element, compute node
+---
+
+= Update compute node drivers
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+For any H-Series compute node, you can update the drivers used on the nodes using VMware Update Manager.
+
+
+.Before you begin
+
+See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
+
+.About this task
+
+Perform only one of these update operations at a time.
+
+.Steps
+
+. Browse to the https://mysupport.netapp.com/products/p/hci.html[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Accept the End User License Agreement.
+. Under the *Driver Packages for VMWare ESXi* heading, download the driver package for your node type and ESXi version.
+. Extract the downloaded driver bundle on your local computer.
++
+NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; do not extract these ZIP files.
+
+. After upgrading the firmware on the compute nodes, go to *VMware Update Manager* in vCenter.
+. Import the driver offline bundle file for the compute nodes into the *Patch Repository*.
+. Create a new host baseline for the compute node.
+. Choose *Host Extension* for Name and Type and select all imported driver packages to be included in the new baseline.
+. In the *Host and Clusters* menu in vCenter, select the cluster with the compute nodes you would like to update and navigate to the *Update Manager* tab.
+. Click *Remediate* and the select the newly created host baseline. Ensure that drivers included in the baseline are selected.
+. Proceed through the wizard to the *Host Remediation Options* and ensure that the *Do Not Change VM Power State* option is selected to keep virtual machines online during the driver update.
++
+NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (this is the default in NetApp HCI installations), virtual machines will automatically be migrated to other nodes in the cluster.
+
+. Proceed to the *Ready to Complete* page in the wizard and click *Finish*.
++
+The drivers for all compute nodes in the cluster are update one node at a time while virtual machines stay online.
+
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

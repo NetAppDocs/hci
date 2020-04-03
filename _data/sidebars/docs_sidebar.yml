@@ -43,14 +43,20 @@ entries:
         entries:
           - title: Upgrade overview of the entire NetApp HCI installation
             url: /task_hcc_upgrade_all.html
+          - title: Update management services
+            url: /task_hcc_upgrade_management_services.html
           - title: Determine the Element version
             url: /task_hcc_upgrade_element_determineversion.html
           - title: Use HealthTools to run pre-upgrade health checks
             url: /task_hcc_upgrade_element_healthtools.html
           - title: Upgrade Element software
             url: /task_hcc_upgrade_element_software.html
-      - title: Upgrade components of your NetApp HCI system
-        entries:
+          - title: Upgrade a management node
+            url: /task_hcc_upgrade_management_node.html
+          - title: Update compute node firmware
+            url: /task_hcc_upgrade_compute_node_firmware.html
+          - title: Update compute node drivers
+            url: /task_hcc_upgrade_compute_node_drivers.html
   - title: Expand your NetApp HCI system
     entries:
      - title: Expand overview
