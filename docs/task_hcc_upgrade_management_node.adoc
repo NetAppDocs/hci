@@ -20,9 +20,9 @@ Management service bundles provide functionality and fixes to your installation 
 
 The following procedures are provided:
 
-* Upgrade a management node to version 12.0 from 11.3
-* Upgrade a management node to version 12.0 from 11.1 or 11.0
-* Migrating from management node version 10.x to 11.x
+* <<Upgrade a management node to version 12.0 from 11.3>>
+* <<Upgrade a management node to version 12.0 from 11.1 or 11.0>>
+* <<Migrating from management node version 10.x to 11.x>>
 
 .Before you begin
 
@@ -39,7 +39,7 @@ You can perform an in-place upgrade of the management node from 11.3 to version 
 
 * The management node you are intending to upgrade is version 11.3 or later and uses IPv4 networking. The management node version 12.0 does not support IPv6.
 +
-TIP: To check the version of your management node, log in to your management node and viewthe Element version number in the login banner.
+TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
 * You have updated your management services bundle to the latest version using Hybrid Cloud Control (HCC): `https://<ManagementNodeIP>`
 +
@@ -64,9 +64,11 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 
 . Mount the management node ISO image and copy the contents to the file system using the following commands:
 +
-`sudo mkdir -p /upgradesudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt`
-`sudo cp -r /mnt/* /upgrade`
-
+----
+sudo mkdir -p /upgrade
+sudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt
+sudo cp -r /mnt/* /upgrade
+----
 . Change to the home directory, and unmount the ISO file from /mnt:
 +
 `sudo umount /mnt`
@@ -81,7 +83,7 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 The management node reboots with a new OS after the upgrade process completes.
 
 . On the 11.3 or later management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
-
++
 NOTE: The script retains previous management services configuration, including configuration from the Active IQ collector service, controllers (vCenters), or proxy, depending on your settings.
 
 +
@@ -118,8 +120,11 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 
 . Mount the management node ISO image and copy the contents to the file system using the following commands:
 +
-`sudo mkdir -p /upgrade`
-`sudo mount solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso /mntsudo cp -r /mnt/* /upgrade`
+----
+sudo mkdir -p /upgrade
+sudo mount solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso /mnt
+sudo cp -r /mnt/* /upgrade
+----
 
 . Change to the home directory, and unmount the ISO file from /mnt:
 +
@@ -138,7 +143,7 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 +
 `sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.1.2281 /sf/packages/solidfire-nma-1.4.10/conf /sf/packages/sioc /sf/packages/nma"`
 
-. On an 11.0 (11.0.0.781) management node, run the following command:
+.. On an 11.0 (11.0.0.781) management node, run the following command:
 +
 `sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1 sf_keep_paths="/sf/packages/solidfire-sioc-4.2.0.2253 /sf/packages/solidfire-nma-1.4.8/conf /sf/packages/sioc /sf/packages/nma"`
 +
@@ -150,7 +155,7 @@ NOTE: If you are migrating from an 11.0 or 11.1 management node, the script copi
 
 .. For a single storage cluster managed by an existing management node 11.0 or 11.1 with persistent volumes
 +
-``:sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account>`
+`:sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account>`
 
 .. For a single storage cluster managed by an existing management node 11.0 or 11.1 with no persistent volumes:
 +
@@ -181,10 +186,9 @@ NOTE: Logging into vSphere Web Client after updating registration installs the n
 
 +
 You should see the following version details or details of a more recent version:
-
++
 `NetApp Element Plug-in Version: 4.3.0`
 `NetApp Element Plug-in Build Number: 233`
-
 . Use the management node API to add assets:
 .. Using a browser, go to the storage MVIP and log in. This action causes certificate to be accepted for the next step.
 .. Using a browser, go to `https://<ManagementNodeIP>/mnode.`
@@ -249,7 +253,7 @@ If the status is *DOWN*, check the permissions for `/sf/packages/sioc/app.proper
 `# systemctl start sf-hci-nma21`
 
 . Perform actions from vCenter to remove a drive, add a drive or reboot nodes. This triggers storage alerts, which should be reported in vCenter. If this is working, NMA system alerts are functioning as expected.
-. If ONTAP Select is configured in vCenter, configure ONTAP Select alerts in NMA by copying the ``.ots.properties` file from the previous management node to the management node version 11.1 `/sf/packages/nma/conf/.ots.properties` file, and restart the NMA service using the following command:
+. If ONTAP Select is configured in vCenter, configure ONTAP Select alerts in NMA by copying the `.ots.properties` file from the previous management node to the management node version 11.1 `/sf/packages/nma/conf/.ots.properties` file, and restart the NMA service using the following command:
 +
 `systemctl restart sf-hci-nma`
 
@@ -258,7 +262,7 @@ If the status is *DOWN*, check the permissions for `/sf/packages/sioc/app.proper
 `journalctl -f | grep -i ots`
 
 . Configure AIQ by doing the following:
-.. SSH in to the management node version 11.1 and go to the ``/sf/packages/collector` directory.
+.. SSH in to the management node version 11.1 and go to the `/sf/packages/collector` directory.
 .. Run the following command:
 +
 `sudo ./manage-collector.py --set-username netapp --set-password --set-mvip <MVIP>`

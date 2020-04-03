@@ -32,7 +32,7 @@ Perform only one of these update operations at a time.
 . Under the *Driver Packages for VMWare ESXi* heading, download the driver package for your node type and ESXi version.
 . Extract the downloaded driver bundle on your local computer.
 +
-NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; donot extract these ZIP files.
+NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; do not extract these ZIP files.
 
 . After upgrading the firmware on the compute nodes, go to *VMware Update Manager* in vCenter.
 . Import the driver offline bundle file for the compute nodes into the *Patch Repository*.

@@ -28,11 +28,13 @@ NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle 
 
 .Steps
 
-. Update management services from Hybrid Cloud Control.
-. Upgrade your Element software version.
-. Upgrade your management node.
-. Update your compute node firmware.
-. Update your compute node drivers.
+. link:task_hcc_upgrade_management_services.html[Update management services from Hybrid Cloud Control].
+. link:task_hcc_upgrade_element_determineversion.html[Determine the Element version].
+. link:task_hcc_upgrade_element_healthtools.html[Use HealthTools to run pre-upgrade health checks].
+. link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
+. link:task_hcc_upgrade_management_node.html[Upgrade your management node].
+. link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
+. link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
 
 
 
