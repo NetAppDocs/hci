@@ -5,7 +5,7 @@ summary: Use these instructions to install and deploy NetApp HCI.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 ---
 
-= Quick start for NetApp HCI
+= NetApp HCI installation and deployment overview
 
 :hardbreaks:
 :nofooter:
@@ -167,7 +167,7 @@ image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 == (Optional) Expand, monitor, or upgrade NetApp HCI with the Hybrid Cloud Control
 
 You can use the NetApp HCI Hybrid Cloud Control to expand, monitor, or upgrade your system.
-For details, see link:/reference_hcc_prerequisites.html[Prerequisites to using Hybrid Cloud Control^].
+For details, see link:/task_hcc_access.html[Access Hybrid Cloud Control^].
 
 
 [discrete]
