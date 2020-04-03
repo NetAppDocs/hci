@@ -13,7 +13,7 @@ keywords: netapp, hci, storage nodes, clusters, two-node cluster, three-node clu
 :imagesdir: ../media/
 
 [.lead]
-A cluster is made up of a collection of storage nodes. A NetApp HCI storage cluster needs to have a minimum of two storage nodes. A cluster appears on the network as a single logical group and can then be accessed as block storage.
+A cluster is made up of a collection of storage nodes. Starting with NetApp HCI 1.8, you can have a storage cluster with two storage nodes. A cluster appears on the network as a single logical group and can then be accessed as block storage.
 
 
 You can add clusters and manage them from the NetApp Element Management extension point in the NetApp Element Plug-in for vCenter Server (VCP).
@@ -21,7 +21,7 @@ You can add clusters and manage them from the NetApp Element Management extensio
 == Two-node storage cluster features
 Starting with NetApp HCI 1.8, you can set up your NetApp HCI storage cluster with two storage nodes.
 
-* You can use H410S and H610S for storage nodes to form the two-node storage cluster.
+* You can use H410S and H610S nodes to form the two-node storage cluster.
 +
 NOTE: The storage nodes in a two-node cluster must be the same model type.
 
@@ -29,13 +29,13 @@ NOTE: The storage nodes in a two-node cluster must be the same model type.
 
 * In addition to two storage nodes, a two-node storage cluster also includes two NetApp HCI Witness Nodes.
 +
-NOTE: What are Witness Nodes? See http://vmwvatapp01-stg.corp.netapp.com/hci_hci_concepts_march17_an/us-en/docs/concept_hci_nodes.html#storage-nodes[Nodes].
+NOTE: What are Witness Nodes? See http://vmwvatapp01-stg.corp.netapp.com/hci_hci_concepts_march17_an/us-en/docs/concept_hci_nodes.html#storage-nodes[Nodes] [CHANGE LINK TO EXTERNAL LINK BEFORE GO LIVE.].
 
 * You can scale a two-node storage cluster to a three-node storage cluster. However, you get the benefit of more usable capacity if you scale from a two-node cluster to a four-node cluster.
 
-* Two-node storage clusters have the same security features and functionality as the existing NetApp HCI and SolidFire storage systems.
+* Two-node storage clusters provide the same security features and functionality as the traditional four-node storage clusters.
 
-* Two-node storage clusters use the same networks as four-node storage clusters. The networks are set up during NetApp HCI deployment using the NetApp Deployment Engine wizard. See xyz (need to insert link to Networking information in the Deployment Guide.)
+* Two-node storage clusters use the same networks as four-node storage clusters. The networks are set up during NetApp HCI deployment using the NetApp Deployment Engine wizard.
 
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
