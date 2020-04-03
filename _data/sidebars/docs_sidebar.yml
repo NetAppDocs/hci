@@ -15,18 +15,14 @@ entries:
        url: /concept_hci_dataprotection.html
      - title: Storage
        url: /concept_hci_storage.html
-     - title: Licensing
-       url: /concept_hci_licensing.html
      - title: Security
        url: /concept_cg_hci_security.html
      - title: Performance
        url: /concept_hci_performance.html
   - title: Get started with NetApp HCI
     entries:
-      - title: Quick start for NetApp HCI
+      - title: NetApp HCI installation and deployment overview
         url: /task_hci_getstarted.html
-      - title: Prerequisites to using Hybrid Cloud Control
-        url: /reference_hcc_prerequisites.html
       - title: Access Hybrid Cloud Control
         url: /task_hcc_access.html
   - title: Monitor your NetApp HCI system
