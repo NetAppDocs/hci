@@ -1,8 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/concept_hci_dataprotection.html
-summary: data protection terms include different types of remote replication, volume snapshots, volume
-cloning, protection domains, and high availability with double Helix technology.
+summary: data protection terms include different types of remote replication, volume snapshots, volume, cloning, protection domains, and high availability with double Helix technology.
 keywords: netapp, hci, data protection, ha, snapshots, replication, cloning, helix
 ---
 
