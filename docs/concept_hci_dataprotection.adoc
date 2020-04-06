@@ -29,7 +29,7 @@ Remote replication of data can take the following forms:
 
 * <<Synchronous and asynchronous replication between clusters>>
 * <<Snapshot-only replication>>
-* <<Replication of data between NetApp Element software and ONTAP systems using SnapMirror technology>>
+* <<Replication between Element and ONTAP clusters using SnapMirror>>
 
 See https://www.netapp.com/us/media/tr-4741.pdf[TR-4741: NetApp Element Software Remote Replication^].
 
@@ -58,14 +58,14 @@ Asynchronous replication is appropriate for the following situations:
 * The disaster recovery site is far from the source and the application does not tolerate latencies induced by the network.
 * There are bandwidth limitations on the network connecting the source and target clusters.
 
-== Snapshot-only replication
+=== Snapshot-only replication
 Snapshot-only data protection replicates changed data at specific points of time to a remote cluster. Only those snapshots that are created on the source cluster are replicated. Active writes from the source volume are not.
 
 You can set the frequency of the snapshot replications.
 
 Snapshot replication does not affect asynchronous or synchronous replication.
 
-== Replication between Element and ONTAP clusters using SnapMirror
+=== Replication between Element and ONTAP clusters using SnapMirror
 With NetApp SnapMirror technology, you can replicate snapshots that were taken using NetApp Element software to ONTAP for disaster recovery purposes. In a SnapMirror relationship, Element is one endpoint and ONTAP is the other.
 
 SnapMirror is a NetApp Snapshot™ replication technology that facilitates disaster recovery, designed for failover from primary storage to secondary storage at a geographically remote site. SnapMirror technology creates a replica, or mirror, of the working data in secondary storage from which you can continue to serve data if an outage occurs at the primary site. Data is mirrored at the volume level.
