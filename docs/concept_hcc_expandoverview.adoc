@@ -31,7 +31,5 @@ NOTE: When expanding NetApp HCI compute or storage resources in the NetApp Deplo
 
 [discrete]
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
-* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service Documentation^]
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
