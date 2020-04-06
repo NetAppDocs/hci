@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade overview of the entire NetApp HCI installation
+= Upgrade your entire NetApp HCI installation overview
 
 :hardbreaks:
 :nofooter:
@@ -14,16 +14,21 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 :imagesdir: ../media/
 
 [.lead]
-You can keep the entire NetApp HCI installation up-to-date after deployment by sequentially upgrading each NetApp HCI software component. This will update all of the NetApp HCI components.
+You can keep the entire NetApp HCI installation up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
 
 These components include management services, management node, Element software, firmware, drivers, and the Element Plug-in for vCenter Server.
 
 .What you'll need
 
-* You are running management node 11.3 or later.
+* You are running management node 11.3 or later. To verify your management node version, log in to your management node and verify the Element version number in the login banner:
++
+----
+login as: <username>
+SolidFire Element 11.0.0.781
+----
 * You have upgraded your management services to at least version 2.1.326.
 +
-NetApp Hybrid Cloud Control upgrades is not available in earlier service bundle versions.
+Upgrades using NetApp Hybrid Cloud Control (HCC) is not available in earlier service bundle versions.
 
 
 .Steps

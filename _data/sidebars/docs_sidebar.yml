@@ -45,10 +45,8 @@ entries:
             url: /task_hcc_upgrade_all.html
           - title: Update management services
             url: /task_hcc_upgrade_management_services.html
-          - title: Determine the Element version
-            url: /task_hcc_upgrade_element_determineversion.html
           - title: Use HealthTools to run pre-upgrade health checks
-            url: /task_hcc_upgrade_element_healthtools.html
+            url: /task_hcc_upgrade_element_prechecks.html
           - title: Upgrade Element software
             url: /task_hcc_upgrade_element_software.html
           - title: Upgrade a management node
