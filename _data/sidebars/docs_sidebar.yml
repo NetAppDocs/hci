@@ -3,8 +3,12 @@ entries:
     url: ../../../../index.html
   - title: NetApp HCI Management
     url: /index.html
-  - title: What's new in NetApp HCI
-    url: /rn_whatsnew.html
+  - title: Release Notes
+    entries:
+      - title: What's new in NetApp HCI
+        url: /rn_whatsnew.html
+      - title: Additional release information
+        url: /rn_relatedrn.html
   - title: Concepts
     entries:
      - title: Product overview
