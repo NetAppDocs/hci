@@ -19,18 +19,12 @@ entries:
     entries:
       - title: Concepts
         entries:
-          - title: Cloud services on NetApp HCI overview
-            url: /concept_overview.html
-          - title: Types of cloud services on NetApp HCI
-            url: /concept_types_cloudservices.html
-          - title: Architecture overview for cloud services on NetApp HCI
-            url: /concept_architecture.html
-          - title: What happens when you enable NetApp Kubernetes Service?
-            url: /concept_behind_the_scenes.html
-          - title: Cluster types in cloud services on NetApp HCI
-            url: /concept_cluster_types.html
-          - title: Kubernetes terminology
-            url: /concept_kubernetes_pods_volumes_projects.html
+          - title: Clusters
+            url: /concept_hci_clusters.html
+          - title: Nodes
+            url: /concept_hci_nodes.html
+          - title: Storage
+            url: /concept_hci_storage.html
       - title: Prerequisites for cloud services on NetApp HCI
         entries:
           - title: Prerequisites overview
