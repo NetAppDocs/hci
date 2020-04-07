@@ -26,8 +26,10 @@ As of the Element 11.3 release, the management node functions as a microservice 
 == Storage nodes
 NetApp HCI storage nodes are hardware that provide the storage resources for a NetApp HCI system. Drives in the node contain block and metadata space for data storage and data management. Each node contains a factory image of NetApp Element software. NetApp HCI storage nodes can be managed using the NetApp Element Management extension point.
 
+
 == Compute nodes
-NetApp HCI compute nodes are node hardware that provide the resources, such as CPU, memory, and networking, that are needed for virtualization in the NetApp HCI installation. Because each server runs VMware ESXi, NetApp HCI compute node management (adding or removing hosts) must be done outside of the plug-in within the Hosts and Clusters menu in vSphere. Regardless of whether it is a four-node storage cluster or a two-node storage cluster, the minimum number of compute nodes remains two for a NetApp HCI deployment. 
+NetApp HCI compute nodes are node hardware that provide the resources, such as CPU, memory, and networking, that are needed for virtualization in the NetApp HCI installation. Because each server runs VMware ESXi, NetApp HCI compute node management (adding or removing hosts) must be done outside of the plug-in within the Hosts and Clusters menu in vSphere. Regardless of whether it is a four-node storage cluster or a two-node storage cluster, the minimum number of compute nodes remains two for a NetApp HCI deployment.
+
 
 == Witness Nodes
 A Witness Node is a virtual node that does not have any drives, but is a member of a storage cluster. A Witness Node enables storage cluster redundancy in the event of a storage node failure. You can manage and upgrade Witness Nodes in the same way as other storage nodes. A storage cluster can have up to four Witness Nodes.
@@ -36,6 +38,8 @@ Witness Nodes have specific VM capacity requirements. See https://docs.netapp.co
 
 NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure.
 
+
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
