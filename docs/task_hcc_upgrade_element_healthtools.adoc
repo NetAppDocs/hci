@@ -1,0 +1,276 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_element_healthtools.html
+summary: As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software.
+keywords: netapp, hci, on premise, cluster, element
+---
+
+= Use HealthTools to run pre-upgrade health checks
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Before you begin the upgrade, you can check the health of your system by using the NetApp HCI HealthTools suite.
+
+The HealthTools suite includes the commands required for the software upgrade:
+
+* sfupdate-healthtools
+* sfupgradecheck
+* sfinstall
+
+
+.What you'll need
+
+* You are running management node 11.0, 11.1 or later.
+* You have upgraded your management services to at least version 2.1.326.
++
+NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
+* To use HealthTools, you must download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
+
+
+.About this task
+
+The commands in the HealthTools suite require escalated privileges to run. Either preface commands with 'sudo' or escalate your user to root privileges.
+
+== Check the installed version of HealthTools
+
+You can run the `sfupdate-healthtools` command to check the version of HealthTools installed on your management node. This will compare the currently installed version with the newest available version.
+
+
+.Steps
+
+. View the installed version by entering: `sfupdate-healthtools -v`
++
+Here is a sample of the output:
++
+----
+Currently installed version of HealthTools: 2018.09.01.130
+----
+. View the latest available version by entering: `sfupdate-healthtools -1`
++
+Here is a sample of the output:
++
+----
+Latest available version of HealthTools: 2018.09.01.130
+The latest version of HealthTools can be downloaded from:
+https://mysupport.netapp.com/NOW/cgi-bin/software/
+----
+
+== Check the installed version of HealthTools on dark sites
+For management nodes isolated from external Internet access, the verification check for the latest version of the HealthTools always fails. You must manually verify if the latest version available is the same as the installed version.
+
+.What you'll need
+
+* You have a management node on a dark site.
+* When you run `sfupdate-healthtools -l`, you are unable to verify the latest available version of HealthTools.
+
+.Steps
+
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
+. Run the `sfupdate-healthtools` command: `sfupdate-healthtools <path-to-healthtools-package>`
+. Check the installed version: `sfupdate-healthtools -v`
+. Check the latest version against the metadata json file: `sfupdate-healthtools -l --metadata=<path-to-metadata-json>``
++
+*Example*
++
+----
+sfupdate-healthtools -l --metadata=/tmp/metadata.json
+----
+
+== Update HealthTools
+You can use the `sfupdate-healthtools` command to update the version of HealthTools that is installed on the management node.
+
+.Steps
+
+. Log in to the NetApp Support Site at https://mysupport.netapp.com/products/p/healthtools.html.
+. Download the latest version of HealthTools to a computer that is not the management node.
+. Copy the installation file to the management node.
++
+TIP: You can do this by using, for example, SCP.
+
+. Run the `sfupdate-healthtools <path to install file>` command to install the new software.
++
+*Example*
++
+See the following sample input command:
++
+----
+sfupdate-healthtools /tmp/solidfire-healthtools-2018.09.01.130.tgz
+----
++
+Here's a sample of the output:
++
+----
+Checking key signature for file /tmp/solidfirehealthtools-2018.09.01.130/components.tgz
+installing command sfupdate-healthtools
+Restarting on version 2018.09.01.130
+sfupdate-healthtools /sf/bin/sfupdate-healthtools -r 2018.09.01.130
+installing command sfupgradecheck
+installing command sfinstall
+installing command sfresetupgrade
+----
+. Run the `sfupdate-healthtools -v` command to check the installed version.
++
+*Example*
+Here's a sample of the output:
++
+----
+Currently installed version of HealthTools:
+2018.09.01.130
+----
+
+== Check for upgrade readiness
+You can verify that the cluster is ready to be upgraded by using the `sfupgradecheck` command. This command verifies information such as pending nodes, disk space, and cluster faults.
+
+If your management node is at a dark site, the upgrade readiness check needs the metadata JSON file to run successfully.
+
+.About this task
+
+This procedure describes how to address upgrade checks that yield any of the following results:
+
+* Running the `sfupgradecheck` command runs successfully. Your cluster is upgrade ready.
+* Checks within the `sfupgradecheck` tool fail with an error message. Your cluster is not upgrade ready and additional steps are required.
+* Your upgrade check fails with an error message that HealthTools is out-of-date.
+* Your upgrade check fails because your management node is on a dark site.
+
+
+.Steps
+
+. Run the `sfupgradecheck` command.
++
+----
+sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+----
++
+NOTE: For passwords that contain special characters, add a backslash (\) before each special character. For example, 'mypass!@1' should be entered as 'mypass\!\@'
+
++
+Here is some sample input command:
++
+----
+sfupgradecheck -u admin -p admin 10.117.78.244
+A sample output is as follows. In this result, no errors appear and you are ready to upgrade.
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/
+SolidFire-Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the
+management node
+Node ID: 1 Upload speed: 90063.90 KBs/sec
+Node ID: 3 Upload speed: 106511.44 KBs/sec
+Node ID: 2 Upload speed: 85038.75 KBs/sec
+----
+. If there are errors, additional actions are required. See the next sections for details.
+
+=== Your cluster is not upgrade ready
+If you see this message, follow these steps.
+
+. Review the `sfupgradecheck` error message.
++
+Here is some sample output:
++
+----
+The following tests failed:
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Severity: ERROR
+Failed node IDs: 2
+Remedy: Remove unneeded files from root drive
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the management node
+Node ID: 1 Upload speed: 86518.82 KBs/sec
+Node ID: 3 Upload speed: 84112.79 KBs/sec
+Node ID: 2 Upload speed: 93498.94 KBs/sec
+----
++
+In this example, node 1 is low on disk space.
+. You can find more information in the knowledge base article listed in the error message.
+
+=== HealthTools is out-of-date
+If you see this error, follow these instructions.
+
+. Review the error message and note that the upgrade check fails.
++
+Here is some sample output:
++
+----
+sfupgradecheck failed: HealthTools is out of date:
+installed version: 2018.02.01.200
+latest version: 2018.03.05.901.
+The latest version of the HealthTools can be downloaded from: https://mysupport.netapp.com/NOW/cgi-bin/software/
+Or rerun with the -n option
+----
+. Follow the steps described in the output.
+
+=== Your management node is on a dark site
+
+. Review the message and note that the upgrade check fails.
++
+Here is some sample output:
++
+----
+sfupgradecheck failed: Unable to verify latest available version of healthtools.
+----
+. Get and save the metadata.json file on a computer that is not the management node and run the following command:
++
+----
+sfupgradecheck -l --metadata=<path-to-metadata-json>
+----
++
+. For details, see additional upgrade information for dark sites.
+. Verify that the HealthTools suite is up-to-date by running the following command:
++
+----
+sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+----
+
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

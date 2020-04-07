@@ -1,0 +1,56 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_compute_node_firmware.html
+summary: As part of the entire NetApp HCI upgrade, you can also upgrade compute node firmware.
+keywords: netapp, hci, on premise, cluster, element, compute node
+---
+
+= Update compute node firmware
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+For any H-Series compute node, you can update the firmware for hardware components such as the BMC, BIOS, and NIC using the RTFI image while leaving the ESXi installation and other configuration data in place.
+
+After the update, the compute node boots into ESXi and works as before, retaining the configuration.
+
+.Before you begin
+
+See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
+
+.About this task
+
+In production environments, only update the firmware on one compute node at a time.
+
+As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
+
+.Steps
+
+. Browse to the https://mysupport.netapp.com/products/p/hci.html[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Accept the End User License Agreement.
+. Under the *Compute and Storage Nodes* heading, download the NetApp HCI compute node image.
+. Write the raw contents of the compute node RTFI image to a USB thumb drive with at least 32GB capacity (using dd or Etcher).
+. Place the compute node in maintenance mode using VMware vCenter, and evacuate all virtual machines from the host.
++
+NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (this is the default in NetApp HCI installations), virtual machines will automatically be migrated to other nodes in the cluster.
+
+. Insert the USB thumb drive into a USB port on the compute node and reboot the compute node using VMware vCenter.
+. During the compute node POST cycle, press *F11* to open the Boot Manager. You may need to press *F11* multiple times in quick succession. You can perform this operation by connecting a video/keyboard or by using the console in `BMC`.
+. Select *One Shot* > *USB Flash Drive* from the menu that appears. If the USB thumb drive does not appear in the menu, verify that USB Flash Drive is part of the legacy boot order in the BIOS of the system.
+. Press *Enter* to boot the system from the USB thumb drive. The firmware flash process begins.
++
+After firmware flashing is complete and the node reboots, it might take a few minutes for ESXi to start.
+. After the reboot is complete, exit maintenance mode on the updated compute node using vCenter.
+. Remove the USB flash drive from the updated compute node.
+. Repeat this task for other compute nodes in your ESXi cluster until all compute nodes are updated.
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
