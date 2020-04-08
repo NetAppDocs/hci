@@ -17,6 +17,12 @@ entries:
        url: /concept_cg_hci_accounts.html
      - title: Data protection
        url: /concept_hci_dataprotection.html
+     - title: Clusters
+       url: /concept_hci_clusters.html
+     - title: Nodes
+       url: /concept_hci_nodes.html
+     - title: Storage
+       url: /concept_hci_storage.html
      - title: Storage
        url: /concept_hci_storage.html
      - title: Security
