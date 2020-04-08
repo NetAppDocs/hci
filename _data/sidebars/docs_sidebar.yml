@@ -23,8 +23,6 @@ entries:
        url: /concept_hci_nodes.html
      - title: Storage
        url: /concept_hci_storage.html
-     - title: Storage
-       url: /concept_hci_storage.html
      - title: Security
        url: /concept_cg_hci_security.html
      - title: Performance
