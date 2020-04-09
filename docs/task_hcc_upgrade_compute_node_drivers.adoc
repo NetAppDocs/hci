@@ -46,7 +46,7 @@ NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (
 
 . Proceed to the *Ready to Complete* page in the wizard and click *Finish*.
 +
-The drivers for all compute nodes in the cluster are update one node at a time while virtual machines stay online.
+The drivers for all compute nodes in the cluster are updated one node at a time while virtual machines stay online.
 
 
 

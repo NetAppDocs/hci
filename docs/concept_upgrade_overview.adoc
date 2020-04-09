@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/concept_upgrade_overview.html
-summary: You can upgrade your NetApp HCI system with the latest updates.
+summary: You can upgrade your NetApp HCI or standalone SolidFire storage system with the latest updates.
 keywords: netapp, hci, on premise, Upgrade, hcc, hybrid cloud control
 ---
 
@@ -14,17 +14,9 @@ keywords: netapp, hci, on premise, Upgrade, hcc, hybrid cloud control
 :keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
-You can upgrade your NetApp HCI system with the latest updates. ​
+You can upgrade your NetApp HCI or standalone SolidFire storage system with the latest updates. ​
 
 == Upgrade components
-
-*	Management services bundles. See (link).
-*	Cloud services. See link:task_enabling_cloud_services.html[Enabling cloud services].
-* Management node. See (link).
-* Element software. See (link).
-
-
-== Upgrade process
 
 
 [discrete]

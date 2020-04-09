@@ -183,26 +183,41 @@ Starting light cluster block service check
 You must use the HealthTools suite of tools to update NetApp Element software at a dark site.
 
 .What you'll need
-Before you upgrade Element software, check upgrade path information for the Element version you are upgrading to and verify that the upgrade path is valid.
 
-* Ensure that the management node in your environment is running version 11.0, 11.1, or later.
-* Ensure that you have the latest version of HealthTools downloaded to the management node.
-* Ensure that your management node is not connected to the Internet.
-
-.Steps
-
-. For NetApp HCI systems, go to the NetApp HCI software download page. For standalone SolidFire storage systems, go to the Element software download page.
+. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/products/p/hci.html[download page]. For standalone SolidFire storage systems, go to the Element software https://mysupport.netapp.com/products/p/element_software.html[download page].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
-. Download a JSON file from the NetApp Support Site on a computer that is not the management node and rename it to metadata.json.
-. Copy the ISO file to the management node in an accessible location like /tmp.
+. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Copy the ISO file to the management node in an accessible location like `/tmp`.
 +
 TIP: You can do this by using, for example, SCP. When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
 
-. Run the `sfupdate-healthtools` command: `sfupdate-healthtools <path-to-healthtools-package>`
-. Check the installed version: `sfupdate-healthtools -v`
-. Check the latest version against the metadata json file: `sfupdate-healthtools -l --metadata=<path-to-metadata-json>``
-. Ensure that the cluster is ready: `sudo sfupgradecheck -u <cluster_username> -p <cluster_password> MVIP --metadata=<path-to-metadata-json>``
-. Run the `sfinstall` command with the path to the ISO file and the metadata json file: `sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO> --metadata=<path-to-metadata-json-file>``
+.Steps
+
+. Run the `sfupdate-healthtools` command:
++
+----
+sfupdate-healthtools <path-to-healthtools-package>
+----
+. Check the installed version:
++
+----
+sfupdate-healthtools -v
+----
+. Check the latest version against the metadata JSON file:
++
+----
+sfupdate-healthtools -l --metadata=<path-to-metadata-json>
+----
+. Ensure that the cluster is ready:
++
+----
+sudo sfupgradecheck -u <cluster_username> -p <cluster_password> MVIP --metadata=<path-to-metadata-json>
+----
+. Run the `sfinstall` command with the path to the ISO file and the metadata JSON file:
++
+----
+sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO> --metadata=<path-to-metadata-json-file>
+----
 +
 See the following sample input command:
 +
@@ -210,7 +225,7 @@ See the following sample input command:
 sfinstall -u admin -p admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/tmp/metadata.json
 ----
 +
-*Optional* You can add the ``--stage` flag to the `'sfinstall` command to pre-stage the upgrade in advance.
+*Optional* You can add the `--stage` flag to the `sfinstall` command to pre-stage the upgrade in advance.
 
 
 == What happens if an upgrade fails
