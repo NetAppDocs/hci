@@ -38,3 +38,5 @@ Multi-factor authentication (MFA) enables you to require users to present multip
 You can configure Element to use multiple authentication schemes, such as password and text message, password and email message, or or other methods.
 
 You can pair multi-factor authentication with common SAML 2.0 compatible IdPs, such as Microsoft Active Directory.
+
+To configure MFA, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-B1C8D8E2-CE95-41FD-9A3E-A0C424EC84F3.html[Enabling multi-factor authentication] in the SolidFire and Element Documentation Center.
