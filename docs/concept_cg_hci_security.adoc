@@ -23,6 +23,8 @@ All drives in storage nodes capable of encryption leverage AES 256-bit encryptio
 
 When you enable Encryption at Rest, performance and efficiency of the cluster is not affected. Additionally, if you remove an encryption-enabled drive or node from the cluster with the Element API or Element UI, Encryption at Rest is disabled on the drives. After you remove the drive, you can securely erase the drive with the `+SecureEraseDrives+` API method. If you forcibly remove a drive or node from the cluster, the data remains protected by the cluster-wide password and the drive’s individual encryption keys.
 
+For information on enabling and disabling encryption at rest, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-EE404D52-B621-4DE5-B141-2559768FB1D0.html[Enabling and disabling encryption for a cluster] in the SolidFire and Element Documentation Center.
+
 == External key management
 
 You can configure Element software to use a third-party key management service (KMS) to manage storage cluster encryption keys. When you enable this feature, the storage cluster's cluster-wide drive access password encryption key is managed by a KMS that you specify.
@@ -32,10 +34,12 @@ External Key Management can use the following key management services:
 * SafeNet AT KeySecure
 * HyTrust KeyControl
 
+For more information on External Key Management, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[Getting started with External Key Management] in the SolidFire and Element Documentation Center.
+
 == Multi-factor authentication
 
 Multi-factor authentication (MFA) enables you to require users to present multiple types of evidence to authenticate with the NetApp Element web UI or storage node UI upon login. You can configure Element to accept only multi-factor authentication for logins, or you can enable session authentication as well as multi-factor authentication.
-You can configure Element to use multiple authentication schemes, such as password and text message, password and email message, or or other methods.
+You can configure Element to use multiple authentication schemes, such as password and text message, password and email message, or other methods.
 
 You can pair multi-factor authentication with common SAML 2.0 compatible IdPs, such as Microsoft Active Directory.
 
