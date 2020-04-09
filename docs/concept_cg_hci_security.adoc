@@ -19,14 +19,14 @@ NetApp HCI and NetApp Element software make use of industry-standard security pr
 
 NetApp HCI enables you to encrypt all data stored on the storage cluster.
 
-All drives in storage nodes capable of encryption leverage AES 256-bit encryption at the drive level. Each drive has its own encryption key, which is created when the drive is first initialized. When you enable the encryption feature, a storage-cluster-wide password is created, and chunks of the password are then distributed to all nodes in the cluster. No single node stores the entire password. The password is then used to password-protect all access to the drives. The password is needed to unlock the drive and then not needed unless power is removed from the drive or the drive is locked.*
+All drives in storage nodes capable of encryption leverage AES 256-bit encryption at the drive level. Each drive has its own encryption key, which is created when the drive is first initialized. When you enable the encryption feature, a storage-cluster-wide password is created, and chunks of the password are then distributed to all nodes in the cluster. No single node stores the entire password. The password is then used to password-protect all access to the drives. The password is needed to unlock the drive and then not needed unless power is removed from the drive or the drive is locked.
 
 When you enable Encryption at Rest, performance and efficiency of the cluster is not affected. Additionally, if you remove an encryption-enabled drive or node from the cluster with the Element API or Element UI, Encryption at Rest is disabled on the drives. After you remove the drive, you can securely erase the drive with the `+SecureEraseDrives+` API method. If you forcibly remove a drive or node from the cluster, the data remains protected by the cluster-wide password and the drive’s individual encryption keys.
 
 == External key management
 
-You can configure Element software to use a third-party key management service (KMS) to manage storage cluster encryption keys. When this feature is enabled, the storage cluster's cluster-wide drive access password encryption key is managed by a KMS that you specify.
-External Key Management can use the following KMS services:
+You can configure Element software to use a third-party key management service (KMS) to manage storage cluster encryption keys. When you enable this feature, the storage cluster's cluster-wide drive access password encryption key is managed by a KMS that you specify.
+External Key Management can use the following key management services:
 
 * Gemalto SafeNet KeySecure
 * SafeNet AT KeySecure
@@ -34,6 +34,7 @@ External Key Management can use the following KMS services:
 
 == Multi-factor authentication
 
-Multi-factor authentication (MFA) enables you to require users to present multiple types of evidence to authenticate with NetApp HCI upon login. You can configure NetApp Element and NetApp HCI to accept only multi-factor authentication for logins, or you can allow session authentication as well as multi-factor authentication.
-You can configure NetApp Element and NetApp HCI to use multiple authentication schemes, such as password and text message, password and email message, and others.
+Multi-factor authentication (MFA) enables you to require users to present multiple types of evidence to authenticate with the NetApp Element web UI or storage node UI upon login. You can configure Element to accept only multi-factor authentication for logins, or you can enable session authentication as well as multi-factor authentication.
+You can configure Element to use multiple authentication schemes, such as password and text message, password and email message, or or other methods.
+
 You can pair multi-factor authentication with common SAML 2.0 compatible IdPs, such as Microsoft Active Directory.
