@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_hcc_upgrade_management_services.html
-summary: As part of the entire NetApp HCI upgrade, you also upgrade management services.
+permalink: docs/task_hcc_update_management_services.html
+summary: As part of the entire NetApp HCI upgrade, you also update management services.
 keywords: netapp, hci, on premise, cluster, management services
 ---
 
@@ -14,9 +14,9 @@ keywords: netapp, hci, on premise, cluster, management services
 :imagesdir: ../media/
 
 [.lead]
-Using NetApp Hybrid Cloud Control, you can update your NetApp management services.
+You can update your NetApp management services using NetApp Hybrid Cloud Control (HCC).
 
-Management service bundles provide functionality and fixes to your installation outside of major releases.
+Management service bundles provide enhanced functionality and fixes to your installation outside of major releases.
 
 .Before you begin
 
@@ -42,7 +42,7 @@ NOTE: If your installation cannot access the internet, only the current software
 .. Follow the instructions on the page to download and save a management services upgrade package to your computer.
 .. Click *Browse* to locate the package you saved and upload it.
 
-The upgrade begins, and you can see the upgrade status on this page.
+After the upgrade begins, you can see the upgrade status on this page.
 
 
 [discrete]

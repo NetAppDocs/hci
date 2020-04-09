@@ -22,14 +22,14 @@ You can run health checks using NetApp Hybrid Cloud Control (HCC) UI or HCC API:
 * <<Use API to run Element storage health checks prior to upgrading storage>>
 
 You can also find out more about storage health checks that are run by the service:
+
 * <<Storage health checks made by the service>>
 
 .What you'll need
 
 * You have updated to the latest management services bundle (2.10.27 or later).
 +
-NOTE: You must upgrade to the latest management services bundle before upgrading your
-Element software to version 12.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
 
 * You are running management node 11.3 or later.
 * Your cluster version is running NetApp Element software 11.3 or later.
@@ -48,14 +48,14 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select the *Storage* tab.
-. Click the health check image::hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
+. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
 . On the *Storage Health Check* page, click *Run Health Check*.
 . If there are issues, do the following:
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
 .. After you have resolved cluster issues, click *Re-Run Health Check*.
 
-After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:<task_hcc_upgrade_element_healthtools>.html[instructions] to proceed.
+After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:<task_hcc_upgrade_element_software.html>[instructions] to proceed.
 
 == Use API to run Element storage health checks prior to upgrading storage
 You can use REST API to verify that a storage cluster is ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as pending nodes, disk space issues, and cluster faults.
@@ -80,7 +80,7 @@ https://[management node IP]/mnode
 .. Open the storage REST API UI on the management node:
 +
 ----
-https://[management node IP]//storage/1
+https://[management node IP]/storage/1
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -120,7 +120,7 @@ The response should indicate state as `initializing`:
 . If the `message` return indicates that there were problems regarding cluster health, do the following:
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
-.. After you have resolved cluster issues, click *GET ​/health-checks​/healthCheckId}* again.
+.. After you have resolved cluster issues, run *GET ​/health-checks​/healthCheckId}* again.
 
 If all health checks are successful, the return is similar to the following example:
 ----
@@ -133,7 +133,6 @@ If all health checks are successful, the return is similar to the following exam
 Storage health checks, whether performed by HCC or API methods, make the following checks per cluster.
 
 |===
-
 | Check Name | Node/Cluster | Description
 
 | check_async_results | Cluster | Verifies that the number of asynchronous results in the database is below a threshold number.
@@ -151,7 +150,6 @@ Storage health checks, whether performed by HCC or API methods, make the followi
 | check_var_log_disk_space | Node | Verifies that `/var/log` free space meets some percentage free threshold. If it does not, the check will rotate and purge older logs in order to fall under threshold. The check fails if it is unsuccessful at creating sufficient free space.
 
 | check_pending_nodes | Cluster | 	Verifies that there are no pending nodes on the cluster.
-
 |===
 
 [discrete]

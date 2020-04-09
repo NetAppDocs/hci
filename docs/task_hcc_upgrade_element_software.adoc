@@ -14,25 +14,25 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-To upgrade the NetApp Element software, you must use the 'sfinstall' file included in the HealthTools suite of tools.
+To upgrade the NetApp Element software, you must use the `sfinstall` file included in the HealthTools suite of tools.
 
 
 .What you'll need
 
-* Ensure that the management node in your environment is running version 11.0, 11.1 or later.
-* Ensure that you have the latest version of HealthTools.
-* Ensure that you verified that the cluster is ready to be upgraded with the command 'sfupgradecheck'.
-
 IMPORTANT: Before you upgrade Element software, check upgrade path information for the Element version you are upgrading to and verify that the upgrade path is valid.
-https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp Knowledgebase Answer 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
+https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
+
+* The management node in your environment is running version 11.0, 11.1 or later.
+* You have the latest version of HealthTools.
+* You verified that the cluster is ready to be upgraded See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 
 == Upgrade Element software at connected sites
 
 .Steps
 
-. For NetApp HCI systems, go to the NetApp HCI software download page. For standalone SolidFire storage systems, go to the Element software download page.
+. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/products/p/hci.html[download page]. For standalone SolidFire storage systems, go to the Element software https://mysupport.netapp.com/products/p/element_software.html[download page].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
-. Copy the ISO file to the management node in an accessible location like /tmp.
+. Copy the ISO file to the management node in an accessible location like `/tmp`.
 +
 TIP: You can do this by using, for example, SCP.
 
@@ -43,8 +43,11 @@ When you upload the ISO file, make sure that the name of the file does not chang
 +
 This step reduces the upgrade time by pre-staging the ISO on the storage nodes and running additional internal checks to ensure that the cluster is in a good state to be upgraded. Performing this operation will not put the cluster into "upgrade" mode or restrict any of the cluster operations.
 +
-`sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO> --stage`
-NOTE: For passwords that contain special characters, add a backslash (\) before each special character. For example, 'mypass!@1' should be entered as 'mypass\!\@'. Alternatively, omit the password from the command line to allow 'sfinstall' to prompt for the information.
+----
+sfinstall -u <cluster_username> -p <cluster_password> <MVIP> <path-toinstall-file-ISO> --stage
+----
++
+NOTE: For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`. Alternatively, omit the password from the command line to allow `sfinstall` to prompt for the information.
 
 +
 *Example*
@@ -55,20 +58,20 @@ sfinstall 10.117.0.244 -u admin -p admin
 /tmp/solidfire-rtfisodium-11.0.0.345.iso --stage
 ----
 +
-The output for the sample shows that sfinstall attempts to verify if a newer version of sfinstall is available:
+The output for the sample shows that `sfinstall` attempts to verify if a newer version of `sfinstall` is available:
 +
 ----
 sfinstall 10.117.0.244 -u admin -p admin
 /tmp/solidfire-rtfisodium-11.0.0.345.iso 2018-10-01 16:52:15:
 Newer version of sfinstall available.
 This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from: 
+The latest version of the HealthTools can be downloaded from:
 https:// mysupport.netapp.com/NOW/cgi-bin/software/
 or rerun with --skip-version-check
 ----
-. See the following sample excerpt from a successful pre-stage operation:
+See the following sample excerpt from a successful pre-stage operation:
 +
-NOTE: When staging completes, the upgrade event message will display "Storage Node Upgrade Staging Successful."
+NOTE: When staging completes, the message will display `Storage Node Upgrade Staging Successful` after the upgrade event.
 
 +
 ----
@@ -97,6 +100,7 @@ patch3-11.3.0.14171/filesystem.squashfs
 
 +
 The staged ISOs will be automatically deleted after the upgrade completes. However, if the upgrade has not started and needs to be rescheduled, ISOs can be manually de-staged using the command:
++
 `sfinstall -u <cluster_username> -p <cluster_password> <MVIP> --destage`
 
 +
@@ -115,7 +119,7 @@ See the following sample input command:
 sfinstall 10.117.0.244 -u admin -p admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
 ----
 +
-The output for the sample shows that `sfinstall` attempts to verify if a newer version of sfinstall is available:
+The output for the sample shows that `sfinstall` attempts to verify if a newer version of `sfinstall` is available:
 +
 ----
 sfinstall 10.117.0.244 -u admin -p admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
