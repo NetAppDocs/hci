@@ -111,3 +111,5 @@ entries:
        url: /task_hcc_expand_compute.html
      - title: Expand NetApp storage and compute resources
        url: /task_hcc_expand_compute_and_storage.html
+   - title: Legal notices
+     url: /reference_notices_hci.html
