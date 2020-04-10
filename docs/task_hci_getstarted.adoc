@@ -167,7 +167,24 @@ image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 == (Optional) Expand, monitor, or upgrade NetApp HCI with the Hybrid Cloud Control
 
 You can use the NetApp HCI Hybrid Cloud Control to expand, monitor, or upgrade your system.
-For details, see link:/task_hcc_access.html[Access Hybrid Cloud Control^].
+
+You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
+
+Using the Hybrid Cloud Control, you can do the following:
+
+* link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
+* link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
+* link:concept_hcc_expandoverview.html[Expand your NetApp HCI storage or compute resources]
+
+*Steps*
+
+. Open a web browser and browse to the IP address of the management node. For example:
++
+https://_<ManagementNodeIP>_
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
++
+The NetApp Hybrid Cloud Control interface appears.
+
 
 
 [discrete]
