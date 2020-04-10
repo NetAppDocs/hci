@@ -46,3 +46,4 @@ You can configure Element to integrate with an existing SAML 2.0 identity provid
 You can pair multi-factor authentication with common SAML 2.0 compatible identity providers (IdPs), such as Microsoft Active Directory Federation Services (ADFS) and Shibboleth.
 
 To configure MFA, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-B1C8D8E2-CE95-41FD-9A3E-A0C424EC84F3.html[Enabling multi-factor authentication] in the SolidFire and Element Documentation Center.
+

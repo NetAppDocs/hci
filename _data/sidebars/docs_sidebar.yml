@@ -1,92 +1,38 @@
 entries:
   - title: NetApp HCI Documentation
     url: ../../../../index.html
-  - title: NetApp HCI Management and Cloud Services
+  - title: NetApp HCI Management
     url: /index.html
-  - title: What's new in NetApp HCI
-    url: /rn_whatsnew.html
+  - title: Release Notes
+    entries:
+      - title: What's new in NetApp HCI
+        url: /rn_whatsnew.html
+      - title: Additional release information
+        url: /rn_relatedrn.html
   - title: Concepts
     entries:
      - title: Product overview
        url: /concept_hci_product_overview.html
      - title: Accounts
        url: /concept_cg_hci_accounts.html
-     - title: Cloud services
-       url: /concept_cg_hci_cloud_services.html
      - title: Data protection
        url: /concept_hci_dataprotection.html
+     - title: Clusters
+       url: /concept_hci_clusters.html
+     - title: Nodes
+       url: /concept_hci_nodes.html
      - title: Storage
        url: /concept_hci_storage.html
-     - title: Licensing
-       url: /concept_hci_licensing.html
      - title: Security
        url: /concept_cg_hci_security.html
      - title: Performance
        url: /concept_hci_performance.html
-  - title: Get started with Hybrid Cloud Control
+  - title: Get started with NetApp HCI
     entries:
-      - title: Prerequisites to using Hybrid Cloud Control
-        url: /reference_hcc_prerequisites.html
+      - title: NetApp HCI installation and deployment overview
+        url: /task_hci_getstarted.html
       - title: Access Hybrid Cloud Control
         url: /task_hcc_access.html
-  - title: Enable cloud services on NetApp HCI
-    entries:
-      - title: Cloud services on NetApp HCI overview
-        url: /concept_overview.html
-      - title: Concepts
-        entries:
-          - title: Types of cloud services on NetApp HCI
-            url: /concept_types_cloudservices.html
-          - title: Architecture overview for cloud services on NetApp HCI
-            url: /concept_architecture.html
-          - title: What happens when you enable NetApp Kubernetes Service?
-            url: /concept_behind_the_scenes.html
-          - title: Cluster types in cloud services on NetApp HCI
-            url: /concept_cluster_types.html
-          - title: Kubernetes terminology
-            url: /concept_kubernetes_pods_volumes_projects.html
-      - title: Prerequisites for cloud services on NetApp HCI
-        entries:
-          - title: Prerequisites overview
-            url: /concept_gettingstarted.html
-          - title: Cloud Central accounts
-            url: /concept_cloud_central_accounts.html
-          - title: Sign up for a Cloud Central account
-            url: /task_cloudcentral_signup.html
-          - title: System requirements before you begin
-            url: /reference_requirements_beforeyoubegin.html
-          - title: Licensing
-            url: /concept_licensing.html
-          - title: Get a NetApp Kubernetes Service API token
-            url: /task_getting_a_netapp_kubernetes_service_api_token.html
-      - title: Enable cloud services on NetApp HCI
-        entries:
-          - title: Deploy cloud services on NetApp HCI overview
-            url: /task_deploying_overview.html
-          - title: Enable cloud services using NetApp Hybrid Cloud Control
-            url: /task_enabling_cloud_services.html
-      - title: Enable Kubernetes clusters on NetApp HCI
-        entries:
-          - title: Manage Kubernetes clusters on NetApp HCI overview
-            url: /task_nks_overview.html
-          - title: Accesse NetApp Kubernetes Service
-            url: /task_nks_accessing.html
-          - title: Create a Kubernetes cluster using NetApp Kubernetes Service
-            url: /task_NKS_create_cluster.html
-          - title: Create a project within your Kubernetes workspace
-            url: /task_nks_creating_projects.html
-          - title: Add applications to your Kubernetes clusters
-            url: /task_NKS_adding_applications.html
-      - title: Manage data in Cloud Volumes with NetApp Fabric Orchestrator
-        entries:
-          - title: Manage data in NetApp Cloud Volumes overview
-            url: /task_cv_managing.html
-          - title: What happens when you enable Cloud Volumes on NetApp HCI?
-            url: /concept_behind_the_scenes_fo.html
-          - title: Access NetApp Fabric Orchestrator
-            url: /task_fo_accessing.html
-          - title: Create cloud volumes with NetApp Fabric Orchestrator
-            url: /task_dfo_creating_cloud_volumes.html
   - title: Monitor your NetApp HCI system
     entries:
       - title: View resources on the HCC Dashboard

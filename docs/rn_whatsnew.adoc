@@ -20,24 +20,37 @@ NetApp periodically updates NetApp HCI to bring you new features, enhancements, 
 == NetApp HCI 1.8
 This update includes the following new features and enhancements.
 
-=== NetApp HCI and NetApp Kubernetes Service changes from Preview to Production
+* abc
+* abc
+* abc
+
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.9 Release Notes] [PLACEHOLDER; update link]
+
+== NetApp Element 12.0 software
+http://docs.netapp.com/sfe-120/index.jsp[What's new with NetApp Element software^]
+
+
+== Management services 2.4 for Element software and NetApp HCI
+https://kb.netapp.com/app/answers/answer_view/a_id/1087586[_Management Services Release Notes_^]
+
+
+== NetApp Element Plug-in for vCenter Server 4.4
 (blurb)
 
-=== Self licensing for Cloud Volumes on NetApp HCI
-(Blurb)
-
-See link:task_nks_overview.html[Managing Cloud Volumes on NetApp HCI overview] information.
-
-=== Management services 2.4 updates
-(blurb)
+* abc
+* abc
+* abc
 
 === Content improvements
 (blurb)
+
+* abc
+* abc
+* abc
 
 
 [discrete]
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]
-* https://docs.netapp.com/us-en/kubernetes-service/[NetApp Kubernetes Service Documentation^]
+* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
