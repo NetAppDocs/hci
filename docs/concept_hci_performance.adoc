@@ -51,7 +51,7 @@ Here are the possible minimum and maximum values for QoS.
 [cols="7*",options="header">]
 |===
 | Parameters
-| Minimum value
+| Min value
 | Default
 | 4 4KB
 | 5 8KB
