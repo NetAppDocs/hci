@@ -111,8 +111,8 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 .. Click *Authorize* to begin a session.
 .. Close the window.
 . Upload and extract the service bundle on the management node using this command: `PUT /services/upload`
-. Deploy the management services on the management node: `PUT/services/deploy`
-. Monitor the status of the update: `GET/services/update/status`
+. Deploy the management services on the management node: `PUT /services/deploy`
+. Monitor the status of the update: `GET /services/update/status`
 +
 A successful update returns a result similar to the following example:
 +

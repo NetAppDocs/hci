@@ -44,8 +44,8 @@ entries:
           - title: Upgrade overview of the entire NetApp HCI installation
             url: /task_hcc_upgrade_all.html
           - title: Update management services
-            url: /task_hcc_upgrade_management_services.html
-          - title: Use HealthTools to run pre-upgrade health checks
+            url: /task_hcc_update_management_services.html
+          - title: Run Element storage health checks prior to upgrading storage
             url: /task_hcc_upgrade_element_prechecks.html
           - title: Upgrade Element software
             url: /task_hcc_upgrade_element_software.html
