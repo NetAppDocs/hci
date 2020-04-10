@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference_notices_fo.html
+permalink: reference_notices_hci.html
 keywords: copyrights, notice, trademarks, patents, privacy, open source
 summary: Legal notices provide access to copyright statements, trademarks, patents, and more.
 translate: false
@@ -40,4 +40,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
-* link:media/notice_fo_cvonhci.pdf[Notice for NetApp Fabric Orchestrator November 2019 release]
+* INSERT LINK HERE[Notice for NetApp HCI]
