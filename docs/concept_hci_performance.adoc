@@ -48,7 +48,7 @@ Example: QoS parameter settings of 100 Min IOPS, 1000 Max IOPS, and 1500 Burst I
 == QoS value limits
 Here are the possible minimum and maximum values for QoS.
 
-[cols=7*,options="header",cols=<,>,>, >, >, >, >]
+[cols=7*,options="header">]
 |===
 | Parameters
 | Minimum value
