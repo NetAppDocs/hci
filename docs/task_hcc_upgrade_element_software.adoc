@@ -186,7 +186,7 @@ You must use the HealthTools suite of tools to update NetApp Element software at
 
 . For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/products/p/hci.html[download page]. For standalone SolidFire storage systems, go to the Element software https://mysupport.netapp.com/products/p/element_software.html[download page].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
-. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
 . Copy the ISO file to the management node in an accessible location like `/tmp`.
 +
 TIP: You can do this by using, for example, SCP. When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.

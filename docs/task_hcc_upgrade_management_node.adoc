@@ -17,8 +17,9 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, ver
 You can upgrade your management node to management node version 12.0 from version 11.0 or later. If you are upgrading from a management node version 10.x, you must migrate your management node settings to a new management node 11.1 VM before you can update to management node 11.3 or later
 
 Choose one of the following management node upgrade options:
+
 * If you are upgrading from management node 11.3 or later:
-<<Upgrade a management node to version 12.0 from 11.3>>
+<<Upgrade a management node to version 12.0 from 11.3 or later>>
 * If you are upgrading from management node 11.0 or 11.1:
 <<Upgrade a management node to version 12.0 from 11.1 or 11.0>>
 * If you are upgrading from a management node version 10.x:
@@ -28,8 +29,8 @@ Choose one of the following management node upgrade options:
 
 * The vCenter Plug-in 4.4 or later requires a management node 11.3 or later that is created with modular architecture and provides individual services.
 
-== Upgrade a management node to version 12.0 from 11.3
-You can perform an in-place upgrade of the management node from 11.3 to version 12.0 without needing to provision a new management node virtual machine.
+== Upgrade a management node to version 12.0 from 11.3 or later
+You can perform an in-place upgrade of the management node from 11.3 or later to version 12.0 without needing to provision a new management node virtual machine. You can use this procedure if you are upgrading from any of the following management node versions: 11.3, 11.5, 11.7, or 11.8.
 
 .Before you begin
 
@@ -37,11 +38,8 @@ You can perform an in-place upgrade of the management node from 11.3 to version 
 +
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
-* You have updated your management services bundle to the latest version using Hybrid Cloud Control (HCC):
-+
-----
-https://<ManagementNodeIP>
-----
+* You have updated your management services bundle to the latest version using Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
+
 +
 NOTE: HCC is available with management services bundle 2.1.326. For NetApp HCI, the HCC option is only available if you have performed the one-time upgrade from the NetApp Deployment Engine: `https://<StorageNodeMIP>:442/nde`
 
@@ -179,7 +177,7 @@ sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_u
 +
 The management node reboots with a new OS after the upgrade process completes.
 
-. On the 12.0 management node, run the *upgrade-mnode* script to retain previous configuration settings.
+. On the 12.0 management node, run the `upgrade-mnode` script to retain previous configuration settings.
 +
 NOTE: If you are migrating from an 11.0 or 11.1 management node, the script copies the Active IQ collector to the new configuration format.
 
@@ -201,7 +199,7 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user>
 sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent volume> -pva <persistent volume account name - storage volume account> -pvm <persistent volumes mvip>
 ----
 
-.. For multiple storage clusters managed by an existing management node 11.0 or 11.1 with no persistent volumes (*-pvm* flag is just to provide one of the cluster's MVIP addresses):
+.. For multiple storage clusters managed by an existing management node 11.0 or 11.1 with no persistent volumes (the `-pvm` flag is just to provide one of the cluster's MVIP addresses):
 +
 ----
 sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent volumes>
@@ -227,7 +225,7 @@ NOTE: Logging into vSphere Web Client after updating registration installs the n
 
 +
 You should see the following version details or details of a more recent version:
-+
+
 ----
 NetApp Element Plug-in Version: 4.3.0
 NetApp Element Plug-in Build Number: 233
@@ -298,14 +296,14 @@ https://<mNode 11.1 IP address>:9443
 ----
 . Set the new QoSSIOC password.
 +
-NOTE: The default password is solidfire. This password is required to set the new password.
+NOTE: The default password is `solidfire`. This password is required to set the new password.
 
 . Click the *vCenter Plug-in Registration* tab.
 . Select *Update Plug-in*.
 . Enter required values. When you are finished, click *UPDATE*.
 . Log in to vSphere and select *NetApp Element Configuration* > *mNode Settings*.
 . Click *Actions* > *Configure*.
-. Provide the management node IP address, management node user ID (the user name is *admin*), password that you set on the *QoSSIOC Service Management* tab of the registration utility, and vCenter user ID and password.
+. Provide the management node IP address, management node user ID (the user name is `admin`), password that you set on the *QoSSIOC Service Management* tab of the registration utility, and vCenter user ID and password.
 +
 In vSphere, the *mNode Settings* tab should display the mNode status as *UP*, which indicates management node 11.1 is registered to vCenter.
 
