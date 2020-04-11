@@ -40,4 +40,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
-* INSERT LINK HERE[Notice for NetApp HCI 1.8]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2870307[Notice for NetApp HCI 1.8^]
