@@ -1,0 +1,28 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_hci_product_overview.html
+summary:
+keywords: netapp, hci, on premise, cloud,
+---
+
+= NetApp HCI product overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, cloud, onprem, documentation, help
+
+[.lead]
+NetApp HCI is an enterprise-scale hybrid cloud infrastructure design that combines storage, compute, networking, and hypervisor—and adds capabilities that span public and private clouds.
+
+NetApp’s disaggregated hybrid cloud infrastructure allows independent scaling of compute and storage, adapting to workloads with guaranteed performance.
+
+* Meets hybrid multicloud demand
+* Scales compute and storage independently
+* Simplifies data services orchestration across hybrid multiclouds
+
+[discrete]
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
