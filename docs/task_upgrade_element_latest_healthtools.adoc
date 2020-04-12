@@ -44,12 +44,10 @@ The commands in the HealthTools suite require escalated privileges to run. Eithe
 NOTE: The HealthTools version you use might be more up to date than the sample input and response below.
 
 Sample input:
-+
 ----
 sfupdate-healthtools /tmp/solidfire-healthtools-2020.03.01.09.tgz
 ----
 Sample response:
-+
 ----
 Checking key signature for file /tmp/solidfirehealthtools-2020.03.01.09/components.tgz
 installing command sfupdate-healthtools
@@ -59,10 +57,10 @@ installing command sfupgradecheck
 installing command sfinstall
 installing command sfresetupgrade
 ----
+
 . Run the `sfupdate-healthtools -v` command to verify the installed version has been upgraded.
 +
 Sample response:
-+
 ----
 Currently installed version of HealthTools:
 2020.03.01.09
