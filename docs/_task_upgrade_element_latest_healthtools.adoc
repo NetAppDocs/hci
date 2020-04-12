@@ -1,0 +1,75 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_upgrade_element_latest_healthtools.html
+summary: As part of a system upgrade, you should upgrade to the latest HealthTools for NetApp Element software.
+keywords: netapp, HealthTools upgrade, sfupdate-healthtools, element
+---
+
+= Upgrade to the latest HealthTools
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Before you begin the Element storage upgrade, you should upgrade your HealthTools suite.
+
+.What you'll need
+
+* You are running management node 11.0, 11.1 or later.
+* You have upgraded your management services to at least version 2.1.326.
++
+NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
+* You have downloaded the latest HealthTools suite:
+. Log in to the NetApp Support Site at https://mysupport.netapp.com/products/p/healthtools.html.
+. Download the latest version of HealthTools to a computer that is not the management node.
+. Copy the installation file to the management node.
++
+TIP: You can do this by using, for example, SCP.
+
+* To use HealthTools with dark sites, you need to do these additional steps:
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Have the management node up and running at the dark site.
+
+.About this task
+
+The commands in the HealthTools suite require escalated privileges to run. Either preface commands with `sudo` or escalate your user to root privileges.
+
+.Steps
+
+. Run the `sfupdate-healthtools <path to install file>` command to install the new HealthTools software.
++
+NOTE: The HealthTools version you use might be more up to date than the sample input and response below.
+
+Sample input:
++
+----
+sfupdate-healthtools /tmp/solidfire-healthtools-2020.03.01.09.tgz
+----
+Sample response:
++
+----
+Checking key signature for file /tmp/solidfirehealthtools-2020.03.01.09/components.tgz
+installing command sfupdate-healthtools
+Restarting on version 2020.03.01.09
+sfupdate-healthtools /sf/bin/sfupdate-healthtools -r 2020.03.01.09
+installing command sfupgradecheck
+installing command sfinstall
+installing command sfresetupgrade
+----
+. Run the `sfupdate-healthtools -v` command to verify the installed version has been upgraded.
++
+Sample response:
++
+----
+Currently installed version of HealthTools:
+2020.03.01.09
+----
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

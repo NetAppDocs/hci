@@ -47,6 +47,8 @@ entries:
             url: /task_hcc_upgrade_all.html
           - title: Update management services
             url: /task_hcc_update_management_services.html
+          - title: Upgrade to the latest HealthTools
+            url: /task_upgrade_element_latest_healthtools.html
           - title: Run Element storage health checks prior to upgrading storage
             url: /task_hcc_upgrade_element_prechecks.html
           - title: Upgrade Element software
