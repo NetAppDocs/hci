@@ -156,11 +156,13 @@ sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
 NOTE: For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`.
 
 +
-Sample input command with sample output:
+Sample input command with sample output in which no errors appear and you are ready to upgrade:
 +
 ----
 sfupgradecheck -u admin -p admin 10.117.78.244
-A sample output is as follows. In this result, no errors appear and you are ready to upgrade.
+----
++
+----
 check_pending_nodes:
 Test Description: Verify no pending nodes in cluster
 More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
@@ -191,7 +193,7 @@ Node ID: 2 Upload speed: 85038.75 KBs/sec
 . If there are errors, additional actions are required. See the following sub-sections for details.
 
 === Your cluster is not upgrade ready
-If you see this message, follow these steps:
+If you see an error message related to one of the health checks, follow these steps:
 
 . Review the `sfupgradecheck` error message.
 +
@@ -231,12 +233,11 @@ Node ID: 1 Upload speed: 86518.82 KBs/sec
 Node ID: 3 Upload speed: 84112.79 KBs/sec
 Node ID: 2 Upload speed: 93498.94 KBs/sec
 ----
-+
 In this example, node 1 is low on disk space.
-. You can find more information in the knowledge base https://kb.netapp.com[knowledge base^] (KB) article listed in the error message.
+. You can find more information in the https://kb.netapp.com[knowledge base^] (KB) article listed in the error message.
 
-=== HealthTools is out-of-date
-If you see this error, follow these instructions:
+=== HealthTools is out of date
+If you see an error message indicating that HealthTools is not the latest version, follow these instructions:
 
 . Review the error message and note that the upgrade check fails.
 +
@@ -260,7 +261,8 @@ Sample response:
 ----
 sfupgradecheck failed: Unable to verify latest available version of healthtools.
 ----
-. Get and save the `metadata.json` file on a computer that is not the management node and run the following command:
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Run the following command:
 +
 ----
 sfupgradecheck -l --metadata=<path-to-metadata-json>
