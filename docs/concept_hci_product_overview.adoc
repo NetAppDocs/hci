@@ -22,6 +22,33 @@ NetApp’s disaggregated hybrid cloud infrastructure allows independent scaling 
 * Scales compute and storage independently
 * Simplifies data services orchestration across hybrid multiclouds
 
+== NetApp HCI architecture
+The following illustration shows the various components of the NetApp HCI environment:
+
+INSERT IMAGE HERE.
+INCLUDE DESCRIPTIONS FOR WHAT IS IN THE IMAGE.
+
+== NetApp HCI URLs
+The following table includes the descriptions for the URLs that you use in NetApp HCI:
+
+[%header,cols=2*]
+|===
+|URL
+|Description
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row
+|===
+
 [discrete]
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
