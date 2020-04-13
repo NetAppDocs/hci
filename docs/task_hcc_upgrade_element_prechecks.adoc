@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_element_prechecks.html
 summary: As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software.
-keywords: netapp, hci, on premise, cluster, element
+keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck
 ---
 
 = Run Element storage health checks prior to upgrading storage
@@ -16,10 +16,11 @@ keywords: netapp, hci, on premise, cluster, element
 [.lead]
 You must run health checks prior to upgrading Element storage to ensure all storage nodes in your cluster are ready for the next Element storage upgrade.
 
-You can run health checks using NetApp Hybrid Cloud Control (HCC) UI or HCC API:
+You can run health checks using NetApp Hybrid Cloud Control (HCC) UI, HCC API, or the HealthTools suite:
 
 * <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>>
 * <<Use API to run Element storage health checks prior to upgrading storage>>
+* <<Use HealthTools to run Element storage health checks prior to upgrading storage>>
 
 You can also find out more about storage health checks that are run by the service:
 
@@ -129,8 +130,152 @@ If all health checks are successful, the return is similar to the following exam
 "timestamp": "2020-03-06T00:03:16.321621Z"
 ----
 
+== Use HealthTools to run Element storage health checks prior to upgrading storage
+
+You can verify that the storage cluster is ready to be upgraded by using the `sfupgradecheck` command. This command verifies information such as pending nodes, disk space, and cluster faults.
+
+If your management node is at a dark site, the upgrade readiness check needs the `metadata.json` file you downloaded during link:task_upgrade_element_latest_healthtools.html[HealthTools upgrades] to run successfully.
+
+.About this task
+
+This procedure describes how to address upgrade checks that yield one of the following results:
+
+* Running the `sfupgradecheck` command runs successfully. Your cluster is upgrade ready.
+* Checks within the `sfupgradecheck` tool fail with an error message. Your cluster is not upgrade ready and additional steps are required.
+* Your upgrade check fails with an error message that HealthTools is out-of-date.
+* Your upgrade check fails because your management node is on a dark site.
+
+.Steps
+
+. Run the `sfupgradecheck` command:
++
+----
+sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+----
++
+NOTE: For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`.
+
++
+Sample input command with sample output in which no errors appear and you are ready to upgrade:
++
+----
+sfupgradecheck -u admin -p admin 10.117.78.244
+----
++
+----
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/
+SolidFire-Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the
+management node
+Node ID: 1 Upload speed: 90063.90 KBs/sec
+Node ID: 3 Upload speed: 106511.44 KBs/sec
+Node ID: 2 Upload speed: 85038.75 KBs/sec
+----
+. If there are errors, additional actions are required. See the following sub-sections for details.
+
+=== Your cluster is not upgrade ready
+If you see an error message related to one of the health checks, follow these steps:
+
+. Review the `sfupgradecheck` error message.
++
+Sample response:
+----
+The following tests failed:
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Severity: ERROR
+Failed node IDs: 2
+Remedy: Remove unneeded files from root drive
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the management node
+Node ID: 1 Upload speed: 86518.82 KBs/sec
+Node ID: 3 Upload speed: 84112.79 KBs/sec
+Node ID: 2 Upload speed: 93498.94 KBs/sec
+----
+In this example, node 1 is low on disk space. You can find more information in the https://kb.netapp.com[knowledge base^] (KB) article listed in the error message.
+
+=== HealthTools is out of date
+If you see an error message indicating that HealthTools is not the latest version, follow these instructions:
+
+. Review the error message and note that the upgrade check fails.
++
+Sample response:
++
+----
+sfupgradecheck failed: HealthTools is out of date:
+installed version: 2018.02.01.200
+latest version: 2020.03.01.09.
+The latest version of the HealthTools can be downloaded from: https://mysupport.netapp.com/NOW/cgi-bin/software/
+Or rerun with the -n option
+----
+. Follow the instructions described in the response.
+
+=== Your management node is on a dark site
+
+. Review the message and note that the upgrade check fails:
++
+Sample response:
++
+----
+sfupgradecheck failed: Unable to verify latest available version of healthtools.
+----
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Run the following command:
++
+----
+sfupgradecheck -l --metadata=<path-to-metadata-json>
+----
++
+. For details, see additional link:task_upgrade_element_latest_healthtools.html[HealthTools upgrades]  information for dark sites.
+. Verify that the HealthTools suite is up-to-date by running the following command:
++
+----
+sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+----
+
 == Storage health checks made by the service
-Storage health checks, whether performed by HCC or API methods, make the following checks per cluster.
+Storage health checks make the following checks per cluster.
 
 |===
 | Check Name | Node/Cluster | Description
