@@ -19,12 +19,12 @@ You can find links to the release notes for various components of the NetApp HCI
 NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == NetApp HCI
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.8 Release Notes]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2859108[NetApp HCI 1.7 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes]
 
 == NetApp Element software
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225[NetApp Element Software 12.0 Release Notes]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225[NetApp Element Software 11.8 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022[NetApp Element Software 12.0 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256[NetApp Element Software 11.8 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225[NetApp Element Software 11.7 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2863854[NetApp Element Software 11.5.1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2859857[NetApp Element Software 11.3P1 Release Notes]
@@ -33,5 +33,5 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://kb.netapp.com/app/answers/answer_view/a_id/1087586/loc/en_US#__highlight[Management Services Release Notes]
 
 == NetApp Element Plug-in for vCenter Server
-* vCenter Plug-in 4.5 (?) Release Notes
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[vCenter Plug-in 4.4 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
