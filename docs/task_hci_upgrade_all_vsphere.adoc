@@ -1,0 +1,57 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_upgrade_all_vsphere.html
+summary: You can upgrade NetApp HCI, including all NetApp and VMware components.
+keywords: netapp, hci, vSphere components, upgrade, element cluster
+---
+
+= Upgrade your entire NetApp HCI installation for version 1.8 including vSphere components
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can keep the entire NetApp HCI installation up-to-date after deployment by sequentially upgrading all NetApp HCI software and VMware vSphere components.
+
+These components include vCenter Server, ESXi, management services, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.
+
+.What you'll need
+
+* You are running management node 11.3 or later. Newer versions of the management node have a modular architecture that provides individual services.
++
+TIP: To check the version, log in to your management node and view the Element version number in the login banner. If you do not have 11.3, see link:task_hcc_upgrade_management_node.html[Upgrade your management node].
+
+* You have upgraded your management services to at least version 2.1.326.
++
+Upgrades using HCC are not available in earlier service bundle versions.
+
+
+.Steps
+
+. Unregister and remove the Element Plug-in for vCenter Server:
+.. http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-2AA0DA12-A3E3-4BAE-9413-A01A54B9B7CE.html[Clear^] mNode settings in the plug-in (*NetApp Element Configuration > mNode Settings*). The *mNode Status* field displays `Not Configured` after the process is complete.
+.. http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-6EC12854-37E6-421E-A5AA-8686AB0712FC.html[Unregister^] the plug-in from the vCenter Server with which it is associated using the registration utility.
+.. Remove the plug-in by stopping vCenter Server services, removing associated plug-in files, and restarting vCenter Server services. See http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-F8A97D43-D94B-468A-B260-11ED635C960E.html[Removing the vCenter Plug-in^].
+. https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html[Upgrade vSphere, including vCenter Server, ESXi, VMs and other VMware components^].
+. link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
+. link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
+. link:task_hcc_upgrade_management_services.html[Update management services from Hybrid Cloud Control].
++
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your
+Element software to version 12.
+
+. link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+. link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
+. link:task_hcc_upgrade_management_node.html[Upgrade your management node].
+. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
+. Validate cluster health using Active IQ to make sure cluster is reporting in correctly.
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
