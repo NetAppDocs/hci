@@ -1,5 +1,5 @@
 ---
-sidebar: sidebar
+sidebar: docs_sidebar
 permalink: docs/reference_notices_hci.html
 keywords: copyrights, notice, trademarks, patents, privacy, open source
 summary: Legal notices provide access to copyright statements, trademarks, patents, and more.
@@ -11,7 +11,7 @@ translate: false
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Legal notices provide access to copyright statements, trademarks, patents, and more.
@@ -40,4 +40,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2870307[Notice for NetApp HCI 1.8^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2870307[Notice for NetApp HCI 1.8^]
