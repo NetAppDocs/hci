@@ -16,7 +16,7 @@ keywords: netapp, solidfire, vsphere components, upgrade, element cluster
 [.lead]
 You can keep your entire SolidFire Element storage installation up-to-date after deployment by sequentially upgrading all NetApp and VMware vSphere components.
 
-These components include vCenter Server, ESXi, management services, NetApp Hybrid Cloud Control (HCC), Element software, management node, and (depending on your installation) the Element Plug-in for vCenter Server 4.4.
+These components include vCenter Server, ESXi, management services, NetApp Hybrid Cloud Control (HCC), Element software, management node, and (depending on your installation) the Element Plug-in for vCenter Server.
 
 .What you'll need
 

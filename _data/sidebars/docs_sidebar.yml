@@ -37,7 +37,7 @@ entries:
         url: /task_hcc_activeiq.html
   - title: Upgrade your NetApp HCI system
     entries:
-      - title: Upgrade overview
+      - title: Upgrades overview
         url: /concept_hci_upgrade_overview.html
       - title: Upgrade sequence overviews
         entries:
