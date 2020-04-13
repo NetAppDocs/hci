@@ -1,0 +1,92 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_vcp_upgrade_plugin.html
+summary: As part of a NetApp HCI or standalone SolidFire storage system upgrade, you can upgrade the Element Plug-in for vCenter Server.
+keywords: netapp, vcp, vCenter plug-in, cluster, upgrade
+---
+
+= Upgrade the Element Plug-in for vCenter Server to version 4.4
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+For existing vSphere environments with a registered NetApp Element Plug-in for vCenter Server (VCP), you can update your plug-in registration after you first update the management services package that contains the plug-in service. You can update the plug-in registration on vCenter Server Virtual Appliance (vCSA) or Windows using the registration utility. You must change your registration for the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
+
+This upgrade procedure covers the following upgrade scenarios:
+
+* You are upgrading to a 6.5 or 6.7 HTML5 vSphere Web Client.
+* You are upgrading to a 6.5 or 6.7 Flash vSphere Web Client.
+
+IMPORTANT: The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. It is compatible with the version 6.7 U2 vSphere Web Client for Flash. The plug-in has not yet been tested for use with vSphere 7.0.
+
+.Before you begin
+
+* *Admin privileges*: You have vCenter Administrator role privileges to install a plug-in.
+* *vSphere upgrades*: You have performed any required vCenter upgrades before upgrading the NetApp Element Plug-in for vCenter Server. This procedure assumes that vCenter upgrades have already been completed.
+* *vCenter Server*: Your vCenter Plug-in version 4.x is registered with a vCenter Server. From the registration utility (`https://[management node IP]:9443`), click *Registration Status*, complete the necessary fields, and click *Check Status* to verify that the vCenter Plug-in is already registered and the version number of the current installation.
+* *Management services updates*: You have updated your https://mysupport.netapp.com/products/p/mgmtservices.html[management services bundle] to the latest version. Updates to the vCenter plug-in are distributed using management services updates that are released outside of major product releases for NetApp HCI and SolidFire all-flash storage.
+* *Management node upgrades*: You are running a management node that has been link:task_hcc_upgrade_management_node.html[upgraded] to version 11.3 or later. vCenter Plug-in 4.4 or later requires a an 11.3 or later management node with a modular architecture that provides individual services. Your management node must be powered on with its IP address or DHCP address configured.
+* *Element storage upgrades*: You have a cluster running NetApp Element software 11.3 or later.
+* *vSphere Web Client*: You have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client will not recognize updates made during this process to your plug-in if you do not log out.
+
+.Steps
+
+. Enter the IP address for your management node in a browser, including the TCP port for registration:
+`https://[management node IP]:9443`
+The registration utility UI displays the *Manage QoSSIOC Service Credentials* page for the plug-in.
++
+image::vcp_registration_utility_ui_qossioc.png[depicts the registration utility UI for the plug-in]
+
+. Click *vCenter Plug-in Registration*.
++
+image::vcp_registration_utility_ui.png[depicts the registration utility UI for the plug-in]
+
+. Within *Manage vCenter Plug-in*, select *Update Plug-in*.
+. Confirm or update the following information:
+.. The IPv4 address or the FQDN of the vCenter service on which you will register your plug-in.
+.. The vCenter Administrator user name.
++
+NOTE: The user name and password credentials you enter must be for a user with vCenter Administrator role privileges.
+
+.. The vCenter Administrator password.
+.. (For in-house servers/dark sites) A custom URL for the plug-in ZIP.
++
+NOTE: You can click *Custom URL* to customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings. For additional configuration steps if you intend to customize a URL, see Element Plug-in for vCenter Server documentation about modifying vCenter properties for an in-house (dark site) HTTP server.
+
+. Click *Update*.
+. Log in to the vSphere Web Client as a vCenter Administrator.
++
+NOTE: This action creates a new database and completes the installation in the vSphere Web Client. If the vCenter Plug-in icons are not visible from the vSphere main page, see Element Plug-in for vCenter Server documentation about troubleshooting the plug-in.
+
+. After a successful upgrade, NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
++
+image::vcp_shortcuts_page_accessing_plugin.png[depicts the plug-in extension points after a successful upgrade or install]
++
+NOTE: If the vCenter Plug-in icons are not visible, see Element Plug-in for vCenter Server documentation about troubleshooting the plug-in.
+
+. Verify the version change in the *About* tab in the *NetApp Element Configuration* extension point of the plug-in.
++
+You should see the following version details or details of a more recent version:
+
+----
+NetApp Element Plug-in Version: 4.3
+NetApp Element Plug-in Build Number: 238
+----
+NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
+
+. (Flash to HTML5 upgrades) If you are upgrading your plug-in from a Flash-based vSphere Web Client to an HTML5 Web Client, complete the following tasks from the NetApp Configuration extension point:
++
+NOTE: The vSphere HTML5 Web Client and Flash Web Client have separate databases that cannot be combined. Upgrading to HTML5 client from a Flash client requires you to restore some of your previous configuration.
+
+.. Add storage clusters.
+.. Configure QoSSIOC settings.
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

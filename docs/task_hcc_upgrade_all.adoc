@@ -20,9 +20,9 @@ These components include management services, NetApp Hybrid Cloud Control (HCC),
 
 .What you'll need
 
-* You are running management node 11.3 or later.
+* You are running management node 11.3 or later. Newer versions of the management node have a modular architecture that provides individual services.
 +
-TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
+TIP: To check the version, log in to your management node and view the Element version number in the login banner. If you do not have 11.3, see link:task_hcc_upgrade_management_node.html[Upgrade your management node].
 
 * You have upgraded your management services to at least version 2.1.326.
 +
@@ -39,6 +39,7 @@ Element software to version 12.
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 . link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
 . link:task_hcc_upgrade_management_node.html[Upgrade your management node].
+. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
 . link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
 . link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
 

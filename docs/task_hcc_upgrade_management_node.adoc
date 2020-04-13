@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, ver
 :imagesdir: ../media/
 
 [.lead]
-You can upgrade your management node to management node version 12.0 from version 11.0 or later. If you are upgrading from a management node version 10.x, you must migrate your management node settings to a new management node 11.1 VM before you can update to management node 11.3 or later
+You can upgrade your management node to management node version 12.0 from version 11.0 or later. If you are upgrading from a management node version 10.x, you must migrate your management node settings to a new management node 11.1 VM before you can update to management node 11.3 or later.
 
 Choose one of the following management node upgrade options:
 
@@ -205,31 +205,7 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent vo
 sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent volumes>
 ----
 
-. (For all NetApp HCI installations and SolidFire stand-alone storage installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.0 management node:
-.. Log out of the vSphere Web Client.
-+
-NOTE: The web client will not recognize updates made during this process to your vCenter Plug-in if you do not log out.
-
-.. Browse to the registration utility:
-+
-----
-https://<ManagementNodeIP>:9443
-----
-.. Click the *vCenter Plug-in Registration* tab.
-.. Within *Manage vCenter Plug-in*, select *Update Plug-in*.
-.. Update the vCenter address, vCenter administrator user name, and vCenter administrator password.
-.. Click *Update*.
-.. Log in to the vSphere Web Client and verify that the plug-in information has been updated by browsing to *Home* > *NetApp Element Configuration* > *About*.
-+
-NOTE: Logging into vSphere Web Client after updating registration installs the new plug-in updates and creates a new database.
-
-+
-You should see the following version details or details of a more recent version:
-
-----
-NetApp Element Plug-in Version: 4.3.0
-NetApp Element Plug-in Build Number: 233
-----
+. (For all NetApp HCI installations and SolidFire stand-alone storage installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.0 management node by following the steps in the link:task_vcp_upgrade_plugin.html[Upgrade the Element Plug-in for vCenter Server to version 4.4] topic.
 . Use the management node API to add assets:
 .. From a browser, log into the management node REST API UI:
 ... Go to the storage MVIP and log in.
