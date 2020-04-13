@@ -39,12 +39,18 @@ entries:
     entries:
       - title: Upgrade overview
         url: /concept_hci_upgrade_overview.html
-      - title: Upgrade the entire NetApp HCI installation
+      - title: Upgrade sequence overviews
         entries:
-          - title: Upgrade overview of the entire NetApp HCI installation including vSphere components
+          - title: Upgrade your entire NetApp HCI installation for version 1.8 including vSphere components
             url: /task_hci_upgrade_all_vsphere.html
-          - title: Upgrade overview of the entire NetApp HCI installation
+          - title: Upgrade your entire NetApp HCI installation for version 1.8
             url: /task_hcc_upgrade_all.html
+          - title: Upgrade your entire standalone NetApp SolidFire storage system for Element 12.0 including vSphere components
+            url: /task_sf_upgrade_all_vsphere.html
+          - title: Upgrade your standalone NetApp SolidFire all-flash storage system for Element 12.0
+            url: /task_sf_upgrade_all.html
+      - title: System upgrade procedures
+        entries:
           - title: Update management services
             url: /task_hcc_update_management_services.html
           - title: Upgrade to the latest HealthTools
