@@ -62,8 +62,7 @@ The following table provides descriptions for the URLs that you use in NetApp HC
 
 |https://[management node IP]/mnode
 |Manually update management services using the REST API UI from the management node.[INSERT LINK TO RELEVANT TOPIC EITHER IN GH OR DC.]
-||===
-
+|===
 
 [discrete]
 == Find more information
