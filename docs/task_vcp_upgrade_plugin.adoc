@@ -71,7 +71,6 @@ NOTE: If the vCenter Plug-in icons are not visible, see Element Plug-in for vCen
 . Verify the version change in the *About* tab in the *NetApp Element Configuration* extension point of the plug-in.
 +
 You should see the following version details or details of a more recent version:
-
 ----
 NetApp Element Plug-in Version: 4.3
 NetApp Element Plug-in Build Number: 238

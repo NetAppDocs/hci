@@ -1,0 +1,49 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_sf_upgrade_all.html
+summary: You can upgrade NetApp HCI and all of its components.
+keywords: netapp, hci, on premise, cluster, upgrade, element
+---
+
+= Upgrade your standalone NetApp SolidFire all-flash storage system for Element 12.0
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can keep your SolidFire Element storage system up-to-date after deployment by sequentially upgrading all NetApp storage components.
+
+These components include vCenter Server, ESXi, management services, NetApp Hybrid Cloud Control (HCC), Element software, management node, and (depending on your installation) the Element Plug-in for vCenter Server.
+
+.What you'll need
+
+* You are running management node 11.3 or later. Newer versions of the management node have a modular architecture that provides individual services.
++
+TIP: To check the version, log in to your management node and view the Element version number in the login banner. If you do not have 11.3, see link:task_hcc_upgrade_management_node.html[Upgrade your management node].
+
+* You have upgraded your management services to at least version 2.1.326.
++
+Upgrades using HCC are not available in earlier service bundle versions.
+
+
+.Steps
+
+. link:task_hcc_update_management_services.html[Update management services from Hybrid Cloud Control].
++
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your
+Element software to version 12.
+
+. link:task_upgrade_element_latest_healthtools.html[Upgrade to the latest HealthTools].
+. link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+. link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
+. link:task_hcc_upgrade_management_node.html[Upgrade your management node].
+. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server to version 4.4].
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
