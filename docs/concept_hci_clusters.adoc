@@ -17,9 +17,9 @@ A cluster is made up of a collection of nodes, which can be accessed as storage 
 
 The storage layer in NetApp HCI is provided by NetApp Element software and the management layer is provided by the NetApp Element Plug-in for vCenter Server. A storage node is a server containing a collection of drives that communicate with each other through the Bond10G network interface. Each storage node is connected to two networks, storage and management, each with two independent links for redundancy and performance. Each node requires an IP address on each network. You can create a cluster with new storage nodes, or add storage nodes to an existing cluster to increase storage capacity and performance.
 
-[NOTE: Ensemble node indicates a node that participates in the cluster. There are either three or five ensemble nodes depending on the cluster size.]
+NOTE: Ensemble node indicates a node that participates in the cluster. There are either three or five ensemble nodes depending on the cluster size.
 
-[TIP: If a newly added node is too large for a cluster, or if a node in the cluster fails and the cluster becomes unbalanced, the capacity of the largest node is limited so that it complies. This remains the case until more storage is added. If a very large node is added that also disobeys the rule of thirds, the previously stranded node will no longer be stranded, while the newly added node becomes stranded. Capacity should always be added in pairs to avoid this happening. When a node becomes stranded, an appropriate cluster fault is thrown.]
+TIP: If a newly added node is too large for a cluster, or if a node in the cluster fails and the cluster becomes unbalanced, the capacity of the largest node is limited so that it complies. This remains the case until more storage is added. If a very large node is added that also disobeys the rule of thirds, the previously stranded node will no longer be stranded, while the newly added node becomes stranded. Capacity should always be added in pairs to avoid this happening. When a node becomes stranded, an appropriate cluster fault is thrown.
 
 == Two-node storage clusters
 Starting with NetApp HCI 1.8, you can set up a storage cluster with two storage nodes.
@@ -30,9 +30,9 @@ NOTE: The storage nodes in a two-node cluster must be the same model type.
 
 * Two-node storage clusters are best suited for small-scale deployments with workloads that are not dependent on larger capacity requirements and maximum IOPS ratings.
 
-* In addition to two storage nodes, a two-node storage cluster also includes two NetApp HCI Witness Nodes.
+* In addition to two storage nodes, a two-node storage cluster also includes two *NetApp HCI Witness Nodes*.
 +
-NOTE: What are Witness Nodes? See http://vmwvatapp01-stg.corp.netapp.com/hci_hci_concepts_march17_an/us-en/docs/concept_hci_nodes.html#storage-nodes[Nodes] [CHANGE LINK TO EXTERNAL LINK BEFORE GO LIVE.].
+NOTE: Learn more about https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html[Witness Nodes^.]
 
 * You can scale a two-node storage cluster to a three-node storage cluster. However, you get the benefit of more usable capacity if you scale from a two-node cluster to a four-node cluster.
 
@@ -42,7 +42,6 @@ NOTE: What are Witness Nodes? See http://vmwvatapp01-stg.corp.netapp.com/hci_hci
 
 === Auto-healing and failure handling in two-node clusters
 If a hardware component fails in a node that is part of a traditional cluster, the cluster can rebalance data that was on the component that failed to other available nodes in the cluster. This ability to automatically heal is not available in a two-node storage cluster, because a minimum of two physical storage nodes must be available to the cluster for healing automatically. When a storage node fails, the new 2-node cluster behaves differently than a larger cluster. A 2-node cluster does not require regeneration of a second copy of data when a single node fails. New writes are replicated for block data in the remaining active storage node. When the failed node is replaced and rejoins the cluster, the data is rebalanced between the 2 physical storage nodes.
-Node Failure
 If a node fails, a two-node cluster defaults to running a two-node ensemble consisting of a physical node and a Witness Node, which triggers an ensemble degraded fault. The failed node contains 50% of the cluster data; this condition triggers the ensembleDegraded, blocksDegraded, and volumesDegraded faults. If space allows, all new writes are replicated in the remaining storage node on two separate block drives. When the failed node is repaired or replaced and the cluster is returned to optimal, the data is rebalanced between the two storage nodes and the faults are resolved.
 
 [ADD INFO ABOUT QUORUM, SCALING TO THREE-NODE]
