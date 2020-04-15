@@ -15,9 +15,7 @@ keywords: netapp, hci, storage nodes, clusters, two-node cluster, three-node clu
 [.lead]
 A cluster is made up of a collection of nodes, which can be accessed as storage or compute resources. Starting with NetApp HCI 1.8, you can have a storage cluster with two nodes. A storage cluster appears on the network as a single logical group and can then be accessed as block storage.
 
-The storage layer in NetApp HCI is provided by NetApp Element software and the management layer is provided by the NetApp Element Plug-in for vCenter Server.
-
-A storage node is a server containing a collection of drives that communicate with each other through the Bond10G network interface. Each storage node is connected to two networks, storage and management, each with two independent links for redundancy and performance. Each node requires an IP address on each network. You can create a cluster with new storage nodes, or add storage nodes to an existing cluster to increase storage capacity and performance.
+The storage layer in NetApp HCI is provided by NetApp Element software and the management layer is provided by the NetApp Element Plug-in for vCenter Server. A storage node is a server containing a collection of drives that communicate with each other through the Bond10G network interface. Each storage node is connected to two networks, storage and management, each with two independent links for redundancy and performance. Each node requires an IP address on each network. You can create a cluster with new storage nodes, or add storage nodes to an existing cluster to increase storage capacity and performance.
 
 [NOTE: Ensemble node indicates a node that participates in the cluster. There are either three or five ensemble nodes depending on the cluster size.]
 
@@ -48,6 +46,7 @@ Node Failure
 If a node fails, a two-node cluster defaults to running a two-node ensemble consisting of a physical node and a Witness Node, which triggers an ensemble degraded fault. The failed node contains 50% of the cluster data; this condition triggers the ensembleDegraded, blocksDegraded, and volumesDegraded faults. If space allows, all new writes are replicated in the remaining storage node on two separate block drives. When the failed node is repaired or replaced and the cluster is returned to optimal, the data is rebalanced between the two storage nodes and the faults are resolved.
 
 [ADD INFO ABOUT QUORUM, SCALING TO THREE-NODE]
+
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
