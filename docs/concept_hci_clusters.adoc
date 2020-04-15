@@ -42,14 +42,15 @@ NOTE: Learn more about https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.
 
 === Cluster quorum
 Witness Nodes in a two-node cluster are used to ensure that there are enough storage nodes to form a valid ensemble quorum. For ensemble creation, storage nodes are preferred over Witness Nodes. For the minimum three-node ensemble involving a two-node storage cluster, two storage nodes and one Witness Node are used.
-+
 IMPORTANT: In a three-node ensemble with two storage nodes and one Witness Node, if one storage node goes offline, the cluster goes into a degraded state. Of the two Witness Nodes, only one can be active in the ensemble. The second Witness Node cannot be added to the ensemble, because it performs the backup role. The cluster stays in degraded state until the offline storage node returns to an online state, or a replacement node joins the cluster.
 
-=== Auto-healing and failure handling in two-node clusters
-If a hardware component fails in a node that is part of a traditional cluster, the cluster can rebalance data that was on the component that failed to other available nodes in the cluster. This ability to automatically heal is not available in a two-node storage cluster, because a minimum of two physical storage nodes must be available to the cluster for healing automatically.
+If a Witness Node fails, the remaining Witness Node joins the ensemble to form a three-node ensemble. You can deploy a new Witness Node to replace the failed Witness Node.
 
-When a storage node fails, the new 2-node cluster behaves differently than a larger cluster. A 2-node cluster does not require regeneration of a second copy of data when a single node fails. New writes are replicated for block data in the remaining active storage node. When the failed node is replaced and rejoins the cluster, the data is rebalanced between the two physical storage nodes.
-If a node fails, a two-node cluster defaults to running a two-node ensemble consisting of a physical node and a Witness Node, which triggers an ensemble degraded fault. The failed node contains 50% of the cluster data; this condition triggers the ensembleDegraded, blocksDegraded, and volumesDegraded faults. If space allows, all new writes are replicated in the remaining storage node on two separate block drives. When the failed node is repaired or replaced and the cluster is returned to optimal, the data is rebalanced between the two storage nodes and the faults are resolved.
+=== Auto-healing and failure handling in two-node clusters
+If a hardware component fails in a node that is part of a traditional cluster, the cluster can rebalance data that was on the component that failed to other available nodes in the cluster. This ability to automatically heal is not available in a two-node storage cluster, because a minimum of two physical storage nodes must be available to the cluster for healing automatically. When a storage node fails, the new 2-node cluster behaves differently than a larger cluster. A 2-node cluster does not require regeneration of a second copy of data when one node fails. New writes are replicated for block data in the remaining active storage node. When the failed node is replaced and rejoins the cluster, the data is rebalanced between the two physical storage nodes.
+
+== Three-node storage clusters
+Scaling from two storage nodes to three storage nodes makes your cluster more resilient in the event of node and drive failures, but does not provide additional capacity. You can scale using the NetApp Hybrid Cloud Control UI.[INSERT LINK TO NDE SCALE TOPIC HERE.] When scaling from a two-node cluster to a three-node cluster, capacity can be stranded. The wizard shows warnings about stranded capacity before installation.
 
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
