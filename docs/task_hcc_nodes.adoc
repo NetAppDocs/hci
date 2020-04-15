@@ -26,7 +26,7 @@ For more about Witness Nodes, see link:concept_hci_nodes[Nodes definitions].
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
-https://_management_node_IP_
+https://management_node_IP
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the left navigation blue box, select the NetApp HCI installation.
@@ -41,8 +41,12 @@ image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes page image]
 . On the *Storage* tab of the Nodes page, review the following information:
 .. Two-node clusters: A “two-node” label appears on the Storage tab and the associated Witness Nodes are listed.
 .. Three-node clusters: The storage nodes and associated Witness Nodes are listed. Three-node clusters have a Witness Node deployed on standby to maintain high availability in the case of node failure.
-.. Four-node clusters: Storage node information appears. Witness Nodes do not apply.
+.. Four-node clusters: Information for clusters with four or more nodes appears. Witness Nodes do not apply; the Witness Nodes table does not appear.
 . To view compute inventory information, click *Compute*.
+. Options:
+.. To filter the list of items in the results, click the *Filter* icon and select the filters. You can also enter text for the filter.
+.. To show or hide columns, click the *Show/Hide Columns* icon.
+.. To download the table, click the *Download* icon.
 
 TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
 
