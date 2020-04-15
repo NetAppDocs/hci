@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, element, H610S upgrade
 :imagesdir: ../media/
 
 [.lead]
-To upgrade the NetApp Element software, you must use the `sfinstall` file included in the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+To upgrade to NetApp Element software 12.0, you must use the `sfinstall` file included in the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
 Choose one of the following Element software upgrade options that use HealthTools for the procedure:
 
@@ -25,12 +25,12 @@ IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, y
 
 .What you'll need
 
-IMPORTANT: Before you upgrade Element software, check upgrade path information for the Element version you are upgrading to and verify that the upgrade path is valid.
-https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
-
 * The management node in your environment is running version 11.0, 11.1 or later.
 * You have the latest version of HealthTools.
 * You verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+
+IMPORTANT: Before you upgrade Element software, check upgrade path information for the Element version you are upgrading to and verify that the upgrade path is valid.
+https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 
 == Upgrade Element software at connected sites
 
@@ -267,6 +267,7 @@ IMPORTANT: After you complete phase 1, four of the five firmware updates are act
 * You have completed phase 1 of the H610S upgrade process and have upgraded your storage nodes using one the standard Element storage upgrade procedures:
 . <<Upgrade Element software at connected sites>>
 . <<Upgrade Element software at dark sites>>
+
 NOTE: Phase 2 requires on-site personnel.
 
 .Steps
