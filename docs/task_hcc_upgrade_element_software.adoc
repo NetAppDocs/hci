@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_element_software.html
 summary: As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software.
-keywords: netapp, hci, on premise, cluster, element
+keywords: netapp, hci, on premise, cluster, element, H610S upgrade
 ---
 
 = Upgrade Element software
@@ -14,8 +14,14 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-To upgrade the NetApp Element software, you must use the `sfinstall` file included in the HealthTools suite of tools.
+To upgrade the NetApp Element software, you must use the `sfinstall` file included in the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
+Choose one of the following Element software upgrade options that use HealthTools for the procedure:
+
+* <<Upgrade Element software at connected sites>>
+* <<Upgrade Element software at dark sites>>
+
+IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> after you complete the `sfinstall` procedure with HealthTools.
 
 .What you'll need
 
@@ -24,7 +30,7 @@ https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Up
 
 * The management node in your environment is running version 11.0, 11.1 or later.
 * You have the latest version of HealthTools.
-* You verified that the cluster is ready to be upgraded See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+* You verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 
 == Upgrade Element software at connected sites
 
@@ -177,7 +183,7 @@ No staged builds present on nodeID=[2]
 Starting light cluster block service check
 ----
 
-
+IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>>.
 
 == Upgrade Element software at dark sites
 You must use the HealthTools suite of tools to update NetApp Element software at a dark site.
@@ -227,6 +233,7 @@ sfinstall -u admin -p admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --m
 +
 *Optional* You can add the `--stage` flag to the `sfinstall` command to pre-stage the upgrade in advance.
 
+IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>>.
 
 == What happens if an upgrade fails
 If the software upgrade fails, you can pause the upgrade.
@@ -247,8 +254,29 @@ When `sfinstall` waits for cluster faults to clear and if any failure causes the
 +
 NOTE: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or postupdate syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
 
+== Upgrading H610S storage nodes to Element 12.0 or later (phase 2)
 
+If you are upgrading an H610S series node to Element 12.0 or later, the upgrade process involves two phases. Phase 1 follows the same steps as the standard Element upgrade process. Phase 2 includes steps to perform a complete node shutdown and power disconnect for each H610S node.
 
+The phase 1 standard upgrade process to Element 12.0 will install Element Software and all 5 firmware updates in a rolling fashion across the cluster one node at a time. Due to the firmware payload, the process is estimated to take approximately 1.5 to 2 hours per H610S node, including a single cold-boot cycle at the end of the upgrade for each node.
+
+IMPORTANT: After you complete phase 1, four of the five firmware updates are activated during the cold boot on each H610S node; however, the Complex Programmable Logic Device (CPLD) firmware requires a complete power disconnect and reconnect to fully install. The CPLD firmware update protects against NVDIMM failures and metadata drive eviction during future reboots or power cycles. This power reset is estimated to take approximately one hour per H610S node. It requires shutting down the node, removing power cables or disconnecting power via a smart PDU, waiting approximately 3 minutes, and reconnecting power.
+
+.Before you begin
+
+* You have completed phase 1 of the H610S upgrade process and have upgraded your storage nodes using one the standard Element storage upgrade procedures:
+. <<Upgrade Element software at connected sites>>
+. <<Upgrade Element software at dark sites>>
+NOTE: Phase 2 requires on-site personnel.
+
+.Steps
+
+. (Phase 2) Complete the power reset process required for each H610S node in the cluster:
+
+NOTE: If the cluster also has non-H610S nodes, these non-H610S nodes are exempt from phase 2 and do not need to be shut down or have their power disconnected.
+
+.. Contact NetApp Support for assistance and to schedule this upgrade.
+.. Follow the phase 2 upgrade procedure in this supplementary https://kb.netapp.com/app/answers/answer_view/a_id/1103627[KB^] for each H610S node.
 
 [discrete]
 == Find more information
