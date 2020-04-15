@@ -22,31 +22,46 @@ NetApp’s disaggregated hybrid cloud infrastructure allows independent scaling 
 * Scales compute and storage independently
 * Simplifies data services orchestration across hybrid multiclouds
 
-== NetApp HCI architecture
+== Components of NetApp HCI
 The following illustration shows the various components of the NetApp HCI environment:
 
 INSERT IMAGE HERE.
-INCLUDE DESCRIPTIONS FOR WHAT IS IN THE IMAGE.
+
+* NetApp HCI provides both storage and compute resources. You use the *NetApp Deployment Engine* wizard to deploy NetApp HCI. After successful deployment, compute nodes appear as ESXi hosts and you can manage them in VMware vSphere Web Client.
+
+* The *management node* (mNode) is a virtual machine that runs in parallel with one or more Element software-based storage clusters. It is used to upgrade and provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting. As of the Element 11.3 release, the management node functions as a microservice host, allowing for quicker updates of select software services outside of major releases. These microservices or management services, such as the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service, are updated frequently as service bundles.
+
+* *NetApp Hybrid Cloud Control* enables you to manage NetApp HCI. You can upgrade management services, expand and monitor your installation, and enable NetApp Cloud Services. You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
+
+* The *NetApp Element Plug-in for vCenter Server* (VCP) is a web-based tool integrated with the vSphere user interface (UI). The plug-in is an extension and alternative scalable, user-friendly interface for VMware vSphere that can manage and monitor storage clusters running *NetApp Element software*. You can use the plug-in user interface to discover and configure clusters, and to manage, monitor, and allocate storage from cluster capacity to configure datastores and virtual datastores (for virtual volumes). A cluster appears on the network as a single local group that is represented to hosts and administrators by virtual IP addresses. You can also monitor cluster activity with real-time reporting, including error and alert messaging for any event that might occur while performing various operations.
+
+* By default, NetApp HCI sends performance and alert statistics to the *NetApp SolidFire Active IQ* service. As part of your normal support contract, NetApp Support monitors this data and alerts you to any performance bottlenecks or potential system issues. You need to create a NetApp Support account if you do not already have one (even if you have an existing SolidFire Active IQ account) so that you can take advantage of this service.
 
 == NetApp HCI URLs
-The following table includes the descriptions for the URLs that you use in NetApp HCI:
+The following table provides descriptions for the URLs that you use in NetApp HCI:
 
 [%header,cols=2*]
 |===
 |URL
 |Description
 
-|Cell in column 1, row 1
-|Cell in column 2, row 1
+|https://[IPv4 address of Bond1G interface on a storage node]
+|Access the NetApp Deployment Engine wizard to install and configure NetApp HCI. https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-17P1/GUID-8CED8C44-68D4-4AFD-9DB8-F611914AA637.html[Learn more.][INSERT LATEST LINK HERE.]
 
-|Cell in column 1, row 2
-|Cell in column 2, row 2
+|https://[management node IP]
+|Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services.[INSERT LINK TO RELEVANT TOPIC EITHER IN GH OR DC.]
 
-|Cell in column 1, row 3
-|Cell in column 2, row 3
+|https://[IP address]:442
+|From the per-node UI, access network and cluster settings and utilize system tests and utilities.[INSERT LINK TO RELEVANT TOPIC EITHER IN GH OR DC.]
 
-|Cell in column 1, row 4
-|Cell in column 2, row
+|https://[management node IP]:9443
+|Register the vCenter Plug-in package in the vSphere Web Client.[INSERT LINK TO RELEVANT TOPIC EITHER IN GH OR DC.]
+
+|https://activeiq.solidfire.com
+|Monitor data and receive alerts to any performance bottlenecks or potential system issues.[INSERT LINK TO RELEVANT TOPIC EITHER IN GH OR DC.]
+
+|https://[management node IP]/mnode
+|Manually update management services using the REST API UI from the management node.[INSERT LINK TO RELEVANT TOPIC EITHER IN GH OR DC.]
 |===
 
 [discrete]
