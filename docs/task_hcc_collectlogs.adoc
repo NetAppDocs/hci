@@ -1,0 +1,46 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_collectlogs.html
+summary: You can log in to NetApp Hybrid Cloud Control.
+keywords: netapp, hci, logs, collection, troubleshooting, monitor
+---
+
+= Collect log files to help with troubleshooting NetApp HCI
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Collect NetApp HCI logs in the event that you have trouble with your installation. You can access the log collection area from the NetApp Hybrid Control Dashboard.
+*Steps*
+
+. Open a web browser and browse to the IP address of the management node. For example:
++
+----
+https://[management_node_IP]
+----
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. From the Dashboard, click the menu on the upper right.
+. Select *Collect Logs*.
++
+The *Collect Logs* page appears. If you have collected logs before, you can download the existing log package, or begin a new log collection.
+. Select a date range in the *Date Range* drop-down menu to specify what dates the logs should include.
++
+If you specify a custom start date, you can select the date to begin the date range. The logs will cover from that date up to the present time.
+. In the *Log Collection* section, select the types of log files the log package should include.
++
+For storage and compute logs, you can expand the list of storage or compute nodes and select individual nodes to collect logs from (or all nodes in the list).
+. Click *Collect Logs* to start log collection.
++
+Log collection runs in the background, and the page shows the progress. When finished, the log package details are shown, and you can download the log package or begin a new collection.
+. Click *Download Logs* to download the log package.
++
+The log package is in a compressed UNIX .tgz file format.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
