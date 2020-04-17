@@ -56,7 +56,7 @@ https://<ManagementNodeIP>
 .. If a KB is specified, complete the process described in the relevant KB article.
 .. After you have resolved cluster issues, click *Re-Run Health Check*.
 
-After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:<task_hcc_upgrade_element_software.html>[instructions] to proceed.
+After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:task_hcc_upgrade_element_software.html[instructions] to proceed.
 
 == Use API to run Element storage health checks prior to upgrading storage
 You can use REST API to verify that a storage cluster is ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as pending nodes, disk space issues, and cluster faults.

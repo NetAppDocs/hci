@@ -77,13 +77,6 @@ NetApp Element Plug-in Build Number: 238
 ----
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
 
-. (Flash to HTML5 upgrades) If you are upgrading your plug-in from a Flash-based vSphere Web Client to an HTML5 Web Client, complete the following tasks from the NetApp Configuration extension point:
-+
-NOTE: The vSphere HTML5 Web Client and Flash Web Client have separate databases that cannot be combined. Upgrading to HTML5 client from a Flash client requires you to restore some of your previous configuration.
-
-.. Add storage clusters.
-.. Configure QoSSIOC settings.
-
 [discrete]
 == Find more information
 
