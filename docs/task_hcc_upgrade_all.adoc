@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your entire NetApp HCI installation for version 1.8
+= Upgrade your NetApp HCI system for version 1.8
 
 :hardbreaks:
 :nofooter:
@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 :imagesdir: ../media/
 
 [.lead]
-You can keep the entire NetApp HCI installation up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
+You can keep your NetApp HCI system up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
 
 These components include management services, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.
 

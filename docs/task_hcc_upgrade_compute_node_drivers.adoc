@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_compute_node_drivers.html
-summary: As part of the entire NetApp HCI upgrade, you can also upgrade compute node drivers.
+summary: As part of a NetApp HCI system upgrade, you upgrade compute node drivers.
 keywords: netapp, hci, on premise, cluster, element, compute node
 ---
 

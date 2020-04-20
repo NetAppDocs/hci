@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_vcp_upgrade_plugin.html
-summary: As part of a NetApp HCI or standalone SolidFire storage system upgrade, you can upgrade the Element Plug-in for vCenter Server.
+summary: As part of a NetApp HCI or SolidFire storage system upgrade, you can upgrade the Element Plug-in for vCenter Server.
 keywords: netapp, vcp, vCenter plug-in, cluster, upgrade
 ---
 
@@ -14,7 +14,9 @@ keywords: netapp, vcp, vCenter plug-in, cluster, upgrade
 :imagesdir: ../media/
 
 [.lead]
-For existing vSphere environments with a registered NetApp Element Plug-in for vCenter Server (VCP), you can update your plug-in registration after you first update the management services package that contains the plug-in service. You can update the plug-in registration on vCenter Server Virtual Appliance (vCSA) or Windows using the registration utility. You must change your registration for the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
+For existing vSphere environments with a registered NetApp Element Plug-in for vCenter Server (VCP), you can update your plug-in registration after you first update the management services package that contains the plug-in service.
+
+You can update the plug-in registration on vCenter Server Virtual Appliance (vCSA) or Windows using the registration utility. You must change your registration for the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
 
 This upgrade procedure covers the following upgrade scenarios:
 
@@ -72,8 +74,8 @@ NOTE: If the vCenter Plug-in icons are not visible, see Element Plug-in for vCen
 +
 You should see the following version details or details of a more recent version:
 ----
-NetApp Element Plug-in Version: 4.3
-NetApp Element Plug-in Build Number: 238
+NetApp Element Plug-in Version: 4.4.0
+NetApp Element Plug-in Build Number: 72
 ----
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
 

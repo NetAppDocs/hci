@@ -39,15 +39,11 @@ entries:
     entries:
       - title: Upgrades overview
         url: /concept_hci_upgrade_overview.html
-      - title: Upgrade sequence overviews
+      - title: Upgrade sequences
         entries:
-          - title: Upgrade your entire NetApp HCI installation for version 1.8 including vSphere components
-            url: /task_hci_upgrade_all_vsphere.html
-          - title: Upgrade your entire NetApp HCI installation for version 1.8
+          - title: Upgrade your NetApp HCI system for version 1.8
             url: /task_hcc_upgrade_all.html
-          - title: Upgrade your entire standalone NetApp SolidFire storage system for Element 12.0 including vSphere components
-            url: /task_sf_upgrade_all_vsphere.html
-          - title: Upgrade your standalone NetApp SolidFire all-flash storage system for Element 12.0
+          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.0
             url: /task_sf_upgrade_all.html
       - title: System upgrade procedures
         entries:
@@ -67,6 +63,12 @@ entries:
             url: /task_hcc_upgrade_compute_node_firmware.html
           - title: Update compute node drivers
             url: /task_hcc_upgrade_compute_node_drivers.html
+      - title: vSphere upgrade sequences with vCenter Plug-in
+        entries:
+          - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
+            url: /task_hci_upgrade_all_vsphere.html
+          - title: Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server
+            url: /task_sf_upgrade_all_vsphere.html
   - title: Expand your NetApp HCI system
     entries:
      - title: Expand overview

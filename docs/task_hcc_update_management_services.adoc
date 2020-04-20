@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_update_management_services.html
-summary: As part of an entire NetApp HCI or standalone SolidFire storage system upgrade, you should update management services.
+summary: As part of a NetApp HCI or SolidFire storage system upgrade, you should update management services.
 keywords: netapp, hci, on premise, cluster, management services
 ---
 
@@ -15,11 +15,13 @@ keywords: netapp, hci, on premise, cluster, management services
 
 [.lead]
 
-You can update your management services to the latest bundle version after you have installed management node 11.3 or later. Beginning with the Element 11.3 management node release, the management node design has been changed based on a new modular architecture that provides individual services. These modular services provide central and extended management functionality for NetApp HCI and SolidFire all-flash storage systems. Management services include system telemetry, logging, and update services, the QoSSIOC service for Element Plug-in for vCenter Server, NetApp Hybrid Cloud Control (HCC), and more.
+You can update your management services to the latest bundle version after you have installed management node 11.3 or later.
 
-You can update management services using NetApp Hybrid Cloud Control (HCC) UI or the management node REST API:
+Beginning with the Element 11.3 management node release, the management node design has been changed based on a new modular architecture that provides individual services. These modular services provide central and extended management functionality for NetApp HCI and SolidFire all-flash storage systems. Management services include system telemetry, logging, and update services, the QoSSIOC service for Element Plug-in for vCenter Server, NetApp Hybrid Cloud Control (HCC), and more.
 
-* <<Update management services using Hybrid Cloud Control>>
+You can update management services using the NetApp Hybrid Cloud Control (HCC) UI or the management node REST API:
+
+* <<Update management services using Hybrid Cloud Control>> (Preferred method)
 * <<Update management services using the management node API>>
 * <<Update management services using the management node API for dark sites>>
 

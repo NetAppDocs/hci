@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_element_prechecks.html
-summary: As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software.
+summary: As part of a NetApp HCI or SolidFire storage system upgrade, you need to run health checks for NetApp Element software.
 keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck
 ---
 
@@ -18,7 +18,7 @@ You must run health checks prior to upgrading Element storage to ensure all stor
 
 You can run health checks using NetApp Hybrid Cloud Control (HCC) UI, HCC API, or the HealthTools suite:
 
-* <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>>
+* <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>> (Preferred method)
 * <<Use API to run Element storage health checks prior to upgrading storage>>
 * <<Use HealthTools to run Element storage health checks prior to upgrading storage>>
 
@@ -150,7 +150,7 @@ This procedure describes how to address upgrade checks that yield one of the fol
 . Run the `sfupgradecheck` command:
 +
 ----
-sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+sfupgradecheck -u <cluster-user-name> MVIP
 ----
 +
 NOTE: For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`.
@@ -159,7 +159,7 @@ NOTE: For passwords that contain special characters, add a backslash (`\`) befor
 Sample input command with sample output in which no errors appear and you are ready to upgrade:
 +
 ----
-sfupgradecheck -u admin -p admin 10.117.78.244
+sfupgradecheck -u admin 10.117.78.244
 ----
 +
 ----
