@@ -39,9 +39,11 @@ entries:
       - title: View resources on the HCC Dashboard
         url: /task_hcc_dashboard.html
       - title: View your inventory in the Nodes page
-        url: /task_hcc_nodes.html 
+        url: /task_hcc_nodes.html
       - title: Monitor performance, capacity, and cluster health with Active IQ
         url: /task_hcc_activeiq.html
+      - title: Collect NetApp HCI logs
+        url: /task_hcc_collectlogs.html
   - title: Upgrade your NetApp HCI system
     entries:
       - title: Upgrade overview
