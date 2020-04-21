@@ -1,6 +1,5 @@
 sudo: false
-dist: trusty
-group: deprecated-2017Q4 # To fix NPM timeout errors
+dist: xenial
 language: ruby
 rvm:
 - 2.4.3
@@ -14,5 +13,7 @@ before_install:
 - cp -rl dependencies/jekyll/search.html ./solutions/search.html
 - sed -i 's/permalink\:\s*\/search\.html/permalink\:\ solutions\/search\.html/g' ./solutions/search.html
 - mv dependencies/jekyll/prod-build.sh ./ && ./prod-build.sh
+- sudo apt-get -y install graphicsmagick graphicsmagick-libmagick-dev-compat libmagickwand-dev
 script:
+- if [[ ! -z "$FEATURE_FLAG" ]]; then bundle exec rake buildAll; fi
 - bundle exec rake deploy
