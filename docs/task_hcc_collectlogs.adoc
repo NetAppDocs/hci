@@ -37,6 +37,7 @@ For storage and compute logs, you can expand the list of storage or compute node
 . Click *Collect Logs* to start log collection.
 +
 Log collection runs in the background, and the page shows the progress.
+
 NOTE: Based on the logs you choose to collect, the progress bar might remain at a certain percentage for several minutes, or progress very slowly at some points.
 
 . Click *Download Logs* to download the log package.
