@@ -153,7 +153,6 @@ You must append `@vsphere.local` to the user name.
 .. Migrate the vCenter Server to NetApp-HCI-Datastore-02 (storage only vMotion).
 .. Migrate the vCenter Server to each of the compute nodes (compute only vMotion).
 .	Go to the NetApp Element Plug-in for vCenter Server and ensure that the cluster is visible.
-.	Log into NetApp Element software. `http://<mvip>//`
 .	Ensure no alerts appear on the Dashboard.
 
 == Manage NetApp HCI using the vCenter Plug-in
