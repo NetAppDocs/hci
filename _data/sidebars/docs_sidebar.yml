@@ -42,6 +42,8 @@ entries:
         url: /task_hcc_nodes.html
       - title: Monitor performance, capacity, and cluster health with Active IQ
         url: /task_hcc_activeiq.html
+      - title: Collect NetApp HCI logs
+        url: /task_hcc_collectlogs.html
   - title: Upgrade your NetApp HCI system
     entries:
       - title: Upgrade overview
