@@ -34,7 +34,8 @@ NetApp HCI compute nodes are node hardware that provide the resources, such as C
 == Witness Nodes
 A Witness Node is a virtual node that does not have any drives, but is a member of a storage cluster. A Witness Node enables storage cluster redundancy in the event of a storage node failure. You can manage and upgrade Witness Nodes in the same way as other storage nodes. A storage cluster can have up to four Witness Nodes.
 Witness Nodes do not host slice or block services. Their primary purpose is to ensure that enough cluster nodes exist to form a valid ensemble quorum.
-Witness Nodes have specific VM capacity requirements. See https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-F4D9EEB8-2FDF-4A27-9FEE-C5E5E637E2DD.html[Witness Node resource requirements for two-node storage clusters]. For IP address requirements for Witness Nodes, see https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-9426D4EA-5B4A-4B6C-8089-7FA52E0DCA73.html[IP address requirements].
+
+TIP: Learn more about https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-F4D9EEB8-2FDF-4A27-9FEE-C5E5E637E2DD.html[Witness Node resource requirements^] and https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-9426D4EA-5B4A-4B6C-8089-7FA52E0DCA73.html[Witness Node IP address requirements^].
 
 NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure.
 
