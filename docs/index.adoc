@@ -22,12 +22,11 @@ You can upgrade, expand, and monitor your system with the NetApp Hybrid Cloud Co
 * link:rn_whatsnew.html[What's new in NetApp HCI]
 * http://docs.netapp.com/sfe-120/index.jsp[What's new in NetApp Element software^]
 * https://kb.netapp.com/app/answers/answer_view/a_id/1087586[What's new in management services for Element software and NetApp HCI^]
-* What's new in NetApp Element Plug-in for vCenter Server
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[What's new in NetApp Element Plug-in for vCenter Server^]
 
 == Get started with NetApp HCI
 
 * link:task_hci_getstarted.html[NetApp HCI installation and deployment overview]
-* link:task_hcc_access.html[Access NetApp Hybrid Cloud Control]
 * link:concept_hci_product_overview.html[Review basic concepts]
 
 [discrete]
