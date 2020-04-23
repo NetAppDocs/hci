@@ -70,7 +70,7 @@ https://[management node IP]/mnode
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
 ... Click *Authorize* to begin a session.
-.. From the REST API UI, click *GET /assets/controllers*.
+.. From the REST API UI, click *GET /assets*.
 .. Click *Try it out*.
 .. Click *Execute*.
 .. From the response, copy the `"id"` for each of the following:
