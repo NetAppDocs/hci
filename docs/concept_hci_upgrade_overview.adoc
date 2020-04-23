@@ -25,12 +25,14 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 == System upgrade sequences
 
 Choose one of the following sequences based on your system:
+
 * link:task_hcc_upgrade_all.html[Upgrade your NetApp HCI installation for version 1.8].
 * link:task_sf_upgrade_all.html[Upgrade your NetApp SolidFire all-flash storage system for Element 12.0].
 
 == vSphere upgrade sequences including Element Plug-in for vCenter Server
 
 Choose one of the following sequences based on your system:
+
 * link:task_hci_upgrade_all_vsphere.html[Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server].
 * link:task_sf_upgrade_all_vsphere.html[Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server].
 

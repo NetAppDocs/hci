@@ -153,21 +153,23 @@ Compute health checks, whether performed by HCC or API methods, make the followi
 
 | Are there generic/global informational alerts in vCenter? | Cluster |  	Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
-| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue
+| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue.
 
-| Are there errors on the current ESXi node in vSphere? | Node | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue
+| Are there errors on the current ESXi node in vSphere? | Node | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
-| Is virtual media mounted to a VM on a host in the cluster? | Node | Unmount all virtual media disks (CD/DVD/floppy) from the VMs. | No KB needed to resolve issue
+| Is virtual media mounted to a VM on a host in the cluster? | Node | Unmount all virtual media disks (CD/DVD/floppy) from the VMs. | No KB needed to resolve issue.
 
-| Is BMC version the minimum required version that has RedFish support? | Node | Manually update your BMC firmware. | No KB needed to resolve issue
+| Is BMC version the minimum required version that has RedFish support? | Node | Manually update your BMC firmware. | No KB needed to resolve issue.
 
-| Is ESXi host up and running? | Node | Start your ESXi host. | No KB needed to resolve issue
+| Is ESXi host up and running? | Node | Start your ESXi host. | No KB needed to resolve issue.
 
-| Is ESXi host in maintenance mode? | Node | Your ESXi host should be placed in maintenance mode prior to updating firmware. | No KB needed to resolve issue
+| Is ESXi host in maintenance mode? | Node | Your ESXi host should be placed in maintenance mode prior to updating firmware. | No KB needed to resolve issue.
 
-| Is BMC up and running? | Node | Power on your BMC and ensure it is connected to a network this management node can reach. | No KB needed to resolve issue
+| Is BMC up and running? | Node | Power on your BMC and ensure it is connected to a network this management node can reach. | No KB needed to resolve issue.
 
-| Are there partner ESXi host(s) available? | Node | Make one or more ESXi host(s) in cluster available (not in maintenance mode) to migrate virtual machines. | No KB needed to resolve issue
+| Are there partner ESXi host(s) available? | Node | Make one or more ESXi host(s) in cluster available (not in maintenance mode) to migrate virtual machines. | No KB needed to resolve issue.
+
+| Are you able to connect with BMC via IPMI protocol? | Node | Enable IPMI protocol on BMC. | No KB needed to resolve issue.
 |===
 
 [discrete]
