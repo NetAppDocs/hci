@@ -19,14 +19,14 @@ You can view both your storage and compute assets in your system and determine t
 You can view storage information for your two-, three-, and four-node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters.
 Witness Nodes manage quorum within the cluster; they are not used for storage. Witness Nodes are applicable only to NetApp HCI and not to all-flash storage environments.
 
-For more information about Witness Nodes, see link:concept_hci_nodes[Nodes definitions].
+For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes definitions].
 
 .Steps
 
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
-https://management_node_IP
+https://[management node IP address]
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the left navigation blue box, select the NetApp HCI installation.
