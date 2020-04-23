@@ -73,10 +73,10 @@ https://[management node IP]/mnode
 .. From the REST API UI, click *GET /assets/controllers*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy the following:
-... The storage cluster host name  (`"host_name"`).
-... The storage controller ID (`"id"`).
-... The compute ESXi host names (`"host_name"`)
+.. From the response, copy the `"id"` for each of the following:
+... The cluster ID
+... A controller ID
+... A compute ESXi ID
 . Run health checks on the compute nodes in the cluster:
 .. Open the compute service REST API UI on the management node:
 +
@@ -90,7 +90,7 @@ https://[management node IP]/vcenter/1
 .. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
 .. Click *Try it out*.
 .. Enter the controller ID in the parameter field.
-.. In the payload, enter the vCenter cluster ID and vCenter host ID for each compute ESXi host.
+.. In the payload, enter the vCenter cluster ID and vCenter host ID for the compute ESXi host.
 .. Click *Execute* to run a health check on the specified cluster and nodes.
 +
 The response should indicate the task name as `Performing health checks` and give a task ID.
