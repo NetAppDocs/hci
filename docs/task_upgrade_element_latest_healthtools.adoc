@@ -57,7 +57,6 @@ installing command sfupgradecheck
 installing command sfinstall
 installing command sfresetupgrade
 ----
-
 . Run the `sfupdate-healthtools -v` command to verify the installed version has been upgraded.
 +
 Sample response:

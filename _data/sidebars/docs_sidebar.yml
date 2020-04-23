@@ -60,6 +60,8 @@ entries:
           - title: Upgrade the NetApp Element Plug-in for vCenter Server
             url: /task_vcp_upgrade_plugin.html
           - title: Update compute node firmware
+            url: /task_upgrade_compute_prechecks.html
+          - title: Update compute node firmware
             url: /task_hcc_upgrade_compute_node_firmware.html
           - title: Update compute node drivers
             url: /task_hcc_upgrade_compute_node_drivers.html

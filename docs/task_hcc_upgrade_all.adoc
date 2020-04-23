@@ -41,6 +41,7 @@ Element software to version 12.
 . link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
 . link:task_hcc_upgrade_management_node.html[Upgrade your management node].
 . link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
+. link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
 . link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
 . link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
 

@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, ver
 :imagesdir: ../media/
 
 [.lead]
-You can upgrade your management node to management node version 12.0 from version 11.0 or later. If you are upgrading from a management node version 10.x, you must migrate your management node settings to a new management node 11.1 VM before you can update to management node 11.3 or later.
+You can upgrade your management node to management node version 12.0 from version 11.0 or later. If you are upgrading from management node version 10.x, you must migrate your management node settings to a new management node 11.1 VM before you can update to management node 11.3 or later. If you are already running an 11.3 management node, you can keep your existing management node if you choose not to upgrade by performing an authentication reconfiguration.
 
 Choose one of the following management node upgrade options:
 
@@ -24,6 +24,13 @@ Choose one of the following management node upgrade options:
 <<Upgrade a management node to version 12.0 from 11.1 or 11.0>>
 * If you are upgrading from a management node version 10.x:
 <<Migrating from management node version 10.x to 11.x>>
+
+Choose this option if after sequentially upgrading (1) management services and (2) Element storage you want to *keep* your existing management node:
+
+* If you are keeping existing management node:
+<<Reconfigure authentication using the management node REST API>>
+
+NOTE: If you do not sequentially update your management services followed by Element storage, you cannot reconfigure reauthentication using this procedure. Follow the appropriate upgrade procedure instead.
 
 .Before you begin
 
@@ -340,6 +347,34 @@ sudo systemctl restart sfcollector
 . Verify NMA is reporting system alerts and ONTAP Select alerts.
 . If everything is working as expected, shut down and delete management node 10.x VM.
 
+== Reconfigure authentication using the management node REST API
+
+You can keep your existing management node if you have sequentially upgraded (1) management services and (2) Element storage. If you have followed a different upgrade order, see the procedures for in-place management node upgrades.
+
+.Before you begin
+
+* You have updated your management services to 2.10.29 or later.
+* Your storage cluster is running Element 11.3 or later.
+* Your management node is 11.3 or later.
+* You have sequentially updated your management services followed by upgrading your Element storage. You cannot reconfigure authentication using this procedure unless you have completed upgrades in the sequence described.
+
+.Steps
+
+. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/mnode
+----
+. Click *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client` if the value is not already populated.
+.. Click *Authorize* to begin a session.
+. From the REST API UI, click *POST /services/reconfigure-auth*.
+. Click *Try it out*.
+. For the *load_images* parameter, select `true`.
+. Click *Execute*.
++
+The response body indicates that reconfiguration was successful.
 
 [discrete]
 == Find more information
