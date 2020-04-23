@@ -35,7 +35,9 @@ TIP: When you are expanding storage resources, storage capacity should be split 
 
 . Open a web browser and browse to the IP address of the management node. For example:
 +
-https://_management_node_IP_
+----
+https://[management node IP address]
+----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . Click *Expand* at the top right corner of the interface.
 +
