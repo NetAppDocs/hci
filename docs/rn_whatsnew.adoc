@@ -28,13 +28,13 @@ Active IQ Config Advisor is a new tool that helps streamline the installation ex
 You can now access NetApp HCI upgrading, expansion, monitoring, and concepts information in an easy to navigate format link:index.html[here^].
 
 === NetApp Element Plug-in for vCenter Server 4.4 availability
-The NetApp Element Plug-in for vCenter Server 4.4 is available outside of the management node 12.0 and NetApp HCI 1.8 releases. To upgrade the plug-in, follow the instructions in the https://docs.netapp.com/us-en/hci/docs/concept_hci_upgrade_overview.html[NetApp HCI Upgrades^] documentation.
+The NetApp Element Plug-in for vCenter Server 4.4 is available outside of the management node 12.0 and NetApp HCI 1.8 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades^] documentation.
 
 === NetApp Hybrid Cloud Control enhancements
 NetApp Hybrid Cloud Control is enhanced for version 1.8. https://kb.netapp.com/app/answers/answer_view/a_id/1087586[Learn more^].
 
 === Support for two-node and three-node storage clusters
-With version 1.8, you can set up NetApp HCI to use a storage cluster with two or three storage nodes. When you deploy with a two-node or three-node storage cluster, the deployment process automatically configures two NetApp Witness Nodes as virtual machines. Witness Nodes are virtual nodes that enable storage node redundancy in the event of a storage node failure. NetApp HCI supports the H410S-0, H410S-1, and H610S-1 storage nodes in two-node or three-node storage clusters. https://docs.netapp.com/us-en/hci/docs/concept_hci_clusters.html[Learn more^].
+With version 1.8, you can set up NetApp HCI to use a storage cluster with two or three storage nodes. When you deploy with a two-node or three-node storage cluster, the deployment process automatically configures two NetApp Witness Nodes as virtual machines. Witness Nodes are virtual nodes that enable storage node redundancy in the event of a storage node failure. NetApp HCI supports the H410S-0, H410S-1, and H610S-1 storage nodes in two-node or three-node storage clusters. link:concept_hci_clusters.html[Learn more^].
 
 [discrete]
 == Find more information
