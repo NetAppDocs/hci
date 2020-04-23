@@ -25,7 +25,7 @@ NOTE: NetApp HCI 1.8 includes NetApp Element software 12.0. http://docs.netapp.c
 Active IQ Config Advisor is a new tool that helps streamline the installation experience and reduce networking failures during deployment. It validates that the configuration is ready for NetApp HCI deployment. you to validate that your environment is ready for NetApp HCI deployment. Active IQ Config Advisor collects data and generates a report that you can use to resolve issues and send to NetApp Professional Services before hardware installation. See the https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/home.html[Deployment Guide^] for details.
 
 === NetApp HCI documentation enhancements
-You can now access NetApp HCI upgrading, expansion, monitoring, and concepts information in an easy to navigate format https://docs.netapp.com/us-en/hci/docs/index.html[here^].
+You can now access NetApp HCI upgrading, expansion, monitoring, and concepts information in an easy to navigate format link:index.html[here^].
 
 === NetApp Element Plug-in for vCenter Server 4.4 availability
 The NetApp Element Plug-in for vCenter Server 4.4 is available outside of the management node 12.0 and NetApp HCI 1.8 releases. To upgrade the plug-in, follow the instructions in the https://docs.netapp.com/us-en/hci/docs/concept_hci_upgrade_overview.html[NetApp HCI Upgrades^] documentation.
