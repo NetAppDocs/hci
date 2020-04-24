@@ -62,6 +62,8 @@ entries:
         url: https://www.netapp.com/us/media/tr-4778.pdf
       - title: Veeam Backup and Replication 9.5 v4
         url: https://www.netapp.com/us/media/tr-4634.pdf
+      - title: NetApp Scale-Out Data Protection with Commvault
+        url: http://www.netapp.com/us/media/tr-4831.pdf
   - title: Artificial Intelligence (AI)
     entries:
       - title: AI Inferencing on the Edge Data Center with H615c and NVIDIA T4
