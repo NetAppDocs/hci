@@ -56,7 +56,7 @@ After the health check completes without errors, the compute nodes in the cluste
 
 == Use API to run compute node health checks prior to upgrading firmware
 
-You can use REST API to verify that compute nodes in a cluster are  ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues.
+You can use REST API to verify that compute nodes in a cluster are ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues. You will need to run compute node health checks for each controller in your environment.
 
 .Steps
 
@@ -73,10 +73,33 @@ https://[management node IP]/mnode
 .. From the REST API UI, click *GET /assets*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy the `"id"` for each of the following:
-... The cluster ID
-... A controller ID
-... A compute ESXi ID
+.. From the code 200 response body, copy the `"id"` for each of the following:
+... A controller ID (`"id"`)
+... The host name for the same controller (`"host_name"`)
++
+----
+],
+    "config": {},
+    "controller": [
+      {
+        "_links": {
+          "collection": "https://10.117.150.84/mnode/1/assets/25xbx3d4-be29-4b0x-99fc-901601f018xx/controllers",
+          "parent": "https://10.117.150.84/mnode/1/assets/25xbx3d4-be29-4b0x-99fc-901601f018xx",
+          "root": "https://10.117.150.84/mnode/1/assets",
+          "self": "https://10.117.150.84/mnode/1/assets/25xbx3d4-be29-4b0x-99fc-901601f018xx/controllers/z2ea93a6-2511-41xx-8bcd-3bd99xf89xxf"
+        },
+        "config": {},
+        "credentialid": "1234a945-ad9b-1b2e-345c-130000x399bd",
+        "host_name": "host12",
+        "id": "z2ea93a6-2511-41xx-8bcd-3bd99xf89xxf",
+        "ip": "10.117.224.14",
+        "parent": "25xbx3d4-be29-4b0x-99fc-901601f018xx",
+        "type": "vCenter"
+      }
+    ],
+    "hardware": [
+      {
+----
 . Run health checks on the compute nodes in the cluster:
 .. Open the compute service REST API UI on the management node:
 +
@@ -90,12 +113,21 @@ https://[management node IP]/vcenter/1
 .. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
 .. Click *Try it out*.
 .. Enter the controller ID in the parameter field.
-.. In the payload, enter the vCenter cluster ID and vCenter host ID for the compute ESXi host.
-.. Click *Execute* to run a health check on the specified cluster and nodes.
+.. In the payload, enter the host name for the controller for `"cluster"` and remove other specific values:
 +
-The response should indicate the task name as `Performing health checks` and give a task ID.
-.. Copy the `taskId` that is part of response.
-. (Optional) Verify the status of the health checks:
+----
+{
+  "cluster": "host12",
+  "nodes": [
+  ]
+}
+----
+.. Click *Execute* to run a health check on all assets associated with the specific controller.
++
+The code 200 response gives a `taskId` that you can use to monitor the task and a `"resourceLink"` URL. You will use the task ID in the `"resourceLink"` to confirm the health check results.
+.. Copy the `taskId` that is part of response to monitor an active task.
+.. Copy the task ID portion of the `"resourceLink"` URL if you want to verify the result.
+. (Optional) Monitor the status of the health checks request:
 .. Open the task monitor REST API UI on the management node:
 +
 ----
@@ -107,10 +139,10 @@ https://[management node IP]/task-monitor/1
 ... Click *Authorize* to begin a session.
 .. Click *GET /tasks/{TASK_ID}*.
 .. Click *Try it out*.
-.. Enter the `taskId` in the parameter field.
+.. Enter the `taskId` from the *POST /compute​/{CONTROLLER_ID}​/health-checks* response in the parameter field.
 .. Click *Execute*.
-.. Scroll to the bottom of the response body to verify that the task completed.
-. Verify the results of the health checks:
+.. Scroll to the bottom of the response body to verify the task state (`"state"`).
+. Verify the result of the health checks:
 .. Open the compute service REST API UI on the management node:
 +
 ----
@@ -122,19 +154,14 @@ https://[management node IP]/vcenter/1
 ... Click *Authorize* to begin a session.
 .. Click *POST /compute​/tasks/[task_id}*.
 .. Click *Try it out*.
-.. Enter the `task_id` in the parameter field.
+.. Enter the task ID portion of the `"resourceLink"` URL from the *POST /compute​/{CONTROLLER_ID}​/health-checks* code 200 response in the `task_id` parameter field.
 .. Click *Execute*.
-.. If the `customerResolution` returned indicates that there were problems regarding compute node health, do the following:
+.. If the `status` returned indicates that there were problems regarding compute node health, do the following:
 ... Go to the specific KB article (`KbLink`) listed for each issue or perform the specified remedy.
 ... If a KB is specified, complete the process described in the relevant KB article.
 ... After you have resolved cluster issues, run *POST /compute​/{CONTROLLER_ID}​/health-checks* again (see step 2).
 
-If all health checks are successful, the return is similar to the following example:
-----
-"message": "All checks completed successfully.",
-"percent": 100,
-"timestamp": "2020-03-06T00:03:16.321621Z"
-----
+If health checks complete without issues, the response code 200 indicates a successful result.
 
 == Compute node health checks made by the service
 Compute health checks, whether performed by HCC or API methods, make the following checks per node.
