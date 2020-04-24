@@ -1,3 +1,4 @@
+prefix: docs
 entries:
   - title: NetApp HCI Documentation
     url: ../../../../index.html
