@@ -2,7 +2,7 @@ prefix: docs
 entries:
   - title: NetApp HCI Documentation
     url: ../../../../index.html
-  - title: NetApp HCI Management
+  - title: NetApp HCI Configuration and Management
     url: /index.html
   - title: Release Notes
     entries:
