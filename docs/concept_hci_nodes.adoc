@@ -13,12 +13,12 @@ keywords: netapp, hci, storage nodes, volumes, compute nodes, witness nodes, man
 :imagesdir: ../media/
 
 [.lead]
-Nodes are the hardware that is grouped into a cluster to be accessed as block storage or compute resources.
+Nodes are hardware or virtual resources that are grouped into a cluster to provide block storage and compute capabilities.
 
-Element software defines various node roles for a cluster. The four types of node roles are *management node,* *storage node,* *compute node,* and *NetApp HCI Witness Nodes.*
+NetApp HCI and Element software defines various node roles for a cluster. The four types of node roles are *management node,* *storage node,* *compute node,* and *NetApp HCI Witness Nodes.*
 
 == Management node
-The management node (mNode) interacts with a storage cluster to perform management actions, but is not a member of the storage cluster. Management nodes periodically collect information about the cluster through API calls and report this information. Management nodes are also responsible for coordinating software upgrades of the cluster nodes.
+The management node (mNode) interacts with a storage cluster to perform management actions, but is not a member of the storage cluster. Management nodes periodically collect information about the cluster through API calls and report this information to Active IQ for remote monitoring (if enabled). Management nodes are also responsible for coordinating software upgrades of the cluster nodes.
 The management node is a virtual machine that runs in parallel with one or more Element software-based storage clusters. In addition to upgrades, it is used to provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting.
 As of the Element 11.3 release, the management node functions as a microservice host, allowing for quicker updates of select software services outside of major releases. These microservices or management services, such as the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service, are updated frequently as service bundles.
 
@@ -28,11 +28,11 @@ NetApp HCI storage nodes are hardware that provide the storage resources for a N
 
 
 == Compute nodes
-NetApp HCI compute nodes are node hardware that provide the resources, such as CPU, memory, and networking, that are needed for virtualization in the NetApp HCI installation. Because each server runs VMware ESXi, NetApp HCI compute node management (adding or removing hosts) must be done outside of the plug-in within the Hosts and Clusters menu in vSphere. Regardless of whether it is a four-node storage cluster or a two-node storage cluster, the minimum number of compute nodes remains two for a NetApp HCI deployment.
+NetApp HCI compute nodes are hardware that provides compute resources, such as CPU, memory, and networking, that are needed for virtualization in the NetApp HCI installation. Because each server runs VMware ESXi, NetApp HCI compute node management (adding or removing hosts) must be done outside of the plug-in within the Hosts and Clusters menu in vSphere. Regardless of whether it is a four-node storage cluster or a two-node storage cluster, the minimum number of compute nodes remains two for a NetApp HCI deployment.
 
 
 == Witness Nodes
-A Witness Node is a virtual node that does not have any drives, but is a member of a storage cluster. Witness Nodes do not host slice or block services. A Witness Node enables storage cluster redundancy in the event of a storage node failure. You can manage and upgrade Witness Nodes in the same way as other storage nodes. A storage cluster can have up to four Witness Nodes. Their primary purpose is to ensure that enough cluster nodes exist to form a valid ensemble quorum.
+NetApp HCI Witness nodes are virtual machines that run on compute nodes in parallel with an Element software-based storage cluster. Witness Nodes do not host slice or block services. A Witness Node enables storage cluster availability in the event of a storage node failure. You can manage and upgrade Witness Nodes in the same way as other storage nodes. A storage cluster can have up to four Witness Nodes. Their primary purpose is to ensure that enough cluster nodes exist to form a valid ensemble quorum.
 
 TIP: Learn more about https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-F4D9EEB8-2FDF-4A27-9FEE-C5E5E637E2DD.html[Witness Node resource requirements^] and https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-9426D4EA-5B4A-4B6C-8089-7FA52E0DCA73.html[Witness Node IP address requirements^].
 
