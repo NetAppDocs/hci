@@ -60,7 +60,7 @@ You can use REST API to verify that compute nodes in a cluster are ready to be u
 
 .Steps
 
-. Locate the storage cluster ID:
+. Locate the controller ID and host name:
 .. Open the management node REST API UI on the management node:
 +
 ----
