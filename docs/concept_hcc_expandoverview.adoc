@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, expand, hcc, hybrid cloud control
 :keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
-You can expand your NetApp HCI system using NetApp Hybrid Cloud Control. You can expand storage or compute resources separately or expand them at the same time.
+You can expand your NetApp HCI system by using NetApp Hybrid Cloud Control. You can expand storage or compute resources separately or expand them at the same time.
 
 After installing the node in the NetApp HCI chassis, you use NetApp Hybrid Cloud Control to configure NetApp HCI to utilize the new resources. NetApp HCI detects the existing network configuration and offers you configuration options within the existing networks and VLANs, if any.
 
