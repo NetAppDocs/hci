@@ -136,6 +136,7 @@ The code 200 response gives two task IDs:
 
 * A `taskId` that you can use to monitor the task.
 * A `"resourceLink"` URL with the task ID needed to confirm the health check results.
++
 ----
 {
   "resourceLink": "https://10.117.150.84/vcenter/1/compute/tasks/[This is the task ID for task result]",
