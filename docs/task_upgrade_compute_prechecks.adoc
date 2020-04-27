@@ -60,45 +60,52 @@ You can use REST API to verify that compute nodes in a cluster are ready to be u
 
 .Steps
 
-. Locate the controller ID and host name:
-.. Open the management node REST API UI on the management node:
+. Locate the controller ID and cluster ID:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://[management node IP]/inventory/1
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
 ... Click *Authorize* to begin a session.
-.. From the REST API UI, click *GET /assets*.
+.. From the REST API UI, click *GET ​/installations*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the code 200 response body, copy the `"id"` for each of the following:
-... A controller ID (`"id"`)
-... The host name for the same controller (`"host_name"`)
+.. From the code 200 response body, copy the `"id"` for the installation you plan to use for health checks.
+.. From the REST API UI, click *GET ​/installations​/{id}*.
+.. Click *Try it out*.
+.. Enter the installation ID.
+.. Click *Execute*.
+.. From the code 200 response body, copy the IDs for each of the following:
+... The cluster ID (`"clusterID"`)
+... A controller ID (`"controllerId"`)
 +
 ----
-],
-    "config": {},
-    "controller": [
-      {
-        "_links": {
-          "collection": "https://10.117.150.84/mnode/1/assets/25xbx3d4-be29-4b0x-99fc-901601f018xx/controllers",
-          "parent": "https://10.117.150.84/mnode/1/assets/25xbx3d4-be29-4b0x-99fc-901601f018xx",
-          "root": "https://10.117.150.84/mnode/1/assets",
-          "self": "https://10.117.150.84/mnode/1/assets/25xbx3d4-be29-4b0x-99fc-901601f018xx/controllers/z2ea93a6-2511-41xx-8bcd-3bd99xf89xxf"
-        },
-        "config": {},
-        "credentialid": "1234a945-ad9b-1b2e-345c-130000x399bd",
-        "host_name": "host12",
-        "id": "z2ea93a6-2511-41xx-8bcd-3bd99xf89xxf",
-        "ip": "10.117.224.14",
-        "parent": "25xbx3d4-be29-4b0x-99fc-901601f018xx",
-        "type": "vCenter"
-      }
-    ],
-    "hardware": [
-      {
+{
+  "_links": {
+    "collection": "https://10.117.187.199/inventory/1/installations",
+    "self": "https://10.117.187.199/inventory/1/installations/xx94f6f0-12a6-412f-8b5e-4cf2z58329x0"
+  },
+  "compute": {
+    "errors": [],
+    "inventory": {
+      "clusters": [
+        {
+          "clusterId": "domain-1",
+          "controllerId": "abc12c3a-aa87-4e33-9f94-xx588c2cdcf6",
+          "datacenterName": "NetApp-HCI-Datacenter-01",
+          "installationId": "xx94f6f0-12a6-412f-8b5e-4cf2z58329x0",
+          "installationName": "test-nde-mnode",
+          "inventoryType": "managed",
+          "name": "NetApp-HCI-Cluster-01",
+          "summary": {
+            "nodeCount": 2,
+            "virtualMachineCount": 2
+          }
+        }
+      ],
 ----
 . Run health checks on the compute nodes in the cluster:
 .. Open the compute service REST API UI on the management node:
@@ -112,20 +119,35 @@ https://[management node IP]/vcenter/1
 ... Click *Authorize* to begin a session.
 .. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
 .. Click *Try it out*.
-.. Enter the controller ID in the parameter field.
-.. In the payload, enter the host name for the controller for `"cluster"` and remove other specific values:
+.. Enter the `"controllerId"` you copied from the previous step in the *Controller_ID* parameter field.
+.. In the payload, enter the `"clusterId"` you copied from the previous step for the `"cluster"` value:
++
+NOTE: You do not need to make any additional modifications to the payload.
+
 +
 ----
 {
-  "cluster": "host12",
+  "cluster": "domain-1",
   "nodes": [
+    "host-15"
   ]
 }
 ----
-.. Click *Execute* to run a health check on all assets associated with the specific controller.
+.. Click *Execute* to run a health check on the cluster.
 +
-The code 200 response gives a `taskId` that you can use to monitor the task and a `"resourceLink"` URL. You will use the task ID in the `"resourceLink"` to confirm the health check results.
-.. Copy the `taskId` that is part of response to monitor an active task.
+The code 200 response gives two task IDs:
+* A `taskId` that you can use to monitor the task.
+* A `"resourceLink"` URL with the task ID needed to confirm the health check results.
++
+----
+{
+  "resourceLink": "https://10.117.150.84/vcenter/1/compute/tasks/[This is the task ID for task result]",
+  "serviceName": "vcenter-v2-svc",
+  "taskId": "[This is the task ID for task monitoring]",
+  "taskName": "VCenter service health checks"
+}
+----
+.. (Optional) Copy the `taskId` that is part of response to monitor an active task.
 .. Copy the task ID portion of the `"resourceLink"` URL if you want to verify the result.
 . (Optional) Monitor the status of the health checks request:
 .. Open the task monitor REST API UI on the management node:
