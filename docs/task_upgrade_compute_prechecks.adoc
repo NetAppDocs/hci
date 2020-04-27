@@ -56,7 +56,7 @@ After the health check completes without errors, the compute nodes in the cluste
 
 == Use API to run compute node health checks prior to upgrading firmware
 
-You can use REST API to verify that compute nodes in a cluster are ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues. You will need to run compute node health checks for each controller in your environment.
+You can use REST API to verify that compute nodes in a cluster are ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues. You will need to run compute node health checks for each compute cluster in your environment.
 
 .Steps
 
@@ -120,10 +120,7 @@ https://[management node IP]/vcenter/1
 .. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
 .. Click *Try it out*.
 .. Enter the `"controllerId"` you copied from the previous step in the *Controller_ID* parameter field.
-.. In the payload, enter the `"clusterId"` you copied from the previous step for the `"cluster"` value:
-+
-NOTE: You do not need to make any additional modifications to the payload.
-
+.. In the payload, enter the `"clusterId"` you copied from the previous step for the `"cluster"` value. You do not need to make any additional modifications to the payload.
 +
 ----
 {
@@ -136,9 +133,9 @@ NOTE: You do not need to make any additional modifications to the payload.
 .. Click *Execute* to run a health check on the cluster.
 +
 The code 200 response gives two task IDs:
+
 * A `taskId` that you can use to monitor the task.
 * A `"resourceLink"` URL with the task ID needed to confirm the health check results.
-+
 ----
 {
   "resourceLink": "https://10.117.150.84/vcenter/1/compute/tasks/[This is the task ID for task result]",
@@ -147,7 +144,7 @@ The code 200 response gives two task IDs:
   "taskName": "VCenter service health checks"
 }
 ----
-.. (Optional) Copy the `taskId` that is part of response to monitor an active task.
+.. (Optional) Copy the `taskId` that is part of the response to monitor an active task.
 .. Copy the task ID portion of the `"resourceLink"` URL if you want to verify the result.
 . (Optional) Monitor the status of the health checks request:
 .. Open the task monitor REST API UI on the management node:
