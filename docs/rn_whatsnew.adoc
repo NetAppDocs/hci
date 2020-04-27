@@ -22,7 +22,7 @@ NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, mu
 NOTE: NetApp HCI 1.8 includes NetApp Element software 12.0. http://docs.netapp.com/sfe-120/topic/com.netapp.ndc.sfe-home/GUID-D0719315-8ECA-44E8-994A-F2DAA3D1FABA.html[Learn more^] about what's new in Element 12.0.
 
 === Active IQ Config Advisor
-Active IQ Config Advisor is a new tool that helps streamline the installation experience and reduce networking failures during deployment. It validates that the configuration is ready for NetApp HCI deployment. you to validate that your environment is ready for NetApp HCI deployment. Active IQ Config Advisor collects data and generates a report that you can use to resolve issues and send to NetApp Professional Services before hardware installation. See the https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/home.html[Deployment Guide^] for details.
+Active IQ Config Advisor is a tool that helps streamline the installation experience and reduce networking failures during deployment. It validates that the configuration is ready for deployment, collecting data and generating a report that you can use to resolve issues and send to NetApp Professional Services before hardware installation. See the https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/home.html[Deployment Guide^] for details.
 
 === NetApp HCI documentation enhancements
 You can now access NetApp HCI upgrading, expansion, monitoring, and concepts information in an easy-to-navigate format link:index.html[here^].
