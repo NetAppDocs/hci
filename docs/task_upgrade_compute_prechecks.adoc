@@ -120,58 +120,32 @@ https://[management node IP]/vcenter/1
 .. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
 .. Click *Try it out*.
 .. Enter the `"controllerId"` you copied from the previous step in the *Controller_ID* parameter field.
-.. In the payload, enter the `"clusterId"` you copied from the previous step for the `"cluster"` value. You do not need to make any additional modifications to the payload.
+.. In the payload, enter the `"clusterId"` that you copied from the previous step as the `"cluster"` value and remove the `"nodes"` parameter.
 +
 ----
 {
   "cluster": "domain-1",
-  "nodes": [
-    "host-15"
-  ]
 }
 ----
 .. Click *Execute* to run a health check on the cluster.
 +
-The code 200 response gives two task IDs:
-
-* A `taskId` that you can use to monitor the task.
-* A `"resourceLink"` URL with the task ID needed to confirm the health check results.
+The code 200 response gives a `"resourceLink"` URL with the task ID appended that is needed to confirm the health check results.
 +
 ----
 {
-  "resourceLink": "https://10.117.150.84/vcenter/1/compute/tasks/[This is the task ID for task result]",
+  "resourceLink": "https://10.117.150.84/vcenter/1/compute/tasks/[This is the task ID for health check task results]",
   "serviceName": "vcenter-v2-svc",
-  "taskId": "[This is the task ID for task monitoring]",
+  "taskId": "ab12c345-06f7-42d7-b87c-7x64x56x321x",
   "taskName": "VCenter service health checks"
 }
 ----
-.. (Optional) Copy the `taskId` that is part of the response to monitor an active task.
-.. Copy the task ID portion of the `"resourceLink"` URL if you want to verify the result.
-. (Optional) Monitor the status of the health checks request:
-.. Open the task monitor REST API UI on the management node:
-+
-----
-https://[management node IP]/task-monitor/1
-----
-.. Click *Authorize* and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
-.. Click *GET /tasks/{TASK_ID}*.
-.. Click *Try it out*.
-.. Enter the `taskId` from the *POST /compute​/{CONTROLLER_ID}​/health-checks* response in the parameter field.
-.. Click *Execute*.
-.. Scroll to the bottom of the response body to verify the task state (`"state"`).
+.. Copy the task ID portion of the `"resourceLink"` URL to verify the task result.
 . Verify the result of the health checks:
-.. Open the compute service REST API UI on the management node:
+.. Return to the compute service REST API UI on the management node:
 +
 ----
 https://[management node IP]/vcenter/1
 ----
-.. Click *Authorize* and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
 .. Click *POST /compute​/tasks/[task_id}*.
 .. Click *Try it out*.
 .. Enter the task ID portion of the `"resourceLink"` URL from the *POST /compute​/{CONTROLLER_ID}​/health-checks* code 200 response in the `task_id` parameter field.
