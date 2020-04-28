@@ -124,7 +124,7 @@ https://[management node IP]/vcenter/1
 +
 ----
 {
-  "cluster": "domain-1",
+  "cluster": "domain-1"
 }
 ----
 .. Click *Execute* to run a health check on the cluster.
@@ -146,7 +146,7 @@ The code 200 response gives a `"resourceLink"` URL with the task ID appended tha
 ----
 https://[management node IP]/vcenter/1
 ----
-.. Click *POST /compute​/tasks/[task_id}*.
+.. Click *GET /compute​/tasks/{task_id}*.
 .. Click *Try it out*.
 .. Enter the task ID portion of the `"resourceLink"` URL from the *POST /compute​/{CONTROLLER_ID}​/health-checks* code 200 response in the `task_id` parameter field.
 .. Click *Execute*.
