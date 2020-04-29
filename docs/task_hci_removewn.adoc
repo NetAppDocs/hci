@@ -13,7 +13,7 @@ keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compu
 :imagesdir: ../media/
 
 [.lead]
-After you expand a two-node storage cluster to a four or more nodes, you can delete the pair of Witness Nodes to free up compute resources in your NetApp HCI installation. The Witness Nodes previously used by the storage cluster are still visible as standby virtual machines (VM) in vSphere Web Client.
+After you expand a two-node storage cluster to four or more nodes, you can delete the pair of Witness Nodes to free up compute resources in your NetApp HCI installation. The Witness Nodes previously used by the storage cluster are still visible as standby virtual machines (VM) in vSphere Web Client.
 
 .About this task
 Witness Nodes are not required in clusters with more than four storage nodes. This is an optional procedure if you want to free up CPU and memory after you expand your two-node cluster to four or more nodes.
@@ -22,7 +22,7 @@ TIP: Verify that no cluster faults or errors are reported. You can find informat
 
 .Steps
 
-. From the vSphere Web Client, access the NetApp Element Management extension point from the *Shortcuts* tab or the side panel.
+. From vSphere, access the NetApp Element Management extension point from the *Shortcuts* tab or the side panel.
 . Select *NetApp Element Management > Cluster > Nodes*.
 +
 image::vcp-witnessnode.gif[Shows the NetApp Element Management > Clusters page with the nodes listed.]
