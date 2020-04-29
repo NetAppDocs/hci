@@ -52,7 +52,7 @@ If a hardware component fails in a node that is part of a traditional cluster, t
 == Storage clusters with three or more nodes
 Scaling from two storage nodes to three storage nodes makes your cluster more resilient by allowing auto-healing in the event of node and drive failures, but does not provide additional capacity. You can scale using the link:task_hcc_expand_storage.html[NetApp Hybrid Cloud Control UI]. When scaling from a two-node cluster to a three-node cluster, capacity can be stranded (see <<Stranded capacity>>). The UI wizard shows warnings about stranded capacity before installation. A single Witness Node is still available to keep the ensemble quorum in the event of a storage node failure, with a second Witness Node on standby.
 When you scale a three-node storage cluster to a four-node cluster, capacity and performance are increased. In a four-node cluster, Witness Nodes are no longer needed to form the cluster quorum.
-You can scale to up to 64 compute nodes and 40 storage nodes
+You can scale to up to 64 compute nodes and 40 storage nodes.
 
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
