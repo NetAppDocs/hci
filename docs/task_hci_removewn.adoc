@@ -5,7 +5,7 @@ summary: After you scale from a two-node storage cluster to a four or more-node 
 keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compute nodes, virtual machine, vm
 ---
 
-= Remove NetApp HCI Witness Nodes after scaling
+= Remove Witness Nodes after scaling
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,13 +17,15 @@ After you scale from a two-node storage cluster to a four or more-node storage c
 
 .About this task
 Witness Nodes are not required for four or more-node storage clusters. This is an optional procedure if you want to free up CPU and memory after you scale from a two-node to a four or more-node storage cluster.
-+
+
 TIP: Verify that no cluster faults or errors are reported. You can find information about system alerts by clicking *Reporting > Alerts* in the NetApp Element Management extension point in vSphere Web Client.
 
 .Steps
 
 . From the vSphere Web Client, access the NetApp Element Management extension point from the *Shortcuts* tab or the side panel.
 . Select *NetApp Element Management > Cluster > Nodes*.
++
+image::vcp-witnessnode.gif[Shows the NetApp Element Management > Clusters page with the nodes listed.]
 . Select the checkbox for the Witness Node that you want to delete, and click *Actions > Remove*.
 . Confirm the action in the prompt.
 . Click *Hosts and Clusters*.
