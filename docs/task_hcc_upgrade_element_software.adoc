@@ -25,12 +25,17 @@ IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, y
 
 .What you'll need
 
-* The management node in your environment is running version 11.0, 11.1 or later.
-* You have the latest version of HealthTools.
-* You verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+* You have updated your management services bundle to the latest version.
 
-IMPORTANT: Before you upgrade Element software, check upgrade path information for the Element version you are upgrading to and verify that the upgrade path is valid.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+
+* You have checked upgrade path information for the Element version you are upgrading to and verified that the upgrade path is valid.
 https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
+* You have the latest version of HealthTools.
+* You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+* You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
+* The management node in your environment is running version 11.0, 11.1 or later.
+
 
 == Upgrade Element software at connected sites
 
