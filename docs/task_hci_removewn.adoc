@@ -1,0 +1,40 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_removewn.html
+summary: After you expand a two-node storage cluster to a four or more nodes, you can delete the pair of Witness Nodes to free up compute resources in your NetApp HCI installation.
+keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compute nodes, virtual machine, vm
+---
+
+= Remove Witness Nodes after expanding cluster 
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you expand a two-node storage cluster to four or more nodes, you can delete the pair of Witness Nodes to free up compute resources in your NetApp HCI installation. The Witness Nodes previously used by the storage cluster are still visible as standby virtual machines (VM) in vSphere Web Client.
+
+.About this task
+Witness Nodes are not required in clusters with more than four storage nodes. This is an optional procedure if you want to free up CPU and memory after you expand your two-node cluster to four or more nodes.
+
+TIP: Verify that no cluster faults or errors are reported. You can find information about system alerts by clicking *Reporting > Alerts* in the NetApp Element Management extension point in vSphere.
+
+.Steps
+
+. From vSphere, access the NetApp Element Management extension point from the *Shortcuts* tab or the side panel.
+. Select *NetApp Element Management > Cluster > Nodes*.
++
+image::vcp-witnessnode.gif[Shows the NetApp Element Management > Clusters page with the nodes listed.]
+. Select the checkbox for the Witness Node that you want to delete, and click *Actions > Remove*.
+. Confirm the action in the prompt.
+. Click *Hosts and Clusters*.
+. Navigate to the Witness Node VM that you removed earlier.
+. Right-click the VM and power it off.
+. Right-click the VM that you powered off, and click *Delete from Disk*.
+. Confirm the action in the prompt.
+
+== Find more information
+* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
