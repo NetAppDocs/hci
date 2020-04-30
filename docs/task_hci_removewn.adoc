@@ -5,7 +5,7 @@ summary: After you expand a two-node storage cluster to a four or more nodes, yo
 keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compute nodes, virtual machine, vm
 ---
 
-= Remove Witness Nodes after scaling
+= Remove Witness Nodes after expanding cluster 
 :hardbreaks:
 :nofooter:
 :icons: font
