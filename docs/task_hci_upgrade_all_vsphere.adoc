@@ -21,6 +21,9 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 . For vCSA upgrades, http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-2AA0DA12-A3E3-4BAE-9413-A01A54B9B7CE.html[clear^] mNode settings in the plug-in (*NetApp Element Configuration > mNode Settings*). The *mNode Status* field displays `Not Configured` after the process is complete.
 . For vCSA and Windows upgrades, http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-6EC12854-37E6-421E-A5AA-8686AB0712FC.html[unregister^] the plug-in from the vCenter Server with which it is associated using the registration utility.
 . https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html[Upgrade vSphere, including vCenter Server, ESXi, VMs, and other VMware components^].
++
+NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
+
 . https://docs.netapp.com/sfe-118/topic/com.netapp.doc.sfe-mg-vcp/GUID-9F20918F-19A3-4FA7-B58D-F8FF49716BF1.html[Register^] the Element Plug-in for vCenter Server again with vCenter.
 . http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-4F1BC760-D73D-4872-9C1D-EE90A80FB75A.html[Add clusters^] using the plug-in.
 . http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-A4BBF368-47B3-45B1-A1FD-966AA9A24C30.html[Configure QoSSIOC settings^] using the plug-in.
@@ -32,3 +35,4 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster Technical Report^]
