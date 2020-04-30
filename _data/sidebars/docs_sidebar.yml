@@ -71,7 +71,7 @@ entries:
        url: /task_hcc_expand_compute.html
      - title: Expand NetApp storage and compute resources
        url: /task_hcc_expand_compute_and_storage.html
-     - title: Remove Witness Nodes after scaling
+     - title: Remove Witness Nodes after expanding cluster
        url: /task_hci_removewn.html
   - title: Legal notices
     url: /reference_notices_hci.html
