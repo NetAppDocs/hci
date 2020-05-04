@@ -16,7 +16,7 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 [.lead]
 You can keep your NetApp HCI system up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
 
-These components include management services, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.
+These components include management services, HealthTools, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.
 
 .What you'll need
 
@@ -34,8 +34,7 @@ Upgrades using HCC are not available in earlier service bundle versions.
 
 . link:task_hcc_update_management_services.html[Update management services from Hybrid Cloud Control].
 +
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your
-Element software to version 12.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
 
 . link:task_upgrade_element_latest_healthtools.html[Upgrade to the latest HealthTools].
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].

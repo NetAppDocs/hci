@@ -260,9 +260,11 @@ NOTE: Aborting the cluster upgrade while a node is being updated might result in
 
 == Upgrading H610S storage nodes to Element 12.0 or later (phase 2)
 
-If you are upgrading an H610S series node to Element 12.0 or later, the upgrade process involves two phases. Phase 1 which is performed first follows the same steps as the standard Element upgrade process. Phase 2 involves completing steps to perform a complete node shutdown and power disconnect for each H610S node that are described in a required https://kb.netapp.com/app/answers/answer_view/a_id/1103627[KB^].
+If you are upgrading an H610S series node to Element 12.0 or later, the upgrade process involves two phases.
 
-The phase 1 standard upgrade process to Element 12.0 will install Element Software and all 5 firmware updates in a rolling fashion across the cluster one node at a time. Due to the firmware payload, the process is estimated to take approximately 1.5 to 2 hours per H610S node, including a single cold-boot cycle at the end of the upgrade for each node.
+Phase 1, which is performed first, follows the same steps as the standard upgrade to Element 12.0 process. It installs Element Software and all 5 firmware updates in a rolling fashion across the cluster one node at a time. Due to the firmware payload, the process is estimated to take approximately 1.5 to 2 hours per H610S node, including a single cold-boot cycle at the end of the upgrade for each node.
+
+Phase 2 involves completing steps to perform a complete node shutdown and power disconnect for each H610S node that are described in a required https://kb.netapp.com/app/answers/answer_view/a_id/1103627[KB^]. This phase is estimated to take approximately one hour per H610S node.
 
 IMPORTANT: After you complete phase 1, four of the five firmware updates are activated during the cold boot on each H610S node; however, the Complex Programmable Logic Device (CPLD) firmware requires a complete power disconnect and reconnect to fully install. The CPLD firmware update protects against NVDIMM failures and metadata drive eviction during future reboots or power cycles. This power reset is estimated to take approximately one hour per H610S node. It requires shutting down the node, removing power cables or disconnecting power via a smart PDU, waiting approximately 3 minutes, and reconnecting power.
 

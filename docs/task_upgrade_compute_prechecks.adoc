@@ -29,7 +29,7 @@ You can also find out more about compute node health checks that are run by the 
 
 * You have updated to the latest management services bundle (2.11 or later).
 * You are running management node 11.3 or later.
-* Your cluster version is running NetApp Element software 11.3 or later.
+* Your storage cluster is running NetApp Element software 11.3 or later.
 
 == Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware
 

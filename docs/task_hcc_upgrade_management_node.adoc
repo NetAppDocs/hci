@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, ver
 :imagesdir: ../media/
 
 [.lead]
-You can upgrade your management node to management node version 12.0 from version 11.0 or later. If you are upgrading from management node version 10.x, you must migrate your management node settings to a new management node 11.1 VM before you can update to management node 11.3 or later. If you are already running an 11.3 management node, you can keep your existing management node if you choose not to upgrade by performing an authentication reconfiguration.
+You can upgrade your management node to management node version 12.0 from version 11.0 or later.
 
 Choose one of the following management node upgrade options:
 
@@ -25,7 +25,7 @@ Choose one of the following management node upgrade options:
 * If you are upgrading from a management node version 10.x:
 <<Migrating from management node version 10.x to 11.x>>
 
-Choose this option if after sequentially upgrading (1) management services and (2) Element storage you want to *keep* your existing management node:
+Choose this option if you have *sequentially* updated (1) your management services version and (2) your Element storage version and you want to *keep* your existing management node:
 
 * If you are keeping existing management node:
 <<Reconfigure authentication using the management node REST API>>
@@ -46,9 +46,6 @@ You can perform an in-place upgrade of the management node from 11.3 or later to
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
 * You have updated your management services bundle to the latest version using Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
-
-+
-NOTE: HCC is available with management services bundle 2.1.326. For NetApp HCI, the HCC option is only available if you have performed the one-time upgrade from the NetApp Deployment Engine: `https://<StorageNodeMIP>:442/nde`
 
 * You have configured an additional network adapter (if required) using the instructions for configuring a storage NIC (eth1) in the management node user guide your product.
 +
@@ -354,7 +351,7 @@ You can keep your existing management node if you have sequentially upgraded (1)
 .Before you begin
 
 * You have updated your management services to 2.10.29 or later.
-* Your storage cluster is running Element 11.3 or later.
+* Your storage cluster is running Element 12.0 or later.
 * Your management node is 11.3 or later.
 * You have sequentially updated your management services followed by upgrading your Element storage. You cannot reconfigure authentication using this procedure unless you have completed upgrades in the sequence described.
 

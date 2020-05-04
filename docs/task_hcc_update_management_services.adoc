@@ -25,8 +25,7 @@ You can update management services using the NetApp Hybrid Cloud Control (HCC) U
 * <<Update management services using the management node API>>
 * <<Update management services using the management node API for dark sites>>
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your
-Element software to version 12.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
 
 IMPORTANT: (Required for any user who has updated to 2.10.27) Due to an upgrade API issue introduced in 2.10.27, management services cannot be upgraded from that version unless you use the workaround described in https://kb.netapp.com/app/answers/answer_view/a_id/1103650[these] release notes. You must upgrade to 2.10.29 or a later version using this workaround to resolve the issue and restore management services update capabilities.
 

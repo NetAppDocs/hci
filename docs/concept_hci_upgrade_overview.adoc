@@ -18,8 +18,6 @@ The content in this section introduces recommended upgrade sequences for compone
 
 *System upgrade sequences* content describes the tasks that are needed to complete a NetApp HCI system or SolidFire all-flash storage system upgrade. Ideally these procedures are performed as part of the larger upgrade sequence and not in isolation. If a component-based upgrade or update is needed, see the procedure prerequisites to ensure additional complexities are addressed.
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
-
 *vSphere upgrade sequences including Element Plug-in for vCenter Server* content describes additional pre- and post-upgrade steps required to re-install the Element Plug-in for vCenter Server.
 
 == System upgrade sequences
