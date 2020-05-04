@@ -66,9 +66,9 @@ After the upgrade begins, you can see the upgrade status on this page.
 Users should ideally perform management services updates from NetApp Hybrid Cloud Control. You can however manually update management services using the REST API UI from the management node.
 
 .Before you begin
-. You have internet access.
-. You have deployed a NetApp Element software management node 11.3 or later.
-. Your cluster version is running NetApp Element software 11.3 or later.
+* You have internet access.
+* You have deployed a NetApp Element software management node 11.3 or later.
+* Your cluster version is running NetApp Element software 11.3 or later.
 
 .Steps
 . Open the REST API UI on the management node: `https://[management node IP]/mnode`
@@ -101,9 +101,9 @@ A successful update returns a result similar to the following example:
 Users should ideally perform management services updates from NetApp Hybrid Cloud Control. You can however manually upload, extract, and deploy a service bundle update for management services to the management node using the REST API. You can run each command from the REST API UI for the management node.
 
 .Before you begin
-. You have deployed a NetApp Element software management node 11.3 or later.
-. Your cluster version is running NetApp Element software 11.3 or later.
-. You have downloaded the service bundle update from the https://mysupport.netapp.com/products/p/mgmtservices.html[NetApp Support Site] to a device that can be used in the dark site.
+* You have deployed a NetApp Element software management node 11.3 or later.
+* Your cluster version is running NetApp Element software 11.3 or later.
+* You have downloaded the service bundle update from the https://mysupport.netapp.com/products/p/mgmtservices.html[NetApp Support Site] to a device that can be used in the dark site.
 
 .Steps
 . Open the REST API UI on the management node: `https://[management node IP]/mnode`

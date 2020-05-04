@@ -22,16 +22,13 @@ Before you begin the Element storage upgrade, you should upgrade your HealthTool
 * You have upgraded your management services to at least version 2.1.326.
 +
 NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
-* You have downloaded the latest HealthTools suite:
-. Log in to the NetApp Support Site at https://mysupport.netapp.com/products/p/healthtools.html.
-. Download the latest version of HealthTools to a computer that is not the management node.
-. Copy the installation file to the management node.
+* You have downloaded the latest version of https://mysupport.netapp.com/products/p/healthtools.html[HealthTools] and copied the installation file to the management node.
 +
-TIP: You can do this by using, for example, SCP.
+TIP: You can check the locally installed version of HealthTools by running the `sfupdate-healthtools -v` command.
 
 * To use HealthTools with dark sites, you need to do these additional steps:
-. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
-. Have the management node up and running at the dark site.
+** Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+** Have the management node up and running at the dark site.
 
 .About this task
 
@@ -43,10 +40,12 @@ The commands in the HealthTools suite require escalated privileges to run. Eithe
 +
 NOTE: The HealthTools version you use might be more up to date than the sample input and response below.
 
++
 Sample input:
 ----
 sfupdate-healthtools /tmp/solidfire-healthtools-2020.03.01.09.tgz
 ----
++
 Sample response:
 ----
 Checking key signature for file /tmp/solidfirehealthtools-2020.03.01.09/components.tgz
