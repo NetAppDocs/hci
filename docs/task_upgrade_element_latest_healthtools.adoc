@@ -45,7 +45,9 @@ Sample input:
 ----
 sfupdate-healthtools /tmp/solidfire-healthtools-2020.03.01.09.tgz
 ----
++
 Sample response:
++
 ----
 Checking key signature for file /tmp/solidfirehealthtools-2020.03.01.09/components.tgz
 installing command sfupdate-healthtools

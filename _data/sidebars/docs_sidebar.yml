@@ -35,7 +35,7 @@ entries:
         url: /task_hcc_dashboard.html
       - title: Monitor performance, capacity, and cluster health with Active IQ
         url: /task_hcc_activeiq.html
-  - title: Upgrade your NetApp HCI system
+  - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
         url: /concept_hci_upgrade_overview.html
