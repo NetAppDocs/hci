@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_element_overview.html
-summary: As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software.
+summary: As part of a NetApp HCI or SolidFire storage system upgrade, you upgrade NetApp Element software.
 keywords: netapp, hci, on premise, cluster, element
 ---
 
@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-As part of the entire NetApp HCI upgrade, you also upgrade NetApp Element software, storage node software.
+As part of a NetApp HCI or SolidFire storage system upgrade, you upgrade NetApp Element software.
 
 You must use HealthTools suite of tools to upgrade storage node software.
 

@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_hcc_upgrade_all.html
+permalink: docs/task_sf_upgrade_all.html
 summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your NetApp HCI system for version 1.8
+= Upgrade your NetApp SolidFire all-flash storage system for Element 12.0
 
 :hardbreaks:
 :nofooter:
@@ -14,9 +14,9 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 :imagesdir: ../media/
 
 [.lead]
-You can keep your NetApp HCI system up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
+You can keep your SolidFire Element storage system up-to-date after deployment by sequentially upgrading all NetApp storage components.
 
-These components include management services, HealthTools, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.
+These components include management services, HealthTools, NetApp Hybrid Cloud Control (HCC), Element software, management node, and (depending on your installation) the Element Plug-in for vCenter Server.
 
 .What you'll need
 
@@ -40,12 +40,7 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 . link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
 . link:task_hcc_upgrade_management_node.html[Upgrade your management node].
-. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
-. link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
-. link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
-. link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
-
-
+. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server to version 4.4].
 
 [discrete]
 == Find more information

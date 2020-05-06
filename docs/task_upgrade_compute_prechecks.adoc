@@ -1,0 +1,200 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_upgrade_compute_prechecks.html
+summary: As part of a NetApp HCI system upgrade, you need to run compute node health checks before performing firwamre upgrades.
+keywords: netapp, compute prechecks, compute node upgrade, netapp hci
+---
+
+= Run compute node health checks prior to upgrading compute firmware
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You must run health checks prior to upgrading compute firmware to ensure all compute nodes in your cluster are ready to be upgraded. Compute node health checks can only be run against compute clusters of one or more managed NetApp HCI compute nodes.
+
+You can run health checks using NetApp Hybrid Cloud Control (HCC) UI or HCC API:
+
+* <<Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware>> (Preferred method)
+* <<Use API to run compute node health checks prior to upgrading firmware>>
+
+You can also find out more about compute node health checks that are run by the service:
+
+* <<Compute node health checks made by the service>>
+
+.What you'll need
+
+* You have updated to the latest management services bundle (2.11 or later).
+* You are running management node 11.3 or later.
+* Your storage cluster is running NetApp Element software 11.3 or later.
+
+== Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware
+
+Using NetApp Hybrid Cloud Control (HCC), you can verify that a compute node is ready for a firmware upgrade.
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select the *Compute firmware* tab.
+. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
+. On the *Compute Health Check* page, click *Run Health Check*.
+. If there are issues, do the following:
+.. Go to the specific KB article listed for each issue or perform the specified remedy.
+.. If a KB is specified, complete the process described in the relevant KB article.
+.. After you have resolved cluster issues, click *Re-Run Health Check*.
+
+After the health check completes without errors, the compute nodes in the cluster are ready to upgrade. See  link:task_hcc_upgrade_compute_node_firmware.html[Update compute node firmware] to proceed.
+
+== Use API to run compute node health checks prior to upgrading firmware
+
+You can use REST API to verify that compute nodes in a cluster are ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues. You will need to run compute node health checks for each compute cluster in your environment.
+
+.Steps
+
+. Locate the controller ID and cluster ID:
+.. Open the inventory service REST API UI on the management node:
++
+----
+https://[management node IP]/inventory/1
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the code 200 response body, copy the `"id"` for the installation you plan to use for health checks.
+.. From the REST API UI, click *GET ​/installations​/{id}*.
+.. Click *Try it out*.
+.. Enter the installation ID.
+.. Click *Execute*.
+.. From the code 200 response body, copy the IDs for each of the following:
+... The cluster ID (`"clusterID"`)
+... A controller ID (`"controllerId"`)
++
+----
+{
+  "_links": {
+    "collection": "https://10.117.187.199/inventory/1/installations",
+    "self": "https://10.117.187.199/inventory/1/installations/xx94f6f0-12a6-412f-8b5e-4cf2z58329x0"
+  },
+  "compute": {
+    "errors": [],
+    "inventory": {
+      "clusters": [
+        {
+          "clusterId": "domain-1",
+          "controllerId": "abc12c3a-aa87-4e33-9f94-xx588c2cdcf6",
+          "datacenterName": "NetApp-HCI-Datacenter-01",
+          "installationId": "xx94f6f0-12a6-412f-8b5e-4cf2z58329x0",
+          "installationName": "test-nde-mnode",
+          "inventoryType": "managed",
+          "name": "NetApp-HCI-Cluster-01",
+          "summary": {
+            "nodeCount": 2,
+            "virtualMachineCount": 2
+          }
+        }
+      ],
+----
+. Run health checks on the compute nodes in the cluster:
+.. Open the compute service REST API UI on the management node:
++
+----
+https://[management node IP]/vcenter/1
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+.. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
+.. Click *Try it out*.
+.. Enter the `"controllerId"` you copied from the previous step in the *Controller_ID* parameter field.
+.. In the payload, enter the `"clusterId"` that you copied from the previous step as the `"cluster"` value and remove the `"nodes"` parameter.
++
+----
+{
+  "cluster": "domain-1"
+}
+----
+.. Click *Execute* to run a health check on the cluster.
++
+The code 200 response gives a `"resourceLink"` URL with the task ID appended that is needed to confirm the health check results.
++
+----
+{
+  "resourceLink": "https://10.117.150.84/vcenter/1/compute/tasks/[This is the task ID for health check task results]",
+  "serviceName": "vcenter-v2-svc",
+  "taskId": "ab12c345-06f7-42d7-b87c-7x64x56x321x",
+  "taskName": "VCenter service health checks"
+}
+----
+.. Copy the task ID portion of the `"resourceLink"` URL to verify the task result.
+. Verify the result of the health checks:
+.. Return to the compute service REST API UI on the management node:
++
+----
+https://[management node IP]/vcenter/1
+----
+.. Click *GET /compute​/tasks/{task_id}*.
+.. Click *Try it out*.
+.. Enter the task ID portion of the `"resourceLink"` URL from the *POST /compute​/{CONTROLLER_ID}​/health-checks* code 200 response in the `task_id` parameter field.
+.. Click *Execute*.
+.. If the `status` returned indicates that there were problems regarding compute node health, do the following:
+... Go to the specific KB article (`KbLink`) listed for each issue or perform the specified remedy.
+... If a KB is specified, complete the process described in the relevant KB article.
+... After you have resolved cluster issues, run *POST /compute​/{CONTROLLER_ID}​/health-checks* again (see step 2).
+
+If health checks complete without issues, the response code 200 indicates a successful result.
+
+== Compute node health checks made by the service
+Compute health checks, whether performed by HCC or API methods, make the following checks per node.
+|===
+| Check description | Node/cluster | Action needed to resolve | Knowledgebase article with procedure
+
+| Is DRS enabled and fully automated? | Cluster | Turn on DRS and make sure it is fully automated. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095730[See this KB].
+
+| Is DPM disabled in vSphere? | Cluster | Turn off Distributed Power Management. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095731[See this KB].
+
+| Is HA admission control enabled in vSphere? | Cluster | Turn off HA admission control. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095732[See this KB].
+
+| Is FT enabled for a VM on a host in the cluster? | Node |  	Suspend Fault Tolerance on any affected virtual machines. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095733[See this KB].
+
+| Are there critical alarms in vCenter for the cluster? | Cluster | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
+
+| Are there generic/global informational alerts in vCenter? | Cluster |  	Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
+
+| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue.
+
+| Are there errors on the current ESXi node in vSphere? | Node | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
+
+| Is virtual media mounted to a VM on a host in the cluster? | Node | Unmount all virtual media disks (CD/DVD/floppy) from the VMs. | No KB needed to resolve issue.
+
+| Is BMC version the minimum required version that has RedFish support? | Node | Manually update your BMC firmware. | No KB needed to resolve issue.
+
+| Is ESXi host up and running? | Node | Start your ESXi host. | No KB needed to resolve issue.
+
+| Is ESXi host in maintenance mode? | Node | Your ESXi host should be placed in maintenance mode prior to updating firmware. | No KB needed to resolve issue.
+
+| Is BMC up and running? | Node | Power on your BMC and ensure it is connected to a network this management node can reach. | No KB needed to resolve issue.
+
+| Are there partner ESXi host(s) available? | Node | Make one or more ESXi host(s) in cluster available (not in maintenance mode) to migrate virtual machines. | No KB needed to resolve issue.
+
+| Are you able to connect with BMC via IPMI protocol? | Node | Enable IPMI protocol on BMC. | No KB needed to resolve issue.
+|===
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
