@@ -41,10 +41,13 @@ NOTE: The HealthTools version you use might be more up to date than the sample i
 . Run the `sfupdate-healthtools <path to install file>` command to install the new HealthTools software.
 +
 Sample input:
++
 ----
 sfupdate-healthtools /tmp/solidfire-healthtools-2020.03.01.09.tgz
 ----
++
 Sample response:
++
 ----
 Checking key signature for file /tmp/solidfirehealthtools-2020.03.01.09/components.tgz
 installing command sfupdate-healthtools
@@ -57,6 +60,7 @@ installing command sfresetupgrade
 . Run the `sfupdate-healthtools -v` command to verify the installed version has been upgraded.
 +
 Sample response:
++
 ----
 Currently installed version of HealthTools:
 2020.03.01.09
