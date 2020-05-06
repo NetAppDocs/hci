@@ -22,13 +22,9 @@ image::hci_flowchart_QSG.png[NetApp HCI Quick Start overview diagram]
 
 == Prepare for installation
 
-Before you begin the installation, do the following:
-
-* Read the https://www.netapp.com/us/media/wp-7261.pdf[_Theory of Operations_^] whitepaper.
-* Complete the _NetApp HCI Installation Discovery Workbook_ pre-flight checklist sent to you prior to receiving the hardware.
+Before you begin the installation, complete the _NetApp HCI Installation Discovery Workbook_ pre-flight checklist sent to you prior to receiving the hardware.
 
 === Prepare the network and installation sites
-Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
 
 Here is a simplified NetApp HCI network topology installation:
 
@@ -40,9 +36,11 @@ NOTE: Your network topology might differ from what is shown here. This is an exa
 
 This setup uses two network cables on the compute nodes for connectivity to all NetApp HCI networks. 
 
-For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
+Read these resources:
 
-For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
+* Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
+* For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
+* For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
 
 This setup consolidates all traffic onto two physical, redundant ports, reducing the cabling and streamlining network configuration. This configuration requires that the storage, vMotion and any virtual machine network segments use VLAN tagging.  The management network segment can use native or tagged VLAN; however, native VLAN is the preferred mode so that NetApp Deployment Engine (NDE) can assign network resources in an automated manner (Zero Conf).
 
