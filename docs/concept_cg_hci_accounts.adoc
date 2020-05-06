@@ -1,0 +1,52 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_cg_hci_accounts.html
+summary: Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account.
+keywords: netapp, hci, on premise, administrator, user account, cloud services, cluster
+---
+
+= NetApp HCI accounts
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+To use NetApp HCI, you'll need to set up some user accounts.
+
+== Storage cluster administrator account types
+
+There are two types of administrator accounts that can exist in a storage cluster running NetApp Element software: the primary cluster administrator account and a cluster administrator account.
+
+* *Primary cluster administrator account*: This administrator account is created when the cluster is created. This account is the primary administrative account with the highest level of access to the cluster. This account is analogous to a root user in a Linux system. You can change the password for this administrator account.
+* *Cluster administrator account*: You can give a cluster administrator account a limited range of administrative access to perform specific tasks within a cluster. The credentials assigned to each cluster administrator account are used to authenticate API and Element UI requests within the storage system.
+
+NOTE: A local (non-LDAP) cluster administrator account is required to access active nodes in a cluster via the per-node UI. Account credentials are not required to access a node that is not yet part of a cluster.
+
+You can manage cluster administrator accounts by creating, deleting, and editing cluster administrator accounts, changing the cluster administrator password, and configuring LDAP settings to manage system access for users.
+
+For details, see the https://docs.netapp.com/sfe-20/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[SolidFire and Element Documentation Center^].
+
+
+== User account management
+
+User accounts are used to control access to the storage resources on a NetApp Element software-based network. At least one user account is required before a volume can be created.
+
+When you create a volume, it is assigned to an account. If you have created a virtual volume, the account is the storage container.
+
+Here are some additional considerations:
+
+* The account contains the CHAP authentication required to access the volumes assigned to it.
+* An account can have up to two thousand volumes assigned to it, but a volume can belong to only one account.
+* User accounts can be managed from NetApp Element Management extension point.
+
+For details, see user account information in the https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^].
+
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Documentation Center^]

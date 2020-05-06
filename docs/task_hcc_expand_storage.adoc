@@ -35,7 +35,9 @@ TIP: When you are expanding storage resources, storage capacity should be split 
 
 . Open a web browser and browse to the IP address of the management node. For example:
 +
-https://_management_node_IP_
+----
+https://[management node IP address]
+----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . Click *Expand* at the top right corner of the interface.
 +
@@ -49,7 +51,8 @@ The browser opens the NetApp Deployment Engine.
 .. *Storage (iSCSI) IP Address*: Enter an iSCSI IP address for the new storage node that is within the iSCSI network subnet.
 .. Click *Continue*.
 +
-Note: NetApp HCI might take some time to validate the IP addresses you enter. The Continue button becomes available when IP address validation completes.
+NOTE: NetApp HCI might take some time to validate the IP addresses you enter. The Continue button becomes available when IP address validation completes.
+
 . On the *Review* page in the Network Settings section, new nodes are shown in the bold text. To make changes in any section, do the following:
 .. Click *Edit* for that section.
 .. After you finish, click *Continue* on any subsequent pages to return to the Review page.
@@ -59,7 +62,9 @@ This disables real-time health and diagnostic monitoring for NetApp HCI. Disabli
 . Click *Add Nodes*.
 +
 You can monitor the progress while NetApp HCI adds and configures the resources.
-. *Optional*: Verify that any new storage nodes are visible in the VMware vSphere Web Client.
+. *Optional*: Verify that any new storage nodes are visible in the Element Plug-in for vCenter Server.
++
+NOTE: If you expanded a two-node storage cluster to four nodes or more, the pair of Witness Nodes previously used by the storage cluster are still visible as standby virtual machines in vSphere. The newly expanded storage cluster does not use them; if you want to reclaim VM resources, you can link:task_hci_removewn.html[manually remove^] the Witness Node virtual machines.
 
 
 [discrete]
