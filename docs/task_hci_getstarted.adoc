@@ -5,7 +5,7 @@ summary: Use these instructions to install and deploy NetApp HCI.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 ---
 
-= Quick start for NetApp HCI
+= NetApp HCI installation and deployment overview
 
 :hardbreaks:
 :nofooter:
@@ -22,13 +22,9 @@ image::hci_flowchart_QSG.png[NetApp HCI Quick Start overview diagram]
 
 == Prepare for installation
 
-Before you begin the installation, do the following:
-
-* Read the https://www.netapp.com/us/media/wp-7261.pdf[_Theory of Operations_^] whitepaper.
-* Complete the _NetApp HCI Installation Discovery Workbook_ pre-flight checklist sent to you prior to receiving the hardware.
+Before you begin the installation, complete the _NetApp HCI Installation Discovery Workbook_ pre-flight checklist sent to you prior to receiving the hardware.
 
 === Prepare the network and installation sites
-Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
 
 Here is a simplified NetApp HCI network topology installation:
 
@@ -40,9 +36,11 @@ NOTE: Your network topology might differ from what is shown here. This is an exa
 
 This setup uses two network cables on the compute nodes for connectivity to all NetApp HCI networks. 
 
-For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
+Read these resources:
 
-For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
+* Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
+* For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
+* For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
 
 This setup consolidates all traffic onto two physical, redundant ports, reducing the cabling and streamlining network configuration. This configuration requires that the storage, vMotion and any virtual machine network segments use VLAN tagging.  The management network segment can use native or tagged VLAN; however, native VLAN is the preferred mode so that NetApp Deployment Engine (NDE) can assign network resources in an automated manner (Zero Conf).
 
@@ -84,8 +82,13 @@ CAUTION: For precautions and details, see the https://library.netapp.com/ecm/ecm
 
 == Validate network readiness
 
+<<<<<<< HEAD
 To ensure network readiness for NetApp HCI, install the NetApp Configuration Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
 
+=======
+To ensure network readiness for NetApp HCI, install the NetApp Configuration Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[Active IQ Config Advisor tool^].
+https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/home.html[Learn more about Configuration Advisor procedures^].
+>>>>>>> 8589a2f9835f28c87744480d787339a19b4fdb82
 
 == Deploy NetApp HCI using the NetApp Deployment Engine (NDE)
 
@@ -101,14 +104,13 @@ NetApp HCI uses a storage node management network IPv4 address for initial acces
 
 .Steps
 
-. If you do not know the initial storage node management network IP, use the Terminal User Interface (TUI), which is accessed via keyboard and monitor on the storage node or https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-17P1/GUID-511EA889-41D6-471A-BE84-C3146350A082.html[use a USB stick^].
+. If you do not know the initial storage node management network IP, use the Terminal User Interface (TUI), which is accessed via keyboard and monitor on the storage node or https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-511EA889-41D6-471A-BE84-C3146350A082.html[use a USB stick^].
 +
-For details, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hci-ude-17P1%2FGUID-511EA889-41D6-471A-BE84-C3146350A082.html[_Accessing the NetApp Deployment Engine_^].
+For details, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hci-ude-180%2FGUID-511EA889-41D6-471A-BE84-C3146350A082.html[_Accessing the NetApp Deployment Engine_^].
 . If you do know the IP address, from a web browser, connect to the Bond1G address of the primary node via HTTP, not HTTPS.
 +
 *Example*: `http://<IP_address>:442/nde/`
 
-The NDE landing page appears.
 
 === Deploy NetApp HCI with the NDE UI
 
@@ -153,7 +155,6 @@ You must append `@vsphere.local` to the user name.
 .. Migrate the vCenter Server to NetApp-HCI-Datastore-02 (storage only vMotion).
 .. Migrate the vCenter Server to each of the compute nodes (compute only vMotion).
 .	Go to the NetApp Element Plug-in for vCenter Server and ensure that the cluster is visible.
-.	Log into NetApp Element software. `http://<mvip>//`
 .	Ensure no alerts appear on the Dashboard.
 
 == Manage NetApp HCI using the vCenter Plug-in
@@ -167,7 +168,24 @@ image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 == (Optional) Expand, monitor, or upgrade NetApp HCI with the Hybrid Cloud Control
 
 You can use the NetApp HCI Hybrid Cloud Control to expand, monitor, or upgrade your system.
-For details, see link:/reference_hcc_prerequisites.html[Prerequisites to using Hybrid Cloud Control^].
+
+You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
+
+Using the Hybrid Cloud Control, you can do the following:
+
+* link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
+* link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
+* link:concept_hcc_expandoverview.html[Expand your NetApp HCI storage or compute resources]
+
+*Steps*
+
+. Open a web browser and browse to the IP address of the management node. For example:
++
+https://_<ManagementNodeIP>_
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
++
+The NetApp Hybrid Cloud Control interface appears.
+
 
 
 [discrete]

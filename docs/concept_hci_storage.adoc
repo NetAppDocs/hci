@@ -1,0 +1,32 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_hci_storage.html
+summary: NetApp HCI is available in a range of configuration options for both compute and storage. From NetApp HCI 1.8 onwards, you can have a minimum starting configuration of two storage and two compute nodes. In earlier versions, the minimum configuration required was four storage nodes and two compute nodes.
+keywords: netapp, hci, storage nodes, volumes
+---
+
+= Storage
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+NetApp HCI is available in a range of configuration options for both compute and storage. Starting from NetApp HCI 1.8, you can have a minimum starting configuration of two storage and two compute nodes. Before NetApp HCI 1.8, the minimum configuration required was four storage nodes and two compute nodes.
+
+* NetApp HCI supports various H-series storage node models, such as, H300S, H500S, H700S, H410S, and H610S.
++
+See https://www.netapp.com/us/products/converged-systems/hyper-converged-infrastructure.aspx#modelsAndSpecs[NetApp HCI models and specifications]
+* The storage layer in NetApp HCI is provided by NetApp Element software and the management layer is provided by the NetApp Element Plug-in for vCenter Server.
++
+* A storage node is a server containing a collection of drives that communicate with each other through the Bond10G network interface.
+
+* Each storage node is connected to two networks, storage and management, each with two independent links for redundancy and performance. Each node requires an IP address on each network.
+
+* You can create a cluster with new storage nodes, or add storage nodes to an existing cluster to increase storage capacity and performance.
+
+* In the NetApp HCI and SolidFire ecosystem, storage is provisioned using volumes.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

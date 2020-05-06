@@ -1,10 +1,15 @@
+prefix: docs
 entries:
   - title: NetApp HCI Documentation
     url: ../../../../index.html
-  - title: NetApp HCI Management
+  - title: NetApp HCI Configuration and Management
     url: /index.html
-  - title: What's new in NetApp HCI
-    url: /rn_whatsnew.html
+  - title: Release Notes
+    entries:
+      - title: What's new in NetApp HCI
+        url: /rn_whatsnew.html
+      - title: Additional release information
+        url: /rn_relatedrn.html
   - title: Concepts
     entries:
      - title: Product overview
@@ -13,28 +18,33 @@ entries:
        url: /concept_cg_hci_accounts.html
      - title: Data protection
        url: /concept_hci_dataprotection.html
-     - title: Storage
-       url: /concept_hci_storage.html
-     - title: Licensing
-       url: /concept_hci_licensing.html
+     - title: Clusters
+       url: /concept_hci_clusters.html
+     - title: Nodes
+       url: /concept_hci_nodes.html
+     #- title: Storage
+      # url: /concept_hci_storage.html
      - title: Security
        url: /concept_cg_hci_security.html
      - title: Performance
        url: /concept_hci_performance.html
   - title: Get started with NetApp HCI
     entries:
-      - title: Quick start for NetApp HCI
+      - title: NetApp HCI installation and deployment overview
         url: /task_hci_getstarted.html
-      - title: Prerequisites to using Hybrid Cloud Control
-        url: /reference_hcc_prerequisites.html
-      - title: Access Hybrid Cloud Control
-        url: /task_hcc_access.html
+        #- title: Access Hybrid Cloud Control
+        #  url: /task_hcc_access.html
+        # For 20.2 consider putting multiple access topics or URLs
   - title: Monitor your NetApp HCI system
     entries:
       - title: View resources on the HCC Dashboard
         url: /task_hcc_dashboard.html
+      - title: View your inventory in the Nodes page
+        url: /task_hcc_nodes.html
       - title: Monitor performance, capacity, and cluster health with Active IQ
         url: /task_hcc_activeiq.html
+      - title: Collect NetApp HCI logs
+        url: /task_hcc_collectlogs.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
@@ -81,3 +91,7 @@ entries:
        url: /task_hcc_expand_compute.html
      - title: Expand NetApp storage and compute resources
        url: /task_hcc_expand_compute_and_storage.html
+     - title: Remove Witness Nodes after expanding cluster
+       url: /task_hci_removewn.html
+  - title: Legal notices
+    url: /reference_notices_hci.html

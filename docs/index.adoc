@@ -2,10 +2,10 @@
 sidebar: docs_sidebar
 permalink: docs/index.html
 summary: NetApp HCI provides both storage and compute resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software.
-keywords: netapp, hci, on premise, hybrid cloud control, hcc, kubernetes, cloud services
+keywords: netapp, hci, on premise, hybrid cloud control, hcc, kubernetes
 ---
 
-= NetApp HCI management documentation
+= NetApp HCI configuration and management documentation
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,19 +15,18 @@ keywords: netapp, hci, on premise, hybrid cloud control, hcc, kubernetes, cloud 
 [.lead]
 NetApp HCI provides both storage and compute resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software.
 
-You can upgrade, expand, and monitor your system with the NetApp Hybrid Cloud Control interface and manage NetApp HCI resources with a vCenter plug-in.
+You can upgrade, expand, and monitor your system with the NetApp Hybrid Cloud Control interface and manage NetApp HCI resources with NetApp Element Plug-in for vCenter Server.
 
 == Discover what's new
 
-* link:rn_whatsnew.html[What's new with NetApp HCI]
-* http://docs.netapp.com/sfe-120/index.jsp[What's new with NetApp Element software^]
-* https://kb.netapp.com/app/answers/answer_view/a_id/1087586[_What's new with management services for Element software and NetApp HCI^]
-* What's new with NetApp Element Plug-in for vCenter Server
+* link:rn_whatsnew.html[What's new in NetApp HCI]
+* http://docs.netapp.com/sfe-120/index.jsp[What's new in NetApp Element software^]
+* https://kb.netapp.com/app/answers/answer_view/a_id/1087586[What's new in management services for Element software and NetApp HCI^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[What's new in NetApp Element Plug-in for vCenter Server^]
 
 == Get started with NetApp HCI
 
-* link:task_hci_getstarted.html[Quick start for NetApp HCI installation and deployment]
-* link:task_hcc_access.html[Access NetApp Hybrid Cloud Control]
+* link:task_hci_getstarted.html[NetApp HCI installation and deployment overview]
 * link:concept_hci_product_overview.html[Review basic concepts]
 
 [discrete]

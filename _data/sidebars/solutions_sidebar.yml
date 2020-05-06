@@ -1,3 +1,4 @@
+prefix: solutions
 entries:
   - title: NetApp HCI Documentation
     url: ../../../../index.html
@@ -17,8 +18,8 @@ entries:
         url: https://www.netapp.com/us/media/nva-1133-deploy.pdf
   - title: Containers and DevOps
     entries:
-      - title: DevOps CI / CD Pipeline
-        url: nhci_devops_cicd.html
+#      - title: DevOps CI / CD Pipeline
+#      url: nhci_devops_cicd.html
       - title: Infrastructure as Code with Red Hat Ansible
         url: https://www.netapp.com/us/media/wp-7304.pdf
       - title: Red Hat Openshift Container Platform (Design Guide)
@@ -61,9 +62,15 @@ entries:
         url: https://www.netapp.com/us/media/tr-4778.pdf
       - title: Veeam Backup and Replication 9.5 v4
         url: https://www.netapp.com/us/media/tr-4634.pdf
+      - title: NetApp Scale-Out Data Protection with Commvault
+        url: http://www.netapp.com/us/media/tr-4831.pdf
+  - title: Artificial Intelligence (AI)
+    entries:
+      - title: AI Inferencing on the Edge Data Center with H615c and NVIDIA T4
+        url: http://www.netapp.com/us/media/nva-1144.pdf
   - title: Security
     entries:
       - title: NIST Security Controls for FISMA with HyTrust for Multitenant Infrastructure
         url: https://www.netapp.com/us/media/nva-1143.pdf
   - title: Solution Collection (login required)
-    url: https://fieldportal.netapp.com/collections/810434
+    url: https://fieldportal.netapp.com/collections/895975

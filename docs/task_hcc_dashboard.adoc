@@ -16,16 +16,19 @@ keywords: netapp, hci, on premise, hcc, hybrid cloud control
 [.lead]
 With the NetApp Hybrid Control (HCC) Dashboard, you can view all your storage and compute resources at a glance.
 
-Only compute nodes that are managed and clusters with at least one managed node in H-series hardware appear on the Dashboard. 
+Only compute nodes that are managed and clusters with at least one managed node in H-series hardware appear on the Dashboard.
 *Steps*
 
 . Open a web browser and browse to the IP address of the management node. For example:
 +
-https://_management_node_IP_
+----
+https://[management node IP address]
+----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . View the Dashboard:
 * *Storage*: Displays the number of storage clusters, storage nodes, and total volumes.
 * *Compute*: Displays the number of compute clusters and total compute nodes.
+* *Storage Capacity*: Displays the total physical storage space available in your cluster on the *RAW* tab, and information about the provisioned storage on the *EFFECTIVE* tab. 
 
 TIP: To view cluster health, look at the SolidFire Active IQ Dashboard. See link:task_hcc_activeiq.html[Viewing performance, capacity, and cluster health in SolidFire Active IQ].
 
