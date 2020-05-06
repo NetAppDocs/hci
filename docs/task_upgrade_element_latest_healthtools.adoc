@@ -33,7 +33,7 @@ TIP: You can check the locally installed version of HealthTools by running the `
 .About this task
 
 The commands in the HealthTools suite require escalated privileges to run. Either preface commands with `sudo` or escalate your user to root privileges.
-+
+
 NOTE: The HealthTools version you use might be more up to date than the sample input and response below.
 
 .Steps
@@ -44,9 +44,7 @@ Sample input:
 ----
 sfupdate-healthtools /tmp/solidfire-healthtools-2020.03.01.09.tgz
 ----
-+
 Sample response:
-+
 ----
 Checking key signature for file /tmp/solidfirehealthtools-2020.03.01.09/components.tgz
 installing command sfupdate-healthtools
