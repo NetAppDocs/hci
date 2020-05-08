@@ -5,7 +5,7 @@ summary: NetApp HCI enables you to deploy cloud services across multiple public 
 keywords: netapp, hci, solutions, catalog, solution
 ---
 
-= Welcome to the Solutions Catalog for NetApp HCI
+= NetApp HCI Solutions Catalog
 :hardbreaks:
 :nofooter:
 :icons: font
