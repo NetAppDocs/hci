@@ -33,20 +33,18 @@ a|
 |===
 2+^| *NetApp Sales and Partner Kits are rich with information to help you sell more effectively*
 a| *End User Compute Kits*
-
 * Learn why our EUC solution differentiation means more value
 * Discover more about HCI EUC/VDI use cases
 a| *Private Cloud Kits*
-
 * Learn how our Private Cloud solution delivers differentiation
 * Simplify preparation for HCI Private Cloud use cases
 2+a| *Where to find NetApp HCI Kits*
-
 * EUC and Private Cloud Sales Kits in the link:TBD.html[ HCS Resource Center]
 * Partner Kits in the Partner Portal or use the Partner Kit matrix (below) for rapid access to partner enablement materials
 |===
 
-[width=100%,cols="2, 4, 4, 4, 4" grid="all"]
+[width=100%,cols="2, 3, 3, 3, 3",grid="all",options="header"]
+[caption=,title='Matrix of EUC and Private Cloud Partner Kits']
 |===
 | 2+^h|EUC / VCI 2+^h| Private Cloud
 |  | Citrix | VMware Horizon | VMware | Red Hat
