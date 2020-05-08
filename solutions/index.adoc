@@ -33,11 +33,11 @@ This is also your gateway to sales and partner information and assistance for EU
 
 [width=100%,cols="3*^",grid="cols"]
 |===
-| link:#EUC-VDI[End User Computing] | link:#PRIVATE-CLOUD[Private Cloud] | link:nhci_intro.html[HCI Solution TV]
+| link:#EUC-VDI[End User Computing] | link:#PRIVATE-CLOUD[Private Cloud] | link:TBB.htmll[HCI Solution TV]
 | image:coming-soon.jpg[] | image:coming-soon.jpg[] | image:coming-soon.jpg[]
-link:nchi_intro.html[Video Link 1]
-link:nchi_intro.html[Video Link 2]
-link:nchi_intro.html[Video Link 3]
+link:TBD.html[Video Link 1]
+link:TBD.html[Video Link 2]
+link:TBD.html[Video Link 3]
 |===
 
 anchor:EUC-VDI[]
@@ -48,16 +48,16 @@ The “work from home” or mobile workforce requirement has become the new real
 
 Conventional HCI is designed to provision compute and storage together but efficient VDI configurations require unbalanced compute/storage node ratios.  Architectural limitations for a balance of compute and storage resources creates cost impacts that are subtle until demand increases and resources scale.
 
-link:nhci-intro.html[Learn more] about NetApp HCI VDI solutions customers can easily provision compute and capacity independently and realize performance at scale while maintaining SLAs.
+link:TBD.html[Learn more] about NetApp HCI VDI solutions customers can easily provision compute and capacity independently and realize performance at scale while maintaining SLAs.
 
-link:nhci-intro.html[Discover] more about HCI EUC/VDI use cases such as:
+link:TBD.html[Discover] more about HCI EUC/VDI use cases such as:
 
 * Any where, any time, any device desktop provisioning
 * Services for local or remote temporary or task workers with Customized or standardized Desktops applications with secure access to core corporate assets
 * Services for Knowledge workers such as business professionals, Accountants lawyers and software developers utilizing Windows 10 Office productivity apps, video and multimedia
 * Services for Power users, such as medical specialist, data scientists, modern CAD/CAM product designers, with demanding content rich 3D graphics on high resolution monitors
 
-link:nhci-intro.html[Learn] why our EUC solution differentiation means more value.  NetApp HCI is designed to deliver value beyond the limitations of traditional HCI.
+link:TBD.html[Learn] why our EUC solution differentiation means more value.  NetApp HCI is designed to deliver value beyond the limitations of traditional HCI.
 
 * Lower TCO realized with unmatched resource utilization and data efficiency.
 * NetApp portfolio.  Integrate with existing storage investments and the NetApp Data Fabric for enhanced data portability, visibility, and protection.
@@ -83,15 +83,15 @@ Dynamics of the COVID-19 world requires flexible, self service seamless cloud an
 
 Private Cloud solutions on conventional HCI fix compute to storage ratios impacting provisioning with cloud simplicity.  NetApp HCI eliminates these architectural limitations delivering simple provisioning with excellent ROI to optimize your on-premise cloud services.  Achieve seamless data mobility with NetApp Data Private Cloud and the NetApp Data Fabric.
 
-link:nhci_intro.html[Learn more] about NetApp Private Cloud solutions designed to enable and simplify the customer’s journey to the Hybrid Multi-Cloud.
+link:TBD.html[Learn more] about NetApp Private Cloud solutions designed to enable and simplify the customer’s journey to the Hybrid Multi-Cloud.
 
-link:nhci_intro.html[Discover] more about HCI Private Cloud use cases such as:
+link:TBD.html[Discover] more about HCI Private Cloud use cases such as:
 
 * Eliminate application silos with diverse applications such as, DevOps, Database and more in the same infrastructure.
 * Simplify resources and applications with cloud like deployment and management on a private cloud platform.
 * Performance guarantees for multi tenants across a broad range of applications including EUC, DevOps, Database, Enterprise applications in a single platform.
 
-link:nhci_intro.html[Learn] why our Private Cloud solution differentiation means more value.  NetApp HCI is designed to deliver value beyond the limitations of traditional HCI.
+link:TBD.html[Learn] why our Private Cloud solution differentiation means more value.  NetApp HCI is designed to deliver value beyond the limitations of traditional HCI.
 
 * Lower TCO realized with unmatched resource utilization and data efficiency.
 * Leverage existing investments by integrate with existing storage investments and the NetApp Data Fabric for enhanced data portability, visibility, and protection.
