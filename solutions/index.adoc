@@ -68,7 +68,7 @@ link:TBD.html[Learn] why our EUC solution differentiation means more value.  Net
 HCI EUC solution sales kits provide you with resources to simplify and empower your sales efforts and to help facilitate of your EUC business and revenue.
 
 [width=100%,cols="7*",options="header"]
-[caption=,title='Matric of EUC Sales Kits']
+[caption=,title='Matrix of EUC Sales Kits']
 |===
 | Category | Video | Solution Brief | Customer Presentation | Technical Presentation | QRG/FAQ | Competitive Resources
 | Citrix Solution | links | links | links | links | links | links
@@ -103,7 +103,7 @@ link:TBD.html[Learn] why our Private Cloud solution differentiation means more v
 HCI Private Cloud solution sales kits provide you with resources to simplify and empower your sales efforts and to help facilitate of you Private Cloud business and revenue.
 
 [width=100%,cols="7*",options="header"]
-[caption=,title='Matric of Private Cloud Sales Kits']
+[caption=,title='Matrix of Private Cloud Sales Kits']
 |===
 | Category | Video | Solution Brief | Customer Presentation | Technical Presentation | QRG/FAQ | Competitive Resources
 | VMware | links | links | links | links | links | links
