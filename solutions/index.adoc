@@ -33,12 +33,15 @@ a|
 |===
 2+^| *NetApp Sales and Partner Kits are rich with information to help you sell more effectively*
 a| *End User Compute Kits*
+
 * Learn why our EUC solution differentiation means more value
 * Discover more about HCI EUC/VDI use cases
 a| *Private Cloud Kits*
+
 * Learn how our Private Cloud solution delivers differentiation
 * Simplify preparation for HCI Private Cloud use cases
 2+a| *Where to find NetApp HCI Kits*
+
 * EUC and Private Cloud Sales Kits in the link:TBD.html[ HCS Resource Center]
 * Partner Kits in the Partner Portal or use the Partner Kit matrix (below) for rapid access to partner enablement materials
 |===
@@ -48,12 +51,12 @@ a| *Private Cloud Kits*
 |===
 | 2+^h|EUC / VCI 2+^h| Private Cloud
 |  | Citrix | VMware Horizon | VMware | Red Hat
-| Video | links | links | links | links
-| Solution Brief | links | links | links | links
-| Customer Presentation | links | links | links | links
-| Technical Presentation | links | links | links | links
-| ORG / FAQ | links | links | links | links
-| Competitive Resources | links | links | links | links
+| *Video* | links | links | links | links
+| *Solution Brief* | links | links | links | links
+| *Customer Presentation* | links | links | links | links
+| *Technical Presentation* | links | links | links | links
+| *ORG / FAQ* | links | links | links | links
+| *Competitive Resources* | links | links | links | links
 |===
 
 [width=100%,cols="2, 5",grid="cols"]
@@ -63,6 +66,8 @@ a| * link:TBD.html[Link 1]
 *  link:TBD.html[Link 2]
 *  link:TBD.html[Link 3]
 |===
+
+'''
 
 anchor:EUC-VDI[]
 
