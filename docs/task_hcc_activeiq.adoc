@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 :imagesdir: ../media/
 
 [.lead]
-By using the SolidFire Active IQ, you can monitor the events, performance, and capacity of your clusters. You can access SolidFire Active IQ from the NetApp Hybrid Control Dashboard.
+By using SolidFire Active IQ, you can monitor the events, performance, and capacity of your clusters. You can access SolidFire Active IQ from the NetApp Hybrid Control Dashboard.
 
 *Before you begin*
 
@@ -41,7 +41,7 @@ https://[management node IP address]
 . From the Dashboard, click the menu on the upper right.
 . Select *View Active IQ*.
 +
-The SolidFire Active IQ Dashboard appears at link:https://activeiq.solidfire.com[SolidFire Active IQ address^].
+The link:https://activeiq.solidfire.com[SolidFire Active IQ Dashboard^] appears.
 . To learn about SolidFire Active IQ, from the Dashboard, click the menu icon on the upper right and click *Documentation*.
 . From the SolidFire Active IQ interface, verify that the NetApp HCI compute and storage nodes are reporting telemetry correctly to Active IQ:
 .. If you have more than one NetApp HCI installation, click *Select a Cluster* and choose the cluster from the list.
