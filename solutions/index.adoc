@@ -57,8 +57,8 @@ a| *Private Cloud Kits*
 |  | Citrix | VMware Horizon | VMware | Red Hat
 | *Video* | links | links | links | links
 | *Solution Brief*
-| link:https://fieldportal.netapp.com/content/922004[VDI Citrix]
-| link:https://fieldportal.netapp.com/content/939405[VDI VMware]
+| link:https://fieldportal.netapp.com/content/939405[VDI Citrix]
+| link:https://fieldportal.netapp.com/content/922004[VDI VMware]
 2+| link:https://fieldportal.netapp.com/content/921873[What is a Private Cloud]
 | *Customer Presentation*
 2+| link:https://fieldportal.netapp.com/content/940466[Digital Workplace Transformation (VDI/EUC]
