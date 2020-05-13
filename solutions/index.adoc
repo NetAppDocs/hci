@@ -14,9 +14,9 @@ keywords: netapp, hci, solutions, catalog, solution
 :imagesdir: ./media/
 
 [.lead]
-Welcome to the HCI solutions catalog!
+Welcome to the NetApp HCI solutions catalog!
 
-Here, you will find detailed information for the solutions available on NetApp HCI by using the navigation section on the left of this page as well as additional collateral for our Sales and Partner teams.
+Here, you will find detailed information for the solutions available on NetApp HCI  by using the navigation section on the left of this page.  Also included is additional collateral for our Sales and Partner teams.
 
 NetApp HCI Solutions expand the capabilities to deliver on use cases in areas such as:
 
@@ -34,6 +34,7 @@ a|
  * Security
 |===
 
+---
 == NetApp HCI Solutions: Sales and Partner Kits
 
 [width=100%,cols="2*",grid="all"]
