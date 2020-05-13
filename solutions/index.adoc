@@ -15,7 +15,7 @@ keywords: netapp, hci, solutions, catalog, solution
 [.normal]
 Welcome to the HCI solutions catalog where you will find solutions to expand your capabilities to deliver on use cases in areas such as:
 
-[width=100%,cols="2*",frame="none",grid="none"]
+[width=100%,cols="3 2",frame="none",grid="none"]
 |===
 a|
  * Public, Private, Hybrid and Multi Cloud
@@ -29,8 +29,7 @@ a|
  * Security
 |===
 
-'''
-== NetApp Sales and Partner Kits
+== NetApp HCI Solutions: Sales and Partner Kits
 
 [width=100%,cols="2*",grid="all",stripes="odd"]
 |===
@@ -79,17 +78,13 @@ a| *Private Cloud Kits*
 2+| link:https://fieldportal.netapp.com/content/640571[Competitive Sales Kit VMware Private Cloud]
 |===
 
-[width=100%,cols="1, 3",grid="cols"]
+[width=100%,cols="1,6",grid="cols"]
 |===
-| image:HCI-TV-image.jpg[align="center"]
+| image:HCI-TV-image.jpg[align="center",width="200",height="200"]
 a| * link:TBD.html[Link 1]
 *  link:TBD.html[Link 2]
 *  link:TBD.html[Link 3]
 |===
-
-'''
-
-anchor:EUC-VDI[]
 
 == NetApp HCI End User Compute and Virtual Desktop Infrastructure Solutions
 
