@@ -34,7 +34,6 @@ a|
  * Security
 |===
 
-'''
 == NetApp HCI Solutions: Sales and Partner Kits
 
 [width=100%,cols="2*",grid="all"]
