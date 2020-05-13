@@ -55,7 +55,7 @@ a| *Private Cloud Kits*
 |===
 | 2+^h|EUC / VCI 2+^h| Private Cloud
 |  | Citrix | VMware Horizon | VMware | Red Hat
-| *Video* | links | links | links | links
+| *Video* |  |  |  | 
 | *Solution Brief*
 | link:https://fieldportal.netapp.com/content/939405[VDI Citrix]
 | link:https://fieldportal.netapp.com/content/922004[VDI VMware]
