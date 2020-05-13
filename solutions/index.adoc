@@ -13,8 +13,12 @@ keywords: netapp, hci, solutions, catalog, solution
 :table-stripes: odd
 :imagesdir: ./media/
 
-[.normal]
-Welcome to the HCI solutions catalog where you will find solutions to expand your capabilities to deliver on use cases in areas such as:
+[.lead]
+Welcome to the HCI solutions catalog!
+
+Here, you will find detailed information for the solutions available on NetApp HCI by using the navigation section on the left of this page as well as additional collateral for our Sales and Partner teams.
+
+NetApp HCI Solutions expand the capabilities to deliver on use cases in areas such as:
 
 [width=100%,cols="2*",frame="none",grid="none"]
 |===
@@ -55,7 +59,7 @@ a| *Private Cloud Kits*
 |===
 | 2+^h|EUC / VCI 2+^h| Private Cloud
 |  | Citrix | VMware Horizon | VMware | Red Hat
-| *Video* |  |  |  | 
+| *Video* |  |  |  |
 | *Solution Brief*
 | link:https://fieldportal.netapp.com/content/939405[VDI Citrix]
 | link:https://fieldportal.netapp.com/content/922004[VDI VMware]
