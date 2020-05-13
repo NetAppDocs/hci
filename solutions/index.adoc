@@ -29,7 +29,9 @@ a|
  * Security
 |===
 
-[width=100%,cols="2*",grid="all"]
+'''
+
+[width=100%,cols="2*",grid="all",stripes="odd"]
 |===
 2+^| *NetApp Sales and Partner Kits are rich with information to help you sell more effectively*
 a| *End User Compute Kits*
@@ -42,24 +44,41 @@ a| *Private Cloud Kits*
 * Simplify preparation for HCI Private Cloud use cases
 2+a| *Where to find NetApp HCI Kits*
 
-* EUC and Private Cloud Sales Kits in the link:TBD.html[ HCS Resource Center]
-* Partner Kits in the Partner Portal or use the Partner Kit matrix (below) for rapid access to partner enablement materials
+* EUC and Private Cloud Sales Kits in the link:TBD.html[HCS Resource Center]
+* Partner Kits in the link:https://fieldportal.netapp.com/explore/699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
 |===
 
-[width=100%,cols="2, 3, 3, 3, 3",grid="all",options="header"]
+[width=100%,cols="2, 3, 3, 3, 3",grid="all",options="header",stripes="odd"]
 [caption=,title='Matrix of EUC and Private Cloud Partner Kits']
 |===
 | 2+^h|EUC / VCI 2+^h| Private Cloud
 |  | Citrix | VMware Horizon | VMware | Red Hat
 | *Video* | links | links | links | links
-| *Solution Brief* | links | links | links | links
-| *Customer Presentation* | links | links | links | links
-| *Technical Presentation* | links | links | links | links
-| *ORG / FAQ* | links | links | links | links
-| *Competitive Resources* | links | links | links | links
+| *Solution Brief*
+| link:https://fieldportal.netapp.com/content/922004[VDI Citrix]
+| link:https://fieldportal.netapp.com/content/939405[VDI VMware]
+2+| link:https://fieldportal.netapp.com/content/921873[What is a Private Cloud]
+| *Customer Presentation*
+2+| link:https://fieldportal.netapp.com/content/940466[Digital Workplace Transformation (VDI/EUC]
+| link:https://fieldportal.netapp.com/content/783154[BDM Customer Presentation: VMware Private Cloud]
+| link:https://fieldportal.netapp.com/content/901293[RedHap Private Cloud On NetApp HCI]
+| *Technical Presentation*
+2+| link:https://fieldportal.netapp.com/content/1012848[Technical Presentation for EUC Opportunity]
+| link:https://fieldportal.netapp.com/content/883472[Build Your VMware Private Cloud]
+| link:https://fieldportal.netapp.com/content/902546[Private Cloud with Red Hat/KVM]
+| *ORG*
+2+| link:https://fieldportal.netapp.com/content/1022849[EUC & VDI Solutions with NetApp HCI Partner Marketing]
+2+| link:https://fieldportal.netapp.com/content/942543[Private Cloud Solutions]
+| *FAQ*
+2+| link:https://fieldportal.netapp.com/content/1001003[NetApp HCI FAQ for EUC-VDI]
+| link:https://fieldportal.netapp.com/content/931601[FAQ: VMware Private Cloud]
+|
+| *Competitive Resources*
+2+| link:https://fieldportal.netapp.com/content/728120[Competitive Sales Kit EUC]
+2+| link:https://fieldportal.netapp.com/content/640571[Competitive Sales Kit VMware Private Cloud]
 |===
 
-[width=100%,cols="2, 5",grid="cols"]
+[width=100%,cols="1, 3",grid="cols"]
 |===
 | image:HCI-TV-image.jpg[align="center"]
 a| * link:TBD.html[Link 1]
