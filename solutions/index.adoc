@@ -19,7 +19,6 @@ Welcome to the NetApp HCI solutions catalog!
 Here, you will find detailed information for the solutions available on NetApp HCI  by using the navigation section on the left of this page.  Also included is additional collateral for our Sales and Partner teams.
 
 NetApp HCI Solutions expand the capabilities to deliver on use cases in areas such as:
-
 [width=100%,cols="2*",frame="none",grid="none"]
 |===
 a|
@@ -34,24 +33,20 @@ a|
  * Security
 |===
 
----
 == NetApp HCI Solutions: Sales and Partner Kits
 
 [width=100%,cols="2*",grid="all"]
 |===
 2+^| *NetApp Sales and Partner Kits are rich with information to help you sell more effectively*
-a| *End User Compute Kits*
-
-* Learn why our EUC solution differentiation means more value
-* Discover more about HCI EUC/VDI use cases
+a| *End User Compute Kits* 
+ * Learn why our EUC solution differentiation means more value
+ * Discover more about HCI EUC/VDI use cases
 a| *Private Cloud Kits*
-
-* Learn how our Private Cloud solution delivers differentiation
-* Simplify preparation for HCI Private Cloud use cases
+ * Learn how our Private Cloud solution delivers differentiation
+ * Simplify preparation for HCI Private Cloud use cases
 2+a| *Where to find NetApp HCI Kits*
-
-* EUC and Private Cloud Sales Kits in the link:TBD.html[HCS Resource Center]
-* Partner Kits in the link:https://fieldportal.netapp.com/explore/699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
+ * EUC and Private Cloud Sales Kits in the link:TBD.html[HCS Resource Center]
+ * Partner Kits in the link:https://fieldportal.netapp.com/explore/699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
 |===
 
 [width=100%,cols="2, 3, 3, 3, 3",grid="all",options="header"]
