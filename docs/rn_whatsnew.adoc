@@ -37,7 +37,7 @@ NetApp Hybrid Cloud Control is enhanced for version 1.8. https://kb.netapp.com/a
 With version 1.8, you can set up NetApp HCI to use a storage cluster with two or three storage nodes. When you deploy with a two-node or three-node storage cluster, the deployment process automatically configures two NetApp Witness Nodes as virtual machines. Witness Nodes are virtual nodes that enable storage node redundancy in the event of a storage node failure. NetApp HCI supports the H410S-0, H410S-1, and H610S-1 storage nodes in two-node or three-node storage clusters. link:concept_hci_clusters.html[Learn more^].
 
 == Element 12.0
-Element 12.0 introduces multi-factor authentication, session-based web UI logins, external key management (EKM) enhancements, faster upgrades, customizable protection domains, and contains stability and functionality improvements.
+NetApp HCI 1.8 includes Element 12.0 for storage clusters. Element 12.0 introduces multi-factor authentication, session-based web UI logins, external key management (EKM) enhancements, faster upgrades, customizable protection domains, and contains stability and functionality improvements.
 
 === Element 12.0 firmware updates
 The following firmware updates for H610S storage node hardware components are included with this release:
