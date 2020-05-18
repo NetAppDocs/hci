@@ -41,7 +41,7 @@ Element 12.0 introduces multi-factor authentication, session-based web UI logins
 
 === Element 12.0 firmware updates
 The following firmware updates for H610S storage node hardware components are included with this release:
-.Table
+
 |===
 |Component |Firmware version
 
@@ -72,6 +72,7 @@ NOTE: The NetApp Element VASA provider uses a NetApp certificate. With this patc
 Beginning with Element 12.0, you can customize protection domain layouts to cover zones of storage nodes within a rack, or between multiple racks. This enables you to have more flexibility in data resiliency and to improve storage availability, especially in large scale installations. When you enable the feature, you must have at least 3 domains, and at least 2 storage nodes per domain.
 
 The following are Element API methods related to Protection Domains (the http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-api/home.html[Element API Reference Guide^] has more information):
+
 * SetProtectionDomainLayout
 * GetProtectionDomainLayout
 * ListAllNodes
@@ -88,6 +89,7 @@ Element 12.0 brings decreases in upgrade times. Upgrades from Element 12.0 to fu
 === Enhanced external key management
 Element 12.0 external key management (EKM) now supports the following key management
 services:
+
 * Gemalto SafeNet KeySecure
 * SafeNet AT KeySecure
 * HyTrust KeyControl
@@ -98,9 +100,12 @@ http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-45
 === Multi-factor authentication
 With multi-factor authentication (MFA) support, you can now integrate the Element web UI and the storage per-node web UI with your single sign-on (SSO) infrastructure.
 MFA supports the following SAML 2.0-based identity providers (IdPs):
+
 * Microsoft Active Directory Federation Services (ADFS) 2016
 * Shibboleth 3.4.4
+
 The following are Element API methods related to MFA (the Element API Reference Guide has more information):
+
 * CreateIdpConfiguration
 * UpdateIdpConfiguration
 * DeleteIdpConfiguration
@@ -131,9 +136,13 @@ http://security.netapp.com/[Learn more^] about these security enhancements.
 === Session-based authentication
 The Element API now supports token authentication and authorization, enabling you to log on to the Element web UI or individual storage per-node web UIs with either the local cluster admin credentials or LDAP-based cluster admin credentials. One browser login session token covers multiple web UI logins, so you can log in to the Element web UI and then log in to all individual storage per-node web UIs in that storage cluster and not have to re-authenticate with each one.
 The following are Element API methods related to session-based authentication (the Element API Reference Guide has more information):
+
 * ListAuthSessionsByClusterAdmin
 * ListActiveAuthSessions
 * ListAuthSessionsByUsername
+
+== Compute node firmware bundle (June 2020)
+The June 2020 compute node firmware bundle contains the latest BIOS feature enhancements, bugfixes, and hardware support for NetApp HCI compute nodes.
 
 [discrete]
 == Find more information
