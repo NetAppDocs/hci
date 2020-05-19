@@ -42,7 +42,7 @@ The following abbreviations are used in the table:
 |Client iSCSI communications
 
 |Management node
-|sfsupport.solidfire.com
+|`sfsupport.solidfire.com`
 |22
 |Reverse SSH tunnel for support access
 
@@ -67,12 +67,17 @@ The following abbreviations are used in the table:
 |Management node service upgrades
 
 |Management node
-|monitoring.solidfire.com
+|`monitoring.solidfire.com`
+|443
+|Storage cluster reporting to Active IQ
+
+|Management node
+|Storage cluster MVIP
 |443
 |UI and API access to storage node and Element software upgrades
 
 |Management node
-|repo.netapp.com
+|`repo.netapp.com`
 |443
 |Provides access to components necessary to install/update on-premises deployment.
 
