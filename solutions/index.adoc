@@ -45,7 +45,7 @@ NetApp Sales and Partner Kits are rich with information to help you sell more ef
 ** Simplify preparation for HCI Private Cloud use cases
 
 === Where to find NetApp HCI Kits
-* EUC and Private Cloud Sales Kits in the link:TBD.html[HCS Resource Center]
+* EUC and Private Cloud Sales Kits in the link:Thttps://netapp.sharepoint.com/sites/HCSBUProductInformation/SitePages/HCI-Solutions.aspx[HCS Resource Center]
 * Partner Kits in the link:https://fieldportal.netapp.com/explore///699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
 
 //[width=100%,cols="2*",grid="all"]
@@ -102,9 +102,10 @@ NetApp Sales and Partner Kits are rich with information to help you sell more ef
 [width=100%,cols="1,6",grid="cols"]
 |===
 | image:HCI-TV-image.jpg[align="center",width="200",height="200"]
-a| * link:TBD.html[Link 1]
-*  link:TBD.html[Link 2]
-*  link:TBD.html[Link 3]
+| image:coming-soon.jpg[align="left",width="200",height='200']
+//a| * link:TBD.html[Link 1]
+//*  link:TBD.html[Link 2]
+//*  link:TBD.html[Link 3]
 |===
 
 == NetApp HCI End User Compute and Virtual Desktop Infrastructure Solutions
