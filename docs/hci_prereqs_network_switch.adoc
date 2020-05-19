@@ -1,26 +1,46 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/rn_whatsnew.html
+permalink: docs/hci_prereqs_network_switch.html
 summary: Learn what's new in this version of NetApp HCI.
-keywords: netapp, hci, element, new, whatsnew
+keywords: netapp, hci, network, switch, requirements
 ---
 
-= What's new in NetApp HCI
+= Network and switch requirements
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help, element
+:keywords: netapp, hci, network, switch, requirements
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
+The switches you use for NetApp HCI require specific configuration to ensure a successful deployment. See your switch documentation for specific instructions on implementing each of the following requirements for your environment.
 
-*NetApp HCI 1.8* describes new features and updates in NetApp HCI version 1.8.
+A NetApp HCI deployment requires at least three network segments, one for each of the following types of traffic:
 
-*Element 12.0* describes new features and updates in NetApp Element 12.0.
+* Management
+* VMware vMotion
+* Storage/Data
 
-*Compute node firmware (June 2020)* describes improvements in the current release of NetApp HCI compute node firmware.
+ Depending on the NetApp H-Series compute and storage node models and the planned cabling configuration, you can physically separate these networks using separate switches or logically separate them using VLANs. For most deployments, however, you need to logically separate these networks (and any other additional virtual machine networks) using VLANs.
 
-== NetApp HCI 1.8
-NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
+Compute and storage nodes need to be able to communicate before, during, and after deployment. If you are implementing separate management networks for storage and compute nodes, ensure that these management networks have network routes between them. These networks must have gateways assigned, and there must be a route between the gateways. Ensure that each new node has a gateway assigned to facilitate communication between nodes and management networks.
+
+NetApp HCI has the following switch requirements:
+
+* All switch ports connected to NetApp HCI nodes must be configured as spanning tree edge ports.
+** On Cisco switches, depending on the switch model, software version and port type, you can do this with one of the following commands:
+*** `spanning-tree port type edge`
+*** `spanning-tree port type edge trunk`
+*** `spanning-tree portfast`
+*** `spanning-tree portfast trunk`
+** On Mellanox switches, you can do this with the `spanning-tree port type edge` command.
+* NetApp HCI nodes have redundant ports for all network functions except out-of-band management. For the best resiliency, divide these ports across two switches with redundant uplinks to either a traditional hierarchical architecture or a layer 2 spine-and-leaf architecture.
+* The switches handling storage, virtual machine, and vMotion traffic must support speeds of at least 10GbE per port (up to 25GbE per port is supported).
+* The switches handling management traffic must support speeds of at least 1GbE per port.
+* You must configure jumbo frames on the switch ports handling storage and vMotion traffic. Hosts must be able to send 9000 byte packets end-to-end for a successful installation.
+* Round-trip network latency between all storage and compute nodes should not exceed 2ms.
+
+All NetApp HCI nodes provide additional out-of-band management capabilities via a dedicated management port. NetApp H300S, H300E, H500S, H500E, H700S, H700E and H410C nodes also allow for IPMI access via Port A. As a best practice, you should ease remote management of NetApp HCI by configuring out-of-band management for all nodes in your environment.
+
+NOTE: The management network of the management node needs a configuration that includes a gateway address to be able to communicate with NetApp Cloud Services. Enabling NetApp cloud services will fail if a valid gateway address is not in place.
