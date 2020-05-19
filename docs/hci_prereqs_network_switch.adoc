@@ -22,7 +22,7 @@ A NetApp HCI deployment requires at least three network segments, one for each o
 * VMware vMotion
 * Storage/Data
 
- Depending on the NetApp H-Series compute and storage node models and the planned cabling configuration, you can physically separate these networks using separate switches or logically separate them using VLANs. For most deployments, however, you need to logically separate these networks (and any other additional virtual machine networks) using VLANs.
+Depending on the NetApp H-Series compute and storage node models and the planned cabling configuration, you can physically separate these networks using separate switches or logically separate them using VLANs. For most deployments, however, you need to logically separate these networks (and any other additional virtual machine networks) using VLANs.
 
 Compute and storage nodes need to be able to communicate before, during, and after deployment. If you are implementing separate management networks for storage and compute nodes, ensure that these management networks have network routes between them. These networks must have gateways assigned, and there must be a route between the gateways. Ensure that each new node has a gateway assigned to facilitate communication between nodes and management networks.
 
