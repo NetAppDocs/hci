@@ -44,3 +44,8 @@ NetApp HCI has the following switch requirements:
 All NetApp HCI nodes provide additional out-of-band management capabilities via a dedicated management port. NetApp H300S, H300E, H500S, H500E, H700S, H700E and H410C nodes also allow for IPMI access via Port A. As a best practice, you should ease remote management of NetApp HCI by configuring out-of-band management for all nodes in your environment.
 
 NOTE: The management network of the management node needs a configuration that includes a gateway address to be able to communicate with NetApp Cloud Services. Enabling NetApp cloud services will fail if a valid gateway address is not in place.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

@@ -1,26 +1,26 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/rn_whatsnew.html
-summary: Learn what's new in this version of NetApp HCI.
-keywords: netapp, hci, element, new, whatsnew
+permalink: docs/hci_prereqs_environmental.html
+summary: Learn about NetApp HCI environmental requirements.
+keywords: netapp, hci, environment, requirements
 ---
 
-= NetApp HCI
+= Environmental requirements
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help, element
+:keywords: netapp, hci, environment, requirements
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
+Ensure that the power for the rack used to install NetApp HCI is supplied by AC power outlets, and that your datacenter provides adequate cooling for the size of your NetApp HCI installation.
 
-*NetApp HCI 1.8* describes new features and updates in NetApp HCI version 1.8.
+For detailed capabilities of each component of NetApp HCI, see the NetApp HCI http://www.netapp.com/us/media/ds-3881.pdf[datasheet^].
 
-*Element 12.0* describes new features and updates in NetApp Element 12.0.
+NOTE: The H410C compute node operates only on high-line voltage (200-240 VAC). You must ensure that the power requirements are met when you add H410C nodes to an existing NetApp HCI installation.
 
-*Compute node firmware (June 2020)* describes improvements in the current release of NetApp HCI compute node firmware.
-
-== NetApp HCI 1.8
-NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

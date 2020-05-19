@@ -1,26 +1,22 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/rn_whatsnew.html
-summary: Learn what's new in this version of NetApp HCI.
-keywords: netapp, hci, element, new, whatsnew
+permalink: docs/hci_prereqs_protection_domains.html
+summary: Learn about the Protection Domains feature for NetApp HCI storge clusters.
+keywords: netapp, hci, element, storage, protection domains
 ---
 
-= What's new in NetApp HCI
+= Protection Domains
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help, element
+:keywords: netapp, hci, element, storage, protection domains
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
+NetApp Element software supports Protection Domains functionality, which optimizes data layout on storage nodes for the best data availability. To use this feature, you should split storage capacity evenly across three or more NetApp H-series chassis for optimal storage reliability. In this scenario, the storage cluster automatically enables Protection Domains.
 
-*NetApp HCI 1.8* describes new features and updates in NetApp HCI version 1.8.
-
-*Element 12.0* describes new features and updates in NetApp Element 12.0.
-
-*Compute node firmware (June 2020)* describes improvements in the current release of NetApp HCI compute node firmware.
-
-== NetApp HCI 1.8
-NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

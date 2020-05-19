@@ -1,26 +1,37 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/rn_whatsnew.html
-summary: Learn what's new in this version of NetApp HCI.
-keywords: netapp, hci, element, new, whatsnew
+permalink: docs/hci_prereqs_network_cables.html
+summary: Learn about NetApp HCI network cable requirements.
+keywords: netapp, hci, network, cable, requirements
 ---
 
-= What's new in NetApp HCI
+= Network cable requirements
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help, element
+:keywords: netapp, hci, network, cable, requirements
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
+You can use the following guidelines to ensure that you have enough of the right type of network cables for the size of your deployment. For RJ45 ports, you must use Cat 5e or Cat 6 rated cables.
 
-*NetApp HCI 1.8* describes new features and updates in NetApp HCI version 1.8.
+* Two-cable compute node configuration: Each compute node must to be connected to a 10/25GbE network via two SFP+/SFP28 interfaces (one additional Cat 5e/6 cable is optional for out-of-band management).
+* Six-cable compute node configuration: Each compute node must to be connected to a 10/25GbE network via four SFP+/SFP28 interfaces and to a 1/10GbE network via two Cat 5e/6 cables (one additional Cat 5e/6 cable is optional for out-of-band management).
+* Each storage node must be connected to a 10/25GbE network via two SFP+/SFP28 interfaces and to a 1/10GbE network via two Cat 5e/6 cables (one additional Cat 5e/6 cable is optional for out-of-band management).
+* Ensure the network cables you use to connect the NetApp HCI system to your network are long enough to comfortably reach your switches.
 
-*Element 12.0* describes new features and updates in NetApp Element 12.0.
+For example, a deployment containing four storage nodes and three compute nodes (using the six-cable configuration) requires the following number of network cables:
 
-*Compute node firmware (June 2020)* describes improvements in the current release of NetApp HCI compute node firmware.
+* (14) Cat 5e/6 cables with RJ45 connectors (plus seven cables for IPMI traffic, if desired)
+* (20) Twinax cables with SFP28/SFP+ connectors
 
-== NetApp HCI 1.8
-NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
+This is due to the following reasons:
+
+* Four storage nodes require eight (8) Cat 5e/6 cables and eight (8) Twinax cables.
+* Three compute nodes using the six-cable configuration require six (6) Cat 5e/6 cables and twelve (12) Twinax cables.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

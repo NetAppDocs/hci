@@ -1,26 +1,29 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/rn_whatsnew.html
-summary: Learn what's new in this version of NetApp HCI.
-keywords: netapp, hci, element, new, whatsnew
+permalink: docs/hci_prereqs_timekeeping.html
+summary: Learn about DNS and timekeeping requirements for NetApp HCI.
+keywords: netapp, hci, timekeeping, NTP, DNS
 ---
 
-= What's new in NetApp HCI
+= DNS and timekeeping requirements
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help, element
+:keywords: netapp, hci, timekeeping, NTP, DNS
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
+Before deployment, you need to prepare Domain Name System (DNS) records for your NetApp HCI system and gather NTP server information. NetApp HCI requires a DNS server with the correct DNS entries and an NTP server for a successful deployment.
 
-*NetApp HCI 1.8* describes new features and updates in NetApp HCI version 1.8.
+Make the following DNS and timeserver preparations before deploying NetApp HCI:
 
-*Element 12.0* describes new features and updates in NetApp Element 12.0.
+* Create any needed DNS entries for hosts (such as individual compute or storage nodes) and document how the host entries map to the respective IP addresses. During deployment, you will need to assign a prefix to your storage cluster that will be applied to each host; to avoid confusion, keep your DNS naming plans in mind when choosing a prefix.
+* If you are deploying NetApp HCI with a new VMware vSphere installation using a fully qualified domain name, you must create one Pointer (PTR) record and one Address (A) record for vCenter Server on any DNS servers in use before deployment.
+* If you are deploying NetApp HCI with a new vSphere installation using only IP addresses, you do not need to create new DNS records for vCenter.
+* NetApp HCI requires a valid NTP server for timekeeping. You can use a publicly available time server if you do not have one in your environment.
 
-*Compute node firmware (June 2020)* describes improvements in the current release of NetApp HCI compute node firmware.
-
-== NetApp HCI 1.8
-NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
