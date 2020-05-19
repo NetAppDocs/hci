@@ -17,11 +17,13 @@ keywords: netapp, hci, storage, performance, LACP
 For optimal NetApp HCI storage cluster performance, you should configure Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes.
 
 *Before you begin*
+
 * You have configured the switch ports connected to the 10/25GbE interfaces of NetApp HCI storage nodes as LACP port channels.
 * You have set the LACP timers on the switches handling storage traffic to “fast mode (1s)” for optimal failover detection time. During deployment, the Bond1G interfaces on all storage nodes are automatically configured for active/passive mode.
 * You have configured Cisco Virtual PortChannel (vPC) or the equivalent switch stacking technology for the switches handling the storage network. Switch stacking technology eases configuration of LACP and port channels, and provides a loop-free topology between switches and the 10/25GbE ports on the storage nodes.
 
 *Steps*
+
 . Follow your switch vendor recommendations for enabling LACP on the switch ports used for NetApp H-series storage nodes.
 . Change the bond mode on all storage nodes to LACP in the on-node user interface (also known as the terminal user interface, or TUI) before you deploy NetApp HCI.
 
