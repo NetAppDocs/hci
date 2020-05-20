@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_element_software.html
 summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade NetApp Element software.
-keywords: netapp, hci, on premise, cluster, element, H610S upgrade
+keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 ---
 
 = Upgrade Element software
@@ -15,13 +15,6 @@ keywords: netapp, hci, on premise, cluster, element, H610S upgrade
 
 [.lead]
 To upgrade to NetApp Element software 12.0, you must use the `sfinstall` file included in the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
-
-Choose one of the following Element software upgrade options that use HealthTools for the procedure:
-
-* <<Upgrade Element software at connected sites>>
-* <<Upgrade Element software at dark sites>>
-
-IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> after you complete the `sfinstall` procedure with HealthTools.
 
 .What you'll need
 
@@ -36,8 +29,113 @@ https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Up
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 * The management node in your environment is running version 11.0, 11.1 or later.
 
+.Upgrade options
 
-== Upgrade Element software at connected sites
+Choose one of the following Element software upgrade options:
+
+* <<Use NetApp Hybrid Cloud Control to upgrade Element storage>>
+* <<Use HCC API to upgrade Element storage>>
+* <<Upgrade Element software at connected sites using HealthTools>>
+* <<Upgrade Element software at dark sites using HealthTools>>
+
+IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> after you complete the `sfinstall` procedure with HealthTools.
+
+== Use NetApp Hybrid Cloud Control to upgrade Element storage
+
+Using NetApp Hybrid Cloud Control (HCC), you can upgrade a storage cluster.
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select the *Storage* tab.
+. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
+. On the *Storage Health Check* page, click *Run Health Check*.
+. If there are issues, do the following:
+.. Go to the specific KB article listed for each issue or perform the specified remedy.
+.. If a KB is specified, complete the process described in the relevant KB article.
+.. After you have resolved cluster issues, click *Re-Run Health Check*.
+
+After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:task_hcc_upgrade_element_software.html[instructions] to proceed.
+
+== Use HCC API to upgrade Element storage
+You can use REST API to verify that a storage cluster is ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as pending nodes, disk space issues, and cluster faults.
+
+.Steps
+
+. Locate the storage cluster ID:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/mnode
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+.. From the REST API UI, click *GET /assets/storage-clusters*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
+. Run health checks on the storage cluster:
+.. Open the storage REST API UI on the management node:
++
+----
+https://[management node IP]/storage/1
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+.. Click *POST /health-checks*.
+.. Click *Try it out*.
+.. Enter the storage cluster ID in the parameter field.
+.. Click *Execute* to run a health check on the specified storage cluster.
++
+The response should indicate state as `initializing`:
++
+----
+{
+  "_links": {
+    "collection": "https://10.117.149.231/storage/1/health-checks",
+    "log": "https://10.117.149.231/storage/1/health-checks/358f073f-896e-4751-ab7b-ccbb5f61f9fc/log",
+    "self": "https://10.117.149.231/storage/1/health-checks/358f073f-896e-4751-ab7b-ccbb5f61f9fc"
+  },
+  "config": {},
+  "dateCompleted": null,
+  "dateCreated": "2020-02-21T22:11:15.476937+00:00",
+  "healthCheckId": "358f073f-896e-4751-ab7b-ccbb5f61f9fc",
+  "state": "initializing",
+  "status": null,
+  "storageId": "c6d124b2-396a-4417-8a47-df10d647f4ab",
+  "taskId": "73f4df64-bda5-42c1-9074-b4e7843dbb77"
+}
+----
+.. Copy the `healthCheckID` that is part of response.
+. Verify the results of the health checks:
+.. Click *GET ​/health-checks​/healthCheckId}*.
+.. Click *Try it out*.
+.. Enter the health check ID in the parameter field.
+.. Click *Execute*.
+.. Scroll to the bottom of the response body.
+. If the `message` return indicates that there were problems regarding cluster health, do the following:
+.. Go to the specific KB article listed for each issue or perform the specified remedy.
+.. If a KB is specified, complete the process described in the relevant KB article.
+.. After you have resolved cluster issues, run *GET ​/health-checks​/healthCheckId}* again.
+
+If all health checks are successful, the return is similar to the following example:
+----
+"message": "All checks completed successfully.",
+"percent": 100,
+"timestamp": "2020-03-06T00:03:16.321621Z"
+----
+
+== Upgrade Element software at connected sites using HealthTools
 
 .Steps
 
@@ -189,7 +287,7 @@ Starting light cluster block service check
 
 IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>>.
 
-== Upgrade Element software at dark sites
+== Upgrade Element software at dark sites using HealthTools
 You must use the HealthTools suite of tools to update NetApp Element software at a dark site.
 
 .What you'll need
