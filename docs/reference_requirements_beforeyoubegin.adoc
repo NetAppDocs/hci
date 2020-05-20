@@ -30,26 +30,42 @@ NOTE: Running NKS services through a proxy server is not supported.
 
 == Networking requirements
 * You must have already configured the required vSphere distributed switches (VDS). VMware standard switches (VSS) are not supported.
-* You must have already configured the recommended vSphere distributed switch (VDS) port groups:
-** NetApp HCI VDS 01-HCI_Internal_NKS_Management
-** NetApp HCI VDS 01-HCI_Internal_NKS_Workload
-** NetApp HCI VDS 01-HCI_Internal_NKS_Data
+* You must have the recommended vSphere distributed switch (VDS) port groups, which you can create before or even while you enable cloud services. The port group names should be in this format:
+** HCI_NKS_Management_01
+** HCI_NKS_Workload_01
+** HCI_NKS_Data_01
 * Using VDS requires a vSphere Enterprise Plus license. You must have this license.
+* For the switch, you need at least two uplinks on VMK adapters for management and vMotion and two uplinks on the iSCSI adapter.
 
 == System size requirements
-* 2x4 systems are not supported for production use. However, you can use these for demo work.
+* 2x4 systems are not supported for production use. However, you can use these for nonproduction work.
 * 3x4 systems are the minimum production system size we support.
 * 4x4 systems are the recommended minimum size.
+
+== IP requirements for NetApp Kubernetes Service
+Several IPs are required:
+
+* Management network IP requirements (Total: 10 IPs)
+** 1 IP for the bootstrap VM (released after successful registration)
+** 6 service cluster machines (3 master nodes and 3 worker nodes)
+** 1 virtual IP shared between the load balancer machines. There are two load balancers each having its own assigned IP.
+
+
+*	Workload network IP requirements (Total minimum of 5 IP addresses with a recommendation of 256 to meet potential workload increase)
+** 1 IP for each worker node (default is 2 worker nodes)
+** Pool of IPs for load balancer (depending upon your deployment intent and defined at installation time)
+
+
+*	Data (iSCSI Storage) network (Total of 111 IP addresses per workload cluster, default is /16 or 65534 IPs)
+** 1 IP for each master node (default is 1 master node)
+** 1 IP for each of the worker nodes (default is 2 worker nodes)
+** You can use the default of /16 IPs or create your own range, where you need to assign a minimum of 111 IP addresses (100 reserved for storage nodes, 1 for Storage Virtual IP, and 10 for user clusters).
+
 
 == NetApp Kubernetes Service requirements
 * A NetApp Kubernetes Service (NKS) account
 * A NetApp Kubernetes Service API token, which authorizes the installer to access the NKS organization. You can create this before or during the process of enabling cloud services on NetApp HCI.
 
-== Requirements for Cloud Volumes on NetApp HCI and NetApp Fabric Orchestrator
-* An NKS account. NetApp HCI installs the service cluster on NKS, which in turn installs the Kubernetes pods, which is a set of one or more containers used for Cloud Volumes on NetApp HCI.
-* All requirements needed for NKS, such as the NKS API token, which authorizes the installer to access the NKS organization.
-* Access to the NKS storage system
-* A Cloud Central account
 
 == Browser requirements
 *	Any modern browser

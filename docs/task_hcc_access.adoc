@@ -1,0 +1,39 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_access.html
+summary: You can log in to NetApp Hybrid Cloud Control.
+keywords: netapp, hci, on premise, hybrid cloud control, hcc
+---
+
+= Access NetApp HCI Hybrid Cloud Control
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+NetApp Hybrid Cloud Control enables you to manage NetApp HCI.
+
+You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
+
+Using the Hybrid Cloud Control, you can do the following:
+
+* link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
+* link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
+* link:concept_hcc_expandoverview.html[Expand your NetApp HCI storage or compute resources]
+
+*Steps*
+
+. Open a web browser and browse to the IP address of the management node. For example:
++
+https://_<ManagementNodeIP>_
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
++
+The NetApp Hybrid Cloud Control interface appears.
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

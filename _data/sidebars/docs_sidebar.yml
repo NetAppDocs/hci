@@ -1,66 +1,97 @@
 prefix: docs
 entries:
-  - title: NetApp HCI Cloud Services and Solutions
+  - title: NetApp HCI Documentation
     url: ../../../../index.html
-  - title: NetApp HCI Cloud Services
+  - title: NetApp HCI Configuration and Management
     url: /index.html
+  - title: Release Notes
+    entries:
+      - title: What's new in NetApp HCI
+        url: /rn_whatsnew.html
+      - title: Additional release information
+        url: /rn_relatedrn.html
   - title: Concepts
     entries:
-      - title: Cloud services on NetApp HCI overview
-        url: /concept_overview.html
-      - title: Types of cloud services on NetApp HCI
-        url: /concept_types_cloudservices.html
-      - title: Architecture overview for cloud services on NetApp HCI
-        url: /concept_architecture.html
-      - title: What happens when you enable NetApp Kubernetes Service?
-        url: /concept_behind_the_scenes.html
-      - title: Cluster types in cloud services on NetApp HCI
-        url: /concept_cluster_types.html
-      - title: Kubernetes terminology
-        url: /concept_kubernetes_pods_volumes_projects.html
-  - title: Prerequisites for cloud services on NetApp HCI
+     - title: Product overview
+       url: /concept_hci_product_overview.html
+     - title: Accounts
+       url: /concept_cg_hci_accounts.html
+     - title: Data protection
+       url: /concept_hci_dataprotection.html
+     - title: Clusters
+       url: /concept_hci_clusters.html
+     - title: Nodes
+       url: /concept_hci_nodes.html
+     #- title: Storage
+      # url: /concept_hci_storage.html
+     - title: Security
+       url: /concept_cg_hci_security.html
+     - title: Performance
+       url: /concept_hci_performance.html
+  - title: Get started with NetApp HCI
     entries:
-      - title: Prerequisites overview
-        url: /concept_gettingstarted.html
-      - title: Cloud Central accounts
-        url: /concept_cloud_central_accounts.html
-      - title: Sign up for a Cloud Central account
-        url: /task_cloudcentral_signup.html
-      - title: System requirements before you begin
-        url: /reference_requirements_beforeyoubegin.html
-      - title: Licensing
-        url: /concept_licensing.html
-      - title: Get a NetApp Kubernetes Service API token
-        url: /task_getting_a_netapp_kubernetes_service_api_token.html
-  - title: Enable cloud services on NetApp HCI
+      - title: NetApp HCI installation and deployment overview
+        url: /task_hci_getstarted.html
+        #- title: Access Hybrid Cloud Control
+        #  url: /task_hcc_access.html
+        # For 20.2 consider putting multiple access topics or URLs
+  - title: Monitor your NetApp HCI system
     entries:
-    - title: Deploy cloud services on NetApp HCI overview
-      url: /task_deploying_overview.html
-    - title: Enable cloud services using NetApp Hybrid Cloud Control
-      url: /task_enabling_cloud_services.html
-    - title: Enable cloud volumes after NKS is already enabled
-      url: /task_enabling_cloud_volumes.html
-  - title: Enable Kubernetes clusters on NetApp HCI
+      - title: View resources on the HCC Dashboard
+        url: /task_hcc_dashboard.html
+      - title: View your inventory in the Nodes page
+        url: /task_hcc_nodes.html
+      - title: Monitor performance, capacity, and cluster health with Active IQ
+        url: /task_hcc_activeiq.html
+      - title: Collect NetApp HCI logs
+        url: /task_hcc_collectlogs.html
+  - title: Upgrade your NetApp HCI or SolidFire system
     entries:
-    - title: Manage Kubernetes clusters on NetApp HCI overview
-      url: /task_nks_overview.html
-    - title: Access NetApp Kubernetes Service
-      url: /task_nks_accessing.html
-    - title: Create a Kubernetes cluster using NetApp Kubernetes Service
-      url: /task_NKS_create_cluster.html
-    - title: Create a project within your Kubernetes workspace
-      url: /task_nks_creating_projects.html
-    - title: Storage classes on NetApp Kubernetes Service
-      url: /reference_nks_storageclasses.html
-    - title: Add applications to your Kubernetes clusters
-      url: /task_NKS_adding_applications.html
-  - title: Manage data in Cloud Volumes with NetApp Fabric Orchestrator
+      - title: Upgrades overview
+        url: /concept_hci_upgrade_overview.html
+      - title: Upgrade sequences
+        entries:
+          - title: Upgrade your NetApp HCI system for version 1.8
+            url: /task_hcc_upgrade_all.html
+          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.0
+            url: /task_sf_upgrade_all.html
+      - title: System upgrade procedures
+        entries:
+          - title: Update management services
+            url: /task_hcc_update_management_services.html
+          - title: Upgrade to the latest HealthTools
+            url: /task_upgrade_element_latest_healthtools.html
+          - title: Run Element storage health checks prior to upgrading storage
+            url: /task_hcc_upgrade_element_prechecks.html
+          - title: Upgrade Element software
+            url: /task_hcc_upgrade_element_software.html
+          - title: Upgrade a management node
+            url: /task_hcc_upgrade_management_node.html
+          - title: Upgrade the NetApp Element Plug-in for vCenter Server
+            url: /task_vcp_upgrade_plugin.html
+          - title: Run compute node health checks prior to upgrading compute firmware
+            url: /task_upgrade_compute_prechecks.html
+          - title: Update compute node firmware
+            url: /task_hcc_upgrade_compute_node_firmware.html
+          - title: Update compute node drivers
+            url: /task_hcc_upgrade_compute_node_drivers.html
+      - title: vSphere upgrade sequences with vCenter Plug-in
+        entries:
+          - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
+            url: /task_hci_upgrade_all_vsphere.html
+          - title: Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server
+            url: /task_sf_upgrade_all_vsphere.html
+  - title: Expand your NetApp HCI system
     entries:
-    - title: Manage data in NetApp Cloud Volumes overview
-      url: /task_cv_managing.html
-    - title: What happens when you enable Cloud Volumes on NetApp HCI?
-      url: /concept_behind_the_scenes_fo.html
-    - title: Access NetApp Fabric Orchestrator
-      url: /task_fo_accessing.html
-    - title: Create cloud volumes with NetApp Fabric Orchestrator
-      url: /task_dfo_creating_cloud_volumes.html
+     - title: Expand overview
+       url: /concept_hcc_expandoverview.html
+     - title: Expand NetApp HCI storage resources
+       url: /task_hcc_expand_storage.html
+     - title: Expand NetApp HCI compute resources
+       url: /task_hcc_expand_compute.html
+     - title: Expand NetApp storage and compute resources
+       url: /task_hcc_expand_compute_and_storage.html
+     - title: Remove Witness Nodes after expanding cluster
+       url: /task_hci_removewn.html
+  - title: Legal notices
+    url: /reference_notices_hci.html

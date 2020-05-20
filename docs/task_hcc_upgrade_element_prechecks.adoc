@@ -1,0 +1,304 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_element_prechecks.html
+summary: As part of a NetApp HCI or SolidFire storage system upgrade, you need to run health checks for NetApp Element software.
+keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck
+---
+
+= Run Element storage health checks prior to upgrading storage
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You must run health checks prior to upgrading Element storage to ensure all storage nodes in your cluster are ready for the next Element storage upgrade.
+
+You can run health checks using NetApp Hybrid Cloud Control (HCC) UI, HCC API, or the HealthTools suite:
+
+* <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>> (Preferred method)
+* <<Use API to run Element storage health checks prior to upgrading storage>>
+* <<Use HealthTools to run Element storage health checks prior to upgrading storage>>
+
+You can also find out more about storage health checks that are run by the service:
+
+* <<Storage health checks made by the service>>
+
+.What you'll need
+
+* You have updated to the latest management services bundle (2.10.27 or later).
++
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+
+* You are running management node 11.3 or later.
+* Your cluster version is running NetApp Element software 11.3 or later.
+
+== Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage
+
+Using NetApp Hybrid Cloud Control (HCC), you can verify that a storage cluster is ready to be upgraded.
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select the *Storage* tab.
+. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
+. On the *Storage Health Check* page, click *Run Health Check*.
+. If there are issues, do the following:
+.. Go to the specific KB article listed for each issue or perform the specified remedy.
+.. If a KB is specified, complete the process described in the relevant KB article.
+.. After you have resolved cluster issues, click *Re-Run Health Check*.
+
+After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:task_hcc_upgrade_element_software.html[instructions] to proceed.
+
+== Use API to run Element storage health checks prior to upgrading storage
+You can use REST API to verify that a storage cluster is ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as pending nodes, disk space issues, and cluster faults.
+
+.Steps
+
+. Locate the storage cluster ID:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/mnode
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+.. From the REST API UI, click *GET /assets/storage-clusters*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
+. Run health checks on the storage cluster:
+.. Open the storage REST API UI on the management node:
++
+----
+https://[management node IP]/storage/1
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+.. Click *POST /health-checks*.
+.. Click *Try it out*.
+.. Enter the storage cluster ID in the parameter field.
+.. Click *Execute* to run a health check on the specified storage cluster.
++
+The response should indicate state as `initializing`:
++
+----
+{
+  "_links": {
+    "collection": "https://10.117.149.231/storage/1/health-checks",
+    "log": "https://10.117.149.231/storage/1/health-checks/358f073f-896e-4751-ab7b-ccbb5f61f9fc/log",
+    "self": "https://10.117.149.231/storage/1/health-checks/358f073f-896e-4751-ab7b-ccbb5f61f9fc"
+  },
+  "config": {},
+  "dateCompleted": null,
+  "dateCreated": "2020-02-21T22:11:15.476937+00:00",
+  "healthCheckId": "358f073f-896e-4751-ab7b-ccbb5f61f9fc",
+  "state": "initializing",
+  "status": null,
+  "storageId": "c6d124b2-396a-4417-8a47-df10d647f4ab",
+  "taskId": "73f4df64-bda5-42c1-9074-b4e7843dbb77"
+}
+----
+.. Copy the `healthCheckID` that is part of response.
+. Verify the results of the health checks:
+.. Click *GET ​/health-checks​/healthCheckId}*.
+.. Click *Try it out*.
+.. Enter the health check ID in the parameter field.
+.. Click *Execute*.
+.. Scroll to the bottom of the response body.
+. If the `message` return indicates that there were problems regarding cluster health, do the following:
+.. Go to the specific KB article listed for each issue or perform the specified remedy.
+.. If a KB is specified, complete the process described in the relevant KB article.
+.. After you have resolved cluster issues, run *GET ​/health-checks​/healthCheckId}* again.
+
+If all health checks are successful, the return is similar to the following example:
+----
+"message": "All checks completed successfully.",
+"percent": 100,
+"timestamp": "2020-03-06T00:03:16.321621Z"
+----
+
+== Use HealthTools to run Element storage health checks prior to upgrading storage
+
+You can verify that the storage cluster is ready to be upgraded by using the `sfupgradecheck` command. This command verifies information such as pending nodes, disk space, and cluster faults.
+
+If your management node is at a dark site, the upgrade readiness check needs the `metadata.json` file you downloaded during link:task_upgrade_element_latest_healthtools.html[HealthTools upgrades] to run successfully.
+
+.About this task
+
+This procedure describes how to address upgrade checks that yield one of the following results:
+
+* Running the `sfupgradecheck` command runs successfully. Your cluster is upgrade ready.
+* Checks within the `sfupgradecheck` tool fail with an error message. Your cluster is not upgrade ready and additional steps are required.
+* Your upgrade check fails with an error message that HealthTools is out-of-date.
+* Your upgrade check fails because your management node is on a dark site.
+
+.Steps
+
+. Run the `sfupgradecheck` command:
++
+----
+sfupgradecheck -u <cluster-user-name> MVIP
+----
++
+NOTE: For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`.
+
++
+Sample input command with sample output in which no errors appear and you are ready to upgrade:
++
+----
+sfupgradecheck -u admin 10.117.78.244
+----
++
+----
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/
+SolidFire-Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the
+management node
+Node ID: 1 Upload speed: 90063.90 KBs/sec
+Node ID: 3 Upload speed: 106511.44 KBs/sec
+Node ID: 2 Upload speed: 85038.75 KBs/sec
+----
+. If there are errors, additional actions are required. See the following sub-sections for details.
+
+=== Your cluster is not upgrade ready
+If you see an error message related to one of the health checks, follow these steps:
+
+. Review the `sfupgradecheck` error message.
++
+Sample response:
+----
+The following tests failed:
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Severity: ERROR
+Failed node IDs: 2
+Remedy: Remove unneeded files from root drive
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_pending_nodes:
+Test Description: Verify no pending nodes in cluster
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
+check_cluster_faults:
+Test Description: Report any cluster faults
+check_root_disk_space:
+Test Description: Verify node root directory has at least 12 GBs of available disk space
+Passed node IDs: 1, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
+Disk-space-error
+check_mnode_connectivity:
+Test Description: Verify storage nodes can communicate with management node
+Passed node IDs: 1, 2, 3
+More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
+check_files:
+Test Description: Verify options file exists
+Passed node IDs: 1, 2, 3
+check_cores:
+Test Description: Verify no core or dump files exists
+Passed node IDs: 1, 2, 3
+check_upload_speed:
+Test Description: Measure the upload speed between the storage node and the management node
+Node ID: 1 Upload speed: 86518.82 KBs/sec
+Node ID: 3 Upload speed: 84112.79 KBs/sec
+Node ID: 2 Upload speed: 93498.94 KBs/sec
+----
+In this example, node 1 is low on disk space. You can find more information in the https://kb.netapp.com[knowledge base^] (KB) article listed in the error message.
+
+=== HealthTools is out of date
+If you see an error message indicating that HealthTools is not the latest version, follow these instructions:
+
+. Review the error message and note that the upgrade check fails.
++
+Sample response:
++
+----
+sfupgradecheck failed: HealthTools is out of date:
+installed version: 2018.02.01.200
+latest version: 2020.03.01.09.
+The latest version of the HealthTools can be downloaded from: https://mysupport.netapp.com/NOW/cgi-bin/software/
+Or rerun with the -n option
+----
+. Follow the instructions described in the response.
+
+=== Your management node is on a dark site
+
+. Review the message and note that the upgrade check fails:
++
+Sample response:
++
+----
+sfupgradecheck failed: Unable to verify latest available version of healthtools.
+----
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Run the following command:
++
+----
+sfupgradecheck -l --metadata=<path-to-metadata-json>
+----
++
+. For details, see additional link:task_upgrade_element_latest_healthtools.html[HealthTools upgrades]  information for dark sites.
+. Verify that the HealthTools suite is up-to-date by running the following command:
++
+----
+sfupgradecheck -u <cluster-user-name> -p <cluster-password> MVIP
+----
+
+== Storage health checks made by the service
+Storage health checks make the following checks per cluster.
+
+|===
+| Check Name | Node/Cluster | Description
+
+| check_async_results | Cluster | Verifies that the number of asynchronous results in the database is below a threshold number.
+
+| check_cluster_faults | Cluster | Verifies that there are no upgrade blocking cluster faults (as defined in Element source).
+
+| check_upload_speed | Node | Measures the upload speed between the storage node and the management node.
+
+| connection_speed_check | Node | Verifies that nodes have connectivity to the management node serving upgrade packages and estimates connection speed.
+
+| check_cores | Node | Checks for kernel crash dump and core files on the node. The check fails for any crashes in a recent time period (threshold 7 days).
+
+| check_root_disk_space | Node | Verifies the root file system has sufficient free space to perform an upgrade.
+
+| check_var_log_disk_space | Node | Verifies that `/var/log` free space meets some percentage free threshold. If it does not, the check will rotate and purge older logs in order to fall under threshold. The check fails if it is unsuccessful at creating sufficient free space.
+
+| check_pending_nodes | Cluster | 	Verifies that there are no pending nodes on the cluster.
+|===
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
