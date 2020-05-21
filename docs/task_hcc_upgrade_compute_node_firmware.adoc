@@ -20,8 +20,8 @@ After the update, the compute node boots into ESXi and works as before, retainin
 
 You can update the firmware using one of the following methods:
 
-* <<Use a USB drive with the latest firmware image downloaded.>>
-* <<Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI).>>
+* <<Use a USB drive with the latest firmware image downloaded>>
+* <<Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI)>>
 
 .Before you begin
 
@@ -61,9 +61,41 @@ After firmware flashing is complete and the node reboots, it might take a few mi
 
 == Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI)
 
+You must perform the sequential steps to load the compute firmware ISO and reboot the node to the ISO to ensure that the update is successful. The ISO should be located on the system or virtual machine (VM) hosting the web browser.
+
+TIP: The recommendation is to have the system or VM and the node on the same network.
+
 .Steps
 
-. 
+. If your node is part of a cluster, place it in maintenance mode as follows:
+.. Log in to the VMware vCenter web client.
+.. Right-click the host (compute node) name and select *Maintenance Mode > Enter Maintenance Mode*.
+.. Click *OK*.
+VMs on the host will be migrated to another available host. VM migration can take time depending on the number of VMs that need to be migrated.
++
+CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
+
+. Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
+. Log in using your credentials.
+. Select *Remote Control > Launch KVM (Java)*.
+. On the console, select *Media > Virtual Media Wizard*. [NEED IMAGE]
+. Click *Browse* and select the compute firmware .iso file.
+. Click *Connect*.
+A popup indicating success is displayed, along with the path and device showing at the bottom. You can close the *Virtual Media* window.[need image]
+. Select either F12 and Restart or *Power Control > Set Power Reset* to reboot the node.
+. During reboot, select the function key F11 to select the boot options and load the ISO.
+. Select AMI Virtual CDROM from the list displayed and click *Enter*. [NEED IMAGE]
+. On the screen displayed, click *Enter*.
++
+NOTE: Some of the firmware updates might cause the console to disconnect and/or cause your session on the BMC to disconnect. You can log back into the BMC, however some services, such as the console, may not be available due to the firmware updates. After the updates have completed, the node will perform a cold reboot, which can take approximately five minutes.
+
+. Select *Remote Control* and click *Launch KVM* or *Launch KVM (Java)* to verify that the node booted successfully.
++
+CAUTION: During the powering on process, for approximately 5 minutes, the KVM console displays *No Signal*.
+
+. After the node is powered on, select *Dashboard > Device Information > More info* to verify the BIOS and BMC versions.
+. If you placed the node in maintenance mode, after the node boots to ESXi, right-click the host (compute node) name, and select *Maintenance Mode > Exit Maintenance Mode*, and migrate the VMs back to the host.
+. In vCenter, with the host name selected, configure and verify the BIOS version.
 
 [discrete]
 == Find more information
