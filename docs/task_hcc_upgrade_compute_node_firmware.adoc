@@ -35,7 +35,7 @@ In production environments, only update the firmware on one compute node at a ti
 
 As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
 
-== Use a USB drive with the latest firnware image downloaded
+== Use a USB drive with the latest firmware image downloaded
 
 You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node.
 
@@ -78,20 +78,26 @@ CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 . Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
 . Log in using your credentials.
 . Select *Remote Control > Launch KVM (Java)*.
-. On the console, select *Media > Virtual Media Wizard*. [NEED IMAGE]
-. Click *Browse* and select the compute firmware .iso file.
+. On the console, select *Media > Virtual Media Wizard*.
++
+image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
+. Click *Browse* and select the compute firmware `.iso` file.
 . Click *Connect*.
-A popup indicating success is displayed, along with the path and device showing at the bottom. You can close the *Virtual Media* window.[need image]
+A popup indicating success is displayed, along with the path and device showing at the bottom. You can close the *Virtual Media* window.
++
+image::virtual_med_popup.gif[Popup window showing ISO upload success.]
 . Select either F12 and Restart or *Power Control > Set Power Reset* to reboot the node.
 . During reboot, select the function key F11 to select the boot options and load the ISO.
-. Select AMI Virtual CDROM from the list displayed and click *Enter*. [NEED IMAGE]
+. Select AMI Virtual CDROM from the list displayed and click *Enter*.
++
+image::boot_device.gif[Shows the window where you can select the boot device.]
 . On the screen displayed, click *Enter*.
 +
 NOTE: Some of the firmware updates might cause the console to disconnect and/or cause your session on the BMC to disconnect. You can log back into the BMC, however some services, such as the console, may not be available due to the firmware updates. After the updates have completed, the node will perform a cold reboot, which can take approximately five minutes.
 
 . Select *Remote Control* and click *Launch KVM* or *Launch KVM (Java)* to verify that the node booted successfully.
 +
-CAUTION: During the powering on process, for approximately 5 minutes, the KVM console displays *No Signal*.
+CAUTION: During the powering on process, for approximately five minutes, the KVM console displays *No Signal*.
 
 . After the node is powered on, select *Dashboard > Device Information > More info* to verify the BIOS and BMC versions.
 . If you placed the node in maintenance mode, after the node boots to ESXi, right-click the host (compute node) name, and select *Maintenance Mode > Exit Maintenance Mode*, and migrate the VMs back to the host.
