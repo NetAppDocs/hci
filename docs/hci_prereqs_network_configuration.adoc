@@ -94,7 +94,7 @@ As a best practice, you should configure the required network segments on all sw
 
 The following illustration shows the recommended cabling configuration for two-cable H300E, H500E, H700E, and H410C compute nodes and four-cable H300S, H500S, H700S, and H410S storage nodes. All switch ports in this example share the same configuration.
 
-image::hci_networking_config_scenario_1.png[HCI networking configuration option A image,400,271]
+image::hci_networking_config_scenario_1.png[HCI networking configuration option A image]
 
 ==== Example switch commands
 You can use the following example commands to configure all switch ports used for NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only small changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration. Replace the interface name, description, and VLANs with the values for your environment.
