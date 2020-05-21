@@ -94,7 +94,7 @@ As a best practice, you should configure the required network segments on all sw
 
 The following illustration shows the recommended cabling configuration for two-cable H300E, H500E, H700E, and H410C compute nodes and four-cable H300S, H500S, H700S, and H410S storage nodes. All switch ports in this example share the same configuration.
 
-<image>
+image::hci_networking_config_scenario_1.png[HCI networking configuration option A image]
 
 ==== Example switch commands
 You can use the following example commands to configure all switch ports used for NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only small changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration. Replace the interface name, description, and VLANs with the values for your environment.
@@ -137,7 +137,7 @@ When you deploy compute nodes using six cables and storage nodes using four cabl
 
 The following illustration shows the recommended cabling configuration for six-cable compute nodes and four-cable storage nodes. All switch ports in this example share the same configuration.
 
-<image>
+image::hci_networking_config_scenario_2.png[HCI networking configuration option B image]
 
 ==== Example switch commands
 
@@ -192,7 +192,8 @@ CAUTION: Deploying this configuration requires careful switch port configuration
 
 The following illustration shows the network configuration overview for this topology option. In the example, individual switch ports are configured with the appropriate network segment as the native network.
 
-<image>
+image::hci_networking_config_scenario_2.png[HCI networking configuration option C image]
+
 
 ==== Example switch commands
 You can use the following example switch commands to configure switch ports used for the NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only minimal changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration.
