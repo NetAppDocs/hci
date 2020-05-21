@@ -33,7 +33,7 @@ a|
  * Security
 |===
 
-- - -
+'''
 
 == NetApp HCI Solutions: Sales and Partner Kits
 
