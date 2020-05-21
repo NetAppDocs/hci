@@ -34,6 +34,8 @@ entries:
         url: nhci_euc_vmware.html
       - title: Citrix Virtual Apps and Desktops with VMware vSphere (Design Guide)
         url: https://www.netapp.com/us/media/nva-1140-design.pdf
+      - title: NetApp HCI for Dassault Systèmes CATIA
+        url: https://www.netapp.com/us/media/tr-4837.pdf
   - title: Database
     entries:
       - title: MongoDB
