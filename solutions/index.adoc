@@ -37,12 +37,7 @@ a|
 
 NetApp Sales and Partner Kits are rich with information to help you sell more effectively.
 
-*  End User Compute Kits
-** Learn why our EUC solution differentiation means more value
-** Discover more about HCI EUC/VDI use cases
-* Private Cloud Kits
-** Learn how our Private Cloud solution delivers differentiation
-** Simplify preparation for HCI Private Cloud use cases
+Kits for End User Computing (EUC) and Private Cloud show how NetApp HCI solutions deliver differentiation and also describe the use cases addressed by our solutions.
 
 === Where to find NetApp HCI Kits
 * EUC and Private Cloud Sales Kits in the link:https://netapp.sharepoint.com/sites/HCSBUProductInformation/SitePages/HCI-Solutions.aspx[HCS Resource Center]
@@ -73,7 +68,7 @@ NetApp Sales and Partner Kits are rich with information to help you sell more ef
 |===
 | 2+^h|EUC / VCI 2+^h| Private Cloud
 |  | Citrix | VMware Horizon | VMware | Red Hat
-| *Video* |  |  |  |
+//| *Video* |  |  |  |
 | *Solution Brief*
 | link:https://fieldportal.netapp.com/content/939405[VDI Citrix]
 | link:https://fieldportal.netapp.com/content/922004[VDI VMware]
@@ -98,15 +93,14 @@ NetApp Sales and Partner Kits are rich with information to help you sell more ef
 2+| link:https://fieldportal.netapp.com/content/640571[Competitive Sales Kit VMware Private Cloud]
 |===
 
-=== NetApp HCI TV
-[width=100%,cols="1,6",grid="cols"]
-|===
-| image:HCI-TV-image.jpg[align="center",width="200",height="200"]
-| image:coming-soon.jpg[align="left",width="200",height='200']
+//=== NetApp HCI TV
+//[width=100%,cols="1,6",grid="cols"]
+//|===
+//| image:HCI-TV-image.jpg[align="center",width="200",height="200"]
 //a| * link:TBD.html[Link 1]
 //*  link:TBD.html[Link 2]
 //*  link:TBD.html[Link 3]
-|===
+//|===
 
 == NetApp HCI End User Compute and Virtual Desktop Infrastructure Solutions
 
