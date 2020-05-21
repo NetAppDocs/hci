@@ -33,10 +33,7 @@ a|
  * Security
 |===
 
-'''
-
 == NetApp HCI Solutions: Sales and Partner Kits
-
 NetApp Sales and Partner Kits are rich with information to help you sell more effectively.
 
 Kits for End User Computing (EUC) and Private Cloud show how NetApp HCI solutions deliver differentiation and also describe the use cases addressed by our solutions.
@@ -61,7 +58,6 @@ Kits for End User Computing (EUC) and Private Cloud show how NetApp HCI solution
 // * EUC and Private Cloud Sales Kits in the link:TBD.html[HCS Resource Center]
 // * Partner Kits in the link:https://fieldportal.netapp.com/explore///699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
 //|===
-
 
 === End User Computing and Private Cloud Partner Kits
 [width=100%,cols="2, 3, 3, 3, 3",grid="all"]
@@ -105,7 +101,6 @@ Kits for End User Computing (EUC) and Private Cloud show how NetApp HCI solution
 //|===
 
 == NetApp HCI End User Compute and Virtual Desktop Infrastructure Solutions
-
 The “work from home” or mobile workforce requirement has become the new reality for nearly every company in the world.  NetApp HCI End User Compute solutions deliver Virtual Desktop Infrastructures (VDI) solutions that address the needs of performance at scale, cost efficient provisioning and much more.
 
 Conventional HCI is designed to provision compute and storage together but efficient VDI configurations require unbalanced compute/storage node ratios.  Architectural limitations for a balance of compute and storage resources creates cost impacts that are subtle until demand increases and resources scale.
@@ -121,7 +116,6 @@ With NetApp HCI EUC/VDI Sales and Partner Kits you can discover more about use c
 * Performance at scale while maintaining SLA guarantees
 
 == NetApp HCI Private Cloud Solutions
-
 Dynamics of the COVID-19 world requires flexible, self-service seamless cloud and data mobility between cloud-based applications to on premise data centers. NetApp HCI Private Cloud solutions address the needs of cloud-like provisioning and time to deploy.
 
 Private Cloud solutions on conventional HCI fix compute to storage ratios impacting provisioning with cloud simplicity.  NetApp HCI eliminates these architectural limitations delivering simple provisioning with excellent ROI to optimize your on-premise cloud services.  Achieve seamless data mobility with NetApp Data Private Cloud and the NetApp Data Fabric.
