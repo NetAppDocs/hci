@@ -5,7 +5,7 @@ summary: Learn about NetApp HCI Witness Node requirements.
 keywords: netapp, hci, element, Witness Node
 ---
 
-= Witness Node resource requirements for two-node storage clusters
+= NetApp HCI Witness Node resource requirements for two-node storage clusters
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -33,7 +33,7 @@ When a storage cluster uses two or three nodes, it also deploys a pair of Witnes
 
 NetApp HCI supports only certain storage node models in two-node or three-node storage clusters. For more information, see the Release Notes for your NetApp HCI version.
 
-NOTE: When the NetApp HCI installation process installs NetApp Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hs-comnode-repl%2FGUID-0947FD01-0BA6-4650-A36F-8BF096B0B81C.html[NetApp HCI documentation^].
+NOTE: When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hs-comnode-repl%2FGUID-0947FD01-0BA6-4650-A36F-8BF096B0B81C.html[NetApp HCI documentation^].
 
 [discrete]
 == Find more information
