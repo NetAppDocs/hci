@@ -16,7 +16,7 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 [.lead]
 Use these instructions to install rails and H-series nodes.
 
-TIP: See the link::isi_poster.pdf[poster] for a visual representation of the instructions.
+TIP: See the link:isi_poster.pdf[poster] for a visual representation of the instructions.
 
 * <<Workflow diagrams>>
 * <<Prepare for installation>>
