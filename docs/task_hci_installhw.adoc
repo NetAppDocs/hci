@@ -1,0 +1,93 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_installhw.html
+summary: Use these instructions to install rails and H-series nodes.
+keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes
+---
+
+= Install H-series hardware
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Use these instructions to install rails and H-series nodes.
+
+TIP: See the link::isi_poster.pdf[poster] for a visual representation of the instructions.
+
+* <<Workflow diagrams>>
+* <<Prepare for installation>>
+* <<Install rails>>
+* <<Install the chassis>>
+* <<Cable the nodes>>
+* <<Configure NetApp HCI>>
+* <<Perform post-configuration tasks>>
+
+== Workflow diagrams
+
+
+
+== Prepare for installation
+
+Here is a simplified NetApp HCI network topology installation:
+
+image::hci_topology_simple_network.png[Simplified NetApp HCI Network Topology diagram]
+
+== Install rails
+
+
+== Install the chassis
+
+NetApp HCI can be installed in different configurations:
+
+* H410C compute nodes: Two-cable configuration or six-cable configuration
+* H610C compute node: Two-cable configuration
+* H615C compute node: Two-cable configuration
+* H410S storage node
+* H610S storage node
+
+.Steps
+
+. Install the rails and the chassis.
+. Install nodes in the chassis and install drives for storage nodes. (Applies only if you are installing H410C and H410S in a NetApp H-series chassis.)
+. Cable the compute node.
+. Cable the storage node.
+. Connect the power cords.
+. Power on the NetApp HCI nodes.
+
+== Cable the nodes
+
+To ensure network readiness for NetApp HCI, install the NetApp Configuration Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
+
+
+== Configure NetApp HCI
+
+The NDE UI is the software wizard interface used to install NetApp HCI.
+
+== Perform post-configuration tasks
+
+NetApp HCI uses a storage node management network IPv4 address for initial access to the NDE.  As a best practice, connect from the first storage node.
+
+.Prerequisites
+*	You already assigned the initial storage node management network IP address manually or by using DHCP.
+*	You must have physical access to the NetApp HCI installation.
+
+.Steps
+
+. If you do not know the initial storage node management network IP, use the Terminal User Interface (TUI), which is accessed via keyboard and monitor on the storage node or https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-511EA889-41D6-471A-BE84-C3146350A082.html[use a USB stick^].
++
+For details, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hci-ude-180%2FGUID-511EA889-41D6-471A-BE84-C3146350A082.html[_Accessing the NetApp Deployment Engine_^].
+. If you do know the IP address, from a web browser, connect to the Bond1G address of the primary node via HTTP, not HTTPS.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^]
+* https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
+* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_NetApp Element Plug-in for vCenter Server Guide_^].
+* https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
+* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
