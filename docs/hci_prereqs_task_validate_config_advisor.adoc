@@ -43,6 +43,7 @@ NOTE: If you are using Mellanox switches and NetApp Professional Services is con
 Active IQ Config Advisor performs only read-only checks to gather information. No configuration is modified as part of the collection.
 
 *Steps*
+
 .  Open Active IQ Config Advisor.
 Config Advisor appears with the *Basic Settings* window in a web browser. Here, you can define global collection settings and encrypt the collection results.
 . Enter a passphrase in the *Encryption Settings* section to encrypt the collection project.
