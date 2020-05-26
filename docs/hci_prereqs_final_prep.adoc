@@ -1,0 +1,29 @@
+---
+sidebar: docs_sidebar
+permalink: docs/hci_prereqs_final_prep.html
+summary: Learn about final preparations you need to complete before deploying NetApp HCI.
+keywords: netapp, hci, final preparations, requirements
+---
+
+= Final preparations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, final preparations, requirements
+
+[.lead]
+After you have validated that your environment is ready to support NetApp HCI and resolved any potential issues, you need to complete some final items before deployment.
+
+* Ensure you have a successful report from Active IQ Config Advisor.
+* Gather all relevant information about your network, current or planned VMware infrastructure, and planned user credentials.
+* Rack, cable, and power on the NetApp HCI installation.
+* Ensure that storage capacity is split evenly across all chassis containing storage nodes. This ensures the best storage reliability possible.
+
+[discrete]
+== Find more information
+* Configuring IPMI access for each node (link)
+* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
