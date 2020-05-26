@@ -16,11 +16,11 @@ keywords: netapp, hci, element, new, whatsnew
 [.lead]
 NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes.
 
-*NetApp HCI 1.8* describes new features and updates in NetApp HCI version 1.8.
+*<<NetApp HCI 1.8>> describes new features and updates in NetApp HCI version 1.8.
 
-*Element 12.0* describes new features and updates in NetApp Element 12.0.
+*<<Element 12.0>> describes new features and updates in NetApp Element 12.0.
 
-*Compute node firmware (June 2020)* describes improvements in the current release of NetApp HCI compute node firmware.
+*<<Compute node firmware (June 2020)>> describes improvements in the current release of NetApp HCI compute node firmware.
 
 == NetApp HCI 1.8
 NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.

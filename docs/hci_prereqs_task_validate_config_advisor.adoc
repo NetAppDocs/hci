@@ -54,8 +54,9 @@ This ensures that only you are able to load this collection project after it is 
 . Select *Solution Based* in the *Collection Type* drop-down menu.
 . Select *NetApp HCI Pre Deployment* in the *Profile* drop-down menu.
 . For each type of device in the *Type* column, select the number of that type of device in your NetApp HCI network in the *Actions* drop-down menu.
++
 For example, if you have three Cisco switches, choose 3 from the *Actions* column drop-down menu in that row. Three rows appear, one for each Cisco switch you identified.
-
++
 NOTE: If you are using Mellanox switches and NetApp Professional Services is configuring them as part of deployment, you do not need to provide switch information.
 
 . For any switches that you identified, enter the management IP address and administrator credentials.
@@ -78,6 +79,7 @@ This starts the collection process, and you can see the progress as the collecti
 . Select the *View & Analyze* tab.
 This page shows a general health report of your environment. You can select a section of the pie chart to see more details about those specific checks or descriptions of problems, along with recommendations on resolving any issues that might interfere with successful deployment. You can resolve these issues yourself or request help from NetApp Professional Services.
 . Click *Export* to export the collection report as a PDF or Microsoft Word document.
++
 NOTE: PDF and Microsoft Word document outputs include the switch configuration information for your deployment, which NetApp Professional Services uses to verify the network settings.
 
 . Send the exported report file to your NetApp Professional Services representative.
