@@ -48,31 +48,53 @@ image::h610s_workflow.png[H610S installation workflow]
 
 == Prepare for installation
 
-Here is a simplified NetApp HCI network topology installation:
+In preparation for installation, inventory the hardware that was shipped to you, and contact NetApp Support if any of the items are missing.
 
-image::hci_topology_simple_network.png[Simplified NetApp HCI Network Topology diagram]
+Ensure that you have the following items at your installation location:
+* Rack space for the system. A NetApp HCI chassis with four nodes needs two rack unit (2U) rack space. An H610S node (or chassis) needs one rack unit (1U) rack space. An H610C node (or chassis) needs 2U rack space.
+* SFP28/SFP+ direct-attach cables or transceivers
+* CAT5e or higher cables with RJ45 connector
+* A keyboard, video, mouse (KVM) switch to configure your system
+* USB stick (optional)
+
+TIP: The hardware that is shipped to you depends on what you order. A new 2U, four-node order includes the chassis, bezel, slide rail kit, drives for storage nodes, storage and compute nodes, and power cables (two per chassis). If you order H610S storage nodes, the drives will come installed in the chassis.
 
 == Install rails
 
+The hardware order that was shipped to you includes a set of slide rails. You will need a screwdriver to complete the rail installation. The installation steps vary slightly for each node model.
 
-== Install the chassis
+TIP: Install hardware from the bottom of the rack up to the top to prevent the equipment from toppling over. If your rack includes stabilizing devices, install them before you install the hardware.
 
-NetApp HCI can be installed in different configurations:
+=== Two rack unit (2U), four-node NetApp HCI chassis
+The 2U, four-node H-Series chassis is shipped with two sets of adapters. If you want to install the chassis in a rack with round holes, use the adapters appropriate for a rack with round holes. The rails for H410C and H410S nodes fit a rack between 29 inches and 33.5 inches in depth. When the rail is fully contracted, it is 28 inches long, and the front and rear sections of the rail are held together by only one screw.
 
-* H410C compute nodes: Two-cable configuration or six-cable configuration
-* H610C compute node: Two-cable configuration
-* H615C compute node: Two-cable configuration
-* H410S storage node
-* H610S storage node
+CAUTION: If you install the chassis onto a fully contracted rail, the front and rear sections of the rail might separate.
 
 .Steps
 
-. Install the rails and the chassis.
-. Install nodes in the chassis and install drives for storage nodes. (Applies only if you are installing H410C and H410S in a NetApp H-series chassis.)
-. Cable the compute node.
-. Cable the storage node.
-. Connect the power cords.
-. Power on the NetApp HCI nodes.
+. Align the front of the rail with the holes on the front post of the rack.
+. Push the hooks on the front of the rail into the holes on the front post of the rack and then down, until the spring-loaded pegs snap into the rack holes.
+. Attach the rail to the rack with screws. Here is a illustration of the left rail being attached to the front of the rack:
++
+image::h410c_rail.gif[Rail installation for 2U, four-node NetApp HCI chassis.]
+
+. Extend the rear section of the rail to the rear post of the rack.
+. Align the hooks on the rear of the rail with the appropriate holes on the rear post ensuring that the front and the back of the rail are on the same level.
+. Mount the rear of the rail onto the rack, and secure the rail with screws.
+. Perform all the above steps for the other side of the rack.
+
+=== 2U H610C chassis
+Here is an illustration for installing rails for an H61OC compute node:
+
+image::h610c_rail.png[Rail installation for H610C compute node.]
+
+=== One rack unit (1U) H610S or H615C chassis
+Here is an illustration for installing rails for an H615C compute node and an H610S storage node:
+
+image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute node.]
+
+== Install the chassis
+
 
 == Cable the nodes
 
