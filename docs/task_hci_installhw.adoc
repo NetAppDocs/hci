@@ -188,6 +188,7 @@ ADD IMAGE HERE
 Choose from one of the following options.
 
 * New NetApp HCI installation:
+
 .Steps
 
 . Configure an IPv4 address on the management network (Bond1G) on one NetApp HCI storage node.
@@ -203,6 +204,7 @@ NOTE: If you are using DHCP on the management network, you can connect to the DH
 NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
 * Expanding an existing NetApp HCI installation:
+
 .Steps
 
 . Open a web browser and browse to the IP address of the management node.
