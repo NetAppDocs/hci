@@ -28,7 +28,23 @@ TIP: See the link:../media/isi_poster.pdf[poster] for a visual representation of
 
 == Workflow diagrams
 
+The workflow diagrams here provide a high-level overview of the installation steps. The steps vary slightly depending on the H-series model.
 
+=== H410C and H410S in a two rack unit (2U), four-node chassis
+
+image::h410c_workflow.png[H410C and H410S installation workflow]
+
+=== H610C and H615C
+
+NOTE: The terms "node" and "chassis" are used interchangeably in the case of H610C and H615C, because node and chassis are not separate components unlike in the case of a 2U, four-node chassis.
+
+image::h610c_workflow.png[H610C and H615C installation workflow]
+
+=== H610S
+
+NOTE: The terms "node" and "chassis" are used interchangeably in the case of H610C and H615C, because node and chassis are not separate components unlike in the case of a 2U, four-node chassis.
+
+image::h610s_workflow.png[H610S installation workflow]
 
 == Prepare for installation
 
