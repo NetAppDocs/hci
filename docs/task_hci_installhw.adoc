@@ -21,7 +21,7 @@ TIP: See the link:../media/isi_poster.pdf[poster] for a visual representation of
 * <<Workflow diagrams>>
 * <<Prepare for installation>>
 * <<Install rails>>
-* <<Install the chassis>>
+* <<(Install the chassis>>
 * <<Cable the nodes>>
 * <<Configure NetApp HCI>>
 * <<Perform post-configuration tasks>>
@@ -51,6 +51,7 @@ image::h610s_workflow.png[H610S installation workflow]
 In preparation for installation, inventory the hardware that was shipped to you, and contact NetApp Support if any of the items are missing.
 
 Ensure that you have the following items at your installation location:
+
 * Rack space for the system. A NetApp HCI chassis with four nodes needs two rack unit (2U) rack space. An H610S node (or chassis) needs one rack unit (1U) rack space. An H610C node (or chassis) needs 2U rack space.
 * SFP28/SFP+ direct-attach cables or transceivers
 * CAT5e or higher cables with RJ45 connector
@@ -95,6 +96,33 @@ image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute
 
 == Install the chassis
 
+You will install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, you will install the chassis/node directly onto the rails in the rack.
+
+=== H410C and H410S nodes
+
+.Steps
+
+. Install the H410C and H410S nodes in the chassis. Here is a rear-view example of a chassis with four nodes installed:
++
+image::hseries_2U_rear.gif[Rear view of 2U, four-node chassis with nodes installed.]
+
+. Install drives for H410S storage nodes.
++
+image::h410s_drives.png[Front view of the H410S storage node with drives installed.]
+
+=== H610C node/chassis
+In the case of H610C, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
+
+Here is an illustration for installing the node/chassis in the rack:
+
+image::h610c_chassis.png[Shows the H610C node/chassis being installed in the rack.]
+
+=== H610S or H615C node/chassis
+In the case of H615C and H610S, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
+
+Here is an illustration for installing the node/chassis in the rack:
+
+image::h610s_chassis.gif[Shows the H615C or H610S node/chassis being installed in the rack.]
 
 == Cable the nodes
 
