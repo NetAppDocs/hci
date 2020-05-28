@@ -52,16 +52,47 @@ Using NetApp Hybrid Cloud Control (HCC), you can upgrade a storage cluster.
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click *Upgrade* near the top right of the interface.
-. On the *Upgrades* page, select the *Storage* tab.
+. Click image:hcc_upgrade_icon.png[upgrade icon] near the top right of the interface.
+. On the *Upgrades* page, select *Storage*.
++
+The *Storage* tab lists the storage clusters that are part of your installation. The drop-down arrow next to each cluster shows the compatible upgrade packages available.
++
+image::hcc_storupgrade_versions.png[Storage tab in the HCC UI showing the upgrade packages available for a cluster.]
+
 . Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
 . On the *Storage Health Check* page, click *Run Health Check*.
 . If there are issues, do the following:
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
 .. After you have resolved cluster issues, click *Re-Run Health Check*.
++
+After the health check completes without errors, you can upgrade the storage cluster.
+. Click the drop-down arrow next to the cluster you are upgrading, and do one of the following:
 
-After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:task_hcc_upgrade_element_software.html[instructions] to proceed.
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Upload a package that you downloaded.
+|
+. Click image:hcc_browse_icon.png[browse icon] to choose a upgrade package to upload.
++
+Wait for the upload to complete. A progress bar shows the upload status:
++
+image::hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
+
+|Select from the available packages.
+|Cell in column 2, row 2
+|===
+
+.. Click image:hcc_browse_icon.png[browse icon] to choose a upgrade package to upload.
++
+Wait for the upload to complete. A progress bar shows the upload status:
++
+image::hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
+.. Select from the available packages.
+. Click *Begin Upgrade*.
 
 == Use HCC API to upgrade Element storage
 You can use REST API to verify that a storage cluster is ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as pending nodes, disk space issues, and cluster faults.
