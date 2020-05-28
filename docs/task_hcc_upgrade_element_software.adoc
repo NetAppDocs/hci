@@ -68,30 +68,22 @@ image::hcc_storupgrade_versions.png[Storage tab in the HCC UI showing the upgrad
 +
 After the health check completes without errors, you can upgrade the storage cluster.
 . Click the drop-down arrow next to the cluster you are upgrading, and do one of the following:
-
++
 [%header,cols=2*]
 |===
 |Option
 |Steps
 
 |Upload a package that you downloaded.
-|
-. Click image:hcc_browse_icon.png[browse icon] to choose a upgrade package to upload.
-+
+|Click image:hcc_browse_icon.png[browse icon] to choose a upgrade package to upload.
+
 Wait for the upload to complete. A progress bar shows the upload status:
-+
-image::hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
+image:hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
 
 |Select from the available packages.
-|Cell in column 2, row 2
+|image:hcc_select_package.png[Shows the list of available storage upgrade packages.]
 |===
 
-.. Click image:hcc_browse_icon.png[browse icon] to choose a upgrade package to upload.
-+
-Wait for the upload to complete. A progress bar shows the upload status:
-+
-image::hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
-.. Select from the available packages.
 . Click *Begin Upgrade*.
 
 == Use HCC API to upgrade Element storage
