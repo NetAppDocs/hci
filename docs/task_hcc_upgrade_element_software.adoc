@@ -74,25 +74,35 @@ After the health check completes without errors, you can upgrade the storage clu
 |Option
 |Steps
 
-|Upload a package that you downloaded.
-|Click image:hcc_browse_icon.png[browse icon] to choose a upgrade package to upload.
+|Upload the upgrade file that you downloaded.
+|Click image:hcc_browse_icon.png[browse icon] to choose the upgrade file to upload.
 
-Wait for the upload to complete. A progress bar shows the upload status:
+Wait for the upload to complete. A progress bar shows the status of the upload:
 image:hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
 
-A on-screen message alerts you after the file is successfully uploaded and validated.
-image:hcc_upload_message.png[On-screen message showing the package upload was successful.]
+CAUTION: The file upload will be lost if you navigate away from the browser window.
 
-|Select from the available packages.
-|image:hcc_select_package.png[Shows the list of available storage upgrade packages.]
+An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
+image:hcc_upload_message.png[On-screen message showing the file upload was successful.]
+
+|Select from the upgrade versions available.
+|image:hcc_select_package.png[Shows the list of available storage upgrade versions.]
 |===
 
 . Click *Begin Upgrade*.
 +
-The *Upgrade Status* for the cluster changes to *In Progress*, and a progress bar shows the upgrade status. On screen messages also show cluster faults and displays the node ID of each node in the cluster as the upgrade progresses.
+The *Upgrade Status* for the cluster changes to *In Progress*, and a progress bar shows the upgrade status. On screen messages also show node-level faults and displays the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
 +
-TIP: You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. It can take up to two hours for the upgrade to be completely paused.
+TIP: You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. The *Upgrade Status* changes to *Upgrade Pausing*. It can take up to two hours for the upgrade operation to be completely paused.
 [ADD INFO ABOUT PAUSE AND RESUME.]
+
+If an error occurs during the upgrade, the *Upgrade Status* column shows *Error*, and an error message is displayed on the screen.
++
+image:hcc_upgrade_error.png[Error message displayed on HCC UI when the storage upgrade pauses because of an error.]
+
+After you resolve the error, you can come back to the page, and click image:hcc_resume_icon.png[resume button].
+
+After the upgrade is complete, the *Upgrade Status* changes to *Up to Date* if the cluster was upgraded to the latest Element version available. Otherwise, it shows *Versions Available*.
 
 . To download logs, click *Download Upgrade Logs* after the upgrade is complete.
 +
