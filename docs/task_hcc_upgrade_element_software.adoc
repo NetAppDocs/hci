@@ -59,14 +59,6 @@ The *Storage* tab lists the storage clusters that are part of your installation.
 +
 image::hcc_storupgrade_versions.png[Storage tab in the HCC UI showing the upgrade packages available for a cluster.]
 
-. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
-. On the *Storage Health Check* page, click *Run Health Check*.
-. If there are issues, do the following:
-.. Go to the specific KB article listed for each issue or perform the specified remedy.
-.. If a KB is specified, complete the process described in the relevant KB article.
-.. After you have resolved cluster issues, click *Re-Run Health Check*.
-+
-After the health check completes without errors, you can upgrade the storage cluster.
 . Click the drop-down arrow next to the cluster you are upgrading, and do one of the following:
 +
 [%header,cols=2*]
@@ -80,7 +72,7 @@ After the health check completes without errors, you can upgrade the storage clu
 Wait for the upload to complete. A progress bar shows the status of the upload:
 image:hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
 
-The file upload will be lost if you navigate away from the browser window.
+TIP: The file upload will be lost if you navigate away from the browser window.
 
 An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
 image:hcc_upload_message.png[On-screen message showing the file upload was successful.]
@@ -91,6 +83,8 @@ image:hcc_upload_message.png[On-screen message showing the file upload was succe
 
 . Click *Begin Upgrade*.
 +
+TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade. See <<Upgrade status changes>>.
+
 NOTE: If you are upgrading an H610S node to Element 12.0 or later, the upgrade process involves two phases. The UI displays a message to notify you about the two-phase upgrade process.
 +
 image:hcc_twophase_upgrade.png[On-screen message notifying users of the two-phase upgrade process for H610S.]
@@ -105,13 +99,12 @@ image:hcc_upgradecomplete_message.png[On-screen message after the storage upgrad
 === Upgrade status changes
 
 While the upgrade is in progress the *Upgrade Status* column for the cluster shows *In Progress*, and a progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
-+
 TIP: You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. The *Upgrade Status* changes to *Upgrade Pausing*. It can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click image:hcc_resume_icon.png[resume button].
 
 If an error occurs during the upgrade, the *Upgrade Status* column shows *Error*, and an error message is displayed on the screen.
 image:hcc_upgrade_error.png[Error message displayed on HCC UI when the storage upgrade pauses because of an error.]
-After you resolve the error, you can come back to the page, and click image:hcc_resume_icon.png[resume button].
 
+After you resolve the error, you can go back to the page, and click image:hcc_resume_icon.png[resume button].
 NOTE: After the upgrade is complete, the *Upgrade Status* changes to *Up to Date* if the cluster was upgraded to the latest Element version available. Otherwise, it shows *Versions Available*.
 
 == Use HCC API to upgrade Element storage
