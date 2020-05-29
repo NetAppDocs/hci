@@ -80,11 +80,25 @@ After the health check completes without errors, you can upgrade the storage clu
 Wait for the upload to complete. A progress bar shows the upload status:
 image:hcc_upload_progress.png[Storage tab in the HCC UI showing the upload progress bar.]
 
+A on-screen message alerts you after the file is successfully uploaded and validated.
+image:hcc_upload_message.png[On-screen message showing the package upload was successful.]
+
 |Select from the available packages.
 |image:hcc_select_package.png[Shows the list of available storage upgrade packages.]
 |===
 
 . Click *Begin Upgrade*.
++
+The *Upgrade Status* for the cluster changes to *In Progress*, and a progress bar shows the upgrade status. On screen messages also show cluster faults and displays the node ID of each node in the cluster as the upgrade progresses.
++
+TIP: You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. It can take up to two hours for the upgrade to be completely paused.
+[ADD INFO ABOUT PAUSE AND RESUME.]
+
+. To download logs, click *Download Upgrade Logs* after the upgrade is complete.
++
+image:hcc_upgradecomplete_message.png[On-screen message after the storage upgrade is complete, showing users the link to download upgrade logs.]
+
+ADD INFO ABOUT RAINY DAY UPGRADE, H610S NUANCES.
 
 == Use HCC API to upgrade Element storage
 You can use REST API to verify that a storage cluster is ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as pending nodes, disk space issues, and cluster faults.
