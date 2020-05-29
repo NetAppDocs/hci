@@ -56,7 +56,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .Steps
 
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/products/p/hci.html[NetApp HCI] or https://mysupport.netapp.com/products/p/element_software.html[Element] software from the NetApp Support Site to the management node virtual machine.
+. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] or https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element] software from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -125,7 +125,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .Steps
 
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/products/p/hci.html[NetApp HCI] or https://mysupport.netapp.com/products/p/element_software.html[Element] software from the NetApp Support Site to the management node virtual machine.
+. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] or https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element] software from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 

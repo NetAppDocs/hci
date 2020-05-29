@@ -30,7 +30,7 @@ As an alternative to using the USB thumb drive method described in this procedur
 
 .Steps
 
-. Browse to the https://mysupport.netapp.com/products/p/hci.html[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
 . Accept the End User License Agreement.
 . Under the *Compute and Storage Nodes* heading, download the NetApp HCI compute node image.
 . Write the raw contents of the compute node RTFI image to a USB thumb drive with at least 32GB capacity (using dd or Etcher).
