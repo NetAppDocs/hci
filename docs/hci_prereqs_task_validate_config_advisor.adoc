@@ -19,7 +19,7 @@ Before you rack NetApp HCI hardware and perform the installation of NetApp HCI, 
 == Installing Active IQ Config Advisor
 Download and install Active IQ Config Advisor on a PC that has access to the NetApp HCI networks.
 
-*Steps*
+.Steps
 
 . In a web browser, download the Active IQ Config Advisor tool from the https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Site^].
 After you agree to the End User License Agreement (EULA), the Download page appears. Microsoft Windows, Linux, and Mac binaries are available in the *Client Tool* pane.
@@ -34,15 +34,17 @@ After a short delay, the Active IQ Config Advisor UI opens in a new browser wind
 == Using Active IQ Config Advisor
 Active IQ Config Advisor runs in a browser window, collects information about your network and environment, and generates a report you can use to resolve any network or configuration issues that might interfere with NetApp HCI deployment.
 
-*Before you begin*
+.Before you begin
+
 You have installed Active IQ Config Advisor on a device that can access the management network, VMware vCenter Server networking (if you are joining an existing VMware installation), and switches that will be used for NetApp HCI.
 
 NOTE: If you are using Mellanox switches and NetApp Professional Services is configuring them as part of deployment, you do not need to provide switch information.
 
-*About this task*
+.About this task
+
 Active IQ Config Advisor performs only read-only checks to gather information. No configuration is modified as part of the collection.
 
-*Steps*
+.Steps
 
 .  Open Active IQ Config Advisor.
 Config Advisor appears with the *Basic Settings* window in a web browser. Here, you can define global collection settings and encrypt the collection results.
