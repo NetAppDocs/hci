@@ -77,7 +77,7 @@ This section enables Active IQ Config Advisor to ensure that the management netw
 +
 This starts the collection process, and you can see the progress as the collection runs along with a real-time log of the collection commands. The *Progress* column shows color-coded progress bars for each collection task.
 +
-image::config_advisor_job_progress_bar.png[align="center"]
+image::config_advisor_job_progress_bar.png[Active IQ Config Advisor job  progress bar,align="center"]
 +
 The progress bars use the following colors to show status:
 * *Green*: The collection has finished with no command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
