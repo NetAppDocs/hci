@@ -71,11 +71,9 @@ You have configured the IPMI IP address for each compute and storage node.
 You should change the default password for the IPMI administrator account on each compute and storage node as soon as you configure the IPMI network port.
 
 .Before you begin
-
 You have configured the IPMI IP address for each compute and storage node.
 
 .Steps
-
 . Open a web browser on a computer that can reach the IPMI network and browse to the IPMI IP address for the node.
 . Enter the user name `root` and password `calvin` in the login prompt.
 . Upon logging in, click the menu navigation icon at the top left of the page to open the sidebar drawer.
