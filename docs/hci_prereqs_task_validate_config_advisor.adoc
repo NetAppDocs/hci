@@ -69,8 +69,11 @@ NOTE: If you are using Mellanox switches and NetApp Professional Services is con
 This section enables Active IQ Config Advisor to ensure that the management network is available for use, and also ensures that services such as DNS and NTP are working properly.
 . Click *Validate* to ensure all of the IP address information and credentials you have entered are valid.
 . Click *Save or Collect*.
++
 This starts the collection process, and you can see the progress as the collection runs along with a real-time log of the collection commands. The *Progress* column shows color-coded progress bars for each collection task, with the following colors to show status:
-image::config_advisor_job_progress_bar.png[Collection job progress bar ,align="center"]
++
+image::config_advisor_job_progress_bar.png[]
+
 * *Green*: The collection has finished with no command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
 * *Yellow*: The collection has finished with some command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
 * *Red*: The collection has failed. You need to resolve the errors and run the collection again.
