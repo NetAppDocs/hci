@@ -80,6 +80,7 @@ This starts the collection process, and you can see the progress as the collecti
 image::config_advisor_job_progress_bar.png[Active IQ Config Advisor job  progress bar,align="center"]
 +
 The progress bars use the following colors to show status:
+
 * *Green*: The collection has finished with no command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
 * *Yellow*: The collection has finished with some command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
 * *Red*: The collection has failed. You need to resolve the errors and run the collection again.
