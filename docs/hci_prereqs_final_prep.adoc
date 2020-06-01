@@ -34,6 +34,7 @@ You have a keyboard, video, mouse (KVM) or monitor and keyboard you can use to a
 Use the arrow keys to navigate in the BIOS. Select a tab or option by pressing `Enter`. Go back to previous screens by pressing `ESC`.
 
 *Steps*
+
 . Power on the node.
 . Upon booting, enter the BIOS by pressing the `Del` key.
 . Select the IPMI tab.
@@ -56,6 +57,7 @@ You should change the default password for the IPMI administrator account on eac
 You have configured the IPMI IP address for each compute and storage node.
 
 *Steps*
+
 . Open a web browser on a computer that can reach the IPMI network and browse to the IPMI IP address for the node.
 . Enter the user name `ADMIN` and password `ADMIN` in the login prompt.
 . Upon logging in, click the *Configuration* tab.
@@ -73,6 +75,7 @@ You should change the default password for the IPMI administrator account on eac
 You have configured the IPMI IP address for each compute and storage node.
 
 *Steps*
+
 . Open a web browser on a computer that can reach the IPMI network and browse to the IPMI IP address for the node.
 . Enter the user name `root` and password `calvin` in the login prompt.
 . Upon logging in, click the menu navigation icon at the top left of the page to open the sidebar drawer.
@@ -80,7 +83,7 @@ You have configured the IPMI IP address for each compute and storage node.
 . Click *User Management*.
 . Select the *Administrator* user from the list.
 . Enable the *Change Password* check box.
-. Enter a new, strong password in the *Password* and *Confirm Password* fields. 
+. Enter a new, strong password in the *Password* and *Confirm Password* fields.
 . Click *Save* at the bottom of the page.
 . Repeat this procedure for any other NetApp HCI H610C, H615C, or H610S nodes with default IPMI passwords.
 
