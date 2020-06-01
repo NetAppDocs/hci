@@ -70,9 +70,10 @@ This section enables Active IQ Config Advisor to ensure that the management netw
 . Click *Validate* to ensure all of the IP address information and credentials you have entered are valid.
 . Click *Save or Collect*.
 This starts the collection process, and you can see the progress as the collection runs along with a real-time log of the collection commands. The *Progress* column shows color-coded progress bars for each collection task, with the following colors to show status:
-* [green-background]*Green*: The collection has finished with no command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
-* [yellow-background]*Yellow*: The collection has finished with some command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
-* [red-background]*Red*: The collection has failed. You need to resolve the errors and run the collection again.
+image::config_advisor_job_progress_bar.png[Collection job progress bar ,align="center"]
+* *Green*: The collection has finished with no command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
+* *Yellow*: The collection has finished with some command failures. You can see the deployment risks and recommendations by clicking the *View & Analyze* icon in the *Actions* menu.
+* *Red*: The collection has failed. You need to resolve the errors and run the collection again.
 . Optional: When the collection is complete, you can click the binocular icon for any collection row to see the commands that were run and the data that was collected.
 . Select the *View & Analyze* tab.
 This page shows a general health report of your environment. You can select a section of the pie chart to see more details about those specific checks or descriptions of problems, along with recommendations on resolving any issues that might interfere with successful deployment. You can resolve these issues yourself or request help from NetApp Professional Services.
