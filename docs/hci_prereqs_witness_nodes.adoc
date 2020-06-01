@@ -5,7 +5,7 @@ summary: Learn about NetApp HCI Witness Node requirements.
 keywords: netapp, hci, element, Witness Node
 ---
 
-= NetApp HCI Witness Node resource requirements for two-node storage clusters
+= Witness Node resource requirements for two-node storage clusters
 :hardbreaks:
 :nofooter:
 :icons: font

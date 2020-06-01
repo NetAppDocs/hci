@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_collectlogs.html
-summary: You can log in to NetApp Hybrid Cloud Control.
+summary: You can use NetApp Hybrid Cloud Control to collect logs from your NetApp HCI installation to help with troubleshooting.
 keywords: netapp, hci, logs, collection, troubleshooting, monitor
 ---
 
@@ -16,8 +16,7 @@ keywords: netapp, hci, logs, collection, troubleshooting, monitor
 [.lead]
 If you have trouble with your NetApp HCI installation, you can collect logs to send to NetApp Support to help with diagnosis. You can access the log collection area from the NetApp Hybrid Control Dashboard.
 
-*Steps*
-
+.Steps
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----

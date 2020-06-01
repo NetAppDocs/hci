@@ -30,7 +30,7 @@ entries:
        url: /concept_hci_performance.html
   - title: Requirements and pre-deployment tasks
     entries:
-     - title: Required network ports
+     - title: Network ports used by NetApp HCI
        url: /hci_prereqs_required_network_ports.html
      - title: Network and switch requirements
        url: /hci_prereqs_network_switch.html
@@ -44,7 +44,7 @@ entries:
        url: /hci_prereqs_timekeeping.html
      - title: Environmental requirements
        url: /hci_prereqs_environmental.html
-     - title: Protection domains
+     - title: Protection Domains
        url: /hci_prereqs_protection_domains.html
      - title: Witness Node resource requirements for two-node storage clusters
        url: /hci_prereqs_witness_nodes.html
