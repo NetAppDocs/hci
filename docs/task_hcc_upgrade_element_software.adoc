@@ -245,25 +245,26 @@ b3fc-2c963f66abc1",
 a|
 . Go to the specific KB article listed for each issue or perform the specified remedy.
 . If a KB is specified, complete the process described in the relevant KB article.
-. After you have resolved cluster issues, run *PUT ​/upgrades/{upgradesId}*.
+. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
-. Enter ``"action":"resume"`` in the request body.
+. Enter `"action":"resume"` in the request body.
++
 ----
 {
   "action": "resume",
   "config": {}
 }
 ----
-. Enter "action":"resume"
 . Click *Execute*.
 
-|You need to pause the upgrade due to unexpected issues or the length of upgrade time.
+|You need to pause the upgrade due to unexpected issues.
 a|
 . Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
-. Enter ``"action":"pause"`` in the request body.
+. Enter `"action":"pause"` in the request body.
++
 ----
 {
   "action": "pause",
@@ -278,7 +279,8 @@ a|
 . Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
-. Enter ``"action":"acknowledge"`` in the request body.
+. Enter `"action":"acknowledge"` in the request body.
++
 ----
 {
   "action": "acknowledge",
@@ -287,7 +289,7 @@ a|
 ----
 . Click *Execute*.
 |===
-.. Run the *PUT ​/upgrades/{upgradesId}* API multiple times, as needed, until the process is complete.
+.. Run the *GET ​/upgrades/{upgradesId}* API multiple times, as needed, until the process is complete.
 +
 During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
 +
