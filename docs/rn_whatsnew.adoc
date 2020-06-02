@@ -149,7 +149,7 @@ The following are Element API methods related to session-based authentication (t
 * ListAuthSessionsByUsername
 
 == Compute node firmware (June 2020)
-The June 2020 compute node firmware bundle contains the latest BIOS feature enhancements, bugfixes, and hardware support for NetApp HCI compute nodes.
+The June 2020 compute node firmware bundle contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for NetApp HCI compute nodes.
 
 [discrete]
 == Find more information
