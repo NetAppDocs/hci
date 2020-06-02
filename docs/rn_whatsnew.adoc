@@ -20,7 +20,7 @@ NetApp periodically updates NetApp HCI to bring you new features, enhancements, 
 
 * <<Element 12.0>> describes new features and updates in NetApp Element 12.0.
 
-* <<Compute node firmware (June 2020)>> describes improvements in the current release of NetApp HCI compute node firmware.
+* <<Compute node firmware version 12.2.81>> describes improvements in the current release of NetApp HCI compute node firmware.
 
 == NetApp HCI 1.8
 NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
@@ -148,8 +148,8 @@ The following are Element API methods related to session-based authentication (t
 * ListActiveAuthSessions
 * ListAuthSessionsByUsername
 
-== Compute node firmware (June 2020)
-The June 2020 compute node firmware bundle contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for NetApp HCI compute nodes.
+== Compute node firmware version 12.2.81
+This compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for NetApp HCI compute nodes. Download the firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
 
 [discrete]
 == Find more information
