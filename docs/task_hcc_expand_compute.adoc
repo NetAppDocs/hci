@@ -89,3 +89,5 @@ You can monitor the progress while NetApp HCI adds and configures the resources.
 == Find more information
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[NetApp HCI Compute and Storage Nodes Installation and Setup Instructions^]
+* https://kb.vmware.com/s/article/1003212[VMware Knowledge Base: Enhanced vMotion Compatibility (EVC) processor support^]
