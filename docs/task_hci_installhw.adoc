@@ -172,22 +172,22 @@ image::H600S_ISI_noderear.png[Shows the cabling for the H610S node.]
 It takes approximately six minutes for the nodes to boot.
 
 Here is an illustration that shows the power button on the NetApp HCI chassis that has H410C and H410S nodes:
-+
-ADD IMAGE HERE
+
+image::H410c_poweron_ISG.png[Shows the power button on the H-series 2U, four-node chassis.]
 
 Here is an illustration that shows the power button on the H610C node:
-+
-ADD IMAGE HERE
+
+image::H610C_power-on.png[Shows the power button on the H610C node/chassis.]
 
 Here is an illustration that shows the power button on the H615C and H610S nodes:
-+
-ADD IMAGE HERE
+
+image::H600S_ISI_nodefront.png[Shows the power button on the H610S/H615C node/chassis.]
 
 == Configure NetApp HCI
 
 Choose from one of the following options.
 
-* New NetApp HCI installation:
+*New NetApp HCI installation*
 
 .Steps
 
@@ -203,7 +203,7 @@ NOTE: If you are using DHCP on the management network, you can connect to the DH
 +
 NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
-* Expanding an existing NetApp HCI installation:
+*Expanding an existing NetApp HCI installation*
 
 .Steps
 
