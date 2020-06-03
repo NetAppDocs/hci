@@ -1,0 +1,43 @@
+---
+permalink: docs/rn_firmware_12.2.81.html
+summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
+keywords: netapp, hci, compute firmware
+---
+
+= Compute firmware 12.2.81-2.3.0 release notes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
+
+== What's New
+Version 12.2.81 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. This release contains the following firmware versions for hardware components, with updated components in bold:
+
+|===
+|Component |H300E, H500E, H700E |H410C |H610C |H615C
+
+|BIOS
+|NA2.1
+|*NA3.7*
+|*3B01*
+|3B06.CO
+
+|BMC
+|*6.84.00*
+|6.71.06
+|*3.96.07*
+|*4.64.07*
+
+|NIC / Mellanox
+|14.21.1000
+|14.21.1000
+|14.22.1002
+|14.23.1020
+|===
+
+Download the firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].

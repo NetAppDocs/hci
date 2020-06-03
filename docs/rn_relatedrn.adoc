@@ -22,35 +22,6 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes]
 
-== Compute node firmware version 12.2.81
-The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
-
-Version 12.2.81 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. This release contains the following firmware versions for hardware components, with updated components in bold:
-
-|===
-|Component |H300E, H500E, H700E |H410C |H610C |H615C
-
-|BIOS
-|NA2.1
-|*NA3.7*
-|*3B01*
-|3B06.CO
-
-|BMC
-|*6.84.00*
-|6.71.06
-|*3.96.07*
-|*4.64.07*
-
-|NIC / Mellanox
-|14.21.1000
-|14.21.1000
-|14.22.1002
-|14.23.1020
-|===
-
-Download the firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
-
 == NetApp Element software
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022[NetApp Element Software 12.0 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256[NetApp Element Software 11.8 Release Notes]
@@ -64,3 +35,6 @@ Download the firmware package from https://mysupport.netapp.com/site/products/al
 == NetApp Element Plug-in for vCenter Server
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[vCenter Plug-in 4.4 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
+
+== Compute firmware
+link:rn_firmware_12.2.81.html[Compute firmware 12.2.81-2.3.0 release notes^]
