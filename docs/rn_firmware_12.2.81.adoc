@@ -1,4 +1,5 @@
 ---
+sidebar: docs_sidebar
 permalink: docs/rn_firmware_12.2.81.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, compute firmware
@@ -40,4 +41,4 @@ Version 12.2.81 introduces BMC support for the DMTF Redfish APIs, which enables 
 |14.23.1020
 |===
 
-Download the firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
+Download the compute node firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
