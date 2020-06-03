@@ -136,36 +136,36 @@ CAUTION: Ensure that the airflow vents at the rear of the chassis are not blocke
 You have two options for cabling the H410C node: using two cables or using six cables.
 
 Here is the two-cable configuration:
-+
-ADD IMAGE HERE
+
+image::HCI_ISI_compute_2cable.png[Shows the two-cable configuration for the H410C node.]
 
 Here is the six-cable configuration:
-+
-ADD IMAGE HERE
+
+image::HCI_ISI_compute_6cable.png[Shows the six-cable configuration of the H410C node.]
 
 Here is the cabling for the H410S node:
-+
-ADD IMAGE HERE
+
+image::HCI_ISI_storage_cabling.png[Shows the cabling for the H410S node.]
 
 After you cable the nodes, connect the power cords to the two power supply units per chassis and plug them into 240V PDU or power outlet.
 
 === H610C compute node
 
 Here is the cabling for the H610C node:
-+
-ADD IMAGE HERE
+
+image::H610C_node-cabling.png[Shows the cabling for the H610C node.]
 
 === H615C compute node
 
 Here is the cabling for the H615C node:
-+
-ADD IMAGE HERE
+
+image::H615C_node_cabling.png[Shows the cabling for the H615C node.]
 
 === H610S storage node
 
 Here is the cabling for the H610S node:
-+
-ADD IMAGE HERE
+
+image::H600S_ISI_noderear.png[Shows the cabling for the H610S node.]
 
 == Power on the nodes
 
