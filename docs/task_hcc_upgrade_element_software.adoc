@@ -136,7 +136,7 @@ https://[management node IP]/package-repository/1/
 .. Click *Try it out*.
 .. Click *Browse* and select the upgrade package.
 .. Click *Execute* to initiate the upload.
-.. From the response, copy the package ID (`"id"`).
+.. From the response, copy and save the package ID (`"id"`) for use in a later step.
 . Verify the status of the upload.
 .. From the REST API UI, click *GET​ /packages​/{id}​/status*.
 .. Click *Try it out*.
@@ -149,17 +149,22 @@ The response indicates `state` as `finished` when complete.
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://[management node IP]/inventory/1
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
 ... Click *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET /assets/storage-clusters*.
+.. From the REST API UI, click *GET /installations*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
+.. From the response, copy the installation asset ID (`"id"`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to upgrade for use in a later step.
 . Run the storage upgrade:
 .. Open the storage REST API UI on the management node:
 +
@@ -180,52 +185,51 @@ https://[management node IP]/storage/1
 The response should indicate state as `initializing`:
 +
 ----
-"_links": {
-"collection": "https://localhost:442/storage/upgrades",
-"self": "https://localhost:442/storage/upgrades/3fa85f64-1111-4562-
-b3fc-2c963f66abc1",
-"log": https://localhost:442/storage/upgrades/3fa85f64-1111-4562-b3fc-
-2c963f66abc1/log
-},
-"storageId": "114f14a4-1a1a-11e9-9088-6c0b84e200b4",
-"upgradeId": "334f14a4-1a1a-11e9-1055`-6c0b84e2001b4",
-"packageId": "774f14a4-1a1a-11e9-8888-6c0b84e200b4",
-"config": {},
-"state": "initializing",
-"status": {
-"availableActions": [
-"string"
-],
-"message": "string",
-"nodeDetails": [
 {
-"message": "string",
-"step": "NodePreStart",
-"nodeID": 0,
-"numAttempt": 0
-}
-],
-"percent": 0,
-"step": "ClusterPreStart",
-"timestamp": "2020-04-21T22:10:57.057Z",
-"failedHealthChecks": [
-{
-"checkID": 0,
-"name": "string",
-"displayName": "string",
-"passed": true,
-"kb": "string",
-"description": "string",
-"remedy": "string",
-"severity": "string",
-"data": {},
-"nodeID": 0
-}
-]
-},
-"taskId": "123f14a4-1a1a-11e9-7777-6c0b84e123b2",
-"dateCompleted": "2020-04-21T22:10:57.057Z",
-"dateCreated": "2020-04-21T22:10:57.057Z"
+  "_links": {
+    "collection": "https://localhost:442/storage/upgrades",
+    "self": "https://localhost:442/storage/upgrades/3fa85f64-1111-4562-b3fc-2c963f66abc1",
+    "log": https://localhost:442/storage/upgrades/3fa85f64-1111-4562-b3fc-2c963f66abc1/log
+  },
+  "storageId": "114f14a4-1a1a-11e9-9088-6c0b84e200b4",
+  "upgradeId": "334f14a4-1a1a-11e9-1055`-6c0b84e2001b4",
+  "packageId": "774f14a4-1a1a-11e9-8888-6c0b84e200b4",
+  "config": {},
+  "state": "initializing",
+  "status": {
+    "availableActions": [
+      "string"
+    ],
+    "message": "string",
+    "nodeDetails": [
+      {
+        "message": "string",
+        "step": "NodePreStart",
+        "nodeID": 0,
+        "numAttempt": 0
+      }
+    ],
+    "percent": 0,
+    "step": "ClusterPreStart",
+    "timestamp": "2020-04-21T22:10:57.057Z",
+    "failedHealthChecks": [
+      {
+        "checkID": 0,
+        "name": "string",
+        "displayName": "string",
+        "passed": true,
+        "kb": "string",
+        "description": "string",
+        "remedy": "string",
+        "severity": "string",
+        "data": {},
+        "nodeID": 0
+      }
+    ]
+  },
+  "taskId": "123f14a4-1a1a-11e9-7777-6c0b84e123b2",
+  "dateCompleted": "2020-04-21T22:10:57.057Z",
+  "dateCreated": "2020-04-21T22:10:57.057Z"
 }
 ----
 .. Copy the upgrade ID (`"upgradeId"`) that is part of the response.
@@ -253,12 +257,11 @@ a|
 ----
 {
   "action": "resume",
-  "config": {}
 }
 ----
 . Click *Execute*.
 
-|You need to pause the upgrade due to unexpected issues.
+|You need to pause the upgrade because the maintenance window is closing or another reason.
 a|
 . Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
 . Click *Try it out*.
@@ -268,7 +271,6 @@ a|
 ----
 {
   "action": "pause",
-  "config": {}
 }
 ----
 . Click *Execute*.
@@ -284,7 +286,6 @@ a|
 ----
 {
   "action": "acknowledge",
-  "config": {}
 }
 ----
 . Click *Execute*.
@@ -293,25 +294,7 @@ a|
 +
 During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
 +
-The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished` or `complete`.
-
-. Reconfigure authentication using the management node REST API.
-.. Open the management node REST API UI on the management node:
-+
-----
-https://[management node IP]/mnode
-----
-.. Click *Authorize* and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
-... Close the authorization window.
-.. From the REST API UI, click *POST /services/reconfigure-auth*.
-.. Click *Try it out*.
-.. For the *load_images* parameter, select `true`.
-.. Click *Execute*.
-+
-The response body indicates that reconfiguration was successful.
+The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
 
 == Upgrade Element software at connected sites using HealthTools
 
