@@ -61,13 +61,17 @@ After firmware flashing is complete and the node reboots, it might take a few mi
 
 == Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI)
 
-You must perform the sequential steps to load the compute firmware ISO and reboot the node to the ISO to ensure that the update is successful. The ISO should be located on the system or virtual machine (VM) hosting the web browser.
+You must perform the sequential steps to load the compute firmware ISO and reboot the node to the ISO to ensure that the update is successful. The ISO should be located on the system or virtual machine (VM) hosting the web browser. Ensure that you have downloaded the ISO before you start the process.
 
 TIP: The recommendation is to have the system or VM and the node on the same network.
 
+=== Update firmware on H410C nodes
+
+TIP: Ignore the following informational message you see during the process: `Untrusty Debug Firmware Key is used, SecureFlash is currently in Debug Mode`
+
 .Steps
 
-. If your node is part of a cluster, place it in maintenance mode as follows:
+. If your node is part of a cluster, place it in maintenance mode as follows. If not, skip to step 2.
 .. Log in to the VMware vCenter web client.
 .. Right-click the host (compute node) name and select *Maintenance Mode > Enter Maintenance Mode*.
 .. Click *OK*.
@@ -77,7 +81,18 @@ CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 
 . Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
 . Log in using your credentials.
-. Select *Remote Control > Launch KVM (Java)*.
+. Select *Remote Control > Console Redirection*.
+. Click *Launch Console*.
++
+NOTE: Java updates or installations might be required.
+
+. When the console opens, click *Virutal Media > Virtual Storage*.
+. On the *Virtual Storage* screen, click *Logical Drive Type*, and select *ISO File*.
++
+image::BIOS_H410C_iso.png[Shows the navigation path to select the ISO file.]
+
+. Click *Open Image* to browse to the folder where you downloaded the ISO file.
+
 . On the console, select *Media > Virtual Media Wizard*.
 +
 image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
