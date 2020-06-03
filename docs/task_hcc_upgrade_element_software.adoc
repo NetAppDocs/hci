@@ -118,9 +118,40 @@ You can use REST API to upgrade storage nodes in a cluster to the latest Element
 
 .Steps
 
-. Download the storage upgrade package:
-* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image to a device that is accessible to the management node.
-* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage node image to a device that is accessible to the management node.
+. Do one of the following depending on your connection:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Your management node has external connectivity.
+a|
+. Download the storage upgrade package to the management node:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
+.. From the REST API UI, click *GET /packages*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy and save the package ID for use in a later step.
+
+|Your management node is within a dark site without external connectivity.
+a|
+. Download the storage upgrade package to a device that is accessible to the management node:
+* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image.
+* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage node image.
 . Upload the storage upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
 +
@@ -144,7 +175,7 @@ https://[management node IP]/package-repository/1/
 .. Click *Execute* to initiate the status request.
 +
 The response indicates `state` as `finished` when complete.
-
+|===
 . Locate the storage cluster ID:
 .. Open the management node REST API UI on the management node:
 +
