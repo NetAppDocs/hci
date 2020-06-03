@@ -148,9 +148,6 @@ The following are Element API methods related to session-based authentication (t
 * ListActiveAuthSessions
 * ListAuthSessionsByUsername
 
-== Compute node firmware version 12.2.81
-This compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for NetApp HCI compute nodes. Download the firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
-
 [discrete]
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
