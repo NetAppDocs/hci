@@ -89,7 +89,7 @@ NOTE: Java updates or installations might be required.
 . When the console opens, click *Virutal Media > Virtual Storage*.
 . On the *Virtual Storage* screen, click *Logical Drive Type*, and select *ISO File*.
 +
-image::BIOS_H410C_iso.png[Shows the navigation path to select the ISO file.]
+image::bios_h410c_iso.png[Shows the navigation path to select the ISO file.]
 
 . Click *Open Image* to browse to the folder where you downloaded the ISO file.
 
