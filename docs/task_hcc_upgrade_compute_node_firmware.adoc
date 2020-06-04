@@ -21,7 +21,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 You can update the firmware using one of the following methods:
 
 * <<Use a USB drive with the latest firmware image downloaded>>
-* <<Use the wizard in the Baseboard Management Controller (BMC) user interface (UI)>>
+* <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
 .Before you begin
 
@@ -59,7 +59,7 @@ After firmware flashing is complete and the node reboots, it might take a few mi
 . Remove the USB flash drive from the upgraded compute node.
 . Repeat this task for other compute nodes in your ESXi cluster until all compute nodes are upgraded.
 
-== Use the wizard in the Baseboard Management Controller (BMC) user interface (UI)
+== Use the Baseboard Management Controller (BMC) user interface (UI)
 
 You must perform the sequential steps to load the compute firmware ISO and reboot the node to the ISO to ensure that the upgrade is successful. The ISO should be located on the system or virtual machine (VM) hosting the web browser. Ensure that you have downloaded the ISO before you start the process.
 
@@ -86,21 +86,20 @@ CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 +
 NOTE: You might have to install Java or update it.
 
-. When the console opens, click *Virutal Media > Virtual Storage*.
+. When the console opens, click *Virtual Media > Virtual Storage*.
 . On the *Virtual Storage* screen, click *Logical Drive Type*, and select *ISO File*.
 +
-image::bios_h410c_iso.png[Shows the navigation path to select the ISO file.]
+image:BIOS_H410C_iso.png[Shows the navigation path to select the ISO file.]
 
 . Click *Open Image* to browse to the folder where you downloaded the ISO file, and select the ISO file.
 . Click *Plug In*.
 . When the connection status shows `Device#: VM Plug-in OK!!`, click *OK*.
-. Reboot the node.
-.. Press *F12* and click *Restart* or click *Power Control > Set Power Reset*.
+. Reboot the node by pressing *F12* and clicking *Restart* or clicking *Power Control > Set Power Reset*.
 . During reboot, press *F11* to select the boot options and load the ISO. You might have to press F11 a few times before the boot menu is displayed.
-
++
 You will see the following screen:
 +
-image::boot_option_iso_h410c.png[Shows the screen the virtual ISO boots up to.]
+image:boot_option_iso_h410c.png[Shows the screen the virtual ISO boots up to.]
 
 . On the above screen, press *Enter*. Depending on your network, it might take a few minutes after you press *Enter* for the upgrade to begin.
 . On the console, select *Media > Virtual Media Wizard*.
@@ -115,7 +114,6 @@ NOTE: The BIOS version will not show the updated version until the node has fini
 .. Log in to the VMware vCenter web client.
 .. Take the host out of maintenance mode. This might show a disconnected red flag. Wait till all statuses are cleared.
 .. Power on any of the remaining VMs that were powered off.
-
 
 === Upgrade firmware on H610C/H615C nodes
 
