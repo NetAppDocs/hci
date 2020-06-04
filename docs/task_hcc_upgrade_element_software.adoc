@@ -127,7 +127,7 @@ You can use REST API to upgrade storage nodes in a cluster to the latest Element
 
 |Your management node has external connectivity.
 a|
-. Download the storage upgrade package to the management node:
+. Verify repository the connection:
 .. Open the management node REST API UI on the management node:
 +
 ----
@@ -142,6 +142,7 @@ https://[management node IP]/package-repository/1/
 .. Click *Try it out*.
 .. Click *Execute*.
 .. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
+. Find the upgrade package ID:
 .. From the REST API UI, click *GET /packages*.
 .. Click *Try it out*.
 .. Click *Execute*.
