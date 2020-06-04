@@ -35,16 +35,19 @@ entries:
         #- title: Access Hybrid Cloud Control
         #  url: /task_hcc_access.html
         # For 20.2 consider putting multiple access topics or URLs
-  - title: Monitor your NetApp HCI system
+  - title: Manage NetApp HCI
     entries:
-      - title: View resources on the HCC Dashboard
-        url: /task_hcc_dashboard.html
-      - title: View your inventory in the Nodes page
-        url: /task_hcc_nodes.html
-      - title: Monitor performance, capacity, and cluster health with Active IQ
-        url: /task_hcc_activeiq.html
-      - title: Collect NetApp HCI logs
-        url: /task_hcc_collectlogs.html
+      - title: Monitor your NetApp HCI system
+        entries:
+          - title: View resources on the HCC Dashboard
+            url: /task_hcc_dashboard.html
+          - title: View your inventory in the Nodes page
+            url: /task_hcc_nodes.html
+          - title: Monitor performance, capacity, and cluster health with Active IQ
+            url: /task_hcc_activeiq.html
+          - title: Collect NetApp HCI logs
+            url: /task_hcc_collectlogs.html
+      - title: Work with the management node
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
