@@ -127,7 +127,7 @@ You can use REST API to upgrade storage nodes in a cluster to the latest Element
 
 |Your management node has external connectivity.
 a|
-. Verify repository the connection:
+. Verify the repository connection:
 .. Open the management node REST API UI on the management node:
 +
 ----
