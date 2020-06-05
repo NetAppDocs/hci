@@ -121,7 +121,18 @@ The steps for updating BIOS vary depending on whether the node is standalone or 
 
 .Steps
 
-. 
+. If your node is part of a cluster, place it in maintenance mode as follows. If not, skip to step 2.
+.. Log in to the VMware vCenter web client.
+.. Right-click the host (compute node) name and select *Maintenance Mode > Enter Maintenance Mode*.
+.. Click *OK*.
+VMs on the host will be migrated to another available host. VM migration can take time depending on the number of VMs that need to be migrated.
++
+CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
+
+. Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
+. Log in using your credentials.
+. Click *Remote Control > Launch KNM (Java)*.
+. In the console window, click *Media > Virtual Medial Wizard*.
 +
 image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
 . Click *Browse* and select the compute firmware `.iso` file.
@@ -129,9 +140,9 @@ image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
 A popup indicating success is displayed, along with the path and device showing at the bottom. You can close the *Virtual Media* window.
 +
 image::virtual_med_popup.gif[Popup window showing ISO upload success.]
-. Select either F12 and Restart or *Power Control > Set Power Reset* to reboot the node.
-. During reboot, select the function key F11 to select the boot options and load the ISO.
-. Select AMI Virtual CDROM from the list displayed and click *Enter*.
+. Reboot the node by pressing *F12* and clicking *Restart* or clicking *Power Control > Set Power Reset*.
+. During reboot, press *F11* to select the boot options and load the ISO.
+. Select *AMI Virtual CDROM* from the list displayed and click *Enter*. If you do not see AMI Virtual CDROM in the list, go into the BIOS and enable it in the boot list. The node will reboot after you save. During the reboot, press *F11*.
 +
 image::boot_device.gif[Shows the window where you can select the boot device.]
 . On the screen displayed, click *Enter*.
@@ -142,7 +153,7 @@ NOTE: Some of the firmware updates might cause the console to disconnect and/or 
 +
 CAUTION: During the powering on process, for approximately five minutes, the KVM console displays *No Signal*.
 
-. After the node is powered on, select *Dashboard > Device Information > More info* to verify the BIOS and BMC versions.
+. After the node is powered on, select *Dashboard > Device Information > More info* to verify the BIOS and BMC versions. The updated BIOS and BMC versions are displayed. The BIOS updated version will not be displayed until the node has fully booted up.
 . If you placed the node in maintenance mode, after the node boots to ESXi, right-click the host (compute node) name, and select *Maintenance Mode > Exit Maintenance Mode*, and migrate the VMs back to the host.
 . In vCenter, with the host name selected, configure and verify the BIOS version.
 
