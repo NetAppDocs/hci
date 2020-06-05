@@ -119,7 +119,7 @@ NOTE: The BIOS version will not show the upgraded version until the node has fin
 
 === Upgrade firmware on H610C/H615C nodes
 
-The steps for updating BIOS vary depending on whether the node is standalone or part of a cluster. The procedure can take approximately 25 minutes and includes powering the node off, uploading the ISO, flashing the devices, and powering the node back on after the upgrade.
+The steps vary depending on whether the node is standalone or part of a cluster. The procedure can take approximately 25 minutes and includes powering the node off, uploading the ISO, flashing the devices, and powering the node back on after the upgrade.
 
 .Steps
 
