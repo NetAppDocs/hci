@@ -93,13 +93,13 @@ image::hcc_select_package.png[Shows the list of available storage upgrade versio
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade. See <<Upgrade status changes>>.
 
 NOTE: If you are upgrading an H610S node to Element 12.0 or later, the upgrade process involves two phases. The UI displays a message to notify you about the two-phase upgrade process. See <<Upgrade status changes>>.
-+
+
 image::hcc_twophase_upgrade.png[On-screen message notifying users of the two-phase upgrade process for H610S.]
-+
+
 After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
-+
+
 image::hcc_phase2_upgrades.png[On-screen message notifying users that phase 1 is complete, and they must perform phase 2.]
-+
+
 After you complete phase 2, you must confirm in the UI that you have completed phase 2.
 
 You can download logs after the upgrade is complete.
@@ -131,11 +131,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |You paused the upgrade. Click *Resume* to resume the process.
 
 |Error
-|An error has occurred during the upgrade.
-
-image::hcc_upgrade_error.png[Error message displayed on HCC UI when the storage upgrade pauses because of an error.]
-
-You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
+|An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
 |Unable to Detect
 |For dark sites, NetApp Hybrid Cloud Control does not display states.
