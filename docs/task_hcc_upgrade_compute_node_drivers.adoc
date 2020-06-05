@@ -27,7 +27,7 @@ Perform only one of these update operations at a time.
 
 .Steps
 
-. Browse to the https://mysupport.netapp.com/products/p/hci.html[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
 . Accept the End User License Agreement.
 . Under the *Driver Packages for VMWare ESXi* heading, download the driver package for your node type and ESXi version.
 . Extract the downloaded driver bundle on your local computer.
