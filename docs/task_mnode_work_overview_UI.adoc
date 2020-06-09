@@ -1,0 +1,29 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_work_overview_UI.html
+summary: With the management node UI (https:// [mNode IP}:442), you can make changes to network and cluster settings, run system tests, or use system utilities.
+keywords: netapp, management node ui, mnode ui, :442, element
+---
+
+= Work with the management node UI
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+With the management node UI (https:// [mNode IP}:442), you can make changes to network and cluster settings, run system tests, or use system utilities.
+
+Tasks you can perform with the management node UI:
+
+* link:task_hci_mnode_enable_alerts.html[Enable the management node alert monitoring]
+* link:task_hci_mnode_settings.html[Modify and test the management node network, cluster, and system settings]
+* link:task_hci_mnode_run_system_utilities.html[Run system utilities from the management node]
+
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

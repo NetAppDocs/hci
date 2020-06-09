@@ -1,0 +1,61 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_configure_proxy_server.html
+summary: You can add compute and controller assets to the management node configuration using the REST API UI.
+keywords: netapp, hci, mnode, api, management node, add proxy, proxy server
+---
+
+= Configure a proxy server
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+If your cluster is behind a proxy server, you must configure the proxy settings so that you can reach a public network.
+
+A proxy server is used for telemetry collectors and reverse tunnel connections. You can enable and configure a proxy server using the REST API UI if you did not already configure a proxy server during installation or upgrade. You can also modify existing proxy server settings or disable a proxy server.
+
+The command to configure a proxy server updates and then returns the current proxy settings for the management node. The proxy settings are used by Active IQ, the NetApp HCI monitoring service that is deployed by the NetApp Deployment Engine, and other Element software utilities that are installed on the management node, including the reverse support tunnel for NetApp Support.
+
+.Before you begin
+* You should know host and credential information for the proxy server you are configuring.
+* Ensure that your cluster version is running NetApp Element software 11.3 or later.
+* Ensure that you have deployed a management node running version 11.3 or later.
+
+.Steps
+. Access the REST API UI on the management node by entering the management node IP address followed by /mnode:
++
+----
+https://[IP address]/mnode
+----
+
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+. Click *PUT /settings*.
+. Click *Try it out*.
+. To enable a proxy server, you must set `use_proxy1` to true. Enter the IP or host name and proxy port destinations.
++
+The proxy user name, proxy password, and SSH port are optional and should be omitted if not used.
++
+----
+{
+"proxy_ip_or_hostname": "[IP or name]",
+"use_proxy": [true/false],
+"proxy_username": "[username]",
+"proxy_password": "[password]",
+"proxy_port": [port value],
+"proxy_ssh_port": [port value: default is 443]
+}
+----
+. Click *Execute*.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

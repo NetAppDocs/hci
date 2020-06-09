@@ -1,0 +1,58 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_run_system_utilities.html
+summary: You can create or delete cluster support bundles, reset node configuration settings, or restart networking.
+keywords: netapp, element, management node ui, mnode ui, system utilities
+---
+
+= Run system utilities from the management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can use the per-node UI for the management node to create or delete cluster support bundles, reset node configuration settings, or restart networking.
+
+.Steps
+
+. Open the per-node management node UI using the management node admin credentials.
+. Click *System Utilities*.
+. Click the button for the utility that you want to run:
++
+.. *Control Power*: Reboots, power cycles, or shuts down the node. Specify any of the following options.
++
+IMPORTANT: This operation causes temporary loss of networking connectivity.
+
++
+** *Action*: Options include `Restart` and `Halt` (power off).
+** *Wakeup Delay*: Any additional time before the node comes back online.
+.. *Create Cluster Support Bundle*: Creates the cluster support bundle to assist NetApp Support diagnostic evaluations of one or more nodes in a cluster. Specify the following options:
++
+* *Bundle Name*: Unique name for each support bundle created. If no name is provided, then "supportbundle" and the node name are used as the file name.
+* *Mvip*: The MVIP of the cluster. Bundles are gathered from all nodes in the cluster. This parameter is required if the Nodes parameter is not specified.
+* *Nodes*: The IP addresses of the nodes from which to gather bundles. Use either Nodes or Mvip, but not both, to specify the nodes from which to gather bundles. This parameter is required if Mvip is not specified.
+* *Username*: The cluster admin user name.
+* *Password*: The cluster admin password.
+* *Allow Incomplete*: Allows the script to continue to run if bundles cannot be gathered from one or more of the nodes.
+* *Extra Args*: This parameter is fed to the sf_make_support_bundle script. This parameter should be used only at the request of NetApp Support.
+.. *Delete All Support Bundles*: Deletes any current support bundles on the management node.
+.. *Reset Node*: Resets the management node to a new install image. This changes all settings except the network configuration to the default state. Specify the following options:
++
+* *Build*: The URL to a remote Element software image to which the node will be reset.
+* *Options*: Specifications for running the reset operations. Details are be provided by NetApp Support, if required.
++
+IMPORTANT: This operation causes temporary loss of networking connectivity.
+
+.. *Restart Networking*: Restarts all networking services on the management node.
++
+IMPORTANT: This operation causes temporary loss of networking connectivity.
+
+
+[discrete]
+== Find more Information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
