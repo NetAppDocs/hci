@@ -5,7 +5,7 @@ summary: With the management node UI (https:// [mNode IP}:442), you can make cha
 keywords: netapp, management node ui, mnode ui, :442, element
 ---
 
-= Work with the management node UI
+= Management node UI overview
 
 :hardbreaks:
 :nofooter:

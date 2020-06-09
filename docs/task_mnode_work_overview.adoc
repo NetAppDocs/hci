@@ -5,7 +5,7 @@ summary: You can use the management node (mNode) to upgrade system services, man
 keywords: netapp, mnode, api, rest api, mnode ui, management node ui
 ---
 
-= Work with the management node
+= Management node overview
 
 :hardbreaks:
 :nofooter:
