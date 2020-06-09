@@ -16,9 +16,9 @@ keywords: netapp, management node ui, mnode ui, network settings, test network, 
 [.lead]
 You can modify and test the management node network, cluster, and system settings.
 
-* Update management node network settings
-* Update cluster settings
-* Test the settings changes
+* <<Update management node network settings>>
+* <<Update management node cluster settings>>
+* <<Test the management node settings>>
 
 
 == Update management node network settings
@@ -66,7 +66,7 @@ On the Cluster Settings tab of the per-node UI for the management node, you can 
 * *Version*: Element software version running on the cluster.
 * *Default Interface*: Default network interface used for management node communication with the cluster running Element software.
 
-== Test the management node Settings
+== Test the management node settings
 
 After you change management and network settings for the management node and commit the changes, you can run tests to validate the changes you made.
 

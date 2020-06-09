@@ -55,14 +55,14 @@ entries:
           - title: Management node overview
             url: /task_mnode_work_overview.html
           - title: Access the management node (UI or REST API)
-            url: /task_hci_mnode_access.html
+            url: /task_mnode_access.html
           - title: Work with the management node UI
             entries:
               - title: Work with the management node UI
                 url: /task_mnode_work_overview_UI.html
               - title: Configure alert monitoring on NetApp HCI
-                url: /task_hci_mnode_enable_alerts.html
-              - title: Modify and test the management node network, cluster, and system settings]
+                url: /task_mnode_enable_alerts.html
+              - title: Modify and test the management node network, cluster, and system settings
                 url: task_mnode_settings.html
               - title: Run system utilities from the management node
                 url: task_mnode_run_system_utilities.html
@@ -83,7 +83,7 @@ entries:
               - title: Get logs from management services
                 url: /task_hci_mnode_get_logs_from_management_services.html
           - title: Enable remote NetApp Support connections
-            url: /task_enable_remote_support_connections.html
+            url: /task_mnode_enable_remote_support_connections.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
