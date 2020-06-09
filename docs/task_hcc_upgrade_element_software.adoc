@@ -122,7 +122,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |Newer versions of Element are available for upgrade.
 
 |In Progress
-|The upgrade is in progress. a progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
+|The upgrade is in progress. A progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
 
 |Upgrade Pausing
 |You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. It can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click *Resume*.
@@ -137,7 +137,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |For dark sites, NetApp Hybrid Cloud Control does not display states.
 
 |Complete with Follow-up
-|Only for H610S. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade. After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
+|Only for H610S nodes. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade. After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
 
 == Use NetApp Hybrid Cloud Control API to upgrade Element storage
