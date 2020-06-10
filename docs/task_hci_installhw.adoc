@@ -31,6 +31,10 @@ TIP: See the link:../media/isi_poster.pdf[poster] for a visual representation of
 
 The workflow diagrams here provide a high-level overview of the installation steps. The steps vary slightly depending on the H-series model.
 
+* <<H410C and H410S in a two rack unit (2U), four-node chassis>>
+* <<H610C and H615C>>
+* <<H610S>>
+
 === H410C and H410S in a two rack unit (2U), four-node chassis
 
 image::h410c_workflow.png[H410C and H410S installation workflow]
@@ -53,7 +57,21 @@ In preparation for installation, inventory the hardware that was shipped to you,
 
 Ensure that you have the following items at your installation location:
 
-* Rack space for the system. A NetApp HCI chassis with four nodes needs two rack unit (2U) rack space. An H610S node (or chassis) needs one rack unit (1U) rack space. An H610C node (or chassis) needs 2U rack space.
+* Rack space for the system.
+[%header,cols=2*]
+|===
+|Node type
+|Rack space
+
+|H410C and H410S nodes
+|Two rack unit (2U)
+
+|H610C node
+|2U
+
+|H615C and H610S nodes
+|One rack unit (1U)
+|===
 * SFP28/SFP+ direct-attach cables or transceivers
 * CAT5e or higher cables with RJ45 connector
 * A keyboard, video, mouse (KVM) switch to configure your system
@@ -76,7 +94,7 @@ CAUTION: If you install the chassis onto a fully contracted rail, the front and 
 
 . Align the front of the rail with the holes on the front post of the rack.
 . Push the hooks on the front of the rail into the holes on the front post of the rack and then down, until the spring-loaded pegs snap into the rack holes.
-. Attach the rail to the rack with screws. Here is a illustration of the left rail being attached to the front of the rack:
+. Attach the rail to the rack with screws. Here is an illustration of the left rail being attached to the front of the rack:
 +
 image::h410c_rail.gif[Rail installation for 2U, four-node NetApp HCI chassis.]
 
@@ -91,7 +109,7 @@ Here is an illustration for installing rails for an H61OC compute node:
 image::h610c_rail.png[Rail installation for H610C compute node.]
 
 === One rack unit (1U) H610S or H615C chassis
-Here is an illustration for installing rails for an H615C compute node and an H610S storage node:
+Here is an illustration for installing rails for an H610S storage node or an H615C compute node:
 
 image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute node.]
 
@@ -185,7 +203,10 @@ image::H600S_ISI_nodefront.png[Shows the power button on the H610S/H615C node/ch
 
 == Configure NetApp HCI
 
-Choose from one of the following options.
+Choose from one of the following options:
+
+* <<New NetApp HCI installation>>
+* <<Expanding an existing NetApp HCI installation>>
 
 *New NetApp HCI installation*
 
@@ -209,6 +230,8 @@ NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
 . Open a web browser and browse to the IP address of the management node.
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
++
+See link:task_hcc_access.html[Access NetApp Hybrid Cloud Control].
 . Follow the steps in the wizard to add storage and/or compute nodes to your NetApp HCI installation.
 +
 TIP: To add H410C compute nodes, the existing installation must run NetApp HCI 1.4 or later. To add H615C compute nodes, the existing installation must run NetApp HCI 1.7 or later.
@@ -238,5 +261,5 @@ If your H615C node has GPUs in it, install GPU drivers in ESXi for each H615C no
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
-* https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
+* https://mysupport.netapp.com/site/tools[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
 * https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
