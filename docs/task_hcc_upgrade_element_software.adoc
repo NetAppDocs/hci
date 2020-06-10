@@ -27,7 +27,10 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 * You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
-* The management node in your environment is running version 11.0, 11.1 or later.
+* For Hybrid Cloud Control, the management node in your environment is running version 11.3.
+
+NOTE: If you are updating storage using HealthTools, the management node must be 11.0, 11.1 or later.
+
 * If you are using HealthTools to upgrade, you have the latest version of HealthTools.
 
 .Upgrade options
