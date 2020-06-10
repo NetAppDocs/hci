@@ -45,4 +45,6 @@ This firmware package contains the following firmware versions for hardware comp
 |14.23.1020
 |===
 
+Visit link:task_hcc_upgrade_compute_node_firmware.html[Update compute node firmware^] for instructions on updating your compute node firmware.
+
 Download the compute node firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
