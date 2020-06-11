@@ -31,11 +31,11 @@ TIP: See the link:../media/isi_poster.pdf[poster] for a visual representation of
 
 The workflow diagrams here provide a high-level overview of the installation steps. The steps vary slightly depending on the H-series model.
 
-* <<H410C and H410S in a two rack unit (2U), four-node chassis>>
+* <<H410C and H410S>>
 * <<H610C and H615C>>
 * <<H610S>>
 
-=== H410C and H410S in a two rack unit (2U), four-node chassis
+=== H410C and H410S
 
 image::h410c_workflow.png[H410C and H410S installation workflow]
 
@@ -58,6 +58,7 @@ In preparation for installation, inventory the hardware that was shipped to you,
 Ensure that you have the following items at your installation location:
 
 * Rack space for the system.
+
 [%header,cols=2*]
 |===
 |Node type
@@ -72,6 +73,7 @@ Ensure that you have the following items at your installation location:
 |H615C and H610S nodes
 |One rack unit (1U)
 |===
+
 * SFP28/SFP+ direct-attach cables or transceivers
 * CAT5e or higher cables with RJ45 connector
 * A keyboard, video, mouse (KVM) switch to configure your system
@@ -85,8 +87,12 @@ The hardware order that was shipped to you includes a set of slide rails. You wi
 
 TIP: Install hardware from the bottom of the rack up to the top to prevent the equipment from toppling over. If your rack includes stabilizing devices, install them before you install the hardware.
 
-=== Two rack unit (2U), four-node NetApp HCI chassis
-The 2U, four-node H-Series chassis is shipped with two sets of adapters. If you want to install the chassis in a rack with round holes, use the adapters appropriate for a rack with round holes. The rails for H410C and H410S nodes fit a rack between 29 inches and 33.5 inches in depth. When the rail is fully contracted, it is 28 inches long, and the front and rear sections of the rail are held together by only one screw.
+* <<H410C and H410S>>
+* <<H610C>>
+* <<H610S and H615C>>
+
+=== H410C and H410S
+H410C and H410S nodes are installed in 2U, four-node H-Series chassis, which is shipped with two sets of adapters. If you want to install the chassis in a rack with round holes, use the adapters appropriate for a rack with round holes. The rails for H410C and H410S nodes fit a rack between 29 inches and 33.5 inches in depth. When the rail is fully contracted, it is 28 inches long, and the front and rear sections of the rail are held together by only one screw.
 
 CAUTION: If you install the chassis onto a fully contracted rail, the front and rear sections of the rail might separate.
 
@@ -103,12 +109,12 @@ image::h410c_rail.gif[Rail installation for 2U, four-node NetApp HCI chassis.]
 . Mount the rear of the rail onto the rack, and secure the rail with screws.
 . Perform all the above steps for the other side of the rack.
 
-=== 2U H610C chassis
+=== H610C
 Here is an illustration for installing rails for an H61OC compute node:
 
 image::h610c_rail.png[Rail installation for H610C compute node.]
 
-=== One rack unit (1U) H610S or H615C chassis
+=== H610S and H615C
 Here is an illustration for installing rails for an H610S storage node or an H615C compute node:
 
 image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute node.]
@@ -116,6 +122,10 @@ image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute
 == Install the node/chassis
 
 You will install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, you will install the chassis/node directly onto the rails in the rack.
+
+* <<H410C and H410S nodes>>
+* <<H610C node/chassis>>
+* <<H610S and H615C node/chassis>>
 
 === H410C and H410S nodes
 
@@ -136,7 +146,7 @@ Here is an illustration for installing the node/chassis in the rack:
 
 image::h610c_chassis.png[Shows the H610C node/chassis being installed in the rack.]
 
-=== H610S or H615C node/chassis
+=== H610S and H615C node/chassis
 In the case of H615C and H610S, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
 
 Here is an illustration for installing the node/chassis in the rack:
@@ -148,6 +158,11 @@ image::h610s_chassis.gif[Shows the H615C or H610S node/chassis being installed i
 If you are adding nodes to an existing NetApp HCI installation, ensure that the cabling and network configuration of the nodes that you add are identical to the existing installation.
 
 CAUTION: Ensure that the airflow vents at the rear of the chassis are not blocked by cables or labels. This can lead to premature component failures due to overheating.
+
+* <<H410C compute node and H410S storage node>>
+* <<H610C compute node>>
+* <<H615C compute node>>
+* <<H610S storage node>>
 
 === H410C compute node and H410S storage node
 
@@ -241,6 +256,9 @@ NOTE: The newly installed NetApp HCI nodes on the same network will be discovere
 == Perform post-configuration tasks
 
 Depending on the type of node you have, you might need to perform additional steps after you install the hardware and configure NetApp HCI.
+
+* <<H610C node>>
+* <<H615C and H610S nodes>>
 
 === H610C node
 
