@@ -21,6 +21,12 @@ For clusters running Element software version 11.3 or later, you can work with t
 * With the management node UI (`https:// [mNode IP}:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
 * With the built-in REST API UI (`https://[mNode IP}/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
 
+Install or recover a management node:
+
+* link:task_mnode_install.html[Install a management node]
+* link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)]
+* link:task_mnode_recover.html[Recover a management node]
+
 Access the management node:
 
 * link:task_mnode_access.html[Access the management node (UI or REST API)]
