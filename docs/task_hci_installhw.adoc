@@ -223,7 +223,7 @@ Choose from one of the following options:
 * <<New NetApp HCI installation>>
 * <<Expanding an existing NetApp HCI installation>>
 
-*New NetApp HCI installation*
+=== New NetApp HCI installation
 
 .Steps
 
@@ -239,7 +239,7 @@ NOTE: If you are using DHCP on the management network, you can connect to the DH
 +
 NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
-*Expanding an existing NetApp HCI installation*
+=== Expanding an existing NetApp HCI installation
 
 .Steps
 
