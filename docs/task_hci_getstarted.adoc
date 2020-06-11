@@ -69,7 +69,7 @@ NetApp HCI can be installed in different configurations:
 * H410S storage node
 * H610S storage node
 
-CAUTION: For precautions and details, see link:task:_hci_installhw.html[Install H-series hardware_^].
+CAUTION: For precautions and details, see link:task_hci_installhw.html[Install H-series hardware].
 
 .Steps
 
