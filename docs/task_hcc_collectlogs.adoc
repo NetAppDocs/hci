@@ -98,6 +98,8 @@ You should see a `percentComplete` attribute detailing the progress of the colle
 After execution, a download link appears in the response body area.
 
 .. Click *Download file* and save the resulting file to your computer.
++
+The log package is in a compressed UNIX .tgz file format.
 
 [discrete]
 == Find more information
