@@ -7,7 +7,7 @@ keywords: netapp, hci, compute firmware
 ////
 This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Compute firmware 12.2.81-2.3.0 Release Notes
+= Compute firmware 12.2.81 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -47,4 +47,4 @@ This firmware package contains the following firmware versions for hardware comp
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html[Update compute node firmware^] for instructions on updating your compute node firmware.
 
-Download the compute node firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/1.8/downloads[the NetApp HCI downloads page^].
+Download the compute node firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
