@@ -74,7 +74,9 @@ a|
 . Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Click *Begin Upgrade*.
 +
-TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade. See <<Upgrade status changes>>.
+TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
+
+NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress.
 
 You can download logs after the upgrade is complete.
 
@@ -125,7 +127,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control shows this stats instead of *Versions Available*.
+|NetApp Hybrid Cloud Control shows this status instead of *Versions Available*.
 
 |Complete with Follow-up
 |Only for H610S nodes. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade. After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
