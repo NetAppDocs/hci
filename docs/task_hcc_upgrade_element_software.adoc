@@ -80,8 +80,7 @@ You can download logs after the upgrade is complete.
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Download the storage upgrade package from the NetApp Support Site to a device that is accessible to the management node.
-. Click *Browse* to upload the upgrade package that you had downloaded.
+. Click *Browse* to upload the upgrade package that you downloaded from the NetApp Support Site.
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 +
 CAUTION: The file upload will be lost if you navigate away from the browser window.
@@ -94,6 +93,7 @@ a|
 . Click *Begin Upgrade*.
 After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
 . Complete the additional steps required (phase 2), and acknowledge in the UI that you have completed phase 2.
+
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
 
@@ -125,7 +125,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control shows this stats instead of *Versions Available*. 
+|NetApp Hybrid Cloud Control shows this stats instead of *Versions Available*.
 
 |Complete with Follow-up
 |Only for H610S nodes. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade. After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
