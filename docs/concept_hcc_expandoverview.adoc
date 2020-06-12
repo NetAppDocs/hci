@@ -32,5 +32,8 @@ NOTE: When expanding NetApp HCI compute or storage resources in the NetApp Deplo
 
 [discrete]
 == Find more information
+* link:task_hcc_expand_compute.html[Expand NetApp HCI compute resources]
+* link:task_hcc_expand_storage.html[Expand NetApp HCI storage resources]
+* link:task_hcc_expand_compute_and_storage.html[Expand NetApp HCI storage and compute resources at the same time]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
