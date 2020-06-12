@@ -73,7 +73,7 @@ The *Storage* tab lists the storage clusters that are part of your installation.
 a|
 . Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Click *Begin Upgrade*.
-+
+
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress.
@@ -84,7 +84,7 @@ You can download logs after the upgrade is complete.
 a|
 . Click *Browse* to upload the upgrade package that you downloaded from the NetApp Support Site.
 . Wait for the upload to complete. A progress bar shows the status of the upload.
-+
+
 CAUTION: The file upload will be lost if you navigate away from the browser window.
 
 An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
