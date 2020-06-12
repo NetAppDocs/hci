@@ -27,12 +27,13 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 * You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
-* For Hybrid Cloud Control, the management node in your environment is running version 11.3.
+* For NetApp Hybrid Cloud Control, the management node in your environment is running version 11.3.
 
 NOTE: If you are updating storage using HealthTools, the management node must be 11.0, 11.1 or later.
 
-* If you are using HealthTools to upgrade, you have the latest version of HealthTools.
 * If you are using NetApp Hybrid Cloud Control to upgrade, and your management node is not connected to the internet, you have downloaded the upgrade package from the NetApp Support Site.
+* If you are using NetApp Hybrid Cloud Control, you have ensured that TCP port `443` is open so that NetApp Hybrid Cloud Control can communicate with the online software repository to download upgrade packages.
+* If you are using HealthTools to upgrade, you have the latest version of HealthTools.
 
 .Upgrade options
 
@@ -43,11 +44,11 @@ Choose one of the following Element software upgrade options:
 * <<Upgrade Element software at connected sites using HealthTools>>
 * <<Upgrade Element software at dark sites using HealthTools>>
 
-IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> after you complete the Element upgrade procedure for each node.
+CAUTION: If you are upgrading an H610S cluster running a pre-11.8 version of Element to Element 12.0 or later, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each H610S node in the cluster.
 
 == Use NetApp Hybrid Cloud Control UI to upgrade Element storage
 
-Using the NetApp Hybrid Cloud Control (HCC) UI, you can upgrade a storage cluster.
+Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
 .Steps
 
@@ -62,62 +63,39 @@ https://<ManagementNodeIP>
 +
 The *Storage* tab lists the storage clusters that are part of your installation.
 . Choose from the following options and perform the set of steps that are applicable to your cluster:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
 
-* <<Upgrade storage cluster when management node has internet connectivity>>
-* <<Upgrade storage cluster when management node is not connected to the internet>>
-* <<Upgrade H610S node running Element version earlier than 11.8>>
-
-=== Upgrade storage cluster when management node has internet connectivity
-NetApp Hybrid Cloud Control downloads the new update packages from the online software repository. You must ensure that TCP port `443` is open for NetApp Hybrid Cloud Control to communicate with the software repository.
-
-.Steps
-
+|Your management node has external connectivity.
+a|
 . Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Click *Begin Upgrade*.
-
++
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade. See <<Upgrade status changes>>.
 
 You can download logs after the upgrade is complete.
 
-=== Upgrade storage cluster when management node is not connected to the internet
-If your management node does not have external connectivity, you must download the upgrade package from the NetApp Support Site.
-
-.Steps
-
+|Your management node is within a dark site without external connectivity.
+a|
+. Download the storage upgrade package from the NetApp Support Site to a device that is accessible to the management node.
 . Click *Browse* to upload the upgrade package that you had downloaded.
-. Wait for the upload to complete. A progress bar shows the status of the upload:
+. Wait for the upload to complete. A progress bar shows the status of the upload.
 +
 CAUTION: The file upload will be lost if you navigate away from the browser window.
 
 An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
-. Click *Begin Upgrade*. See <<Upgrade status changes>> for information about the various upgrade status changes.
 
-=== Upgrade H610S node running Element version earlier than 11.8
-If you are upgrading an H610S node running a version of Element earlier than 11.8 to Element 12.0 or later, the upgrade process involves two phases. The UI displays a message to notify you about the two-phase upgrade process. See <<Upgrade status changes>>.
-
-.Steps
-
-. Open a web browser and browse to the IP address of the management node:
-+
-----
-https://<ManagementNodeIP>
-----
-. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click *Upgrade* near the top right of the interface.
-. On the *Upgrades* page, select *Storage*.
-+
-The *Storage* tab lists the storage clusters that are part of your installation. If you have internet connectivity, the drop-down arrow next to each cluster shows the upgrade packages available.
+|You are upgrading an H610S cluster running Element version earlier than 11.8.
+a|
 . Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Click *Begin Upgrade*.
 After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
-
-image::hcc_phase2_upgrades.png[On-screen message notifying users that phase 1 is complete, and they must perform phase 2.]
-
-After you complete phase 2, you must confirm in the UI that you have completed phase 2.
-
-You can download logs after the upgrade is complete.
-
-image::hcc_upgradecomplete_message.png[On-screen message after the storage upgrade is complete, showing users the link to download upgrade logs.]
+. Complete the additional steps required (phase 2), and acknowledge in the UI that you have completed phase 2.
+You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
+|===
 
 === Upgrade status changes
 
@@ -147,7 +125,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
 |Unable to Detect
-|For dark sites, NetApp Hybrid Cloud Control does not display states.
+|NetApp Hybrid Cloud Control shows this stats instead of *Versions Available*. 
 
 |Complete with Follow-up
 |Only for H610S nodes. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade. After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
