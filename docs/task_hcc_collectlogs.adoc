@@ -69,15 +69,15 @@ https://[management node IP]/logs/1
 ... `storageCrashDumps`
 ... `storageLogs`
 .. Click *Execute* to begin log collection.
-The response should return a link to the status of the log collection task:
+The response should return a response similar to the following:
 +
 ----
 {
   "_links": {
-    "self": "https://10.117.150.84/logs/1/bundle"
+    "self": "https://10.1.1.5/logs/1/bundle"
   },
-  "taskId": "4157381b-e889-45ce-adb4-92b1842c53ee",
-  "taskLink": "https://10.117.150.84/logs/1/bundle"
+  "taskId": "4157881b-z889-45ce-adb4-92b1843c53ee",
+  "taskLink": "https://10.1.1.5/logs/1/bundle"
 }
 ----
 . Check on the status of the log collection task:
