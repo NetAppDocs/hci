@@ -115,6 +115,18 @@ After you resolve the error, you can return to the page, and click image:hcc_res
 
 NOTE: After the upgrade is complete, the *Upgrade Status* changes to *Up to Date* if the cluster was upgraded to the latest Element version available. Otherwise, it shows *Versions Available*.
 
+While the upgrade is in progress the *Upgrade Status* column for the cluster shows *In Progress*, and a progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
+
+TIP: You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. The *Upgrade Status* changes to *Upgrade Pausing*. It can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click image:hcc_resume_icon.png[resume button].
+
+If an error occurs during the upgrade, the *Upgrade Status* column shows *Error*, and an error message is displayed on the screen.
+
+image:hcc_upgrade_error.png[Error message displayed on HCC UI when the storage upgrade pauses because of an error.]
+
+After you resolve the error, you can return to the page, and click image:hcc_resume_icon.png[resume button].
+
+NOTE: After the upgrade is complete, the *Upgrade Status* changes to *Up to Date* if the cluster was upgraded to the latest Element version available. Otherwise, it shows *Versions Available*.
+
 == Use NetApp Hybrid Cloud Control API to upgrade Element storage
 
 You can use REST API to upgrade storage nodes in a cluster to the latest Element software version.
