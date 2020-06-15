@@ -75,7 +75,6 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 . Click *Authorize* and complete the following:
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client` if the value is not already populated.
-.. Copy the token URL string and paste it into another browser tab to initiate a token request.
 .. Click *Authorize* to begin a session.
 .. Close the window.
 . (Optional) Confirm available versions of management node services: `GET /services/versions`
@@ -110,7 +109,6 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 . Click *Authorize* and complete the following:
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client` if the value is not already populated.
-.. Copy the token URL string and paste it into another browser tab to initiate a token request.
 .. Click *Authorize* to begin a session.
 .. Close the window.
 . Upload and extract the service bundle on the management node using this command: `PUT /services/upload`
