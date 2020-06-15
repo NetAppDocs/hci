@@ -50,7 +50,7 @@ CAUTION: If you are upgrading an H610S cluster running a pre-11.8 version of Ele
 
 Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
-TIP: While upgrading clusters running 11.x using the NetApp Hybrid Cloud Control UI, the UI session times out after two hours, you will be taken to the log in page. Even if the session times out, the upgrade process continues to run in the background. You can log back in and see the status of the upgrade from the *Upgrades > Storage* tab.
+TIP: When upgrading clusters running 11.x using the NetApp Hybrid Cloud Control UI, the UI session times out after two hours, and you will be taken to the log in page. Even if the session times out, the upgrade process continues to run in the background. You can log back in and see the status of the upgrade from the *Upgrades > Storage* tab.
 
 .Steps
 
