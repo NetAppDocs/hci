@@ -45,6 +45,18 @@ This firmware package contains the following firmware versions for hardware comp
 |14.23.1020
 |===
 
+== Known issues
+The following are known issues in this release that might affect daily operation in some environments.
+
+|===
+|Issue |Issue type |Description |Workaround
+
+|CSESF-295
+|Software
+|The compute node firmware update process fails with a BIOS update error when you update using the downloadable firmware package.
+|Manually update the BIOS to version NA3.7 or the BMC to version 6.71, and then update the firmware again using the firmware package.
+|===
+
 Visit link:task_hcc_upgrade_compute_node_firmware.html[Update compute node firmware^] for instructions on updating your compute node firmware.
 
 Download the compute node firmware package from https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
