@@ -22,6 +22,7 @@ Tasks you can perform with the management node UI:
 * link:task_mnode_settings.html[Modify and test the management node network, cluster, and system settings]
 * link:task_mnode_run_system_utilities.html[Run system utilities from the management node]
 
+image::mnode_per_node_442_ui.png[management node per-node UI]
 
 [discrete]
 == Find more information

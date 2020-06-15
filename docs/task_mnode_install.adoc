@@ -40,13 +40,13 @@ NOTE: If you need to IPv6 support, you can use the management node 11.1.
 |===
 
 .About this task
-Prior to completing this procedure, you should have an understanding of persistent volumes and whether or not you want to use them. Persistent volumes allow management node data to be stored on a specified storage cluster so that data can be preserved in the event of management node loss or removal.
+Prior to following this procedure, you should have an understanding of persistent volumes link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
 
-* <<Download ISO or OVA and deploy the VM>>
-* <<Create the management node admin and configure the network>>
-* <<Configure the management node>>
-* <<Configure controller assets>>
-* <<(NetApp HCI only) Configure compute node assets>>
+. <<Download ISO or OVA and deploy the VM>>
+. <<Create the management node admin and configure the network>>
+. <<Configure the management node>>
+. <<Configure controller assets>>
+. (NetApp HCI only) <<Configure compute node assets>>
 
 == Download ISO or OVA and deploy the VM
 
@@ -162,6 +162,8 @@ a. Click *GET /assets*.
 b. Click *Try it out*.
 c. Click *Execute*.
 d. Copy the value for `"id"` for the base asset to your clipboard:
++
+image::mNode_API_Base_asset_ID.png[base asset ID highlighted in response body]
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 

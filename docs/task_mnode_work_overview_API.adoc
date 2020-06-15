@@ -16,7 +16,6 @@ keywords: netapp, mnode api, management node api, rest api
 [.lead]
 By using the built-in REST API UI (`https://[mNode IP}/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
 
-
 Tasks you can perform with REST APIs:
 
 * link:task_mnode_api_get_authorizationtouse.html[Get authorization to use REST APIs]
@@ -25,6 +24,8 @@ Tasks you can perform with REST APIs:
 * link:task_mnode_change_storage_cluster_admin_password.html[Change the storage cluster administrator password]
 * link:task_mnode_configure_proxy_server.html[Configure a proxy server for the management node]
 * link:task_mnode_get_logs_from_management_services.html[Get logs from management services]
+
+image::mnode_swagger_ui.png[management node REST API UI]
 
 [discrete]
 == Find more information
