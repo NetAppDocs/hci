@@ -18,10 +18,19 @@ For any H-series compute node, you can upgrade the firmware for hardware compone
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
+[NOTE]
+====
+Choose from the option that is relevant to your upgrade scenario:
+
+- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+====
+////
 Choose from the option that is relevant to your upgrade scenario:
 
 * For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
 * For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+////
 
 .Before you begin
 
@@ -79,7 +88,7 @@ VMs on the host will be migrated to another available host. VM migration can tak
 +
 CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 
-. Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
+. Navigate to the BMC UI, `https://BMCIP/#login`, where BMCIP is the IP address of the BMC.
 . Log in using your credentials.
 . Select *Remote Control > Console Redirection*.
 . Click *Launch Console*.
@@ -111,7 +120,7 @@ NOTE: The BIOS version will not show the upgraded version until the node has fin
 
 . If the node is part of a cluster, complete the steps below. If it is a standalone node, no further action is needed.
 .. Log in to the VMware vCenter web client.
-.. Take the host out of maintenance mode. This might show a disconnected red flag. Wait till all statuses are cleared.
+.. Take the host out of maintenance mode. This might show a disconnected red flag. Wait until all statuses are cleared.
 .. Power on any of the remaining VMs that were powered off.
 
 === Upgrade firmware on H610C/H615C nodes
@@ -130,8 +139,8 @@ CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 
 . Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
 . Log in using your credentials.
-. Click *Remote Control > Launch KNM (Java)*.
-. In the console window, click *Media > Virtual Medial Wizard*.
+. Click *Remote Control > Launch KVM (Java)*.
+. In the console window, click *Media > Virtual Media Wizard*.
 +
 image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
 . Click *Browse* and select the compute firmware `.iso` file.
