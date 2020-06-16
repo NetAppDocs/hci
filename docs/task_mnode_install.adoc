@@ -42,11 +42,13 @@ NOTE: If you need to IPv6 support, you can use the management node 11.1.
 .About this task
 Prior to following this procedure, you should have an understanding of persistent volumes link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
 
+.Steps
+
 . <<Download ISO or OVA and deploy the VM>>
 . <<Create the management node admin and configure the network>>
 . <<Configure the management node>>
 . <<Configure controller assets>>
-. (NetApp HCI only) <<Configure compute node assets>>
+. <<Configure compute node assets>> (NetApp HCI only) 
 
 == Download ISO or OVA and deploy the VM
 
