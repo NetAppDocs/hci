@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/rn_firmware_12.2.81.html
+permalink: docs/rn_firmware_12.2.92.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, compute firmware
 ---
