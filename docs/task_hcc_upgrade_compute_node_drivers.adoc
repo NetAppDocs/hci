@@ -17,7 +17,7 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 For any H-Series compute node, you can update the drivers used on the nodes using VMware Update Manager.
 
 
-.Before you begin
+.What you'll need
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 

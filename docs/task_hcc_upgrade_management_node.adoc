@@ -16,6 +16,12 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, ver
 [.lead]
 You can upgrade your management node to management node version 12.0 from version 11.0 or later.
 
+.What you'll need
+
+* The vCenter Plug-in 4.4 or later requires a management node 11.3 or later that is created with modular architecture and provides individual services.
+
+.Upgrade options
+
 Choose one of the following management node upgrade options:
 
 * If you are upgrading from management node 11.3 or later:
@@ -31,10 +37,6 @@ Choose this option if you have *sequentially* updated (1) your management servic
 <<Reconfigure authentication using the management node REST API>>
 
 NOTE: If you do not sequentially update your management services followed by Element storage, you cannot reconfigure reauthentication using this procedure. Follow the appropriate upgrade procedure instead.
-
-.Before you begin
-
-* The vCenter Plug-in 4.4 or later requires a management node 11.3 or later that is created with modular architecture and provides individual services.
 
 == Upgrade a management node to version 12.0 from 11.3 or later
 You can perform an in-place upgrade of the management node from 11.3 or later to version 12.0 without needing to provision a new management node virtual machine. You can use this procedure if you are upgrading from any of the following management node versions: 11.3, 11.5, 11.7, or 11.8.
