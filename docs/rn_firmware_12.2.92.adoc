@@ -54,7 +54,7 @@ The following are known issues in this release that might affect daily operation
 |CSESF-295
 |Software
 |The compute node firmware update process fails with a BIOS update error when you update the firmware on a H410C node using the downloadable firmware package.
-|Manually update the BIOS to version NA3.7 and the BMC to version 6.71 on the H410C node (you can download the BIOS and BMC packages and see instructions for using them https://mysupport.netapp.com/site/products/all/details/netapp-hci/docsandkb-tab/download/62542/H410C_BIOS_3.4_BMC_6.71/downloads[here^]). After the BIOS and BMC firmware update are finished and verified, update the H410C node firmware using the compute firmware 12.2.92 package.
+|Manually update the BIOS to version NA3.7 and the BMC to version 6.71 on the H410C node (you can download the BIOS and BMC packages and see instructions for using them https://mysupport.netapp.com/site/products/all/details/netapp-hci/docsandkb-tab/download/62542/H410C_BIOS_3.4_BMC_6.71/downloads[here^]). After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.92 package.
 |===
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
