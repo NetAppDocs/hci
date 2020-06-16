@@ -14,36 +14,34 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 :imagesdir: ../media/
 
 [.lead]
-For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC using the RTFI image while leaving the ESXi installation and other configuration data in place.
+For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC.
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
-You can upgrade the firmware using one of the following methods:
+Choose from the option that is relevant to your upgrade scenario:
 
-* <<Use a USB drive with the latest firmware image downloaded>>
-* <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+* For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+* For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
 .Before you begin
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 
-TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC.
+TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
 .About this task
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
-
 == Use a USB drive with the latest firmware image downloaded
 
-You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node.
+You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
 
 .Steps
 
-. Browse to the https://mysupport.netapp.com/products/p/hci.html[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Browse to the https://mysupport.netapp.com/site/downloads[NetApp software downloads] page, click *NetApp HCI*, and click the download link for correct version of NetApp HCI.
 . Accept the End User License Agreement.
-. Under the *Compute and Storage Nodes* heading, download the NetApp HCI compute node image.
+. Under the *Compute and Storage Nodes* section, download the compute node image.
 . Write the raw contents of the compute node RTFI image to a USB thumb drive with at least 32GB capacity (using dd or Etcher).
 . Place the compute node in maintenance mode using VMware vCenter, and evacuate all virtual machines from the host.
 +
@@ -67,7 +65,7 @@ TIP: The recommendation is to have the system or VM and the node on the same net
 
 === Upgrade firmware on H410C nodes
 
-If your H410C node is part of a cluster, you must perform the steps in vSphere Client before and after the upgrade is complete.
+If your H410C node is part of a cluster, you must perform the steps in vSphere Web Client before and after the upgrade is complete.
 
 TIP: Ignore the following informational message you see during the process: `Untrusty Debug Firmware Key is used, SecureFlash is currently in Debug Mode`
 
