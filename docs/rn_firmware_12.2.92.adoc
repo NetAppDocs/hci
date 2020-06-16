@@ -7,7 +7,7 @@ keywords: netapp, hci, compute firmware
 ////
 This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Compute firmware 12.2.81 Release Notes
+= Compute firmware 12.2.92 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
 
 == What's New
-Version 12.2.81 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260.
+Version 12.2.92 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260.
 
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
 
@@ -53,8 +53,8 @@ The following are known issues in this release that might affect daily operation
 
 |CSESF-295
 |Software
-|The compute node firmware update process fails with a BIOS update error when you update using the downloadable firmware package.
-|Manually update the BIOS to version NA3.7 or the BMC to version 6.71, and then update the firmware again using the firmware package.
+|The compute node firmware update process fails with a BIOS update error when you update the firmware on a H410C node using the downloadable firmware package.
+|Manually update the BIOS to version NA3.7 or the BMC to version 6.71 (you can download BIOS and BMC packages and see instructions for updating https://mysupport.netapp.com/site/products/all/details/netapp-hci/docsandkb-tab/download/62542/H410C_BIOS_3.4_BMC_6.71/downloads[here^]) and then update the firmware using the compute firmware 12.2.92 package.
 |===
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html[Update compute node firmware^] for instructions on updating your compute node firmware.
