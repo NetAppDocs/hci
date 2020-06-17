@@ -18,16 +18,18 @@ For any H-series compute node, you can upgrade the firmware for hardware compone
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
-You can upgrade the firmware using one of the following methods:
-
-* <<Use a USB drive with the latest firmware image downloaded>>
-* <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
-
-.Before you begin
+.What you'll need
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 
 TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC.
+
+.Update options
+
+You can update the firmware using one of the following methods:
+
+* <<Use a USB drive with the latest firmware image downloaded>>
+* <<Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI)>>
 
 .About this task
 

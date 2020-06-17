@@ -25,7 +25,7 @@ This upgrade procedure covers the following upgrade scenarios:
 
 IMPORTANT: The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. It is compatible with the version 6.7 U2 vSphere Web Client for Flash. The plug-in has not yet been tested for use with vSphere 7.0.
 
-.Before you begin
+.What you'll need
 
 * *Admin privileges*: You have vCenter Administrator role privileges to install a plug-in.
 * *vSphere upgrades*: You have performed any required vCenter upgrades before upgrading the NetApp Element Plug-in for vCenter Server. This procedure assumes that vCenter upgrades have already been completed.

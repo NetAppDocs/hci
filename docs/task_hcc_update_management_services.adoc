@@ -19,17 +19,20 @@ You can update your management services to the latest bundle version after you h
 
 Beginning with the Element 11.3 management node release, the management node design has been changed based on a new modular architecture that provides individual services. These modular services provide central and extended management functionality for NetApp HCI and SolidFire all-flash storage systems. Management services include system telemetry, logging, and update services, the QoSSIOC service for Element Plug-in for vCenter Server, NetApp Hybrid Cloud Control (HCC), and more.
 
+.About this task
+
+* You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+* (Required for any user who has updated to 2.10.27) Due to an upgrade API issue introduced in 2.10.27, management services cannot be upgraded from that version unless you use the workaround described in https://kb.netapp.com/app/answers/answer_view/a_id/1103650[these] release notes. You must upgrade to 2.10.29 or a later version using this workaround to resolve the issue and restore management services update capabilities.
+
+NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/app/answers/answer_view/a_id/1087586[NetApp KB 1087586: Management Services Release Notes]
+
+.Update options
+
 You can update management services using the NetApp Hybrid Cloud Control (HCC) UI or the management node REST API:
 
 * <<Update management services using Hybrid Cloud Control>> (Preferred method)
 * <<Update management services using the management node API>>
 * <<Update management services using the management node API for dark sites>>
-
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
-
-IMPORTANT: (Required for any user who has updated to 2.10.27) Due to an upgrade API issue introduced in 2.10.27, management services cannot be upgraded from that version unless you use the workaround described in https://kb.netapp.com/app/answers/answer_view/a_id/1103650[these] release notes. You must upgrade to 2.10.29 or a later version using this workaround to resolve the issue and restore management services update capabilities.
-
-NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/app/answers/answer_view/a_id/1087586[NetApp KB 1087586: Management Services Release Notes]
 
 == Update management services using Hybrid Cloud Control
 
