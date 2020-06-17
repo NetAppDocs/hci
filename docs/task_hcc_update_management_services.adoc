@@ -21,9 +21,8 @@ Beginning with the Element 11.3 management node release, the management node des
 
 .About this task
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
-
-IMPORTANT: (Required for any user who has updated to 2.10.27) Due to an upgrade API issue introduced in 2.10.27, management services cannot be upgraded from that version unless you use the workaround described in https://kb.netapp.com/app/answers/answer_view/a_id/1103650[these] release notes. You must upgrade to 2.10.29 or a later version using this workaround to resolve the issue and restore management services update capabilities.
+* You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+* (Required for any user who has updated to 2.10.27) Due to an upgrade API issue introduced in 2.10.27, management services cannot be upgraded from that version unless you use the workaround described in https://kb.netapp.com/app/answers/answer_view/a_id/1103650[these] release notes. You must upgrade to 2.10.29 or a later version using this workaround to resolve the issue and restore management services update capabilities.
 
 NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/app/answers/answer_view/a_id/1087586[NetApp KB 1087586: Management Services Release Notes]
 

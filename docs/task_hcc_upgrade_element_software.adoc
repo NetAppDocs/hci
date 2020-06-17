@@ -352,7 +352,7 @@ The upgrade has finished successfully when the `percent` value is `100` and the 
 .Steps
 
 . Download the storage upgrade package:
-
++
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
 * For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image to a device that is not the management node.
@@ -507,7 +507,7 @@ You can use the HealthTools suite of tools to update NetApp Element software at 
 
 . For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page]. For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
-
++
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
 . Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
