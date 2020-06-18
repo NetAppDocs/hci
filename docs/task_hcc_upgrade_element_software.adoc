@@ -46,7 +46,11 @@ CAUTION: If you are upgrading an H610S cluster running a pre-11.8 version of Ele
 Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
 .What you'll need
-* If your management node is not connected to the internet, you have downloaded the upgrade package from the NetApp Support Site.
+* If your management node is not connected to the internet, you have downloaded the storage node image from the NetApp Support Site.
+
+CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article].
+
+TIP: The upgrade process takes approximately 30 minutes per node.
 
 .Steps
 
