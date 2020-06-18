@@ -16,8 +16,11 @@ keywords: netapp, hci, logs, collection, troubleshooting, monitor
 [.lead]
 If you have trouble with your NetApp HCI installation, you can collect logs to send to NetApp Support to help with diagnosis. You can either use NetApp Hybrid Cloud Control or the REST API to collect logs.
 
+* <<Use NetApp Hybrid Cloud Control to collect NetApp HCI logs>>
+* <<Use the REST API to collect NetApp HCI logs>>
+
 == Use NetApp Hybrid Cloud Control to collect NetApp HCI logs
-You can access the log collection area from the NetApp Hybrid Control Dashboard.
+You can access the log collection area from the NetApp Hybrid Cloud Control Dashboard.
 
 .Steps
 . Open a web browser and browse to the IP address of the management node. For example:
@@ -32,7 +35,7 @@ https://[management node IP address]
 The *Collect Logs* page appears. If you have collected logs before, you can download the existing log package, or begin a new log collection.
 . Select a date range in the *Date Range* drop-down menu to specify what dates the logs should include.
 +
-If you specify a custom start date, you can select the date to begin the date range. The logs will cover from that date up to the present time.
+If you specify a custom start date, you can select the date to begin the date range. Logs will be collected from that date up to the present time.
 . In the *Log Collection* section, select the types of log files the log package should include.
 +
 For storage and compute logs, you can expand the list of storage or compute nodes and select individual nodes to collect logs from (or all nodes in the list).
