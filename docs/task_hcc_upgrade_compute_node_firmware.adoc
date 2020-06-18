@@ -72,6 +72,9 @@ You must perform the sequential steps to load the compute firmware ISO and reboo
 
 TIP: The recommendation is to have the system or VM and the node on the same network.
 
+* <<Upgrade firmware on H410C and H300E/H500E/H700E nodes>>
+* <<Upgrade firmware on H610C/H615C nodes>>
+
 === Upgrade firmware on H410C and H300E/H500E/H700E nodes
 
 If your H410C node is part of a cluster, you must perform the steps in vSphere Web Client before and after the upgrade is complete.
