@@ -588,9 +588,7 @@ IMPORTANT: After you complete phase 1, four of the five firmware updates are act
 
 .Before you begin
 
-* You have completed phase 1 of the H610S upgrade process and have upgraded your storage nodes using one the standard Element storage upgrade procedures:
-* <<Upgrade Element software at connected sites using HealthTools>>
-* <<Upgrade Element software at dark sites using HealthTools>>
+* You have completed phase 1 of the H610S upgrade process and have upgraded your storage nodes using one the standard Element storage upgrade procedures.
 
 NOTE: Phase 2 requires on-site personnel.
 
