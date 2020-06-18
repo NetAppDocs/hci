@@ -66,7 +66,7 @@ The following are known issues in this release that might affect daily operation
 1. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI Downloads page^].
 2. Enter `H410C_BIOS_3.7` in the drop down list text field.
 3. Click *Go*.
-
 Instructions for updating are available in PDF format on the download page.
+
 After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.92 package.
 |===
