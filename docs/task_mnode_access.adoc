@@ -34,6 +34,9 @@ utilities.
 ----
 https://[IP address]:442
 ----
++
+image::mnode_per_node_442_ui.png[management node per-node UI]
+
 . Enter the management node user name and password when prompted.
 
 == Access the management node REST API UI
@@ -51,6 +54,8 @@ followed by /mnode:
 ----
 https://[IP address]/mnode
 ----
++
+image::mnode_swagger_ui.png[management node REST API UI]
 
 . Click *Authorize* or any lock icon and enter cluster admin credentials for permissions to use APIs.
 

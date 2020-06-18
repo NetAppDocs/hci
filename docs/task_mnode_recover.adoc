@@ -34,18 +34,18 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 | Microsoft Hyper-V | .iso
 | KVM | .iso
 | VMware vSphere | .iso, .ova
-| Citrix | .iso
+| Citrix XenServer | .iso
 | OpenStack | .iso
 |===
 
 .About this task
-Prior to completing this procedure, you should have an understanding of persistent volumes and whether or not you want to use them. Persistent volumes allow management node data to be stored on a specified storage cluster so that data can be preserved in the event of management node loss or removal.
+Prior to completing this procedure, you should have an understanding of link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
 
 * <<Download ISO or OVA and deploy the VM>>
 * <<Configure the network>>
 * <<Configure the management node>>
 * <<Configure controller assets>>
-* <<(NetApp HCI only) Configure compute node assets>>
+* <<Configure compute node assets,(NetApp HCI only) Configure compute node assets>>
 
 == Download ISO or OVA and deploy the VM
 
@@ -113,11 +113,11 @@ NOTE: You will be prompted to enter passwords in a secure prompt. If your cluste
 
 .. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:
 +
-NOTE: The abbreviated form of the command name is in parentheses ( ) and can be substituted for the full name.
+NOTE: The abbreviated form of the command name is in parentheses ( ) and can be substituted for the full name. You can add the following required parameters or allow the script to prompt you for the information.
 
 +
 * *--mnode_admin_user (-mu) [username]*: The username for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
-* *--storage_mvip (-sm) [MVIP address]*: The MVIP (management virtual IP address) of the storage cluster running Element software with the persistent volumes that contain management node data for recovery.
+* *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software with the persistent volumes that contain management node data for recovery.
 * *--storage_username (-su) [username]*: The storage cluster administrator username for the cluster specified by the `--storage_mvip` parameter.
 * *--persistent_volumes_account (-pva) [account_name]*: Enter the storage account name from the cluster containing the persistent volumes. This is the exact name of the storage user account that owns the volumes in the cluster.
 . (Optional) Use parameter help if you need additional information about each parameter:
@@ -128,6 +128,6 @@ NOTE: The abbreviated form of the command name is in parentheses ( ) and can be 
 
 [discrete]
 == Find more Information
-* About persistent volumes
+* link:concept_hci_volumes.html#persistent-volumes[persistent volumes]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

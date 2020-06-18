@@ -18,13 +18,12 @@ With the management node UI (`https:// [mNode IP}:442`), you can make changes to
 
 Tasks you can perform with the management node UI:
 
-* link:task_mnode_enable_alerts.html[Enable the management node alert monitoring]
+* link:task_mnode_enable_alerts.html[Configure alert monitoring on NetApp HCI]
 * link:task_mnode_settings.html[Modify and test the management node network, cluster, and system settings]
 * link:task_mnode_run_system_utilities.html[Run system utilities from the management node]
 
-image::mnode_per_node_442_ui.png[management node per-node UI]
-
 [discrete]
 == Find more information
+* link:task_mnode_access.html[Access the management node]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

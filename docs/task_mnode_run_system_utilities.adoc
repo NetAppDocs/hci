@@ -37,7 +37,7 @@ IMPORTANT: This operation causes temporary loss of networking connectivity.
 * *Username*: The cluster admin user name.
 * *Password*: The cluster admin password.
 * *Allow Incomplete*: Allows the script to continue to run if bundles cannot be gathered from one or more of the nodes.
-* *Extra Args*: This parameter is fed to the sf_make_support_bundle script. This parameter should be used only at the request of NetApp Support.
+* *Extra Args*: This parameter is fed to the `sf_make_support_bundle` script. This parameter should be used only at the request of NetApp Support.
 .. *Delete All Support Bundles*: Deletes any current support bundles on the management node.
 .. *Reset Node*: Resets the management node to a new install image. This changes all settings except the network configuration to the default state. Specify the following options:
 +

@@ -62,11 +62,11 @@ entries:
                 url: /task_mnode_install_add_storage_NIC.html
               - title: Recover a management node
                 url: /task_mnode_recover.html
-          - title: Access the management node (UI or REST API)
+          - title: Access the management node
             url: /task_mnode_access.html
           - title: Work with the management node UI
             entries:
-              - title: Work with the management node UI
+              - title: Management node UI overview
                 url: /task_mnode_work_overview_UI.html
               - title: Configure alert monitoring on NetApp HCI
                 url: /task_mnode_enable_alerts.html
@@ -76,7 +76,7 @@ entries:
                 url: task_mnode_run_system_utilities.html
           - title: Work with the management node REST API
             entries:
-              - title: Work with the management node REST API
+              - title: Management node REST API UI overview
                 url: /task_mnode_work_overview_API.html
               - title: Get authorization to use REST APIs
                 url: /task_mnode_api_get_authorizationtouse.html
@@ -86,10 +86,10 @@ entries:
                 url: task_mnode_add_assets.html
               - title: Change the storage cluster administrator password
                 url: task_mnode_change_storage_cluster_admin_password.html
-              - title: Configure a proxy server for the management node]
+              - title: Configure a proxy server for the management node
                 url: /task_mnode_configure_proxy_server.html
               - title: Get logs from management services
-                url: /task_hci_mnode_get_logs_from_management_services.html
+                url: /task_mnode_get_logs_from_management_services.html
           - title: Enable remote NetApp Support connections
             url: /task_mnode_enable_remote_support_connections.html
   - title: Upgrade your NetApp HCI or SolidFire system

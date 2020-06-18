@@ -39,7 +39,7 @@ https://[IP address]/mnode
 .. Click *Authorize* to begin a session.
 . Click *PUT /settings*.
 . Click *Try it out*.
-. To enable a proxy server, you must set `use_proxy1` to true. Enter the IP or host name and proxy port destinations.
+. To enable a proxy server, you must set `use_proxy` to true. Enter the IP or host name and proxy port destinations.
 +
 The proxy user name, proxy password, and SSH port are optional and should be omitted if not used.
 +
