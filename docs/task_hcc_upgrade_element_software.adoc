@@ -23,7 +23,7 @@ To upgrade to NetApp Element software 12.0, you can use the NetApp Hybrid Cloud 
 https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 * *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 * *System ports*: If you are using NetApp Hybrid Cloud Control, you have ensured that TCP port `443` is open so that NetApp Hybrid Cloud Control can communicate with the online software repository to download upgrade packages.
-* *Management node upgrades* For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
+* *Management node upgrades*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services updates*: You have updated your management services bundle to the latest version.
 
 IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
@@ -48,7 +48,7 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 .What you'll need
 * If your management node is not connected to the internet, you have downloaded the storage node image from the NetApp Support Site.
 
-CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article].
+CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
 TIP: The upgrade process takes approximately 30 minutes per node for non-H610S platforms.
 
@@ -96,7 +96,7 @@ a|
 . Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Click *Begin Upgrade*.
 After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
-. Complete the additional steps required (phase 2) in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^], and acknowledge in the UI that you have completed phase 2.
+. Complete the additional steps required (phase 2) in the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^], and acknowledge in the UI that you have completed phase 2.
 
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
@@ -132,7 +132,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach online software repository.
 
 |Complete with Follow-up
-|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade (see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
+|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
 
 == Use NetApp Hybrid Cloud Control API to upgrade Element storage
