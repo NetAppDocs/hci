@@ -50,7 +50,7 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article].
 
-TIP: The upgrade process takes approximately 30 minutes per node.
+TIP: The upgrade process takes approximately 30 minutes per node for non-H610S platforms.
 
 .Steps
 
@@ -96,7 +96,7 @@ a|
 . Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Click *Begin Upgrade*.
 After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
-. Complete the additional steps required (phase 2), and acknowledge in the UI that you have completed phase 2.
+. Complete the additional steps required (phase 2) in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^], and acknowledge in the UI that you have completed phase 2.
 
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
@@ -120,7 +120,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |The upgrade is in progress. A progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
 
 |Upgrade Pausing
-|You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. It can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click *Resume*.
+|You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. To ensure that the cluster is in a safe spot before pausing an upgrade, it can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click *Resume*.
 
 |Paused
 |You paused the upgrade. Click *Resume* to resume the process.
@@ -129,15 +129,15 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control shows this status instead of *Versions Available*.
+|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach online software repository.
 
 |Complete with Follow-up
-|Only for H610S nodes. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade. After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
+|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade (see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
 
 == Use NetApp Hybrid Cloud Control API to upgrade Element storage
 
-You can use REST API to upgrade storage nodes in a cluster to the latest Element software version.
+You can use APIs to upgrade storage nodes in a cluster to the latest Element software version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
 
 .Steps
 
@@ -330,7 +330,7 @@ a|
 ----
 . Click *Execute*.
 
-|If you are upgrading an H610S series node to Element 12.0 or later, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
+|If you are upgrading an H610S cluster running Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
 a|
 . See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> and complete the process for each node.
 . Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
@@ -582,7 +582,7 @@ If you are upgrading an H610S series node to Element 12.0 or later, the upgrade 
 
 Phase 1, which is performed first, follows the same steps as the standard upgrade to Element 12.0 process. It installs Element Software and all 5 firmware updates in a rolling fashion across the cluster one node at a time. Due to the firmware payload, the process is estimated to take approximately 1.5 to 2 hours per H610S node, including a single cold-boot cycle at the end of the upgrade for each node.
 
-Phase 2 involves completing steps to perform a complete node shutdown and power disconnect for each H610S node that are described in a required https://kb.netapp.com/app/answers/answer_view/a_id/1103627[KB^]. This phase is estimated to take approximately one hour per H610S node.
+Phase 2 involves completing steps to perform a complete node shutdown and power disconnect for each H610S node that are described in a required https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB^]. This phase is estimated to take approximately one hour per H610S node.
 
 IMPORTANT: After you complete phase 1, four of the five firmware updates are activated during the cold boot on each H610S node; however, the Complex Programmable Logic Device (CPLD) firmware requires a complete power disconnect and reconnect to fully install. The CPLD firmware update protects against NVDIMM failures and metadata drive eviction during future reboots or power cycles. This power reset is estimated to take approximately one hour per H610S node. It requires shutting down the node, removing power cables or disconnecting power via a smart PDU, waiting approximately 3 minutes, and reconnecting power.
 
