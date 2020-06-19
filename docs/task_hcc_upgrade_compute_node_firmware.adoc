@@ -77,7 +77,7 @@ TIP: The recommendation is to have the system or VM and the node on the same net
 
 === Upgrade firmware on H410C and H300E/H500E/H700E nodes
 
-If your H410C node is part of a cluster, you must perform the steps in vSphere Web Client before and after the upgrade is complete.
+If your node is part of a cluster, you must place the node in maintenance mode before the upgrade, and take it out of maintenance mode after the upgrade.
 
 TIP: Ignore the following informational message you see during the process: `Untrusty Debug Firmware Key is used, SecureFlash is currently in Debug Mode`
 
