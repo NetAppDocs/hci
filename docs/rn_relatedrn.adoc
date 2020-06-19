@@ -11,7 +11,7 @@ keywords: netapp, hci, element, vcp, vcenter plugin, storage, management service
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services
+:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 You can find links to the latest and earlier release notes for various components of the NetApp HCI and Element storage environment.
@@ -35,3 +35,6 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 == NetApp Element Plug-in for vCenter Server
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[vCenter Plug-in 4.4 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
+
+== Compute firmware
+link:rn_firmware_12.2.81.html[Compute firmware 12.2.81-2.3.0 Release Notes^]
