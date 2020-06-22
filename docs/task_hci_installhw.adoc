@@ -1,0 +1,283 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_installhw.html
+summary: Use these instructions to install rails and H-series nodes.
+keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes
+---
+
+= Install H-series hardware
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Use these instructions to install rails and H-series nodes.
+
+TIP: See the link:../media/isi_poster.pdf[poster] for a visual representation of the instructions.
+
+* <<Workflow diagrams>>
+* <<Prepare for installation>>
+* <<Install rails>>
+* <<Install the node/chassis>>
+* <<Cable the nodes>>
+* <<Power on the nodes>>
+* <<Configure NetApp HCI>>
+* <<Perform post-configuration tasks>>
+
+== Workflow diagrams
+
+The workflow diagrams here provide a high-level overview of the installation steps. The steps vary slightly depending on the H-series model.
+
+* <<H410C and H410S>>
+* <<H610C and H615C>>
+* <<H610S>>
+
+=== H410C and H410S
+
+image::h410c_workflow.png[H410C and H410S installation workflow]
+
+=== H610C and H615C
+
+NOTE: The terms "node" and "chassis" are used interchangeably in the case of H610C and H615C, because node and chassis are not separate components unlike in the case of a 2U, four-node chassis.
+
+image::h610c_workflow.png[H610C and H615C installation workflow]
+
+=== H610S
+
+NOTE: The terms "node" and "chassis" are used interchangeably in the case of H610C and H615C, because node and chassis are not separate components unlike in the case of a 2U, four-node chassis.
+
+image::h610s_workflow.png[H610S installation workflow]
+
+== Prepare for installation
+
+In preparation for installation, inventory the hardware that was shipped to you, and contact NetApp Support if any of the items are missing.
+
+Ensure that you have the following items at your installation location:
+
+* Rack space for the system.
+
+[%header,cols=2*]
+|===
+|Node type
+|Rack space
+
+|H410C and H410S nodes
+|Two rack unit (2U)
+
+|H610C node
+|2U
+
+|H615C and H610S nodes
+|One rack unit (1U)
+|===
+
+* SFP28/SFP+ direct-attach cables or transceivers
+* CAT5e or higher cables with RJ45 connector
+* A keyboard, video, mouse (KVM) switch to configure your system
+* USB stick (optional)
+
+TIP: The hardware that is shipped to you depends on what you order. A new 2U, four-node order includes the chassis, bezel, slide rail kit, drives for storage nodes, storage and compute nodes, and power cables (two per chassis). If you order H610S storage nodes, the drives will come installed in the chassis.
+
+== Install rails
+
+The hardware order that was shipped to you includes a set of slide rails. You will need a screwdriver to complete the rail installation. The installation steps vary slightly for each node model.
+
+TIP: Install hardware from the bottom of the rack up to the top to prevent the equipment from toppling over. If your rack includes stabilizing devices, install them before you install the hardware.
+
+* <<H410C and H410S>>
+* <<H610C>>
+* <<H610S and H615C>>
+
+=== H410C and H410S
+H410C and H410S nodes are installed in 2U, four-node H-Series chassis, which is shipped with two sets of adapters. If you want to install the chassis in a rack with round holes, use the adapters appropriate for a rack with round holes. The rails for H410C and H410S nodes fit a rack between 29 inches and 33.5 inches in depth. When the rail is fully contracted, it is 28 inches long, and the front and rear sections of the rail are held together by only one screw.
+
+CAUTION: If you install the chassis onto a fully contracted rail, the front and rear sections of the rail might separate.
+
+.Steps
+
+. Align the front of the rail with the holes on the front post of the rack.
+. Push the hooks on the front of the rail into the holes on the front post of the rack and then down, until the spring-loaded pegs snap into the rack holes.
+. Attach the rail to the rack with screws. Here is an illustration of the left rail being attached to the front of the rack:
++
+image::h410c_rail.gif[Rail installation for 2U, four-node NetApp HCI chassis.]
+
+. Extend the rear section of the rail to the rear post of the rack.
+. Align the hooks on the rear of the rail with the appropriate holes on the rear post ensuring that the front and the back of the rail are on the same level.
+. Mount the rear of the rail onto the rack, and secure the rail with screws.
+. Perform all the above steps for the other side of the rack.
+
+=== H610C
+Here is an illustration for installing rails for an H61OC compute node:
+
+image::h610c_rail.png[Rail installation for H610C compute node.]
+
+=== H610S and H615C
+Here is an illustration for installing rails for an H610S storage node or an H615C compute node:
+
+image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute node.]
+
+== Install the node/chassis
+
+You will install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, you will install the chassis/node directly onto the rails in the rack.
+
+* <<H410C and H410S nodes>>
+* <<H610C node/chassis>>
+* <<H610S and H615C node/chassis>>
+
+=== H410C and H410S nodes
+
+.Steps
+
+. Install the H410C and H410S nodes in the chassis. Here is a rear-view example of a chassis with four nodes installed:
++
+image::hseries_2U_rear.gif[Rear view of 2U, four-node chassis with nodes installed.]
+
+. Install drives for H410S storage nodes.
++
+image::h410s_drives.png[Front view of the H410S storage node with drives installed.]
+
+=== H610C node/chassis
+In the case of H610C, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
+
+Here is an illustration for installing the node/chassis in the rack:
+
+image::h610c_chassis.png[Shows the H610C node/chassis being installed in the rack.]
+
+=== H610S and H615C node/chassis
+In the case of H615C and H610S, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
+
+Here is an illustration for installing the node/chassis in the rack:
+
+image::h610s_chassis.gif[Shows the H615C or H610S node/chassis being installed in the rack.]
+
+== Cable the nodes
+
+If you are adding nodes to an existing NetApp HCI installation, ensure that the cabling and network configuration of the nodes that you add are identical to the existing installation.
+
+CAUTION: Ensure that the airflow vents at the rear of the chassis are not blocked by cables or labels. This can lead to premature component failures due to overheating.
+
+* <<H410C compute node and H410S storage node>>
+* <<H610C compute node>>
+* <<H615C compute node>>
+* <<H610S storage node>>
+
+=== H410C compute node and H410S storage node
+
+You have two options for cabling the H410C node: using two cables or using six cables.
+
+Here is the two-cable configuration:
+
+image::HCI_ISI_compute_2cable.png[Shows the two-cable configuration for the H410C node.]
+
+Here is the six-cable configuration:
+
+image::HCI_ISI_compute_6cable.png[Shows the six-cable configuration of the H410C node.]
+
+Here is the cabling for the H410S node:
+
+image::HCI_ISI_storage_cabling.png[Shows the cabling for the H410S node.]
+
+After you cable the nodes, connect the power cords to the two power supply units per chassis and plug them into 240V PDU or power outlet.
+
+=== H610C compute node
+
+Here is the cabling for the H610C node:
+
+image::H610C_node-cabling.png[Shows the cabling for the H610C node.]
+
+=== H615C compute node
+
+Here is the cabling for the H615C node:
+
+image::H615C_node_cabling.png[Shows the cabling for the H615C node.]
+
+=== H610S storage node
+
+Here is the cabling for the H610S node:
+
+image::H600S_ISI_noderear.png[Shows the cabling for the H610S node.]
+
+== Power on the nodes
+
+It takes approximately six minutes for the nodes to boot.
+
+Here is an illustration that shows the power button on the NetApp HCI chassis that has H410C and H410S nodes:
+
+image::H410c_poweron_ISG.png[Shows the power button on the H-series 2U, four-node chassis.]
+
+Here is an illustration that shows the power button on the H610C node:
+
+image::H610C_power-on.png[Shows the power button on the H610C node/chassis.]
+
+Here is an illustration that shows the power button on the H615C and H610S nodes:
+
+image::H600S_ISI_nodefront.png[Shows the power button on the H610S/H615C node/chassis.]
+
+== Configure NetApp HCI
+
+Choose from one of the following options:
+
+* <<New NetApp HCI installation>>
+* <<Expanding an existing NetApp HCI installation>>
+
+=== New NetApp HCI installation
+
+.Steps
+
+. Configure an IPv4 address on the management network (Bond1G) on one NetApp HCI storage node.
++
+NOTE: If you are using DHCP on the management network, you can connect to the DHCP-acquired IPv4 address of the storage system.
+
+.. Plug in a keyboard, video, mouse (KVM) to the back of one storage node.
+.. Configure the IP address, subnet mask, and gateway address for Bond1G in the user interface. You can also configure a VLAN ID for the Bond1G network.
+
+. Using a supported web browser (Mozilla Firefox, Google Chrome, or Microsoft Edge), navigate to the NetApp Deployment Engine by connecting to the IPv4 address that you configured in Step 1.
+. Use the NetApp Deployment Engine user interface (UI) to configure NetApp HCI.
++
+NOTE: All the other NetApp HCI nodes will be discovered automatically.
+
+=== Expanding an existing NetApp HCI installation
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node.
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
++
+See link:task_hcc_access.html[Access NetApp Hybrid Cloud Control].
+. Follow the steps in the wizard to add storage and/or compute nodes to your NetApp HCI installation.
++
+TIP: To add H410C compute nodes, the existing installation must run NetApp HCI 1.4 or later. To add H615C compute nodes, the existing installation must run NetApp HCI 1.7 or later.
+
+NOTE: The newly installed NetApp HCI nodes on the same network will be discovered automatically.
+
+== Perform post-configuration tasks
+
+Depending on the type of node you have, you might need to perform additional steps after you install the hardware and configure NetApp HCI.
+
+* <<H610C node>>
+* <<H615C and H610S nodes>>
+
+=== H610C node
+
+Install the GPU drivers in ESXi for each H610C node that you installed, and validate their functionality.
+
+=== H615C and H610S nodes
+
+.Steps
+
+. Use a web browser and navigate to the default BMC IP address: `192.168.0.120`
+. Log in using user name `root` and password `calvin`.
+. From the node management screen, navigate to *Settings > Network Settings*, and configure the network parameters for the out-of-band management port.
+
+If your H615C node has GPUs in it, install GPU drivers in ESXi for each H615C node that you installed, and validate their functionality.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
+* https://mysupport.netapp.com/site/tools[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
+* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]

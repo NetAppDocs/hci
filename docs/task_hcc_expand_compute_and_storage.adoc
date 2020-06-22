@@ -16,8 +16,7 @@ keywords: netapp, hci, on premise, expand, storage, compute, cluster
 [.lead]
 After you finish NetApp HCI deployment, you can expand and configure NetApp HCI storage and compute resources at the same time by using NetApp Hybrid Cloud Control.
 
-*Before you begin*
-
+.Before you begin
 * Ensure that the vSphere instance of NetApp HCI is using vSphere Enterprise Plus licensing if you are expanding a deployment with Virtual Distributed Switches.
 * Ensure that none of the vCenter or vSphere instances in use with NetApp HCI have expired licenses.
 * Ensure that you have the vCenter administrator account credentials ready.
@@ -31,14 +30,12 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 * Ensure that you have the management IPv4 address of an already installed storage node. You can find the IP address in the *NetApp Element Management* > *Cluster* > *Nodes* tab of the NetApp Element Plug-in for vCenter Server.
 * Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.
 
-*About this task*
-
+.About this task
 * You can intermix the H410C compute node with existing NetApp HCI compute and storage nodes in the same chassis and cluster.
 * You cannot intermix compute nodes and BPU-enabled compute nodes in the same cluster. If you select a GPU-enabled compute node, CPU-only compute nodes become unselectable, and vice versa.
 * If you are adding compute nodes with CPU generations that are different than the CPU generation of the existing compute nodes and Enhanced vMotion Compatibility (EVC) is disabled on the controlling vCenter instance, you must enable EVC before proceeding. This ensures vMotion functionality after expansion is complete.
 
-*Steps*
-
+.Steps
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
@@ -104,3 +101,5 @@ NOTE: If you expanded a two-node storage cluster to four nodes or more, the pair
 == Find more information
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[NetApp HCI Compute and Storage Nodes Installation and Setup Instructions^]
+* https://kb.vmware.com/s/article/1003212[VMware Knowledge Base: Enhanced vMotion Compatibility (EVC) processor support^]

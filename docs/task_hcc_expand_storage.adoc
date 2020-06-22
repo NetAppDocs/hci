@@ -16,8 +16,7 @@ keywords: netapp, hci, on premise, expand, storage, cluster
 [.lead]
 After you finish NetApp HCI deployment, you can expand and configure NetApp HCI storage resources by using NetApp Hybrid Cloud Control.
 
-*Before you begin*
-
+.Before you begin
 * Ensure that you have free and unused IPv4 addresses on the same network segment as existing nodes (each new node must be installed on the same network as existing nodes of its type).
 * Ensure that you have one of the following types of SolidFire storage cluster accounts:
 ** The native administrator account that was created during initial deployment
@@ -31,8 +30,7 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 TIP: When you are expanding storage resources, storage capacity should be split evenly across all chassis for the best reliability.
 
 
-*Steps*
-
+.Steps
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
@@ -65,7 +63,6 @@ You can monitor the progress while NetApp HCI adds and configures the resources.
 . *Optional*: Verify that any new storage nodes are visible in the Element Plug-in for vCenter Server.
 +
 NOTE: If you expanded a two-node storage cluster to four nodes or more, the pair of Witness Nodes previously used by the storage cluster are still visible as standby virtual machines in vSphere. The newly expanded storage cluster does not use them; if you want to reclaim VM resources, you can link:task_hci_removewn.html[manually remove^] the Witness Node virtual machines.
-
 
 [discrete]
 == Find more information
