@@ -29,7 +29,7 @@ image::hci_prodoverview.png[The image shows the various components in the NetApp
 
 * NetApp HCI provides both storage and compute resources. You use the *NetApp Deployment Engine* wizard to deploy NetApp HCI. After successful deployment, compute nodes appear as ESXi hosts and you can manage them in VMware vSphere Web Client.
 
-* *Management services* or microservices include the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service; they are updated frequently as service bundles. As of the Element 11.3 release, *management services* are hosted on the management node, allowing for quicker updates of select software services outside of major releases. The *management node* (mNode) is a virtual machine that runs in parallel with one or more Element software-based storage clusters. It is used to upgrade and provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting. 
+* *Management services* or microservices include the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service; they are updated frequently as service bundles. As of the Element 11.3 release, *management services* are hosted on the management node, allowing for quicker updates of select software services outside of major releases. The *management node* (mNode) is a virtual machine that runs in parallel with one or more Element software-based storage clusters. It is used to upgrade and provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting.
 +
 TIP: Learn more about link:https://kb.netapp.com/app/answers/answer_view/a_id/1087586/loc/en_US[management services releases].
 
@@ -44,7 +44,7 @@ TIP: Learn more about link:https://docs.netapp.com/hci/topic/com.netapp.doc.hci-
 TIP: Learn more about link:https://help.monitoring.solidfire.com/[NetApp SolidFire Active IQ].
 
 == NetApp HCI URLs
-Here are common URLs you use with NetApp HCI:
+Here are the common URLs you use with NetApp HCI:
 
 [%header,cols=2*]
 |===

@@ -32,7 +32,7 @@ Choose from the option that is relevant to your upgrade scenario:
 * For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 ////
 
-.Before you begin
+.What you'll need
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 
