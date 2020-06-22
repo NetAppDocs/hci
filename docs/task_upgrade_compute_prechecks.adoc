@@ -16,6 +16,14 @@ keywords: netapp, compute prechecks, compute node upgrade, netapp hci
 [.lead]
 You must run health checks prior to upgrading compute firmware to ensure all compute nodes in your cluster are ready to be upgraded. Compute node health checks can only be run against compute clusters of one or more managed NetApp HCI compute nodes.
 
+.What you'll need
+
+* You have updated to the latest management services bundle (2.11 or later).
+* You are running management node 11.3 or later.
+* Your storage cluster is running NetApp Element software 11.3 or later.
+
+.Health check options
+
 You can run health checks using NetApp Hybrid Cloud Control (HCC) UI or HCC API:
 
 * <<Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware>> (Preferred method)
@@ -24,12 +32,6 @@ You can run health checks using NetApp Hybrid Cloud Control (HCC) UI or HCC API:
 You can also find out more about compute node health checks that are run by the service:
 
 * <<Compute node health checks made by the service>>
-
-.What you'll need
-
-* You have updated to the latest management services bundle (2.11 or later).
-* You are running management node 11.3 or later.
-* Your storage cluster is running NetApp Element software 11.3 or later.
 
 == Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware
 
