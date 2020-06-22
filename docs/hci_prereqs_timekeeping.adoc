@@ -1,0 +1,29 @@
+---
+sidebar: docs_sidebar
+permalink: docs/hci_prereqs_timekeeping.html
+summary: Learn about DNS and timekeeping requirements for NetApp HCI.
+keywords: netapp, hci, timekeeping, NTP, DNS
+---
+
+= DNS and timekeeping requirements
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, timekeeping, NTP, DNS
+
+[.lead]
+Before deployment, you need to prepare Domain Name System (DNS) records for your NetApp HCI system and gather NTP server information. NetApp HCI requires a DNS server with the correct DNS entries and an NTP server for a successful deployment.
+
+Make the following DNS and timeserver preparations before deploying NetApp HCI:
+
+* Create any needed DNS entries for hosts (such as individual compute or storage nodes) and document how the host entries map to the respective IP addresses. During deployment, you will need to assign a prefix to your storage cluster that will be applied to each host; to avoid confusion, keep your DNS naming plans in mind when choosing a prefix.
+* If you are deploying NetApp HCI with a new VMware vSphere installation using a fully qualified domain name, you must create one Pointer (PTR) record and one Address (A) record for vCenter Server on any DNS servers in use before deployment.
+* If you are deploying NetApp HCI with a new vSphere installation using only IP addresses, you do not need to create new DNS records for vCenter.
+* NetApp HCI requires a valid NTP server for timekeeping. You can use a publicly available time server if you do not have one in your environment.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

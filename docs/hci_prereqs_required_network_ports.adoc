@@ -1,0 +1,263 @@
+---
+sidebar: docs_sidebar
+permalink: docs/hci_prereqs_required_network_ports.html
+summary: TCP and UDP ports used by NetApp HCI.
+keywords: netapp, hci, ports, tcp, udp
+---
+
+= Network ports used by NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, ports, tcp, udp
+
+[.lead]
+You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely and allow clients outside of your datacenter to connect to resources. Some of these ports might not be required, depending on how you use the system. All ports are TCP unless stated otherwise, and should be open bidirectionally.
+
+The following abbreviations are used in the table:
+
+* MIP: Management IP address, a per-node address
+* SIP: Storage IP address, a per-node address
+* MVIP: Management virtual IP address
+* SVIP: Storage virtual IP address
+
+|===
+|Source |Destination |Port |Description
+
+|iSCSI clients
+|Storage cluster MVIP
+|443
+|(Optional) UI and API access
+
+|iSCSI clients
+|Storage cluster SVIP
+|3260
+|Client iSCSI communications
+
+|iSCSI clients
+|Storage node SIP
+|3260
+|Client iSCSI communications
+
+|Management node
+|`sfsupport.solidfire.com`
+|22
+|Reverse SSH tunnel for support access
+
+|Management node
+|Storage node MIP
+|22
+|SSH access for support
+
+|Management node
+|DNS servers
+|53 TCP/UDP
+|DNS lookup
+
+|Management node
+|Storage node MIP
+|442
+|UI and API access to storage node and Element software upgrades
+
+|Management node
+|Storage node MVIP
+|442
+|UI and API access to storage node and Element software upgrades
+
+|Management node
+|Online software repository: https://repo.netapp.com/bintray/api/package, https://netapp-downloads.bintray.com
+|443
+|Management node service upgrades
+
+|Management node
+|`monitoring.solidfire.com`
+|443
+|Storage cluster reporting to Active IQ
+
+|Management node
+|Storage cluster MVIP
+|443
+|UI and API access to storage node and Element software upgrades
+
+|Management node
+|`repo.netapp.com`
+|443
+|Provides access to components necessary to install/update on-premises deployment.
+
+|Management node
+|Witness Node
+|9442
+|Per-node configuration API service
+
+|SNMP server
+|Storage cluster MVIP
+|161 UDP
+|SNMP polling
+
+|SNMP server
+|Storage node MIP
+|161 UDP
+|SNMP polling
+
+|Storage node MIP
+|DNS servers
+|53 TCP/UDP
+|DNS lookup
+
+|Storage node MIP
+|Management node
+|80
+|Element software upgrades
+
+|Storage node MIP
+|S3/Swift endpoint
+|80
+|(Optional) HTTP communication to S3/Swift endpoint for backup and recovery
+
+|Storage node MIP
+|NTP server
+|123 UDP
+|NTP
+
+|Storage node MIP
+|Management node
+|162 UDP
+|(Optional) SNMP traps
+
+|Storage node MIP
+|SNMP server
+|162 UDP
+|(Optional) SNMP traps
+
+|Storage node MIP
+|LDAP server
+|389 TCP/UDP
+|(Optional) LDAP lookup
+
+|Storage node MIP
+|Remote storage cluster MVIP
+|443
+|Remote replication cluster pairing communication
+
+|Storage node MIP
+|Remote storage node MIP
+|443
+|Remote replication cluster pairing communication
+
+|Storage node MIP
+|S3/Swift endpoint
+|443
+|(Optional) HTTPS communication to S3/Swift endpoint for backup and recovery
+
+|Storage node MIP
+|Management node
+|10514 TCP/UDP, 514 TCP/UDP
+|Syslog forwarding
+
+|Storage node MIP
+|Syslog server
+|10514 TCP/UDP, 514 TCP/UDP
+|Syslog forwarding
+
+|Storage node MIP
+|LDAPS server
+|636 TCP/UDP
+|LDAPS lookup
+
+|Storage node MIP
+|Remote storage node MIP
+|2181
+|Intercluster communication for remote replication
+
+|Storage node SIP
+|S3/Swift endpoint
+|80
+|(Optional) HTTP communication to S3/Swift endpoint for backup and recovery
+
+|Storage node SIP
+|S3/Swift endpoint
+|443
+|(Optional) HTTPS communication to S3/Swift endpoint for backup and recovery
+
+|Storage node SIP
+|Remote storage node SIP
+|2181
+|Intercluster communication for remote replication
+
+|Storage node SIP
+|Storage node SIP
+|3260
+|Internode iSCSI
+
+|Storage node SIP
+|Remote storage node SIP
+|4000 through 4020
+|Remote replication node-to-node data transfer
+
+|Storage node SIP
+|Compute node SIP
+|442
+|Compute node API, configuration and validation, and access to software inventory
+
+|System administrator PC
+|Storage node MIP
+|80
+|(NetApp HCI only) Landing page of NetApp Deployment Engine
+
+|System administrator PC
+|Management node
+|442
+|HTTPS UI access to management node
+
+|System administrator PC
+|Storage node MIP
+|442
+|HTTPS UI and API access to storage node, (NetApp HCI only) Configuration and deployment monitoring in NetApp Deployment Engine
+
+|System administrator PC
+|Management node
+|443
+|HTTPS UI and API access to management node
+
+|System administrator PC
+|Storage cluster MVIP
+|443
+|HTTPS UI and API access to storage cluster
+
+|System administrator PC
+|Storage node MIP
+|443
+|HTTPS storage cluster creation, post-deployment UI access to storage cluster
+
+|vCenter Server
+|Storage cluster MVIP
+|443
+|vCenter Plug-in API access
+
+|System administrator PC
+|Witness Node
+|8080
+|Witness Node per-node web UI
+
+|vCenter Server
+|Management node
+|8443
+|(Optional) vCenter Plug-in QoSSIOC service.
+
+|vCenter Server
+|Storage cluster MVIP
+|8444
+|vCenter VASA provider access (VVols only)
+
+|vCenter Server
+|Management node
+|9443
+|vCenter Plug-in registration. The port can be closed after registration is complete.
+|===
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

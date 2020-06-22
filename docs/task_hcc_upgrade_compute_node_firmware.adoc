@@ -14,38 +14,43 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 :imagesdir: ../media/
 
 [.lead]
-For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC using the RTFI image while leaving the ESXi installation and other configuration data in place.
+For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC.
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
+
+[NOTE]
+====
+Choose from the option that is relevant to your upgrade scenario:
+
+- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+====
+////
+Choose from the option that is relevant to your upgrade scenario:
+
+* For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+* For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+////
 
 .What you'll need
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 
-TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC.
-
-.Update options
-
-You can update the firmware using one of the following methods:
-
-* <<Use a USB drive with the latest firmware image downloaded>>
-* <<Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI)>>
+TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
 .About this task
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
-
 == Use a USB drive with the latest firmware image downloaded
 
-You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node.
+You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
 
 .Steps
 
-. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Browse to the https://mysupport.netapp.com/site/downloads[NetApp software downloads] page, click *NetApp HCI*, and click the download link for correct version of NetApp HCI.
 . Accept the End User License Agreement.
-. Under the *Compute and Storage Nodes* heading, download the NetApp HCI compute node image.
+. Under the *Compute and Storage Nodes* section, download the compute node image.
 . Write the raw contents of the compute node RTFI image to a USB thumb drive with at least 32GB capacity (using dd or Etcher).
 . Place the compute node in maintenance mode using VMware vCenter, and evacuate all virtual machines from the host.
 +
@@ -67,9 +72,12 @@ You must perform the sequential steps to load the compute firmware ISO and reboo
 
 TIP: The recommendation is to have the system or VM and the node on the same network.
 
-=== Upgrade firmware on H410C nodes
+* <<Upgrade firmware on H410C and H300E/H500E/H700E nodes>>
+* <<Upgrade firmware on H610C/H615C nodes>>
 
-If your H410C node is part of a cluster, you must perform the steps in vSphere Client before and after the upgrade is complete.
+=== Upgrade firmware on H410C and H300E/H500E/H700E nodes
+
+If your node is part of a cluster, you must place the node in maintenance mode before the upgrade, and take it out of maintenance mode after the upgrade.
 
 TIP: Ignore the following informational message you see during the process: `Untrusty Debug Firmware Key is used, SecureFlash is currently in Debug Mode`
 
@@ -83,7 +91,7 @@ VMs on the host will be migrated to another available host. VM migration can tak
 +
 CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 
-. Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
+. Navigate to the BMC UI, `https://BMCIP/#login`, where BMCIP is the IP address of the BMC.
 . Log in using your credentials.
 . Select *Remote Control > Console Redirection*.
 . Click *Launch Console*.
@@ -115,7 +123,7 @@ NOTE: The BIOS version will not show the upgraded version until the node has fin
 
 . If the node is part of a cluster, complete the steps below. If it is a standalone node, no further action is needed.
 .. Log in to the VMware vCenter web client.
-.. Take the host out of maintenance mode. This might show a disconnected red flag. Wait till all statuses are cleared.
+.. Take the host out of maintenance mode. This might show a disconnected red flag. Wait until all statuses are cleared.
 .. Power on any of the remaining VMs that were powered off.
 
 === Upgrade firmware on H610C/H615C nodes
@@ -134,8 +142,8 @@ CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 
 . Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
 . Log in using your credentials.
-. Click *Remote Control > Launch KNM (Java)*.
-. In the console window, click *Media > Virtual Medial Wizard*.
+. Click *Remote Control > Launch KVM (Java)*.
+. In the console window, click *Media > Virtual Media Wizard*.
 +
 image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
 . Click *Browse* and select the compute firmware `.iso` file.

@@ -16,8 +16,7 @@ keywords: netapp, hci, on premise, expand, compute, cluster
 [.lead]
 After you finish NetApp HCI deployment, you can expand and configure NetApp HCI compute resources by using NetApp Hybrid Cloud Control.
 
-*Before you begin*
-
+.Before you begin
 * Ensure that the vSphere instance of NetApp HCI is using vSphere Enterprise Plus licensing if you are expanding a deployment with Virtual Distributed Switches.
 * Ensure that none of the vCenter or vSphere instances in use with NetApp HCI have expired licenses.
 * Ensure that you have free and unused IPv4 addresses on the same network segment as existing nodes (each new node must be installed on the same network as existing nodes of its type).
@@ -27,9 +26,7 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 ** Cabled and powered on the new node
 * Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.
 
-
-*Steps*
-
+.Steps
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
@@ -88,8 +85,9 @@ This disables real-time health and diagnostic monitoring for NetApp HCI. Disabli
 You can monitor the progress while NetApp HCI adds and configures the resources.
 . *Optional*: Verify that any new compute nodes are visible in the VMware vSphere Web Client.
 
-
 [discrete]
 == Find more information
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[NetApp HCI Compute and Storage Nodes Installation and Setup Instructions^]
+* https://kb.vmware.com/s/article/1003212[VMware Knowledge Base: Enhanced vMotion Compatibility (EVC) processor support^]
