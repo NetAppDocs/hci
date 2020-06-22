@@ -38,13 +38,6 @@ See the firmware and driver matrix for your hardware in https://kb.netapp.com/ap
 
 TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
-.Update options
-
-You can update the firmware using one of the following methods:
-
-* <<Use a USB drive with the latest firmware image downloaded>>
-* <<Follow the wizard in the Baseboard Management Controller (BMC) user interface (UI)>>
-
 .About this task
 
 In production environments, upgrade the firmware on one compute node at a time.
