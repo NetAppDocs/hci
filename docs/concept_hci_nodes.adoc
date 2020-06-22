@@ -19,8 +19,8 @@ NetApp HCI and Element software defines various node roles for a cluster. The fo
 
 == Management node
 The management node (mNode) interacts with a storage cluster to perform management actions, but is not a member of the storage cluster. Management nodes periodically collect information about the cluster through API calls and report this information to Active IQ for remote monitoring (if enabled). Management nodes are also responsible for coordinating software upgrades of the cluster nodes.
-The management node is a virtual machine that runs in parallel with one or more Element software-based storage clusters. In addition to upgrades, it is used to provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting.
-As of the Element 11.3 release, the management node functions as a microservice host, allowing for quicker updates of select software services outside of major releases. These microservices or management services, such as the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service, are updated frequently as service bundles.
+
+The management node is a virtual machine that runs in parallel with one or more Element software-based storage clusters. In addition to upgrades, it is used to provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting. As of the Element 11.3 release, the management node functions as a microservice host, allowing for quicker updates of select software services outside of major releases. These microservices or management services, such as the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service, are updated frequently as service bundles.
 
 
 == Storage nodes
@@ -36,8 +36,7 @@ NetApp HCI Witness nodes are virtual machines that run on compute nodes in paral
 
 TIP: Learn more about https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-F4D9EEB8-2FDF-4A27-9FEE-C5E5E637E2DD.html[Witness Node resource requirements^] and https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-9426D4EA-5B4A-4B6C-8089-7FA52E0DCA73.html[Witness Node IP address requirements^].
 
-NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure.
-When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hs-comnode-repl%2FGUID-0947FD01-0BA6-4650-A36F-8BF096B0B81C.html[Redeploying Witness Nodes for two and three-node storage clusters^].
+NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure. When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hs-comnode-repl%2FGUID-0947FD01-0BA6-4650-A36F-8BF096B0B81C.html[Redeploying Witness Nodes for two and three-node storage clusters^].
 
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]

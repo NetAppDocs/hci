@@ -16,6 +16,17 @@ keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradechec
 [.lead]
 You must run health checks prior to upgrading Element storage to ensure all storage nodes in your cluster are ready for the next Element storage upgrade.
 
+.What you'll need
+
+* You have updated to the latest management services bundle (2.10.27 or later).
++
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+
+* You are running management node 11.3 or later.
+* Your cluster version is running NetApp Element software 11.3 or later.
+
+.Health check options
+
 You can run health checks using NetApp Hybrid Cloud Control (HCC) UI, HCC API, or the HealthTools suite:
 
 * <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>> (Preferred method)
@@ -25,15 +36,6 @@ You can run health checks using NetApp Hybrid Cloud Control (HCC) UI, HCC API, o
 You can also find out more about storage health checks that are run by the service:
 
 * <<Storage health checks made by the service>>
-
-.What you'll need
-
-* You have updated to the latest management services bundle (2.10.27 or later).
-+
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
-
-* You are running management node 11.3 or later.
-* Your cluster version is running NetApp Element software 11.3 or later.
 
 == Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage
 
@@ -67,16 +69,22 @@ You can use REST API to verify that a storage cluster is ready to be upgraded. T
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://[management node IP]/inventory/1
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
 ... Click *Authorize* to begin a session.
-.. From the REST API UI, click *GET /assets/storage-clusters*.
+... Close the authorization window.
+.. From the REST API UI, click *GET /installations*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
+.. From the response, copy the installation asset ID (`"id"`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
 . Run health checks on the storage cluster:
 .. Open the storage REST API UI on the management node:
 +

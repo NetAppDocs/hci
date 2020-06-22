@@ -69,7 +69,7 @@ NetApp HCI can be installed in different configurations:
 * H410S storage node
 * H610S storage node
 
-CAUTION: For precautions and details, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^].
+CAUTION: For precautions and details, see link:task_hci_installhw.html[Install H-series hardware].
 
 .Steps
 
@@ -160,9 +160,9 @@ For details, see the http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-
 
 image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 
-== (Optional) Expand, monitor, or upgrade NetApp HCI with the Hybrid Cloud Control
+== (Optional) Monitor, upgrade, or expand NetApp HCI with the Hybrid Cloud Control
 
-You can use the NetApp HCI Hybrid Cloud Control to expand, monitor, or upgrade your system.
+You can use the NetApp HCI Hybrid Cloud Control to monitor, upgrade, or expand your system.
 
 You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
 

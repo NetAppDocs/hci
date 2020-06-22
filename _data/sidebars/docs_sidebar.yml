@@ -32,8 +32,8 @@ entries:
     entries:
       - title: NetApp HCI installation and deployment overview
         url: /task_hci_getstarted.html
-        #- title: Access Hybrid Cloud Control
-        #  url: /task_hcc_access.html
+      - title: Install H-series hardware
+        url: /task_hci_installhw.html
         # For 20.2 consider putting multiple access topics or URLs
   - title: Monitor your NetApp HCI system
     entries:
