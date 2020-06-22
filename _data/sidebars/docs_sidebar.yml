@@ -28,12 +28,38 @@ entries:
        url: /concept_cg_hci_security.html
      - title: Performance
        url: /concept_hci_performance.html
+  - title: Requirements and pre-deployment tasks
+    entries:
+     - title: Network ports used by NetApp HCI
+       url: /hci_prereqs_required_network_ports.html
+     - title: Network and switch requirements
+       url: /hci_prereqs_network_switch.html
+     - title: Network cable requirements
+       url: /hci_prereqs_network_cables.html
+     - title: IP address requirements
+       url: /hci_prereqs_ip_address.html
+     - title: Network configuration
+       url: /hci_prereqs_network_configuration.html
+     - title: DNS and timekeeping requirements
+       url: /hci_prereqs_timekeeping.html
+     - title: Environmental requirements
+       url: /hci_prereqs_environmental.html
+     - title: Protection Domains
+       url: /hci_prereqs_protection_domains.html
+     - title: Witness Node resource requirements for two-node storage clusters
+       url: /hci_prereqs_witness_nodes.html
+     - title: Configuring LACP for optimal storage performance
+       url: /hci_prereqs_LACP_configuration.html
+     - title: Validating your environment with Active IQ Config Advisor
+       url: /hci_prereqs_task_validate_config_advisor.html
+     - title: Final preparations
+       url: /hci_prereqs_final_prep.html
   - title: Get started with NetApp HCI
     entries:
       - title: NetApp HCI installation and deployment overview
         url: /task_hci_getstarted.html
-        #- title: Access Hybrid Cloud Control
-        #  url: /task_hcc_access.html
+      - title: Install H-series hardware
+        url: /task_hci_installhw.html
         # For 20.2 consider putting multiple access topics or URLs
   - title: Monitor your NetApp HCI system
     entries:

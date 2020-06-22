@@ -1,0 +1,41 @@
+---
+sidebar: docs_sidebar
+permalink: docs/hci_prereqs_witness_nodes.html
+summary: Learn about NetApp HCI Witness Node requirements.
+keywords: netapp, hci, element, Witness Node
+---
+
+= Witness Node resource requirements for two-node storage clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, element, Witness Node
+
+[.lead]
+NetApp HCI supports a minimum installation size of two storage nodes and two compute nodes. When you install NetApp HCI using a two or three-node storage cluster, you need to be aware of NetApp HCI Witness Nodes and their VM resource requirements.
+
+When a storage cluster uses two or three nodes, it also deploys a pair of Witness Nodes alongside each storage cluster. Witness Nodes have the following VM resource requirements:
+
+|===
+|Resource |Requirement
+
+|vCPU
+|4
+
+|Memory
+|12GB
+
+|Disk size
+|67GB
+|===
+
+NetApp HCI supports only certain storage node models in two-node or three-node storage clusters. For more information, see the Release Notes for your NetApp HCI version.
+
+NOTE: When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hs-comnode-repl%2FGUID-0947FD01-0BA6-4650-A36F-8BF096B0B81C.html[NetApp HCI documentation^].
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
