@@ -2,29 +2,134 @@
 sidebar: solutions_sidebar
 permalink: solutions/index.html
 summary: NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider--all in a self-service mode without IT involvement.
-keywords: netapp, hci, on premise, kubernetes, cloud services
+keywords: netapp, hci, solutions, catalog, solution
 ---
 
-= Solutions Catalog for NetApp HCI
+= NetApp HCI Solutions Catalog
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
+:table-stripes: odd
 :imagesdir: ./media/
 
 [.lead]
-Built on top of the NetApp HCI infrastructure, NetApp HCI solutions expand the platform capabilities to deliver on business use cases in areas such as:
+Welcome to the NetApp HCI solutions catalog!
 
-* Public, Private, Hybrid and Multi Cloud
-* Containers and DevOps
-* Enterprise Applications
-* AI and GPU
-* End User Computing (EUC)
-* Data Fabric
-* Data Protection
-* Security
+Here, you will find detailed information for the solutions available on NetApp HCI  by using the navigation section on the left of this page.  Also included is additional collateral for our Sales and Partner teams.
 
-[discrete]
+NetApp HCI Solutions expand the capabilities to deliver on use cases in areas such as:
+[width=100%,cols="2*",frame="none",grid="none"]
+|===
+a|
+ * Public, Private, Hybrid and Multi Cloud
+ * Containers and DevOps
+ * Enterprise Applications
+ * AI and GPU
+a|
+ * End User Computing (EUC)
+ * Data Fabric
+ * Data Protection
+ * Security
+|===
+
+== NetApp HCI Solutions: Sales and Partner Kits
+NetApp Sales and Partner Kits are rich with information to help you sell more effectively.
+
+Kits for End User Computing (EUC) and Private Cloud show how NetApp HCI solutions deliver differentiation and also describe the use cases addressed by our solutions.
+
+=== Where to find NetApp HCI Kits
+* EUC and Private Cloud Sales Kits in the link:https://netapp.sharepoint.com/sites/HCSBUProductInformation/SitePages/HCI-Solutions.aspx[HCS Resource Center]
+* Partner Kits in the link:https://fieldportal.netapp.com/explore///699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
+
+//[width=100%,cols="2*",grid="all"]
+//|===
+//2+^| *NetApp Sales and Partner Kits are rich with information to help you sell more effectively*
+//a| *End User Compute Kits*
+//
+// * Learn why our EUC solution differentiation means more value
+// * Discover more about HCI EUC/VDI use cases
+//a| *Private Cloud Kits*
+//
+// * Learn how our Private Cloud solution delivers differentiation
+// * Simplify preparation for HCI Private Cloud use cases
+//2+a| *Where to find NetApp HCI Kits*
+//
+// * EUC and Private Cloud Sales Kits in the link:TBD.html[HCS Resource Center]
+// * Partner Kits in the link:https://fieldportal.netapp.com/explore///699265?popupstate=%7B%22state%22:%22app.notebook%22,%22srefParams%22:%7B%22source%22:13,%22sourceId%22:1030396,%22sourceType%22:null,%22notebookId%22:961929,%22assetComponentId%22:963985%7D%7D[Partner Portal] or use the Partner Kit matrix (below) for rapid access to partner enablement materials
+//|===
+
+=== End User Computing and Private Cloud Partner Kits
+[width=100%,cols="2, 3, 3, 3, 3",grid="all"]
+//[width=100%,cols="2, 3, 3, 3, 3",grid="all",options="header"]
+//[caption=,title='Matrix of EUC and Private Cloud Partner Kits']
+|===
+| 2+^h|EUC / VCI 2+^h| Private Cloud
+|  | Citrix | VMware Horizon | VMware | Red Hat
+//| *Video* |  |  |  |
+| *Solution Brief*
+| link:https://fieldportal.netapp.com/content/939405[VDI Citrix]
+| link:https://fieldportal.netapp.com/content/922004[VDI VMware]
+2+| link:https://fieldportal.netapp.com/content/921873[What is a Private Cloud]
+| *Customer Presentation*
+2+| link:https://fieldportal.netapp.com/content/940466[Digital Workplace Transformation (VDI/EUC]
+| link:https://fieldportal.netapp.com/content/783154[BDM Customer Presentation: VMware Private Cloud]
+| link:https://fieldportal.netapp.com/content/901293[RedHap Private Cloud On NetApp HCI]
+| *Technical Presentation*
+2+| link:https://fieldportal.netapp.com/content/1012848[Technical Presentation for EUC Opportunity]
+| link:https://fieldportal.netapp.com/content/883472[Build Your VMware Private Cloud]
+| link:https://fieldportal.netapp.com/content/902546[Private Cloud with Red Hat/KVM]
+| *ORG*
+2+| link:https://fieldportal.netapp.com/content/1022849[EUC & VDI Solutions with NetApp HCI Partner Marketing]
+2+| link:https://fieldportal.netapp.com/content/942543[Private Cloud Solutions]
+| *FAQ*
+2+| link:https://fieldportal.netapp.com/content/1001003[NetApp HCI FAQ for EUC-VDI]
+| link:https://fieldportal.netapp.com/content/931601[FAQ: VMware Private Cloud]
+|
+| *Competitive Resources*
+2+| link:https://fieldportal.netapp.com/content/728120[Competitive Sales Kit EUC]
+2+| link:https://fieldportal.netapp.com/content/640571[Competitive Sales Kit VMware Private Cloud]
+|===
+
+//=== NetApp HCI TV
+//[width=100%,cols="1,6",grid="cols"]
+//|===
+//| image:HCI-TV-image.jpg[align="center",width="200",height="200"]
+//a| * link:TBD.html[Link 1]
+//*  link:TBD.html[Link 2]
+//*  link:TBD.html[Link 3]
+//|===
+
+== NetApp HCI End User Compute and Virtual Desktop Infrastructure Solutions
+The “work from home” or mobile workforce requirement has become the new reality for nearly every company in the world.  NetApp HCI End User Compute solutions deliver Virtual Desktop Infrastructures (VDI) solutions that address the needs of performance at scale, cost efficient provisioning and much more.
+
+Conventional HCI is designed to provision compute and storage together but efficient VDI configurations require unbalanced compute/storage node ratios.  Architectural limitations for a balance of compute and storage resources creates cost impacts that are subtle until demand increases and resources scale.
+
+With NetApp HCI EUC/VDI Sales and Partner Kits you can discover more about use cases and solution values such as:
+
+* Anywhere, any time, any device desktop provisioning
+* Services for local or remote temporary or task workers with Customized or standardized Desktops applications with secure access to core corporate assets
+* Services for Knowledge workers such as business professionals, Accountants lawyers and software developers utilizing Windows 10 Office productivity apps, video and multimedia
+* Services for Power users, such as medical specialist, data scientists, modern CAD/CAM product designers, with demanding content rich 3D graphics on high resolution monitors
+* Lower TCO realized with unmatched resource utilization and data efficiency.
+* NetApp portfolio.  Integrate with existing storage investments and the NetApp Data Fabric for enhanced data portability, visibility, and protection.
+* Performance at scale while maintaining SLA guarantees
+
+== NetApp HCI Private Cloud Solutions
+Dynamics of the COVID-19 world requires flexible, self-service seamless cloud and data mobility between cloud-based applications to on premise data centers. NetApp HCI Private Cloud solutions address the needs of cloud-like provisioning and time to deploy.
+
+Private Cloud solutions on conventional HCI fix compute to storage ratios impacting provisioning with cloud simplicity.  NetApp HCI eliminates these architectural limitations delivering simple provisioning with excellent ROI to optimize your on-premise cloud services.  Achieve seamless data mobility with NetApp Data Private Cloud and the NetApp Data Fabric.
+
+With NetApp HCI Private Cloud Sales and Partner Kits you have access to information on use cases, solution values and more:
+
+* Eliminate application silos with diverse applications such as, DevOps, Database and more in the same infrastructure.
+* Simplify resources and applications with cloud like deployment and management on a private cloud platform.
+* Performance guarantees for multi tenants across a broad range of applications including EUC, DevOps, Database, Enterprise applications in a single platform.
+* Lower TCO realized with unmatched resource utilization and data efficiency.
+* Leverage existing investments by integrate with existing storage investments and the NetApp Data Fabric for enhanced data portability, visibility, and protection.
+* Performance at scale  Performance guarantee with multiple applications across multiple tenants in the same infrastructure.
+* NetApp Data Fabric -  your data, anywhere and everywhere you need it for hybrid cloud application mobility
+
 == Find more information:
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Documentation Resources]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
