@@ -158,7 +158,7 @@ https://[management node IP]/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
+... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the authorization window.
 .. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
@@ -184,7 +184,7 @@ https://[management node IP]/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
+... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the authorization window.
 .. From the REST API UI, click *POST /packages*.
@@ -208,7 +208,7 @@ https://[management node IP]/inventory/1
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
+... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the authorization window.
 .. From the REST API UI, click *GET /installations*.
@@ -228,7 +228,7 @@ https://[management node IP]/storage/1
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
+... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the authorization window.
 .. Click *POST /upgrades*.
@@ -311,12 +311,12 @@ a|
 +
 ----
 {
-  "action": "resume",
+  "action": "resume"
 }
 ----
 . Click *Execute*.
 
-|You need to pause the upgrade because the maintenance window is closing or another reason.
+|You need to pause the upgrade because the maintenance window is closing or for another reason.
 a|
 . Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
 . Click *Try it out*.
@@ -325,7 +325,7 @@ a|
 +
 ----
 {
-  "action": "pause",
+  "action": "pause"
 }
 ----
 . Click *Execute*.
@@ -340,7 +340,7 @@ a|
 +
 ----
 {
-  "action": "acknowledge",
+  "action": "acknowledge"
 }
 ----
 . Click *Execute*.
@@ -557,7 +557,7 @@ sfinstall -u admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/
 
 IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>>.
 
-== What happens if an upgrade fails
+== What happens if an upgrade fails using HealthTools
 If the software upgrade fails, you can pause the upgrade.
 
 TIP: You should pause an upgrade only with Ctrl-C. This enables the system to clean itself up.
