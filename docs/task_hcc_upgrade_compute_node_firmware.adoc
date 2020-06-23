@@ -18,6 +18,20 @@ For any H-series compute node, you can upgrade the firmware for hardware compone
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
+[NOTE]
+====
+Choose from the option that is relevant to your upgrade scenario:
+
+- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+====
+////
+Choose from the option that is relevant to your upgrade scenario:
+
+* For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+* For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+////
+
 .What you'll need
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
