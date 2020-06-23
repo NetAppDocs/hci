@@ -38,6 +38,13 @@ See the firmware and driver matrix for your hardware in https://kb.netapp.com/ap
 
 TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
+.Upgrade options
+
+Choose the option that is relevant to your upgrade scenario:
+
+- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
+- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+
 .About this task
 
 In production environments, upgrade the firmware on one compute node at a time.
