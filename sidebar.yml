@@ -4,4 +4,4 @@ entries:
      - title: NetApp HCI Configuration and Management
        url: /docs/index.html
      - title: NetApp HCI Solutions
-       url: /solutions/index.html
+       url: https://docs.netapp.com/us-en/hci-solutions/index.html
