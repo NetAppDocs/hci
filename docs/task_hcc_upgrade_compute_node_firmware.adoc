@@ -18,25 +18,12 @@ For any H-series compute node, you can upgrade the firmware for hardware compone
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
-[NOTE]
-====
-Choose from the option that is relevant to your upgrade scenario:
-
-- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
-- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
-====
-////
-Choose from the option that is relevant to your upgrade scenario:
-
-* For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
-* For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
-////
 
 .What you'll need
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 
-TIP: It can take approximately 25 to 30 minutes for the upgrade via the BMC UI.
+TIP: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
 .Upgrade options
 
@@ -51,7 +38,7 @@ In production environments, upgrade the firmware on one compute node at a time.
 
 == Use a USB drive with the latest firmware image downloaded
 
-You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
+You can insert a USB drive with the latest firmware image downloaded into a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute node RTFI image on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure that your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
 
 .Steps
 
