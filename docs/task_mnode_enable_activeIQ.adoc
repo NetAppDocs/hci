@@ -1,0 +1,65 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_enable_activeIQ.html
+summary: You can use the management node (mNode) to enable NetApp Support access for troubleshooting.
+keywords: netapp, hci, mnode, management node, nodes, api, enable active iq, activeiq
+---
+
+= Enable the SolidFire Active IQ collector service for SolidFire all-flash storage
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can enable storage telemetry (the Active IQ collector service) for your SolidFire all-flash storage if you did not already do so during installation or upgrade.
+
+The AIQ collector service forwards configuration data and Element software-based cluster performance metrics to NetApp SolidFire Active IQ for historical reporting and near real-time performance monitoring.
+
+.Before you begin
+* Ensure that your cluster version is running NetApp Element software 11.3 or later.
+* Ensure that you have deployed a management node running version 11.3 or later.
+* You need to have internet access. The Active IQ collector service cannot be used from dark sites.
+
+.Steps
+. Access the REST API UI for management services by entering the management node IP address
+followed by /mnode:
++
+----
+https://[IP address]/mnode
+----
+
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+. Click *GET /assets*.
+. Copy the value for the "id" for the base asset to your clipboard.
++
+NOTE: A base asset and sub-assets were created when you ran the upgrade or setup scripts
+during management node installation or upgrade.
+
+. Configure the base asset:
+.. Click *PUT /assets/{asset_id}*.
+.. Click *Try it out*.
+.. Enter the following in the JSON payload:
++
+----
+{
+"telemetry_active": true
+"config": {}
+}
+----
+
+.. Enter the ID from the base asset step in *asset_ID*.
+.. Click *Execute*.
++
+The Active IQ service is automatically restarted whenever assets are changed. Modifying assets results in a short delay before settings are applied.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
