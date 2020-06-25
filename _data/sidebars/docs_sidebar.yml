@@ -106,7 +106,7 @@ entries:
                 url: /task_mnode_work_overview_API.html
               - title: Get authorization to use REST APIs
                 url: /task_mnode_api_get_authorizationtouse.html
-              - title: Enable the Active IQ collector service for SolidFire all-flash storage
+              - title: Enable Active IQ and NetApp HCI monitoring
                 url: task_mnode_enable_activeIQ.html
               - title: Add compute and controller assets to the management node
                 url: task_mnode_add_assets.html
