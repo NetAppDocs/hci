@@ -22,7 +22,10 @@ entries:
        url: /concept_hci_clusters.html
      - title: Nodes
        url: /concept_hci_nodes.html
-     #- title: Storage
+     - title: Storage
+       entries:
+         - title: Volumes
+           url: /concept_hci_volumes.html
       # url: /concept_hci_storage.html
      - title: Security
        url: /concept_cg_hci_security.html
@@ -61,16 +64,60 @@ entries:
       - title: Install H-series hardware
         url: /task_hci_installhw.html
         # For 20.2 consider putting multiple access topics or URLs
-  - title: Monitor your NetApp HCI system
+  - title: Manage NetApp HCI
     entries:
-      - title: View resources on the HCC Dashboard
-        url: /task_hcc_dashboard.html
-      - title: View your inventory in the Nodes page
-        url: /task_hcc_nodes.html
-      - title: Monitor performance, capacity, and cluster health with Active IQ
-        url: /task_hcc_activeiq.html
-      - title: Collect NetApp HCI logs
-        url: /task_hcc_collectlogs.html
+      - title: Monitor your NetApp HCI system
+        entries:
+          - title: View resources on the HCC Dashboard
+            url: /task_hcc_dashboard.html
+          - title: View your inventory in the Nodes page
+            url: /task_hcc_nodes.html
+          - title: Monitor performance, capacity, and cluster health with Active IQ
+            url: /task_hcc_activeiq.html
+          - title: Collect NetApp HCI logs
+            url: /task_hcc_collectlogs.html
+      - title: Work with the management node
+        entries:
+          - title: Management node overview
+            url: /task_mnode_work_overview.html
+          - title: Install or recover a management node
+            entries:
+              - title: Install a management node
+                url: /task_mnode_install.html
+              - title: Configure a storage Network Interface Controller (NIC)
+                url: /task_mnode_install_add_storage_NIC.html
+              - title: Recover a management node
+                url: /task_mnode_recover.html
+          - title: Access the management node
+            url: /task_mnode_access.html
+          - title: Work with the management node UI
+            entries:
+              - title: Management node UI overview
+                url: /task_mnode_work_overview_UI.html
+              - title: Configure alert monitoring on NetApp HCI
+                url: /task_mnode_enable_alerts.html
+              - title: Modify and test the management node network, cluster, and system settings
+                url: task_mnode_settings.html
+              - title: Run system utilities from the management node
+                url: task_mnode_run_system_utilities.html
+          - title: Work with the management node REST API
+            entries:
+              - title: Management node REST API UI overview
+                url: /task_mnode_work_overview_API.html
+              - title: Get authorization to use REST APIs
+                url: /task_mnode_api_get_authorizationtouse.html
+              - title: Enable Active IQ and NetApp HCI monitoring
+                url: task_mnode_enable_activeIQ.html
+              - title: Add compute and controller assets to the management node
+                url: task_mnode_add_assets.html
+              - title: Change the storage cluster administrator password
+                url: task_mnode_change_storage_cluster_admin_password.html
+              - title: Configure a proxy server for the management node
+                url: /task_mnode_configure_proxy_server.html
+              - title: Get logs from management services
+                url: /task_mnode_get_logs_from_management_services.html
+          - title: Enable remote NetApp Support connections
+            url: /task_mnode_enable_remote_support_connections.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview

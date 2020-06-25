@@ -1,0 +1,91 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_enable_activeIQ.html
+summary: You can use the management node (mNode) to enable NetApp Active IQ and NetApp HCI telemetry.
+keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring
+---
+
+= Enable Active IQ and NetApp HCI monitoring
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can enable Active IQ storage monitoring (for SolidFire all-flash storage and NetApp HCI) and NetApp HCI compute monitoring (for NetApp HCI only) if you did not already do so during installation or upgrade. You might need to use this procedure if you disabled telemetry using the NetApp HCI Deployment Engine or did not set up SolidFire Active IQ during installation for a SolidFire all-flash storage system.
+
+The Active IQ collector service forwards configuration data and Element software-based cluster performance metrics to NetApp Active IQ for historical reporting and near real-time performance monitoring. The NetApp HCI monitoring service enables forwarding of storage cluster faults to vCenter for alert notification.
+
+.Before you begin
+* Your storage cluster is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
+* You have internet access. The Active IQ collector service cannot be used from dark sites.
+
+.Steps
+. Access the REST API UI for management services by entering the management node IP address
+followed by `/mnode`:
++
+----
+https://[IP address]/mnode
+----
+
+. Click *Authorize* or any lock icon and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *GET /assets*.
+. Copy the value for the "id" for the base asset to your clipboard.
++
+NOTE: A base asset and sub-assets were created when you ran the upgrade or setup scripts
+during management node installation or upgrade.
+
+image::mNode_API_Base_asset_ID.png[the base asset ID for the cluster]
+
+. Configure the base asset:
+.. Click *PUT /assets/{asset_id}*.
+.. Click *Try it out*.
+.. Enter the following in the JSON payload:
++
+----
+{
+"telemetry_active": true
+"config": {}
+}
+----
+
+.. Enter the ID from the base asset step in *asset_ID*.
+.. Click *Execute*.
++
+The Active IQ service is automatically restarted whenever assets are changed. Modifying assets results in a short delay before settings are applied.
+
+. (For NetApp HCI systems only) Add a controller asset for vCenter.
++
+NOTE: A controller asset is required for NetApp HCI monitoring services.
+
+.. Click *POST /assets/{asset_id}/controllers*.
+.. Click *Try it out*.
+.. Enter the configuration information for the controller asset. All fields are optional:
++
+NOTE: "ip" is the vCenter IP address.
+
+----
+{
+"username": "string",
+"password": "string",
+"ip": "string",
+"type": "vCenter",
+"host_name": "string",
+"config": {}
+}
+----
+
+.. Enter the parent ID from the base asset in *asset_ID*.
+.. Click *Execute*.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -1,0 +1,63 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_get_logs_from_management_services.html
+summary: You can retrieve logs from the services running on the management node using the REST API.
+keywords: netapp, element, mnode, management node, management services logs, api
+---
+
+= Get logs from management services
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can retrieve logs from the services running on the management node by using the REST API.
+
+You can pull logs from all public services or specify specific services and use query parameters to better define the return results.
+
+.Before you begin
+* Ensure that your cluster version is running NetApp Element software 11.3 or later.
+* Ensure that you have deployed a management node running version 11.3 or later.
+
+.Steps
+. Access the REST API UI on the management node by entering the management node IP address followed by /mnode:
++
+----
+https://[IP address]/mnode
+----
+
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+. Click *GET /logs*.
+. Click *Try it out*.
+. Specify the following parameters:
++
+* *Lines*: Enter the number of lines you want the log to return. This parameter is an integer that defaults to 1000.
++
+TIP: Avoid requesting the entire history of log content by setting Lines to 0.
+
+* *service-name*: Enter a service name.
++
+TIP: Use the GET /services command to list services on the management node.
+
+* *type*: Select the specific log type to pull:
+** *service*: Pulls regular public running services. This is the default and most common option.
+** *syslog*: Pulls all syslog from the host machine.
+** *all*: Pulls from all public services and syslogs.
+* *since*: Adds an ISO-8601 timestamp for the service logs starting point.
++
+TIP: Use a reasonable `since` parameter when gathering logs of wider timespans.
+
+* *archived*: Adds archived files to the log request.
+. Click *Execute*.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

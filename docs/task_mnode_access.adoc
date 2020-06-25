@@ -1,0 +1,67 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_access.html
+summary: You can use two user interfaces for the management node: the UI or the REST APIs.
+keywords: netapp, management node, mnode, api, ui, hci
+---
+
+= Access the management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Beginning with NetApp Element software version 11.3, the management node contains two UIs: a UI for managing REST-based services and a per-node UI for managing network and cluster settings and operating system tests and utilities.
+
+For clusters running Element software version 11.3 or later, you can make use one of two interfaces:
+
+* By using the management node UI (https:// [mNode IP}:442), you can make changes to network and cluster settings, run system tests, or use system utilities.
+* By using the built-in REST API UI (https://[mNode IP}/mnode), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
+
+
+== Access the management node per-node UI
+
+From the per-node UI, you can access network and cluster settings and utilize system tests and
+utilities.
+
+.Steps
+
+. Access the per-node UI for the management node by entering the management node IP address followed by :442
++
+----
+https://[IP address]:442
+----
++
+image::mnode_per_node_442_ui.png[management node per-node UI]
+
+. Enter the management node user name and password when prompted.
+
+== Access the management node REST API UI
+
+Beginning with Element software version 11.3, the management node contains two UIs: a UI for
+managing REST-based services and a per-node UI for managing network and cluster settings and
+operating system tests and utilities. From the REST API UI, you can access a menu of service-related
+APIs that control management services on the management node.
+
+.Steps
+
+. To access the REST API UI for management services, enter the management node IP address
+followed by /mnode:
++
+----
+https://[IP address]/mnode
+----
++
+image::mnode_swagger_ui.png[management node REST API UI]
+
+. Click *Authorize* or any lock icon and enter cluster admin credentials for permissions to use APIs.
+
+[discrete]
+== Find more Information
+* Configure a proxy server
+* link:task_hci_mnode_enable_activeIQ.html[Enable the Active IQ collector service for SolidFire all-flash storage]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
