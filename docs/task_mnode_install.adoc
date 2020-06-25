@@ -141,6 +141,9 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 +
 * *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
 .. Run the `setup-mnode` command.
+
+== Configure controller assets
+
 . From a browser, log into the management node REST API UI:
 .. Go to the storage MVIP and log in. This action causes the certificate to be accepted for the next step.
 .. Open the REST API UI on the management node:
@@ -152,6 +155,7 @@ https://[management node IP]/ mnode
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client`.
 .. Click *Authorize* to begin a session.
+.. Close the window.
 . Run *GET /assets* to find the base asset ID that you will need for the next steps:
 a. Click *GET /assets*.
 b. Click *Try it out*.
@@ -161,8 +165,6 @@ d. Copy the value for `"id"` for the base asset to your clipboard:
 image::mNode_API_Base_asset_ID.png[base asset ID highlighted in response body]
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
-
-== Configure controller assets
 
 . Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
 .. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
@@ -176,7 +178,7 @@ Your installation has a base asset configuration that was created during install
 . (For NetApp HCI only) Add a compute node asset to the management node known assets:
 .. Click *POST/assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
 .. Click *Try it out*.
-.. In the payload, enter the required payload values as defined in the Model tab. Use type `ESXi Host` and remove the ``"hardware_tag"`` parameter.
+.. In the payload, enter the required payload values as defined in the Model tab. Use type `ESXi Host` and remove the `"hardware_tag"` parameter.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. Click *Execute*.
 

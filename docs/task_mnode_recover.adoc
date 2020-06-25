@@ -122,6 +122,6 @@ NOTE: The abbreviated form of the command name is in parentheses ( ) and can be 
 
 [discrete]
 == Find more Information
-* link:concept_hci_volumes.html#persistent-volumes[persistent volumes]
+* link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

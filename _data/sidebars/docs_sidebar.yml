@@ -89,7 +89,9 @@ entries:
               - title: Recover a management node
                 url: /task_mnode_recover.html
           - title: Access the management node
-            url: /task_mnode_access.html
+            entries:
+              - title: Access the management node
+                url: /task_mnode_access_ui.html
           - title: Work with the management node UI
             entries:
               - title: Management node UI overview
@@ -117,7 +119,9 @@ entries:
               - title: Get logs from management services
                 url: /task_mnode_get_logs_from_management_services.html
           - title: Enable remote NetApp Support connections
-            url: /task_mnode_enable_remote_support_connections.html
+            entries:
+              - title: Enable remote NetApp Support connections
+                url: /task_mnode_enable_remote_support_connections.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview

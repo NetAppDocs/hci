@@ -29,11 +29,11 @@ Install or recover a management node:
 
 Access the management node:
 
-* link:task_mnode_access.html[Access the management node (UI or REST API)]
+* link:task_mnode_access_ui.html[Access the management node (UI or REST API)]
 
 Tasks you can perform with the management node UI:
 
-* link:task_mnode_enable_alerts.html[Enable the management node alert monitoring]
+* link:task_mnode_enable_alerts.html[Configure alert monitoring on NetApp HCI]
 * link:task_mnode_settings.html[Modify and test the management node network, cluster, and system settings]
 * link:task_mnode_run_system_utilities.html[Run system utilities from the management node]
 
