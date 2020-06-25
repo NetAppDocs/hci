@@ -18,8 +18,8 @@ Beginning with NetApp Element software version 11.3, the management node contain
 
 For clusters running Element software version 11.3 or later, you can make use one of two interfaces:
 
-* By using the management node UI (https:// [mNode IP}:442), you can make changes to network and cluster settings, run system tests, or use system utilities.
-* By using the built-in REST API UI (https://[mNode IP}/mnode), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
+* By using the management node UI (`https:// [mNode IP}:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
+* By using the built-in REST API UI (`https://[mNode IP}/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
 
 
 == Access the management node per-node UI
@@ -41,15 +41,12 @@ image::mnode_per_node_442_ui.png[management node per-node UI]
 
 == Access the management node REST API UI
 
-Beginning with Element software version 11.3, the management node contains two UIs: a UI for
-managing REST-based services and a per-node UI for managing network and cluster settings and
-operating system tests and utilities. From the REST API UI, you can access a menu of service-related
-APIs that control management services on the management node.
+From the REST API UI, you can access a menu of service-related APIs that control management services on the management node.
 
 .Steps
 
 . To access the REST API UI for management services, enter the management node IP address
-followed by /mnode:
+followed by `/mnode`:
 +
 ----
 https://[IP address]/mnode

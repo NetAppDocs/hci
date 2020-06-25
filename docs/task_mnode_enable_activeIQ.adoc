@@ -28,7 +28,7 @@ The Active IQ collector service forwards configuration data and Element software
 followed by `/mnode`:
 +
 ----
-https://[IP address]/mnode
+https://[management node IP]/mnode
 ----
 
 . Click *Authorize* or any lock icon and complete the following:
@@ -37,11 +37,10 @@ https://[IP address]/mnode
 .. Click *Authorize* to begin a session.
 .. Close the window.
 . Click *GET /assets*.
-. Copy the value for the "id" for the base asset to your clipboard.
+. Copy the value for the `id` for the base asset to your clipboard.
 +
-NOTE: A base asset and sub-assets were created when you ran the upgrade or setup scripts
-during management node installation or upgrade.
-
+NOTE: A base asset and sub-assets were created when you ran the upgrade or setup scripts during management node installation or upgrade.
++
 image::mNode_API_Base_asset_ID.png[the base asset ID for the cluster]
 
 . Configure the base asset:
@@ -69,7 +68,7 @@ NOTE: A controller asset is required for NetApp HCI monitoring services.
 .. Click *Try it out*.
 .. Enter the configuration information for the controller asset. All fields are optional:
 +
-NOTE: "ip" is the vCenter IP address.
+NOTE: `ip` is the vCenter IP address.
 
 ----
 {
