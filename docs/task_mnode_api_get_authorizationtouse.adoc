@@ -1,0 +1,59 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_api_get_authorizationtouse.html
+summary: You must authorize before you can use APIs for management services in the REST API UI.
+keywords: netapp, hci, management node, mnode, api, token
+---
+
+= Get authorization to use REST APIs
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You must authorize before you can use APIs for management services in the REST API UI. You do this by obtaining an access token.
+
+To obtain a token, you provide cluster admin credentials and a client ID. Each token lasts approximately ten minutes. After a token expires, you can authorize again for a new access token.
+
+Authorization functionality is set up for you during management node installation and deployment. The token service is based on the storage cluster you defined during setup.
+
+.Before you begin
+
+* Your cluster version should be running NetApp Element software 11.3 or later.
+* You should have deployed a management node running version 11.3 or later.
+
+.Steps
+
+. Open the REST API UI on the management node:
++
+----
+https://[management node IP address]/mnode
+----
+
+. Click *Authorize*.
++
+NOTE: Alternately, you can click on a lock icon next to any service API.
+
+. Complete the following:
+.. Enter the cluster user name and password.
+.. Select *Request body* from the Type drop-down list.
+.. Enter the client ID as `mnode-client`.
+.. Do not enter a value for the client secret.
+.. Click *Authorize* to begin a session.
++
+NOTE: If the error message `Auth Error TypeError: Failed to fetch` is returned after you attempt to authorize, you might need to accept the SSL certificate for the MVIP of your cluster. Copy the IP in the Token URL, paste the IP into another browser tab, and authorize again.
+
++
+The Available authorizations screen indicates *Authorized*.
+
+. Close the Available authorizations dialog box.
++
+NOTE: If you try to run a command after the token expires, a `401 Error: UNAUTHORIZED` message appears. If you see this, authorize again.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

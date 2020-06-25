@@ -1,0 +1,127 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_recover.html
+summary: You can recover and redeploy a management node for your cluster running NetApp Element software.
+keywords: netapp, element, management node, mnode, disaster recovery, VM
+---
+
+= Recover a management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can manually recover and redeploy the management node for your cluster running NetApp Element software if your previous management node used persistent volumes.
+
+You can deploy a new OVA and run a redeploy script to pull configuration data from a previously installed management node running version 11.3 and later.
+
+.Before you begin
+
+* Your previous management node was running NetApp Element software version 11.3 or later with persistent volumes functionality engaged.
+* You know the MVIP and SVIP of the cluster containing the persistent volumes.
+* Your cluster version is running NetApp Element software 11.3 or later.
+* Your installation uses IPv4. The management node 11.3 does not support IPv6.
+* You have permission to download software from the NetApp Support Site.
+* You have identified the management node image type that is correct for your platform:
++
+[cols=2*,options="header",cols="30,30"]
+|===
+| Platform
+| Installation image type
+| Microsoft Hyper-V | .iso
+| KVM | .iso
+| VMware vSphere | .iso, .ova
+| Citrix XenServer | .iso
+| OpenStack | .iso
+|===
+
+.About this task
+Prior to completing this procedure, you should have an understanding of link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
+
+* <<Download ISO or OVA and deploy the VM>>
+* <<Configure the network>>
+* <<Configure the management node>>
+
+== Download ISO or OVA and deploy the VM
+
+. Download the OVA or ISO for your installation from the NetApp Support Site:
++
+Element software: https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab
+NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab
+
+.. Click *Download Latest Release* and accept the EULA.
+.. Select the management node image you want to download.
+. If you downloaded the OVA, follow these steps:
+.. Deploy the OVA.
+.. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (for example, eth1) or ensure that the management network can route to the storage network.
+. If you downloaded the ISO, follow these steps:
+.. Create a new 64-bit virtual machine from your hypervisor with the following configuration:
++
+* Six virtual CPUs
+* 12GB RAM
+* 400GB virtual disk, thin provisioned
+* One virtual network interface with internet access and access to the storage MVIP.
+* (Optional for SolidFire all-flash storage) One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
++
+IMPORTANT: Do not power on the virtual machine prior to the step indicating to do so later in this procedure.
+
+.. Attach the ISO to the virtual machine and boot to the .iso install image.
++
+NOTE: Installing a management node using the image might result in 30-second delay before the splash screen appears.
+
+. Power on the virtual machine for the management node after the installation completes.
+
+== Configure the network
+
+. Using the terminal user interface (TUI), create a management node admin user.
++
+TIP: To move through the menu options, press the Up or Down arrow keys. To move through the buttons, press Tab. To move from the buttons to the fields, press Tab. To navigate between fields, press the Up or Down arrow keys.
+
+. Configure the management node network (eth0).
++
+NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
+
+== Configure the management node
+. SSH into the management node or use the console provided by your hypervisor.
+. Using SSH, run the following command to gain root privileges. Enter your password when prompted:
++
+----
+sudo su
+----
+
+. Ensure time is synced (NTP) between the management node and the storage cluster.
++
+NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
+
+. Configure and run the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:
++
+NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
+
++
+----
+/sf/packages/mnode/redeploy-mnode --mnode_admin_user [username]
+----
+
+.. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:
++
+NOTE: The abbreviated form of the command name is in parentheses ( ) and can be substituted for the full name. You can add the following required parameters or allow the script to prompt you for the information.
+
++
+* *--mnode_admin_user (-mu) [username]*: The username for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
+* *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software with the persistent volumes that contain management node data for recovery.
+* *--storage_username (-su) [username]*: The storage cluster administrator username for the cluster specified by the `--storage_mvip` parameter.
+* *--persistent_volumes_account (-pva) [account_name]*: Enter the storage account name from the cluster containing the persistent volumes. This is the exact name of the storage user account that owns the volumes in the cluster.
+.. (Optional) Use parameter help if you need additional information about each parameter:
++
+* *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
+.. Run the `redeploy-mnode` command.
+
+
+[discrete]
+== Find more Information
+* link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

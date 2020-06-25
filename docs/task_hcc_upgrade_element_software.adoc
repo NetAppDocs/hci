@@ -63,7 +63,7 @@ https://<ManagementNodeIP>
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Storage*.
 +
-The *Storage* tab lists the storage clusters that are part of your installation.
+The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page.
 . Choose from the following options and perform the set of steps that are applicable to your cluster:
 +
 [%header,cols=2*]
@@ -350,6 +350,17 @@ a|
 During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
 +
 The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
+
+== What happens if an upgrade fails using NetApp Hybrid Cloud Control
+If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, clicking *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
+
+NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during which one of the following scenarios can happen:
+
+* The cluster faults get resolved within the three-hour window, and upgrade resumes. You do not need to take any action in this scenario.
+* The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by clicking *Resume* after the problem is resolved.
+* NetApp Support has determined that the upgrade needs to be temporarily aborted to take corrective action before the three-hour window. Support will use the API to abort the upgrade.
+
+CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
 
 == Upgrade Element software at connected sites using HealthTools
 

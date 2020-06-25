@@ -1,0 +1,192 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_install.html
+summary: You can install the management node for your cluster running NetApp Element software.
+keywords: netapp, element, management node, mnode, storage, install
+---
+
+= Install a management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can manually install the management node for your cluster running NetApp Element software using the appropriate image for your configuration.
+
+This manual process is intended for SolidFire all-flash storage administrators and NetApp HCI administrators who are not using the NetApp Deployment Engine for management node installation.
+
+.Before you begin
+
+* Your cluster version is running NetApp Element software 11.3 or later.
+* Your installation uses IPv4. The management node 11.3 does not support IPv6.
++
+NOTE: If you need to IPv6 support, you can use the management node 11.1.
+
+* You have permission to download software from the NetApp Support Site.
+* You have identified the management node image type that is correct for your platform:
++
+[cols=2*,options="header",cols="30,30"]
+|===
+| Platform
+| Installation image type
+| Microsoft Hyper-V | .iso
+| KVM | .iso
+| VMware vSphere | .iso, .ova
+| Citrix XenServer | .iso
+| OpenStack | .iso
+|===
+
+.About this task
+Prior to following this procedure, you should have an understanding of  link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
+
+.Steps
+
+. <<Download ISO or OVA and deploy the VM>>
+. <<Create the management node admin and configure the network>>
+. <<Configure the management node>>
+. <<Configure controller assets>>
+. <<Configure compute node assets,(NetApp HCI only) Configure compute node assets>>
+
+== Download ISO or OVA and deploy the VM
+
+. Download the OVA or ISO for your installation from the NetApp Support Site:
++
+Element software: https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab
+NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab
+
+.. Click *Download Latest Release* and accept the EULA.
+.. Select the management node image you want to download.
+. If you downloaded the OVA, follow these steps:
+.. Deploy the OVA.
+.. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (for example, eth1) or ensure that the management network can route to the storage network.
+. If you downloaded the ISO, follow these steps:
+.. Create a new 64-bit virtual machine from your hypervisor with the following configuration:
++
+* Six virtual CPUs
+* 12GB RAM
+* 400GB virtual disk, thin provisioned
+* One virtual network interface with internet access and access to the storage MVIP.
+* (Optional for SolidFire all-flash storage) One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
++
+IMPORTANT: Do not power on the virtual machine prior to the step indicating to do so later in this procedure.
+
+.. Attach the ISO to the virtual machine and boot to the .iso install image.
++
+NOTE: Installing a management node using the image might result in 30-second delay before the splash screen appears.
+
+. Power on the virtual machine for the management node after the installation completes.
+
+== Create the management node admin and configure the network
+
+. Using the terminal user interface (TUI), create a management node admin user.
++
+TIP: To move through the menu options, press the Up or Down arrow keys. To move through the buttons, press Tab. To move from the buttons to the fields, press Tab. To navigate between fields, press the Up or Down arrow keys.
+
+. Configure the management node network (eth0).
++
+NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
+
+== Configure the management node
+. SSH into the management node.
+. Using SSH, run the following command to gain root privileges. Enter your password when prompted:
++
+----
+sudo su
+----
+
+. Ensure time is synced (NTP) between the management node and the storage cluster.
++
+NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
+
+. Configure and run the management node setup command:
++
+NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
+
++
+----
+/sf/packages/mnode/setup-mnode --mnode_admin_user [username] --storage_mvip [mvip] --storage_username [username] --telemetry_active [true]
+----
+
+.. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:
++
+NOTE: The abbreviated form of the command name is in parentheses ( ) and can be substituted for the full name.
+
++
+* *--mnode_admin_user (-mu) [username]*: The username for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
+* *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software.
+* *--storage_username (-su) [username]*: The storage cluster administrator username for the cluster specified by the `--storage_mvip` parameter.
+* *--telemetry_active (-t) [true]*: Retain the value true that enables data collection for analytics by Active IQ.
+.. (Optional): Add Active IQ endpoint parameters to the command:
++
+* *--remote_host (-rh) [AIQ_endpoint]*: The endpoint where Active IQ telemetry data is sent to be processed. If the parameter is not included, the default endpoint is used.
+.. (Optional): Add the following persistent volume parameters. Do not modify or delete the account and volumes created for persistent volumes functionality or a loss in management capability will result.
+* *--use_persistent_volumes (-pv) [true/false, default: false]*: Enable or disable persistent volumes. Enter the value true to enable persistent volumes functionality.
+* *--persistent_volumes_account (-pva) [account_name]*: If `--use_persistent_volumes` is set to true, use this parameter and enter the storage account name that will be used for persistent volumes.
++
+NOTE: Use a unique account name for persistent volumes that is different from any existing account name on the cluster. It is critically important to keep the account for persistent volumes separate from the rest of your environment.
+
++
+* *--persistent_volumes_mvip (-pvm) [mvip]*: Enter the management virtual IP address (MVIP) of the storage cluster running Element software that will be used with persistent volumes. This is only required if multiple storage clusters are managed by the management node. If multiple clusters are not managed, the default cluster MVIP will be used.
+.. Configure a proxy server:
+* *--use_proxy (-up) [true/false, default: false]*: Enable or disable the use of the proxy. This parameter is required to configure a proxy server.
+* *--proxy_hostname_or_ip (-pi) [host]*: The proxy hostname or IP. This is required if you want to use a proxy. If you specify this, you will be prompted to input `--proxy_port`.
+* *--proxy_username (-pu) [username]*: The proxy username. This parameter is optional.
+* *--proxy_password (-pp) [password]*: The proxy password. This parameter is optional.
+* *--proxy_port (-pq) [port, default: 0]*: The proxy port. If you specify this, you will be prompted to input the proxy host name or IP (`--proxy_hostname_or_ip`).
+* *--proxy_ssh_port (-ps) [port, default: 443]*: The SSH proxy port. This defaults to port 443.
+.. (Optional) Use parameter help if you need additional information about each parameter:
++
+* *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
+.. Run the `setup-mnode` command.
+
+== Configure controller assets
+
+. From a browser, log into the management node REST API UI:
+.. Go to the storage MVIP and log in. This action causes the certificate to be accepted for the next step.
+.. Open the REST API UI on the management node:
++
+----
+https://[management node IP]/ mnode
+----
+. From the management node REST API UI, click *Authorize* or any lock icon and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Run *GET /assets* to find the base asset ID that you will need for the next steps:
+a. Click *GET /assets*.
+b. Click *Try it out*.
+c. Click *Execute*.
+d. Copy the value for `"id"` for the base asset to your clipboard:
++
+image::mNode_API_Base_asset_ID.png[base asset ID highlighted in response body]
++
+Your installation has a base asset configuration that was created during installation or upgrade.
+
+. Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
+.. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
+.. Click *Try it out*.
+.. Enter the required payload values as defined in the *Model* tab with type vCenter and vCenter credentials.
+.. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+.. Click *Execute*.
+
+== (NetApp HCI only) Configure compute node assets
+
+. (For NetApp HCI only) Add a compute node asset to the management node known assets:
+.. Click *POST/assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+.. Click *Try it out*.
+.. In the payload, enter the required payload values as defined in the Model tab. Use type `ESXi Host` and remove the `"hardware_tag"` parameter.
+.. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+.. Click *Execute*.
+
+
+[discrete]
+== Find more Information
+* link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
+* link:task_mnode_add_assets.html[Add an asset to the management node]
+* link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
