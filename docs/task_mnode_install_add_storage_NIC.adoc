@@ -24,9 +24,9 @@ If you are using an additional NIC for storage, you can SSH in to the management
 
 .Steps
 . Open an SSH or vCenter console.
-. Replace the values in the following command template (represented by `$` ) for each of the required parameters for your new storage network interface:
+. Replace the values in the following command template and run the command:
 +
-NOTE: The `cluster` object in the following template is required and can be used for management node host name renaming. The `--insecure` or `-k` options should not be used in production environments.
+NOTE: Values are represented by `$` for each of the required parameters for your new storage network interface. The `cluster` object in the following template is required and can be used for management node host name renaming. The `--insecure` or `-k` options should not be used in production environments.
 
 +
 ----
@@ -44,7 +44,7 @@ https://$mnode_IP:442/json-rpc/10.0 \
                                    "family" : "inet",
                                    "method" : "static",
                                    "mtu" : "9000",
-                                   "netmask" : "255.255.252.0",
+                                   "netmask" : "$subnet_mask",
                                    "status" : "Up"
                                    }
                           },
@@ -56,10 +56,6 @@ https://$mnode_IP:442/json-rpc/10.0 \
 }
 '
 ----
-
-. Run the command.
-
-
 
 [discrete]
 == Find more Information

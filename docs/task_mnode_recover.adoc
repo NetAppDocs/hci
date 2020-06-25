@@ -44,19 +44,16 @@ Prior to completing this procedure, you should have an understanding of link:con
 * <<Download ISO or OVA and deploy the VM>>
 * <<Configure the network>>
 * <<Configure the management node>>
-* <<Configure controller assets>>
-* <<Configure compute node assets,(NetApp HCI only) Configure compute node assets>>
 
 == Download ISO or OVA and deploy the VM
 
 . Download the OVA or ISO for your installation from the NetApp Support Site:
 +
-Element software: https://mysupport.netapp.com/products/p/element_software.html
-NetApp HCI: https://mysupport.netapp.com/products/p/hci.html
+Element software: https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab
+NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab
 
-.. Select the version number of the software to download.
-.. Click *Go*.
-.. Read and click through the required prompts, accept the EULA, and select the management node image you want to download.
+.. Click *Download Latest Release* and accept the EULA.
+.. Select the management node image you want to download.
 . If you downloaded the OVA, follow these steps:
 .. Deploy the OVA.
 .. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (for example, eth1) or ensure that the management network can route to the storage network.
@@ -85,10 +82,7 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 
 . Configure the management node network (eth0).
 +
-NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC.
-
-link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
-
+NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
 == Configure the management node
 . SSH into the management node or use the console provided by your hypervisor.
@@ -102,7 +96,7 @@ sudo su
 +
 NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
 
-. Configure the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:
+. Configure and run the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:
 +
 NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
 
@@ -120,10 +114,10 @@ NOTE: The abbreviated form of the command name is in parentheses ( ) and can be 
 * *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software with the persistent volumes that contain management node data for recovery.
 * *--storage_username (-su) [username]*: The storage cluster administrator username for the cluster specified by the `--storage_mvip` parameter.
 * *--persistent_volumes_account (-pva) [account_name]*: Enter the storage account name from the cluster containing the persistent volumes. This is the exact name of the storage user account that owns the volumes in the cluster.
-. (Optional) Use parameter help if you need additional information about each parameter:
+.. (Optional) Use parameter help if you need additional information about each parameter:
 +
 * *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
-. Run the `redeploy-mnode` command.
+.. Run the `redeploy-mnode` command.
 
 
 [discrete]

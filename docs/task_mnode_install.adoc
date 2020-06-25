@@ -54,12 +54,11 @@ Prior to following this procedure, you should have an understanding of  link:con
 
 . Download the OVA or ISO for your installation from the NetApp Support Site:
 +
-Element software: https://mysupport.netapp.com/products/p/element_software.html
-NetApp HCI: https://mysupport.netapp.com/products/p/hci.html
+Element software: https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab
+NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab
 
-.. Select the version number of the software to download.
-.. Click *Go*.
-.. Read and click through the required prompts, accept the EULA, and select the management node image you want to download.
+.. Click *Download Latest Release* and accept the EULA.
+.. Select the management node image you want to download.
 . If you downloaded the OVA, follow these steps:
 .. Deploy the OVA.
 .. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (for example, eth1) or ensure that the management network can route to the storage network.
@@ -88,10 +87,7 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 
 . Configure the management node network (eth0).
 +
-NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC.
-
-link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
-
+NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
 == Configure the management node
 . SSH into the management node.
@@ -105,7 +101,7 @@ sudo su
 +
 NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
 
-. Configure the management node setup command:
+. Configure and run the management node setup command:
 +
 NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
 
@@ -134,17 +130,17 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 
 +
 * *--persistent_volumes_mvip (-pvm) [mvip]*: Enter the management virtual IP address (MVIP) of the storage cluster running Element software that will be used with persistent volumes. This is only required if multiple storage clusters are managed by the management node. If multiple clusters are not managed, the default cluster MVIP will be used.
-. Configure a proxy server:
+.. Configure a proxy server:
 * *--use_proxy (-up) [true/false, default: false]*: Enable or disable the use of the proxy. This parameter is required to configure a proxy server.
 * *--proxy_hostname_or_ip (-pi) [host]*: The proxy hostname or IP. This is required if you want to use a proxy. If you specify this, you will be prompted to input `--proxy_port`.
 * *--proxy_username (-pu) [username]*: The proxy username. This parameter is optional.
 * *--proxy_password (-pp) [password]*: The proxy password. This parameter is optional.
 * *--proxy_port (-pq) [port, default: 0]*: The proxy port. If you specify this, you will be prompted to input the proxy host name or IP (`--proxy_hostname_or_ip`).
 * *--proxy_ssh_port (-ps) [port, default: 443]*: The SSH proxy port. This defaults to port 443.
-. (Optional) Use parameter help if you need additional information about each parameter:
+.. (Optional) Use parameter help if you need additional information about each parameter:
 +
 * *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
-. Run the `setup-mnode` command.
+.. Run the `setup-mnode` command.
 . From a browser, log into the management node REST API UI:
 .. Go to the storage MVIP and log in. This action causes the certificate to be accepted for the next step.
 .. Open the REST API UI on the management node:
