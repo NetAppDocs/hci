@@ -61,7 +61,6 @@ image::mnode_swagger_ui.png[management node REST API UI]
 
 [discrete]
 == Find more Information
-* Configure a proxy server
 * link:task_hci_mnode_enable_activeIQ.html[Enable the Active IQ collector service for SolidFire all-flash storage]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
