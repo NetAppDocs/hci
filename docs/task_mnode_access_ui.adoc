@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_mnode_access_ui.html
-summary: You can use two user interfaces for the management node: the UI or the REST API UI.
+summary: You can access the management UI or the REST API UI.
 keywords: netapp, mnode, management node, api, hci
 ---
 
