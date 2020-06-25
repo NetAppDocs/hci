@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_mnode_enable_remote_support_connection.html
+permalink: docs/task_mnode_enable_remote_support_connections.html
 summary: You can use the management node to enable NetApp Support access for troubleshooting.
 keywords: netapp, mnode, management node, netapp support connect, support tunnel
 ---
