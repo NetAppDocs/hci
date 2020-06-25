@@ -1,0 +1,91 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_settings.html
+summary: You can modify and test the management node network, cluster, and system settings.
+keywords: netapp, management node ui, mnode ui, network settings, test network, cluster settings
+---
+
+= Modify and test the management node network, cluster, and system settings
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can modify and test the management node network, cluster, and system settings.
+
+* <<Update management node network settings>>
+* <<Update management node cluster settings>>
+* <<Test the management node settings>>
+
+
+== Update management node network settings
+On the Network Settings tab of the per-node management node UI, you can modify the management node network interface fields.
+
+. Open the per-node management node UI.
+. Click the *Network Settings* tab.
+. View or enter the following information:
+.. *Method*: Choose one of the following methods to configure the interface:
++
+* `loopback`: Use to define the IPv4 loopback interface.
+* `manual`: Use to define interfaces for which no configuration is done by default.
+* `dhop`: Use to obtain an IP address via DHCP.
+* `static`: Use to define Ethernet interfaces with statically allocated IPv4 addresses.
+.. *Link Speed*: The speed negotiated by the virtual NIC.
+.. *IPv4 Address*: The IPv4 address for the eth0 network.
+.. *IPv4 Subnet Mask*: Address subdivisions of the IPv4 network.
+.. *IPv4 Gateway Address*: Router network address to send packets out of the local network.
+.. *IPv6 Address*: The IPv6 address for the eth0 network.
+.. *IPv6 Gateway Address*: Router network address to send packets out of the local network.
++
+IMPORTANT: The IPv6 options are not supported for 11.3 or later versions of the management node.
+
+.. *MTU*: Largest packet size that a network protocol can transmit. Must be greater than or equal to 1500. If you add a second storage NIC, the value should be 9000.
+.. *DNS Servers*: Network interface used for cluster communication.
+.. *Search Domains*: Search for additional MAC addresses available to the system.
+.. *Status*: Possible values:
++
+*** `UpAndRunning`
+*** `Down`
+*** `Up`
+.. *Routes*: Static routes to specific hosts or networks via the associated interface the routes are
+configured to use.
+
+
+== Update management node cluster settings
+
+On the Cluster Settings tab of the per-node UI for the management node, you can modify cluster interface fields when a node is in Available, Pending, PendingActive, and Active states.
+
+. Open the per-node management node UI.
+. Click the *Cluster Settings* tab.
+. View or enter the following information:
++
+* *Role*: Role the management node has in the cluster. Possible value: `Management`.
+* *Version*: Element software version running on the cluster.
+* *Default Interface*: Default network interface used for management node communication with the cluster running Element software.
+
+== Test the management node settings
+
+After you change management and network settings for the management node and commit the changes, you can run tests to validate the changes you made.
+
+. Open the per-node management node UI.
+. In the management node UI, click *System Tests*.
+. Complete any of the following:
+.. To verify that the network settings you configured are valid for the system, click *Test Network Config*.
+.. To test network connectivity to all nodes in the cluster on both 1G and 10G interfaces using ICMP packets, click *Test Ping*.
+. View or enter the following:
++
+* *Hosts*: Specify a comma-separated list of addresses or host names of devices to ping.
+* *Attempts*: Specify the number of times the system should repeat the test ping. Default: 5.
+* *Packet Size*: Specify the number of bytes to send in the ICMP packet that is sent to each IP. The number of bytes must be less than the maximum MTU specified in the network configuration.
+* *Timeout mSec*: Specify the number of milliseconds to wait for each individual ping response. Default: 500 ms.
+* *Total Timeout Sec*: Specify the time in seconds the ping should wait for a system response before issuing the next ping attempt or ending the process. Default: 5.
+* *Prohibit Fragmentation*: Enable the DF (do not fragment) flag for the ICMP packets.
+
+[discrete]
+== Find more Information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

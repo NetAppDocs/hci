@@ -14,7 +14,13 @@ keywords: netapp, hci, logs, collection, troubleshooting, monitor
 :imagesdir: ../media/
 
 [.lead]
-If you have trouble with your NetApp HCI installation, you can collect logs to send to NetApp Support to help with diagnosis. You can access the log collection area from the NetApp Hybrid Control Dashboard.
+If you have trouble with your NetApp HCI installation, you can collect logs to send to NetApp Support to help with diagnosis. You can either use NetApp Hybrid Cloud Control or the REST API to collect logs.
+
+* <<Use NetApp Hybrid Cloud Control to collect NetApp HCI logs>>
+* <<Use the REST API to collect NetApp HCI logs>>
+
+== Use NetApp Hybrid Cloud Control to collect NetApp HCI logs
+You can access the log collection area from the NetApp Hybrid Cloud Control Dashboard.
 
 .Steps
 . Open a web browser and browse to the IP address of the management node. For example:
@@ -29,7 +35,7 @@ https://[management node IP address]
 The *Collect Logs* page appears. If you have collected logs before, you can download the existing log package, or begin a new log collection.
 . Select a date range in the *Date Range* drop-down menu to specify what dates the logs should include.
 +
-If you specify a custom start date, you can select the date to begin the date range. The logs will cover from that date up to the present time.
+If you specify a custom start date, you can select the date to begin the date range. Logs will be collected from that date up to the present time.
 . In the *Log Collection* section, select the types of log files the log package should include.
 +
 For storage and compute logs, you can expand the list of storage or compute nodes and select individual nodes to collect logs from (or all nodes in the list).
@@ -40,6 +46,61 @@ Log collection runs in the background, and the page shows the progress.
 NOTE: Depending on the logs you collect, the progress bar might remain at a certain percentage for several minutes, or progress very slowly at some points.
 
 . Click *Download Logs* to download the log package.
++
+The log package is in a compressed UNIX .tgz file format.
+
+== Use the REST API to collect NetApp HCI logs
+You can use REST API to collect NetApp HCI logs.
+
+.Steps
+. Locate the storage cluster ID:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/logs/1
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client` if the value is not already populated.
+... Click *Authorize* to begin a session.
+. Collect logs from NetApp HCI:
+.. Click *POST /bundle*.
+.. Click *Try it out*.
+.. Change the values of the following parameters in the *Request body* field to true or false depending on which type of logs you need to collect:
+... `computeLogs`
+... `mnodeLogs`
+... `storageCrashDumps`
+... `storageLogs`
+.. Click *Execute* to begin log collection.
+The response should return a response similar to the following:
++
+----
+{
+  "_links": {
+    "self": "https://10.1.1.5/logs/1/bundle"
+  },
+  "taskId": "4157881b-z889-45ce-adb4-92b1843c53ee",
+  "taskLink": "https://10.1.1.5/logs/1/bundle"
+}
+----
+. Check on the status of the log collection task:
+.. Click *GET /bundle*.
+.. Click *Try it out*.
+.. Click *Execute* to return a status of the collection task.
+.. Scroll to the bottom of the response body.
++
+You should see a `percentComplete` attribute detailing the progress of the collection. If the collection is complete, the `downloadLink` attribute contains the full download link including the file name of the log package.
+
+.. Copy the file name at the end of the `downloadLink` attribute.
+. Download the collected log package:
+.. Click *GET /bundle/{filename}*.
+.. Click *Try it out*.
+.. Paste the file name you copied earlier into the `filename` parameter text field.
+.. Click *Execute*.
++
+After execution, a download link appears in the response body area.
+
+.. Click *Download file* and save the resulting file to your computer.
 +
 The log package is in a compressed UNIX .tgz file format.
 

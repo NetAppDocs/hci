@@ -1,0 +1,32 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_work_overview_API.html
+summary: You can use the management node (mNode) to upgrade system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
+keywords: netapp, mnode api, management node api, rest api
+---
+
+= Management node REST API UI overview
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+By using the built-in REST API UI (`https://[mNode IP}/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
+
+Tasks you can perform with REST APIs:
+
+* link:task_mnode_api_get_authorizationtouse.html[Get authorization to use REST APIs]
+* link:task_mnode_enable_activeIQ.html[Enable Active IQ and NetApp HCI monitoring]
+* link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
+* link:task_mnode_change_storage_cluster_admin_password.html[Change the storage cluster administrator password]
+* link:task_mnode_configure_proxy_server.html[Configure a proxy server for the management node]
+* link:task_mnode_get_logs_from_management_services.html[Get logs from management services]
+
+[discrete]
+== Find more information
+* link:task_mnode_access.html[Access the management node]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
