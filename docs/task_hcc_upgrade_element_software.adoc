@@ -63,7 +63,7 @@ https://<ManagementNodeIP>
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Storage*.
 +
-The *Storage* tab lists the storage clusters that are part of your installation.
+The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page.
 . Choose from the following options and perform the set of steps that are applicable to your cluster:
 +
 [%header,cols=2*]
