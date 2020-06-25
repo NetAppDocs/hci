@@ -352,9 +352,9 @@ During the upgrade, the `status` indicates `running` if no errors are encountere
 The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
 
 == What happens if an upgrade fails using NetApp Hybrid Cloud Control
-If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, you cannot pause the upgrade. You will need to engage NetApp Support to assist with the failure investigation.
+If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, clicking *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
 
-NetApp Hybrid Cloud Control has a pre-set three-hour period, during which one of the following scenarios can happen:
+NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during which one of the following scenarios can happen:
 
 * The cluster faults get resolved within the three-hour window, and upgrade resumes. You do not need to take any action in this scenario.
 * The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by clicking *Resume* after the problem is resolved.
