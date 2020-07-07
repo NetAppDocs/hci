@@ -66,10 +66,8 @@ NOTE: A controller asset is required for NetApp HCI monitoring services.
 
 .. Click *POST /assets/{asset_id}/controllers*.
 .. Click *Try it out*.
-.. Enter the configuration information for the controller asset. All fields are optional:
+.. Enter the configuration information for the controller asset:
 +
-NOTE: `ip` is the vCenter IP address.
-
 ----
 {
 "username": "string",
@@ -80,6 +78,8 @@ NOTE: `ip` is the vCenter IP address.
 "config": {}
 }
 ----
++
+NOTE: All fields are optional. `ip` is the vCenter IP address.
 
 .. Enter the parent ID from the base asset in *asset_ID*.
 .. Click *Execute*.
