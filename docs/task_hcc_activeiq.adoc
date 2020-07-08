@@ -48,7 +48,7 @@ The link:https://activeiq.solidfire.com[SolidFire Active IQ Dashboard^] appears.
 .. In the left navigation pane, click *Nodes*.
 . If a node or nodes are missing from the list, contact NetApp Support.
 
-TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
+TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
 
 
 [discrete]

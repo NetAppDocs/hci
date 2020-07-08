@@ -23,7 +23,7 @@ Tasks you can perform with REST APIs:
 * link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
 * link:task_mnode_change_storage_cluster_admin_password.html[Change the storage cluster administrator password]
 * link:task_mnode_configure_proxy_server.html[Configure a proxy server for the management node]
-* link:task_mnode_get_logs_from_management_services.html[Get logs from management services]
+* link:task_hcc_collectlogs.html#use-the-rest-api-to-collect-netapp-hci-logs[Use the REST API to collect NetApp HCI logs]
 
 [discrete]
 == Find more information

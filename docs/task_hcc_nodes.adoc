@@ -48,7 +48,7 @@ image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes page image]
 .. To show or hide columns, click the *Show/Hide Columns* icon.
 .. To download the table, click the *Download* icon.
 
-TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
+TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
 
 
 [discrete]
