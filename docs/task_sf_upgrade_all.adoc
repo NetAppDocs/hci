@@ -38,7 +38,7 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 
 . link:task_upgrade_element_latest_healthtools.html[(Optional) Upgrade to the latest HealthTools].
 +
-NOTE: Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools upgrades are not required for upgrades using NetApp Hybrid Cloud Control.
+NOTE: Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for performing Element upgrades using NetApp Hybrid Cloud Control.
 
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 . link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
