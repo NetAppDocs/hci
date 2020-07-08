@@ -14,7 +14,8 @@ keywords: netapp, HealthTools upgrade, sfupdate-healthtools, element
 :imagesdir: ../media/
 
 [.lead]
-Before you begin the Element storage upgrade, you should upgrade your HealthTools suite.
+Before you begin the Element storage upgrade, you should upgrade your HealthTools suite. Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for performing Element upgrades using NetApp Hybrid Cloud Control.
+
 
 .What you'll need
 

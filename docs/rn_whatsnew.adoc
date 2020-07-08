@@ -16,9 +16,9 @@ keywords: netapp, hci, element, new, whatsnew
 [.lead]
 NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.8 includes Element 12.0 for storage clusters.
 
-* <<NetApp HCI 1.8>> describes new features and updates in NetApp HCI version 1.8.
+* The <<NetApp HCI 1.8>> section describes new features and updates in NetApp HCI version 1.8.
 
-* <<Element 12.0>> describes new features and updates in NetApp Element 12.0.
+* The <<Element 12.0>> section describes new features and updates in NetApp Element 12.0.
 
 == NetApp HCI 1.8
 NetApp HCI 1.8 introduces two-node and three-node storage cluster capability, multi-factor authentication, and NetApp Hybrid Cloud Control enhancements.
