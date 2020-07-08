@@ -5,7 +5,7 @@ summary: You can view storage and compute resources on the NetApp Hybrid Cloud C
 keywords: netapp, hci, on premise, hcc, hybrid cloud control
 ---
 
-= View storage and compute resources on the HCC Dashboard
+= Monitor storage and compute resources with the HCC Dashboard
 
 :hardbreaks:
 :nofooter:
@@ -28,9 +28,9 @@ https://[management node IP address]
 . View the Dashboard:
 * *Storage*: Displays the number of storage clusters, storage nodes, and total volumes.
 * *Compute*: Displays the number of compute clusters and total compute nodes.
-* *Storage Capacity*: Displays the total physical storage space available in your cluster on the *RAW* tab, and information about the provisioned storage on the *EFFECTIVE* tab. 
+* *Storage Capacity*: Displays the total physical storage space available in your cluster on the *RAW* tab, and information about the provisioned storage on the *EFFECTIVE* tab.
 
-TIP: To view cluster health, look at the SolidFire Active IQ Dashboard. See link:task_hcc_activeiq.html[Viewing performance, capacity, and cluster health in SolidFire Active IQ].
+TIP: To view cluster health, look at the SolidFire Active IQ Dashboard. See link:task_hcc_activeiq.html[Monitor performance, capacity, and cluster health in SolidFire Active IQ].
 
 
 [discrete]
