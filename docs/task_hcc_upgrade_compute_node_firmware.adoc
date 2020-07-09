@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 :imagesdir: ../media/
 
 [.lead]
-For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC.
+For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC. To upgrade compute node firmware, you can use the NetApp Hybrid Cloud Control UI, REST API, a USB drive with the latest firmware image, or the BMC UI.
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
@@ -23,18 +23,29 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
 
-TIP: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
+.About this task
+
+In production environments, upgrade the firmware on one compute node at a time.
 
 .Upgrade options
 
 Choose the option that is relevant to your upgrade scenario:
 
-- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
-- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+* <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>>
+* <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
+* For compute node image 12.0: <<Use a USB drive with the latest firmware image downloaded>>
+* For compute firmware 12.2.92: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
-.About this task
++
+TIP: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
-In production environments, upgrade the firmware on one compute node at a time.
+== Use NetApp Hybrid Cloud Control UI to upgrade a compute node
+
+The firmware on a compute node should only be upgraded if:
+the compute node is in maintenance mode in order to ensure the upgrade does not interfere with any active workloads. (Service / API driven)
+the health check on the vSphere cluster is successful to ensure the upgrade has the greatest chance to succeed.
+
+== Use NetApp Hybrid Cloud Control UI to upgrade a compute node
 
 == Use a USB drive with the latest firmware image downloaded
 
