@@ -27,6 +27,8 @@ entries:
          - title: Volumes
            url: /concept_hci_volumes.html
       # url: /concept_hci_storage.html
+     - title: Licensing
+       url: /concept_cg_hci_licensing.html
      - title: Security
        url: /concept_cg_hci_security.html
      - title: Performance
