@@ -1,0 +1,42 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_cg_hci_licensing.html
+summary: When you use NetApp HCI, you might need additional licenses.
+keywords: netapp, hci, license
+---
+
+= NetApp HCI licensing
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+When you use NetApp HCI, you might need additional licenses depending on what you are using.
+
+== NetApp HCI and VMware vSphere licensing
+
+VMware vSphere licensing depends on your configuration:
+
+[cols=2*,options="header",cols="25,75"]
+|===
+| Networking option
+| Licensing
+| Option A: Two cables for compute nodes using VLAN tagging (All compute nodes) | Requires use of vSphere Distributed Switch, which requires VMware vSphere Enterprise Plus licensing.
+| Option B: Six cables for compute nodes using tagged VLANs (H410C 2RU 4-Node compute node)	 | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
+| Option C: Six cables for compute nodes using native and tagged VLANs (H410C, 2RU 4-Node Compute Node) | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
+|===
+
+== NetApp HCI and ONTAP Select licensing
+
+If you were provided a version of ONTAP Select for use in conjunction with a purchased NetApp HCI system, the following additional limitations apply:
+
+* The ONTAP Select license, which is bundled with a NetApp HCI system sale, may only be used in conjunction with NetApp HCI compute nodes.
+* The storage for those ONTAP Select instances must reside only on the NetApp HCI storage nodes.
+* The use of third-party compute nodes or third-party storage nodes is prohibited.
+
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
