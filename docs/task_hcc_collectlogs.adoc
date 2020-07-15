@@ -66,7 +66,7 @@ https://[management node IP]/logs/1
 . Collect logs from NetApp HCI:
 .. Click *POST /bundle*.
 .. Click *Try it out*.
-.. Change the values of the following parameters in the *Request body* field to true or false depending on which type of logs you need to collect:
+.. Change the values of the following parameters in the *Request body* field depending on which type of logs you need to collect and for what time range:
 ... `modifiedSince` - Use this parameter (formatted as a date string) to define a start date and time for the log collection range. For example, "2020-07-14T20:19:00.000Z" to define a start date of July 14, 2020 at 20:19 UTC time.
 ... `computeLogs` - Set this parameter to `true` to include compute node logs.
 ... `mnodeLogs` - Set this parameter to `true` to include management node logs.
