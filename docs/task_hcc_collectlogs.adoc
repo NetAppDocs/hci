@@ -16,6 +16,10 @@ keywords: netapp, hci, logs, collection, troubleshooting, monitor
 [.lead]
 If you have trouble with your NetApp HCI installation, you can collect logs to send to NetApp Support to help with diagnosis. You can either use NetApp Hybrid Cloud Control or the REST API to collect logs.
 
+.Log collection options
+
+Choose one of the following options:
+
 * <<Use NetApp Hybrid Cloud Control to collect NetApp HCI logs>>
 * <<Use the REST API to collect NetApp HCI logs>>
 
@@ -67,13 +71,38 @@ https://[management node IP]/logs/1
 .. Click *POST /bundle*.
 .. Click *Try it out*.
 .. Change the values of the following parameters in the *Request body* field depending on which type of logs you need to collect and for what time range:
-... `modifiedSince` - (Date string) Only include logs modified after this date and time. For example, the value "2020-07-14T20:19:00.000Z" defines a start date of July 14, 2020 at 20:19 UTC.
-... `computeLogs` - (Boolean) Set this parameter to `true` to include compute node logs.
-... `computeIds` - (UUID array) If `computeLogs` is set to `true`, populate this parameter with the management node asset IDs of compute nodes to limit log collection to those specific compute nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
-... `mnodeLogs` - (Boolean) Set this parameter to `true` to include management node logs.
-... `storageCrashDumps` - (Boolean) Set this parameter to `true` to include storage node crash debug logs.
-... `storageLogs` - (Boolean) Set this parameter to `true` to include storage node logs.
-... `storageNodeIds` - (UUID array) If `storageLogs` is set to `true`, populate this parameter with the storage cluster node IDs to limit log collection to those specific storage nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
++
+|===
+|Parameter |Type |Description
+
+|`modifiedSince`
+|Date string
+|Only include logs modified after this date and time. For example, the value "2020-07-14T20:19:00.000Z" defines a start date of July 14, 2020 at 20:19 UTC.
+
+|`computeLogs`
+|Boolean
+|Set this parameter to `true` to include compute node logs.
+
+|`computeIds`
+|UUID array
+|If `computeLogs` is set to `true`, populate this parameter with the management node asset IDs of compute nodes to limit log collection to those specific compute nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
+
+|`mnodeLogs`
+|Boolean
+|Set this parameter to `true` to include management node logs.
+
+|`storageCrashDumps`
+|Boolean
+|Set this parameter to `true` to include storage node crash debug logs.
+
+|`storageLogs`
+|Boolean
+|Set this parameter to `true` to include storage node logs.
+
+|`storageNodeIds`
+|UUID array
+|If `storageLogs` is set to `true`, populate this parameter with the storage cluster node IDs to limit log collection to those specific storage nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
+|===
 .. Click *Execute* to begin log collection.
 The response should return a response similar to the following:
 +
