@@ -67,11 +67,13 @@ https://[management node IP]/logs/1
 .. Click *POST /bundle*.
 .. Click *Try it out*.
 .. Change the values of the following parameters in the *Request body* field depending on which type of logs you need to collect and for what time range:
-... `modifiedSince` - Use this parameter (formatted as a date string) to define a start date and time for the log collection. For example, the value "2020-07-14T20:19:00.000Z" defines a start date of July 14, 2020 at 20:19 UTC time.
-... `computeLogs` - Set this parameter to `true` to include compute node logs.
-... `mnodeLogs` - Set this parameter to `true` to include management node logs.
-... `storageCrashDumps` - Set this parameter to `true` to include storage node crash debug logs.
-... `storageLogs` - Set this parameter to `true` to include storage node logs.
+... `modifiedSince` - (Date string) Only include logs modified after this date and time. For example, the value "2020-07-14T20:19:00.000Z" defines a start date of July 14, 2020 at 20:19 UTC.
+... `computeLogs` - (Boolean) Set this parameter to `true` to include compute node logs.
+... `computeIds` - (UUID array) If `computeLogs` is set to `true`, populate this parameter with the management node asset IDs of compute nodes to limit log collection to those specific compute nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible IDs you can use.
+... `mnodeLogs` - (Boolean) Set this parameter to `true` to include management node logs.
+... `storageCrashDumps` - (Boolean) Set this parameter to `true` to include storage node crash debug logs.
+... `storageLogs` - (Boolean) Set this parameter to `true` to include storage node logs.
+... `storageNodeIds` - (UUID array) If `storageLogs` is set to `true`, populate this parameter with the storage cluster node IDs of storage nodes to limit log collection to those specific storage nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible IDs you can use.
 .. Click *Execute* to begin log collection.
 The response should return a response similar to the following:
 +
