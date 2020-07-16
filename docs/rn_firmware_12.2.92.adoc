@@ -19,7 +19,7 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
 
 == What's New
-Version 12.2.92 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260.
+Version 12.2.92 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260. The BMC updates for H610C and H615C nodes disable TLS 1.0 and 1.1, and the H610C BMC updates also resolve CSESF-26 (intermittent fan noise).
 
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
 
