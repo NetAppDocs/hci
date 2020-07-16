@@ -21,7 +21,9 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 .What you'll need
 
-See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
+* For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+* *Admin privileges*: You have cluster administrator permissions to perform the upgrade.
+
 
 .About this task
 
@@ -47,7 +49,199 @@ The firmware on a compute node should only be upgraded if:
 the compute node is in maintenance mode in order to ensure the upgrade does not interfere with any active workloads. (Service / API driven)
 the health check on the vSphere cluster is successful to ensure the upgrade has the greatest chance to succeed.
 
-== Use NetApp Hybrid Cloud Control UI to upgrade a compute node
+== Use NetApp Hybrid Cloud Control API to upgrade a compute node
+
+You can use APIs to upgrade compute nodes in a cluster to the latest firmware version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+
+.Steps
+
+. Do one of the following depending on your connection:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Your management node has external connectivity.
+a|
+. Verify the repository connection:
+.. Open the package service REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
+. Find the upgrade package ID:
+.. From the REST API UI, click *GET /packages*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy and save the package ID for use in a later step.
+
+|Your management node is within a dark site without external connectivity.
+a|
+. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest compute node firmware image to a device that is accessible to the management node.
+. Upload the compute firmware upgrade package to the management node:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *POST /packages*.
+.. Click *Try it out*.
+.. Click *Browse* and select the upgrade package.
+.. Click *Execute* to initiate the upload.
+.. From the response, copy and save the package ID (`"id"`) for use in a later step.
+. Verify the status of the upload.
+.. From the REST API UI, click *GET​ /packages​/{id}​/status*.
+.. Click *Try it out*.
+.. Enter the package ID you copied in the previous step in *id*.
+.. Click *Execute* to initiate the status request.
++
+The response indicates `state` as `finished` when complete.
+|===
+. Locate the compute controller ID and node hardware tag for the node you intend to upgrade:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/inventory
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET /installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the installation asset ID (`"id"`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the cluster controller ID (`"controllerId"`) and node hardware tag (`"hardwareTag"`) for use in a later step.
+. Run the compute node firmware upgrade:
+.. Open the hardware service REST API UI on the management node:
++
+----
+https://[management node IP]/hardware
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. Click *POST /nodes/{hardware_id}/upgrades*.
+.. Click *Try it out*.
+.. Enter the hardware host asset ID (`"hardwareTag"` saved a previous step) in the parameter field.
+.. Do the following to the payload values:
+... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
+... Enter the cluster controller ID (`"controllerId"` saved a the previous step).
+... Enter the package name and package version indicated on the bundle you downloaded.
++
+----
+{
+  "config": {
+    "force": false,
+    "maintenanceMode": true
+  },
+  "controllerId": "00000000-0000-0000-0000-AC1F6BC4ECF6",
+  "packageName": "compute_firmware",
+  "packageVersion": "12.2.92"
+}
+----
+
+.. Click *Execute* to initiate the upgrade.
+.. Copy the upgrade task ID (`"taskId"`) that is part of the response.
+. Verify the upgrade progress and results:
+.. Click *GET /task/{task_id}/logs*.
+.. Click *Try it out*.
+.. Enter the task ID from the previous step in *task_Id*.
+.. Click *Execute*.
+.. Do one of the following if there are problems or special requirements during the upgrade:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|You need to correct cluster health issues due to `failedHealthChecks` message in the response body.
+a|
+. Go to the specific KB article listed for each issue or perform the specified remedy.
+. If a KB is specified, complete the process described in the relevant KB article.
+. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. Click *Try it out*.
+. Enter the upgrade ID from the previous step in *upgradeId*.
+. Enter `"action":"resume"` in the request body.
++
+----
+{
+  "action": "resume"
+}
+----
+. Click *Execute*.
+
+|You need to pause the upgrade because the maintenance window is closing or for another reason.
+a|
+. Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. Click *Try it out*.
+. Enter the upgrade ID from the previous step in *upgradeId*.
+. Enter `"action":"pause"` in the request body.
++
+----
+{
+  "action": "pause"
+}
+----
+. Click *Execute*.
+
+|If you are upgrading an H610S cluster running Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
+a|
+. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> and complete the process for each node.
+. Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. Click *Try it out*.
+. Enter the upgrade ID from the previous step in *upgradeId*.
+. Enter `"action":"acknowledge"` in the request body.
++
+----
+{
+  "action": "acknowledge"
+}
+----
+. Click *Execute*.
+|===
+.. Run the *GET ​/upgrades/{upgradesId}* API multiple times, as needed, until the process is complete.
++
+During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
++
+The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
+. Confirm upgraded firmware versions:
+.. Open the hardware service REST API UI on the management node:
++
+----
+https://[management node IP]/hardware
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET ​/nodes​/{hardware_id}​/upgrades*.
+.. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
+.. Click *Try it out*.
+.. Click *Execute*.
 
 == Use a USB drive with the latest firmware image downloaded
 
