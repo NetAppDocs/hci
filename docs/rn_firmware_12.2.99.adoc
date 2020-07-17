@@ -63,7 +63,7 @@ The following are known issues in this release that might affect daily operation
 |When you upgrade the BMC software on an Element 11.8 storage node, BMC user credentials are lost.
 
 |CSESF-293
-|When you upgrade to the version 12.2.92 compute node firmware package on H410C nodes, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
+|When you upgrade to the version 12.2.92 compute node firmware package on H410C, H610C, or H300/500/700E nodes, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
 
 |CSESF-26
 |In some circumstances, H610C nodes can exhibit intermittent fan noise.
