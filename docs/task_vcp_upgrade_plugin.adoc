@@ -23,7 +23,7 @@ This upgrade procedure covers the following upgrade scenarios:
 * You are upgrading to a 6.5 or 6.7 HTML5 vSphere Web Client.
 * You are upgrading to a 6.5 or 6.7 Flash vSphere Web Client.
 
-IMPORTANT: The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. It is compatible with the version 6.7 U2 vSphere Web Client for Flash. The plug-in has not yet been tested for use with vSphere 7.0.
+IMPORTANT: The plug-in is compatible with vSphere Web Client  version 6.7 U2 for Flash and with version 6.7 U3 (Flash and HTML5). The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. The plug-in has not yet been tested for use with vSphere 7.0. For more information about all supported vSphere versions, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[release notes] for the plug-in.
 
 .What you'll need
 
