@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_hcc_upgrade_element_software.html
-summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade NetApp Element software.
-keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
+permalink: docs\task_hcc_upgrade_storage_firmware.html
+summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade the firmware associated with your storage nodes.
+keywords: netapp, hci, cluster, element, H610S upgrade, hcc, firmware, storage nodes
 ---
 
-= Upgrade Element software
+= Upgrade storage firmware
 
 :hardbreaks:
 :nofooter:
@@ -14,43 +14,37 @@ keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 :imagesdir: ../media/
 
 [.lead]
-To upgrade to NetApp Element software 12.0, you can use the NetApp Hybrid Cloud Control UI, REST API, or the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+Starting with Element 12.0 and management services version XYZ, can use the NetApp Hybrid Cloud Control UI and REST API to upgrade the firmware on your storage nodes. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
 .What you'll need
 
 * *Admin privileges*: You have storage cluster administrator permissions to perform the upgrade.
-* *Valid upgrade path*: You have checked upgrade path information for the Element version you are upgrading to and verified that the upgrade path is valid.
-https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 * *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 * *System ports*: If you are using NetApp Hybrid Cloud Control, you have ensured that TCP port `443` is open so that NetApp Hybrid Cloud Control can communicate with the online software repository to download upgrade packages. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Management node upgrades*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services updates*: You have updated your management services bundle to the latest version.
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading the firmware on your storage nodes.
 
-* *Cluster health*: You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+* *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 
 .Upgrade options
 
-Choose one of the following Element software upgrade options:
+Choose one of the following storage firmware upgrade options:
 
-* <<Use NetApp Hybrid Cloud Control UI to upgrade Element storage>>
-* <<Use NetApp Hybrid Cloud Control API to upgrade Element storage>>
-* <<Upgrade Element software at connected sites using HealthTools>>
-* <<Upgrade Element software at dark sites using HealthTools>>
+* <<Use NetApp Hybrid Cloud Control UI to upgrade storage firmware>>
+* <<Use NetApp Hybrid Cloud Control API to upgrade storage firmware>>
 
-CAUTION: If you are upgrading an H610S cluster running a pre-11.8 version of Element to Element 12.0 or later, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each H610S node in the cluster.
+== Use NetApp Hybrid Cloud Control UI to upgrade storage firmware
 
-== Use NetApp Hybrid Cloud Control UI to upgrade Element storage
-
-Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
+You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware the storage nodes in your cluster.
 
 .What you'll need
 * If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
-TIP: The upgrade process takes approximately 30 minutes per node for non-H610S platforms.
+TIP: The upgrade process takes approximately 30 minutes per node for non-H610S platforms. IS THIS TRUE FOR FW UPGRADES?
 
 .Steps
 
@@ -63,7 +57,7 @@ https://<ManagementNodeIP>
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Storage*.
 +
-The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page.
+The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page. If you have clusters running Element 12.0 or later, you will see the current firmware bundle version listed for these clusters. If the nodes in a single cluster have different firmware versions on them, you will see *Multiple* in the *Current Firmware Bundle Version* column. If all your clusters are running Element versions earlier than 12.0, you will not see any information about firmware bundle version numbers. This information is also available on the *Nodes* page. See link:task_hcc_nodes.html[View your inventory].
 . Choose from the following options and perform the set of steps that are applicable to your cluster:
 +
 [%header,cols=2*]
