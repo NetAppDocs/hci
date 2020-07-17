@@ -22,8 +22,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 .What you'll need
 
 * For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
-* *Admin privileges*: You have cluster administrator permissions to perform the upgrade.
-
+* *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 
 .About this task
 
@@ -51,7 +50,11 @@ the health check on the vSphere cluster is successful to ensure the upgrade has 
 
 == Use NetApp Hybrid Cloud Control API to upgrade a compute node
 
-You can use APIs to upgrade compute nodes in a cluster to the latest firmware version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+You can use APIs to upgrade each compute node in a cluster to the latest firmware version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+
+.What you'll need
+
+Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://[management node IP]/inventory`).
 
 .Steps
 
@@ -68,7 +71,7 @@ a|
 .. Open the package service REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://[management node IP]/package-repository
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -83,7 +86,7 @@ https://[management node IP]/package-repository/1/
 .. From the REST API UI, click *GET /packages*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy and save the package ID for use in a later step.
+.. From the response, copy and save the upgrade package name (`"packageName"`) and package version (`"packageVersion"`) for use in a later step.
 
 |Your management node is within a dark site without external connectivity.
 a|
@@ -92,7 +95,7 @@ a|
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://[management node IP]/package-repository
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -111,9 +114,10 @@ https://[management node IP]/package-repository/1/
 .. Click *Execute* to initiate the status request.
 +
 The response indicates `state` as `finished` when complete.
+.. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
 |===
 . Locate the compute controller ID and node hardware tag for the node you intend to upgrade:
-.. Open the management node REST API UI on the management node:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
 https://[management node IP]/inventory
@@ -145,11 +149,11 @@ https://[management node IP]/hardware
 ... Close the authorization window.
 .. Click *POST /nodes/{hardware_id}/upgrades*.
 .. Click *Try it out*.
-.. Enter the hardware host asset ID (`"hardwareTag"` saved a previous step) in the parameter field.
-.. Do the following to the payload values:
+.. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
+.. Do the following with the payload values:
 ... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
-... Enter the cluster controller ID (`"controllerId"` saved a the previous step).
-... Enter the package name and package version indicated on the bundle you downloaded.
+... Enter the cluster controller ID (`"controllerId"` saved from a previous step).
+... Enter the package name and package version you saved from a previous step.
 +
 ----
 {
@@ -181,7 +185,7 @@ https://[management node IP]/hardware
 a|
 . Go to the specific KB article listed for each issue or perform the specified remedy.
 . If a KB is specified, complete the process described in the relevant KB article.
-. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. After you have resolved cluster issues, reauthenticate if needed and click *GET /task/{task_id}/logs*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"resume"` in the request body.
