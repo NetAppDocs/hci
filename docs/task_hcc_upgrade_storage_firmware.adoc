@@ -91,7 +91,7 @@ You can download logs after the upgrade is complete. For information about the v
 
 === Upgrade status changes
 
-Here are the different states that the *Upgrade Status* column in the UI shows before, during, and after the upgrade process:
+Here are the different states that the *Upgrade Status* column in the UI shows before, during, and after the upgrade process: ARE THESE STATES TRUE FOR FW UPGRADES?
 
 [%header,cols=2*]
 |===
