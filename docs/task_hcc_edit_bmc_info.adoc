@@ -14,7 +14,7 @@ keywords: netapp, hci, BMC, connection, credentials, monitor
 :imagesdir: ../media/
 
 [.lead]
-You can store Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. This enables you to use NetApp Hybrid Cloud Control or teh REST API to seamlessly upgrade BMC firmware.
+You can store Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. This enables you to use NetApp Hybrid Cloud Control or the REST API to seamlessly upgrade BMC firmware.
 
 .Edit BMC connection information options
 
