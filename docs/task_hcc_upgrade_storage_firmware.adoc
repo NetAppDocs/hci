@@ -14,7 +14,7 @@ keywords: netapp, hci, cluster, element, H610S upgrade, hcc, firmware, storage n
 :imagesdir: ../media/
 
 [.lead]
-Starting with Element 12.0 and management services version 2.13, you can upgrade firmware on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+Starting with Element 12.0 and management services version 2.14, you can upgrade firmware on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
 .What you'll need
 
