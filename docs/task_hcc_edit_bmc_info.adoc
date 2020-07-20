@@ -14,7 +14,7 @@ keywords: netapp, hci, BMC, connection, credentials, monitor
 :imagesdir: ../media/
 
 [.lead]
-If you have trouble with your NetApp HCI installation, you can collect logs to send to NetApp Support to help with diagnosis. You can either use NetApp Hybrid Cloud Control or the REST API to collect logs.
+You can store Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. This enables you to use NetApp Hybrid Cloud Control or teh REST API to seamlessly upgrade BMC firmware.
 
 .Edit BMC connection information options
 
@@ -24,7 +24,7 @@ Choose one of the following options:
 * <<Use the REST API to edit BMC information>>
 
 == Use NetApp Hybrid Cloud Control to edit BMC information
-You can access the log collection area from the NetApp Hybrid Cloud Control Dashboard.
+You can add and edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
 
 .Steps
 . Open a web browser and browse to the IP address of the management node. For example:
@@ -33,25 +33,17 @@ You can access the log collection area from the NetApp Hybrid Cloud Control Dash
 https://[management node IP address]
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
-. From the Dashboard, click the menu on the upper right.
-. Select *Collect Logs*.
+. In the left navigation blue box, select the NetApp HCI installation.
 +
-The *Collect Logs* page appears. If you have collected logs before, you can download the existing log package, or begin a new log collection.
-. Select a date range in the *Date Range* drop-down menu to specify what dates the logs should include.
+The NetApp Hybrid Cloud Control Dashboard appears.
+. In the left navigation, click *Nodes*.
+. To view compute inventory information, click *Compute*.
 +
-If you specify a custom start date, you can select the date to begin the date range. Logs will be collected from that date up to the present time.
-. In the *Log Collection* section, select the types of log files the log package should include.
-+
-For storage and compute logs, you can expand the list of storage or compute nodes and select individual nodes to collect logs from (or all nodes in the list).
-. Click *Collect Logs* to start log collection.
-+
-Log collection runs in the background, and the page shows the progress.
-+
-NOTE: Depending on the logs you collect, the progress bar might remain at a certain percentage for several minutes, or progress very slowly at some points.
-
-. Click *Download Logs* to download the log package.
-+
-The log package is in a compressed UNIX .tgz file format.
+A list of your compute nodes appears. The *BMC Connection Status* column shows the result of BMC connection attempts for each compute node. If the connection attempt fails for a compute node, an error message is displayed in this column for that node.
+. To add or edit the stored BMC credentials for a compute node with BMC connection errors, click *Edit connection settings* in the error message text.
+. In the dialog that appears, add the correct administrator user name and password for the BMC of this compute node.
+. Click *Save*.
+. Repeat these steps for any compute node that has missing or incorrect stored BMC credentials.
 
 == Use the REST API to edit BMC information
 You can use REST API to collect NetApp HCI logs.
