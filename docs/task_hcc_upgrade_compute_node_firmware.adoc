@@ -23,6 +23,8 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 * For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
+* *Licensing*: SuperMicro licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
+* Close all open SOL sessions before starting Compute upgrade. Upgrade will open SOL session to collect logs from ISO.
 
 .About this task
 
@@ -174,6 +176,9 @@ https://[management node IP]/hardware
 .. Click *Try it out*.
 .. Enter the task ID from the previous step in *task_Id*.
 .. Click *Execute*.
++
+IMPORTANT: Do not log in to the BMC. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors  upgrade process.
+
 .. Do one of the following if there are problems or special requirements during the upgrade:
 +
 [%header,cols=2*]
