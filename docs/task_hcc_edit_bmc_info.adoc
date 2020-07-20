@@ -43,7 +43,7 @@ A list of your compute nodes appears. The *BMC Connection Status* column shows t
 . To add or edit the stored BMC credentials for a compute node with BMC connection errors, click *Edit connection settings* in the error message text.
 . In the dialog that appears, add the correct administrator user name and password for the BMC of this compute node.
 . Click *Save*.
-. Repeat these steps for any compute node that has missing or incorrect stored BMC credentials.
+. Repeat steps 5 through 7 for any compute node that has missing or incorrect stored BMC credentials.
 
 == Use the REST API to edit BMC information
 You can use REST API to collect NetApp HCI logs.
