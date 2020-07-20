@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs\task_hcc_upgrade_storage_firmware.html
+permalink: docs/task_hcc_upgrade_storage_firmware.html
 summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade the firmware associated with your storage nodes.
 keywords: netapp, hci, cluster, element, H610S upgrade, hcc, firmware, storage nodes
 ---
