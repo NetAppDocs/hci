@@ -1,0 +1,33 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_hci_storage_maintenance_mode.html
+summary: If you need to take a storage node offline for maintenance such as software upgrades or host repairs, you can minimize the I/O impact to the rest of the storage cluster by enabling maintenance mode for that node. You can use maintenance mode with both appliance nodes as well as SolidFire Enterprise SDS nodes.
+keywords: netapp, hci, storage nodes, maintenance, mode
+---
+
+= Storage
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+If you need to take a storage node offline for maintenance such as software upgrades or host repairs, you can minimize the I/O impact to the rest of the storage cluster by enabling maintenance mode for that node. You can use maintenance mode with both appliance nodes as well as SolidFire Enterprise SDS nodes.
+
+You can only transition a storage node to maintenance mode if the node is healthy (has no blocking cluster faults) and the storage cluster is tolerant to a single node failure. Once you enable maintenance mode for a healthy and tolerant node, the node is not immediately transitioned; it is monitored until the following are true:
+
+* The node is no longer hosting any primary slices for volumes
+* A standby is assigned for every volume on the node
+
+After these criteria are met, the node is transitioned to maintenance mode. If these criteria are not met within a 5 minute period, the node will not enter maintenance mode.
+
+When you disable maintenance mode for a storage node, the node is monitored until the following is true:
+
+* All blocking faults on the node are cleared
+* All standbys associated with volumes on the node are inactive
+
+After these criteria are met, the node is transitioned out of maintenance mode. If these criteria are not met within one hour, the node will fail to transition out of maintenance mode.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
