@@ -5,7 +5,7 @@ summary: If you need to take a storage node offline for maintenance such as soft
 keywords: netapp, hci, storage nodes, maintenance, mode
 ---
 
-= Storage
+= Maintenance mode
 :hardbreaks:
 :nofooter:
 :icons: font
