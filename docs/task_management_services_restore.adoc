@@ -1,0 +1,45 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_management_services_restore.html
+summary: You can restore the previous version of management services after a successful or failed management services update.
+keywords: netapp, element, management node, management services, disaster recovery
+---
+
+= Restore management services from backup
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can manually restore the previous management services version from the backup that was created during the latest management services update. When you perform a restore, your management node is restored to its exact state at the time of the latest update.
+
+.About this task
+If you proceed, the management node, management node configuration, management services data, and all management services will be restored to their exact state at the time of the latest management services update.
+
+.Steps
+. Connect to the management node using SSH, and log in as a user with administrator privileges.
+. Switch users to the root user, using the `su` command.
++
+The root user password is the global NetApp HCI password configured with the NetApp Deployment Engine.
+. Run the following command:
++
+----
+/sf/etc/mnode/mnode-archive/run_restore.sh
+----
+. Follow the prompts, and type `Yes` to proceed with the restore process.
+. Enter the management node administrator user name and password to continue.
++
+The restore process begins, and might take several minutes. During the restore, any active NetApp Hybrid Cloud Control browser sessions are ended.
+. Log in to NetApp Hybrid Cloud Control with a web browser.
+. Verify the restored management services version:
+.. Click the menu icon at the top right of the page.
+.. Click *About NetApp Hybrid Cloud Control*.
+
+[discrete]
+== Find more Information
+* link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -94,6 +94,8 @@ entries:
                 url: /task_mnode_install_add_storage_NIC.html
               - title: Recover a management node
                 url: /task_mnode_recover.html
+              - title: Restore management services from backup
+                url: /task_management_services_restore.html
           - title: Access the management node
             url: /task_mnode_access_ui.html
           - title: Work with the management node UI
