@@ -20,10 +20,10 @@ You can manually restore the previous management services version from the backu
 If you proceed, the management node, management node configuration, management services data, and all management services will be restored to their exact state at the time of the latest management services update.
 
 .Steps
-. Connect to the management node using SSH, and log in as a user with administrator privileges.
+. Connect to the management node using Secure Shell (SSH), and log in as a user with administrator privileges.
 . Switch users to the root user, using the `su` command.
 +
-The root user password is the global NetApp HCI password configured with the NetApp Deployment Engine.
+The root user password is the global NetApp HCI password that was configured with the NetApp Deployment Engine.
 . Run the following command:
 +
 ----
@@ -37,6 +37,8 @@ The restore process begins, and might take several minutes. During the restore, 
 . Verify the restored management services version:
 .. Click the menu icon at the top right of the page.
 .. Click *About NetApp Hybrid Cloud Control*.
++
+A dialog appears containing the NetApp Hybrid Cloud Control version.
 
 [discrete]
 == Find more Information
