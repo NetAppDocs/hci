@@ -176,7 +176,7 @@ Compute health checks, whether performed by HCC or API methods, make the followi
 
 | Are there generic/global informational alerts in vCenter? | Cluster |  	Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
-| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue. See https://docs.netapp.com/us-en/hci/docs/task_hcc_update_management_services.html[this article] for more information.
+| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue. See link:task_hcc_update_management_services.html[this article] for more information.
 
 | Are there errors on the current ESXi node in vSphere? | Node | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
@@ -194,7 +194,7 @@ Compute health checks, whether performed by HCC or API methods, make the followi
 
 | Are you able to connect with BMC via IPMI protocol? | Node | Enable IPMI protocol on Baseboard Management Controller (BMC). | No KB needed to resolve issue.
 
-| Is ESXi host mapped to hardware host (BMC) correctly? | Node | The ESXi host is not mapped to the Basement Management Controller (BMC) correctly. Correct the mapping between ESXi host and hardware host. | No KB needed to resolve issue.
+| Is ESXi host mapped to hardware host (BMC) correctly? | Node | The ESXi host is not mapped to the Basement Management Controller (BMC) correctly. Correct the mapping between ESXi host and hardware host. | No KB needed to resolve issue. See link:task_hcc_edit_bmc_info.html[this article] for more information.
 
 | What is the status of the Witness Nodes in the cluster? None of the witness nodes identified are up and running. | Node | A Witness Node is not running on an alternate ESXi host. Power on the Witness Node on an alternate ESXi host and re-run the health check. One Witness Node must be running in the HCI installation at all times. | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes[See this KB]
 
