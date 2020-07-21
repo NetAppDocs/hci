@@ -23,8 +23,10 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 * For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
-* *Licensing*: SuperMicro licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
-* Close all open SOL sessions before starting Compute upgrade. Upgrade will open SOL session to collect logs from ISO.
+* *Licensing*: Licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
+* *KVM ESXi console* Close all open Serial-Over-Lan (SOL) sessions in the BMC UI before starting a compute node upgrade.
+* *Witness node requirements* In two- and three-node storage clusters, One link:concept_hci_nodes.html#witness-nodes[Witness Node] must be running in the HCI installation at all times.
+* *Attached media* Disconnect any physical USB or ISO before starting a compute node upgrade.
 
 .About this task
 

@@ -160,23 +160,23 @@ https://[management node IP]/vcenter/1
 If health checks complete without issues, the response code 200 indicates a successful result.
 
 == Compute node health checks made by the service
-Compute health checks, whether performed by HCC or API methods, make the following checks per node.
+Compute health checks, whether performed by HCC or API methods, make the following checks per node. You should re-run health checks after resolving any detected issues.
 |===
 | Check description | Node/cluster | Action needed to resolve | Knowledgebase article with procedure
 
-| Is DRS enabled and fully automated? | Cluster | Turn on DRS and make sure it is fully automated. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095730[See this KB].
+| Is DRS enabled and fully automated? | Cluster | Turn on DRS and make sure it is fully automated. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_enable_DRS_in_vSphere[See this KB].
 
-| Is DPM disabled in vSphere? | Cluster | Turn off Distributed Power Management. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095731[See this KB].
+| Is DPM disabled in vSphere? | Cluster | Turn off Distributed Power Management. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/How_to_disable_DPM_in_VMware_vCenter[See this KB].
 
-| Is HA admission control enabled in vSphere? | Cluster | Turn off HA admission control. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095732[See this KB].
+| Is HA admission control enabled in vSphere? | Cluster | Turn off HA admission control. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_control_enable_HA_admission_in_vSphere[See this KB].
 
-| Is FT enabled for a VM on a host in the cluster? | Node |  	Suspend Fault Tolerance on any affected virtual machines. | link:https://kb.netapp.com/app/answers/answer_view/a_id/1095733[See this KB].
+| Is FT enabled for a VM on a host in the cluster? | Node |  	Suspend Fault Tolerance on any affected virtual machines. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_suspend_fault_tolerance_on_virtual_machines_in_a_vSphere_cluster[See this KB].
 
 | Are there critical alarms in vCenter for the cluster? | Cluster | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
 | Are there generic/global informational alerts in vCenter? | Cluster |  	Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
-| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue.
+| Are management services up to date? | HCI system | You must update management services before you perform an upgrade or run pre-upgrade health checks. | No KB needed to resolve issue. See https://docs.netapp.com/us-en/hci/docs/task_hcc_update_management_services.html[this article] for more information.
 
 | Are there errors on the current ESXi node in vSphere? | Node | Launch vSphere and resolve and/or acknowledge any alerts before proceeding. | No KB needed to resolve issue.
 
@@ -186,13 +186,24 @@ Compute health checks, whether performed by HCC or API methods, make the followi
 
 | Is ESXi host up and running? | Node | Start your ESXi host. | No KB needed to resolve issue.
 
-| Is ESXi host in maintenance mode? | Node | Your ESXi host should be placed in maintenance mode prior to updating firmware. | No KB needed to resolve issue.
+| Do any virtual machines reside on local ESXi storage? | Node/VM | Remove or migrate local storage attached to virtual machines. | No KB needed to resolve issue.
 
 | Is BMC up and running? | Node | Power on your BMC and ensure it is connected to a network this management node can reach. | No KB needed to resolve issue.
 
 | Are there partner ESXi host(s) available? | Node | Make one or more ESXi host(s) in cluster available (not in maintenance mode) to migrate virtual machines. | No KB needed to resolve issue.
 
-| Are you able to connect with BMC via IPMI protocol? | Node | Enable IPMI protocol on BMC. | No KB needed to resolve issue.
+| Are you able to connect with BMC via IPMI protocol? | Node | Enable IPMI protocol on Baseboard Management Controller (BMC). | No KB needed to resolve issue.
+
+| Is ESXi host mapped to hardware host (BMC) correctly? | Node | The ESXi host is not mapped to the Basement Management Controller (BMC) correctly. Correct the mapping between ESXi host and hardware host. | No KB needed to resolve issue.
+
+| What is the status of the Witness Nodes in the cluster? None of the witness nodes identified are up and running. | Node | A Witness Node is not running on an alternate ESXi host. Power on the Witness Node on an alternate ESXi host and re-run the health check. One Witness Node must be running in the HCI installation at all times. | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes[See this KB]
+
+| What is the status of the Witness Nodes in the cluster? The witness node is up and running on this ESXi host and the alternate witness node is not up and running. | Node | A Witness Node is not running on an alternate ESXi host. Power on the Witness Node on an alternate ESXi host. When you are ready to upgrade this ESXi host, shut down the witness node running on this ESXi host and re-run the health check. One Witness Node must be running in the HCI installation at all times. | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes[See this KB]
+
+| What is the status of the Witness Nodes in the cluster? Witness node is up and running on this ESXi host and the alternate node is up but is running but is on the same ESXi host. | Node | Both Witness Nodes are running on this ESXi host. Relocate one Witness Node to an alternate ESXi host. When you are ready to upgrade this ESXi host, shut down the Witness Node remaining on this ESXi host and re-run the health check. One Witness Node must be running in the HCI installation at all times. | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes[See this KB]
+
+| What is the status of the Witness Nodes in the cluster? Witness node is up and running on this ESXi host and the alternate witness node is up and running on another ESXi host. | Node | A Witness Node is running locally on this ESXi host. When you are ready to upgrade this ESXi host, shut down the Witness Node only on this ESXi host and re-run the health check. One Witness Node must be running in the HCI installation at all times. | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes[See this KB]
+
 |===
 
 [discrete]
