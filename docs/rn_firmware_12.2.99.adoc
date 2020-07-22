@@ -19,7 +19,7 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
 
 == What's New
-Version 12.2.99 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260. This version also disables TLS versions 1.0 and 1.1 for H610C and H615C compute nodes.
+Version 12.2.99 introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260.
 
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
 
@@ -62,11 +62,14 @@ The following are known issues in this release that might affect daily operation
 |PE-10306
 |When you upgrade the BMC software on an Element 11.8 storage node, BMC user credentials are lost.
 
-|CSESF-293
-|When you upgrade to the version 12.2.92 compute node firmware package on H410C, H610C, or H300/500/700E nodes, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
-
 |CSESF-26
 |In some circumstances, H610C nodes can exhibit intermittent fan noise.
+
+|CSESF-293
+|When you upgrade to the version 12.2.92 compute node firmware on a H410C, H610C, H300E, H500E, or H700E node, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
+
+|CSESF-352
+|TLS versions 1.0 and 1.1 suffer from security vulnerabilities.  This release disables TLS 1.0 and 1.1 for H610C and H615C compute nodes.
 |===
 
 == Known issues
