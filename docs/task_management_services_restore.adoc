@@ -17,7 +17,7 @@ keywords: netapp, element, management node, management services, disaster recove
 You can manually restore the previous management services version from the backup that was created during the latest management services update. When you perform a restore, your management node is restored to its exact state at the time of the latest update.
 
 .About this task
-If you proceed, the management node, management node configuration, management services data, and all management services will be restored to their exact state at the time of the latest management services update.
+If you proceed, the management node, including the management node configuration, management services data, and all management services will be restored to its exact state at the time of the latest management services update.
 
 .Steps
 . Connect to the management node using Secure Shell (SSH), and log in as a user with administrator privileges.
