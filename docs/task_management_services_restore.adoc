@@ -29,10 +29,19 @@ The root user password is the global NetApp HCI password that was configured wit
 ----
 /sf/etc/mnode/mnode-archive/run_restore.sh
 ----
-. Follow the prompts, and type `Yes` to proceed with the restore process.
++
+The following message appears:
++
+WARNING: This is a destructive process. This will delete ALL dat currently on the volumes and redeploy the last backed up version of the management node with the data that existed at that time. This process is NOT reversible. Are you sure you want to continue?
+
+. If you are ready to continue, type `Yes` to proceed with the restore process.
 . Enter the management node administrator user name and password to continue.
 +
-The restore process begins, and might take several minutes. During the restore, any active NetApp Hybrid Cloud Control browser sessions are ended.
+The restore process begins. Depending on the size of the backup and the system load, the process could take some time. During the restore, any active NetApp Hybrid Cloud Control browser sessions are ended. When the restore is finished, the following message appears:
++
+----
+Restore complete.
+----
 . Log in to NetApp Hybrid Cloud Control with a web browser.
 . Verify the restored management services version:
 .. Click the menu icon at the top right of the page.
