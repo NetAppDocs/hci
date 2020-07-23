@@ -20,9 +20,14 @@ You can manually restore the previous management services version from the backu
 If you proceed, the management node, including the management node configuration, management services data, and all management services will be restored to its exact state at the time of the latest management services update.
 
 .Steps
-. Connect to the management node using Secure Shell (SSH), and log in as a user with administrator privileges.
-. Switch users to the root user, using the `su` command.
-. Enter the root user password.
+. Connect to the management node using the Secure Shell (SSH) utility, and log in as a user with administrator privileges.
+. Switch users to the root user with the following command:
++
+----
+su
+----
+. Press *Enter*.
+. Enter the root user password and press *Enter*.
 +
 The root user password is the NetApp HCI password that was configured with the NetApp Deployment Engine during initial deployment.
 . Run the following command:
@@ -36,7 +41,7 @@ The following message appears:
 WARNING: This is a destructive process. This will delete ALL data currently on the volumes and redeploy the last backed up version of the management node with the data that existed at that time. This process is NOT reversible. Are you sure you want to continue?
 
 . If you are ready to continue, type `Yes` to proceed with the restore process.
-. Enter the management node administrator user name and password.
+. Enter the management node administrator user name and password when prompted.
 +
 The restore process begins. Depending on the size of the backup and the system load, the process could take some time. During the restore, any active NetApp Hybrid Cloud Control browser sessions are ended. When the restore is finished, the following message appears:
 +
