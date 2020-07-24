@@ -28,7 +28,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-For Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process. Once the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
+For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process. After the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
 
 .Upgrade options
 
@@ -44,9 +44,24 @@ TIP: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
 == Use NetApp Hybrid Cloud Control UI to upgrade a compute node
 
-The firmware on a compute node should only be upgraded if:
-the compute node is in maintenance mode in order to ensure the upgrade does not interfere with any active workloads. (Service / API driven)
-the health check on the vSphere cluster is successful to ensure the upgrade has the greatest chance to succeed.
+Starting with management services 2.14, you can upgrade a compute node using the NetApp Hybrid Cloud Control UI.
+
+TIP: For a successful upgrade, ensure that the compute node is in maintenance mode so that the upgrade procedure does not interfere with any active workloads. You must also ensure that the health check on the vSphere cluster is successful.
+
+.What you'll need
+
+If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select *Compute firmware*.
 
 == Use NetApp Hybrid Cloud Control API to upgrade a compute node
 
