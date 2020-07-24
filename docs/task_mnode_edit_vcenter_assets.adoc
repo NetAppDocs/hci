@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_mnode_edit_vcenter_assets.html
-summary: You can edit vCenter management node assets using the REST API UI.
+summary: You can edit vCenter management node controllers using the REST API UI.
 keywords: netapp, mnode, management node, rest api, hci
 ---
 
-= Edit an existing VMware vCenter management node asset
+= View or edit existing VMware vCenter management node controllers
 
 :hardbreaks:
 :nofooter:
@@ -14,16 +14,15 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You can edit existing VMware vCenter  and controller assets to the management node configuration using the REST API UI.
-
-You might need to add an asset if you recently scaled your installation and new assets were not added automatically to your configuration. Use these APIs to add assets that are recent additions to your installation.
+You can view information about and edit existing VMware vCenter controllers in the management node configuration using the REST API. Controllers are controlling VMware vCenter instances for your NetApp HCI installation.
 
 .Before you begin
 * Ensure that your cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 
 .About this task
-(NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
+
+== Access the management services REST API
 
 .Steps
 . Access the REST API UI for management services by entering the management node IP address
@@ -39,28 +38,55 @@ https://[IP address]/mnode
 .. Enter the client ID as `mnode-client`.
 .. Click *Authorize* to begin a session.
 .. Close the window.
-. To add a compute node or controller sub-asset to an existing base asset, click one of the following.
-+
-Your installation has a base asset configuration that was created during installation or upgrade.
-+
-[cols=2*,options="header",cols="40,60"]
-|===
-| Option
-| Description
-| POST /assets/{asset_id}/
-controllers | Run this command to create a controller sub-asset.
-| POST /assets/{asset_id}/
-compute-nodes | Run this command to create a compute node sub-asset.
-|===
 
+== View information about existing vCenter assets
+You can list existing vCenter controllers that are registered with the management node and view information about them using the REST API.
+
+.Steps
+. Click *GET /compute/controllers*.
 . Click *Try it out*.
-. Enter the required payload values as defined in the *Model* tab.
-+
-IMPORTANT: For compute node assets, remove the `hardware_tag` parameter suggested in the
-payload example.
-
-. Enter the parent base asset ID in the *asset_id* field.
 . Click *Execute*.
++
+The API returns a list of all known vCenter controllers, along with the IP address, controller ID, hostname, and user ID used to communicate with each controller.
+. Copy the controller ID from the `id` field of any controller you want a status for to your clipboard.
+
+== View status of an existing vCenter controller
+You can view the status of any of the existing vCenter controllers registered with the management node. The API returns a status indicating whether NetApp Hybrid Cloud Control can connect with the vCenter controller as well as the reason for that status.
+
+.Steps
+. Click *GET /compute/controllers/{controller_id}/status*.
+. Click *Try it out*.
+. Enter the controller ID you copied earlier in the `controller_id` parameter.
+. Click *Execute*.
++
+The API returns a status of this particular vCenter controller, along with a reason for that status.
+
+== Edit an existing vCenter controller
+You can edit the user name, password, or IP address for any of the existing vCenter controllers registered with the management node.
+.Steps
+. Click *PUT /compute/controllers/{controller_id}*.
+. Enter the controller ID of a vCenter controller in the `controller_id` parameter.
+. Click *Try it out*.
+Change any of the following parameters in the *Request body* field:
++
+|===
+|Parameter |Type |Description
+
+|`userId`
+|string
+|Change the user ID used to communicate with the vCenter controller (the user must have administrator privileges).
+
+|`password`
+|string
+|Change the password used to communicate with the vCenter controller.
+
+|`ipAddress`
+|string
+|Change the IP address used to communicate with the vCenter controller. This IP address must be reachable from the management node.
+|===
+. Click *Execute*.
++
+The API returns updated controller information.
 
 [discrete]
 == Find more information
