@@ -26,7 +26,8 @@ You might need to add an asset if you recently scaled your installation and new 
 (NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
 
 .Steps
-. Open the inventory service REST API UI on the management node:
+. Get the base asset ID for the installation:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
 https://[management node IP]/inventory/1
@@ -40,30 +41,21 @@ https://[management node IP]/inventory/1
 .. Click *Try it out*.
 .. Click *Execute*.
 .. From the code 200 response body, copy the `id` for the installation.
-.. From the REST API UI, click *GET ​/installations​/{id}*.
-.. Click *Try it out*.
-.. Enter the installation ID.
-.. Click *Execute*.
-.. From the code 200 response body, copy the base ID (`id`) for the cluster:
-+
-Your installation has a base asset configuration that was created during installation or upgrade.
 +
 ----
-},
-  "id": "abcd01e2-ab00-4xxx-12ee-12x111aa1a0a",
-  "management": {
-    "errors": [],
-    "inventory": {
-      "authoritativeClusterMvip": "10.111.111.111",
-      "bundleVersion": "2.14.19",
-      "managementIp": "10.111.111.111",
-      "version": "1.4.12"
-    }
-  },
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      "id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",
 ----
++
+NOTE: Your installation has a base asset configuration that was created during installation or upgrade.
+
 . To add a compute node or controller sub-asset to an existing base asset, click one of the following.
-+
-Your installation has a base asset configuration that was created during installation or upgrade.
 +
 [cols=2*,options="header",cols="40,60"]
 |===

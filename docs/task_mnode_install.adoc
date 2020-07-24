@@ -163,7 +163,7 @@ https://[management node IP]/inventory/1
 .. Click *Try it out*.
 .. Enter the installation ID.
 .. Click *Execute*.
-.. From the code 200 response body, copy the base ID (`id`) for the cluster:
+.. From the code 200 response body, copy the base ID (`id`) for the installation:
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 +
@@ -195,11 +195,22 @@ If you have a NetApp HCI installation, also copy the chassis serial number (`cha
 ----
 
 . Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
-.. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
-.. Click *Try it out*.
-.. Enter the required payload values as defined in the *Model* tab with type vCenter and vCenter credentials.
-.. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
-.. Click *Execute*.
+.. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
++
+----
+https://[management node IP]/mnode
+----
+
+.. Click *Authorize* or any lock icon and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+... Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
+... Click *Try it out*.
+... Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+... Enter the required payload values with type `vCenter` and vCenter credentials.
+... Click *Execute*.
 
 == (NetApp HCI only) Configure compute node assets
 
