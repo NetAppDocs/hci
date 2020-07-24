@@ -86,5 +86,5 @@ The following are known issues in this release that might affect daily operation
 3. Click *Go*.
 Instructions for updating are available in PDF format on the download page.
 
-After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.92 package.
+After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.109 package.
 |===
