@@ -5,7 +5,7 @@ summary: You can edit vCenter management node controllers using the REST API UI.
 keywords: netapp, mnode, management node, rest api, hci
 ---
 
-= View or edit existing VMware vCenter management node controllers
+= View or edit existing controller assets
 
 :hardbreaks:
 :nofooter:
@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You can view information about and edit existing VMware vCenter controllers in the management node configuration using the REST API. Controllers are controlling VMware vCenter instances for your NetApp HCI installation.
+You can view information about and edit existing VMware vCenter controllers in the management node configuration using the REST API. Controllers are VMware vCenter instances registered to the management node for your NetApp HCI installation.
 
 .Before you begin
 * Ensure that your cluster version is running NetApp Element software 11.3 or later.
