@@ -67,7 +67,7 @@ You can edit the user name, password, or IP address for any of the existing vCen
 . Click *PUT /compute/controllers/{controller_id}*.
 . Enter the controller ID of a vCenter controller in the `controller_id` parameter.
 . Click *Try it out*.
-Change any of the following parameters in the *Request body* field:
+. Change any of the following parameters in the *Request body* field:
 +
 |===
 |Parameter |Type |Description
