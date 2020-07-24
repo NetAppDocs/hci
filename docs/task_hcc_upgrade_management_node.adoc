@@ -225,6 +225,7 @@ https://[management node IP]/inventory/1
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
+... Close the window.
 .. From the REST API UI, click *GET ​/installations*.
 .. Click *Try it out*.
 .. Click *Execute*.
@@ -270,10 +271,10 @@ If you have a NetApp HCI installation, also copy the chassis serial number (`cha
 ... Enter the required payload values with type `vCenter` and vCenter credentials.
 ... Click *Execute*.
 .. (For NetApp HCI only) Add a compute node asset to the management node known assets:
-... Click *POST/assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+... Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
 ... Click *Try it out*.
 ... Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
-.. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and paste the chassis serial number you saved during a previous step for `hardware_tag`.
+... In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and paste the chassis serial number you saved during a previous step for `hardware_tag`.
 ... Click *Execute*.
 
 == Migrating from management node version 10.x to 11.x

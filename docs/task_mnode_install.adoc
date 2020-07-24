@@ -206,16 +206,16 @@ https://[management node IP]/mnode
 ... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the window.
-... Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
-... Click *Try it out*.
-... Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
-... Enter the required payload values with type `vCenter` and vCenter credentials.
-... Click *Execute*.
+.. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
+.. Click *Try it out*.
+.. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+.. Enter the required payload values with type `vCenter` and vCenter credentials.
+.. Click *Execute*.
 
 == (NetApp HCI only) Configure compute node assets
 
 . (For NetApp HCI only) Add a compute node asset to the management node known assets:
-.. Click *POST/assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+.. Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
 .. Click *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and paste the chassis serial number you saved during a previous step for `hardware_tag`.
