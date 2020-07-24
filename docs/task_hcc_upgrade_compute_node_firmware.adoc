@@ -23,6 +23,10 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 * For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
+* *Licensing*: Licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
+* *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions in the BMC UI before starting a compute node upgrade.
+* *Witness node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html#witness-nodes[Witness Node] must be running in the HCI installation at all times.
+* *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
 
 .About this task
 
@@ -69,7 +73,11 @@ You can use APIs to upgrade each compute node in a cluster to the latest firmwar
 
 .What you'll need
 
-Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://[management node IP]/inventory`).
+Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets:
++
+----
+https://[management node IP]/inventory
+----
 
 .Steps
 
@@ -155,7 +163,7 @@ https://[management node IP]/inventory
 .. Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware
+https://[management node IP]/hardware/2/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -183,6 +191,10 @@ https://[management node IP]/hardware
 ----
 
 .. Click *Execute* to initiate the upgrade.
++
+IMPORTANT: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC.
+Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors  upgrade process.
+
 .. Copy the upgrade task ID (`"taskId"`) that is part of the response.
 . Verify the upgrade progress and results:
 .. Click *GET /task/{task_id}/logs*.
@@ -200,57 +212,26 @@ https://[management node IP]/hardware
 a|
 . Go to the specific KB article listed for each issue or perform the specified remedy.
 . If a KB is specified, complete the process described in the relevant KB article.
-. After you have resolved cluster issues, reauthenticate if needed and click *GET /task/{task_id}/logs*.
-. Click *Try it out*.
-. Enter the upgrade ID from the previous step in *upgradeId*.
-. Enter `"action":"resume"` in the request body.
 +
-----
-{
-  "action": "resume"
-}
-----
-. Click *Execute*.
+NOTE: Additional information is provided link:task_upgrade_compute_prechecks.html#compute-node-health-checks-made-by-the-service[here].
 
-|You need to pause the upgrade because the maintenance window is closing or for another reason.
-a|
-. Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
-. Click *Try it out*.
-. Enter the upgrade ID from the previous step in *upgradeId*.
-. Enter `"action":"pause"` in the request body.
-+
-----
-{
-  "action": "pause"
-}
-----
-. Click *Execute*.
+. After you have resolved node issues, reauthenticate if needed and click *POST /nodes/{hardware_id}/upgrades*.
+. Repeat the steps as described previously in the upgrade step.
 
-|If you are upgrading an H610S cluster running Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
-a|
-. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> and complete the process for each node.
-. Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
-. Click *Try it out*.
-. Enter the upgrade ID from the previous step in *upgradeId*.
-. Enter `"action":"acknowledge"` in the request body.
-+
-----
-{
-  "action": "acknowledge"
-}
-----
-. Click *Execute*.
+|The upgrade fails and the mitigation steps are not listed in upgrade log.
+a| See the following link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB].
+
 |===
-.. Run the *GET ​/upgrades/{upgradesId}* API multiple times, as needed, until the process is complete.
+.. Run the *GET /task/{task_id}/logs* API multiple times, as needed, until the process is complete.
 +
-During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
+During the upgrade, the `status` indicates `running` if no errors are encountered. As each upgrade step finishes, the `status` value changes to `completed`.
 +
-The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
-. Confirm upgraded firmware versions:
+The upgrade has finished successfully when the status for each step is `completed` and the  `percentageCompleted` value is `100`.
+. (Optional) Confirm upgraded firmware versions for each component:
 .. Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware
+https://[management node IP]/hardware/2/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -258,9 +239,11 @@ https://[management node IP]/hardware
 ... Click *Authorize* to begin a session.
 ... Close the authorization window.
 .. From the REST API UI, click *GET ​/nodes​/{hardware_id}​/upgrades*.
+.. (Optional) Enter date and status parameters to filter the results.
 .. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
 .. Click *Try it out*.
 .. Click *Execute*.
+.. Verify in the response that firmware for all components has been successfully upgraded from the previous version to the latest firmware.
 
 == Use a USB drive with the latest firmware image downloaded
 
