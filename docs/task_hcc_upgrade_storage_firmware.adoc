@@ -157,13 +157,13 @@ https://[management node IP]/package-repository/1/
 .. From the REST API UI, click *GET /packages*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy and save the package ID for use in a later step.
+.. From the response, copy and save the firmware package ID for use in a later step.
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Download the storage upgrade package to a device that is accessible to the management node:
-* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image.
-* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage node image.
+. Download the storage firmware upgrade package to a device that is accessible to the management node:
+* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage firmware image.
+* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage firmware image.
 . Upload the storage upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
 +
@@ -183,12 +183,12 @@ https://[management node IP]/package-repository/1/
 . Verify the status of the upload.
 .. From the REST API UI, click *GET​ /packages​/{id}​/status*.
 .. Click *Try it out*.
-.. Enter the package ID you copied in the previous step in *id*.
+.. Enter the firmware package ID you copied in the previous step in *id*.
 .. Click *Execute* to initiate the status request.
 +
 The response indicates `state` as `finished` when complete.
 |===
-. Locate the storage cluster ID:
+. Locate the installation asset ID:
 .. Open the management node REST API UI on the management node:
 +
 ----
@@ -202,13 +202,36 @@ https://[management node IP]/inventory/1
 .. From the REST API UI, click *GET /installations*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. From the response, copy the installation asset ID (`"id"`).
+.. From the response, copy the installation asset ID (`id`).
++
+----
+"id": "abcd01e2-xx00-4ccf-11ee-11f111xx9a0b",
+"management": {
+  "errors": [],
+  "inventory": {
+    "authoritativeClusterMvip": "10.111.111.111",
+    "bundleVersion": "2.14.19",
+    "managementIp": "10.111.111.111",
+    "version": "1.4.12"
+----
+
 .. From the REST API UI, click *GET /installations/{id}*.
 .. Click *Try it out*.
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
 .. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to upgrade for use in a later step.
-. Run the storage upgrade:
++
+----
+"storage": {
+  "errors": [],
+  "inventory": {
+    "clusters": [
+      {
+        "clusterUuid": "a1bd1111-4f1e-46zz-ab6f-0a1111b1111x",
+        "id": "a1bd1111-4f1e-46zz-ab6f-a1a1a111b012",
+----
+
+. Run the storage firmware upgrade:
 .. Open the storage REST API UI on the management node:
 +
 ----
@@ -218,7 +241,7 @@ https://[management node IP]/storage/1
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
-... Close the authorization window.
+... Close the window.
 .. Click *POST /upgrades*.
 .. Click *Try it out*.
 .. Enter the upgrade package ID in the parameter field.
@@ -349,231 +372,6 @@ NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during whic
 * NetApp Support has determined that the upgrade needs to be temporarily aborted to take corrective action before the three-hour window. Support will use the API to abort the upgrade.
 
 CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
-
-== Upgrade Element software at connected sites using HealthTools
-
-.Steps
-
-. Download the storage upgrade package:
-+
-NOTE: You need the latest version of HealthTools to upgrade Element storage software.
-
-* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image to a device that is not the management node.
-* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage node image to a device that not the management node.
-. Copy the ISO file to the management node in an accessible location like /tmp.
-+
-When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
-
-. *Optional*: Download the ISO from the management node to the cluster nodes before the upgrade.
-+
-This step reduces the upgrade time by pre-staging the ISO on the storage nodes and running additional internal checks to ensure that the cluster is in a good state to be upgraded. Performing this operation will not put the cluster into "upgrade" mode or restrict any of the cluster operations.
-+
-----
-sfinstall <MVIP> -u <cluster_username> <path-toinstall-file-ISO> --stage
-----
-+
-NOTE: Omit the password from the command line to allow `sfinstall` to prompt for the information. For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`.
-
-+
-*Example*
-See the following sample input:
-+
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfisodium-11.0.0.345.iso --stage
-----
-+
-The output for the sample shows that `sfinstall` attempts to verify if a newer version of `sfinstall` is available:
-+
-----
-sfinstall 10.117.0.244 -u admin
-/tmp/solidfire-rtfisodium-11.0.0.345.iso 2018-10-01 16:52:15:
-Newer version of sfinstall available.
-This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
-https:// mysupport.netapp.com/NOW/cgi-bin/software/
-or rerun with --skip-version-check
-----
-See the following sample excerpt from a successful pre-stage operation:
-+
-NOTE: When staging completes, the message will display `Storage Node Upgrade Staging Successful` after the upgrade event.
-
-+
-----
-flabv0004 ~ # sfinstall -u admin
-10.117.0.87 solidfire-rtfi-sodium-patch3-11.3.0.14171.iso --stage
-2019-04-03 13:19:58: sfinstall Release Version: 2019.01.01.49 Management Node Platform:
-Ember Revision: 26b042c3e15a Build date: 2019-03-12 18:45
-2019-04-03 13:19:58: Checking connectivity to MVIP 10.117.0.87
-2019-04-03 13:19:58: Checking connectivity to node 10.117.0.86
-2019-04-03 13:19:58: Checking connectivity to node 10.117.0.87
-...
-2019-04-03 13:19:58: Successfully connected to cluster and all nodes
-...
-2019-04-03 13:20:00: Do you want to continue? ['Yes', 'No']: Yes
-...
-2019-04-03 13:20:55: Staging install pack on cluster nodes
-2019-04-03 13:20:55: newVersion: 11.3.0.14171
-2019-04-03 13:21:01: nodeToStage: nlabp2814, nlabp2815, nlabp2816, nlabp2813
-2019-04-03 13:21:02: Staging Node nlabp2815 mip=[10.117.0.87] nodeID=[2] (1 of 4 nodes)
-2019-04-03 13:21:02: Node Upgrade serving image at
-http://10.117.0.204/rtfi/solidfire-rtfisodium-
-patch3-11.3.0.14171/filesystem.squashfs
-...
-2019-04-03 13:25:40: Staging finished. Repeat the upgrade command without the --stage option to start the upgrade.
-----
-
-+
-The staged ISOs will be automatically deleted after the upgrade completes. However, if the upgrade has not started and needs to be rescheduled, ISOs can be manually de-staged using the command:
-+
-`sfinstall <MVIP> -u <cluster_username> --destage`
-
-+
-After the upgrade has started, the de-stage option is no longer available.
-
-. Start the upgrade with the `sfinstall` command and the path to the ISO file:
-+
-`sfinstall <MVIP> -u <cluster_username> <path-toinstall-file-ISO>`
-
-+
-*Example*
-+
-See the following sample input command:
-+
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
-----
-+
-The output for the sample shows that `sfinstall` attempts to verify if a newer version of `sfinstall` is available:
-+
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
-2018-10-01 16:52:15: Newer version of sfinstall available.
-This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
-https://mysupport.netapp.com/NOW/cgi-bin/software/ or rerun with --skip-version-check
-----
-+
-See the following sample excerpt from a successful upgrade. Upgrade events can be used to monitor the progress of the upgrade.
-+
-----
-# sfinstall 10.117.0.161 -u admin solidfire-rtfi-sodium-11.0.0.761.iso
-2018-10-11 18:28
-Checking connectivity to MVIP 10.117.0.161
-Checking connectivity to node 10.117.0.23
-Checking connectivity to node 10.117.0.24
-...
-Successfully connected to cluster and all nodes
-###################################################################
-You are about to start a new upgrade
-10.117.0.161
-10.3.0.161
-solidfire-rtfi-sodium-11.0.0.761.iso
-Nodes:
-10.117.0.23 nlabp1023 SF3010 10.3.0.161
-10.117.0.24 nlabp1025 SF3010 10.3.0.161
-10.117.0.26 nlabp1027 SF3010 10.3.0.161
-10.117.0.28 nlabp1028 SF3010 10.3.0.161
-###################################################################
-Do you want to continue? ['Yes', 'No']: yes
-...
-Watching for new network faults. Existing fault IDs are set([]).
-Checking for legacy network interface names that need renaming
-Upgrading from 10.3.0.161 to 11.0.0.761 upgrade method=rtfi
-Waiting 300 seconds for cluster faults to clear
-Waiting for caches to fall below threshold
-...
-Installing mip=[10.117.0.23] nodeID=[1] (1 of 4 nodes)
-Starting to move primaries.
-Loading volume list
-Moving primary slice=[7] away from mip[10.117.0.23] nodeID[1] ssid[11] to new ssid[15]
-Moving primary slice=[12] away from mip[10.117.0.23] nodeID[1] ssid[11] to new ssid[15]
-...
-Installing mip=[10.117.114.24] nodeID=[2] (2 of 4 nodes)
-Starting to move primaries.
-Loading volume list
-Moving primary slice=[5] away from mip[10.117.114.24] nodeID[2] ssid[7] to new ssid[11]
-...
-Install of solidfire-rtfi-sodium-11.0.0.761 complete.
-Removing old software
-No staged builds present on nodeID=[1]
-No staged builds present on nodeID=[2]
-...
-Starting light cluster block service check
-----
-
-IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>>.
-
-== Upgrade Element software at dark sites using HealthTools
-You can use the HealthTools suite of tools to update NetApp Element software at a dark site.
-
-.What you'll need
-
-. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page]. For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page].
-. Select the correct software release and download the latest storage node image to a computer that is not the management node.
-+
-NOTE: You need the latest version of HealthTools to upgrade Element storage software.
-
-. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
-. Copy the ISO file to the management node in an accessible location like `/tmp`.
-+
-TIP: You can do this by using, for example, SCP. When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
-
-.Steps
-
-. Run the `sfupdate-healthtools` command:
-+
-----
-sfupdate-healthtools <path-to-healthtools-package>
-----
-. Check the installed version:
-+
-----
-sfupdate-healthtools -v
-----
-. Check the latest version against the metadata JSON file:
-+
-----
-sfupdate-healthtools -l --metadata=<path-to-metadata-json>
-----
-. Ensure that the cluster is ready:
-+
-----
-sudo sfupgradecheck -u <cluster_username> -p <cluster_password> MVIP --metadata=<path-to-metadata-json>
-----
-. Run the `sfinstall` command with the path to the ISO file and the metadata JSON file:
-+
-----
-sfinstall -u <cluster_username> <MVIP> <path-toinstall-file-ISO> --metadata=<path-to-metadata-json-file>
-----
-+
-See the following sample input command:
-+
-----
-sfinstall -u admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/tmp/metadata.json
-----
-+
-*Optional* You can add the `--stage` flag to the `sfinstall` command to pre-stage the upgrade in advance.
-
-IMPORTANT: If you are upgrading an H610S series node to Element 12.0 or later, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>>.
-
-== What happens if an upgrade fails using HealthTools
-If the software upgrade fails, you can pause the upgrade.
-
-TIP: You should pause an upgrade only with Ctrl-C. This enables the system to clean itself up.
-
-When `sfinstall` waits for cluster faults to clear and if any failure causes the faults to remain, `sfinstall` will not proceed to the next node.
-
-.Steps
-. You should stop `sfinstall` with Ctrl+C.
-. Contact NetApp Support to assist with the failure investigation.
-. Resume the upgrade with the same `sfinstall` command.
-. When an upgrade is paused by using Ctrl+C, if the upgrade is currently upgrading a node, choose one of these options:
-
-* *Wait*: Allow the currently upgrading node to finish before resetting the cluster constants.
-* *Continue*: Continue the upgrade, which cancels the pause.
-* *Abort*: Reset the cluster constants and abort the upgrade immediately.
-+
-NOTE: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
 
 == Upgrading H610S storage nodes to Element 12.0 or later (phase 2)
 
