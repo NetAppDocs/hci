@@ -1,0 +1,66 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_management_services_restore.html
+summary: You can restore the previous version of management services after a successful or failed management services update.
+keywords: netapp, element, management node, management services, disaster recovery
+---
+
+= Restore management services from backup
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can manually restore the previous management services version from the backup that was created during the latest management services update. When you perform a restore, your management node is restored to its exact state at the time of the latest update.
+
+.Before you begin
+Check the network connection between the management node and the storage cluster. If the network connection is down, ensure that it is up and connected before you begin the restore process.
+
+.About this task
+If you proceed, the management node, including the management node configuration, management services data, and all management services will be restored to its exact state at the time of the latest management services update.
+
+NOTE: Restoring management services to a VM snapshot of the management node is not supported.  Make sure you are performing the restore process on a management node that is not a restored VM snapshot.
+
+.Steps
+. Connect to the management node using the Secure Shell (SSH) utility, and log in as a user with administrator privileges.
+. Switch to the root user with the following command:
++
+----
+su
+----
+. Press *Enter*.
+. Enter the root user password and press *Enter*.
++
+The root user password is the NetApp HCI password that was configured with the NetApp Deployment Engine during initial deployment.
+. Run the following command:
++
+----
+/sf/etc/mnode/mnode-archive/run_restore.sh
+----
++
+The following message appears:
++
+WARNING: This is a destructive process. This will delete ALL data currently on the volumes and redeploy the last backed up version of the management node with the data that existed at that time. This process is NOT reversible. Are you sure you want to continue?
+
+. If you are ready to continue, type `Yes` to proceed with the restore process.
+. Enter the management node administrator user name and password when prompted.
++
+The restore process begins. Depending on the size of the backup and the system load, the process could take some time. During the restore, any active NetApp Hybrid Cloud Control browser sessions are ended. When the restore is finished, the following message appears:
++
+----
+Restore complete.
+----
+. Log in to NetApp Hybrid Cloud Control with a web browser.
+. Verify the restored management services version:
+.. Click the menu icon at the top right of the page.
+.. Click *About NetApp Hybrid Cloud Control*.
++
+A dialog appears containing the NetApp Hybrid Cloud Control version.
+
+[discrete]
+== Find more Information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
