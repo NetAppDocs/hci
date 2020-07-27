@@ -123,6 +123,17 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
 
+== What happens if an upgrade fails using NetApp Hybrid Cloud Control
+If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, clicking *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
+
+NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during which one of the following scenarios can happen:
+
+* The cluster faults get resolved within the three-hour window, and upgrade resumes. You do not need to take any action in this scenario.
+* The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by clicking *Resume* after the problem is resolved.
+* NetApp Support has determined that the upgrade needs to be temporarily aborted to take corrective action before the three-hour window. Support will use the API to abort the upgrade.
+
+CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
+
 == Use NetApp Hybrid Cloud Control API to upgrade storage firmware
 
 You can use APIs to upgrade storage nodes in a cluster to the latest Element software version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
@@ -164,7 +175,7 @@ a|
 . Download the storage firmware upgrade package to a device that is accessible to the management node:
 * For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage firmware image.
 * For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage firmware image.
-. Upload the storage upgrade package to the management node:
+. Upload the storage firmware upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
 +
 ----
@@ -258,7 +269,7 @@ The response should indicate state as `initializing`:
     "log": https://localhost:442/storage/upgrades/3fa85f64-1111-4562-b3fc-2c963f66abc1/log
   },
   "storageId": "114f14a4-1a1a-11e9-9088-6c0b84e200b4",
-  "upgradeId": "334f14a4-1a1a-11e9-1055`-6c0b84e2001b4",
+  "upgradeId": "334f14a4-1a1a-11e9-1055-6c0b84e2001b4",
   "packageId": "774f14a4-1a1a-11e9-8888-6c0b84e200b4",
   "config": {},
   "state": "initializing",
@@ -361,17 +372,6 @@ a|
 During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
 +
 The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
-
-== What happens if an upgrade fails using NetApp Hybrid Cloud Control
-If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, clicking *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
-
-NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during which one of the following scenarios can happen:
-
-* The cluster faults get resolved within the three-hour window, and upgrade resumes. You do not need to take any action in this scenario.
-* The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by clicking *Resume* after the problem is resolved.
-* NetApp Support has determined that the upgrade needs to be temporarily aborted to take corrective action before the three-hour window. Support will use the API to abort the upgrade.
-
-CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
 
 == Upgrading H610S storage nodes to Element 12.0 or later (phase 2)
 
