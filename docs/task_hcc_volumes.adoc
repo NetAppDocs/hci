@@ -1,0 +1,78 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_volumes.html
+summary: You can monitor volumes in your system by using the Hybrid Cloud Control Volumes page.
+keywords: netapp, hci, on premise, volumes, storage, access groups, initiators, capacity, data protection, QoS 
+---
+
+= Monitor volumes on your storage cluster
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+The SolidFire system provisions storage using volumes. Volumes are block devices accessed over the network by iSCSI or Fibre Channel clients. You can monitor details about access groups, accounts, initiators, used capacity, Snapshot data protection status, number of iSCSI sessions, and the Quality of Service (QoS) policy associated with the volume.
+
+You can also see details on active and deleted volumes.
+
+With this view, you might first want to monitor the Used capacity column.
+
+You can access this information only if you have NetApp Hybrid Cloud Control (HCC) administrative privileges.
+
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node. For example:
++
+----
+https://[management node IP address]
+----
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. In the left navigation blue box, select the NetApp HCI installation.
++
+The Hybrid Cloud Control Dashboard appears.
+. In the left navigation, select the cluster and select *Storage* > *Volumes*.
++
+The Volumes page Overview tab appears.
++
+image::hcc_volumes_overview_active.png[HCC Volumes page > Overview tab image]
+
+. On the Volumes page, use the following options:
++
+image::hcc_volumes_icons.png[HCC Volumes page icons]
+
+.. Filter the results by clicking the *Filter* icon.
+.. Hide or show columns by clicking the *Hide/Show* icon.
+.. Refresh data by clicking the *Refresh* icon.
+.. Download a CSV file by clicking on the *Download* icon.
+
+. Monitor the Used capacity column. If Warning, Error, or Critical thresholds are reached, the color represents the used capacity status:
+.. Warning - Yellow
+.. Error - Orange
+.. Critical - Red
+
+. From the Volumes view, click the tabs to see additional details about the volumes:
+.. *Access Groups*: You can see the volume access groups that are mapped from initiators to a collection of volumes for secured access.
++
+See information about https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[access groups] in the _NetApp Element User Guide_.
+
+.. *Accounts*: You can see the user accounts, which enable clients to connect to volumes on a node. When you create a volume, it is assigned to a specific user account.
++
+See information about https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-E93D3BAF-5A60-414D-86AF-0C1F86D43F26.html[user accounts] in the _NetApp Element User Guide_.
+
+.. *Initiators*: You can see the iSCSI initiator IQN or Fibre Channel WWPNs for the volume. Each IQN added to an access group can access each volume in the group without requiring CHAP authentication. Each WWPN added to an access group enables Fibre Channel network access to the volumes in the access group.
++
+See information about https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[access groups, initiators, and CHAP authentication methods] in the _NetApp Element User Guide_.
+
+.. *QoS Policies*: You can see the QoS policy applied to the volume. A QoS policy applies standardized settings for minimum IOPS, maximum IOPS, and burst IOPS to multiple volumes.
++
+See information about https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-C90C0C1C-AE38-46FA-A854-BB425B55BEF4.html[Quality of Service policies] in the _NetApp Element User Guide_.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/sfe-120/index.jsp[NetApp SolidFire and Element Documentation Center^]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
