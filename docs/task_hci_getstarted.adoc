@@ -22,10 +22,10 @@ Here is an overview of the process:
 * <<Validate network readiness with NetApp Active IQ Config Advisor>>
 * <<Work with your NetApp team>>
 * <<Install NetApp HCI hardware>>
-* <<Complete tasks after installing hardware (Optional)>>
+* <<Complete optional tasks after installing hardware>>
 * <<Deploy NetApp HCI using the NetApp Deployment Engine (NDE)>>
 * <<Manage NetApp HCI using the vCenter Plug-in>>
-* <<Monitor, upgrade, or expand NetApp HCI with the Hybrid Cloud Control (Optional)>>
+* <<Monitor or upgrade NetApp HCI with the Hybrid Cloud Control>>
 
 
 == Prepare for installation
@@ -97,8 +97,8 @@ CAUTION: For precautions and details, see link:task_hci_installhw.html[Install H
 . Connect the power cords.
 . Power on the NetApp HCI nodes.
 
-== Complete tasks after installing hardware (Optional, yet recommended)
-After installing the NetApp HCI hardware, you should perform some optional tasks
+== Complete optional tasks after installing hardware
+After installing the NetApp HCI hardware, you should perform some optional, yet recommended tasks.
 
 === Manage storage capacity across all chassis
 Ensure that storage capacity is split evenly across all chassis containing storage nodes.
@@ -192,9 +192,9 @@ For details, see the http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-
 
 image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 
-== Monitor, upgrade, or expand NetApp HCI with the Hybrid Cloud Control (Optional)
+== Monitor or upgrade NetApp HCI with the Hybrid Cloud Control
 
-You can use the NetApp HCI Hybrid Cloud Control to monitor, upgrade, or expand your system.
+You can optionally use the NetApp HCI Hybrid Cloud Control to monitor, upgrade, or expand your system.
 
 You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
 
