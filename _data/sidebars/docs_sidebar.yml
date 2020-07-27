@@ -76,6 +76,8 @@ entries:
             url: /task_hcc_nodes.html
           - title: Edit BMC connection information
             url: /task_hcc_edit_bmc_info.html
+          - title: Monitor volumes on your storage cluster
+            url: /task_hcc_volumes.html
           - title: Monitor performance, capacity, and cluster health with Active IQ
             url: /task_hcc_activeiq.html
           - title: Collect NetApp HCI logs
