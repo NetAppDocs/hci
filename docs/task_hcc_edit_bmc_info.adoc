@@ -14,17 +14,21 @@ keywords: netapp, hci, BMC, connection, credentials, monitor
 :imagesdir: ../media/
 
 [.lead]
-You can store Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. This enables you to use NetApp Hybrid Cloud Control or the REST API to seamlessly upgrade BMC firmware.
+You can change Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. You might need to change credentials using NetApp Hybrid Cloud Control or the REST API prior to upgrading BMC firmware.
 
-.Edit BMC connection information options
+.What you'll need
 
-Choose one of the following options:
+Cluster administrator permissions to change BMC credentials.
+
+.Options
+
+Choose one of the following options to change BMC credentials:
 
 * <<Use NetApp Hybrid Cloud Control to edit BMC information>>
-* <<Use the REST API to edit BMC information>>
+* <<Use NetApp Hybrid Cloud Control API to edit BMC information>>
 
 == Use NetApp Hybrid Cloud Control to edit BMC information
-You can add and edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
+You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
 
 .Steps
 . Open a web browser and browse to the IP address of the management node. For example:
@@ -45,88 +49,104 @@ A list of your compute nodes appears. The *BMC Connection Status* column shows t
 . Click *Save*.
 . Repeat steps 6 through 8 for any compute node that has missing or incorrect stored BMC credentials.
 
-== Use the REST API to edit BMC information
-You can use REST API to collect NetApp HCI logs.
+== Use NetApp Hybrid Cloud Control API to edit BMC information
+You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control API.
 
 .Steps
-. Locate the storage cluster ID:
-.. Open the management node REST API UI on the management node:
+. Locate the compute node hardware tag and BMC information:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/logs/1
+https://[management node IP]/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
+... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
-. Collect logs from NetApp HCI:
-.. Click *POST /bundle*.
+... Close the authorization window.
+.. From the REST API UI, click *GET /installations*.
 .. Click *Try it out*.
-.. Change the values of the following parameters in the *Request body* field depending on which type of logs you need to collect and for what time range:
+.. Click *Execute*.
+.. From the response, copy the installation asset ID (`id`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the node hardware tag (`hardwareTag`), asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
++
+----
+"nodes": [
+  {
+    "bmcDetails": {
+      "bmcAddress": "10.117.1.111",
+      "credentialsAvailable": false,
+      "credentialsValidated": false
+    },
+    "chassisSerialNumber": "221111019323",
+    "chassisSlot": "C",
+    "hardwareId": null,
+    "hardwareTag": "00000000-0000-0000-0000-ac1f6ab4ecf6",
+    "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+----
+
+. Open the hardware service REST API UI on the management node:
++
+----
+https://[management node IP]/hardware/2/
+----
+. Click *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client` if the value is not already populated.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *PUT /nodes/{hardware_id}*.
+. Click *Try it out*.
+. Enter the node hardware tag (`hardwareTag`) from the previous step in `hardware_id` field.
+. Enter the following parameters in the payload:
 +
 |===
-|Parameter |Type |Description
+|Parameter |Description
 
-|`modifiedSince`
-|Date string
-|Only include logs modified after this date and time. For example, the value "2020-07-14T20:19:00.000Z" defines a start date of July 14, 2020 at 20:19 UTC.
+|`assetId`
+|The asset id (`id`) from the previous step.
 
-|`computeLogs`
-|Boolean
-|Set this parameter to `true` to include compute node logs.
+|`bmcIp`
+|The BMC IP address (`bmcAddress`) from the previous step.
 
-|`computeIds`
-|UUID array
-|If `computeLogs` is set to `true`, populate this parameter with the management node asset IDs of compute nodes to limit log collection to those specific compute nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
+|`bmcPassword`
+|An updated password to log into BMC.
 
-|`mnodeLogs`
-|Boolean
-|Set this parameter to `true` to include management node logs.
+|`bmcUsername`
+|An updated user name to log into BMC.
 
-|`storageCrashDumps`
-|Boolean
-|Set this parameter to `true` to include storage node crash debug logs.
-
-|`storageLogs`
-|Boolean
-|Set this parameter to `true` to include storage node logs.
-
-|`storageNodeIds`
-|UUID array
-|If `storageLogs` is set to `true`, populate this parameter with the storage cluster node IDs to limit log collection to those specific storage nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
+|`serialNumber`
+|The chassis serial number of hardware.
 |===
-.. Click *Execute* to begin log collection.
-The response should return a response similar to the following:
++
+Example payload:
 +
 ----
 {
-  "_links": {
-    "self": "https://10.1.1.5/logs/1/bundle"
-  },
-  "taskId": "4157881b-z889-45ce-adb4-92b1843c53ee",
-  "taskLink": "https://10.1.1.5/logs/1/bundle"
+  "assetId": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+  "bmcIp": "10.117.1.111",
+  "bmcPassword": "mypassword1",
+  "bmcUsername": "admin1",
+  "serialNumber": "221111019323"
 }
 ----
-. Check on the status of the log collection task:
-.. Click *GET /bundle*.
-.. Click *Try it out*.
-.. Click *Execute* to return a status of the collection task.
-.. Scroll to the bottom of the response body.
+. Click *Execute* to update BMC credentials.
+A successful result returns a response similar to the following:
 +
-You should see a `percentComplete` attribute detailing the progress of the collection. If the collection is complete, the `downloadLink` attribute contains the full download link including the file name of the log package.
-
-.. Copy the file name at the end of the `downloadLink` attribute.
-. Download the collected log package:
-.. Click *GET /bundle/{filename}*.
-.. Click *Try it out*.
-.. Paste the file name you copied earlier into the `filename` parameter text field.
-.. Click *Execute*.
-+
-After execution, a download link appears in the response body area.
-
-.. Click *Download file* and save the resulting file to your computer.
-+
-The log package is in a compressed UNIX .tgz file format.
+----
+{
+  "credentialid": "33333333-cccc-3333-cccc-333333333333",
+  "host_name": "hci-host",
+  "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+  "ip": "1.1.1.1",
+  "parent": "abcd01y3-ab30-1ccc-11ee-11f123zx7d1b",
+  "type": "BMC"
+}
+----
 
 [discrete]
 == Find more information
