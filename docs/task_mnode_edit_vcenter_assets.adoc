@@ -63,6 +63,7 @@ The API returns a status of this particular vCenter controller, along with a rea
 
 == Edit the stored properties of a controller
 You can edit the stored user name, password, or IP address for any of the existing vCenter controllers registered with the management node.
+
 .Steps
 . Click *PUT /compute/controllers/{controller_id}*.
 . Enter the controller ID of a vCenter controller in the `controller_id` parameter.
