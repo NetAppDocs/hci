@@ -5,7 +5,7 @@ summary: Learn how to validate your pre-deployment configuration using Active IQ
 keywords: netapp, hci, element, configuration, validation
 ---
 
-= Validating your environment with Active IQ Config Advisor
+= Validate your environment with Active IQ Config Advisor
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -16,7 +16,7 @@ keywords: netapp, hci, element, configuration, validation
 [.lead]
 Before you rack NetApp HCI hardware and perform the installation of NetApp HCI, you need to verify that your environment meets NetApp HCI networking requirements. Active IQ Config Advisor runs checks on your environment by validating network, switch, and VMware vSphere configurations. The tool generates a report which you can use to help you resolve issues, and you can forward the report to your Professional Services engineer to prepare and schedule an installation.
 
-== Installing Active IQ Config Advisor
+== Install Active IQ Config Advisor
 Download and install Active IQ Config Advisor on a PC that has access to the NetApp HCI networks.
 
 .Steps
@@ -32,7 +32,7 @@ After you agree to the End User License Agreement (EULA), the Download page appe
 +
 After a short delay, the Active IQ Config Advisor UI opens in a new browser window or tab.
 
-== Using Active IQ Config Advisor
+== Use Active IQ Config Advisor
 Active IQ Config Advisor runs in a browser window, collects information about your network and environment, and generates a report you can use to resolve any network or configuration issues that might interfere with NetApp HCI deployment.
 
 .Before you begin

@@ -53,12 +53,6 @@ entries:
        url: /hci_prereqs_protection_domains.html
      - title: Witness Node resource requirements for two-node storage clusters
        url: /hci_prereqs_witness_nodes.html
-     - title: Configuring LACP for optimal storage performance
-       url: /hci_prereqs_LACP_configuration.html
-     - title: Validating your environment with Active IQ Config Advisor
-       url: /hci_prereqs_task_validate_config_advisor.html
-     - title: Final preparations
-       url: /hci_prereqs_final_prep.html
   - title: Get started with NetApp HCI
     entries:
       - title: NetApp HCI installation and deployment overview
@@ -66,6 +60,12 @@ entries:
       - title: Install H-series hardware
         url: /task_hci_installhw.html
         # For 20.2 consider putting multiple access topics or URLs
+      - title: Configure LACP for optimal storage performance
+        url: /hci_prereqs_LACP_configuration.html
+      - title: Validate your environment with Active IQ Config Advisor
+        url: /hci_prereqs_task_validate_config_advisor.html
+      - title: Configure IPMI for each node
+        url: /hci_prereqs_final_prep.html
   - title: Manage NetApp HCI
     entries:
       - title: Monitor your NetApp HCI system
