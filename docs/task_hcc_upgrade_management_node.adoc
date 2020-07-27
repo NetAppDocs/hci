@@ -216,38 +216,65 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent
 .. From a browser, log into the management node REST API UI:
 ... Go to the storage MVIP and log in.
 This action causes certificate to be accepted for the next step.
-... Open the REST API UI on the management node:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://[management node IP]/inventory/1
 ----
-.. From the management node REST API UI, click *Authorize* or any lock icon and complete the
-following:
+.. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client` if the value is not already populated.
-... Copy the token URL string and paste it into another browser tab to initiate a token request.
+... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the window.
-.. Run `GET /assets` to find the base asset ID that you will need for the next steps:
-... Click *GET /assets*.
-... Click *Try it out*.
-... Click *Execute*.
-... Copy the value for *"id"* for the base asset to your clipboard:
-NOTE: You installation has a base asset configuration that was created during installation or upgrade.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the code 200 response body, copy the `id` for the installation.
+.. From the REST API UI, click *GET ​/installations​/{id}*.
+.. Click *Try it out*.
+.. Enter the installation ID.
+.. Click *Execute*.
+.. From the code 200 response body, copy the base ID (`id`) for the cluster:
 +
-image::mNode_API_Base_asset_ID.png[Base asset ID value]
-
+Your installation has a base asset configuration that was created during installation or upgrade.
++
+----
+},
+  "id": "abcd01e2-ab00-4xxx-12ee-12x111aa1a0a",
+  "management": {
+    "errors": [],
+    "inventory": {
+      "authoritativeClusterMvip": "10.111.111.111",
+      "bundleVersion": "2.14.19",
+      "managementIp": "10.111.111.111",
+      "version": "1.4.12"
+    }
+  },
+----
++
+If you have a NetApp HCI installation, also copy the chassis serial number (`chassisSerialNumber`) for use in a later step.
++
+----
+"nodes": [
+  {
+    "bmcDetails": {
+      "bmcAddress": "10.117.6.169",
+      "credentialsAvailable": false,
+      "credentialsValidated": false
+    },
+    "chassisSerialNumber": "221933017321",
+----
 .. Add a vCenter controller asset for HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
 ... Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
 ... Click *Try it out*.
-... Enter the required payload values as defined in the *Model* tab with type `vCenter` and vCenter credentials.
 ... Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+... Enter the required payload values with type `vCenter` and vCenter credentials.
 ... Click *Execute*.
 .. (For NetApp HCI only) Add a compute node asset to the management node known assets:
-... Click *POST/assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+... Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
 ... Click *Try it out*.
-... In the payload, enter the required payload values as defined in the *Model* tab. Use type `ESXi Host` and remove the `hardware_tag` parameter.
 ... Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+... In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and paste the chassis serial number you saved during a previous step for `hardware_tag`.
 ... Click *Execute*.
 
 == Migrating from management node version 10.x to 11.x

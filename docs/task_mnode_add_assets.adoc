@@ -18,50 +18,87 @@ You can add compute and controller assets to the management node configuration u
 
 You might need to add an asset if you recently scaled your installation and new assets were not added automatically to your configuration. Use these APIs to add assets that are recent additions to your installation.
 
-
-.Before you begin
-* Ensure that your cluster version is running NetApp Element software 11.3 or later.
-* Ensure that you have deployed a management node running version 11.3 or later.
+.What you'll need
+* Your cluster version is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
 
 .About this task
 (NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
 
 .Steps
-. Access the REST API UI for management services by entering the management node IP address
-followed by `/mnode`:
+. Get the base asset ID for the installation:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[IP address]/mnode
+https://[management node IP]/inventory/1
 ----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the code 200 response body, copy the `id` for the installation.
++
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      "id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",
+----
++
+NOTE: Your installation has a base asset configuration that was created during installation or upgrade.
 
-. Click *Authorize* or any lock icon and complete the following:
-+
-.. Enter the cluster user name and password.
-.. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session.
-.. Close the window.
 . To add a compute node or controller sub-asset to an existing base asset, click one of the following.
-+
-Your installation has a base asset configuration that was created during installation or upgrade.
 +
 [cols=2*,options="header",cols="40,60"]
 |===
 | Option
 | Description
-| POST /assets/{asset_id}/
-controllers | Run this command to create a controller sub-asset.
-| POST /assets/{asset_id}/
-compute-nodes | Run this command to create a compute node sub-asset.
-|===
-
-. Click *Try it out*.
-. Enter the required payload values as defined in the *Model* tab.
+| POST /assets/{asset_id}/controllers
+a| . Open the mNode service REST API UI on the management node:
 +
-IMPORTANT: For compute node assets, remove the `hardware_tag` parameter suggested in the
-payload example.
-
+----
+https://[management node IP]/mnode
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+. Click *POST /assets/{asset_id}/controllers*.
+. Click *Try it out*.
 . Enter the parent base asset ID in the *asset_id* field.
 . Click *Execute*.
+| POST /assets/{asset_id}/compute-nodes
+a| . Open the mNode service REST API UI on the management node:
++
+----
+https://[management node IP]/mnode
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+. Click *POST /assets/{asset_id}/controllers*.
+. Click *Try it out*.
+. Enter the management IP for the node in the `ip` field.
+. For `hardwareTag`, enter the BIOS UUID of the hardware.  Use the Redfish API to find the value under the `UUID` property name:
+* Type A: `https://[bmc ip]/redfish/v1/Systems/1`
+* Type B: `https://[bmc ip]/redfish/v1/Systems/Self`
++
+NOTE: If the BIOS UUID is not available, the chassis serial number can be used instead.
+
+. Enter the parent base asset ID you copied in an earlier step in the *asset_id* field.
+. Click *Execute*.
+|===
 
 [discrete]
 == Find more information
