@@ -23,7 +23,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 * For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
-* You have upgraded your compute node drivers. 
+* You have upgraded your compute node drivers.
 
 .About this task
 
@@ -90,9 +90,9 @@ a|
 . Click *Browse* to upload the upgrade package that you downloaded from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 
-CAUTION: The file upload will be lost if you navigate away from the browser window. IS THIS TRUE?
+TIP: The file upload will happen in the background if you navigate away from the browser window.
 
-An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
+An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes.
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
 
@@ -113,8 +113,6 @@ Here are the different states that the UI shows before, during, and after the up
 |Node upgrade is in progress
 |The upgrade is in progress. A progress bar shows the upgrade status. You can monitor the status of each node using the NetApp Element plug-in for vCenter Server UI.
 |===
-
-
 
 == Use NetApp Hybrid Cloud Control API to upgrade a compute node
 
