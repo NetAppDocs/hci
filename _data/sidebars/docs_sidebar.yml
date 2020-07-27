@@ -118,6 +118,8 @@ entries:
                 url: task_mnode_enable_activeIQ.html
               - title: Add compute and controller assets to the management node
                 url: task_mnode_add_assets.html
+              - title: View or edit existing controller assets
+                url: task_mnode_edit_vcenter_assets.html
               - title: Change the storage cluster administrator password
                 url: task_mnode_change_storage_cluster_admin_password.html
               - title: Configure a proxy server for the management node
