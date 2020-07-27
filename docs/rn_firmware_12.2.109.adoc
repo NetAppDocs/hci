@@ -54,7 +54,7 @@ To download the compute node firmware package:
 Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
 
 == Resolved issues
-The following are known issues in this release that might affect daily operation in some environments.
+The following are issues that have been resolved in this release.
 
 |===
 |Issue |Description
@@ -66,10 +66,10 @@ The following are known issues in this release that might affect daily operation
 |In some circumstances, H610C nodes can exhibit intermittent fan noise.
 
 |CSESF-293
-|When you upgrade to the version 12.2.109 compute node firmware on a H410C, H610C, H300E, H500E, or H700E node, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
+|When you upgrade to the version 12.2.92 compute node firmware on a H410C, H610C, H300E, H500E, or H700E node, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
 
 |CSESF-352
-|TLS versions 1.0 and 1.1 suffer from security vulnerabilities.  This release disables TLS 1.0 and 1.1 for H610C and H615C compute nodes.
+|TLS versions 1.0 and 1.1 suffer from security vulnerabilities. This release disables TLS 1.0 and 1.1 for H610C and H615C compute nodes.
 |===
 
 == Known issues
