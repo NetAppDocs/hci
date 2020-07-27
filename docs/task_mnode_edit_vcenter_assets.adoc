@@ -48,7 +48,7 @@ You can list existing vCenter controllers that are registered with the managemen
 . Click *Execute*.
 +
 The API returns a list of all known vCenter controllers, along with the IP address, controller ID, hostname, and user ID used to communicate with each controller.
-. If you want the connection status of a particular controller, copy the controller ID from the `id` field of that controller to your clipboard.
+. If you want the connection status of a particular controller, copy the controller ID from the `id` field of that controller to your clipboard and see <<View the status of an existing controller>>.
 
 == View the status of an existing controller
 You can view the status of any of the existing vCenter controllers registered with the management node. The API returns a status indicating whether NetApp Hybrid Cloud Control can connect with the vCenter controller as well as the reason for that status.
