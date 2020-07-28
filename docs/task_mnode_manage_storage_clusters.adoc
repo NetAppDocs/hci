@@ -59,14 +59,14 @@ NOTE: Ensure you have followed the steps in <<Access the management services RES
 . Click *Execute*.
 +
 The API returns a list of all known storage cluster installations.
-. From the code 200 response body, save the value in the `id` field for the installation.
+. From the code 200 response body, save the value in the `id` field for the installation. This is the installation ID.
 . Click *GET /clusters*.
 . Click *Try it out*.
 . Paste the value you copied earlier into the `installationId` parameter.
 . Click *Execute*.
 +
 The API returns a list of all known storage clusters in this installation.
-. From the code 200 response body, find the correct storage cluster and copy the value in the cluster's `storageId` field to your clipboard.
+. From the code 200 response body, find the correct storage cluster and save the value in the cluster's `storageId` field. This is the storage cluster ID.
 
 == Add a new storage cluster
 You can use the REST API to add a new storage cluster to the inventory of an installation.
@@ -83,7 +83,7 @@ NOTE: Ensure you have followed the steps in <<Access the management services RES
 
 |`installationId`
 |string
-|The installation in which to create the new storage cluster. Enter the `id` you saved earlier into this parameter.
+|The installation in which to create the new storage cluster. Enter the installation ID you saved earlier into this parameter.
 
 |`mvip`
 |string
