@@ -14,15 +14,14 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You can view information about and edit existing VMware vCenter controllers in the management node configuration using the REST API. Controllers are VMware vCenter instances registered to the management node for your NetApp HCI installation.
+You can edit the stored credentials for existing storage clusters as well as delete storage clusters using the REST API.
 
 .Before you begin
 * Ensure that your cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 
-.About this task
-
 == Access the management services REST API
+You need to authenticate with the REST API UI interface before working with the REST API.
 
 .Steps
 . Access the REST API UI for management services by entering the management node IP address
@@ -39,55 +38,56 @@ https://[IP address]/mnode
 .. Click *Authorize* to begin a session.
 .. Close the window.
 
-== View stored information about existing controllers
-You can list existing vCenter controllers that are registered with the management node and view stored information about them using the REST API.
+== Retrieve the storage cluster ID
+You can use the REST API get the ID of the storage cluster, which you need to manage the cluster.
 
 .Steps
-. Click *GET /compute/controllers*.
+. Click *GET /installations*.
 . Click *Try it out*.
 . Click *Execute*.
 +
-The API returns a list of all known vCenter controllers, along with the IP address, controller ID, hostname, and user ID used to communicate with each controller.
-. If you want the connection status of a particular controller, copy the controller ID from the `id` field of that controller to your clipboard and see <<View the status of an existing controller>>.
-
-== View the status of an existing controller
-You can view the status of any of the existing vCenter controllers registered with the management node. The API returns a status indicating whether NetApp Hybrid Cloud Control can connect with the vCenter controller as well as the reason for that status.
-
-.Steps
-. Click *GET /compute/controllers/{controller_id}/status*.
+The API returns a list of all known storage cluster installations.
+. From the code 200 response body, copy the value in the `id` field for the installation to your clipboard.
+. Click *GET /clusters*.
 . Click *Try it out*.
-. Enter the controller ID you copied earlier in the `controller_id` parameter.
+. Paste the value you copied earlier into the `installationId` parameter.
 . Click *Execute*.
 +
-The API returns a status of this particular vCenter controller, along with a reason for that status.
+The API returns a list of all known storage clusters in this installation.
+. From the code 200 response body, find the correct storage cluster and copy the value in the cluster's `storageId` field to your clipboard.
 
-== Edit the stored properties of a controller
-You can edit the stored user name, password, or IP address for any of the existing vCenter controllers registered with the management node.
+== Edit the stored credentials for a storage cluster
+You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
 
 .Steps
-. Click *PUT /compute/controllers/{controller_id}*.
-. Enter the controller ID of a vCenter controller in the `controller_id` parameter.
+. Click *PUT /clusters/{storageId}*.
 . Click *Try it out*.
-. Change any of the following parameters in the *Request body* field:
+. Paste the storage cluster ID you copied earlier into the `storageId` parameter.
+. Change one or both of the following parameters in the *Request body* field:
 +
 |===
 |Parameter |Type |Description
 
 |`userId`
 |string
-|Change the user ID used to communicate with the vCenter controller (the user must have administrator privileges).
+|The user ID used to communicate with the storage cluster (the user must have administrator privileges).
 
 |`password`
 |string
-|Change the password used to communicate with the vCenter controller.
-
-|`ipAddress`
-|string
-|Change the IP address used to communicate with the vCenter controller. This IP address must be reachable from the management node.
+|The password used to communicate with the storage cluster.
 |===
 . Click *Execute*.
+
+== Delete a storage cluster
+You can delete a storage cluster if it is no longer in service.
+
+.Steps
+. Click *DELETE /clusters/{storageId}*.
+. Click *Try it out*.
+. Enter the storage cluster ID you copied earlier in the `storageId` parameter.
+. Click *Execute*.
 +
-The API returns updated controller information.
+Upon success, the API returns an empty response.
 
 [discrete]
 == Find more information
