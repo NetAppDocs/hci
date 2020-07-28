@@ -49,7 +49,7 @@ Read these resources:
 * Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
 * For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
 * For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
-* For details about configuring Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes, see link:hci_prereqs_LCAP_configuration.html[Configure LCAP for optimal storage performance].
+* For details about configuring Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes, see link:hci_prereqs_LACP_configuration.html[Configure LCAP for optimal storage performance].
 
 This setup consolidates all traffic onto two physical, redundant ports, reducing the cabling and streamlining network configuration. This configuration requires that the storage, vMotion and any virtual machine network segments use VLAN tagging.  The management network segment can use native or tagged VLAN; however, native VLAN is the preferred mode so that NetApp Deployment Engine (NDE) can assign network resources in an automated manner (Zero Conf).
 
@@ -110,12 +110,12 @@ For optimal NetApp HCI storage cluster performance, you should configure Link Ag
 For details about LACP configuration, see the following resources:
 
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_]
-* link:<hci_prereqs_LACP_configuration.html>[Configure LACP for optimal storage performance]
+* link:hci_prereqs_LACP_configuration.html[Configure LACP for optimal storage performance]
 
 === Configure IPMI for each node
 After you have racked, cabled, and powered on your NetApp HCI hardware, you can configure Intelligent Platform Management Interface (IPMI) access for each node. Assign each IPMI port an IP address and change the default administrator IPMI password as soon as you have remote IPMI access to the node.
 
-See link:<hci_prereqs_final_prep.html>[Configure IPMI].
+See link:hci_prereqs_final_prep.html[Configure IPMI].
 
 == Deploy NetApp HCI using the NetApp Deployment Engine (NDE)
 
@@ -222,6 +222,6 @@ The NetApp Hybrid Cloud Control interface appears.
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^]
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
-* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_NetApp Element Plug-in for vCenter Server Guide_^].
+* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_NetApp Element Plug-in for vCenter Server Guide_^]
 * https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
 * https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
