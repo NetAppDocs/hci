@@ -62,7 +62,7 @@ The API returns a list of all known storage cluster installations.
 . From the code 200 response body, save the value in the `id` field for the installation. This is the installation ID.
 . Click *GET /clusters*.
 . Click *Try it out*.
-. Paste the value you copied earlier into the `installationId` parameter.
+. Enter the installation ID you saved earlier into the `installationId` parameter.
 . Click *Execute*.
 +
 The API returns a list of all known storage clusters in this installation.
