@@ -14,10 +14,10 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You can edit the stored credentials for existing storage clusters as well as delete storage clusters using the REST API.
+You can create new storage clusters, edit the stored credentials for existing storage clusters, and delete storage clusters using the REST API.
 
 .Before you begin
-* Ensure that your cluster version is running NetApp Element software 11.3 or later.
+* Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 
 == Access the management services REST API
@@ -38,8 +38,8 @@ https://[IP address]/mnode
 .. Click *Authorize* to begin a session.
 .. Close the window.
 
-== Retrieve the storage cluster ID
-You can use the REST API get the ID of the storage cluster, which you need to manage the cluster.
+== Retrieve the installation ID and cluster ID of a storage cluster
+You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster, and the cluster ID to modify or delete a specific cluster.
 
 .Steps
 . Click *GET /installations*.
@@ -47,7 +47,7 @@ You can use the REST API get the ID of the storage cluster, which you need to ma
 . Click *Execute*.
 +
 The API returns a list of all known storage cluster installations.
-. From the code 200 response body, copy the value in the `id` field for the installation to your clipboard.
+. From the code 200 response body, save the value in the `id` field for the installation.
 . Click *GET /clusters*.
 . Click *Try it out*.
 . Paste the value you copied earlier into the `installationId` parameter.
@@ -55,6 +55,37 @@ The API returns a list of all known storage cluster installations.
 +
 The API returns a list of all known storage clusters in this installation.
 . From the code 200 response body, find the correct storage cluster and copy the value in the cluster's `storageId` field to your clipboard.
+
+== Add a new storage cluster
+You can use the REST API to add a new storage cluster to the inventory of an installation.
+
+.Steps
+. Click *POST /clusters*.
+. Click *Try it out*.
+. Enter the new storage cluster's information in the following parameters in the *Request body* field:
++
+|===
+|Parameter |Type |Description
+
+|`installationId`
+|string
+|The installation in which to create the new storage cluster. Enter the `id` you saved earlier into this parameter.
+
+|`mvip`
+|string
+|The IPv4 management virtual IP address (MVIP) of the storage cluster.
+
+|`userId`
+|string
+|The user ID used to communicate with the storage cluster (the user must have administrator privileges).
+
+|`password`
+|string
+|The password used to communicate with the storage cluster.
+|===
+. Click *Execute*.
++
+The API returns an object containing information about the newly created storage cluster, such as its name, version, and IP address information.
 
 == Edit the stored credentials for a storage cluster
 You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
