@@ -30,7 +30,6 @@ Choose one of the following options:
 * <<Edit the stored credentials for a storage cluster>>
 * <<Delete a storage cluster>>
 
-
 == Access the management services REST API
 You need to authenticate with the REST API UI interface before working with the REST API.
 
@@ -52,7 +51,7 @@ https://[IP address]/mnode
 == Retrieve the installation ID and cluster ID of a storage cluster
 You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster, and the cluster ID to modify or delete a specific cluster.
 
-NOTE: Ensure you have followed the steps in <<Access the management services REST API>> to authenticate with the REST API UI interface before continuing.
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> before continuing.
 
 .Steps
 . Click *GET /installations*.
@@ -72,7 +71,7 @@ The API returns a list of all known storage clusters in this installation.
 == Add a new storage cluster
 You can use the REST API to add a new storage cluster to the inventory of an installation.
 
-NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> to authenticate with the REST API UI interface and copy the required cluster information before continuing.
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> before continuing.
 
 .Steps
 . Click *POST /clusters*.
@@ -105,7 +104,7 @@ The API returns an object containing information about the newly created storage
 == Edit the stored credentials for a storage cluster
 You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
 
-NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> to authenticate with the REST API UI interface and copy the required cluster information before continuing.
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> before continuing.
 
 .Steps
 . Click *PUT /clusters/{storageId}*.
@@ -129,7 +128,7 @@ NOTE: Ensure you have followed the steps in <<Access the management services RES
 == Delete a storage cluster
 You can delete a storage cluster if it is no longer in service.
 
-NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> to authenticate with the REST API UI interface and copy the required cluster information before continuing.
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> before continuing.
 
 .Steps
 . Click *DELETE /clusters/{storageId}*.
