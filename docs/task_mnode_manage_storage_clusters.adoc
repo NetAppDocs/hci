@@ -1,0 +1,95 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_manage_storage_clusters.html
+summary: You can edit vCenter management node controllers using the REST API UI.
+keywords: netapp, mnode, management node, rest api, hci
+---
+
+= Manage storage clusters
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can view information about and edit existing VMware vCenter controllers in the management node configuration using the REST API. Controllers are VMware vCenter instances registered to the management node for your NetApp HCI installation.
+
+.Before you begin
+* Ensure that your cluster version is running NetApp Element software 11.3 or later.
+* Ensure that you have deployed a management node running version 11.3 or later.
+
+.About this task
+
+== Access the management services REST API
+
+.Steps
+. Access the REST API UI for management services by entering the management node IP address
+followed by `/mnode`:
++
+----
+https://[IP address]/mnode
+----
+
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+
+== View stored information about existing controllers
+You can list existing vCenter controllers that are registered with the management node and view stored information about them using the REST API.
+
+.Steps
+. Click *GET /compute/controllers*.
+. Click *Try it out*.
+. Click *Execute*.
++
+The API returns a list of all known vCenter controllers, along with the IP address, controller ID, hostname, and user ID used to communicate with each controller.
+. If you want the connection status of a particular controller, copy the controller ID from the `id` field of that controller to your clipboard and see <<View the status of an existing controller>>.
+
+== View the status of an existing controller
+You can view the status of any of the existing vCenter controllers registered with the management node. The API returns a status indicating whether NetApp Hybrid Cloud Control can connect with the vCenter controller as well as the reason for that status.
+
+.Steps
+. Click *GET /compute/controllers/{controller_id}/status*.
+. Click *Try it out*.
+. Enter the controller ID you copied earlier in the `controller_id` parameter.
+. Click *Execute*.
++
+The API returns a status of this particular vCenter controller, along with a reason for that status.
+
+== Edit the stored properties of a controller
+You can edit the stored user name, password, or IP address for any of the existing vCenter controllers registered with the management node.
+
+.Steps
+. Click *PUT /compute/controllers/{controller_id}*.
+. Enter the controller ID of a vCenter controller in the `controller_id` parameter.
+. Click *Try it out*.
+. Change any of the following parameters in the *Request body* field:
++
+|===
+|Parameter |Type |Description
+
+|`userId`
+|string
+|Change the user ID used to communicate with the vCenter controller (the user must have administrator privileges).
+
+|`password`
+|string
+|Change the password used to communicate with the vCenter controller.
+
+|`ipAddress`
+|string
+|Change the IP address used to communicate with the vCenter controller. This IP address must be reachable from the management node.
+|===
+. Click *Execute*.
++
+The API returns updated controller information.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
