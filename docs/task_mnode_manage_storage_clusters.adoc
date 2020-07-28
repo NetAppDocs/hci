@@ -20,6 +20,17 @@ You can create new storage clusters, edit the stored credentials for existing st
 * Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 
+.Storage cluster management options
+
+Choose one of the following options:
+
+* <<Access the management services REST API>>
+* <<Retrieve the installation ID and cluster ID of a storage cluster>>
+* <<Add a new storage cluster>>
+* <<Edit the stored credentials for a storage cluster>>
+* <<Delete a storage cluster>>
+
+
 == Access the management services REST API
 You need to authenticate with the REST API UI interface before working with the REST API.
 
@@ -41,6 +52,8 @@ https://[IP address]/mnode
 == Retrieve the installation ID and cluster ID of a storage cluster
 You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster, and the cluster ID to modify or delete a specific cluster.
 
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> to authenticate with the REST API UI interface before continuing.
+
 .Steps
 . Click *GET /installations*.
 . Click *Try it out*.
@@ -58,6 +71,8 @@ The API returns a list of all known storage clusters in this installation.
 
 == Add a new storage cluster
 You can use the REST API to add a new storage cluster to the inventory of an installation.
+
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> to authenticate with the REST API UI interface and copy the required cluster information before continuing.
 
 .Steps
 . Click *POST /clusters*.
@@ -90,6 +105,8 @@ The API returns an object containing information about the newly created storage
 == Edit the stored credentials for a storage cluster
 You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
 
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> to authenticate with the REST API UI interface and copy the required cluster information before continuing.
+
 .Steps
 . Click *PUT /clusters/{storageId}*.
 . Click *Try it out*.
@@ -111,6 +128,8 @@ You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log
 
 == Delete a storage cluster
 You can delete a storage cluster if it is no longer in service.
+
+NOTE: Ensure you have followed the steps in <<Access the management services REST API>> and <<Retrieve the installation ID and cluster ID of a storage cluster>> to authenticate with the REST API UI interface and copy the required cluster information before continuing.
 
 .Steps
 . Click *DELETE /clusters/{storageId}*.
