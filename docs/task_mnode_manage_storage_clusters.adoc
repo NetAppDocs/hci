@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You can create new storage clusters, edit the stored credentials for existing storage clusters, and delete storage clusters using the REST API.
+You can add new storage clusters, edit the stored credentials for existing storage clusters, and delete storage clusters using the REST API.
 
 .Before you begin
 * Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
@@ -99,7 +99,7 @@ NOTE: Ensure you have followed the steps in <<Access the management services RES
 |===
 . Click *Execute*.
 +
-The API returns an object containing information about the newly created storage cluster, such as its name, version, and IP address information.
+The API returns an object containing information about the newly added storage cluster, such as its name, version, and IP address information.
 
 == Edit the stored credentials for a storage cluster
 You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
