@@ -17,12 +17,12 @@ A cluster is a group of nodes, functioning as a collective whole, that provide s
 
 The storage layer in NetApp HCI is provided by NetApp Element software and the management layer is provided by the NetApp Element Plug-in for vCenter Server. A storage node is a server containing a collection of drives that communicate with each other through the Bond10G network interface. Each storage node is connected to two networks, storage and management, each with two independent links for redundancy and performance. Each node requires an IP address on each network. You can create a cluster with new storage nodes, or add storage nodes to an existing cluster to increase storage capacity and performance.
 
-== Authoritative clusters
-The authoritative cluster is the storage cluster that NetApp Hybrid Cloud Control uses to authenticate users.
+== Authoritative storage clusters
+The authoritative storage cluster is the storage cluster that NetApp Hybrid Cloud Control uses to authenticate users.
 
 If your management node only has one storage cluster, then it is the authoritative cluster. If your management node has two or more storage clusters, one of those clusters is assigned as the authoritative cluster and only users from that cluster can log into NetApp Hybrid Cloud Control. To find out which cluster is the authoritative cluster, you can use the `GET /mnode/about` API. In the response, the IP address in the `token_url` field is the management virtual IP address (MVIP) of the authoritative storage cluster. If you attempt to log into NetApp Hybrid Cloud Control as a user that is not on the authoritative cluster, the login attempt will fail.
 
-Many NetApp Hybrid Cloud Control features are designed to work with multiple clusters, but authentication and authorization have limitations. The limitation around authentication and authorization is that the user from the authoritative cluster can execute actions on other clusters tied to NetApp Hybrid Cloud Control even if they are not a user on the other clusters. Before proceeding with managing multiple storage clusters, you should ensure that users defined on the authoritative clusters are defined on all other clusters with the same permissions. You can manage users from the Element software user interface (Element web UI).
+Many NetApp Hybrid Cloud Control features are designed to work with multiple storage clusters, but authentication and authorization have limitations. The limitation around authentication and authorization is that the user from the authoritative cluster can execute actions on other clusters tied to NetApp Hybrid Cloud Control even if they are not a user on the other storage clusters. Before proceeding with managing multiple storage clusters, you should ensure that users defined on the authoritative clusters are defined on all other storage clusters with the same permissions. You can manage users from the Element software user interface (Element web UI).
 
 See link:task_mnode_manage_storage_cluster_assets.html[Manage storage cluster assets] for more information on working with management node storage cluster assets.
 
@@ -48,14 +48,14 @@ NOTE: Learn more about link:concept_hci_nodes.html[Witness Nodes.]
 
 * Two-node storage clusters use the same networks as four-node storage clusters. The networks are set up during NetApp HCI deployment using the NetApp Deployment Engine wizard.
 
-=== Cluster quorum
+=== Storage cluster quorum
 Element software creates a storage cluster from selected nodes, which maintains a replicated database of the cluster configuration. A minimum of three nodes are required to participate in the cluster ensemble to maintain quorum for cluster resiliency. Witness Nodes in a two-node cluster are used to ensure that there are enough storage nodes to form a valid ensemble quorum. For ensemble creation, storage nodes are preferred over Witness Nodes. For the minimum three-node ensemble involving a two-node storage cluster, two storage nodes and one Witness Node are used.
 
 TIP: In a three-node ensemble with two storage nodes and one Witness Node, if one storage node goes offline, the cluster goes into a degraded state. Of the two Witness Nodes, only one can be active in the ensemble. The second Witness Node cannot be added to the ensemble, because it performs the backup role. The cluster stays in degraded state until the offline storage node returns to an online state, or a replacement node joins the cluster.
 
 If a Witness Node fails, the remaining Witness Node joins the ensemble to form a three-node ensemble. You can deploy a new Witness Node to replace the failed Witness Node.
 
-=== Auto-healing and failure handling in two-node clusters
+=== Auto-healing and failure handling in two-node storage clusters
 If a hardware component fails in a node that is part of a traditional cluster, the cluster can rebalance data that was on the component that failed to other available nodes in the cluster. This ability to automatically heal is not available in a two-node storage cluster, because a minimum of three physical storage nodes must be available to the cluster for healing automatically. When one node in a two-node cluster fails, the two-node cluster does not require regeneration of a second copy of data. New writes are replicated for block data in the remaining active storage node. When the failed node is replaced and joins the cluster, the data is rebalanced between the two physical storage nodes.
 
 == Storage clusters with three or more nodes
