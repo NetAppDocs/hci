@@ -116,7 +116,7 @@ https://[IP address]/storage/1
 The API returns an object containing information about the newly added storage cluster asset, such as the name, version, and IP address information.
 
 == Edit the stored credentials for a storage cluster asset
-You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
+You can edit the stored credentials that the management node uses to log in to a storage cluster. The user you choose must have cluster admin access.
 
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
