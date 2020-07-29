@@ -30,7 +30,7 @@ Choose one of the following options:
 * <<Delete a storage cluster asset>>
 
 == Retrieve the installation ID and cluster ID of a storage cluster asset
-You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster, and the cluster ID to modify or delete a specific cluster.
+You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster asset, and the cluster ID to modify or delete a specific storage cluster asset.
 
 .Steps
 . Access the REST API UI for the inventory service by entering the management node IP address followed by `/inventory/1`:
@@ -72,7 +72,7 @@ The API returns a list of all known storage clusters in this installation.
 . From the code 200 response body, find the correct storage cluster and save the value in the cluster's `storageId` field. This is the storage cluster ID.
 
 == Add a new storage cluster asset
-You can use the REST API to add a new storage cluster to the inventory of an installation. When you add a new storage cluster asset, it is automatically registered with the management node.
+You can use the REST API to add a new storage cluster asset to the management node inventory. When you add a new storage cluster asset, it is automatically registered with the management node.
 
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
@@ -113,7 +113,7 @@ https://[IP address]/storage/1
 |===
 . Click *Execute*.
 +
-The API returns an object containing information about the newly added storage cluster, such as its name, version, and IP address information.
+The API returns an object containing information about the newly added storage cluster asset, such as the name, version, and IP address information.
 
 == Edit the stored credentials for a storage cluster asset
 You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log in to a storage cluster. The user you choose must have cluster admin access.
@@ -151,7 +151,7 @@ https://[IP address]/storage/1
 . Click *Execute*.
 
 == Delete a storage cluster asset
-You can delete a storage cluster if it is no longer in service. When you remove storage cluster asset, it is automatically unregistered from the management node.
+You can delete a storage cluster asset if the storage cluster is no longer in service. When you remove a  storage cluster asset, it is automatically unregistered from the management node.
 
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
