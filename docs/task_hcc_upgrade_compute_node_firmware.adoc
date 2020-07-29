@@ -210,7 +210,7 @@ https://[management node IP]/inventory
 .. Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware
+https://[management node IP]/hardware/2/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
