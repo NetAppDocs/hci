@@ -54,11 +54,11 @@ The API returns a list of all known installations.
 ----
 "installations": [
     {
-      "id": "11111111-aaaa-1111-aaaa-111111111111",
+      "id": "1234a678-12ab-35dc-7b4a-1234a5b6a7ba",
       "name": "my-hci-installation",
       "_links": {
         "collection": "https://localhost/inventory/1/installations",
-        "self": "https://localhost/inventory/1/installations/11111111-aaaa-1111-aaaa-111111111111"
+        "self": "https://localhost/inventory/1/installations/1234a678-12ab-35dc-7b4a-1234a5b6a7ba"
       }
     }
   ]
