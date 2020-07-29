@@ -20,7 +20,7 @@ You can add new storage cluster assets to the management node, edit the stored c
 * Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 
-.Storage cluster management options
+.Storage cluster asset management options
 
 Choose one of the following options:
 
@@ -33,8 +33,7 @@ Choose one of the following options:
 You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster, and the cluster ID to modify or delete a specific cluster.
 
 .Steps
-. Access the REST API UI for the inventory service by entering the management node IP address
-followed by `/inventory/1`:
+. Access the REST API UI for the inventory service by entering the management node IP address followed by `/inventory/1`:
 +
 ----
 https://[IP address]/inventory/1
@@ -50,7 +49,20 @@ https://[IP address]/inventory/1
 . Click *Execute*.
 +
 The API returns a list of all known installations.
-. From the code 200 response body, save the value in the `id` field for the installation. This is the installation ID.
+. From the code 200 response body, save the value in the `id` field, which you can find in the list of installations. This is the installation ID. For example:
++
+----
+"installations": [
+    {
+      "id": "11111111-aaaa-1111-aaaa-111111111111",
+      "name": "my-hci-installation",
+      "_links": {
+        "collection": "https://localhost/inventory/1/installations",
+        "self": "https://localhost/inventory/1/installations/11111111-aaaa-1111-aaaa-111111111111"
+      }
+    }
+  ]
+----
 . Click *GET /clusters*.
 . Click *Try it out*.
 . Enter the installation ID you saved earlier into the `installationId` parameter.
@@ -65,8 +77,7 @@ You can use the REST API to add a new storage cluster to the inventory of an ins
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
 .Steps
-. Access the REST API UI for the storage service by entering the management node IP address
-followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
 +
 ----
 https://[IP address]/storage/1
@@ -110,8 +121,7 @@ You can edit the stored credentials that NetApp Hybrid Cloud Control uses to log
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
 .Steps
-. Access the REST API UI for the storage service by entering the management node IP address
-followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
 +
 ----
 https://[IP address]/storage/1
@@ -146,8 +156,7 @@ You can delete a storage cluster if it is no longer in service. When you remove 
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
 .Steps
-. Access the REST API UI for the storage service by entering the management node IP address
-followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
 +
 ----
 https://[IP address]/storage/1
