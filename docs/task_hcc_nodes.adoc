@@ -43,7 +43,7 @@ image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes page image]
 .. Three-node clusters: The storage nodes and associated Witness Nodes are listed. Three-node clusters have a Witness Node deployed on standby to maintain high availability in the case of node failure.
 .. Clusters with four nodes or more: Information for clusters with four or more nodes appears. Witness Nodes do not apply; the Witness Nodes table does not appear.
 . To view compute inventory information, click *Compute*.
-. Options:
+. You can manipulate the information on this page in several ways:
 .. To filter the list of items in the results, click the *Filter* icon and select the filters. You can also enter text for the filter.
 .. To show or hide columns, click the *Show/Hide Columns* icon.
 .. To download the table, click the *Download* icon.
