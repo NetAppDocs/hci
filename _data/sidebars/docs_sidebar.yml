@@ -80,7 +80,7 @@ entries:
             url: /task_hcc_volumes.html
           - title: Monitor performance, capacity, and cluster health with Active IQ
             url: /task_hcc_activeiq.html
-          - title: Collect NetApp HCI logs
+          - title: Collect logs for troubleshooting
             url: /task_hcc_collectlogs.html
       - title: Work with the management node
         entries:
