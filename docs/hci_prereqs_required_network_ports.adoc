@@ -69,7 +69,7 @@ The following abbreviations are used in the table:
 |UI and API access to storage node and Element software upgrades
 
 |Management node
-|Online software repository: `repo.netapp.com/api/repos/netapp-downloads`, `repo.netapp.com/bintray/dl/`, `repo.netapp.com/bintray/api/package`, `netapp-downloads.bintray.com`, `bintray.com`, `repo.netapp.com`, `library.netapp.com`
+|`repo.netapp.com/api/repos/netapp-downloads`, `repo.netapp.com/bintray/dl/`, `repo.netapp.com/bintray/api/package`, `netapp-downloads.bintray.com`, `bintray.com`, `repo.netapp.com`, `library.netapp.com`
 |443
 |Management node service upgrades
 
