@@ -29,12 +29,6 @@ The NetApp online software repository uses JFrog Bintray as a distribution hub a
 ======================
 
 
-NOTE: The NetApp online software repository uses JFrog Bintray as a distribution hub and Akamai Technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
-  1. Use the Wget or cURL utility to access a URL (repo.netapp.com, for example).
-  2. Receive a failure to access the URL (different from repo.netapp.com).
-  3. Edit the firewall rules to allow the new URL.
-  4. Repeat the above steps until the access attempt succeeds.
-
 The following abbreviations are used in the table:
 
 * MIP: Management IP address, a per-node address
