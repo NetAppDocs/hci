@@ -233,15 +233,15 @@ The following abbreviations are used in the table:
 |443
 |HTTPS storage cluster creation, post-deployment UI access to storage cluster
 
-|vCenter Server
-|Storage cluster MVIP
-|443
-|vCenter Plug-in API access
-
 |System administrator PC
 |Witness Node
 |8080
 |Witness Node per-node web UI
+
+|vCenter Server
+|Storage cluster MVIP
+|443
+|vCenter Plug-in API access
 
 |vCenter Server
 |Management node
