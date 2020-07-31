@@ -28,7 +28,6 @@ The NetApp online software repository uses JFrog Bintray as a distribution hub a
 . Repeat the above steps until the access attempt succeeds.
 ======================
 
-
 The following abbreviations are used in the table:
 
 * MIP: Management IP address, a per-node address
