@@ -22,7 +22,7 @@ The NetApp online software repository uses JFrog Bintray as a distribution hub a
 
 .Steps
 
-. Use the Wget or cURL utility to access a URL (repo.netapp.com, for example).
+. Use the Wget or cURL utilities to access a URL (repo.netapp.com, for example).
 . Receive a failure to access the URL (different from repo.netapp.com).
 . Edit the firewall rules to allow the new URL.
 . Repeat the above steps until the access attempt succeeds.
