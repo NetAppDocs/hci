@@ -30,7 +30,7 @@ TIP: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
 Choose the option that is relevant to your upgrade scenario:
 
 - For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
-- For compute firmware 12.2.92, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+- For compute firmware 12.2.109, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
 .About this task
 
