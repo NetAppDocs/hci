@@ -186,7 +186,7 @@ https://[management node IP]/package-repository
 The response indicates `state` as `finished` when complete.
 .. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
 |===
-. Locate the compute controller ID and node hardware tag for the node you intend to upgrade:
+. Locate the compute controller ID for the node you intend to upgrade:
 .. Open the inventory service REST API UI on the management node:
 +
 ----
@@ -205,12 +205,15 @@ https://[management node IP]/inventory
 .. Click *Try it out*.
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
-.. From the response, copy and save the cluster controller ID (`"controllerId"`) and node hardware tag (`"hardwareTag"`) for use in a later step.
+.. From the response, copy and save the cluster controller ID (`"controllerId"`).
+. Using the BMC UI for your node, locate the node hardware ID (BIOS UUID of the hardware) for the node you intend to upgrade using one of the following paths:
+* `https://[bmc ip]/redfish/v1/Systems/1`
+* `https://[bmc ip]/redfish/v1/Systems/Self`
 . Run the compute node firmware upgrade:
 .. Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware
+https://[management node IP]/hardware/2/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -219,7 +222,7 @@ https://[management node IP]/hardware
 ... Close the authorization window.
 .. Click *POST /nodes/{hardware_id}/upgrades*.
 .. Click *Try it out*.
-.. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
+.. Enter the hardware host asset ID (BIOS UUID saved from a previous step) in the parameter field.
 .. Do the following with the payload values:
 ... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
 ... Enter the cluster controller ID (`"controllerId"` saved from a previous step).
@@ -232,8 +235,8 @@ https://[management node IP]/hardware
     "maintenanceMode": true
   },
   "controllerId": "00000000-0000-0000-0000-AC1F6BC4ECF6",
-  "packageName": "compute_firmware",
-  "packageVersion": "12.2.92"
+  "packageName": "compute-firmware-12.2.109",
+  "packageVersion": "12.2.109"
 }
 ----
 
@@ -283,7 +286,7 @@ https://[management node IP]/hardware/2/
 ... Close the authorization window.
 .. From the REST API UI, click *GET ​/nodes​/{hardware_id}​/upgrades*.
 .. (Optional) Enter date and status parameters to filter the results.
-.. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
+.. Enter the hardware host asset ID (BIOS UUID saved from a previous step) in the parameter field.
 .. Click *Try it out*.
 .. Click *Execute*.
 .. Verify in the response that firmware for all components has been successfully upgraded from the previous version to the latest firmware.
