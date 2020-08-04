@@ -130,15 +130,13 @@ With NetApp HCI Private Cloud Sales and Partner Kits you have access to informat
 * Performance at scale  Performance guarantee with multiple applications across multiple tenants in the same infrastructure.
 * NetApp Data Fabric -  your data, anywhere and everywhere you need it for hybrid cloud application mobility
 
-== Find more information:
+== Find more information
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Documentation Resources]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
-
-== Additional information (login required):
-* https://fieldportal.netapp.com/collections/895975[NetApp HCI Solutions Collection]
-* https://fieldportal.netapp.com/collections/783084[NetApp HCI VMware Private Cloud Collection]
-* https://fieldportal.netapp.com/collections/884534[NetApp HCI Red Hat Private Cloud Collection]
-* https://fieldportal.netapp.com/collections/810434[NetApp HCI Red Hat Openshift Container Platform Collection]
-* https://fieldportal.netapp.com/collections/639656[NetApp HCI End User Computing (EUC) Collection]
-* https://fieldportal.netapp.com/collections/901760[NetApp HCI Database Collection]
-* https://fieldportal.netapp.com/collections/901766[NetApp HCI Data Protection Collection]
+* https://fieldportal.netapp.com/collections/895975[NetApp HCI Solutions Collection] (login required)
+* https://fieldportal.netapp.com/collections/783084[NetApp HCI VMware Private Cloud Collection] (login required)
+* https://fieldportal.netapp.com/collections/884534[NetApp HCI Red Hat Private Cloud Collection] (login required)
+* https://fieldportal.netapp.com/collections/810434[NetApp HCI Red Hat Openshift Container Platform Collection] (login required)
+* https://fieldportal.netapp.com/collections/639656[NetApp HCI End User Computing (EUC) Collection] (login required)
+* https://fieldportal.netapp.com/collections/901760[NetApp HCI Database Collection] (login required)
+* https://fieldportal.netapp.com/collections/901766[NetApp HCI Data Protection Collection] (login required)
