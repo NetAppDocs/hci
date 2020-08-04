@@ -94,10 +94,10 @@ For details about the associated Element API method, see the http://docs.netapp.
 
 .	View the Storage Performance pane. For details, hover over points in the graph.
 
-..	*IOPS* tab: See the current operations per second. Look for trends in data or spikes. For example, if you see that the maximum IOPS is 160K and 100K of that is free or available IOPS, you might consider adding more workloads to this node.  On the other hand, if you see that only 140K is available, you might consider offloading workloads or expanding your system.
+..	*IOPS* tab: See the current operations per second. Look for trends in data or spikes. For example, if you see that the maximum IOPS is 160K and 100K of that is free or available IOPS, you might consider adding more workloads to this cluster.  On the other hand, if you see that only 140K is available, you might consider offloading workloads or expanding your system.
 +
 image::hcc_dashboard_storage_perform_iops.png[Storage Performance > IOPS tab]
-..	*Throughput* tab: Monitor patterns or spikes in throughput (GB/s). Also monitor for continuously high throughput values, which might indicate that you are nearing the maximum useful performance of the resource.
+..	*Throughput* tab: Monitor patterns or spikes in throughput. Also monitor for continuously high throughput values, which might indicate that you are nearing the maximum useful performance of the resource.
 +
 image::hcc_dashboard_storage_perform_throughput.png[Storage Performance > Throughput tab]
 ..	*Utilization* tab: Monitor the utilization of IOPS in relation to the total IOPS available summed up at the cluster level.
