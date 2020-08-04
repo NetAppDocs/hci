@@ -5,7 +5,7 @@ summary: TCP and UDP ports used by NetApp HCI.
 keywords: netapp, hci, ports, tcp, udp
 ---
 
-= Network ports used by NetApp HCI
+= Required network ports
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -18,7 +18,7 @@ You might need to allow the following ports through your datacenter's edge firew
 
 [NOTE]
 ======================
-The NetApp online software repository uses JFrog Bintray as a distribution hub and Akamai Technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
+The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository, which uses JFrog Bintray as a distribution hub and Akamai Technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
 
 .Steps
 
