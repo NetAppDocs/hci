@@ -86,6 +86,8 @@ After you click *Begin Upgrade*, the window shows failed health checks, if any.
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
 
+CAUTION: While upgrading the firmware on H610C and H615C compute nodes, do not open the console. This might cause the upgrade to fail.
+
 The UI displays a message after the upgrade is complete. You can download logs after the upgrade is complete.
 
 |Your management node is within a dark site without external connectivity.
