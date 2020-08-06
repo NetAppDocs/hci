@@ -87,7 +87,7 @@ https://[management node IP]/mnode
 ... Enter the client ID as `mnode-client`.
 ... Click *Authorize* to begin a session.
 ... Close the window.
-. Click *POST /assets/{asset_id}/controllers*.
+. Click *POST /assets/{asset_id}/compute-nodes*.
 . Click *Try it out*.
 . Enter the management IP for the node in the `ip` field.
 . For `hardwareTag`, enter the BIOS UUID of the hardware.  Use the Redfish API to find the value under the `UUID` property name:

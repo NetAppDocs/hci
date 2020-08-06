@@ -1,0 +1,180 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_manage_storage_cluster_assets.html
+summary: You can add, remove, and change management node storage cluster assets using the REST API UI.
+keywords: netapp, mnode, management node, rest api, hci, assets
+---
+
+= Manage storage cluster assets
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add new storage cluster assets to the management node, edit the stored credentials for known storage cluster assets, and delete storage cluster assets from the management node using the REST API.
+
+.Before you begin
+* Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
+* Ensure that you have deployed a management node running version 11.3 or later.
+
+.Storage cluster asset management options
+
+Choose one of the following options:
+
+* <<Retrieve the installation ID and cluster ID of a storage cluster asset>>
+* <<Add a new storage cluster asset>>
+* <<Edit the stored credentials for a storage cluster asset>>
+* <<Delete a storage cluster asset>>
+
+== Retrieve the installation ID and cluster ID of a storage cluster asset
+You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster asset, and the cluster ID to modify or delete a specific storage cluster asset.
+
+.Steps
+. Access the REST API UI for the inventory service by entering the management node IP address followed by `/inventory/1`:
++
+----
+https://[management node IP]/inventory/1
+----
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *GET /installations*.
+. Click *Try it out*.
+. Click *Execute*.
++
+The API returns a list of all known installations.
+. From the code 200 response body, save the value in the `id` field, which you can find in the list of installations. This is the installation ID. For example:
++
+----
+"installations": [
+    {
+      "id": "1234a678-12ab-35dc-7b4a-1234a5b6a7ba",
+      "name": "my-hci-installation",
+      "_links": {
+        "collection": "https://localhost/inventory/1/installations",
+        "self": "https://localhost/inventory/1/installations/1234a678-12ab-35dc-7b4a-1234a5b6a7ba"
+      }
+    }
+  ]
+----
+. Click *GET /clusters*.
+. Click *Try it out*.
+. Enter the installation ID you saved earlier into the `installationId` parameter.
+. Click *Execute*.
++
+The API returns a list of all known storage clusters in this installation.
+. From the code 200 response body, find the correct storage cluster and save the value in the cluster's `storageId` field. This is the storage cluster ID.
+
+== Add a new storage cluster asset
+You can use the REST API to add a new storage cluster asset to the management node inventory. When you add a new storage cluster asset, it is automatically registered with the management node.
+
+NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
+
+.Steps
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
++
+----
+https://[management node IP]/storage/1
+----
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *POST /clusters*.
+. Click *Try it out*.
+. Enter the new storage cluster's information in the following parameters in the *Request body* field:
++
+|===
+|Parameter |Type |Description
+
+|`installationId`
+|string
+|The installation in which to create the new storage cluster. Enter the installation ID you saved earlier into this parameter.
+
+|`mvip`
+|string
+|The IPv4 management virtual IP address (MVIP) of the storage cluster.
+
+|`userId`
+|string
+|The user ID used to communicate with the storage cluster (the user must have administrator privileges).
+
+|`password`
+|string
+|The password used to communicate with the storage cluster.
+|===
+. Click *Execute*.
++
+The API returns an object containing information about the newly added storage cluster asset, such as the name, version, and IP address information.
+
+== Edit the stored credentials for a storage cluster asset
+You can edit the stored credentials that the management node uses to log in to a storage cluster. The user you choose must have cluster admin access.
+
+NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
+
+.Steps
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
++
+----
+https://[management node IP]/storage/1
+----
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *PUT /clusters/{storageId}*.
+. Click *Try it out*.
+. Paste the storage cluster ID you copied earlier into the `storageId` parameter.
+. Change one or both of the following parameters in the *Request body* field:
++
+|===
+|Parameter |Type |Description
+
+|`userId`
+|string
+|The user ID used to communicate with the storage cluster (the user must have administrator privileges).
+
+|`password`
+|string
+|The password used to communicate with the storage cluster.
+|===
+. Click *Execute*.
+
+== Delete a storage cluster asset
+You can delete a storage cluster asset if the storage cluster is no longer in service. When you remove a  storage cluster asset, it is automatically unregistered from the management node.
+
+NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
+
+.Steps
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
++
+----
+https://[management node IP]/storage/1
+----
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *DELETE /clusters/{storageId}*.
+. Click *Try it out*.
+. Enter the storage cluster ID you copied earlier in the `storageId` parameter.
+. Click *Execute*.
++
+Upon success, the API returns an empty response.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
