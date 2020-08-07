@@ -119,7 +119,7 @@ Here are the different states that the UI shows before, during, and after the up
 |All the health checks passed successfully, and the node is ready to be upgraded.
 
 |An error has occurred during the upgrade.
-|NEED INFO
+|The upgrade fails with this notification when a critical error occurs. Download the logs by clicking the *Download Logs* link to help resolve the error. You can try upgrading again after you resolve the error. 
 
 |Node upgrade is in progress.
 |The upgrade is in progress. A progress bar shows the upgrade status. You can monitor the status of each node using the NetApp Element plug-in for vCenter Server UI.
