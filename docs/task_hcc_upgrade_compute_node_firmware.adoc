@@ -115,13 +115,13 @@ Here are the different states that the UI shows before, during, and after the up
 |Node failed one or more health checks. Expand to view details.
 |One or more health checks failed.
 
-|Ready to be Upgraded
+|Ready to be Upgraded.
 |All the health checks passed successfully, and the node is ready to be upgraded.
 
 |An error has occurred during the upgrade.
 |NEED INFO
 
-|Node upgrade is in progress
+|Node upgrade is in progress.
 |The upgrade is in progress. A progress bar shows the upgrade status. You can monitor the status of each node using the NetApp Element plug-in for vCenter Server UI.
 |===
 
