@@ -79,11 +79,12 @@ a|
 . Select the cluster you are upgrading.
 +
 You will see the nodes in the cluster listed along with the current firmware versions and newer versions, if available for upgrade.
+. Select the upgrade package.
 . Click *Begin Upgrade*.
 +
 After you click *Begin Upgrade*, the window shows failed health checks, if any.
 
-. If all health checks passed successfully, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
+. If the health checks passed without critical failures, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
 
@@ -116,6 +117,9 @@ Here are the different states that the UI shows before, during, and after the up
 
 |Ready to be Upgraded
 |All the health checks passed successfully, and the node is ready to be upgraded.
+
+|An error has occurred during the upgrade.
+|NEED INFO
 
 |Node upgrade is in progress
 |The upgrade is in progress. A progress bar shows the upgrade status. You can monitor the status of each node using the NetApp Element plug-in for vCenter Server UI.
