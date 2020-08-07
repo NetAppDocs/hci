@@ -37,14 +37,14 @@ Choose one of the following storage firmware upgrade options:
 
 == Use NetApp Hybrid Cloud Control UI to upgrade storage firmware
 
-You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware the storage nodes in your cluster.
+You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware of the storage nodes in your cluster.
 
 .What you'll need
 * If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
-TIP: The upgrade process takes approximately 30 minutes. IS THIS TRUE FOR FW UPGRADES?
+TIP: The upgrade process takes approximately 30 minutes.
 
 .Steps
 
@@ -99,10 +99,10 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |Description
 
 |Up to Date
-|The cluster was upgraded to the latest Element version available.
+|The cluster was upgraded to the latest Element version available or the firmware was upgraded to the latest version. This status is also displayed if there is no internet connection.
 
 |Versions Available
-|Newer versions of Element are available for upgrade.
+|Newer versions of Element and firmware are available for upgrade.
 
 |In Progress
 |The upgrade is in progress. A progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
@@ -115,9 +115,6 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 
 |Error
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
-
-|Unable to Detect
-|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach online software repository.
 |===
 
 == What happens if an upgrade fails using NetApp Hybrid Cloud Control
