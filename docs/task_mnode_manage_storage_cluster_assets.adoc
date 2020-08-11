@@ -63,6 +63,17 @@ The API returns a list of all known installations.
     }
   ]
 ----
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
++
+----
+https://[management node IP]/storage/1
+----
+. Click *Authorize* or any lock icon and complete the following:
++
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
 . Click *GET /clusters*.
 . Click *Try it out*.
 . Enter the installation ID you saved earlier into the `installationId` parameter.
