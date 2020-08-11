@@ -21,14 +21,39 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 .What you'll need
 
-* You have upgraded your compute node drivers.
-* For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+* *Compute drivers*: You have upgraded your compute node drivers.
+* *Minimum BMC and BIOS versions*: The node you intend to upgrade meets the following minimum requirements:
++
+[%header,cols=3*]
+|===
+|Model
+|Minimum BMC version
+|Minimum BIOS version
+
+|H300E, H500E, H700E​
+|6.84.00​
+|NA2.1​
+
+|H410C​
+|All versions supported (no upgrade required)​
+|All versions supported (no upgrade required)​
+
+|H610C​
+|3.96.07​
+|3B01 ​
+
+|H615C​
+|4.68.07​
+|3B08.CO ​
+
+|===
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 * *Licensing*: Licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
 * *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
 * *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
+* For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 
 .About this task
 
@@ -119,7 +144,7 @@ Here are the different states that the UI shows before, during, and after the up
 |All the health checks passed successfully, and the node is ready to be upgraded.
 
 |An error has occurred during the upgrade.
-|The upgrade fails with this notification when a critical error occurs. Download the logs by clicking the *Download Logs* link to help resolve the error. You can try upgrading again after you resolve the error. 
+|The upgrade fails with this notification when a critical error occurs. Download the logs by clicking the *Download Logs* link to help resolve the error. You can try upgrading again after you resolve the error.
 
 |Node upgrade is in progress.
 |The upgrade is in progress. A progress bar shows the upgrade status. You can monitor the status of each node using the NetApp Element plug-in for vCenter Server UI.
