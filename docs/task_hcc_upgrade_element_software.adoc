@@ -114,7 +114,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |The cluster was upgraded to the latest Element version available.
 
 |Versions Available
-|Newer versions of Element are available for upgrade.
+|Newer versions of Element and/or storage firmware are available for upgrade.
 
 |In Progress
 |The upgrade is in progress. A progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
