@@ -57,8 +57,8 @@ https://<ManagementNodeIP>
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Storage*.
 +
-The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page. If you have clusters running Element 12.0 or later, you will see the current firmware bundle version listed for these clusters. If the nodes in a single cluster have different firmware versions on them or as the upgrade progresses, you will see *Multiple* in the *Current Firmware Bundle Version* column. You can click *Multiple* to navigate to the *Nodes* page to compare firmware versions. If all your clusters are running Element versions earlier than 12.0, you will not see any information about firmware bundle version numbers. This information is also available on the *Nodes* page. See link:task_hcc_nodes.html[View your inventory].
-NOTE: If the cluster is up to date and/or no upgrade packages are available, the *Element* and *Firmware Only* tabs are not displayed. These tabs are also not displayed when an upgrade is in progress. If the *Element* tab is displayed, but not the *Firmware Only* tab, no firmware packages are available.
+NOTE: The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page. If you have clusters running Element 12.0 or later, you will see the current firmware bundle version listed for these clusters. If the nodes in a single cluster have different firmware versions on them or as the upgrade progresses, you will see *Multiple* in the *Current Firmware Bundle Version* column. You can click *Multiple* to navigate to the *Nodes* page to compare firmware versions. If all your clusters are running Element versions earlier than 12.0, you will not see any information about firmware bundle version numbers. This information is also available on the *Nodes* page. See link:task_hcc_nodes.html[View your inventory].
+If the cluster is up to date and/or no upgrade packages are available, the *Element* and *Firmware Only* tabs are not displayed. These tabs are also not displayed when an upgrade is in progress. If the *Element* tab is displayed, but not the *Firmware Only* tab, no firmware packages are available.
 
 . Choose from the following options and perform the set of steps that are applicable to your cluster:
 +
@@ -104,7 +104,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |The cluster was upgraded to the latest Element version available or the firmware was upgraded to the latest version.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. Also, when the storage service API returns an upgrade status that is not in the enumerated list of possible upgrade statuses.
+|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. This status is also displayed when the storage service API returns an upgrade status that is not in the enumerated list of possible upgrade statuses.
 
 |Versions Available
 |Newer versions of Element and/or storage firmware are available for upgrade.
