@@ -63,7 +63,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process. After the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
+For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process. The node will be rebooted and after the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
 
 .Upgrade options
 
@@ -76,11 +76,11 @@ Choose the option that is relevant to your upgrade scenario:
 
 == Use NetApp Hybrid Cloud Control UI to upgrade a compute node
 
-Starting with management services 2.14, you can upgrade a compute node using the NetApp Hybrid Cloud Control UI.
+Starting with management services 2.14, you can upgrade a compute node using the NetApp Hybrid Cloud Control UI. From the list of nodes, you must select the node to upgrade. The *Current Versions* tab shows the current firmware versions and the *Proposed Versions* tab shows the available upgrade versions, if any.
 
-TIP: For a successful upgrade, ensure that the compute node is in maintenance mode so that the upgrade procedure does not interfere with any active workloads. You must also ensure that the health check on the vSphere cluster is successful.
+TIP: For a successful upgrade, ensure that the health check on the vSphere cluster is successful.
 
-NOTE: Upgrading the NIC, BIOS, and BMC can take up to 60 minutes.
+NOTE: Upgrading the NIC, BIOS, and BMC can take up to 60 minutes per node.
 
 .What you'll need
 
@@ -115,7 +115,7 @@ After you click *Begin Upgrade*, the window shows failed health checks, if any.
 +
 CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
 
-. If the health checks passed without critical failures, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
+. If the health checks at the cluster or node level passed with warnings, but without critical failures, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
 
@@ -136,6 +136,8 @@ An on-screen message is displayed after the file is successfully uploaded and va
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
 
+TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log to diagnose the issue and contact NetApp Support for further assistance. 
+
 === Upgrade status changes
 Here are the different states that the UI shows before, during, and after the upgrade process:
 
@@ -146,6 +148,12 @@ Here are the different states that the UI shows before, during, and after the up
 
 |Node failed one or more health checks. Expand to view details.
 |One or more health checks failed.
+
+|Error
+|An error has occurred during the upgrade. You can download the error log and send it to NetApp Support.
+
+|Unable to Detect
+|NetApp Hybrid Cloud Control does not have external connectivity to reach the online software repository. This status is also displayed if NetApp Hybrid Cloud Control is unable to query the compute node when the compute node asset does not have the hardware tag.
 
 |Ready to be Upgraded.
 |All the health checks passed successfully, and the node is ready to be upgraded.
