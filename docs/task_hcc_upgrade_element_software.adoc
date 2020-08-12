@@ -22,9 +22,9 @@ To upgrade to NetApp Element software 12.0, you can use the NetApp Hybrid Cloud 
 * *Valid upgrade path*: You have checked upgrade path information for the Element version you are upgrading to and verified that the upgrade path is valid.
 https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Upgrade matrix for storage clusters running NetApp Element Software]
 * *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
-* *System ports*: If you are using NetApp Hybrid Cloud Control, you have ensured that TCP port `443` is open so that NetApp Hybrid Cloud Control can communicate with the online software repository to download upgrade packages. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
-* *Management node upgrades*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
-* *Management services updates*: You have updated your management services bundle to the latest version.
+* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
+* *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
+* *Management services*: You have updated your management services bundle to the latest version.
 
 IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
 
@@ -289,7 +289,7 @@ The response should indicate state as `initializing`:
 ----
 .. Copy the upgrade ID (`"upgradeId"`) that is part of the response.
 . Verify the upgrade progress and results:
-.. Click *GET ​/upgrades/{upgradesId}*.
+.. Click *GET ​/upgrades/{upgradeId}*.
 .. Click *Try it out*.
 .. Enter the upgrade ID from the previous step in *upgradeId*.
 .. Click *Execute*.
@@ -304,7 +304,7 @@ The response should indicate state as `initializing`:
 a|
 . Go to the specific KB article listed for each issue or perform the specified remedy.
 . If a KB is specified, complete the process described in the relevant KB article.
-. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"resume"` in the request body.
@@ -318,7 +318,7 @@ a|
 
 |You need to pause the upgrade because the maintenance window is closing or for another reason.
 a|
-. Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. Reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"pause"` in the request body.
@@ -333,7 +333,7 @@ a|
 |If you are upgrading an H610S cluster running Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
 a|
 . See <<Upgrading H610S storage nodes to Element 12.0 or later (phase 2)>> and complete the process for each node.
-. Reauthenticate if needed and click *PUT ​/upgrades/{upgradesId}*.
+. Reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
 . Click *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"acknowledge"` in the request body.
@@ -345,7 +345,7 @@ a|
 ----
 . Click *Execute*.
 |===
-.. Run the *GET ​/upgrades/{upgradesId}* API multiple times, as needed, until the process is complete.
+.. Run the *GET ​/upgrades/{upgradeId}* API multiple times, as needed, until the process is complete.
 +
 During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
 +

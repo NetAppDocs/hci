@@ -22,6 +22,8 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 .What you'll need
 
 * *Compute drivers*: You have upgraded your compute node drivers.
+* *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
+* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Minimum BMC and BIOS versions*: The node you intend to upgrade meets the following minimum requirements:
 +
 [%header,cols=3*]
@@ -47,13 +49,15 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 |3B08.CO ​
 
 |===
-* *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
++
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+
+* *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
 * *Licensing*: Licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
 * *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
-* *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
-* For USB and BMC UI methods or to see a list of available upgrades for your node model, see the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+* *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_hcc_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
 
 .About this task
 
@@ -65,7 +69,7 @@ For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be autom
 
 Choose the option that is relevant to your upgrade scenario:
 
-* <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>>
+* <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
 * <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
 * For compute node image 12.0: <<Use a USB drive with the latest firmware image downloaded>>
 * For compute firmware 12.2.109: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
@@ -80,7 +84,7 @@ NOTE: Upgrading the NIC, BIOS, and BMC can take up to 60 minutes.
 
 .What you'll need
 
-If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
+If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
 
 .Steps
 
@@ -108,6 +112,8 @@ You will see the nodes in the cluster listed along with the current firmware ver
 . Click *Begin Upgrade*.
 +
 After you click *Begin Upgrade*, the window shows failed health checks, if any.
++
+CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
 
 . If the health checks passed without critical failures, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
 
@@ -120,7 +126,8 @@ The UI displays a message after the upgrade is complete. You can download logs a
 |Your management node is within a dark site without external connectivity.
 a|
 . Select the cluster you are upgrading.
-. Click *Browse* to upload the upgrade package that you downloaded from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
+. Click *Browse* to upload the upgrade package that you downloaded from the
+https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 
 TIP: The file upload will happen in the background if you navigate away from the browser window.
