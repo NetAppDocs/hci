@@ -160,7 +160,7 @@ https://[management node IP]/vcenter/1
 If health checks complete without issues, the response code 200 indicates a successful result.
 
 == Compute node health checks made by the service
-Compute health checks, whether performed by HCC or API methods, make the following checks per node. You should re-run health checks after resolving any detected issues.
+Compute health checks, whether performed by HCC or API methods, make the following checks per node. Depending on your environment, some of these checks might be skipped. You should re-run health checks after resolving any detected issues.
 |===
 | Check description | Node/cluster | Action needed to resolve | Knowledgebase article with procedure
 
@@ -168,7 +168,7 @@ Compute health checks, whether performed by HCC or API methods, make the followi
 
 | Is DPM disabled in vSphere? | Cluster | Turn off Distributed Power Management. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/How_to_disable_DPM_in_VMware_vCenter[See this KB].
 
-| Is HA admission control enabled in vSphere? | Cluster | Turn off HA admission control. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_control_enable_HA_admission_in_vSphere[See this KB].
+| Is HA admission control disabled in vSphere? | Cluster | Turn off HA admission control. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_control_enable_HA_admission_in_vSphere[See this KB].
 
 | Is FT enabled for a VM on a host in the cluster? | Node |  	Suspend Fault Tolerance on any affected virtual machines. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_suspend_fault_tolerance_on_virtual_machines_in_a_vSphere_cluster[See this KB].
 
