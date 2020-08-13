@@ -219,7 +219,7 @@ This action causes certificate to be accepted for the next step.
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1
+https://[management node IP]/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.

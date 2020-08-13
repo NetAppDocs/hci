@@ -149,7 +149,7 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1
+https://[management node IP]/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.

@@ -33,10 +33,10 @@ Choose one of the following options:
 You can use the REST API get the installation ID and the ID of the storage cluster. You need the installation ID to add a new storage cluster asset, and the cluster ID to modify or delete a specific storage cluster asset.
 
 .Steps
-. Access the REST API UI for the inventory service by entering the management node IP address followed by `/inventory/1`:
+. Access the REST API UI for the inventory service by entering the management node IP address followed by `/inventory/1/`:
 +
 ----
-https://[management node IP]/inventory/1
+https://[management node IP]/inventory/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -63,10 +63,10 @@ The API returns a list of all known installations.
     }
   ]
 ----
-. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1
+https://[management node IP]/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -88,10 +88,10 @@ You can use the REST API to add a new storage cluster asset to the management no
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
 .Steps
-. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1
+https://[management node IP]/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -132,10 +132,10 @@ You can edit the stored credentials that the management node uses to log in to a
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
 .Steps
-. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1
+https://[management node IP]/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -167,10 +167,10 @@ You can delete a storage cluster asset if the storage cluster is no longer in se
 NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
 
 .Steps
-. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1`:
+. Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1
+https://[management node IP]/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
