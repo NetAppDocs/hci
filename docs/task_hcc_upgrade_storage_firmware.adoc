@@ -75,7 +75,7 @@ a|
 
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
 
-NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress.
+NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page. 
 
 You can download logs after the upgrade is complete.
 
