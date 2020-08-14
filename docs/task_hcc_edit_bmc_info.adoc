@@ -74,7 +74,7 @@ https://[management node IP]/inventory/1/
 .. Click *Try it out*.
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
-.. From the response, copy and save the node hardware tag (`hardwareTag`), asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
+.. From the response, copy and save the node asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
 +
 ----
 "nodes": [
@@ -90,8 +90,6 @@ https://[management node IP]/inventory/1/
     "hardwareTag": "00000000-0000-0000-0000-ac1f6ab4ecf6",
     "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
 ----
-+
-NOTE: If your installation is missing the `hardwareTag` value, you can locate the hardware tag for your compute node in vSphere. To do so, select the host and click *Monitor > Hardware Health*. The node BIOS manufacturer and model number are listed. Copy and save the *Tag* value for use in a later step.
 
 . Open the hardware service REST API UI on the management node:
 +
@@ -105,33 +103,33 @@ https://[management node IP]/hardware/2/
 .. Close the window.
 . Click *PUT /nodes/{hardware_id}*.
 . Click *Try it out*.
-. Enter the node hardware tag (`hardwareTag` from the API response, or *Tag* from vSphere) from the previous step in `hardware_id` field.
-. Enter the following parameters in the payload:
+. Enter the node asset id that you saved earlier in the `hardware_id` parameter.
+. Enter the following information in the payload:
 +
 |===
 |Parameter |Description
 
 |`assetId`
-|The asset id (`id`) from the previous step.
+|The installation asset id (`id`) that you saved in step 1(f).
 
 |`bmcIp`
-|The BMC IP address (`bmcAddress`) from the previous step.
+|The BMC IP address (`bmcAddress`) that you saved in step 1(k).
 
 |`bmcPassword`
-|An updated password to log into BMC.
+|An updated password to log into the BMC.
 
 |`bmcUsername`
-|An updated user name to log into BMC.
+|An updated user name to log into the BMC.
 
 |`serialNumber`
-|The chassis serial number of hardware.
+|The chassis serial number of the hardware.
 |===
 +
 Example payload:
 +
 ----
 {
-  "assetId": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+  "assetId": "7bb41e3c-2e9c-2151-b00a-8a9b49c0b0fe",
   "bmcIp": "10.117.1.111",
   "bmcPassword": "mypassword1",
   "bmcUsername": "admin1",
