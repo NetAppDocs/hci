@@ -84,7 +84,7 @@ You can download logs after the upgrade is complete.
 |Your management node is within a dark site without external connectivity.
 a|
 . Click the drop-down arrow next to the cluster you are upgrading.
-. Click *Browse* to upload the upgrade package that you downloaded from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
+. Click *Browse* to upload the upgrade package that you downloaded. 
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 
 CAUTION: The file upload will be lost if you navigate away from the browser window.
