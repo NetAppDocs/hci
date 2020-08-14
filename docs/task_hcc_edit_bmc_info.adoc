@@ -105,7 +105,7 @@ https://[management node IP]/hardware/2/
 .. Close the window.
 . Click *PUT /nodes/{hardware_id}*.
 . Click *Try it out*.
-. Enter the node hardware tag (`hardwareTag`) from the previous step in `hardware_id` field.
+. Enter the node hardware tag (`hardwareTag` from the API response, or *Tag* from vSphere) from the previous step in `hardware_id` field.
 . Enter the following parameters in the payload:
 +
 |===
