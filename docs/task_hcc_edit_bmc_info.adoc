@@ -90,6 +90,8 @@ https://[management node IP]/inventory/1/
     "hardwareTag": "00000000-0000-0000-0000-ac1f6ab4ecf6",
     "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
 ----
++
+NOTE: If your installation is missing the `hardwareTag` value, you can locate the hardware tag for your compute node in vSphere. To do so, select the host and click *Monitor > Hardware Health*. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 
 . Open the hardware service REST API UI on the management node:
 +
