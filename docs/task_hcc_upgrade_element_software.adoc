@@ -46,7 +46,9 @@ CAUTION: If you are upgrading an H610S cluster running a pre-11.8 version of Ele
 Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
 .What you'll need
-* If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^].
+* If your management node is not connected to the internet, you have downloaded the package from the relevant location:
+** https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[Storage firmware package for NetApp HCI storage clusters^]
+** https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Storage firmware package for SolidFire storage clusters running Element software^]
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
@@ -78,7 +80,7 @@ a|
 
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
 
-NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page. 
+NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page.
 
 You can download logs after the upgrade is complete.
 

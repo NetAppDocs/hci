@@ -83,8 +83,7 @@ TIP: For a successful upgrade, ensure that the health check on the vSphere clust
 NOTE: Upgrading the NIC, BIOS, and BMC can take up to 60 minutes per node.
 
 .What you'll need
-
-If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
+* If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
 
 .Steps
 
