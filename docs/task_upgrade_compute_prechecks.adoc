@@ -42,14 +42,14 @@ Using NetApp Hybrid Cloud Control (HCC), you can verify that a compute node is r
 . Open a web browser and browse to the IP address of the management node:
 +
 ----
-https://<ManagementNodeIP>
+https://<ManagementNodeIP>/hcc
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select the *Compute firmware* tab.
 . Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
 . On the *Compute Health Check* page, click *Run Health Check*.
-. If there are issues, do the following:
+. If there are issues, the page provides a report. Do the following:
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
 .. After you have resolved cluster issues, click *Re-Run Health Check*.

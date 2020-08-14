@@ -136,7 +136,7 @@ An on-screen message is displayed after the file is successfully uploaded and va
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
 
-TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log to diagnose the issue and contact NetApp Support for further assistance. 
+TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log to diagnose the issue and contact NetApp Support for further assistance.
 
 === Upgrade status changes
 Here are the different states that the UI shows before, during, and after the upgrade process:
@@ -233,7 +233,7 @@ https://[management node IP]/package-repository
 The response indicates `state` as `finished` when complete.
 .. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
 |===
-. Locate the compute controller ID for the node you intend to upgrade:
+. Locate the compute controller ID and the node hardware tag for the node you intend to upgrade:
 .. Open the inventory service REST API UI on the management node:
 +
 ----
@@ -252,10 +252,7 @@ https://[management node IP]/inventory
 .. Click *Try it out*.
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
-.. From the response, copy and save the cluster controller ID (`"controllerId"`).
-. Using the BMC UI for your node, locate the node hardware ID (BIOS UUID of the hardware) for the node you intend to upgrade using one of the following paths:
-* `https://[bmc ip]/redfish/v1/Systems/1`
-* `https://[bmc ip]/redfish/v1/Systems/Self`
+.. From the response, copy and save the cluster controller ID (`"controllerId"`) and node hardware tag (`"hardwareTag"`) for use in a later step.
 . Run the compute node firmware upgrade:
 .. Open the hardware service REST API UI on the management node:
 +
@@ -269,7 +266,7 @@ https://[management node IP]/hardware/2/
 ... Close the authorization window.
 .. Click *POST /nodes/{hardware_id}/upgrades*.
 .. Click *Try it out*.
-.. Enter the hardware host asset ID (BIOS UUID saved from a previous step) in the parameter field.
+.. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
 .. Do the following with the payload values:
 ... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
 ... Enter the cluster controller ID (`"controllerId"` saved from a previous step).
