@@ -53,6 +53,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 
 * *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
+* *BMC credentials* Update your BMC credentials for your node using either the NetApp Hybrid Cloud Control link:task_hcc_edit_bmc_info.html#use-netapp-hybrid-cloud-control-to-edit-bmc-information[UI] or link:task_hcc_edit_bmc_info.html#use-the-rest-api-to-edit-bmc-information[API] methods. Updating BMC information prior to upgrade refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
 * *Licensing*: Licenses for models H300E, H500E, H700E, H410C must be activated to perform an upgrade.
 * *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions in the BMC UI before starting a compute node upgrade.

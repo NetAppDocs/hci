@@ -181,6 +181,8 @@ Your installation has a base asset configuration that was created during install
          "hardwareId": null,
          "hardwareTag": "00000000-0000-0000-0000-aa1b6cd11e2f"
 ----
++
+NOTE: If your installation is missing the hardware tag value, you can locate the hardware tag for your compute node in vSphere. To do so, select the host and click *Monitor > Hardware Health*. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 
 . Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
 .. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
