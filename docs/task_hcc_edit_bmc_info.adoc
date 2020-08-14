@@ -25,7 +25,7 @@ Cluster administrator permissions to change BMC credentials.
 Choose one of the following options to change BMC credentials:
 
 * <<Use NetApp Hybrid Cloud Control to edit BMC information>>
-* <<Use NetApp Hybrid Cloud Control API to edit BMC information>>
+* <<Use the REST API to edit BMC information>>
 
 == Use NetApp Hybrid Cloud Control to edit BMC information
 You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
@@ -49,8 +49,10 @@ A list of your compute nodes appears. The *BMC Connection Status* column shows t
 . Click *Save*.
 . Repeat steps 6 through 8 for any compute node that has missing or incorrect stored BMC credentials.
 
-== Use NetApp Hybrid Cloud Control API to edit BMC information
-You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control API.
+NOTE: If you edit BMC information and continue to see error messages like "Hardware ID not available" or "Unable to detect" on the compute firmware upgrade page in the NetApp Hybrid Cloud Control UI, follow the workaround instructions in the Knowledgebase article https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[Known issues and workarounds for compute node upgrades^].
+
+== Use the REST API to edit BMC information
+You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control REST API.
 
 .Steps
 . Locate the compute node hardware tag and BMC information:
@@ -150,5 +152,6 @@ A successful result returns a response similar to the following:
 
 [discrete]
 == Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[Known issues and workarounds for compute node upgrades^]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
