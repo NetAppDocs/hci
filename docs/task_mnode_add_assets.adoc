@@ -59,10 +59,11 @@ NOTE: Your installation has a base asset configuration that was created during i
 .. Click *Try it out*.
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
-.. From the response, copy and save the cluster controller ID (`"controllerId"`) and node hardware tag (`"hardwareTag"`) for use in a later step.
-+
-NOTE: If your installation is missing the hardware tag value, you can locate the hardware tag for your compute node in vSphere. To do so, select the host and click *Monitor > Hardware Health*. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
-
+.. From the response, copy and save the cluster controller ID (`"controllerId"`) for use in a later step.
+. (For compute nodes only) Locate the hardware tag for your compute node in vSphere:
+.. Select the host in the vSphere Web Client navigator.
+.. Click the *Monitor* tab, and click *Hardware Health*.
+.. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 . To add a compute node or controller sub-asset to an existing base asset, click one of the following.
 +
 [cols=2*,options="header",cols="40,60"]
@@ -83,6 +84,7 @@ https://[management node IP]/mnode
 . Click *POST /assets/{asset_id}/controllers*.
 . Click *Try it out*.
 . Enter the parent base asset ID in the *asset_id* field.
+. Add the required values to the payload.
 . Click *Execute*.
 | POST /assets/{asset_id}/compute-nodes
 a| . Open the mNode service REST API UI on the management node:

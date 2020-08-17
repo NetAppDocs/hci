@@ -144,7 +144,8 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 
 == Configure controller assets
 
-. From a browser, log into the management node REST API UI:
+. Locate the installation ID:
+.. From a browser, log into the management node REST API UI:
 .. Go to the storage MVIP and log in. This action causes the certificate to be accepted for the next step.
 .. Open the inventory service REST API UI on the management node:
 +
@@ -162,28 +163,10 @@ https://[management node IP]/inventory/1/
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 
-.. (For NetApp HCI only) From the Rest API UI, click *GET ​/installations​/{id}*.
-.. Click *Try it out*.
-.. Enter the installation ID.
-.. Click *Execute*.
-.. From the code 200 response body, copy and save the compute node hardware tag (`hardwareTag`) for use in a later step:
-+
-----
-"nodes": [
-       {
-         "bmcDetails": {
-           "bmcAddress": "10.111.11.11",
-           "credentialsAvailable": false,
-           "credentialsValidated": false
-         },
-         "chassisSerialNumber": "111921011111",
-         "chassisSlot": "B",
-         "hardwareId": null,
-         "hardwareTag": "00000000-0000-0000-0000-aa1b6cd11e2f"
-----
-+
-NOTE: If your installation is missing the hardware tag value, you can locate the hardware tag for your compute node in vSphere. To do so, select the host and click *Monitor > Hardware Health*. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
-
+. (NetApp HCI only) Locate the hardware tag for your compute node in vSphere:
+.. Select the host in the vSphere Web Client navigator.
+.. Click the *Monitor* tab, and click *Hardware Health*.
+.. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 . Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
 .. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
 +
