@@ -164,7 +164,7 @@ Compute health checks, whether performed by HCC or API methods, make the followi
 |===
 | Check description | Node/cluster | Action needed to resolve | Knowledgebase article with procedure
 
-| Is DRS enabled and fully automated? | Cluster | Turn on DRS and make sure it is fully automated. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_enable_DRS_in_vSphere[See this KB].
+| Is DRS enabled and fully automated? | Cluster | Turn on DRS and make sure it is fully automated. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_enable_DRS_in_vSphere[See this KB]. NOTE: If you have standard licensing, put the ESXi host into maintenance mode and ignore this health check failure warning.
 
 | Is DPM disabled in vSphere? | Cluster | Turn off Distributed Power Management. | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/How_to_disable_DPM_in_VMware_vCenter[See this KB].
 

@@ -14,7 +14,7 @@ keywords: netapp, hci, BMC, connection, credentials, monitor
 :imagesdir: ../media/
 
 [.lead]
-You can change Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. You might need to change credentials using NetApp Hybrid Cloud Control or the REST API prior to upgrading BMC firmware.
+You can change Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. You might need to change credentials prior to upgrading BMC firmware or to resolve a `Hardware ID not available` or `Unable to Detect` error indicated in NetApp Hybrid Cloud Control.
 
 .What you'll need
 
@@ -51,7 +51,7 @@ A list of your compute nodes appears. The *BMC Connection Status* column shows t
 . Click *Save*.
 . Repeat steps 6 through 8 for any compute node that has missing or incorrect stored BMC credentials.
 
-NOTE: If you edit BMC information and continue to see error messages like "Hardware ID not available" or "Unable to detect" on the compute firmware upgrade page in the NetApp Hybrid Cloud Control UI, follow the workaround instructions in the Knowledgebase article https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[Known issues and workarounds for compute node upgrades^].
+NOTE: Updating BMC information refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
 
 == Use the REST API to edit BMC information
 You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control REST API.
