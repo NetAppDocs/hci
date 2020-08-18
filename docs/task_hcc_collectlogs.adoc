@@ -65,7 +65,7 @@ You can use REST API to collect NetApp HCI or Element logs.
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/logs/1
+https://[management node IP]/logs/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.

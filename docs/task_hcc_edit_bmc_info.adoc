@@ -14,18 +14,20 @@ keywords: netapp, hci, BMC, connection, credentials, monitor
 :imagesdir: ../media/
 
 [.lead]
-You can change Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. You might need to change credentials using NetApp Hybrid Cloud Control or the REST API prior to upgrading BMC firmware.
+You can change Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. You might need to change credentials prior to upgrading BMC firmware or to resolve a `Hardware ID not available` or `Unable to Detect` error indicated in NetApp Hybrid Cloud Control.
 
 .What you'll need
 
 Cluster administrator permissions to change BMC credentials.
+
+NOTE: If you set BMC credentials during a health check, there can be a delay of up to 15 minutes before the change is reflected on the *Nodes* page.
 
 .Options
 
 Choose one of the following options to change BMC credentials:
 
 * <<Use NetApp Hybrid Cloud Control to edit BMC information>>
-* <<Use NetApp Hybrid Cloud Control API to edit BMC information>>
+* <<Use the REST API to edit BMC information>>
 
 == Use NetApp Hybrid Cloud Control to edit BMC information
 You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
@@ -49,8 +51,10 @@ A list of your compute nodes appears. The *BMC Connection Status* column shows t
 . Click *Save*.
 . Repeat steps 6 through 8 for any compute node that has missing or incorrect stored BMC credentials.
 
-== Use NetApp Hybrid Cloud Control API to edit BMC information
-You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control API.
+NOTE: Updating BMC information refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
+
+== Use the REST API to edit BMC information
+You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control REST API.
 
 .Steps
 . Locate the compute node hardware tag and BMC information:
@@ -72,7 +76,7 @@ https://[management node IP]/inventory/1/
 .. Click *Try it out*.
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
-.. From the response, copy and save the node hardware tag (`hardwareTag`), asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
+.. From the response, copy and save the node asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
 +
 ----
 "nodes": [
@@ -101,33 +105,33 @@ https://[management node IP]/hardware/2/
 .. Close the window.
 . Click *PUT /nodes/{hardware_id}*.
 . Click *Try it out*.
-. Enter the node hardware tag (`hardwareTag`) from the previous step in `hardware_id` field.
-. Enter the following parameters in the payload:
+. Enter the node asset id that you saved earlier in the `hardware_id` parameter.
+. Enter the following information in the payload:
 +
 |===
 |Parameter |Description
 
 |`assetId`
-|The asset id (`id`) from the previous step.
+|The installation asset id (`id`) that you saved in step 1(f).
 
 |`bmcIp`
-|The BMC IP address (`bmcAddress`) from the previous step.
+|The BMC IP address (`bmcAddress`) that you saved in step 1(k).
 
 |`bmcPassword`
-|An updated password to log into BMC.
+|An updated password to log into the BMC.
 
 |`bmcUsername`
-|An updated user name to log into BMC.
+|An updated user name to log into the BMC.
 
 |`serialNumber`
-|The chassis serial number of hardware.
+|The chassis serial number of the hardware.
 |===
 +
 Example payload:
 +
 ----
 {
-  "assetId": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+  "assetId": "7bb41e3c-2e9c-2151-b00a-8a9b49c0b0fe",
   "bmcIp": "10.117.1.111",
   "bmcPassword": "mypassword1",
   "bmcUsername": "admin1",
@@ -150,5 +154,6 @@ A successful result returns a response similar to the following:
 
 [discrete]
 == Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[Known issues and workarounds for compute node upgrades^]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

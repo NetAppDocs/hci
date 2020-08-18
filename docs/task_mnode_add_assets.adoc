@@ -30,7 +30,7 @@ You might need to add an asset if you recently scaled your installation and new 
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1
+https://[management node IP]/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -55,6 +55,15 @@ https://[management node IP]/inventory/1
 +
 NOTE: Your installation has a base asset configuration that was created during installation or upgrade.
 
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the cluster controller ID (`"controllerId"`) for use in a later step.
+. (For compute nodes only) Locate the hardware tag for your compute node in vSphere:
+.. Select the host in the vSphere Web Client navigator.
+.. Click the *Monitor* tab, and click *Hardware Health*.
+.. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 . To add a compute node or controller sub-asset to an existing base asset, click one of the following.
 +
 [cols=2*,options="header",cols="40,60"]
@@ -75,6 +84,7 @@ https://[management node IP]/mnode
 . Click *POST /assets/{asset_id}/controllers*.
 . Click *Try it out*.
 . Enter the parent base asset ID in the *asset_id* field.
+. Add the required values to the payload.
 . Click *Execute*.
 | POST /assets/{asset_id}/compute-nodes
 a| . Open the mNode service REST API UI on the management node:
@@ -89,14 +99,11 @@ https://[management node IP]/mnode
 ... Close the window.
 . Click *POST /assets/{asset_id}/compute-nodes*.
 . Click *Try it out*.
-. Enter the management IP for the node in the `ip` field.
-. For `hardwareTag`, enter the BIOS UUID of the hardware.  Use the Redfish API to find the value under the `UUID` property name:
-* Type A: `https://[bmc ip]/redfish/v1/Systems/1`
-* Type B: `https://[bmc ip]/redfish/v1/Systems/Self`
-+
-NOTE: If the BIOS UUID is not available, the chassis serial number can be used instead.
-
 . Enter the parent base asset ID you copied in an earlier step in the *asset_id* field.
+. In the payload, do the following:
+.. Enter the management IP for the node in the `ip` field.
+.. For `hardwareTag`, enter the hardware tag value you saved in an earlier step.
+.. Enter other values, as required.
 . Click *Execute*.
 |===
 
