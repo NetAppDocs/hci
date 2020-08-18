@@ -72,7 +72,7 @@ TIP: For details about the related cluster thresholds Element API, see http://do
 .. *Effective Capacity bar chart*: Look at the vertical lines to determine whether your used capacity is less than the total or less than Warning, Error, or Critical thresholds. Similar to the Raw tab, you can hover over the vertical lines to see details.
 .. *Efficiencies*: Look at these ratings to determine your storage capacity efficiency gains with compression, deduplication, and thin provisioning features enabled. For example, if compression shows as “1.3x”, this means that storage efficiency with compression enabled is 1.3 times more efficient than without it.
 +
-NOTE: Total Efficiencies equals (maxUsedSpace * efficiency factor) / 2, where efficiencyFactor = (thinProvisioningFactor * deDuplicationFactor * compressionFactor)
+NOTE: Total Efficiencies equals (maxUsedSpace * efficiency factor) / 2, where efficiencyFactor = (thinProvisioningFactor * deDuplicationFactor * compressionFactor). When Thin Provisioning is unchecked, it is not included in the Total Efficiency. 
 
 ..	If the effective storage capacity nears an Error or Critical threshold, consider clearing the data on your system. Alternatively, consider expanding your system.
 +
@@ -86,7 +86,7 @@ You can look at how much IOPS or throughput you can get out of a cluster without
 
 The Storage Performance pane helps you identify whether the performance is reaching the point where the performance might degrade if the workloads increase.
 
-The information on this pane refreshes every 10 seconds and shows an average over the 10-second period.
+The information on this pane refreshes every 10 seconds and shows an average of all the points on the graph.
 
 For details about the associated Element API method, see the http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-api/GUID-63BEAEDE-74F7-421E-9360-08F166A603F4.html[GetClusterStats] method in the _Element API Reference Guide_.
 
