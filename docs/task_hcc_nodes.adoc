@@ -16,7 +16,7 @@ keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute
 [.lead]
 You can view both your storage and compute assets in your system and determine their IP addresses, names, and software versions.
 
-You can view storage information for your two-, three-, and four-node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters.
+You can view storage information for your multiple node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters.
 Witness Nodes manage quorum within the cluster; they are not used for storage. Witness Nodes are applicable only to NetApp HCI and not to all-flash storage environments.
 
 For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes definitions].
@@ -29,9 +29,8 @@ For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes 
 https://[management node IP address]
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
-. In the left navigation blue box, select the NetApp HCI installation.
 +
-The Hybrid Cloud Control Dashboard appears.
+The NetApp Hybrid Cloud Control Dashboard appears.
 . In the left navigation, click *Nodes*.
 +
 The Storage tab appears.
@@ -41,14 +40,16 @@ image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes page image]
 . On the *Storage* tab of the Nodes page, review the following information:
 .. Two-node clusters: A “two-node” label appears on the Storage tab and the associated Witness Nodes are listed.
 .. Three-node clusters: The storage nodes and associated Witness Nodes are listed. Three-node clusters have a Witness Node deployed on standby to maintain high availability in the case of node failure.
-.. Clusters with four nodes or more: Information for clusters with four or more nodes appears. Witness Nodes do not apply; the Witness Nodes table does not appear.
+.. Clusters with four nodes or more: Information for clusters with four or more nodes appears. Witness Nodes do not apply. If you started with two or three storage nodes and added more nodes, the Witness Nodes still appear. Otherwise, the Witness Nodes table does not appear.
+.. The firmware bundle version: Starting with management services version 2.14, if you have clusters running Element 12.0 or later, you can see the firmware bundle version for these clusters. If the nodes in a cluster have different firmware versions on them, you can see *Multiple* in the *Firmware Bundle Version* column.
 . To view compute inventory information, click *Compute*.
-. Options:
+. You can manipulate the information on these pages in several ways:
 .. To filter the list of items in the results, click the *Filter* icon and select the filters. You can also enter text for the filter.
 .. To show or hide columns, click the *Show/Hide Columns* icon.
 .. To download the table, click the *Download* icon.
+.. To add or edit the stored BMC credentials for a compute node with BMC connection errors, click *Edit connection settings* in the error message text in the *BMC Connection Status* column. Only if the connection attempt fails for a compute node, an error message is displayed in this column for that node.
 
-TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
+TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
 
 
 [discrete]
