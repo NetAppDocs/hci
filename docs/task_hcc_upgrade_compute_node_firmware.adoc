@@ -14,27 +14,317 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 :imagesdir: ../media/
 
 [.lead]
-For any H-series compute node, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC.
+For H-series compute nodes, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC. To upgrade compute node firmware, you can use the NetApp Hybrid Cloud Control UI, REST API, a USB drive with the latest firmware image, or the BMC UI.
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
 
 .What you'll need
 
-See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
+* *Compute drivers*: You have upgraded your compute node drivers.
+* *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
+* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
+* *Minimum BMC and BIOS versions*: The node you intend to upgrade meets the following minimum requirements:
++
+[%header,cols=3*]
+|===
+|Model
+|Minimum BMC version
+|Minimum BIOS version
 
-TIP: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
+|H410C​
+|All versions supported (no upgrade required)​
+|All versions supported (no upgrade required)​
+
+|H610C​
+|3.96.07​
+|3B01 ​ ​
+
+|===
++
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+
+* *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
+* *BMC credentials*: Update your BMC credentials for your node using either the NetApp Hybrid Cloud Control link:task_hcc_edit_bmc_info.html#use-netapp-hybrid-cloud-control-to-edit-bmc-information[UI] or link:task_hcc_edit_bmc_info.html#use-the-rest-api-to-edit-bmc-information[API] methods. Updating BMC information prior to upgrade refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
+* *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
+* *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
+* *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
+* *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_hcc_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
+
+.About this task
+
+In production environments, upgrade the firmware on one compute node at a time.
+
+For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process if you have the DRS feature and required licensing. The node will be rebooted and after the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
 
 .Upgrade options
 
 Choose the option that is relevant to your upgrade scenario:
 
-- For compute node image 12.0, perform these steps: <<Use a USB drive with the latest firmware image downloaded>>
-- For compute firmware 12.2.109, perform these steps: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+* For H610C and H410C: <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
+* For H610C and H410C: <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
+* For compute node image 12.0: <<Use a USB drive with the latest firmware image downloaded>>
+* For compute firmware 12.2.109: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
-.About this task
+== Use NetApp Hybrid Cloud Control UI to upgrade a compute node
 
-In production environments, upgrade the firmware on one compute node at a time.
+Starting with management services 2.14, you can upgrade a compute node using the NetApp Hybrid Cloud Control UI. From the list of nodes, you must select the node to upgrade. The *Current Versions* tab shows the current firmware versions and the *Proposed Versions* tab shows the available upgrade versions, if any.
+
+TIP: For a successful upgrade, ensure that the health check on the vSphere cluster is successful.
+
+NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host.
+
+.What you'll need
+* If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select *Compute firmware*.
+. Choose from the following options and perform the set of steps that are applicable to your cluster:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Your management node has external connectivity.
+a|
+. Select the cluster you are upgrading.
++
+You will see the nodes in the cluster listed along with the current firmware versions and newer versions, if available for upgrade.
+. Select the upgrade package.
+. Click *Begin Upgrade*.
++
+After you click *Begin Upgrade*, the window shows failed health checks, if any.
++
+CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
+
+. If the health checks at the cluster or node level passed with warnings, but without critical failures, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
+
+NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
+
+CAUTION: While upgrading the firmware on H610C compute nodes, do not open the Serial-Over-LAN (SOL) console through the BMC web UI. This might cause the upgrade to fail.
+
+The UI displays a message after the upgrade is complete. You can download logs after the upgrade is complete.
+
+|Your management node is within a dark site without external connectivity.
+a|
+. Select the cluster you are upgrading.
+. Click *Browse* to upload the upgrade package that you downloaded from the
+https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
+. Wait for the upload to complete. A progress bar shows the status of the upload.
+
+TIP: The file upload will happen in the background if you navigate away from the browser window.
+
+An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes.
+You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
+|===
+
+TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log, which contains specific instructions or links to KB articles, to diagnose and correct any issue. For additional insight into compute node firmware upgrade issues using NetApp Hybrid Cloud Control, see this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB] article.
+
+=== Upgrade status changes
+Here are the different states that the UI shows before, during, and after the upgrade process:
+
+[%header,cols=2*]
+|===
+|Upgrade state
+|Description
+
+|Node failed one or more health checks. Expand to view details.
+|One or more health checks failed.
+
+|Error
+|An error has occurred during the upgrade. You can download the error log and send it to NetApp Support.
+
+|Unable to Detect
+|NetApp Hybrid Cloud Control does not have external connectivity to reach the online software repository. This status is also displayed if NetApp Hybrid Cloud Control is unable to query the compute node when the compute node asset does not have the hardware tag.
+
+|Ready to be Upgraded.
+|All the health checks passed successfully, and the node is ready to be upgraded.
+
+|An error has occurred during the upgrade.
+|The upgrade fails with this notification when a critical error occurs. Download the logs by clicking the *Download Logs* link to help resolve the error. You can try upgrading again after you resolve the error.
+
+|Node upgrade is in progress.
+|The upgrade is in progress. A progress bar shows the upgrade status.
+|===
+
+== Use NetApp Hybrid Cloud Control API to upgrade a compute node
+
+You can use APIs to upgrade each compute node in a cluster to the latest firmware version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+
+.What you'll need
+
+Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://[management node IP]/inventory/1/`).
+
+.Steps
+
+. Do one of the following depending on your connection:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Your management node has external connectivity.
+a|
+. Verify the repository connection:
+.. Open the package service REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
+. Find the upgrade package ID:
+.. From the REST API UI, click *GET /packages*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy and save the upgrade package name (`"packageName"`) and package version (`"packageVersion"`) for use in a later step.
+
+|Your management node is within a dark site without external connectivity.
+a|
+. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page] and download the latest compute node firmware image to a device that is accessible to the management node.
+. Upload the compute firmware upgrade package to the management node:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *POST /packages*.
+.. Click *Try it out*.
+.. Click *Browse* and select the upgrade package.
+.. Click *Execute* to initiate the upload.
+.. From the response, copy and save the package ID (`"id"`) for use in a later step.
+. Verify the status of the upload.
+.. From the REST API UI, click *GET​ /packages​/{id}​/status*.
+.. Click *Try it out*.
+.. Enter the package ID you copied in the previous step in *id*.
+.. Click *Execute* to initiate the status request.
++
+The response indicates `state` as `finished` when complete.
+.. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
+|===
+. Locate the compute controller ID and the node hardware tag for the node you intend to upgrade:
+.. Open the inventory service REST API UI on the management node:
++
+----
+https://[management node IP]/inventory/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET /installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the installation asset ID (`"id"`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the cluster controller ID (`"controllerId"`) and node hardware tag (`"hardwareTag"`) for use in a later step.
+. Run the compute node firmware upgrade:
+.. Open the hardware service REST API UI on the management node:
++
+----
+https://[management node IP]/hardware/2/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. Click *POST /nodes/{hardware_id}/upgrades*.
+.. Click *Try it out*.
+.. Enter the hardware host asset ID (`"hardwareTag"` saved from a previous step) in the parameter field.
+.. Do the following with the payload values:
+... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
+... Enter the cluster controller ID (`"controllerId"` saved from a previous step).
+... Enter the package name and package version you saved from a previous step.
++
+----
+{
+  "config": {
+    "force": false,
+    "maintenanceMode": true
+  },
+  "controllerId": "00000000-0000-0000-0000-AC1F6BC4ECF6",
+  "packageName": "compute-firmware-12.2.109",
+  "packageVersion": "12.2.109"
+}
+----
+
+.. Click *Execute* to initiate the upgrade.
++
+CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
+
+.. Copy the upgrade task ID (`"taskId"`) that is part of the response.
+. Verify the upgrade progress and results:
+.. Click *GET /task/{task_id}/logs*.
+.. Click *Try it out*.
+.. Enter the task ID from the previous step in *task_Id*.
+.. Click *Execute*.
+.. Do one of the following if there are problems or special requirements during the upgrade:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|You need to correct cluster health issues due to `failedHealthChecks` message in the response body.
+a|
+. Go to the specific KB article listed for each issue or perform the specified remedy.
+. If a KB is specified, complete the process described in the relevant KB article.
+. After you have resolved cluster issues, reauthenticate if needed and click *POST /nodes/{hardware_id}/upgrades*.
+. Repeat the steps as described previously in the upgrade step.
+
+|The upgrade fails and the mitigation steps are not listed in upgrade log.
+a|
+. See this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB article (login required]).
+|===
+.. Run the *GET ​/task/{task_id}/logs* API multiple times, as needed, until the process is complete.
++
+During the upgrade, the `status` indicates `running` if no errors are encountered. As each step finishes, the `status` value changes to `completed`.
++
+The upgrade has finished successfully when the status for each step is `completed` and the `percentageCompleted` value is `100`.
+. (Optional) Confirm upgraded firmware versions for each component:
+.. Open the hardware service REST API UI on the management node:
++
+----
+https://[management node IP]/hardware/2/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET ​/nodes​/{hardware_id}​/upgrades*.
+.. (Optional) Enter date and status parameters to filter the results.
+.. Enter the hardware host asset ID (BIOS UUID saved from a previous step) in the parameter field.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. Verify in the response that firmware for all components has been successfully upgraded from the previous version to the latest firmware.
 
 == Use a USB drive with the latest firmware image downloaded
 
@@ -65,6 +355,8 @@ After firmware flashing is complete and the node reboots, it might take a few mi
 You must perform the sequential steps to load the compute firmware ISO and reboot the node to the ISO to ensure that the upgrade is successful. The ISO should be located on the system or virtual machine (VM) hosting the web browser. Ensure that you have downloaded the ISO before you start the process.
 
 TIP: The recommendation is to have the system or VM and the node on the same network.
+
+NOTE: It takes approximately 25 to 30 minutes for the upgrade via the BMC UI.
 
 * <<Upgrade firmware on H410C and H300E/H500E/H700E nodes>>
 * <<Upgrade firmware on H610C/H615C nodes>>

@@ -26,7 +26,7 @@ entries:
        entries:
          - title: Volumes
            url: /concept_hci_volumes.html
-      # url: /concept_hci_storage.html
+         # url: /concept_hci_storage.html
      - title: Licensing
        url: /concept_cg_hci_licensing.html
      - title: Security
@@ -53,12 +53,6 @@ entries:
        url: /hci_prereqs_protection_domains.html
      - title: Witness Node resource requirements for two-node storage clusters
        url: /hci_prereqs_witness_nodes.html
-     - title: Configuring LACP for optimal storage performance
-       url: /hci_prereqs_LACP_configuration.html
-     - title: Validating your environment with Active IQ Config Advisor
-       url: /hci_prereqs_task_validate_config_advisor.html
-     - title: Final preparations
-       url: /hci_prereqs_final_prep.html
   - title: Get started with NetApp HCI
     entries:
       - title: NetApp HCI installation and deployment overview
@@ -66,6 +60,12 @@ entries:
       - title: Install H-series hardware
         url: /task_hci_installhw.html
         # For 20.2 consider putting multiple access topics or URLs
+      - title: Configure LACP for optimal storage performance
+        url: /hci_prereqs_LACP_configuration.html
+      - title: Validate your environment with Active IQ Config Advisor
+        url: /hci_prereqs_task_validate_config_advisor.html
+      - title: Configure IPMI for each node
+        url: /hci_prereqs_final_prep.html
   - title: Manage NetApp HCI
     entries:
       - title: Monitor your NetApp HCI system
@@ -74,6 +74,10 @@ entries:
             url: /task_hcc_dashboard.html
           - title: View your inventory in the Nodes page
             url: /task_hcc_nodes.html
+          - title: Edit BMC connection information
+            url: /task_hcc_edit_bmc_info.html
+          - title: Monitor volumes on your storage cluster
+            url: /task_hcc_volumes.html
           - title: Monitor performance, capacity, and cluster health with Active IQ
             url: /task_hcc_activeiq.html
           - title: Collect logs for troubleshooting
@@ -90,6 +94,9 @@ entries:
                 url: /task_mnode_install_add_storage_NIC.html
               - title: Recover a management node
                 url: /task_mnode_recover.html
+            # Removed MSK-280 feature from Denali
+            #  - title: Restore management services from backup
+            #    url: /task_management_services_restore.html
           - title: Access the management node
             url: /task_mnode_access_ui.html
           - title: Work with the management node UI
@@ -112,10 +119,12 @@ entries:
                 url: task_mnode_enable_activeIQ.html
               - title: Add compute and controller assets to the management node
                 url: task_mnode_add_assets.html
-              - title: Change the storage cluster administrator password
-                url: task_mnode_change_storage_cluster_admin_password.html
+              - title: View or edit existing controller assets
+                url: task_mnode_edit_vcenter_assets.html
               - title: Configure a proxy server for the management node
                 url: /task_mnode_configure_proxy_server.html
+              - title: Manage storage cluster assets
+                url: /task_mnode_manage_storage_cluster_assets.html
           - title: Enable remote NetApp Support connections
             url: /task_mnode_enable_remote_support_connections.html
   - title: Upgrade your NetApp HCI or SolidFire system
@@ -138,16 +147,18 @@ entries:
             url: /task_hcc_upgrade_element_prechecks.html
           - title: Upgrade Element software
             url: /task_hcc_upgrade_element_software.html
+          - title: Upgrade storage firmware
+            url: /task_hcc_upgrade_storage_firmware.html
           - title: Upgrade a management node
             url: /task_hcc_upgrade_management_node.html
           - title: Upgrade the NetApp Element Plug-in for vCenter Server
             url: /task_vcp_upgrade_plugin.html
           - title: Run compute node health checks prior to upgrading compute firmware
             url: /task_upgrade_compute_prechecks.html
-          - title: Update compute node firmware
-            url: /task_hcc_upgrade_compute_node_firmware.html
           - title: Update compute node drivers
             url: /task_hcc_upgrade_compute_node_drivers.html
+          - title: Upgrade compute node firmware
+            url: /task_hcc_upgrade_compute_node_firmware.html
       - title: vSphere upgrade sequences with vCenter Plug-in
         entries:
           - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server

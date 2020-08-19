@@ -29,8 +29,8 @@ Active IQ Config Advisor is a tool that helps streamline the installation experi
 === NetApp HCI documentation enhancements
 You can now access NetApp HCI upgrading, expansion, monitoring, and concepts information in an easy-to-navigate format link:index.html[here^].
 
-=== NetApp Element Plug-in for vCenter Server 4.4 availability
-The NetApp Element Plug-in for vCenter Server 4.4 is available outside of the management node 12.0 and NetApp HCI 1.8 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades^] documentation.
+=== NetApp Element Plug-in for vCenter Server 4.5 availability
+The NetApp Element Plug-in for vCenter Server 4.5 is available outside of the management node 12.0 and NetApp HCI 1.8 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades^] documentation.
 
 === NetApp Hybrid Cloud Control enhancements
 NetApp Hybrid Cloud Control is enhanced for version 1.8. https://kb.netapp.com/app/answers/answer_view/a_id/1087586[Learn more^].

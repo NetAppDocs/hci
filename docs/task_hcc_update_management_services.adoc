@@ -62,7 +62,7 @@ NOTE: If your installation cannot access the internet, only the current software
 .. Follow the instructions on the page to download and save a management services upgrade package to your computer.
 .. Click *Browse* to locate the package you saved and upload it.
 
-After the upgrade begins, you can see the upgrade status on this page.
+After the upgrade begins, you can see the upgrade status on this page. During the upgrade, you might lose connection with NetApp Hybrid Cloud Control and have to log back in to see the results of the upgrade.
 
 == Update management services using the management node API
 

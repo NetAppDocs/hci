@@ -18,7 +18,7 @@ You can manually install the management node for your cluster running NetApp Ele
 
 This manual process is intended for SolidFire all-flash storage administrators and NetApp HCI administrators who are not using the NetApp Deployment Engine for management node installation.
 
-.Before you begin
+.What you'll need
 
 * Your cluster version is running NetApp Element software 11.3 or later.
 * Your installation uses IPv4. The management node 11.3 does not support IPv6.
@@ -144,42 +144,54 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 
 == Configure controller assets
 
-. From a browser, log into the management node REST API UI:
+. Locate the installation ID:
+.. From a browser, log into the management node REST API UI:
 .. Go to the storage MVIP and log in. This action causes the certificate to be accepted for the next step.
-.. Open the REST API UI on the management node:
+.. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/ mnode
+https://[management node IP]/inventory/1/
 ----
-. From the management node REST API UI, click *Authorize* or any lock icon and complete the following:
-.. Enter the cluster user name and password.
-.. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session.
-.. Close the window.
-. Run *GET /assets* to find the base asset ID that you will need for the next steps:
-a. Click *GET /assets*.
-b. Click *Try it out*.
-c. Click *Execute*.
-d. Copy the value for `"id"` for the base asset to your clipboard:
-+
-image::mNode_API_Base_asset_ID.png[base asset ID highlighted in response body]
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the code 200 response body, copy and save the `id` for the installation for use in a later step.
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 
+. (NetApp HCI only) Locate the hardware tag for your compute node in vSphere:
+.. Select the host in the vSphere Web Client navigator.
+.. Click the *Monitor* tab, and click *Hardware Health*.
+.. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 . Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
+.. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
++
+----
+https://[management node IP]/mnode
+----
+
+.. Click *Authorize* or any lock icon and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
 .. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
 .. Click *Try it out*.
-.. Enter the required payload values as defined in the *Model* tab with type vCenter and vCenter credentials.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+.. Enter the required payload values with type `vCenter` and vCenter credentials.
 .. Click *Execute*.
 
 == (NetApp HCI only) Configure compute node assets
 
 . (For NetApp HCI only) Add a compute node asset to the management node known assets:
-.. Click *POST/assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+.. Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
 .. Click *Try it out*.
-.. In the payload, enter the required payload values as defined in the Model tab. Use type `ESXi Host` and remove the `"hardware_tag"` parameter.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+.. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and enter the hardware tag you saved during a previous step for `hardware_tag`.
 .. Click *Execute*.
 
 

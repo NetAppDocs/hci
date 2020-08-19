@@ -16,9 +16,17 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance
 [.lead]
 Use these instructions to install and deploy NetApp HCI. These instructions include links to more details.
 
-Here is an overview of the process.
+Here is an overview of the process:
 
-image::hci_flowchart_QSG.png[NetApp HCI Quick Start overview diagram]
+* <<Prepare for installation>>
+* <<Validate network readiness with NetApp Active IQ Config Advisor>>
+* <<Work with your NetApp team>>
+* <<Install NetApp HCI hardware>>
+* <<Complete optional tasks after installing hardware>>
+* <<Deploy NetApp HCI using the NetApp Deployment Engine (NDE)>>
+* <<Manage NetApp HCI using the vCenter Plug-in>>
+* <<Monitor or upgrade NetApp HCI with the Hybrid Cloud Control>>
+
 
 == Prepare for installation
 
@@ -41,6 +49,7 @@ Read these resources:
 * Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
 * For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
 * For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
+* For details about configuring Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes, see link:hci_prereqs_LACP_configuration.html[Configure LCAP for optimal storage performance].
 
 This setup consolidates all traffic onto two physical, redundant ports, reducing the cabling and streamlining network configuration. This configuration requires that the storage, vMotion and any virtual machine network segments use VLAN tagging.  The management network segment can use native or tagged VLAN; however, native VLAN is the preferred mode so that NetApp Deployment Engine (NDE) can assign network resources in an automated manner (Zero Conf).
 
@@ -58,6 +67,14 @@ NOTE: During the NDE process, all nodes will then be assigned permanent IP addre
 
 * NDE requires separate networks for management, iSCSI and vMotion that are preconfigured on the switch network.
 
+== Validate network readiness with NetApp Active IQ Config Advisor
+
+To ensure network readiness for NetApp HCI, install the NetApp Active IQ Config Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
+
+For details, see link:hci_prereqs_task_validate_config_advisor.html[Validate your environment with Active IQ Config Advisor]
+
+== Work with your NetApp team
+Your NetApp team uses the NetApp Active IQ Config Advisor report and the _Discovery Workbook_ to validate that your network environment is ready.
 
 == Install NetApp HCI hardware
 
@@ -80,10 +97,25 @@ CAUTION: For precautions and details, see link:task_hci_installhw.html[Install H
 . Connect the power cords.
 . Power on the NetApp HCI nodes.
 
-== Validate network readiness
+== Complete optional tasks after installing hardware
+After installing the NetApp HCI hardware, you should perform some optional, yet recommended tasks.
 
-To ensure network readiness for NetApp HCI, install the NetApp Configuration Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
+=== Manage storage capacity across all chassis
+Ensure that storage capacity is split evenly across all chassis containing storage nodes.
 
+
+=== Configure LACP for optimal storage cluster performance
+For optimal NetApp HCI storage cluster performance, you should configure Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes.
+
+For details about LACP configuration, see the following resources:
+
+* https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_]
+* link:hci_prereqs_LACP_configuration.html[Configure LACP for optimal storage performance]
+
+=== Configure IPMI for each node
+After you have racked, cabled, and powered on your NetApp HCI hardware, you can configure Intelligent Platform Management Interface (IPMI) access for each node. Assign each IPMI port an IP address and change the default administrator IPMI password as soon as you have remote IPMI access to the node.
+
+See link:hci_prereqs_final_prep.html[Configure IPMI].
 
 == Deploy NetApp HCI using the NetApp Deployment Engine (NDE)
 
@@ -152,6 +184,7 @@ You must append `@vsphere.local` to the user name.
 .	Go to the NetApp Element Plug-in for vCenter Server and ensure that the cluster is visible.
 .	Ensure no alerts appear on the Dashboard.
 
+
 == Manage NetApp HCI using the vCenter Plug-in
 
 After you install NetApp HCI, you can configure clusters, volumes, datastores, logs, access groups, initiators, and Quality of Service (QoS) policies by using the NetApp Element Plug-in for vCenter Server.
@@ -160,9 +193,9 @@ For details, see the http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-
 
 image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
 
-== (Optional) Monitor, upgrade, or expand NetApp HCI with the Hybrid Cloud Control
+== Monitor or upgrade NetApp HCI with the Hybrid Cloud Control
 
-You can use the NetApp HCI Hybrid Cloud Control to monitor, upgrade, or expand your system.
+You can optionally use the NetApp HCI Hybrid Cloud Control to monitor, upgrade, or expand your system.
 
 You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
 
@@ -189,6 +222,6 @@ The NetApp Hybrid Cloud Control interface appears.
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^]
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
-* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_NetApp Element Plug-in for vCenter Server Guide_^].
+* http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/home.html[_NetApp Element Plug-in for vCenter Server Guide_^]
 * https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
 * https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]

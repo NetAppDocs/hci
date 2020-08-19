@@ -24,29 +24,51 @@ The Active IQ collector service forwards configuration data and Element software
 * You have internet access. The Active IQ collector service cannot be used from dark sites.
 
 .Steps
-. Access the REST API UI for management services by entering the management node IP address
-followed by `/mnode`:
+. Get the base asset ID for the installation:
+.. Open the inventory service REST API UI on the management node:
++
+----
+https://[management node IP]/inventory/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the code 200 response body, copy the `id` for the installation.
++
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      "id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",
+----
++
+NOTE: Your installation has a base asset configuration that was created during installation or upgrade.
+
+. Activate telemetry:
+.. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
 +
 ----
 https://[management node IP]/mnode
 ----
 
-. Click *Authorize* or any lock icon and complete the following:
-.. Enter the cluster user name and password.
-.. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session.
-.. Close the window.
-. Click *GET /assets*.
-. Copy the value for the `id` for the base asset to your clipboard.
-+
-NOTE: A base asset and sub-assets were created when you ran the upgrade or setup scripts during management node installation or upgrade.
-+
-image::mNode_API_Base_asset_ID.png[the base asset ID for the cluster]
-
-. Configure the base asset:
-.. Click *PUT /assets/{asset_id}*.
-.. Click *Try it out*.
-.. Enter the following in the JSON payload:
+.. Click *Authorize* or any lock icon and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. Configure the base asset:
+... Click *PUT /assets/{asset_id}*.
+... Click *Try it out*.
+... Enter the following in the JSON payload:
 +
 ----
 {
@@ -54,19 +76,19 @@ image::mNode_API_Base_asset_ID.png[the base asset ID for the cluster]
 "config": {}
 }
 ----
-
-.. Enter the ID from the base asset step in *asset_ID*.
-.. Click *Execute*.
+... Enter the base ID from the previous step in *asset_ID*.
+... Click *Execute*.
 +
 The Active IQ service is automatically restarted whenever assets are changed. Modifying assets results in a short delay before settings are applied.
 
-. (For NetApp HCI systems only) Add a controller asset for vCenter.
+. If you have not already done so, add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
 +
 NOTE: A controller asset is required for NetApp HCI monitoring services.
 
-.. Click *POST /assets/{asset_id}/controllers*.
+.. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
 .. Click *Try it out*.
-.. Enter the configuration information for the controller asset:
+.. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+.. Enter the required payload values with `type` as `vCenter` and vCenter credentials.
 +
 ----
 {
@@ -79,9 +101,8 @@ NOTE: A controller asset is required for NetApp HCI monitoring services.
 }
 ----
 +
-NOTE: All fields are optional. `ip` is the vCenter IP address.
+NOTE: `ip` is the vCenter IP address.
 
-.. Enter the parent ID from the base asset in *asset_ID*.
 .. Click *Execute*.
 
 [discrete]
