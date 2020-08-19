@@ -42,7 +42,7 @@ NOTE: Upgrading HealthTools is only required if the management node and Element 
 
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 . Element storage and firmware upgrades:
-. link:task_hcc_upgrade_element_software.html[(Option A) Upgrade your Element software version].
+* link:task_hcc_upgrade_element_software.html[(Option A) Upgrade your Element software version].
 +
 NOTE: This option performs a full Element software and storage firmware upgrade.
 
