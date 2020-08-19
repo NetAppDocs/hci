@@ -75,7 +75,7 @@ TIP: For a successful upgrade, ensure that the health check on the vSphere clust
 NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host.
 
 .What you'll need
-* If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^]. To download, select *Compute_Firmware_Bundle* from the drop-down list and click *Go*.
+* If your management node is not connected to the internet, you have downloaded the package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
 
 .Steps
 
@@ -162,7 +162,7 @@ You can use APIs to upgrade each compute node in a cluster to the latest firmwar
 
 .What you'll need
 
-Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://[management node IP]/inventory`).
+Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://[management node IP]/inventory/1/`).
 
 .Steps
 
@@ -179,7 +179,7 @@ a|
 .. Open the package service REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository
+https://[management node IP]/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -198,12 +198,12 @@ https://[management node IP]/package-repository
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest compute node firmware image to a device that is accessible to the management node.
+. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page] and download the latest compute node firmware image to a device that is accessible to the management node.
 . Upload the compute firmware upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository
+https://[management node IP]/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -228,7 +228,7 @@ The response indicates `state` as `finished` when complete.
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory
+https://[management node IP]/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
