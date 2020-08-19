@@ -147,8 +147,8 @@ entries:
             url: /task_hcc_upgrade_element_prechecks.html
           - title: Upgrade Element software
             url: /task_hcc_upgrade_element_software.html
-          - title: Upgrade storage firmware
-            url: /task_hcc_upgrade_storage_firmware.html
+          # - title: Upgrade storage firmware
+          #  url: /task_hcc_upgrade_storage_firmware.html
           - title: Upgrade a management node
             url: /task_hcc_upgrade_management_node.html
           - title: Upgrade the NetApp Element Plug-in for vCenter Server
