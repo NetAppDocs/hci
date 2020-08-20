@@ -1,0 +1,368 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_storage_firmware.html
+summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade the firmware associated with your storage nodes.
+keywords: netapp, element, hcc, firmware, storage firmware
+---
+
+= Upgrade storage firmware
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+
+IMPORTANT: Element software bundles will continue to include the storage firmware, but you will soon have the flexibility to update only the firmware using a storage firmware only package when it becomes available.
+
+.What you'll need
+
+* *Admin privileges*: You have storage cluster administrator permissions to perform the upgrade.
+* *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
+* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
+* *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
+* *Management services*: You have updated your management services bundle to the latest version.
+
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading the firmware on your storage nodes.
+
+* *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+
+.Upgrade options
+
+Choose one of the following storage firmware upgrade options:
+
+* <<Use NetApp Hybrid Cloud Control UI to upgrade storage firmware>>
+* <<Use NetApp Hybrid Cloud Control API to upgrade storage firmware>>
+
+== Use NetApp Hybrid Cloud Control UI to upgrade storage firmware
+
+You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware of the storage nodes in your cluster.
+
+.What you'll need
+* If your management node is not connected to the internet, you have downloaded the package from the relevant location:
+** https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[Storage firmware package for NetApp HCI storage clusters^]
+** https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Storage firmware package for SolidFire storage clusters running Element software^]
+
+CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
+
+TIP: The upgrade process takes approximately 30 minutes per node.
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select *Storage*.
++
+NOTE: The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page. If you have clusters running Element 12.0 or later, you will see the current firmware bundle version listed for these clusters. If the nodes in a single cluster have different firmware versions on them or as the upgrade progresses, you will see *Multiple* in the *Current Firmware Bundle Version* column. You can click *Multiple* to navigate to the *Nodes* page to compare firmware versions. If all your clusters are running Element versions earlier than 12.0, you will not see any information about firmware bundle version numbers. This information is also available on the *Nodes* page. See link:task_hcc_nodes.html[View your inventory].
+If the cluster is up to date and/or no upgrade packages are available, the *Element* and *Firmware Only* tabs are not displayed. These tabs are also not displayed when an upgrade is in progress. If the *Element* tab is displayed, but not the *Firmware Only* tab, no firmware packages are available.
+
+. Choose from the following options and perform the set of steps that are applicable to your cluster:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Your management node has external connectivity.
+a|
+. Click the drop-down arrow next to the cluster you are upgrading.
+. Click *Firmware Only*, and select from the upgrade versions available.
+. Click *Begin Upgrade*.
+
+TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
+
+NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page.
+
+You can download logs after the upgrade is complete.
+
+|Your management node is within a dark site without external connectivity.
+a|
+. Click the drop-down arrow next to the cluster you are upgrading.
+. Click *Browse* to upload the upgrade package that you downloaded.
+. Wait for the upload to complete. A progress bar shows the status of the upload.
+
+CAUTION: The file upload will be lost if you navigate away from the browser window.
+
+An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
+You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
+|===
+
+=== Upgrade status changes
+
+Here are the different states that the *Upgrade Status* column in the UI shows before, during, and after the upgrade process:
+
+[%header,cols=2*]
+|===
+|Upgrade state
+|Description
+
+|Up to Date
+|The cluster was upgraded to the latest Element version available or the firmware was upgraded to the latest version.
+
+|Unable to Detect
+|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. This status is also displayed when the storage service API returns an upgrade status that is not in the enumerated list of possible upgrade statuses.
+
+|Versions Available
+|Newer versions of Element and/or storage firmware are available for upgrade.
+
+|In Progress
+|The upgrade is in progress. A progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
+
+|Upgrade Pausing
+|You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. To ensure that the cluster is in a safe spot before pausing an upgrade, it can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click *Resume*.
+
+|Paused
+|You paused the upgrade. Click *Resume* to resume the process.
+
+|Error
+|An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
+|===
+
+== What happens if an upgrade fails using NetApp Hybrid Cloud Control
+If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, clicking *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
+
+NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during which one of the following scenarios can happen:
+
+* The cluster faults get resolved within the three-hour window, and upgrade resumes. You do not need to take any action in this scenario.
+* The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by clicking *Resume* after the problem is resolved.
+* NetApp Support has determined that the upgrade needs to be temporarily aborted to take corrective action before the three-hour window. Support will use the API to abort the upgrade.
+
+CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
+
+== Use NetApp Hybrid Cloud Control API to upgrade storage firmware
+
+You can use APIs to upgrade storage nodes in a cluster to the latest Element software version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+
+.Steps
+
+. Do one of the following depending on your connection:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Your management node has external connectivity.
+a|
+. Verify the repository connection:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
+. Find the upgrade package ID:
+.. From the REST API UI, click *GET /packages*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy and save the firmware package ID for use in a later step.
+
+|Your management node is within a dark site without external connectivity.
+a|
+. Download the storage firmware upgrade package to a device that is accessible to the management node:
+* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage firmware image.
+* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage firmware image.
+. Upload the storage firmware upgrade package to the management node:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/package-repository/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *POST /packages*.
+.. Click *Try it out*.
+.. Click *Browse* and select the upgrade package.
+.. Click *Execute* to initiate the upload.
+.. From the response, copy and save the package ID (`"id"`) for use in a later step.
+. Verify the status of the upload.
+.. From the REST API UI, click *GET​ /packages​/{id}​/status*.
+.. Click *Try it out*.
+.. Enter the firmware package ID you copied in the previous step in *id*.
+.. Click *Execute* to initiate the status request.
++
+The response indicates `state` as `finished` when complete.
+|===
+. Locate the installation asset ID:
+.. Open the management node REST API UI on the management node:
++
+----
+https://[management node IP]/inventory/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET /installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the installation asset ID (`id`).
++
+----
+"id": "abcd01e2-xx00-4ccf-11ee-11f111xx9a0b",
+"management": {
+  "errors": [],
+  "inventory": {
+    "authoritativeClusterMvip": "10.111.111.111",
+    "bundleVersion": "2.14.19",
+    "managementIp": "10.111.111.111",
+    "version": "1.4.12"
+----
+
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to upgrade for use in a later step.
++
+----
+"storage": {
+  "errors": [],
+  "inventory": {
+    "clusters": [
+      {
+        "clusterUuid": "a1bd1111-4f1e-46zz-ab6f-0a1111b1111x",
+        "id": "a1bd1111-4f1e-46zz-ab6f-a1a1a111b012",
+----
+
+. Run the storage firmware upgrade:
+.. Open the storage REST API UI on the management node:
++
+----
+https://[management node IP]/storage/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. Click *POST /upgrades*.
+.. Click *Try it out*.
+.. Enter the upgrade package ID in the parameter field.
+.. Enter the storage cluster ID in the parameter field.
+.. Click *Execute* to initiate the upgrade.
++
+The response should indicate state as `initializing`:
++
+----
+{
+  "_links": {
+    "collection": "https://localhost:442/storage/upgrades",
+    "self": "https://localhost:442/storage/upgrades/3fa85f64-1111-4562-b3fc-2c963f66abc1",
+    "log": https://localhost:442/storage/upgrades/3fa85f64-1111-4562-b3fc-2c963f66abc1/log
+  },
+  "storageId": "114f14a4-1a1a-11e9-9088-6c0b84e200b4",
+  "upgradeId": "334f14a4-1a1a-11e9-1055-6c0b84e2001b4",
+  "packageId": "774f14a4-1a1a-11e9-8888-6c0b84e200b4",
+  "config": {},
+  "state": "initializing",
+  "status": {
+    "availableActions": [
+      "string"
+    ],
+    "message": "string",
+    "nodeDetails": [
+      {
+        "message": "string",
+        "step": "NodePreStart",
+        "nodeID": 0,
+        "numAttempt": 0
+      }
+    ],
+    "percent": 0,
+    "step": "ClusterPreStart",
+    "timestamp": "2020-04-21T22:10:57.057Z",
+    "failedHealthChecks": [
+      {
+        "checkID": 0,
+        "name": "string",
+        "displayName": "string",
+        "passed": true,
+        "kb": "string",
+        "description": "string",
+        "remedy": "string",
+        "severity": "string",
+        "data": {},
+        "nodeID": 0
+      }
+    ]
+  },
+  "taskId": "123f14a4-1a1a-11e9-7777-6c0b84e123b2",
+  "dateCompleted": "2020-04-21T22:10:57.057Z",
+  "dateCreated": "2020-04-21T22:10:57.057Z"
+}
+----
+.. Copy the upgrade ID (`"upgradeId"`) that is part of the response.
+. Verify the upgrade progress and results:
+.. Click *GET ​/upgrades/{upgradeId}*.
+.. Click *Try it out*.
+.. Enter the upgrade ID from the previous step in *upgradeId*.
+.. Click *Execute*.
+.. Do one of the following if there are problems or special requirements during the upgrade:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|You need to correct cluster health issues due to `failedHealthChecks` message in the response body.
+a|
+. Go to the specific KB article listed for each issue or perform the specified remedy.
+. If a KB is specified, complete the process described in the relevant KB article.
+. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
+. Click *Try it out*.
+. Enter the upgrade ID from the previous step in *upgradeId*.
+. Enter `"action":"resume"` in the request body.
++
+----
+{
+  "action": "resume"
+}
+----
+. Click *Execute*.
+
+|You need to pause the upgrade because the maintenance window is closing or for another reason.
+a|
+. Reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
+. Click *Try it out*.
+. Enter the upgrade ID from the previous step in *upgradeId*.
+. Enter `"action":"pause"` in the request body.
++
+----
+{
+  "action": "pause"
+}
+----
+. Click *Execute*.
+|===
+.. Run the *GET ​/upgrades/{upgradeId}* API multiple times, as needed, until the process is complete.
++
+During the upgrade, the `status` indicates `running` if no errors are encountered. As each node is upgraded, the `step` value changes to `NodeFinished`.
++
+The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

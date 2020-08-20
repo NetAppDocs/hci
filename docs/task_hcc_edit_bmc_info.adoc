@@ -1,0 +1,159 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_edit_bmc_info.html
+summary: You can use NetApp Hybrid Cloud Control to edit Baseboard Management Controller (BMC) connection information so that NetApp HCI can connect to it.
+keywords: netapp, hci, BMC, connection, credentials, monitor
+---
+
+= Edit Baseboard Management Controller connection information
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can change Baseboard Management Controller (BMC) administrator credentials in NetApp Hybrid Cloud Control for each of your compute nodes. You might need to change credentials prior to upgrading BMC firmware or to resolve a `Hardware ID not available` or `Unable to Detect` error indicated in NetApp Hybrid Cloud Control.
+
+.What you'll need
+
+Cluster administrator permissions to change BMC credentials.
+
+NOTE: If you set BMC credentials during a health check, there can be a delay of up to 15 minutes before the change is reflected on the *Nodes* page.
+
+.Options
+
+Choose one of the following options to change BMC credentials:
+
+* <<Use NetApp Hybrid Cloud Control to edit BMC information>>
+* <<Use the REST API to edit BMC information>>
+
+== Use NetApp Hybrid Cloud Control to edit BMC information
+You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
+
+.Steps
+. Open a web browser and browse to the IP address of the management node. For example:
++
+----
+https://[management node IP address]
+----
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
+. In the left navigation blue box, select the NetApp HCI installation.
++
+The NetApp Hybrid Cloud Control Dashboard appears.
+. In the left navigation, click *Nodes*.
+. To view compute inventory information, click *Compute*.
++
+A list of your compute nodes appears. The *BMC Connection Status* column shows the result of BMC connection attempts for each compute node. If the connection attempt fails for a compute node, an error message is displayed in this column for that node.
+. To add or edit the stored BMC credentials for a compute node with BMC connection errors, click *Edit connection settings* in the error message text.
+. In the dialog that appears, add the correct administrator user name and password for the BMC of this compute node.
+. Click *Save*.
+. Repeat steps 6 through 8 for any compute node that has missing or incorrect stored BMC credentials.
+
+NOTE: Updating BMC information refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
+
+== Use the REST API to edit BMC information
+You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control REST API.
+
+.Steps
+. Locate the compute node hardware tag and BMC information:
+.. Open the inventory service REST API UI on the management node:
++
+----
+https://[management node IP]/inventory/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the authorization window.
+.. From the REST API UI, click *GET /installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the installation asset ID (`id`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the node asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
++
+----
+"nodes": [
+  {
+    "bmcDetails": {
+      "bmcAddress": "10.117.1.111",
+      "credentialsAvailable": false,
+      "credentialsValidated": false
+    },
+    "chassisSerialNumber": "221111019323",
+    "chassisSlot": "C",
+    "hardwareId": null,
+    "hardwareTag": "00000000-0000-0000-0000-ac1f6ab4ecf6",
+    "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+----
+
+. Open the hardware service REST API UI on the management node:
++
+----
+https://[management node IP]/hardware/2/
+----
+. Click *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client` if the value is not already populated.
+.. Click *Authorize* to begin a session.
+.. Close the window.
+. Click *PUT /nodes/{hardware_id}*.
+. Click *Try it out*.
+. Enter the node asset id that you saved earlier in the `hardware_id` parameter.
+. Enter the following information in the payload:
++
+|===
+|Parameter |Description
+
+|`assetId`
+|The installation asset id (`id`) that you saved in step 1(f).
+
+|`bmcIp`
+|The BMC IP address (`bmcAddress`) that you saved in step 1(k).
+
+|`bmcPassword`
+|An updated password to log into the BMC.
+
+|`bmcUsername`
+|An updated user name to log into the BMC.
+
+|`serialNumber`
+|The chassis serial number of the hardware.
+|===
++
+Example payload:
++
+----
+{
+  "assetId": "7bb41e3c-2e9c-2151-b00a-8a9b49c0b0fe",
+  "bmcIp": "10.117.1.111",
+  "bmcPassword": "mypassword1",
+  "bmcUsername": "admin1",
+  "serialNumber": "221111019323"
+}
+----
+. Click *Execute* to update BMC credentials.
+A successful result returns a response similar to the following:
++
+----
+{
+  "credentialid": "33333333-cccc-3333-cccc-333333333333",
+  "host_name": "hci-host",
+  "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+  "ip": "1.1.1.1",
+  "parent": "abcd01y3-ab30-1ccc-11ee-11f123zx7d1b",
+  "type": "BMC"
+}
+----
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[Known issues and workarounds for compute node upgrades^]
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -41,9 +41,20 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 NOTE: Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for performing Element upgrades using NetApp Hybrid Cloud Control.
 
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
-. link:task_hcc_upgrade_element_software.html[Upgrade your Element software version].
+. Element storage and firmware upgrades:
+* link:task_hcc_upgrade_element_software.html[(Option A) Upgrade your Element software version].
++
+NOTE: This option performs a full Element software and storage firmware upgrade.
+
+* link:task_hcc_upgrade_storage_firmware.html[(Option B) Upgrade your Element storage firmware].
++
+NOTE: This option performs a storage firmware only upgrade if you elect not to upgrade your Element software.
+
++
+IMPORTANT: Element software bundles will continue to include the storage firmware, but you will soon have the flexibility to update only the firmware using a storage firmware only package when it becomes available.
+
 . link:task_hcc_upgrade_management_node.html[Upgrade your management node].
-. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server to version 4.4].
+. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
 
 [discrete]
 == Find more information
