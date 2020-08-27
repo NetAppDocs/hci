@@ -34,7 +34,7 @@ IMPORTANT: The plug-in is compatible with vSphere Web Client version 6.7 U2 for 
 * *Management services updates*: You have updated your https://mysupport.netapp.com/products/p/mgmtservices.html[management services bundle] to the latest version. Updates to the vCenter plug-in are distributed using management services updates that are released outside of major product releases for NetApp HCI and SolidFire all-flash storage.
 * *Management node upgrades*: You are running a management node that has been link:task_hcc_upgrade_management_node.html[upgraded] to version 11.3 or later. vCenter Plug-in 4.4 or later requires a an 11.3 or later management node with a modular architecture that provides individual services. Your management node must be powered on with its IP address or DHCP address configured.
 * *Element storage upgrades*: You have a cluster running NetApp Element software 11.3 or later.
-* *vSphere Web Client*: You have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client will not recognize updates made during this process to your plug-in if you do not log out.
+* *vSphere Web Client*: For vSphere 6.5 and 6.7, you have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out. For vSphere 7.0, you do not need to log out of the web client.
 
 .Steps
 
@@ -61,9 +61,12 @@ NOTE: The user name and password credentials you enter must be for a user with v
 NOTE: You can click *Custom URL* to customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings. For additional configuration steps if you intend to customize a URL, see Element Plug-in for vCenter Server documentation about modifying vCenter properties for an in-house (dark site) HTTP server.
 
 . Click *Update*.
++
+NOTE: A banner appears in the registration utility UI when the registration is successful.
+
 . Log in to the vSphere Web Client as a vCenter Administrator.
 +
-NOTE: This action creates a new database and completes the installation in the vSphere Web Client. If the vCenter Plug-in icons are not visible from the vSphere main page, see Element Plug-in for vCenter Server documentation about troubleshooting the plug-in.
+NOTE: For vSphere versions 6.5 and 6.7, this action creates a new database and completes the installation in the vSphere Web Client. For vSphere 7.0, look for the following completed tasks in the task monitor to ensure installation has completed: `Download plug-in` and `Deploy plug-in`.
 
 . Verify that the NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
 +
