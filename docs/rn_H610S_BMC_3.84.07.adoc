@@ -69,21 +69,21 @@ There are no known issues in this release
 Perform the following steps to update your BMC firmware version. The procedure to update the BMC firmware on H610S nodes can take approximately 30 minutes to complete.
 
 .What you'll need
-* You have checked for alerts by clicking Reporting > Alerts in the NetApp Element Software user interface (UI) to ensure that there are no errors.
+* You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element Software user interface (UI) to ensure that there are no errors.
 * You have downloaded the BMC update file.
 
 .Steps
 . Log in to the BMC console using an internet browser: https://<BMC IP>/#login, where <BMC IP> is the IP address of the BMC.
-. Select Maintenance > Firmware Update.
-. On the firmware update screen, make sure that you select the IPMI and Network check boxes.
+. Select *Maintenance* > *Firmware Update*.
+. On the firmware update screen, make sure that you select the *IPMI* and *Network* check boxes.
 +
-** The IPMI setting is used to preserve existing user accounts.
-** The Network setting is used to preserve the DHCP assigned BMC IP
+** The *IPMI* setting is used to preserve existing user accounts.
+** The *Network* setting is used to preserve the DHCP assigned BMC IP address.
 +
-NOTE: Make sure that the Preserve all Configuration check box is not selected.
+NOTE: Make sure that the *Preserve all configuration* check box is not selected.
 
-. Choose the file and click Start firmware update to start the firmware update process.
+. Choose the file and click *Start firmware update* to start the firmware update process.
 +
-The update process can take approx of 4-5 minutes to complete if the BMC firmware file is in the nodes' network; otherwise the process will take longer.
-. Verify the firmware version by looking at the version listed on Dashboard > More info.
+The update process can take up to 5 minutes to complete if the BMC firmware file is in the node's network; otherwise the process will take longer.
+. Verify the firmware version by looking at the version listed on the *Dashboard* > *More info* page.
 . Perform this procedure for the remaining H610S storage nodes in your cluster.
