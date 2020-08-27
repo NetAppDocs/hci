@@ -27,10 +27,10 @@ You can upgrade the H610S BMC firmware directly out-of-band, and upgrade instruc
 The following are the new features and changes included in this release:
 
 * Enabled INITRD support
-* Added updated SSL help message about X.509 certificates
+* Updated SSL help message about X.509 certificates
 * Disabled TLS 1.0 and 1.1 support
 * Added Redfish remote media support
-* Added H5Viewer RKVM feature
+* Added the H5Viewer RKVM feature
 * Added Remote syslog support
 
 == Resolved issues
@@ -58,7 +58,7 @@ The following are issues that have been resolved in this release:
 |The H610S BMC can hang and become inaccessible with the error "BMC Self Test Failed".
 
 |CSESF-197
-|The WebUI inventory API returns the wrong memory serial number format.
+|The BMC web UI inventory API returns the wrong memory serial number format.
 |===
 
 == Known issues
@@ -68,11 +68,11 @@ There are no known issues in this release.
 Perform the following steps to update your BMC firmware version. The procedure to update the BMC firmware on H610S nodes can take approximately 30 minutes to complete.
 
 .What you'll need
-* You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element Software user interface (UI) to ensure that there are no errors.
+* You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
 * You have downloaded the BMC update file.
 
 .Steps
-. Log in to the BMC console using an internet browser: `https://<BMC_IP>/#login`, where <BMC_IP> is the IP address of the BMC.
+. Log in to the BMC console using your web browser: `https://<BMC_IP>/#login`, where `<BMC_IP>` is the IP address of the BMC.
 . Select *Maintenance* > *Firmware Update*.
 . On the firmware update screen, make sure that you select the *IPMI* and *Network* check boxes.
 +
@@ -81,7 +81,7 @@ Perform the following steps to update your BMC firmware version. The procedure t
 +
 NOTE: Make sure that the *Preserve all configuration* check box is not selected.
 
-. Choose the file and click *Start firmware update* to start the firmware update process.
+. Choose the BMC update file you donwloaded and click *Start firmware update* to start the firmware update process.
 +
 The update process can take up to 5 minutes to complete if the BMC firmware file is in the node's network; otherwise the process will take longer.
 . Verify the firmware version by looking at the version listed on the *Dashboard* > *More info* page.
