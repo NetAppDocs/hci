@@ -17,17 +17,26 @@ If you need to take a storage node offline for maintenance such as software upgr
 
 You can only transition a storage node to maintenance mode if the node is healthy (has no blocking cluster faults) and the storage cluster is tolerant to a single node failure. Once you enable maintenance mode for a healthy and tolerant node, the node is not immediately transitioned; it is monitored until the following conditions are true:
 
-* The node is no longer hosting any primary slices for volumes
-* A standby is assigned for every volume on the node
+* All volumes hosted on the node have failed over
+* The node is no longer hosting as the primary for any volume
+* A temporary standby node is assigned for every volume being failed over
 
 After these criteria are met, the node is transitioned to maintenance mode. If these criteria are not met within a 5 minute period, the node will not enter maintenance mode.
 
 When you disable maintenance mode for a storage node, the node is monitored until the following conditions are true:
 
-* All blocking faults on the node are cleared
-* All standbys associated with volumes on the node are inactive
+* All data is fully replicated to the node
+* All blocking cluster faults are resolved
+* All temporary standby node assignments for the volumes hosted on the node have been inactivated
 
 After these criteria are met, the node is transitioned out of maintenance mode. If these criteria are not met within one hour, the node will fail to transition out of maintenance mode.
+
+You can see the states of maintenance mode operations when using the Element API or web UI: 
+* Disabled: No maintenance has been requested.
+* FailedToRecover: The node failed to recover from maintenance.
+* RecoveringFromMaintenance: The node is in the process of recovering from maintenance.
+* PreparingForMaintenance: Actions are being taken to allow a node to have maintenance performed.
+* ReadyForMaintenance: The node is ready for maintenance to be performed.
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
