@@ -46,22 +46,22 @@ NOTE: You configure virtual machine networks using vCenter. The default virtual 
 == Network configuration and cabling options
 You can use a two-cable network configuration for the H300E, H500E, H700E, and H410C compute nodes, simplifying cable routing. This configuration uses two SFP+/SFP28 interfaces plus an optional (but recommended) RJ45 interface for IPMI communication. These nodes can also use a six-cable configuration with two RJ45 and four SFP28/SFP+ interfaces.
 
-All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H300S, H500S, H700S, and H610S nodes. Compute nodes support three network topologies:
+All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H410S and H610S nodes. Compute nodes support three network topologies:
 
 |===
 |Configuration option |Cabling for H3/5/700E and H410C nodes |Cabling for H610C nodes |Cabling for H610S nodes |Cabling for H615C nodes
 
 |Option A
-|Two-cable configuration using ports D and E
-|Two-cable configuration using ports C and D
-|Two-cable configuration using ports C and D
-|Two-cable configuration using ports A and B
+|Two cables using ports D and E
+|Two cables using ports C and D
+|Two cables using ports C and D
+|Two cables using ports A and B
 
 |Option B
-|Six-cable configuration using ports A through F
-|Four-cable configuration using ports A through D
-|Four-cable configuration using ports A through D
-|Two-cable configuration using ports A and B
+|Six cables using ports A through F
+|Four cables using ports A through D
+|Four cables using ports A through D
+|Two cables using ports A and B
 
 |Option C
 4+|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
@@ -98,7 +98,7 @@ As a best practice, you should configure the required network segments on all sw
 |Tagged
 |===
 
-The following illustration shows the recommended cabling configuration for two-cable H300E, H500E, H700E, and H410C compute nodes and four-cable H300S, H500S, H700S, and H410S storage nodes. All switch ports in this example share the same configuration.
+The following illustration shows the recommended cabling configuration for two-cable H300E, H500E, H700E, and H410C compute nodes and four-cable H410S storage nodes. All switch ports in this example share the same configuration.
 
 image::hci_networking_config_scenario_1.png[HCI networking configuration option A image]
 
