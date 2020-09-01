@@ -50,9 +50,7 @@ All storage nodes support a network topology that uses four network ports; this 
 
 |===
 |Configuration option |Cabling for H3/5/700E and H410C nodes |Cabling for H610C nodes |Cabling for H610S nodes |Cabling for H615C nodes
-////
-(two RJ45 and two SFP28/SFP+ interfaces)
-////
+
 |Option A
 |Two-cable configuration using ports D and E
 |Two-cable config using ports C and D
