@@ -33,11 +33,11 @@ After these criteria are met, the node is transitioned out of maintenance mode. 
 
 You can see the states of maintenance mode operations when working with maintenance mode using the Element API:
 
-* Disabled: No maintenance has been requested.
-* FailedToRecover: The node failed to recover from maintenance.
-* RecoveringFromMaintenance: The node is in the process of recovering from maintenance.
-* PreparingForMaintenance: Actions are being taken to allow a node to have maintenance performed.
-* ReadyForMaintenance: The node is ready for maintenance to be performed.
+* *Disabled*: No maintenance has been requested.
+* *FailedToRecover*: The node failed to recover from maintenance.
+* *RecoveringFromMaintenance*: The node is in the process of recovering from maintenance.
+* *PreparingForMaintenance*: Actions are being taken to allow a node to have maintenance performed.
+* *ReadyForMaintenance*: The node is ready for maintenance to be performed.
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
