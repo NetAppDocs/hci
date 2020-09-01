@@ -50,18 +50,20 @@ All storage nodes support a network topology that uses four network ports; this 
 
 |===
 |Configuration option |Cabling for H3/5/700E and H410C nodes |Cabling for H610C nodes |Cabling for H610S nodes |Cabling for H615C nodes
-
+////
+(two RJ45 and two SFP28/SFP+ interfaces)
+////
 |Option A
-|Two-cable configuration using ports D and E (two SFP28/SFP+ interfaces)
-|Two-cable config using ports C and D (two SFP28/SFP+ interfaces)
-|Two-cable config using ports C and D (two SFP28/SFP+ interfaces)
-|Two-cable config using ports A and B (two SFP28/SFP+ interfaces)
+|Two-cable configuration using ports D and E
+|Two-cable config using ports C and D
+|Two-cable config using ports C and D
+|Two-cable config using ports A and B
 
 |Option B
-|Six-cable configuration using ports A through F (two RJ45 and four SFP28/SFP+ interfaces)
-|Four-cable config using ports A through D (two RJ45 and two SFP28/SFP+ interfaces)
-|Four-cable config using ports A through D (two RJ45 and two SFP28/SFP+ interfaces)
-|Two-cable config using ports A and B (two SFP28/SFP+ interfaces)
+|Six-cable configuration using ports A through F
+|Four-cable config using ports A through D
+|Four-cable config using ports A through D
+|Two-cable config using ports A and B
 
 |Option C
 |Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
