@@ -31,7 +31,7 @@ When you disable maintenance mode for a storage node, the node is monitored unti
 
 After these criteria are met, the node is transitioned out of maintenance mode. If these criteria are not met within one hour, the node will fail to transition out of maintenance mode.
 
-You can see the states of maintenance mode operations when using the Element API or web UI: 
+You can see the states of maintenance mode operations when working with maintenance mode using the Element API:
 * Disabled: No maintenance has been requested.
 * FailedToRecover: The node failed to recover from maintenance.
 * RecoveringFromMaintenance: The node is in the process of recovering from maintenance.
