@@ -53,21 +53,18 @@ All storage nodes support a network topology that uses four network ports; this 
 
 |Option A
 |Two-cable configuration using ports D and E
-|Two-cable config using ports C and D
-|Two-cable config using ports C and D
-|Two-cable config using ports A and B
+|Two-cable configuration using ports C and D
+|Two-cable configuration using ports C and D
+|Two-cable configuration using ports A and B
 
 |Option B
 |Six-cable configuration using ports A through F
-|Four-cable config using ports A through D
-|Four-cable config using ports A through D
-|Two-cable config using ports A and B
+|Four-cable configuration using ports A through D
+|Four-cable configuration using ports A through D
+|Two-cable configuration using ports A and B
 
 |Option C
-|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
-|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
-|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
-|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
+4+|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
 |===
 
 Nodes that do not have the correct number of connected cables cannot participate in the deployment. For example, you cannot deploy a compute node in a six-cable configuration if it only has ports D and E connected.
