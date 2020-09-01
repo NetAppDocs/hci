@@ -49,25 +49,16 @@ You can use a two-cable network configuration for the H300E, H500E, H700E, and H
 All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H300S, H500S, H700S, and H610S nodes. Compute nodes support three network topologies:
 
 |===
-|Configuration option |Cabling for H3/5/700E and H410 series nodes |Cabling for H610C nodes |Cabling for H615C nodes | Cabling for H610S nodes
+|Configuration option |Cabling and description
 
 |Option A
 |Two-cable configuration using ports D and E (two SFP28/SFP+ interfaces) on H300E, H500E, H700E and H410C nodes
-|Two-cable config using ports A and B
-|Two-cable config using ports A and B
-|Two-cable config using ports A and B
 
 |Option B
 |Six-cable configuration using ports A through F (two RJ45 and four SFP28/SFP+ interfaces) on H300E, H500E, H700E and H410C nodes
-|Two-cable config using ports A and B
-|Two-cable config using ports A and B
-|Two-cable config using ports A and B
 
 |Option C
 |Cable configuration similar to option B, but using native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
-|Two-cable config using ports A and B
-|Two-cable config using ports A and B
-|Two-cable config using ports A and B
 |===
 
 Nodes that do not have the correct number of connected cables cannot participate in the deployment. For example, you cannot deploy a compute node in a six-cable configuration if it only has ports D and E connected.
