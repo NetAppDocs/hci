@@ -43,47 +43,45 @@ The NetApp Deployment Engine enables you to quickly configure networks for compu
 
 NOTE: You configure virtual machine networks using vCenter. The default virtual machine network (port group "VM_Network") in NetApp HCI deployments is configured without a VLAN ID. If you plan to use multiple tagged virtual machine networks (VLAN IDs 200, 201 in the example above), be sure to include them in the initial network planning.
 
-== Network configuration and cabling options
-You can use a two-cable network configuration for the H300E, H500E, H700E, and H410C compute nodes, simplifying cable routing. This configuration uses two SFP+/SFP28 interfaces plus an optional (but recommended) RJ45 interface for IPMI communication. These nodes can also use a six-cable configuration with two RJ45 and four SFP28/SFP+ interfaces.
+NetApp HCI documentation uses letters to refer to network ports on the back panel of H-series nodes.
 
-All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H410S and H610S nodes.
-
-NetApp H-series nodes use letters to denote port locations on the back panel:
-
+Here are the ports and locations on the H410S storage node:
 [[H410S]]
-.H410S storage node back panel ports
-image::H410S_back_panel_ports.png[NetApp H410S storage node network ports ,align="center",width=50%]
+image::HCI_ISI_storage_cabling.png[NetApp H410S storage node network ports ,width=50%]
 
+Here are the ports and locations on the H410C storage node:
 [[H35700E_H410C]]
-.H300E, H500E, H700E, and H410C compute node back panel ports
-image::H35700E_H410C_back_panel_ports.png[NetApp H410C storage node network ports ,align="center",width=50%]
+image::HCI_ISI_compute_6cable.png[NetApp H410C storage node network ports ,width=50%]
 
+Here are the ports and locations on the H610S storage node:
 [[H610S]]
-.H610S storage node back panel ports
-image::H610S_back_panel_ports.png[NetApp H610S storage node network ports ,align="center",width=50%]
+image::H610S_back_panel_ports.png[NetApp H610S storage node network ports ,width=50%]
 
+Here are the ports and locations on the H610C storage node:
 [[H610C]]
-.H610C compute node back panel ports
-image::H610C_back_panel_ports.png[NetApp H610C storage node network ports ,align="center",width=50%]
+image::H610C_node-cabling.png[NetApp H610C storage node network ports ,width=50%]
 
+Here are the ports and locations on the H615S storage node:
 [[H615C]]
-.H615C compute node back panel ports
-image::H615C_back_panel_ports.png[NetApp H615S storage node network ports ,align="center",width=50%]
+image::H615C_node_cabling.png[NetApp H615S storage node network ports ,width=50%]
+
+== Network configuration and cabling options
+You can use a two-cable network configuration for the H410C compute nodes, simplifying cable routing. This configuration uses two SFP+/SFP28 interfaces plus an optional (but recommended) RJ45 interface for IPMI communication. These nodes can also use a six-cable configuration with two RJ45 and four SFP28/SFP+ interfaces.
+
+The H410S and H610S storage nodes support a network topology that uses four network ports (ports A through D).
 
 Compute nodes support three network topologies, depending on the hardware platform:
 
 |===
-|Configuration option |Cabling for H3/5/700E and H410C nodes |Cabling for H610C nodes |Cabling for H615C nodes
+|Configuration option |Cabling for H410C nodes |Cabling for H610C nodes |Cabling for H615C nodes
 
 |Option A
 |Two cables using ports D and E
-|Two cables using ports C and D
-|Two cables using ports A and B
+.2+|Two cables using ports C and D
+.2+|Two cables using ports A and B
 
 |Option B
 |Six cables using ports A through F
-|Four cables using ports A through D
-|Two cables using ports A and B
 
 |Option C
 3+|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks
@@ -94,7 +92,7 @@ Nodes that do not have the correct number of connected cables cannot participate
 NOTE: You can adjust the NetApp HCI network configuration after deployment to meet infrastructure needs. However, when you expand NetApp HCI resources, remember that new nodes must have the same cable configuration as the existing compute and storage nodes.
 
 === Configuration option A: Two cables for compute nodes
-The NetApp H300E, H500E, H700E, H410C, H610C, and H615C compute nodes support using two network cables for connectivity to all NetApp HCI networks. This configuration requires that the storage, vMotion and any virtual machine networks use VLAN tagging. All compute and storage nodes must use the same VLAN ID scheme. This configuration uses vSphere Distributed Switches that require VMware vSphere Enterprise Plus licensing.
+The NetApp H410C, H610C, and H615C compute nodes support using two network cables for connectivity to all NetApp HCI networks. This configuration requires that the storage, vMotion and any virtual machine networks use VLAN tagging. All compute and storage nodes must use the same VLAN ID scheme. This configuration uses vSphere Distributed Switches that require VMware vSphere Enterprise Plus licensing.
 
 ==== VLAN configuration
 
@@ -120,7 +118,7 @@ As a best practice, you should configure the required network segments on all sw
 |Tagged
 |===
 
-The following illustration shows the recommended cabling configuration for two-cable H300E, H500E, H700E, and H410C compute nodes and four-cable H410S storage nodes. All switch ports in this example share the same configuration.
+The following illustration shows the recommended cabling configuration for two-cable H410C compute nodes and four-cable H410S storage nodes. All switch ports in this example share the same configuration.
 
 image::hci_networking_config_scenario_1.png[HCI networking configuration option A image ,align="center"]
 
@@ -138,7 +136,7 @@ You can use the following example commands to configure all switch ports used fo
 NOTE: Some switches might require inclusion of the native VLAN in the allowed VLAN list. See the documentation for your specific switch model and software version.
 
 === Configuration option B: Six cables for compute nodes
-As a secondary network configuration option, the H300E, H500E, H700E and H410C compute nodes support using six network cables for connectivity to all NetApp HCI networks. This configuration requires that the storage, vMotion and any virtual machine networks use VLAN tagging. You can use this configuration with vSphere Standard Switches or vSphere Distributed Switches (which require VMware vSphere Enterprise Plus licensing).
+As a secondary network configuration option, the H410C compute nodes support using six network cables for connectivity to all NetApp HCI networks. This configuration requires that the storage, vMotion and any virtual machine networks use VLAN tagging. You can use this configuration with vSphere Standard Switches or vSphere Distributed Switches (which require VMware vSphere Enterprise Plus licensing).
 
 ==== VLAN configuration
 When you deploy compute nodes using six cables and storage nodes using four cables, as a best practice, you should configure the required network segments on all switch ports that the nodes are using. For example:
@@ -184,8 +182,8 @@ NOTE: Some switches might require inclusion of the native VLAN in the allowed VL
 === Configuration option C: Six cables for compute nodes with native VLANs
 You can deploy NetApp HCI without using tagged VLANs for storage and virtualization traffic, and instead rely on the switch configuration to separate the network segments. You can use this configuration with vSphere Standard Switches or vSphere Distributed Switches (which require VMware vSphere Enterprise Plus licensing).
 
-==== VLAN configuration for H300E, H500E, H700E, H410C, H410S, and H610S nodes
-This topology option uses the following VLAN configuration on H300E, H500E, H700E, H410C, H410S, and H610S nodes:
+==== VLAN configuration for H410C, H410S, and H610S nodes
+This topology option uses the following VLAN configuration on H410C, H410S, and H610S nodes:
 
 |===
 |Node ports used |Network name |VLAN ID |Connected switch port configuration
