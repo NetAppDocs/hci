@@ -47,23 +47,23 @@ NetApp HCI documentation uses letters to refer to network ports on the back pane
 
 Here are the network ports and locations on the H410S storage node:
 [[H410S]]
-image::HCI_ISI_storage_cabling.png[NetApp H410S storage node network ports ,width=50%]
+image::HCI_ISI_storage_cabling.png[NetApp H410S storage node network ports]
 
 Here are the network ports and locations on the H410C storage node:
 [[H35700E_H410C]]
-image::HCI_ISI_compute_6cable.png[NetApp H410C storage node network ports ,width=50%]
+image::HCI_ISI_compute_6cable.png[NetApp H410C storage node network ports]
 
 Here are the network ports and locations on the H610S storage node:
 [[H610S]]
-image::H610S_back_panel_ports.png[NetApp H610S storage node network ports ,width=50%]
+image::H610S_back_panel_ports.png[NetApp H610S storage node network ports]
 
 Here are the network ports and locations on the H610C storage node:
 [[H610C]]
-image::H610C_node-cabling.png[NetApp H610C storage node network ports ,width=50%]
+image::H610C_node-cabling.png[NetApp H610C storage node network ports]
 
 Here are the network ports and locations on the H615S storage node:
 [[H615C]]
-image::H615C_node_cabling.png[NetApp H615S storage node network ports ,width=50%]
+image::H615C_node_cabling.png[NetApp H615S storage node network ports]
 
 == Network configuration and cabling options
 You can use a two-cable network configuration for the H410C compute nodes, simplifying cable routing. This configuration uses two SFP+/SFP28 interfaces plus an optional (but recommended) RJ45 interface for IPMI communication. These nodes can also use a six-cable configuration with two RJ45 and four SFP28/SFP+ interfaces.
