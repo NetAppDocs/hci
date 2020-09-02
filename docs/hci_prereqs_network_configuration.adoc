@@ -50,23 +50,23 @@ All storage nodes support a network topology that uses four network ports; this 
 
 [[H410S]]
 .H410S storage node back panel ports
-image::H410S_back_panel_ports.png[NetApp H410S storage node network ports ,align="center"]
+image::H410S_back_panel_ports.png[NetApp H410S storage node network ports ,align="center",width=50%]
 
 [[H35700E_H410C]]
 .H300E, H500E, H700E, and H410C compute node back panel ports
-image::H35700E_H410C_back_panel_ports.png[NetApp H410C storage node network ports ,align="center"]
+image::H35700E_H410C_back_panel_ports.png[NetApp H410C storage node network ports ,align="center",width=50%]
 
 [[H610S]]
 .H610S storage node back panel ports
-image::H610S_back_panel_ports.png[NetApp H610S storage node network ports ,align="center"]
+image::H610S_back_panel_ports.png[NetApp H610S storage node network ports ,align="center",width=50%]
 
 [[H610C]]
 .H610C compute node back panel ports
-image::H610C_back_panel_ports.png[NetApp H610C storage node network ports ,align="center"]
+image::H610C_back_panel_ports.png[NetApp H610C storage node network ports ,align="center",width=50%]
 
 [[H615C]]
 .H615C compute node back panel ports
-image::H615C_back_panel_ports.png[NetApp H615S storage node network ports ,align="center"]
+image::H615C_back_panel_ports.png[NetApp H615S storage node network ports ,align="center",width=50%]
 
 Compute nodes support three network topologies, depending on the hardware platform:
 
