@@ -17,7 +17,7 @@ keywords: netapp, hci, cabling, network configuration
 NetApp HCI can utilize multiple different network cabling and VLAN configurations. It is important to plan your network configuration to ensure a successful deployment.
 
 == Required network segments
-NetApp HCI requires a minimum of three network segments: management, storage, and virtualization traffic (which includes virtual machines and vMotion traffic). You can also separate virtual machine and vMotion traffic. These network segments usually exist as logically separated VLANs in the NetApp HCI network infrastructure.
+NetApp HCI requires a minimum of three network segments: management, storage, and virtualization traffic (which includes virtual machines and VMware vMotion traffic). You can also separate virtual machine and vMotion traffic. These network segments usually exist as logically separated VLANs in the NetApp HCI network infrastructure.
 
 How compute and storage nodes connect to these networks depends on how you design the network and cable the nodes. The sample network illustrations in this guide assume the following networks:
 
@@ -70,7 +70,7 @@ Nodes that do not have the correct number of connected cables cannot participate
 NOTE: You can adjust the NetApp HCI network configuration after deployment to meet infrastructure needs. However, when you expand NetApp HCI resources, remember that new nodes must have the same cable configuration as the existing compute and storage nodes.
 
 === Configuration option A: Two cables for compute nodes
-The NetApp H300E, H500E, H700E, H410C, and H610C compute nodes support using two network cables for connectivity to all NetApp HCI networks. This configuration requires that the storage, vMotion and any virtual machine networks use VLAN tagging. All compute and storage nodes must use the same VLAN ID scheme. This configuration uses vSphere Distributed Switches that require VMware vSphere Enterprise Plus licensing.
+The NetApp H300E, H500E, H700E, H410C, H610C, and H615C compute nodes support using two network cables for connectivity to all NetApp HCI networks. This configuration requires that the storage, vMotion and any virtual machine networks use VLAN tagging. All compute and storage nodes must use the same VLAN ID scheme. This configuration uses vSphere Distributed Switches that require VMware vSphere Enterprise Plus licensing.
 
 ==== VLAN configuration
 
@@ -160,8 +160,8 @@ NOTE: Some switches might require inclusion of the native VLAN in the allowed VL
 === Configuration option C: Six cables for compute nodes with native VLANs
 You can deploy NetApp HCI without using tagged VLANs for storage and virtualization traffic, and instead rely on the switch configuration to separate the network segments. You can use this configuration with vSphere Standard Switches or vSphere Distributed Switches (which require VMware vSphere Enterprise Plus licensing).
 
-==== VLAN configuration
-This topology option uses the following VLAN configuration:
+==== VLAN configuration for H300E, H500E, H700E, H410C, H410S, and H610S nodes
+This topology option uses the following VLAN configuration on H300E, H500E, H700E, H410C, H410S, and H610S nodes:
 
 |===
 |Node ports used |Network name |VLAN ID |Connected switch port configuration
@@ -197,7 +197,6 @@ CAUTION: Deploying this configuration requires careful switch port configuration
 The following illustration shows the network configuration overview for this topology option. In the example, individual switch ports are configured with the appropriate network segment as the native network.
 
 image::hci_networking_config_scenario_2.png[HCI networking configuration option C image]
-
 
 ==== Example switch commands
 You can use the following example switch commands to configure switch ports used for the NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only minimal changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration.
