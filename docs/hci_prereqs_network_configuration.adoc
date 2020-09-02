@@ -48,6 +48,8 @@ You can use a two-cable network configuration for the H300E, H500E, H700E, and H
 
 All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H410S and H610S nodes.
 
+NetApp H-series nodes use letters to denote port locations on the back panel:
+
 [[H410S]]
 .H410S storage node back panel ports
 image::H410S_back_panel_ports.png[NetApp H410S storage node network ports ,align="center",width=50%]
