@@ -46,7 +46,7 @@ NOTE: You configure virtual machine networks using vCenter. The default virtual 
 == Network configuration and cabling options
 You can use a two-cable network configuration for the H300E, H500E, H700E, and H410C compute nodes, simplifying cable routing. This configuration uses two SFP+/SFP28 interfaces plus an optional (but recommended) RJ45 interface for IPMI communication. These nodes can also use a six-cable configuration with two RJ45 and four SFP28/SFP+ interfaces.
 
-All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H410S and H610S nodes. Compute nodes support three network topologies, depending on :
+All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H410S and H610S nodes. Compute nodes support three network topologies, depending on the hardware platform:
 
 |===
 |Configuration option |Cabling for H3/5/700E and H410C nodes |Cabling for H610C nodes |Cabling for H615C nodes
