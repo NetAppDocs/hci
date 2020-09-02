@@ -48,11 +48,25 @@ You can use a two-cable network configuration for the H300E, H500E, H700E, and H
 
 All storage nodes support a network topology that uses four network ports; this topology uses ports A through D on H410S and H610S nodes.
 
-image::H410S_back_panel_ports.png[NetApp H410S storage node network ports]
-image::H410C_back_panel_ports.png[NetApp H410C storage node network ports]
-image::H610S_back_panel_ports.png[NetApp H610S storage node network ports]
+[[H410S]]
+.H410S storage node back panel ports
+image::H410S_back_panel_ports.png[NetApp H410S storage node network ports ,align="center"]
+
+[[H35700E_H410C]]
+.H300E, H500E, H700E, and H410C compute node back panel ports
+image::H35700E_H410C_back_panel_ports.png[NetApp H410C storage node network ports ,align="center"]
+
+[[H610S]]
+.H610S storage node back panel ports
+image::H610S_back_panel_ports.png[NetApp H610S storage node network ports ,align="center"]
+
+[[H610C]]
+.H610C compute node back panel ports
 image::H610C_back_panel_ports.png[NetApp H610C storage node network ports ,align="center"]
-image::H615S_back_panel_ports.png[NetApp H615S storage node network ports]
+
+[[H615C]]
+.H615C compute node back panel ports
+image::H615C_back_panel_ports.png[NetApp H615S storage node network ports ,align="center"]
 
 Compute nodes support three network topologies, depending on the hardware platform:
 
@@ -106,7 +120,7 @@ As a best practice, you should configure the required network segments on all sw
 
 The following illustration shows the recommended cabling configuration for two-cable H300E, H500E, H700E, and H410C compute nodes and four-cable H410S storage nodes. All switch ports in this example share the same configuration.
 
-image::hci_networking_config_scenario_1.png[HCI networking configuration option A image]
+image::hci_networking_config_scenario_1.png[HCI networking configuration option A image ,align="center"]
 
 ==== Example switch commands
 You can use the following example commands to configure all switch ports used for NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only small changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration. Replace the interface name, description, and VLANs with the values for your environment.
@@ -149,7 +163,7 @@ When you deploy compute nodes using six cables and storage nodes using four cabl
 
 The following illustration shows the recommended cabling configuration for six-cable compute nodes and four-cable storage nodes. All switch ports in this example share the same configuration.
 
-image::hci_networking_config_scenario_2.png[HCI networking configuration option B image]
+image::hci_networking_config_scenario_2.png[HCI networking configuration option B image ,align="center"]
 
 ==== Example switch commands
 
@@ -204,7 +218,7 @@ CAUTION: Deploying this configuration requires careful switch port configuration
 
 The following illustration shows the network configuration overview for this topology option. In the example, individual switch ports are configured with the appropriate network segment as the native network.
 
-image::hci_networking_config_scenario_2.png[HCI networking configuration option C image]
+image::hci_networking_config_scenario_2.png[HCI networking configuration option C image ,align="center"]
 
 ==== Example switch commands
 You can use the following example switch commands to configure switch ports used for the NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only minimal changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration.
