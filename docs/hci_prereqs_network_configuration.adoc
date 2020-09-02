@@ -39,31 +39,31 @@ How compute and storage nodes connect to these networks depends on how you desig
 
 For automatic discovery and configuration of your NetApp HCI nodes in the NetApp Deployment Engine, you must have a network segment that is available as an untagged or native VLAN on all switch ports that are used for the SFP+/SFP28 interfaces on the nodes. This will provide layer 2 communication between all nodes for discovery and deployment. Without a native VLAN, you must configure the SFP+/SFP28 interfaces of all nodes manually with a VLAN and IPv4 address to be discoverable. In the network configuration examples in this document, the management network (VLAN ID 100) is used for this purpose.
 
-The NetApp Deployment Engine enables you to quickly configure networks for compute and storage nodes during the initial deployment. You can place certain built-in management components such as vCenter and the management node on their own network segment if needed. These network segments require routing to allow vCenter and the management node to communicate with storage and compute management networks. In most deployments those components use the same management network (in this example, VLAN ID 100).
+The NetApp Deployment Engine enables you to quickly configure networks for compute and storage nodes during the initial deployment. You can place certain built-in management components such as vCenter and the management node on their own network segment. These network segments require routing to allow vCenter and the management node to communicate with storage and compute management networks. In most deployments those components use the same management network (VLAN ID 100 in this example).
 
 NOTE: You configure virtual machine networks using vCenter. The default virtual machine network (port group "VM_Network") in NetApp HCI deployments is configured without a VLAN ID. If you plan to use multiple tagged virtual machine networks (VLAN IDs 200 and 201 in the preceding example), ensure you include them in the initial network planning.
 
 NetApp HCI documentation uses letters to refer to network ports on the back panel of H-series nodes.
 
-Here are the network ports and locations on the H410S storage node:
-[[H410S]]
-image::HCI_ISI_storage_cabling.png[NetApp H410S storage node network ports]
-
 Here are the network ports and locations on the H410C storage node:
 [[H35700E_H410C]]
 image::HCI_ISI_compute_6cable.png[NetApp H410C storage node network ports]
 
-Here are the network ports and locations on the H610S storage node:
-[[H610S]]
-image::H610S_back_panel_ports.png[NetApp H610S storage node network ports]
+Here are the network ports and locations on the H410S storage node:
+[[H410S]]
+image::HCI_ISI_storage_cabling.png[NetApp H410S storage node network ports]
 
 Here are the network ports and locations on the H610C storage node:
 [[H610C]]
 image::H610C_node-cabling.png[NetApp H610C storage node network ports]
 
-Here are the network ports and locations on the H615S storage node:
+Here are the network ports and locations on the H610S storage node:
+[[H610S]]
+image::H610S_back_panel_ports.png[NetApp H610S storage node network ports]
+
+Here are the network ports and locations on the H615C storage node:
 [[H615C]]
-image::H615C_node_cabling.png[NetApp H615S storage node network ports]
+image::H615C_node_cabling.png[NetApp H615C storage node network ports]
 
 == Network configuration and cabling options
 You can use a two-cable network configuration for the H410C compute nodes, simplifying cable routing. This configuration uses two SFP+/SFP28 interfaces plus an optional (but recommended) RJ45 interface for IPMI communication. These nodes can also use a six-cable configuration with two RJ45 and four SFP28/SFP+ interfaces.
@@ -214,7 +214,7 @@ This topology option uses the following VLAN configuration on H410C, H410S, and 
 |Tagged
 |===
 
-CAUTION: Deploying this configuration requires careful switch port configuration. Configuration errors in this network topology can result in deployment problems that are difficult to diagnose.
+CAUTION: Be careful configuring the switch ports when deploying this configuration. Configuration errors in this network topology can result in deployment problems that are difficult to diagnose.
 
 The following illustration shows the network configuration overview for this topology option. In the example, individual switch ports are configured with the appropriate network segment as the native network.
 
