@@ -39,6 +39,9 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == Compute firmware
 * link:rn_firmware_12.2.109.html[Compute firmware 12.2.109 Release Notes]
+* link:rn_compute_firmware_12.2.xxx.html[Compute firmware 12.2.109 Release Notes]
+
 
 == Storage firmware
 * link:rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes]
+* link:rn_storage_firmware_x.xx.xx.html[Storage firmware x.xx.xx Release Notes]
