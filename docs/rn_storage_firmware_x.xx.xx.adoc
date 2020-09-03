@@ -7,7 +7,7 @@ keywords: netapp, hci, storage firmware
 ////
 This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Storage firmware xxxxx Release Notes
+= Storage firmware 3.84.07 Release Notes ???
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 The downloadable BMC update contains BMC feature enhancements and bug fixes for NetApp H610S nodes.
 
 == What's New
-H610S BMC 3.84.07 contains various bug fixes and new features. This release brings to the field critical updated BMC firmware ahead of subsequent Element software and storage firmware bundle releases, which will also include this updated BMC firmware for H610S nodes.
+H610S BMC x.xx.xx contains various bug fixes and new features. This release brings to the field critical updated BMC firmware ahead of subsequent Element software and storage firmware bundle releases, which will also include this updated BMC firmware for H610S nodes.
 
 You can upgrade the H610S BMC firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading BMC firmware on H610S nodes>>.
 

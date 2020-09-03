@@ -28,21 +28,21 @@ This firmware package contains the following firmware versions for hardware comp
 
 |BIOS
 |NA2.1
-|*NA3.7*
-|*3B01*
-|3B06.CO
+|NA3.7
+|*3B03*
+|*3B08.CO*
 
 |BMC
-|*6.84.00*
-|6.71.06
-|*3.96.07*
-|*4.64.07*
+|6.84.00
+|*6.71.18*
+|*4.00.07*
+|*4.68.07*
 
 |NIC / Mellanox
-|14.21.1000
-|14.21.1000
-|14.22.1002
-|14.23.1020
+|*14.25.1020*
+|*14.25.1020*
+|*14.25.1020*
+|*14.24.1000*
 |===
 
 To download the compute node firmware package:
@@ -87,4 +87,16 @@ The following are known issues in this release that might affect daily operation
 Instructions for updating are available in PDF format on the download page.
 
 After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.109 package.
+
+|PE-11033
+|Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
+|None
+
+|PE-11032
+|Under heavy loads, transmit errors sometimes occur for the Mellanox NIC on H610C nodes.
+|None
+
+|PE-10954
+|H610C nodes sometimes reflect the incorrect MTU setting after you set the MTU using the Element software Terminal User Interface (TUI).
+|None
 |===
