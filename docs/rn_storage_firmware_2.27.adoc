@@ -19,7 +19,7 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 The downloadable BMC update contains BMC feature enhancements and bug fixes for NetApp storage nodes.
 
 == What's New
-The storage firmware bundle version 2.27 contains various bug fixes and new features. This release brings to the field critical updated BMC firmware.
+The storage firmware bundle version 2.27 contains various bug fixes and new features.
 
 You can upgrade the storage firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading storage node BMC firmware>>.
 
