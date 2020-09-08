@@ -16,12 +16,12 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 :keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
-The downloadable BMC update contains BMC feature enhancements and bug fixes for NetApp H610S nodes.
+The downloadable BMC update contains BMC feature enhancements and bug fixes for NetApp storage nodes.
 
 == What's New
-The storage firmware bundle version 2.27 contains various bug fixes and new features. This release brings to the field critical updated BMC firmware ahead of subsequent Element software and storage firmware bundle releases, which will also include this updated BMC firmware for H610S nodes.
+The storage firmware bundle version 2.27 contains various bug fixes and new features. This release brings to the field critical updated BMC firmware.
 
-You can upgrade the H610S BMC firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading BMC firmware on H610S nodes>>.
+You can upgrade the storage firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading storage node BMC firmware>>.
 
 == New Features
 The following are the new features and changes included in this release:
@@ -64,8 +64,8 @@ The following are issues that have been resolved in this release:
 == Known issues
 There are no known issues in this release.
 
-== Upgrading BMC firmware on H610S nodes
-Perform the following steps to upgrade the BMC firmware version on your H610S nodes. The procedure can take approximately 30 minutes to complete.
+== Upgrading storage node BMC firmware
+Perform the following steps to upgrade the BMC firmware version on your storage nodes. The procedure can take approximately 30 minutes to complete.
 
 .What you'll need
 * You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
@@ -81,8 +81,8 @@ Perform the following steps to upgrade the BMC firmware version on your H610S no
 +
 NOTE: Ensure that the *Preserve all configuration* checkbox is not selected.
 
-. Choose the BMC update file you donwloaded and click *Start firmware update* to start the upgrade process.
+. Choose the BMC update file you downloaded and click *Start firmware update* to start the upgrade process.
 +
 The process can take up to 5 minutes to complete if the BMC firmware file is in the node's network; otherwise the process will take longer.
 . Verify the firmware version by looking at the version listed on the *Dashboard* > *More info* page.
-. Perform this procedure for the remaining H610S storage nodes in your cluster.
+. Perform this procedure for the remaining storage nodes in your cluster.
