@@ -19,8 +19,9 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
 
 == What's New
-Version 12.2.xxx introduces BMC support for the DMTF Redfish APIs, which enables future functionality for NetApp Hybrid Cloud Control. The firmware updates also contain general bugfixes and resolve memory issues. The BMC updates for H300E, H500E, and H700E compute nodes address several security vulnerabilities, including CVE-2019-16649, CVE-2019-16650, and CVE-2019-6260.
+Version 2.27 contains general bugfixes.
 
+=== Updated firmware components
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
 
 |===
@@ -45,6 +46,35 @@ This firmware package contains the following firmware versions for hardware comp
 |*14.24.1000*
 |===
 
+=== Changes in firmware components
+Here is a list of changes and improvements included in each new firmware component:
+* *H610C BIOS 3B03*:
+** Unhide BIOS setting *PPR Type* and set it to `Hard PPR` as default
+** Add latest Intel NVM firmware updates
+** Update RC version to 602.D02 (IPU 2020.1)
+** Update microcode version to MCU x6906
+** Update SPS ME version to 04.01.04.381.0
+** Hide the BIOS setup options *Restore on AC Power Loss* and *Current Restore on AC Power Loss*
+* *H615C BIOS 3B08.CO*:
+** Unhide BIOS setting *PPR Type* and set it to `Hard PPR` as default
+** Add latest Intel NVM firmware updates
+** Update microcode version to MCU x2F01.
+** Update RC version to 602.D02 (IPU 2020.1)
+** Update microcode version to MCU x2F01
+** Update SPS ME version to 04.01.04.381.0
+** Hide the BIOS setup options *Restore on AC Power Loss* and *Current Restore on AC Power Loss*
+** Change option *Attempt Fast Cold Boot* default to `disable`
+** Change option *Allow Correctables* default to `enable`
+* *H410C BMC 6.71.18*: Add BMC reporting for ePPR memory SEL events
+* *H610C BMC 4.00.07*: Add remote syslog support
+* *H615C BMC 4.68.07*: Add remote syslog support
+
+=== Mellanox NIC firmware driver compatibility
+The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
+* ESXi 6.5: Version 4.16.13.5
+* ESXi 6.7: Version 4.17.15.16
+NOTE: Before upgrading to version 2.27, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.27 for your compute nodes.
+
 To download the compute node firmware package:
 
 . Go to https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
@@ -59,17 +89,17 @@ The following are issues that have been resolved in this release.
 |===
 |Issue |Description
 
-|PE-10306
-|When you upgrade the BMC software on an Element 11.8 storage node, BMC user credentials are lost.
+|N/A
+|Fix the redundant memory correctable error that is triggered by patrol scrub.
 
-|CSESF-26
-|In some circumstances, H610C nodes can exhibit intermittent fan noise.
+|CSESF-129
+|BMC Hung / BMC Self-Test Failed
 
-|CSESF-293
-|When you upgrade to the version 12.2.92 compute node firmware on a H410C, H610C, H300E, H500E, or H700E node, version 14.21.1000 of the Mellanox network interface card (NIC) firmware is installed, even if it was previously at a newer version.
+|CSESF-234
+|H610C BMC web inventory displays wrong memory serial number
 
-|CSESF-352
-|TLS versions 1.0 and 1.1 suffer from security vulnerabilities. This release disables TLS 1.0 and 1.1 for H610C and H615C compute nodes.
+|PE-6708
+|Bonded pair does not failover to secondary slave on NIC down/port being disabled
 |===
 
 == Known issues
@@ -87,6 +117,24 @@ The following are known issues in this release that might affect daily operation
 Instructions for updating are available in PDF format on the download page.
 
 After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.109 package.
+
+|CSESF-328
+|On H410C and H300E/H500E/H700E nodes, one NIC sensor for Mellanox NIC in BMC reports status as "NA" and reads "not present"
+|None
+
+|CSESF-309
+|H410C and H300E/H500E/H700E nodes are unable to bring Mellanox NIC port up after manually bringing down port while running EXSi 6.7u1.
+|Run the following command to recover the ports: `sxcli network nic set -n vmnic2 -a`
+
+|CSESF-303
+|Network stats errors are observed for Mellanox NIC on H410C
+|None
+
+|CSESF-293 / PE-10130
+|Mellanox NIC firmware can be downgraded by compute firmware 12.2.91
+|If you want to upgrade other firmware on H410C or H300E/H500E/H700E and upgrade Mellanox NIC out-of-band; then do following in the order specified:
+1. Upgrade other firmware via compute firmware bundle 12.2.91
+2. Upgrade Mellanox firmware via out-of-band methods
 
 |PE-11033
 |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
