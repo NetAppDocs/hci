@@ -90,16 +90,16 @@ The following are issues that have been resolved in this release.
 |Issue |Description
 
 |N/A
-|Fix the redundant memory correctable error that is triggered by patrol scrub.
+|The redundant memory correctable error that is triggered by a routine memory error check has been resolved in H615C BIOS 3B08.CO.
 
-|CSESF-129
-|BMC Hung / BMC Self-Test Failed
+|CSD-3321 / CSESF-129
+|The BMC can hang and become inaccessible with the error "BMC Self Test Failed". This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
 
 |CSESF-234
-|H610C BMC web inventory displays wrong memory serial number
+|The H610C BMC web UI inventory API returns the wrong memory serial number format. This is resolved in H610C BMC 4.00.07.
 
 |PE-6708
-|Bonded pair does not failover to secondary slave on NIC down/port being disabled
+|The Bonded NIC pair does not fail over to secondary when the NIC goes down or the port is disabled. This is resolved in Mellanox firmware 14.24.1000.
 |===
 
 == Known issues
