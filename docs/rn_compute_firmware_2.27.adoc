@@ -50,22 +50,22 @@ This firmware package contains the following firmware versions for hardware comp
 Here is a list of changes and improvements included in each new firmware component:
 
 * *H610C BIOS 3B03*:
-** Unhide BIOS setting *PPR Type* and set it to `Hard PPR` as default
-** Add latest Intel NVM firmware updates
-** Update RC version to 602.D02 (IPU 2020.1)
-** Update microcode version to MCU x6906
-** Update SPS ME version to 04.01.04.381.0
-** Hide the BIOS setup options *Restore on AC Power Loss* and *Current Restore on AC Power Loss*
+**  and set it to `Hard PPR` as default
+** Add the latest Intel NVM firmware updates
+** Update the RC version to 602.D02 (IPU 2020.1)
+** Update the microcode version to MCU x6906
+** Update the SPS ME version to 04.01.04.381.0
+** Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
 * *H615C BIOS 3B08.CO*:
-** Unhide BIOS setting *PPR Type* and set it to `Hard PPR` as default
-** Add latest Intel NVM firmware updates
-** Update microcode version to MCU x2F01.
-** Update RC version to 602.D02 (IPU 2020.1)
-** Update microcode version to MCU x2F01
-** Update SPS ME version to 04.01.04.381.0
-** Hide the BIOS setup options *Restore on AC Power Loss* and *Current Restore on AC Power Loss*
-** Change option *Attempt Fast Cold Boot* default to `disable`
-** Change option *Allow Correctables* default to `enable`
+** Unhide the *PPR Type* BIOS setting and set it to `Hard PPR` as default
+** Add the latest Intel NVM firmware updates
+** Update the microcode version to MCU x2F01.
+** Update the RC version to 602.D02 (IPU 2020.1)
+** Update the microcode version to MCU x2F01
+** Update the SPS ME version to 04.01.04.381.0
+** Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+** Change the option *Attempt Fast Cold Boot* default to `disable`
+** Change the option *Allow Correctables* default to `enable`
 * *H410C BMC 6.71.18*: Add BMC reporting for ePPR memory SEL events
 * *H610C BMC 4.00.07*: Add remote syslog support
 * *H615C BMC 4.68.07*: Add remote syslog support
