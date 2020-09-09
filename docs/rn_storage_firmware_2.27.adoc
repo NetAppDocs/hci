@@ -31,7 +31,7 @@ The following are the new features and changes included in this release:
 * Disabled TLS 1.0 and 1.1 support
 * Added Redfish remote media support
 * Added the H5Viewer RKVM feature
-* Added Remote syslog support
+* Added remote syslog support
 
 == Resolved issues
 The following are issues that have been resolved in this release:
