@@ -50,7 +50,7 @@ This firmware package contains the following firmware versions for hardware comp
 Here are the details of the improvements and changes included in each new firmware component:
 
 |===
-|Component and version |Improvements and changes
+|Node and firmware component |Improvements and changes
 
 |H610C BIOS 3B03
 |
