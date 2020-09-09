@@ -96,7 +96,7 @@ The following are issues that have been resolved in this release.
 |The redundant memory correctable error that is triggered by a routine memory error check has been resolved in H615C BIOS 3B08.CO.
 
 |CSD-3321 / CSESF-129
-|The BMC can hang and become inaccessible with the error "BMC Self Test Failed". This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
+|The BMC can hang and become inaccessible with the error `BMC Self Test Failed`. This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
 
 |CSESF-234
 |The H610C BMC web UI inventory API returns the wrong memory serial number format. This is resolved in H610C BMC 4.00.07.
@@ -126,7 +126,7 @@ After you update the BIOS and BMC, update the H410C node firmware using the comp
 |None
 
 |CSESF-309
-|H410C and H300E/H500E/H700E nodes are unable to bring Mellanox NIC port up after manually bringing down port while running EXSi 6.7u1.
+|H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
 |Run the following command to recover the ports: `sxcli network nic set -n vmnic2 -a`
 
 |CSESF-303
