@@ -53,7 +53,7 @@ Here are the details of the improvements and changes included in each new firmwa
 |Node and firmware component |Improvements and changes
 
 |H610C BIOS 3B03
-|
+a|
 
 * Unhide the *PPR Type* BIOS setting and set it to `Hard PPR` as default
 * Add the latest Intel NVM firmware updates
@@ -63,7 +63,7 @@ Here are the details of the improvements and changes included in each new firmwa
 * Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
 
 |H610C BIOS 3B03
-|
+a|
 
 * Unhide the *PPR Type* BIOS setting and set it to `Hard PPR` as default
 * Add the latest Intel NVM firmware updates
