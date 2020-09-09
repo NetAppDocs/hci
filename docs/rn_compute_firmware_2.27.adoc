@@ -59,7 +59,7 @@ Here is a list of changes and improvements included in each new firmware compone
 * *H615C BIOS 3B08.CO*:
 ** Unhide the *PPR Type* BIOS setting and set it to `Hard PPR` as default
 ** Add the latest Intel NVM firmware updates
-** Update the microcode version to MCU x2F01.
+** Update the microcode version to MCU x2F01
 ** Update the RC version to 602.D02 (IPU 2020.1)
 ** Update the microcode version to MCU x2F01
 ** Update the SPS ME version to 04.01.04.381.0
@@ -73,8 +73,8 @@ Here is a list of changes and improvements included in each new firmware compone
 === Mellanox NIC firmware driver compatibility
 The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
 
-* ESXi 6.5: Version 4.16.13.5
-* ESXi 6.7: Version 4.17.15.16
+* *ESXi 6.5*: Version 4.16.13.5
+* *ESXi 6.7*: Version 4.17.15.16
 
 NOTE: Before upgrading to version 2.27, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.27 for your compute nodes.
 
