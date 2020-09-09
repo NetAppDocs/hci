@@ -125,7 +125,7 @@ The following are issues that have been resolved in this release.
 |Issue |Description
 
 |N/A
-|The redundant memory correctable error that is triggered by a routine memory error check has been resolved in H615C BIOS 3B08.CO.
+|The redundant memory correctable error that is triggered by a routine memory check has been resolved in H615C BIOS 3B08.CO.
 
 |CSD-3321 / CSESF-129
 |The BMC can hang and become inaccessible with the error `BMC Self Test Failed`. This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
@@ -154,7 +154,7 @@ Instructions for updating are available in PDF format on the download page.
 After you update the BIOS and BMC, update the H410C node firmware using the compute firmware 12.2.109 package.
 
 |CSESF-328
-|On H410C and H300E/H500E/H700E nodes, one NIC sensor for Mellanox NIC in BMC reports status as "NA" and reads "not present"
+|On H410C and H300E/H500E/H700E nodes, one NIC sensor for the Mellanox NIC in the BMC reports status as "NA" and reads "not present".
 |None
 
 |CSESF-309
@@ -162,14 +162,14 @@ After you update the BIOS and BMC, update the H410C node firmware using the comp
 |Run the following command to recover the ports: `sxcli network nic set -n vmnic2 -a`
 
 |CSESF-303
-|Network stats errors are observed for Mellanox NIC on H410C
+|Network statistics errors are seen for the Mellanox NIC on H410C nodes.
 |None
 
 |CSESF-293 / PE-10130
-|Mellanox NIC firmware can be downgraded by compute firmware 12.2.91
-|If you want to upgrade other firmware on H410C or H300E/H500E/H700E and upgrade Mellanox NIC out-of-band; then do following in the order specified:
-1. Upgrade other firmware via compute firmware bundle 12.2.91
-2. Upgrade Mellanox firmware via out-of-band methods
+|Mellanox NIC firmware can be downgraded by the compute firmware 12.2.91 package.
+|If you want to upgrade other firmware on H410C or H300E/H500E/H700E nodes and upgrade Mellanox NIC out-of-band, perform the following steps:
+1. Upgrade other firmware via compute firmware bundle 12.2.91.
+2. Upgrade Mellanox firmware via out-of-band methods.
 
 |PE-11033
 |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
