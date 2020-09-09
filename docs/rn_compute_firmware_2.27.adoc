@@ -67,7 +67,6 @@ Here are the details of the improvements and changes included in each new firmwa
 * Add the latest Intel NVM firmware updates
 * Update the microcode version to MCU x2F01
 * Update the RC version to 602.D02 (IPU 2020.1)
-* Update the microcode version to MCU x2F01
 * Update the SPS ME version to 04.01.04.381.0
 * Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
 * Change the option *Attempt Fast Cold Boot* default to `disable`
@@ -95,7 +94,6 @@ Here are the details of the improvements and changes included in each new firmwa
 ** Add the latest Intel NVM firmware updates
 ** Update the microcode version to MCU x2F01
 ** Update the RC version to 602.D02 (IPU 2020.1)
-** Update the microcode version to MCU x2F01
 ** Update the SPS ME version to 04.01.04.381.0
 ** Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
 ** Change the option *Attempt Fast Cold Boot* default to `disable`
