@@ -55,7 +55,7 @@ Here are the details of the improvements and changes included in each new firmwa
 |H610C BIOS 3B03
 a|
 
-* Improved handling of memory failures
+* Improve handling of memory failures
 * Add the latest Intel NVM firmware updates
 * Update the RC version to 602.D02 (IPU 2020.1)
 * Update the microcode version to MCU x6906
@@ -65,7 +65,7 @@ a|
 |H615C BIOS 3B08.CO
 a|
 
-* Improved handling of memory failures
+* Improve handling of memory failures
 * Add the latest Intel NVM firmware updates
 * Update the microcode version to MCU x2F01
 * Update the RC version to 602.D02 (IPU 2020.1)
