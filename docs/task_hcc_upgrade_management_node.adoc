@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_management_node.html
 summary: As part of a NetApp HCI or SolidFire storage system upgrade, you upgrade the management node.
-keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, version 10, 11.0, 11.1, 11.3, 11.5, 11.7
+keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2
 ---
 
 = Upgrade a management node
@@ -39,15 +39,19 @@ Choose this option if you have *sequentially* updated (1) your management servic
 NOTE: If you do not sequentially update your management services followed by Element storage, you cannot reconfigure reauthentication using this procedure. Follow the appropriate upgrade procedure instead.
 
 == Upgrade a management node to version 12.0 from 11.3 or later
-You can perform an in-place upgrade of the management node from 11.3 or later to version 12.0 without needing to provision a new management node virtual machine. You can use this procedure if you are upgrading from any of the following management node versions: 11.3, 11.5, 11.7, or 11.8.
+You can perform an in-place upgrade of the management node from 11.3 or later to version 12.0 without needing to provision a new management node virtual machine. You can use this procedure if you are upgrading from any of the following management node versions: 11.3, 11.5, 11.7, 11.8, or 12.0.
 
-.Before you begin
+NOTE: The Element 12.2 management node is an optional upgrade for SolidFire Enterprise SDS support. It is not required for existing deployments.
+
+.What you'll need
 
 * The management node you are intending to upgrade is version 11.3 or later and uses IPv4 networking. The management node version 12.0 does not support IPv6.
 +
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
 * You have updated your management services bundle to the latest version using Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
+
+* If you are updating your management node to version  12.2, you need management services 2.14.60 or later to proceed.
 
 * You have configured an additional network adapter (if required) using the instructions for configuring a storage NIC (eth1) in the management node user guide your product.
 +
@@ -65,6 +69,11 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 . Check the integrity of the download by running md5sum on the downloaded file and compare the output to what is available on NetApp Support Site for NetApp HCI or Element software, as in the following example:
 +
 `sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. (For Element 12.2 upgrades only) Do the following:
+.. In vSphere, power off the management node VM.
+.. https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-49D7217C-DB6C-41A6-86B3-7AFEB8BF575F.html[Change the RAM] of the management node VM from 12GB to 24GB RAM.
+.. Power on the management node VM.
 
 . Mount the management node ISO image and copy the contents to the file system using the following commands:
 +

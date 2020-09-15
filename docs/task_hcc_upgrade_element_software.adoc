@@ -24,7 +24,7 @@ https://kb.netapp.com/app/answers/answer_view/a_id/1088254[NetApp KB 1088254: Up
 * *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
-* *Management services*: You have updated your management services bundle to the latest version.
+* *Management services*: You have updated your management services bundle to the latest version. If you are updating your Element software to version 12.2 for SolidFire Enterprise SDS support, you need management services 2.14.60 or later to proceed.
 
 IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
 
