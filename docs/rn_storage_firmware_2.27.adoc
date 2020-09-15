@@ -7,7 +7,7 @@ keywords: netapp, hci, storage firmware
 ////
 This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Storage firmware 2.27 Release Notes
+= Storage Firmware Bundle 2.27 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
