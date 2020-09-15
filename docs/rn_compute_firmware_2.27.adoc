@@ -106,9 +106,6 @@ The following are issues that have been resolved in this release.
 |===
 |Issue |Description
 
-|N/A
-|The redundant memory correctable error that is triggered by a routine memory check has been resolved in H615C BIOS 3B08.CO.
-
 |CSD-3321 / CSESF-129
 |The BMC can hang and become inaccessible with the error `BMC Self Test Failed`. This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
 
