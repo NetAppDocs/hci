@@ -90,9 +90,10 @@ The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible 
 * *ESXi 6.5*: Version 4.16.13.5
 * *ESXi 6.7*: Version 4.17.15.16
 
-NOTE: Before upgrading to version 2.27, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.27 for your compute nodes.
+NOTE: Before upgrading to version 2.27, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.27 for your compute nodes. See link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
 
-To download the compute node firmware package:
+== Download Compute Firmware Bundle 2.27
+To download the Compute Firmware Bundle:
 
 . Go to https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
 . Choose *Compute_Firmware_Bundle* from the drop down list.
