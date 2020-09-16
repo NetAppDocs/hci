@@ -71,8 +71,8 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 `sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
 . (For Element 12.2 upgrades only) Do the following:
-.. In vSphere, power off the management node VM.
-.. https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-49D7217C-DB6C-41A6-86B3-7AFEB8BF575F.html[Change the RAM] of the management node VM from 12GB to 24GB RAM.
+.. Power off the management node VM.
+.. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 
 . Mount the management node ISO image and copy the contents to the file system using the following commands:
