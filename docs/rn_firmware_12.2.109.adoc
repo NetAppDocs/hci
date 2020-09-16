@@ -7,7 +7,7 @@ keywords: netapp, hci, compute firmware
 ////
 This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Compute firmware 12.2.109 Release Notes
+= Compute Firmware Bundle 12.2.109 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font

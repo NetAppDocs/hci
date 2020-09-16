@@ -23,7 +23,7 @@ Before you begin the Element storage upgrade, you should upgrade your HealthTool
 * You have upgraded your management services to at least version 2.1.326.
 +
 NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
-* You have downloaded the latest version of https://mysupport.netapp.com/products/p/healthtools.html[HealthTools] and copied the installation file to the management node.
+* You have downloaded the latest version of https://mysupport.netapp.com/site/products/all/details/element-healthtools/downloads-tab[HealthTools] and copied the installation file to the management node.
 +
 TIP: You can check the locally installed version of HealthTools by running the `sfupdate-healthtools -v` command.
 
