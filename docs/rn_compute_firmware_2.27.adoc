@@ -55,24 +55,24 @@ Here are the details of the improvements and changes included in each new firmwa
 |H610C BIOS 3B03
 a|
 
-* Improve handling of memory failures
-* Add the latest Intel NVM firmware updates
-* Update the RC version to 602.D02 (IPU 2020.1)
-* Update the microcode version to MCU x6906
-* Update the SPS ME version to 04.01.04.381.0
-* Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+* Improved handling of memory failures
+* Added the latest Intel NVM firmware updates
+* Updated the RC version to 602.D02 (IPU 2020.1)
+* Updated the microcode version to MCU x6906
+* Updated the SPS ME version to 04.01.04.381.0
+* Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
 
 |H615C BIOS 3B08.CO
 a|
 
-* Improve handling of memory failures
-* Add the latest Intel NVM firmware updates
-* Update the microcode version to MCU x2F01
-* Update the RC version to 602.D02 (IPU 2020.1)
-* Update the SPS ME version to 04.01.04.381.0
-* Hide the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
-* Change the option *Attempt Fast Cold Boot* default to `disable`
-* Change the option *Allow Correctables* default to `enable`
+* Improved handling of memory failures
+* Added the latest Intel NVM firmware updates
+* Updated the microcode version to MCU x2F01
+* Updated the RC version to 602.D02 (IPU 2020.1)
+* Updated the SPS ME version to 04.01.04.381.0
+* Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+* Changed the option *Attempt Fast Cold Boot* default value to `disable`
+* Changed the option *Allow Correctables* default value to `enable`
 
 |H410C BMC 6.71.18
 |Add BMC reporting for ePPR memory SEL events
