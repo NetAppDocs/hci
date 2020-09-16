@@ -67,7 +67,7 @@ The following firmware updates for H610S storage node hardware components are in
 |===
 
 === Multiple vCenter VASA support
-VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the https://mysupport.netapp.com/products/element_software/VASA39/index.html[NetApp Software Downloads^] site.
+VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39[NetApp Software Downloads^] site.
 NOTE: The NetApp Element VASA provider uses a NetApp certificate. With this patch, the certificate is used unmodified by vCenter to support multiple vCenters for VASA and VVols use. Do not modify the certificate. Custom SSL certificates are not supported by VASA.
 
 === Customizable Protection Domains
