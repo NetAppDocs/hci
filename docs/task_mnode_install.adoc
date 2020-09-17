@@ -122,7 +122,7 @@ NOTE: The abbreviated form of the command name is in parentheses ( ) and can be 
 .. (Optional): Add Active IQ endpoint parameters to the command:
 +
 * *--remote_host (-rh) [AIQ_endpoint]*: The endpoint where Active IQ telemetry data is sent to be processed. If the parameter is not included, the default endpoint is used.
-.. (Optional): Add the following persistent volume parameters. Do not modify or delete the account and volumes created for persistent volumes functionality or a loss in management capability will result.
+.. (Recommended): Add the following persistent volume parameters. Do not modify or delete the account and volumes created for persistent volumes functionality or a loss in management capability will result.
 * *--use_persistent_volumes (-pv) [true/false, default: false]*: Enable or disable persistent volumes. Enter the value true to enable persistent volumes functionality.
 * *--persistent_volumes_account (-pva) [account_name]*: If `--use_persistent_volumes` is set to true, use this parameter and enter the storage account name that will be used for persistent volumes.
 +
