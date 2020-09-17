@@ -74,14 +74,19 @@ Perform the following steps to upgrade the BMC firmware version on your H610S no
 .Steps
 . Log in to the BMC console using your web browser: `https://<BMC_IP>/#login`, where `<BMC_IP>` is the IP address of the BMC.
 . Click *Maintenance* > *Firmware Update*.
-. On the firmware update screen, ensure that you select the *IPMI* and *Network* checkboxes.
+. On the *Firmware Update* screen, do the following:
+.. Disable the *Preserve all configuration* checkbox.
+.. Enable the *IPMI* checkbox.
+.. Enable the *Network* checkbox.
+.. Enable the *Authentication* checkbox.
 +
 ** The *IPMI* setting is used to preserve existing user accounts.
 ** The *Network* setting is used to preserve the DHCP assigned BMC IP address.
+** The *Authentication* setting is used to preserve custom accounts configured for BMC login.
 +
-NOTE: Ensure that the *Preserve all configuration* checkbox is not selected.
+NOTE: Ensure that you have disabled the *Preserve all configuration* checkbox.
 
-. Choose the BMC update file you donwloaded and click *Start firmware update* to start the upgrade process.
+. Choose the BMC update file you downloaded and click *Start firmware update* to start the upgrade process.
 +
 The process can take up to 5 minutes to complete if the BMC firmware file is in the node's network; otherwise the process will take longer.
 . Verify the firmware version by looking at the version listed on the *Dashboard* > *More info* page.
