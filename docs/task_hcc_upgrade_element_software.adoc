@@ -14,7 +14,7 @@ keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 :imagesdir: ../media/
 
 [.lead]
-To upgrade to NetApp Element software 12.0, you can use the NetApp Hybrid Cloud Control UI, REST API, or the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+To upgrade NetApp Element software, you can use the NetApp Hybrid Cloud Control UI, REST API, or the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
 .What you'll need
 
@@ -26,7 +26,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_S
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services*: You have updated your management services bundle to the latest version.
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12. If you are updating your Element software to version 12.2 for SolidFire Enterprise SDS support, you need management services 2.14.60 or later to proceed.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12. If you are updating your Element software to version 12.2, you need management services 2.14.60 or later to proceed.
 
 * *Cluster health*: You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].

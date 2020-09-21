@@ -41,7 +41,7 @@ NOTE: If you do not sequentially update your management services followed by Ele
 == Upgrade a management node to version 12.2 from 11.3 or later
 You can perform an in-place upgrade of the management node from 11.3 or later to version 12.0 without needing to provision a new management node virtual machine. You can use this procedure if you are upgrading from any of the following management node versions: 11.3, 11.5, 11.7, 11.8, or 12.0.
 
-NOTE: The Element 12.2 management node is an optional upgrade for SolidFire Enterprise SDS support. It is not required for existing deployments.
+NOTE: The Element 12.2 management node is an optional upgrade. It is not required for existing deployments.
 
 .What you'll need
 
