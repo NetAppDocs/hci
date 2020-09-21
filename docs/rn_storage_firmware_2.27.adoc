@@ -16,12 +16,10 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 :keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
-The downloadable storage firmware update package contains BMC feature enhancements and bug fixes for NetApp storage nodes.
+The downloadable storage firmware update package contains firmware feature enhancements and bug fixes for NetApp storage nodes.
 
 == What's New
-The storage firmware bundle version 2.27 contains various bug fixes and new features.
-
-You can upgrade the storage firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading storage node BMC firmware>>.
+The storage firmware bundle version 2.27 contains various bug fixes and new features. You can upgrade the storage firmware out-of-band; you can find upgrade instructions in <<Upgrading storage node BMC firmware>>.
 
 == New Features
 The following are the new features and changes included in this release:
@@ -68,7 +66,7 @@ There are no known issues in this release.
 Perform the following steps to upgrade the BMC firmware version on your storage nodes. The procedure can take approximately 30 minutes to complete.
 
 .What you'll need
-* You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
+* You have checked for alerts by selecting *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
 * You have downloaded the BMC update file.
 
 .Steps
