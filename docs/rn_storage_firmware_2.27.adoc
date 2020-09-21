@@ -21,6 +21,113 @@ The downloadable storage firmware update package contains firmware feature enhan
 == What's New
 The storage firmware bundle version 2.27 contains various bug fixes and new features. You can upgrade the storage firmware out-of-band; you can find upgrade instructions in <<Upgrading storage node BMC firmware>>.
 
+=== Updated firmware components
+This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
+
+|===
+|Component |Dell R630 |H410S |H610S
+
+|BIOS
+|N/A
+|NA2.1
+|3B03
+
+|BMC
+|N/A
+|*6.84.00*
+|*3.84.07*
+
+|NIC / Mellanox
+|-
+|*14.21.1000*
+|*14.22.1002*
+
+|RMS200
+|ae3b8cc
+|7d8422bc
+|*14.25.1020*
+
+|RMS300
+|7d8422bc
+|7d8422bc
+|*14.25.1020*
+
+|NVDIMM, Smart
+|-
+|-
+|*14.25.1020*
+
+|BPM, Smart
+|-
+|-
+|*14.25.1020*
+
+|NVDIMM, Micron Gen1
+|-
+|-
+|*14.25.1020*
+
+|NVDIMM, Micron Gen2
+|-
+|-
+|*14.25.1020*
+
+|PGEM, Micron
+|-
+|-
+|*14.25.1020*
+
+|PM863, SED
+|GXT5404Q
+|GXT5404Q
+|-
+
+|PM863, NSED
+|GXT5103Q
+|GXT5103Q
+|-
+
+|PM883, SED
+|HXT7104Q
+|HXT7104Q
+|-
+
+|Hawk-4, SED
+|8ENP7101
+|8ENP7101
+|-
+
+|Hawk-4, NSED
+|8ENP6101
+|8ENP6101
+|-
+
+|PM963, SED
+|-
+|-
+|*14.25.1020*
+
+|PM963, NSED
+|-
+|-
+|*14.25.1020*
+
+|CD5, SED
+|-
+|-
+|*14.25.1020*
+
+|CD5, NSED
+|-
+|-
+|*14.25.1020*
+
+|CD5, FIPS
+|-
+|-
+|*14.25.1020*
+|===
+
 == New Features
 The following are the new features and changes included in this release:
 
