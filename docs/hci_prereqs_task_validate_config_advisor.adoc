@@ -20,7 +20,9 @@ Before you rack NetApp HCI hardware and perform the installation of NetApp HCI, 
 Download and install Active IQ Config Advisor on a PC that has access to the NetApp HCI networks.
 
 .Steps
-. In a web browser, download the Active IQ Config Advisor tool from the https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Site^].
+. In a web browser, select *Tools* from the NetApp Support menu, search for Active IQ Config Advisor, and download the tool.
++
+https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Site > Tools^].
 +
 After you agree to the End User License Agreement (EULA), the Download page appears. Microsoft Windows, Linux, and Mac binaries are available in the *Client Tool* pane.
 .  Run the executable.
