@@ -39,43 +39,43 @@ This firmware package contains the following firmware versions for hardware comp
 
 |NIC / Mellanox
 |-
-|*14.21.1000*
-|*14.22.1002*
+|14.21.1000
+|14.22.1002
 
 |RMS200
 |ae3b8cc
 |7d8422bc
-|*14.25.1020*
+|-
 
 |RMS300
 |7d8422bc
 |7d8422bc
-|*14.25.1020*
+|-
 
 |NVDIMM, Smart
 |-
 |-
-|*14.25.1020*
+|3.1
 
 |BPM, Smart
 |-
 |-
-|*14.25.1020*
+|2.16
 
 |NVDIMM, Micron Gen1
 |-
 |-
-|*14.25.1020*
+|26.2c
 
 |NVDIMM, Micron Gen2
 |-
 |-
-|*14.25.1020*
+|25.3c
 
 |PGEM, Micron
 |-
 |-
-|*14.25.1020*
+|1.40
 
 |PM863, SED
 |GXT5404Q
@@ -105,27 +105,37 @@ This firmware package contains the following firmware versions for hardware comp
 |PM963, SED
 |-
 |-
-|*14.25.1020*
+|CXV8202Q
 
 |PM963, NSED
 |-
 |-
-|*14.25.1020*
+|CXV8501Q
+
+|PM983, SED
+|-
+|-
+|*EDA5302Q*
+
+|PM983, NSED
+|-
+|-
+|*EDA5600Q*
 
 |CD5, SED
 |-
 |-
-|*14.25.1020*
+|0108
 
 |CD5, NSED
 |-
 |-
-|*14.25.1020*
+|0108
 
 |CD5, FIPS
 |-
 |-
-|*14.25.1020*
+|0108
 |===
 
 == New Features
