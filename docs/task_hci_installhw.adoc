@@ -121,7 +121,7 @@ Here is an illustration for installing rails for an H610S storage node or an H61
 
 image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute node.]
 
-TIP: There are left and right rails on the H615C and H610S. The screw hole needs to be positioned towards the bottom so that the H610S/H615C thumb-screw can secure the chassis to the rail.
+TIP: There are left and right rails on the H610S and H615C. Position the screw hole towards the bottom so that the H610S/H615C thumbscrew can secure the chassis to the rail.
 
 == Install the node/chassis
 
