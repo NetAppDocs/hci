@@ -180,24 +180,9 @@ The following are issues that have been resolved in this release:
 There are no known issues in this release.
 
 == Upgrading storage node BMC firmware
-Perform the following steps to upgrade the BMC firmware version on your storage nodes. The procedure can take approximately 30 minutes to complete.
+Use NetApp Hybrid Cloud Control to upgrade the firmware on your storage nodes. See link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware] for instructions.
 
-.What you'll need
-* You have checked for alerts by selecting *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
-* You have downloaded the BMC update file.
-
-.Steps
-. Log in to the BMC console using your web browser: `https://<BMC_IP>/#login`, where `<BMC_IP>` is the IP address of the BMC.
-. Click *Maintenance* > *Firmware Update*.
-. On the firmware update screen, ensure that you select the *IPMI* and *Network* checkboxes.
-+
-** The *IPMI* setting is used to preserve existing user accounts.
-** The *Network* setting is used to preserve the DHCP assigned BMC IP address.
-+
-NOTE: Ensure that the *Preserve all configuration* checkbox is not selected.
-
-. Choose the BMC update file you downloaded and click *Start firmware update* to start the upgrade process.
-+
-The process can take up to 5 minutes to complete if the BMC firmware file is in the node's network; otherwise the process will take longer.
-. Verify the firmware version by looking at the version listed on the *Dashboard* > *More info* page.
-. Perform this procedure for the remaining storage nodes in your cluster.
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
