@@ -21,7 +21,7 @@ Witness Nodes manage quorum within the cluster; they are not used for storage. W
 
 For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes definitions].
 
-For SolidFire Enterprise SDS nodes, you can monitor inventory on the Storage tab. 
+For SolidFire Enterprise SDS nodes, you can monitor inventory on the Storage tab.
 
 .Steps
 
