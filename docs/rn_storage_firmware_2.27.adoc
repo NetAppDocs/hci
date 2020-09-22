@@ -179,8 +179,34 @@ The following are issues that have been resolved in this release:
 == Known issues
 There are no known issues in this release.
 
+== Resolved security vulnerabilities
+The following are security vulnerabilities that have been resolved in this release:
+
+=== H410S BMC 6.84.00
+
+* CVE-2019-16649
+* CVE-2019-16650
+* CVE-2019-6260
+
+=== H610S BMC 3.84.07
+
+* [CSEFQ-41]: CVE-2019-1552
+* [CSEFQ-13/29]: CVE-2019-1547, CVE-2019-1563
+* [CSEFQ-8]: CVE-2019-5482
+* [CSEFQ-12]: CVE-2019-15903
+* [CSEFQ-40]: CVE-2018-20843
+* [CSEFQ-47]: Remove the tcdump utility.
+* [CSEFQ-07]: CVE-2019-14821, CVE-2019-15916, CVE-2019-16413
+* [CSEFQ-09]: CVE-2019-10638, CVE-2019-10639
+* [CSEFQ-42]: CVE-2019-11478, CVE-2019-11479, CVE-2019-11477
+* [CSEFQ-43]: CVE-2019-12819
+* [CSEFQ-44]: CVE-2019-14835, CVE-2019-14814, CVE-2019-14816, CVE-2019-16746
+* [CSEFQ-45]: CVE-2019-19062
+* [CSEFQ-61]: CVE-2019-19922, CVE-2019-20054
+* [N/A]: CVE-2019-19447, CVE-2019-19767, CVE-2019-10220
+
 == Upgrading storage node BMC firmware
-Use NetApp Hybrid Cloud Control to upgrade the firmware on your storage nodes. See link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware] for instructions.
+Use NetApp Hybrid Cloud Control to upgrade the firmware on your storage nodes. Visit link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware] for instructions.
 
 [discrete]
 == Find more information
