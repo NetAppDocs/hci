@@ -5,7 +5,7 @@ summary: You can view both your storage and compute assets in your system by usi
 keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute
 ---
 
-= View your inventory in the Nodes page
+= View your inventory on the Nodes page
 
 :hardbreaks:
 :nofooter:
@@ -20,6 +20,8 @@ You can view storage information for your multiple node systems and any NetApp H
 Witness Nodes manage quorum within the cluster; they are not used for storage. Witness Nodes are applicable only to NetApp HCI and not to all-flash storage environments.
 
 For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes definitions].
+
+For SolidFire Enterprise SDS nodes, you can monitor inventory on the Storage tab. 
 
 .Steps
 
