@@ -16,10 +16,10 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 :keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
-The downloadable storage firmware update package contains firmware feature enhancements and bug fixes for NetApp storage nodes.
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
-The storage firmware bundle version 2.27 contains various bug fixes and new features. You can upgrade the storage firmware out-of-band; you can find upgrade instructions in <<Upgrading storage node BMC firmware>>.
+The storage firmware bundle version 2.27 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
@@ -176,9 +176,6 @@ The following are issues that have been resolved in this release:
 |The BMC web UI inventory API returns the wrong memory serial number format.
 |===
 
-== Known issues
-There are no known issues in this release.
-
 == Resolved security vulnerabilities
 The following are security vulnerabilities that have been resolved in this release:
 
@@ -190,23 +187,22 @@ The following are security vulnerabilities that have been resolved in this relea
 
 === H610S BMC 3.84.07
 
-* [CSEFQ-41]: CVE-2019-1552
-* [CSEFQ-13/29]: CVE-2019-1547, CVE-2019-1563
-* [CSEFQ-8]: CVE-2019-5482
-* [CSEFQ-12]: CVE-2019-15903
-* [CSEFQ-40]: CVE-2018-20843
-* [CSEFQ-47]: Remove the tcdump utility.
-* [CSEFQ-07]: CVE-2019-14821, CVE-2019-15916, CVE-2019-16413
-* [CSEFQ-09]: CVE-2019-10638, CVE-2019-10639
-* [CSEFQ-42]: CVE-2019-11478, CVE-2019-11479, CVE-2019-11477
-* [CSEFQ-43]: CVE-2019-12819
-* [CSEFQ-44]: CVE-2019-14835, CVE-2019-14814, CVE-2019-14816, CVE-2019-16746
-* [CSEFQ-45]: CVE-2019-19062
-* [CSEFQ-61]: CVE-2019-19922, CVE-2019-20054
-* [N/A]: CVE-2019-19447, CVE-2019-19767, CVE-2019-10220
+* CVE-2019-1552
+* CVE-2019-1547, CVE-2019-1563
+* CVE-2019-5482
+* CVE-2019-15903
+* CVE-2018-20843
+* CVE-2019-14821, CVE-2019-15916, CVE-2019-16413
+* CVE-2019-10638, CVE-2019-10639
+* CVE-2019-11478, CVE-2019-11479, CVE-2019-11477
+* CVE-2019-12819
+* CVE-2019-14835, CVE-2019-14814, CVE-2019-14816, CVE-2019-16746
+* CVE-2019-19062
+* CVE-2019-19922, CVE-2019-20054
+* CVE-2019-19447, CVE-2019-19767, CVE-2019-10220
 
-== Upgrading storage node BMC firmware
-Use NetApp Hybrid Cloud Control to upgrade the firmware on your storage nodes. Visit link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware] for instructions.
+== Known issues
+There are no known issues in this release.
 
 [discrete]
 == Find more information
