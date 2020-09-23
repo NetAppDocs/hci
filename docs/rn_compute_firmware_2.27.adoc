@@ -140,7 +140,7 @@ After you update the BIOS and BMC, update the H410C node firmware using the comp
 
 |CSESF-309
 |H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
-|Run the following command to recover the ports: `sxcli network nic set -n vmnic2 -a`
+|Run the following command to recover the ports: `esxcli network nic set -n vmnic2 -a`
 
 |CSESF-303
 |Network statistics errors are seen for the Mellanox NIC on H410C nodes.
