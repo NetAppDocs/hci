@@ -55,11 +55,13 @@ Compute nodes support three network topologies, depending on the hardware platfo
 
 |Option A
 |Two cables using ports D and E
-.2+|Two cables using ports C and D
-.2+|Two cables using ports A and B
+|Two cables using ports C and D
+|Two cables using ports A and B
 
 |Option B
 |Six cables using ports A through F
+|Not available
+|Not available
 
 |Option C
 3+|Similar to option B, but with native VLANs (or "access ports") on the switch for the management, storage, and vMotion networks

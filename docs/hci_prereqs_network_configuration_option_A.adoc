@@ -33,6 +33,21 @@ Here are the network ports and locations on the H615C compute node:
 [[H615C]]
 image::H615C_node_cabling.png[NetApp H615C compute node network ports]
 
+This configuration uses the following network ports on each node:
+
+|===
+|Node |Network ports used
+
+|H410C
+|D and E
+
+|H610C
+|C and D
+
+|H615C
+|A and B
+|===
+
 === VLAN configuration
 
 As a best practice, you should configure the required network segments on all switch ports that the nodes are using. For example:
