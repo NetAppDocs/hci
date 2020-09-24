@@ -138,15 +138,15 @@ This firmware package contains the following firmware versions for hardware comp
 |0108
 |===
 
-== New Features
-The following are the new features and changes included in this release:
+== New BMC features
+The following are the new BMC features and changes included in this release:
 
-* Enabled INITRD support
-* Updated SSL help message about X.509 certificates
-* Disabled TLS 1.0 and 1.1 support
-* Added Redfish remote media support
-* Added the H5Viewer RKVM feature
-* Added remote syslog support
+* (H610S) Enabled INITRD support
+* (H610S) Updated SSL help message about X.509 certificates
+* (H610S) Disabled TLS 1.0 and 1.1 support
+* (H610S, H410S) Added Redfish remote media support
+* (H610S) Added the H5Viewer RKVM feature
+* (H610S) Added remote syslog support
 
 == Resolved issues
 The following are issues that have been resolved in this release:
