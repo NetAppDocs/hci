@@ -148,10 +148,7 @@ After you update the BIOS and BMC, update the H410C node firmware using the comp
 
 |CSESF-293 / PE-10130
 |Mellanox NIC firmware can be downgraded by BootstrapOS after you upgrade to the Compute Firmware Bundle version 2.27.
-a|To upgrade other firmware on H410C or H300E/H500E/H700E nodes and then upgrade Mellanox NIC firmware individually, perform the following steps:
-
-. Upgrade other firmware via Compute Firmware Bundle 2.27.
-. Upgrade Mellanox NIC firmware manually.
+|Reinstall Compute Firmware Bundle version 2.27.
 
 |PE-11033
 |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
