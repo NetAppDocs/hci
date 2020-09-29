@@ -84,7 +84,7 @@ entries:
         entries:
           - title: View resources on the HCC Dashboard
             url: /task_hcc_dashboard.html
-          - title: View your inventory in the Nodes page
+          - title: View your inventory on the Nodes page
             url: /task_hcc_nodes.html
           - title: Edit BMC connection information
             url: /task_hcc_edit_bmc_info.html
