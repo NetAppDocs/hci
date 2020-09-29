@@ -28,7 +28,7 @@ By using SolidFire Active IQ, you can monitor the events, performance, and capac
 *About this task*
 You can obtain continually updated historical views of cluster-wide statistics. You can set up notifications to alert you about specified events, thresholds, or metrics on a cluster so that they can be addressed quickly.
 
-By default, NetApp HCI sends performance and alert statistics to the NetApp SolidFire Active IQ service. As part of your normal support contract, NetApp Support monitors this data and alerts you to potential system issues.
+As part of your normal support contract, NetApp Support monitors this data and alerts you to potential system issues.
 
 *Steps*
 
