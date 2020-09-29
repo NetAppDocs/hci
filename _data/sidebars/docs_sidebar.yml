@@ -46,7 +46,17 @@ entries:
      - title: IP address requirements
        url: /hci_prereqs_ip_address.html
      - title: Network configuration
-       url: /hci_prereqs_network_configuration.html
+       entries:
+         - title: Network configuration options overview
+           url: /hci_prereqs_network_configuration.html
+         - title: Network configuration option A
+           url: /hci_prereqs_network_configuration_option_A.html
+         - title: Network configuration option B
+           url: /hci_prereqs_network_configuration_option_B.html
+         - title: Network configuration option C
+           url: /hci_prereqs_network_configuration_option_C.html
+     - title: DNS and timekeeping requirements
+       url: /hci_prereqs_timekeeping.html
      - title: DNS and timekeeping requirements
        url: /hci_prereqs_timekeeping.html
      - title: Environmental requirements
