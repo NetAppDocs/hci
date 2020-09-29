@@ -21,10 +21,9 @@ Beginning with the Element 11.3 management node release, the management node des
 
 .About this task
 
-* You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
-* (Required for any user who has updated to 2.10.27) Due to an upgrade API issue introduced in 2.10.27, management services cannot be upgraded from that version unless you use the workaround described in https://kb.netapp.com/app/answers/answer_view/a_id/1103650[these] release notes. You must upgrade to 2.10.29 or a later version using this workaround to resolve the issue and restore management services update capabilities.
+* You must upgrade to the latest management services bundle before upgrading your Element software.
 
-NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/app/answers/answer_view/a_id/1087586[NetApp KB 1087586: Management Services Release Notes]
+NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[NetApp KB: Management Services Release Notes]
 
 .Update options
 
@@ -92,8 +91,8 @@ A successful update returns a result similar to the following example:
 +
 ----
 {
-"current_version": "2.10.27",
-"details": "Updated to version 2.10.27",
+"current_version": "2.10.29",
+"details": "Updated to version 2.14.60",
 "status": "success"
 }
 ----
@@ -122,8 +121,8 @@ A successful update returns a result similar to the following example:
 +
 ----
 {
-"current_version": "2.10.27",
-"details": "Updated to version 2.10.27",
+"current_version": "2.10.29",
+"details": "Updated to version 2.14.60",
 "status": "success"
 }
 ----

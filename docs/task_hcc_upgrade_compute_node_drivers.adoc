@@ -19,7 +19,7 @@ For any H-Series compute node, you can update the drivers used on the nodes usin
 
 .What you'll need
 
-See the firmware and driver matrix for your hardware in https://kb.netapp.com/app/answers/answer_view/a_id/1088658[NetApp KB article 1088658] (login required).
+See the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this NetApp KB article] (login required).
 
 .About this task
 
