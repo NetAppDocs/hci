@@ -1,0 +1,107 @@
+---
+sidebar: docs_sidebar
+permalink: docs/hci_prereqs_network_configuration_option_C.html
+summary: Learn about NetApp HCI network configuration option C.
+keywords: netapp, hci, cabling, network configuration
+---
+
+= Network configuration
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, cabling, network configuration
+
+[.lead]
+NetApp HCI can utilize multiple different network cabling and VLAN configurations. The third configuration, option C, uses six network cables for each compute node with native VLANs.
+
+== Configuration option C: Six cables for compute nodes with native VLANs
+You can deploy NetApp HCI without using tagged VLANs for storage and virtualization traffic, and instead rely on the switch configuration to separate the network segments. You can use this configuration with vSphere Standard Switches or vSphere Distributed Switches (which require VMware vSphere Enterprise Plus licensing).
+
+NetApp HCI documentation uses letters to refer to network ports on the back panel of H-series nodes.
+
+Here are the network ports and locations on the H410C storage node:
+[[H35700E_H410C]]
+image::HCI_ISI_compute_6cable.png[NetApp H410C storage node network ports]
+
+Here are the network ports and locations on the H410S storage node:
+[[H410S]]
+image::HCI_ISI_storage_cabling.png[NetApp H410S storage node network ports]
+
+Here are the network ports and locations on the H610S storage node:
+[[H610S]]
+image::H610S_back_panel_ports.png[NetApp H610S storage node network ports]
+
+=== VLAN configuration for H410C, H410S, and H610S nodes
+This topology option uses the following VLAN configuration on H410C, H410S, and H610S nodes:
+
+|===
+|Node ports used |Network name |VLAN ID |Connected switch port configuration
+
+|Ports A and B on compute and storage nodes
+|Management
+|100
+|Native
+
+|Ports D and E on compute nodes
+|Storage
+|105
+|Native
+
+|Ports C and D on storage nodes
+|Storage
+|105
+|Native
+
+|Ports C and F on compute nodes
+|vMotion
+|107
+|Native
+
+|Ports C and F on compute nodes
+|Virtual machines
+|200, 201
+|Tagged
+|===
+
+CAUTION: Be careful configuring the switch ports when deploying this configuration. Configuration errors in this network topology can result in deployment problems that are difficult to diagnose.
+
+The following illustration shows the network configuration overview for this topology option. In the example, individual switch ports are configured with the appropriate network segment as the native network.
+
+image::hci_networking_config_scenario_2.png[HCI networking configuration option C image ,align="center"]
+
+=== Example switch commands
+You can use the following example switch commands to configure switch ports used for the NetApp HCI nodes. These commands are based on a Cisco configuration, but might require only minimal changes to apply to Mellanox switches. See your switch documentation for the specific commands you need to implement this configuration.
+
+You can use the following example commands to configure the switch ports used for the management network. Replace the interface name, description, and VLANs with the values for your configuration.
+
+`interface {interface name, such as EthernetX/Y or GigabitEthernetX/Y/Z}```
+`description {desired description, such as NetApp-HCI-NodeX-PortA|B}```
+`switchport access vlan 100`
+`spanning-tree port type edge`
+
+You can use the following example commands to configure the switch ports used for the storage network. Replace the interface name, description, and VLANs with the values for your configuration.
+
+`interface {interface name, such as EthernetX/Y or GigabitEthernetX/Y/Z}```
+`description {desired description, such as NetApp-HCI-NodeX-PortC|D}```
+`mtu 9216`
+`switchport access vlan 105`
+`spanning-tree port type edge`
+
+You can use the following example commands to configure the switch ports used for the vMotion and virtual machines network. Replace the interface name, description, and VLANs with the values for your configuration.
+
+`interface {interface name, such as EthernetX/Y or GigabitEthernetX/Y/Z}`
+`description {desired description, such as NetApp-HCI-NodeX-PortC|F}`
+`mtu 9216`
+`switchport mode trunk`
+`switchport trunk native vlan 107`
+`switchport trunk allowed vlan 200,201`
+`spanning-tree port type edge trunk`
+
+NOTE: Some switches might require inclusion of the native VLAN in the allowed VLAN list. See the documentation for your specific switch model and software version.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
