@@ -147,7 +147,7 @@ entries:
         entries:
           - title: Upgrade your NetApp HCI system for version 1.8
             url: /task_hcc_upgrade_all.html
-          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.0
+          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.2
             url: /task_sf_upgrade_all.html
       - title: System upgrade procedures
         entries:

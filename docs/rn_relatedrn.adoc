@@ -19,10 +19,12 @@ You can find links to the latest and earlier release notes for various component
 NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == NetApp HCI
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873790[NetApp HCI 1.8P1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes]
 
 == NetApp Element software
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789[NetApp Element Software 12.2 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022[NetApp Element Software 12.0 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256[NetApp Element Software 11.8 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225[NetApp Element Software 11.7 Release Notes]
@@ -42,6 +44,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes]
 
 == Storage firmware
+* link:rn_storage_firmware_2.27.html[Storage firmware Bundle 2.27 Release Notes (latest)]
 * link:rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes]
 
 ////

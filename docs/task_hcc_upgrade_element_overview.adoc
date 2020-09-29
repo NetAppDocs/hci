@@ -5,7 +5,7 @@ summary: As part of a NetApp HCI or SolidFire storage system upgrade, you upgrad
 keywords: netapp, hci, on premise, cluster, element
 ---
 
-= Upgrade Element software to version 12.0 on the storage cluster
+= Upgrade Element software to version 12.2 on the storage cluster
 
 :hardbreaks:
 :nofooter:

@@ -20,7 +20,7 @@ You must run health checks prior to upgrading Element storage to ensure all stor
 
 * You have updated to the latest management services bundle (2.10.27 or later).
 +
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software.
 
 * You are running management node 11.3 or later.
 * Your cluster version is running NetApp Element software 11.3 or later.
