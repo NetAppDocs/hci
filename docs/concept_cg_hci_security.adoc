@@ -25,6 +25,10 @@ When you enable Encryption at Rest, performance and efficiency of the storage cl
 
 For information on enabling and disabling Encryption at Rest, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-EE404D52-B621-4DE5-B141-2559768FB1D0.html[Enabling and disabling encryption for a cluster] in the SolidFire and Element Documentation Center.
 
+== Software Encryption at Rest
+
+Software Encryption at Rest enables all data written to the SSDs in a storage cluster to be encrypted. This provides a primary layer of encryption in SolidFire Enterprise SDS nodes that do not include Self-Encrypting Drives (SEDs).
+
 == External key management
 
 You can configure Element software to use a third-party KMIP-compliant key management service (KMS) to manage storage cluster encryption keys. When you enable this feature, the storage cluster's cluster-wide drive access password encryption key is managed by a KMS that you specify.
@@ -46,4 +50,3 @@ You can configure Element to integrate with an existing SAML 2.0 identity provid
 You can pair multi-factor authentication with common SAML 2.0 compatible identity providers (IdPs), such as Microsoft Active Directory Federation Services (ADFS) and Shibboleth.
 
 To configure MFA, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-B1C8D8E2-CE95-41FD-9A3E-A0C424EC84F3.html[Enabling multi-factor authentication] in the SolidFire and Element Documentation Center.
-

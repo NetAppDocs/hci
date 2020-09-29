@@ -103,15 +103,6 @@ After installing the NetApp HCI hardware, you should perform some optional, yet 
 === Manage storage capacity across all chassis
 Ensure that storage capacity is split evenly across all chassis containing storage nodes.
 
-
-=== Configure LACP for optimal storage cluster performance
-For optimal NetApp HCI storage cluster performance, you should configure Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes.
-
-For details about LACP configuration, see the following resources:
-
-* https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_]
-* link:hci_prereqs_LACP_configuration.html[Configure LACP for optimal storage performance]
-
 === Configure IPMI for each node
 After you have racked, cabled, and powered on your NetApp HCI hardware, you can configure Intelligent Platform Management Interface (IPMI) access for each node. Assign each IPMI port an IP address and change the default administrator IPMI password as soon as you have remote IPMI access to the node.
 
