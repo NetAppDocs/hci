@@ -121,6 +121,8 @@ Here is an illustration for installing rails for an H610S storage node or an H61
 
 image::h610s_rail.gif[Rail installation for H610S storage node and H615C compute node.]
 
+TIP: There are left and right rails on the H610S and H615C. Position the screw hole towards the bottom so that the H610S/H615C thumbscrew can secure the chassis to the rail.
+
 == Install the node/chassis
 
 You will install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, you will install the chassis/node directly onto the rails in the rack.

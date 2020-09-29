@@ -39,6 +39,7 @@ Choose this option if you have *sequentially* updated (1) your management servic
 NOTE: If you do not sequentially update your management services followed by Element storage, you cannot reconfigure reauthentication using this procedure. Follow the appropriate upgrade procedure instead.
 
 == Upgrade a management node to version 12.2 from 11.3 or later
+
 You can perform an in-place upgrade of the management node from 11.3 or later to version 12.2 without needing to provision a new management node virtual machine. You can use this procedure if you are upgrading from any of the following management node versions: 11.3, 11.5, 11.7, 11.8, or 12.0.
 
 NOTE: The Element 12.2 management node is an optional upgrade. It is not required for existing deployments.
@@ -73,6 +74,11 @@ NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX
 . Check the integrity of the download by running md5sum on the downloaded file and compare the output to what is available on NetApp Support Site for NetApp HCI or Element software, as in the following example:
 +
 `sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. (For Element 12.2 upgrades only) Do the following:
+.. Power off the management node VM.
+.. Change the RAM of the management node VM from 12GB to 24GB RAM.
+.. Power on the management node VM.
 
 . Mount the management node ISO image and copy the contents to the file system using the following commands:
 +
