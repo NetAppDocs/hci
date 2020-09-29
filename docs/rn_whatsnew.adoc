@@ -16,9 +16,9 @@ keywords: netapp, hci, element, new, whatsnew
 [.lead]
 NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.8P1 includes Element 12.2 for storage clusters.
 
-* The <<NetApp HCI 1.8P1>> section describes new features and updates in NetApp HCI version 1.8.
+* The <<NetApp HCI 1.8P1>> section describes new features and updates in NetApp HCI version 1.8P1.
 
-* The <<Element 12.2>> section describes new features and updates in NetApp Element 12.0.
+* The <<Element 12.2>> section describes new features and updates in NetApp Element 12.2.
 
 == NetApp HCI 1.8P1
 NetApp HCI 1.8P1 includes security and stability improvements.
@@ -101,5 +101,5 @@ Element 12.2 now performs periodic health checks on SolidFire appliance drives u
 [discrete]
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
-* https://kb.netapp.com/app/answers/answer_view/a_id/1088658[Firmware and driver versions for NetApp HCI and NetApp Element software^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions for NetApp HCI and NetApp Element software^]
