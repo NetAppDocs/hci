@@ -96,7 +96,7 @@ sudo su
 +
 NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
 
-. Download the management services bundle that was previously installed on the existing management node (version 2.15.25 or later) and save it to the `/sf/etc/mnode/` directory.
+. Download the management services bundle that was previously installed on the existing management node (version 2.15.25 or later) and save it in the `/sf/etc/mnode/` directory.
 . Create a temporary destination directory for the management services bundle contents:
 +
 ----
