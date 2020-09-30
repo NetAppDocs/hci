@@ -99,7 +99,7 @@ NOTE: In vSphere, the *Synchronize guest time with host* box should be checked i
 ////
 Changes for 12.2 and later start here. DOC-3054
 ////
-
++
 . Download the management services bundle that was previously installed on the existing management node (version 2.15.25 or later) and save it to the `/sf/etc/mnode/` directory.
 . Create a temporary destination directory for the management services bundle contents:
 +
@@ -120,6 +120,7 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 +
 * *[mvip IP address]*: The management virtual IP address of the storage cluster.
 * *[persistent volume account name]*: The name of the account associated with all persistent volumes in this storage cluster.
++
 . Configure and run the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:
 +
 NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
