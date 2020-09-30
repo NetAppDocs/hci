@@ -40,6 +40,10 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 |3.96.07​
 |3B01 ​ ​
 
+|H615C​
+|4.60.07
+|3B05.CO ​ ​
+
 |===
 +
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
@@ -61,8 +65,8 @@ For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be autom
 
 Choose the option that is relevant to your upgrade scenario:
 
-* For H610C and H410C: <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
-* For H610C and H410C: <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
+* For H615C, H610C, and H410C: <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
+* For H615C, H610C, and H410C: <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
 * For compute node image 12.0: <<Use a USB drive with the latest firmware image downloaded>>
 * For compute firmware 12.2.109: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
