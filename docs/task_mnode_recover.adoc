@@ -108,6 +108,7 @@ mkdir -p /sf/etc/mnode/mnode-archive
 tar -C /sf/etc/mnode/mnode-archive -xvf /sf/etc/mnode/services_deploy_bundle.tar.gz
 ----
 . Create a configuration file for accounts and volumes:
++
 ----
 echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persistent volume account name]"}' | sudo tee /sf/etc/mnode/mnode-archive/management-services-metadata.json
 ----
