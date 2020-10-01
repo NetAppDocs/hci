@@ -189,5 +189,9 @@ entries:
        url: /task_hcc_expand_compute_and_storage.html
      - title: Remove Witness Nodes after expanding cluster
        url: /task_hci_removewn.html
+  - title: Maintain H-series hardware
+    entries:
+     - title: Replace drives
+       url: /task_hci_driverepl.html    
   - title: Legal notices
     url: /reference_notices_hci.html

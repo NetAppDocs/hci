@@ -1,0 +1,80 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_driverepl.html
+summary: If a drive fails or if the drive wear level falls below a threshold, you must replace it. You can hot-swap a failed drive.
+keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
+---
+
+= Replace drives for storage nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+If a drive is faulty or if the drive wear level falls below a threshold, you should replace it. Alarms in the Element software UI and VMware vSphere Web Client notify you when a drive has failed or is going to fail. You can hot-swap a failed drive.
+
+.About this task
+This procedure is for replacing drives in H410S and H610S storage nodes. Removing a drive takes the drive offline. Any data on the drive is removed and migrated to other drives in the cluster. The data migration to other active drives in the system can take a few minutes to an hour depending on capacity utilization and active I/O on the cluster.
+You should follow these best practices for handling drives while removing and replacing them:
+
+* Keep the drive in the ESD bag until you are ready to install it.
+* Open the ESD bag by hand or cut the top off with a pair of scissors.
+* Always wear an ESD wrist strap grounded to an unpainted surface on your chassis.
+* Always use both hands when removing, installing, or carrying a drive.
+* Never force a drive into the chassis.
+* Always use approved packaging when shipping drives.
+* Do not stack drives on top of each other.
+
+Here is a front view of the H610S and H410S storage nodes with the drives:
+image::h610s_h410s.png[Shows the H610S and H410S storage nodes with the drives.]
+
+.Steps
+
+. Remove the drive from the cluster using either the NetApp Element software UI or the NetApp Element Management extension point in Element plug-in for vCenter server.
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Using the Element UI
+a|
+. From the  Element UI, Select *Cluster > Drives*.
+. Click *Failed* to view the list of failed drives.
+. Make a note of the slot number of the failed drive. You need this information to locate the failed drive in the chassis.
+. Click *Actions* for the drive you want to remove.
+. Click *Remove*.
+
+You can now physically remove the drive from the chassis.
+
+|Using the Element plug-in for vCenter server UI
+a|
+. From the NetApp Element Management extension point of the vSphere Web Client, select *NetApp Element Management > Cluster*.
+. If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+. Select *All* from the drop-down list to view the complete list of drives.
+. Select the check box for each drive you want to remove.
+. Click *Remove Drives*.
+. Confirm the action.
++
+NOTE: If there is not enough capacity to remove active drives before removing a node, an error message appears when you confirm the drive removal. After you resolve the error, you can now physically remove the drive from the chassis.
+|===
+. Replace the drive from the chassis:
+.. Unpack the replacement drive, and place it on a flat, static-free surface near the rack.
+Save the packing materials for when you return the failed drive to NetApp.
+..
++
+image::vcp-witnessnode.gif[Shows the NetApp Element Management > Clusters page with the nodes listed.]
+. Select the checkbox for the Witness Node that you want to delete, and click *Actions > Remove*.
+. Confirm the action in the prompt.
+. Click *Hosts and Clusters*.
+. Navigate to the Witness Node VM that you removed earlier.
+. Right-click the VM and power it off.
+. Right-click the VM that you powered off, and click *Delete from Disk*.
+. Confirm the action in the prompt.
+
+== Find more information
+* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
