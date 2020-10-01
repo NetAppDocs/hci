@@ -63,10 +63,7 @@ NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/do
 .. Create a new 64-bit virtual machine from your hypervisor with the following configuration:
 +
 * Six virtual CPUs
-* 12GB RAM for most configurations or 24GB RAM for Element 12.2 configurations.
-+
-NOTE: For Element 12.2 configurations, the increased provisioned memory capacity accommodates management services upgrades and is  not used in normal operation.
-
+* 24GB RAM
 * 400GB virtual disk, thin provisioned
 * One virtual network interface with internet access and access to the storage MVIP.
 * (Optional for SolidFire all-flash storage) One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
@@ -130,20 +127,13 @@ NOTE: You will be prompted to enter passwords in a secure prompt. If your cluste
 ----
 /sf/packages/mnode/redeploy-mnode --mnode_admin_user [username]
 ----
-.. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:
+.. Replace the value in [ ] brackets (including the brackets) with the user name for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
 +
-NOTE: The abbreviated form of the command name is in parentheses ( ) and can be substituted for the full name. You can add the following required parameters or allow the script to prompt you for the information.
+NOTE: You can add the user name or allow the script to prompt you for the information.
 
 +
-* *--mnode_admin_user (-mu) [username]*: The username for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
-* *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software with the persistent volumes that contain management node data for recovery.
-* *--storage_username (-su) [username]*: The storage cluster administrator username for the cluster specified by the `--storage_mvip` parameter.
-* *--persistent_volumes_account (-pva) [account_name]*: Enter the storage account name from the cluster containing the persistent volumes. This is the exact name of the storage user account that owns the volumes in the cluster.
-.. (Optional) Use parameter help if you need additional information about each parameter:
-+
-* *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
 .. Run the `redeploy-mnode` command.
-
+.. If you access Element or NetApp HCI web interfaces (such as the management node or NetApp Hybrid Cloud Control) using the Fully Qualified Domain Name (FQDN) of the system, link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api[reconfigure authentication for the management node^].
 
 [discrete]
 == Find more Information
