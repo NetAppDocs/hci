@@ -132,7 +132,7 @@ NOTE: You will be prompted to enter passwords in a secure prompt. If your cluste
 NOTE: You can add the user name or allow the script to prompt you for the information.
 
 +
-.. Run the `redeploy-mnode` command. The script displays a success message once the redeployment is complete.
+.. Run the `redeploy-mnode` command. The script displays a success message when the redeployment is complete.
 .. If you access Element or NetApp HCI web interfaces (such as the management node or NetApp Hybrid Cloud Control) using the Fully Qualified Domain Name (FQDN) of the system, link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api[reconfigure authentication for the management node^].
 
 [discrete]
