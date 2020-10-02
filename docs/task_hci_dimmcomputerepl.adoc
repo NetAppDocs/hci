@@ -5,7 +5,7 @@ summary: You can replace a faulty dual inline memory module (DIMM) in NetApp HCI
 keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
 ---
 
-= Replace DIMMs for compute nodes
+= Replace DIMMs in compute nodes
 :hardbreaks:
 :nofooter:
 :icons: font
