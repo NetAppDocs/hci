@@ -24,7 +24,7 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 +
 NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
 
-. https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-mg-vcp/GUID-9F20918F-19A3-4FA7-B58D-F8FF49716BF1.html[Register^] the Element Plug-in for vCenter Server again with vCenter.
+. https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-mg-vcp/GUID-9F20918F-19A3-4FA7-B58D-F8FF49716BF1.html[Register^] the Element Plug-in for vCenter Server again with vCenter.
 . http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-4F1BC760-D73D-4872-9C1D-EE90A80FB75A.html[Add clusters^] using the plug-in.
 . http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-A4BBF368-47B3-45B1-A1FD-966AA9A24C30.html[Configure QoSSIOC settings^] using the plug-in.
 . http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-170/GUID-5ACAE926-CC41-4A45-8AF2-D39756F8C93F.html[Enable QoSSIOC^] for all datastores controlled by the plug-in.
