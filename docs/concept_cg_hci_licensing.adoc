@@ -39,4 +39,4 @@ If you were provided a version of ONTAP Select for use in conjunction with a pur
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

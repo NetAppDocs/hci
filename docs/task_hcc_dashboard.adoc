@@ -45,7 +45,7 @@ TIP: You might see some or all these panes, depending on your installation. For 
 Use the *Storage* pane to see your total storage environment. You can monitor the number of storage clusters, storage nodes, and total volumes.
 
 == Monitor compute resources
-Use the *Compute* pane to see your total compute environment. You can monitor the number of compute clusters and total compute nodes.
+Use the *Compute* pane to see your total NetApp H-series compute environment. You can monitor the number of compute clusters and total compute nodes.
 
 == Monitor storage capacity
 Monitoring the storage capacity of your environment is critical. Using the Storage Capacity pane, you can determine your storage capacity efficiency gains with or without compression, deduplication, and thin provisioning features enabled.
@@ -62,9 +62,9 @@ TIP: To view cluster health, also look at the SolidFire Active IQ Dashboard. See
 +
 Look at the vertical lines to determine whether your used capacity is less than the total or less than Warning, Error, or Critical thresholds. Hover over the lines to see details.
 +
-NOTE: You can set the threshold for Warning, which defaults to 3% below the Error threshold. The Error and Critical thresholds are preset and not configurable by design. The Error threshold indicates that less than one node of capacity remains in the cluster. For steps on setting the threshold, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-C238E415-E83C-4F1F-92D4-E0534B601FCA.html[Setting cluster full threshold].
+NOTE: You can set the threshold for Warning, which defaults to 3% below the Error threshold. The Error and Critical thresholds are preset and not configurable by design. The Error threshold indicates that less than one node of capacity remains in the cluster. For steps on setting the threshold, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-C238E415-E83C-4F1F-92D4-E0534B601FCA.html[Setting cluster full threshold].
 +
-TIP: For details about the related cluster thresholds Element API, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-api/GUID-9B1D06D7-8FEE-4A52-B3C2-33F03D8540FB.html[“getClusterFullThreshold”] in the _Element API Guide_. To view details about block and metadata capacity, see http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-58E03E89-C183-4E23-B9B4-8D466210E8B4.html[Understanding cluster fullness levels] in the _Element User Guide_.
+TIP: For details about the related cluster thresholds Element API, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-9B1D06D7-8FEE-4A52-B3C2-33F03D8540FB.html[“getClusterFullThreshold”] in the _Element API Guide_. To view details about block and metadata capacity, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-58E03E89-C183-4E23-B9B4-8D466210E8B4.html[Understanding cluster fullness levels] in the _Element User Guide_.
 
 .	Click the *EFFECTIVE* tab, to see information about total storage provisioned to connected hosts and to see efficiency ratings.
 
@@ -72,7 +72,7 @@ TIP: For details about the related cluster thresholds Element API, see http://do
 .. *Effective Capacity bar chart*: Look at the vertical lines to determine whether your used capacity is less than the total or less than Warning, Error, or Critical thresholds. Similar to the Raw tab, you can hover over the vertical lines to see details.
 .. *Efficiencies*: Look at these ratings to determine your storage capacity efficiency gains with compression, deduplication, and thin provisioning features enabled. For example, if compression shows as “1.3x”, this means that storage efficiency with compression enabled is 1.3 times more efficient than without it.
 +
-NOTE: Total Efficiencies equals (maxUsedSpace * efficiency factor) / 2, where efficiencyFactor = (thinProvisioningFactor * deDuplicationFactor * compressionFactor). When Thin Provisioning is unchecked, it is not included in the Total Efficiency. 
+NOTE: Total Efficiencies equals (maxUsedSpace * efficiency factor) / 2, where efficiencyFactor = (thinProvisioningFactor * deDuplicationFactor * compressionFactor). When Thin Provisioning is unchecked, it is not included in the Total Efficiency.
 
 ..	If the effective storage capacity nears an Error or Critical threshold, consider clearing the data on your system. Alternatively, consider expanding your system.
 +
@@ -88,7 +88,7 @@ The Storage Performance pane helps you identify whether the performance is reach
 
 The information on this pane refreshes every 10 seconds and shows an average of all the points on the graph.
 
-For details about the associated Element API method, see the http://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-api/GUID-63BEAEDE-74F7-421E-9360-08F166A603F4.html[GetClusterStats] method in the _Element API Reference Guide_.
+For details about the associated Element API method, see the http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-63BEAEDE-74F7-421E-9360-08F166A603F4.html[GetClusterStats] method in the _Element API Reference Guide_.
 
 .Steps
 
