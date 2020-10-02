@@ -1,0 +1,114 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_dimmcomputerepl.html
+summary: You can replace a faulty dual inline memory module (DIMM) in NetApp HCI compute nodes instead of replacing the entire node.
+keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
+---
+
+= Replace DIMMs for compute nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can replace a faulty dual inline memory module (DIMM) in NetApp HCI compute nodes instead of replacing the entire node.
+
+.What you'll need
+
+* Before starting this procedure, you should have contacted NetApp Support and received a replacement part. Support will be involved during the installation of the replacement. If you have not done so already, contact https://www.netapp.com/us/contact-us/support.aspx[Support].
+* You have planned for system downtime, because you need to power down or cycle the node and boot the node to NetApp Safe Mode to access the terminal user interface (TUI).
+
+.About this task
+This procedure applies to the following compute node models:
+
+* H410C nodes
+* H610C node
+* H615C node
++
+IMPORTANT: H410C and H615C nodes include DIMMs from different vendors. Ensure that you do not mix DIMMs from different vendors in one chassis.
+
+Here are the steps involved in replacing DIMMs in compute nodes:
+
+* <<Prepare to replace the DIMM>>
+* <<Replace the DIMM from the chassis>>
+
+== Prepare to replace the DIMM
+When issues with the DIMM occur, VMware ESXi displays alerts, such as `Memory Configuration Error`, `Memory Uncorrectable ECC`, `Memory Transition to Critical`, and `Memory Critical Overtemperature`. Even if the alerts disappear after a while, the hardware problem might  persist. You should diagnose and address the faulty DIMM. You can get information about the faulty DIMM from vCenter Server. If you need more information than what is available from vCenter Server, you must run the hardware check in the TUI.
+
+.Steps
+
+. Access the node by logging in to vCenter Server.
+. Right-click the node that is reporting the error, and select the option to place the node in maintenance mode.
+. Migrate the virtual machines (VMs) to another available host.
++
+NOTE: See the VMware documentation for the migration steps.
+
+. Power down the compute node.
++
+NOTE: If you have the information about which DIMM needs to be replaced and do not need to access the TUI, you can skip the following steps in this section.
+
+. Plug in a keyboard, video, and mouse (KVM) to the back of the node that reported the error.
+. Press the power button at the front of the node.
+It takes approximately six minutes for the node to boot. The screen displays a boot menu.
+. Use the keyboard to select *NetApp Safe Mode*.
++
+IMPORTANT: You should do this in three seconds. If you miss the window, you should go through the boot process again.
+
+. In the TUI window that opens, navigate to *Maintenance Tasks > Check Hardware*, and select *OK*.
+A window opens with the results of the hardware check. If the check detects a DIMM issue, the results include a timestamp and a slot identifier.
+. Record the CPU number and the DIMM slot number/ID.
+This will help you identify the failed DIMM in the chassis.
+. For H410C and H615C nodes, perform the steps to identify the DIMM manufacturer.
++
+IMPORTANT: H410C and H615C nodes include DIMMs from different manufacturers. You should not mix different DIMM types in the same chassis. You should identify the manufacturer of the faulty DIMM and order a replacement of the same type.
++
+.. Log in to the BMC to launch the console on the node.
+.. Press *F2* on the keyboard to get to the Customize System/View Logs menu.
+.. Enter the password when prompted.
++
+NOTE: The password should match what you configured in the NetApp Deployment Engine when you set up NetApp HCI.
+
+.. From the System Customization menu, press the down arrow to navigate to Troubleshooting Options, and press *Enter*.
+.. From the Troubleshooting Mode Options menu, use the up or down arrow to enable ESXi shell and SSH, which are disabled by default.
+.. Press the <Esc> key twice to exit Troubleshooting Options.
+.. Run the `smbiosDump` command using one of the following options:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Option A
+a|
+. Connect to the ESXi host (compute node) using the IP address of the host and the root credentials that you defined.
+. Run the `smbiosDump` command.
+See the following sample output:
+----
+Memory Device:#30
+Location: "P1-DIMMA1"
+Bank: "P0_Node0_Channel0_Dimm0"
+Manufacturer:"Samsung"
+Serial: "38EB8380"
+Asset Tag: "P1-DIMMA1_AssetTag (date:18/15)"
+Part Number: "M393A4K40CB2-CTD"
+Memory Array: #29
+Form Factor: 0x09(DIMM)
+Type: 0x1a (DDR4)
+Type Detail: 0x0080 (Synchronous)
+Data Width: 64 bits (+8 ECC bits)
+Size: 32 GB
+----
+
+|Option B
+a|
+. Press *Alt + F1* to enter shell, and log in to the node to run the command.
+
+|===
+
+== Replace the DIMM from the chassis
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

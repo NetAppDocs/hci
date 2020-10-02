@@ -192,6 +192,8 @@ entries:
   - title: Maintain H-series hardware
     entries:
      - title: Replace drives
-       url: /task_hci_driverepl.html    
+       url: /task_hci_dimmcomputerepl.html
+     - title: Replace drives
+       url: /task_hci_driverepl.html
   - title: Legal notices
     url: /reference_notices_hci.html
