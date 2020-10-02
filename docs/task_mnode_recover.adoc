@@ -101,7 +101,7 @@ NOTE: In vSphere, the *Synchronize guest time with host* box should be checked i
 . Download the management services bundle (version 2.15.25 or later) that was previously installed on the existing management node and save it in the `/sf/etc/mnode/` directory.
 . Extract the downloaded bundle using the following command, replacing the value in [ ] brackets (including the brackets) with the name of the bundle file:
 ----
-tar xvf [management services bundle]
+tar xvf [management services bundle file]
 ----
 . Create a temporary destination directory for the management services bundle contents:
 +
