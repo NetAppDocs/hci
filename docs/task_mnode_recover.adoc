@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_mnode_recover.html
-summary: You can recover and redeploy a management node for your cluster running NetApp Element software.
+summary: You can recover and redeploy a management node for your cluster running NetApp Element software. Depending on your configuration, you might need to reconfigure authentication for the management node.
 keywords: netapp, element, management node, mnode, disaster recovery, VM
 ---
 
