@@ -27,9 +27,6 @@ You should follow these best practices for handling drives while removing and re
 * Always use approved packaging when shipping drives.
 * Do not stack drives on top of each other.
 
-Here is a front view of the H610S and H410S storage nodes with the drives:
-image::h610s_h410s.png[Shows the H610S and H410S storage nodes with the drives.]
-
 .Steps
 
 . Remove the drive from the cluster using either the NetApp Element software UI or the NetApp Element Management extension point in Element plug-in for vCenter server.
@@ -63,18 +60,78 @@ NOTE: If there is not enough capacity to remove active drives before removing a 
 . Replace the drive from the chassis:
 .. Unpack the replacement drive, and place it on a flat, static-free surface near the rack.
 Save the packing materials for when you return the failed drive to NetApp.
-..
+Here is the front view of the H610S and H410S storage nodes with the drives:
 +
-image::vcp-witnessnode.gif[Shows the NetApp Element Management > Clusters page with the nodes listed.]
-. Select the checkbox for the Witness Node that you want to delete, and click *Actions > Remove*.
-. Confirm the action in the prompt.
-. Click *Hosts and Clusters*.
-. Navigate to the Witness Node VM that you removed earlier.
-. Right-click the VM and power it off.
-. Right-click the VM that you powered off, and click *Delete from Disk*.
-. Confirm the action in the prompt.
+image::h610s_h410s.png[Shows the front view of the H610S and H410S storage nodes.]
+.. Perform the steps based on the node model:
++
+[%header,cols=2*]
+|===
+|Node model
+|Steps
+
+|H410S
+a|
+. Identify the node by matching the serial number (service tag) with the number you noted down from the Element UI.
+The serial number is on a sticker at the back of each node.
+After you identify the node, you can use the slot information to identify the slot that the failed drive is in. Drives are arranged alphabetically from A through D and from 0 through 5.
+. Remove the bezel.
+. Press the release button on the failed drive:
++
+image::h410s_drive.png[Shows the release button on the drive for H410S storage nodes.]
+When you press the release button, the cam handle on the drive springs open partially, and the drive releases from the midplane.
+. Open the cam handle, and slide the drive out carefully using both hands.
+. Place the drive on an antistatic, level surface.
+. Insert the replacement drive into the slot all the way into the chassis using both hands.
+. Press down the cam handle until it clicks.
+. Reinstall the bezel.
+. Notify NetApp Support about the drive replacement.
+NetApp Support will provide instructions for returning the failed drive.
+
+|H610S
+a|
+. Match the slot number of the failed drive from the Element UI with the number on the chassis.
+The LED on the failed drive is lit amber.
+. Remove the bezel.
+. Press the release button, and remove the failed drive as shown in the following illustration:
++
+image::h610s_driveremove.png[Shows the drive being removed from the H610S node.]
+NOTE: Ensure that the tray handle is fully open before you attempt to slide the drive out of the chassis.
+
+. Slide the drive out, and place it on a static-free, level surface.
+. Press the release button on the replacement drive before you insert it into the drive bay.
+The drive tray handle springs open.
+. Insert the replacement drive without using excessive force.
+When the drive is inserted fully, you hear a click.
+. Close the drive tray handle carefully.
+. Reinstall the bezel.
+. Notify NetApp Support about the drive replacement.
+NetApp Support will provide instructions for returning the failed drive.
+
+|===
+. Add the drive back to the cluster using either the Element UI or the NetApp Element Management extension point in Element plug-in for vCenter server.
++
+NOTE: When you install a new drive in an existing node, the drive automatically registers as *Available* in the Element UI. You should add the drive to the cluster before it can participate in the cluster.
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Using the Element UI
+a|
+. From the  Element UI, Select *Cluster > Drives*.
+. Click *Available* to view the list of available drives.
+. Click the Actions icon for the drive you want to add, and click *Add*.
+
+|Using the Element plug-in for vCenter server UI
+a|
+. From the NetApp Element Management extension point of the vSphere Web Client, select *NetApp Element Management > Cluster > Drives*.
+. From the Available drop-down list, select the drive, and click *Add*.
+. Confirm the action.
+
+|===
 
 == Find more information
-* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* http://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Software Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
