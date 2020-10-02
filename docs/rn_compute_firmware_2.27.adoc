@@ -87,10 +87,14 @@ a|
 === Mellanox NIC firmware driver compatibility
 The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
 
-* *ESXi 6.5*: Version 4.16.13.5
+* *ESXi 7.0*: H300E/H500E/H700E/H410C: Version 4.19.16.1
+* *ESXi 7.0*: H610C/H615C: Version 4.17.15.16
 * *ESXi 6.7*: Version 4.17.15.16
+* *ESXi 6.5*: Version 4.16.13.5
 
 NOTE: Before upgrading to version 2.27, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.27 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
+
+While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
 
 == Download Compute Firmware Bundle 2.27
 To download the Compute Firmware Bundle:
@@ -140,15 +144,18 @@ After you update the BIOS and BMC, update the H410C node firmware using the comp
 
 |CSESF-309
 |H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
-|Run the following command to recover the ports: `esxcli network nic set -n vmnic2 -a`
+|Run the following command to recover the ports: `sxcli network nic set -n vmnic2 -a`
 
 |CSESF-303
 |Network statistics errors are seen for the Mellanox NIC on H410C nodes.
 |None
 
 |CSESF-293 / PE-10130
-|Mellanox NIC firmware can be downgraded by BootstrapOS after you upgrade to the Compute Firmware Bundle version 2.27.
-|Reinstall Compute Firmware Bundle version 2.27.
+|Mellanox NIC firmware can be downgraded by the compute firmware 12.2.91 package.
+a|If you want to upgrade other firmware on H410C or H300E/H500E/H700E nodes and upgrade Mellanox NIC out-of-band, perform the following steps:
+
+. Upgrade other firmware via compute firmware bundle 12.2.91.
+. Upgrade Mellanox firmware via out-of-band methods.
 
 |PE-11033
 |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
