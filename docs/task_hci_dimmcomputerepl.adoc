@@ -23,11 +23,13 @@ You can replace a faulty dual inline memory module (DIMM) in NetApp HCI compute 
 .About this task
 This procedure applies to the following compute node models:
 
-* H410C nodes
-* H610C node
-* H615C node
+* H410C nodes. An H410C node is inserted into a 2U NetApp HCI chassis.
+* H610C node. An H610C node is built into the chassis.
+* H615C node. An H615C node is built into the chassis.
 +
 IMPORTANT: H410C and H615C nodes include DIMMs from different vendors. Ensure that you do not mix DIMMs from different vendors in one chassis.
++
+NOTE: The terms "chassis" and "node" are used interchangeably in the case of H610C and H615C, because the node and chassis are not separate components.
 
 Here are the steps involved in replacing DIMMs in compute nodes:
 
@@ -86,7 +88,7 @@ a|
 . Run the `smbiosDump` command.
 See the following sample output:
 ----
-Memory Device:#30
+`Memory Device:#30
 Location: "P1-DIMMA1"
 Bank: "P0_Node0_Channel0_Dimm0"
 Manufacturer:"Samsung"
@@ -98,7 +100,7 @@ Form Factor: 0x09(DIMM)
 Type: 0x1a (DDR4)
 Type Detail: 0x0080 (Synchronous)
 Data Width: 64 bits (+8 ECC bits)
-Size: 32 GB
+Size: 32 GB`
 ----
 
 |Option B
@@ -108,6 +110,87 @@ a|
 |===
 
 == Replace the DIMM from the chassis
+Before you physically remove and replace the faulty DIMM in the chassis, ensure that you have performed all the link:task_hci_dimmcomputerepl.html#prepare-to-replace-the-dimm[preparatory steps].
+
+.Steps
+
+. Power down the chassis or node.
++
+NOTE: For a H610C or H615C chassis, power down the chassis. For H410C nodes in a 2U, four-node chassis, power down only the node with the faulty DIMM.
+
+. Remove the power cables and network cables, carefully slide the node or chassis out of the rack, and place it on a flat, antistatic surface.
++
+TIP: Consider using twist ties for cables.
+
+. Put on antistatic protection before you open the chassis cover to replace the DIMM.
+. Perform the steps relevant to your node model:
++
+[%header,cols=2*]
+|===
+|Node model
+|Steps
+
+|H410C
+a|
+. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. The following sample images show you the location on the motherboard where you can find the DIMM slot numbers:
+. Press the two retaining clips outward, and carefully pull the DIMM up. The following image shows the retaining clips:
+. Install the replacement DIMM correctly. When you insert the DIMM into the slot correctly, the two clips lock in place.
+
++
+IMPORTANT: Ensure that you touch only the rear ends of the DIMM. If you press on other parts of the DIMM, it might result in damage to the hardware.
+
+. Install the node in the NetApp HCI chassis, ensuring that the node clicks when you slide it into place.
+
+|H610C
+a|
+. Lift the cover as shown in the following image:
+. Loosen the four blue lock screws at the back of the node. The following image shows the location of two lock screws; you will find the other two on the other side of the node:
+. Remove both PCI card blanks.
+. Remove the GPU and the airflow cover.
+. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. The following sample image shows you the location on the motherboard where you can find the DIMM slot numbers:
+. Press the two retaining clips outward, and carefully pull the DIMM up.
+. Install the replacement DIMM correctly. When you insert the DIMM into the slot correctly, the two clips lock in place.
+
++
+IMPORTANT: Ensure that you touch only the rear ends of the DIMM. If you press on other parts of the DIMM, it might result in damage to the hardware.
+
+. Replace all the components that you removed: GPU, airflow cover, and PCI blanks.
+. Tighten the lock screws.
+. Put the cover back on the node.
+. Install the H610C chassis in the rack, ensuring that the chassis clicks when you slide it into place.
+
+|H615C
+a|
+. Lift the cover as shown in the following image:
+. Remove the GPU (if your H615C node has GPU installed) and the airflow cover.
+. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. The following sample image shows you the location on the motherboard where you can find the DIMM slot numbers:
+. Press the two retaining clips outward, and carefully pull the DIMM up.
+. Install the replacement DIMM correctly. When you insert the DIMM into the slot correctly, the two clips lock in place.
+
++
+IMPORTANT: Ensure that you touch only the rear ends of the DIMM. If you press on other parts of the DIMM, it might result in damage to the hardware.
+
+. Replace the airflow cover.
+. Put the cover back on the node.
+. Install the H610C chassis in the rack, ensuring that the chassis clicks when you slide it into place.
+
+|===
+
+. Insert the power cables and network cables.
+Ensure that all the port lights turn on.
+. Press the power button at the front of the node if it does not power on automatically when you install it.
+. After the node is displayed in vSphere, right-click the name and take the node out of maintenance mode.
+. Verify the hardware information as follows:
+.. Log in to the baseboard management controller (BMC) UI.
+.. Select *System > Hardware Information*, and check the DIMMs listed.
+
+.What's next
+
+After the node returns to normal operation, in vCenter, check the Summary tab to ensure that the memory capacity is as expected.
+
+NOTE: If the DIMM is not installed correctly, the node will operate normally but with lower than expected memory capacity.
+
+TIP: After the DIMM replacement procedure, you can clear the warnings and errors on the Hardware Status tab in vCenter. You can do this if you want to erase the history of errors related to the hardware that you replaced. https://kb.vmware.com/s/article/2011531[Learn more^].
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
