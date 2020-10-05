@@ -75,8 +75,8 @@ For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be autom
 
 Choose the option that is relevant to your upgrade scenario:
 
-* For H615C, H610C, and H410C: <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
-* For H615C, H610C, and H410C: <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
+* <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
+* <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
 * For compute node image 12.0: <<Use a USB drive with the latest firmware image downloaded>>
 * For compute firmware 12.2.109: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
