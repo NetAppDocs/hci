@@ -71,7 +71,7 @@ Perform the following steps to upgrade the BMC firmware version on your H610S no
 * You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
 * You have downloaded the BMC update package.
 * You have ensured that the BMC and the computer you are using to perform the update are located on the same network.
-* You have contacted NetApp Support for assistance with installing the required patches (SUST-689 and SUST-909) before proceeding with the BMC upgrade.
+* You have contacted NetApp Support for assistance with the BMC upgrade.
 
 .Steps
 . Log in to the BMC console using your web browser: `https://<BMC_IP>/#login`, where `<BMC_IP>` is the IP address of the BMC.
