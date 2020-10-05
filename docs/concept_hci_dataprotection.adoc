@@ -126,7 +126,7 @@ You can manually enable protection domain monitoring using the NetApp Element Co
 When creating a new cluster, if you are using storage nodes that reside in a shared chassis, you might want to consider designing for chassis-level failure protection using the protection domains feature.
 
 You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain. For details, see
-https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-7D31AC22-8815-4BDA-984A-9AED750B96B1.html[SolidFire and Element 12.0 Documentation Center^].
+https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-7D31AC22-8815-4BDA-984A-9AED750B96B1.html[SolidFire and Element 12.0 Documentation Center^].
 
 == Double Helix high availability
 

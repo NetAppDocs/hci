@@ -26,7 +26,7 @@ NOTE: A local (non-LDAP) cluster administrator account is required to access act
 
 You can manage cluster administrator accounts by creating, deleting, and editing cluster administrator accounts, changing the cluster administrator password, and configuring LDAP settings to manage system access for users.
 
-For details, see the https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[SolidFire and Element Documentation Center^].
+For details, see the https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[SolidFire and Element Documentation Center^].
 
 
 == User account management
@@ -41,7 +41,7 @@ Here are some additional considerations:
 * An account can have up to two thousand volumes assigned to it, but a volume can belong to only one account.
 * User accounts can be managed from NetApp Element Management extension point.
 
-For details, see user account information in the https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^].
+For details, see user account information in the https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-mg-vcp/GUID-A6418A61-29C6-4904-A434-3F1B7FD62340.html[SolidFire and Element Documentation Center^].
 
 
 
@@ -49,4 +49,4 @@ For details, see user account information in the https://docs.netapp.com/sfe-120
 == Find more information
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* https://docs.netapp.com/sfe-120/index.jsp[SolidFire and Element Documentation Center^]
+* https://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Documentation Center^]
