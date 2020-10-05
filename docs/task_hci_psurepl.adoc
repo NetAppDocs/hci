@@ -39,13 +39,13 @@ Alarms in the VMware vSphere Web Client provide information about the failed pow
 . Locate the faulty power supply unit in the chassis. The LED on the faulty unit displays amber.
 +
 NOTE: The power supply units are located differently based on the type of chassis.
-
++
 See the images below for the locations of the power supply units:
-
++
 [%header,cols=2*]
 |===
 |Model
-|Location
+|Location of the power supply units
 
 |2U, four-node NetApp HCI storage chassis
 a|
@@ -69,14 +69,17 @@ image::h610s_psu.png[Shows the power supply units in a H610S chassis.]
 |===
 
 . Unplug the power cord from the power supply unit.
-. Remove the power supply unit as shown in the following illustration:
+. Lift the cam handle, and press the blue latch to slide out the power supply unit.
++
+image::psu-remove.gif[Shows the cam handle being lifted and the power supply unit being slid out of the chassis.]
 +
 NOTE: The illustration is an example. The location of the power supply unit in the chassis and the color of the release button vary depending on the type of chassis you have.
 +
 IMPORTANT: Ensure that you use both hands to support the weight of the power supply unit.
 
-. Using both hands, align the edges of the power supply unit with the opening in the chassis, and gently push the unit into the chassis using the cam handle, until it locks into place.
-. Return the cam handle to the upright position.
+. Using both hands, align the edges of the power supply unit with the opening in the chassis, gently push the unit into the chassis using the cam handle until it locks into place, and return the cam handle to the upright position.
++
+image::psu-install.gif[Shows the power supply unit being installed in the chassis.]
 . Plug in the power cord.
 . Return the faulty unit to NetApp by following the instructions in the box that was shipped to you.
 
