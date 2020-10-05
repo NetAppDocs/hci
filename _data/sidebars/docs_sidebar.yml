@@ -195,5 +195,7 @@ entries:
        url: /task_hci_dimmcomputerepl.html
      - title: Replace drives for storage nodes
        url: /task_hci_driverepl.html
+     - title: Replace power supply units
+       url: /task_hci_psurepl.html
   - title: Legal notices
     url: /reference_notices_hci.html

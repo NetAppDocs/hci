@@ -1,0 +1,85 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_psurepl.html
+summary: If a power supply unit is faulty, you should replace it as soon as possible to ensure that the chassis has a redundant power source.
+keywords: netapp, hci, psu, replace power supply, H410S, H610S, H410C, H610C, H615C
+---
+
+= Replace power supply units
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Each chassis includes two power supply units for power redundancy. If a power supply unit is faulty, you should replace it as soon as possible to ensure that the chassis has a redundant power source.
+
+.What you'll need
+
+* You have determined that the power supply unit is faulty.
+* You have a replacement power supply unit.
+* You have verified that the second power supply unit is operating.
+* You have an electrostatic discharge (ESD) wristband, or you have taken other antistatic precautions.
+
+.About this task
+The replacement procedure applies to the following node models:
+
+* Two rack unit (2U), four-node NetApp HCI chassis
+* 2U H610C compute chassis
+* One rack unit (1U) H615C compute chassis
+* 1U H610S storage chassis
++
+NOTE: In the case of H610C, H615C, and H610S, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
+
+Alarms in the VMware vSphere Web Client provide information about the failed power supply unit, referring to it as PS1 or PS2. In a NetApp HCI 2U, four-node chassis, PS1 refers to the unit on the top row of the chassis and PS2 refers to the unit on the bottom row of the chassis. You can replace the faulty power supply unit while your chassis is powered on and working, as long as the redundant power supply unit is functioning.
+
+.Steps
+
+. Locate the faulty power supply unit in the chassis. The LED on the faulty unit displays amber.
++
+NOTE: The power supply units are located differently based on the type of chassis.
+
+See the images below for the locations of the power supply units:
+
+[%header,cols=2*]
+|===
+|Model
+|Location
+
+|2U, four-node NetApp HCI storage chassis
+a|
+image::storage_chassis_psu.png[Shows the power supply units in a 2U, four-storage node chassis.]
+
+NOTE: The nodes in your chassis might look different depending on the type of nodes (storage or compute) you have.
+
+|H610C chassis
+a|
+image::h610c_psu.png[Shows the power supply units in a H610C chassis.]
+
+|H615C chassis
+a|
+image::h615c_psu.png[Shows the power supply units in a H615C chassis.]
+
+|H610S chassis
+a|
+image::h610s_psu.png[Shows the power supply units in a H610S chassis.]
+
+
+|===
+
+. Unplug the power cord from the power supply unit.
+. Remove the power supply unit as shown in the following illustration:
++
+NOTE: The illustration is an example. The location of the power supply unit in the chassis and the color of the release button vary depending on the type of chassis you have.
++
+IMPORTANT: Ensure that you use both hands to support the weight of the power supply unit.
+
+. Using both hands, align the edges of the power supply unit with the opening in the chassis, and gently push the unit into the chassis using the cam handle, until it locks into place.
+. Return the cam handle to the upright position.
+. Plug in the power cord.
+. Return the faulty unit to NetApp by following the instructions in the box that was shipped to you.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
