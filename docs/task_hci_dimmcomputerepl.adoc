@@ -59,7 +59,9 @@ It takes approximately six minutes for the node to boot. The screen displays a b
 IMPORTANT: You should do this in three seconds. If you miss the window, you should go through the boot process again.
 
 . In the TUI window that opens, navigate to *Maintenance Tasks > Check Hardware*, and select *OK*.
-A window opens with the results of the hardware check. If the check detects a DIMM issue, the results include a timestamp and a slot identifier.
+A window opens with the results of the hardware check. If the check detects a DIMM issue, the results include a timestamp and a slot identifier. Here is a sample output from the hardware check:
++
+image::dimm_hw_check.png[Shows a sample output from the hardware check.]
 . Record the CPU number and the DIMM slot number/ID.
 This will help you identify the failed DIMM in the chassis.
 . For H410C and H615C nodes, perform the steps to identify the DIMM manufacturer.
@@ -67,12 +69,16 @@ This will help you identify the failed DIMM in the chassis.
 IMPORTANT: H410C and H615C nodes include DIMMs from different manufacturers. You should not mix different DIMM types in the same chassis. You should identify the manufacturer of the faulty DIMM and order a replacement of the same type.
 +
 .. Log in to the BMC to launch the console on the node.
-.. Press *F2* on the keyboard to get to the Customize System/View Logs menu.
+.. Press *F2* on the keyboard to get to the *Customize System/View Logs* menu.
 .. Enter the password when prompted.
 +
 NOTE: The password should match what you configured in the NetApp Deployment Engine when you set up NetApp HCI.
++
+image::node_console_step1.png[Shows the window to enter the password to log in to the console on the node.]
 
 .. From the System Customization menu, press the down arrow to navigate to Troubleshooting Options, and press *Enter*.
++
+image::node_console_step2.png[Shows the System Customization menu.]
 .. From the Troubleshooting Mode Options menu, use the up or down arrow to enable ESXi shell and SSH, which are disabled by default.
 .. Press the <Esc> key twice to exit Troubleshooting Options.
 .. Run the `smbiosDump` command using one of the following options:
@@ -132,8 +138,14 @@ TIP: Consider using twist ties for cables.
 
 |H410C
 a|
-. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. The following sample images show you the location on the motherboard where you can find the DIMM slot numbers:
-. Press the two retaining clips outward, and carefully pull the DIMM up. The following image shows the retaining clips:
+. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. Here are sample images showing the DIMM slot numbers on the motherboard:
++
+image::h410c_dimmslot.png[Shows the DIMM slot numbers on the motherboard of the H410C node.]
++
+image::h410c_dimmslot_2.png[Shows a close-up view of the DIMM slot numbers on the H410C node motherboard.]
+. Press the two retaining clips outward, and carefully pull the DIMM up. Here is a sample image showing the retaining clips:
++
+image::h410c_dimm_clips.png[Shows the retaining clips for the DIMMs in the H410C node.]
 . Install the replacement DIMM correctly. When you insert the DIMM into the slot correctly, the two clips lock in place.
 
 +
@@ -144,10 +156,16 @@ IMPORTANT: Ensure that you touch only the rear ends of the DIMM. If you press on
 |H610C
 a|
 . Lift the cover as shown in the following image:
-. Loosen the four blue lock screws at the back of the node. The following image shows the location of two lock screws; you will find the other two on the other side of the node:
++
+image::h610c_airflowcover.png[Shows the cover lifted on the H610C node.]
+. Loosen the four blue lock screws at the back of the node. Here is a sample image showing the location of two lock screws; you will find the other two on the other side of the node:
++
+image::h610c_lockscrews.png[Shows the lock screws at the back of the H610C node.]
 . Remove both PCI card blanks.
 . Remove the GPU and the airflow cover.
-. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. The following sample image shows you the location on the motherboard where you can find the DIMM slot numbers:
+. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. Here is a sample image showing the location of the DIMM slot numbers on the motherboard:
++
+image::h610c_dimmslot.png[Shows the DIMM slot numbers on the H610C motherboard.]
 . Press the two retaining clips outward, and carefully pull the DIMM up.
 . Install the replacement DIMM correctly. When you insert the DIMM into the slot correctly, the two clips lock in place.
 
@@ -162,8 +180,14 @@ IMPORTANT: Ensure that you touch only the rear ends of the DIMM. If you press on
 |H615C
 a|
 . Lift the cover as shown in the following image:
++
+image::h615c_airflowcover.png[Shows the cover lifted on the H615C node.]
 . Remove the GPU (if your H615C node has GPU installed) and the airflow cover.
-. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. The following sample image shows you the location on the motherboard where you can find the DIMM slot numbers:
++
+image::h615c_gpu.png[Shows the airflow cover removed on the H615C node.]
+. Find the failed DIMM by matching the slot number/ID you noted earlier with the numbering on the motherboard. Here is a sample image showing the location of the DIMM slot numbers on the motherboard:
++
+image::h615c_dimmslot.png[Shows the DIMM slot numbers on the H615C motherboard.]
 . Press the two retaining clips outward, and carefully pull the DIMM up.
 . Install the replacement DIMM correctly. When you insert the DIMM into the slot correctly, the two clips lock in place.
 
