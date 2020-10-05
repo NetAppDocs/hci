@@ -57,8 +57,6 @@ entries:
            url: /hci_prereqs_network_configuration_option_C.html
      - title: DNS and timekeeping requirements
        url: /hci_prereqs_timekeeping.html
-     - title: DNS and timekeeping requirements
-       url: /hci_prereqs_timekeeping.html
      - title: Environmental requirements
        url: /hci_prereqs_environmental.html
      - title: Protection Domains
