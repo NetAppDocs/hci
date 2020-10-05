@@ -87,8 +87,8 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
 == Configure the management node
-. SSH into the management node or use the console provided by your hypervisor.
-. Using SSH, run the following command to gain root privileges. Enter your password when prompted:
+. Log in to the management node using SSH or the console provided by your hypervisor.
+. Run the following command to gain root privileges. Enter your password when prompted:
 +
 ----
 sudo su
@@ -98,18 +98,18 @@ sudo su
 +
 NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
 
-. Download the management services bundle (version 2.15.25 or later) that was previously installed on the existing management node and save it in the `/sf/etc/mnode/` directory.
-. Extract the downloaded bundle using the following command, replacing the value in [ ] brackets (including the brackets) with the name of the bundle file:
-+
-----
-tar xvf [management services bundle file]
-----
 . Create a temporary destination directory for the management services bundle contents:
 +
 ----
 mkdir -p /sf/etc/mnode/mnode-archive
 ----
-. Extract the management services bundle file to the `/sf/etc/mnode-archive` directory:
+. Download the management services bundle (version 2.15.25 or later) that was previously installed on the existing management node and save it in the `/sf/etc/mnode/` directory.
+. Extract the downloaded bundle using the following command, replacing the value in [ ] brackets (including the brackets) with the name of the bundle file:
++
+----
+tar xvf /sf/etc/mnode/[management services bundle file]
+----
+. Extract the resulting file to the `/sf/etc/mnode-archive` directory:
 +
 ----
 tar -C /sf/etc/mnode/mnode-archive -xvf /sf/etc/mnode/services_deploy_bundle.tar.gz
