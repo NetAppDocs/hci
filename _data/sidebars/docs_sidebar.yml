@@ -76,6 +76,18 @@ entries:
         url: /hci_prereqs_task_validate_config_advisor.html
       - title: Configure IPMI for each node
         url: /hci_prereqs_final_prep.html
+  - title: Deploy NetApp HCI
+    entries:
+     - title: Access the NetApp Deployment Engine
+       entries:
+         - title: NetApp Deployment Engine access options overview
+           url: /task_nde_access_overview.html
+         - title: Access the NetApp Deployment Engine in environments without DHCP
+           url: /task_nde_access_no_dhcp.html
+         - title: Access the NetApp Deployment Engine in environments with DHCP
+           url: /task_nde_access_dhcp.html
+         - title: Manually assign IP addresses to access the NetApp Deployment Engine
+           url: /task_nde_access_manual_ip.html
   - title: Manage NetApp HCI
     entries:
       - title: Monitor your NetApp HCI system

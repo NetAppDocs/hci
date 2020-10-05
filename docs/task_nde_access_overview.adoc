@@ -1,0 +1,38 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_access_overview.html
+summary: Access the NetApp Deployment Engine. before deploying NetApp HCI using one of several methods, depending on your environment.
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
+---
+
+= Access the NetApp Deployment Engine
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+To deploy NetApp HCI, you need to access the NetApp Deployment Engine on one of the NetApp H-Series storage nodes via the IPv4 address assigned to the Bond1G interface, which is the logical interface that combines ports A and B for storage nodes. This storage node becomes the controlling storage node for the deployment process. Depending on your environment, you need to either configure the IPv4 address or retrieve it from one of the storage nodes.
+
+NOTE: You can only access the NetApp Deployment Engine using the Bond1G interface of a storage node. Using the Bond10G interface, the logical interface that combines ports C and D for storage nodes, is not supported.
+
+Use one of the following methods that best describes your network environment to access the NetApp Deployment Engine:
+
+|===
+|Scenario |Method
+
+|You do not have DHCP in your environment
+|link:task_nde_access_no_dhcp.html[Access the NetApp Deployment Engine in environments without DHCP]
+
+|You have DHCP in your environment
+|link:task_nde_access_dhcp.html[Access the NetApp Deployment Engine in environments with DHCP]
+
+|You want to assign all IP addresses manually
+|link:task_nde_access_manual_ip.html[Manually assign IP addresses to access the NetApp Deployment Engine]
+|===
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
