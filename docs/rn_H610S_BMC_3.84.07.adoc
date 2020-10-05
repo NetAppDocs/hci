@@ -21,7 +21,7 @@ The downloadable BMC update contains BMC feature enhancements and bug fixes for 
 == What's New
 H610S BMC 3.84.07 contains various bug fixes and new features. This release brings to the field critical updated BMC firmware ahead of subsequent Element software and storage firmware bundle releases, which will also include this updated BMC firmware for H610S nodes.
 
-You can upgrade the H610S BMC firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading BMC firmware on H610S nodes>>.
+This firmware package is supported on Element versions 11.8, 12.0, and 12.2. You can upgrade the H610S BMC firmware directly out-of-band, and upgrade instructions can be found in <<Upgrading BMC firmware on H610S nodes>>.
 
 == New Features
 The following are the new features and changes included in this release:
@@ -69,13 +69,16 @@ Perform the following steps to upgrade the BMC firmware version on your H610S no
 
 .What you'll need
 * You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
-* You have downloaded the BMC update file.
+* You have downloaded the BMC update package.
+* You have ensured that the BMC and the computer you are using to perform the update are located on the same network.
+* You have contacted NetApp Support for assistance with the BMC upgrade.
 
 .Steps
 . Log in to the BMC console using your web browser: `https://<BMC_IP>/#login`, where `<BMC_IP>` is the IP address of the BMC.
-. Click *Maintenance* > *Firmware Update*.
-. On the *Firmware Update* screen, do the following:
-.. Disable the *Preserve all configuration* checkbox.
+. Click *Maintenance*.
+. Click *Preserve Configuration*.
+. Do the following:
+.. Disable the *Check All* checkbox.
 .. Enable the *IPMI* checkbox.
 .. Enable the *Network* checkbox.
 .. Enable the *Authentication* checkbox.
@@ -83,11 +86,24 @@ Perform the following steps to upgrade the BMC firmware version on your H610S no
 ** The *IPMI* setting is used to preserve existing user accounts.
 ** The *Network* setting is used to preserve the DHCP assigned BMC IP address.
 ** The *Authentication* setting is used to preserve custom accounts configured for BMC login.
+. Click *Save*.
+. Click *Firmware Update*.
+. Disable the *Preserve all Configuration* checkbox.
 +
-NOTE: Ensure that you have disabled the *Preserve all configuration* checkbox.
+NOTE: Ensure that you have disabled the *Preserve all Configuration* checkbox.
 
-. Choose the BMC update file you downloaded and click *Start firmware update* to start the upgrade process.
 +
-The process can take up to 5 minutes to complete if the BMC firmware file is in the node's network; otherwise the process will take longer.
-. Verify the firmware version by looking at the version listed on the *Dashboard* > *More info* page.
+. On the computer you are using to perform the update, extract the contents of the BMC update package.
+. In the BMC web UI, under the *Select Firmware Image* section of the *Firmware Update* page, click *Choose File*.
+. Browse to the `rom.ima_enc` file within the extracted package contents and select it.
+. Click *Start firmware update* and click *OK* when the prompt appears asking if you want to continue.
+. Click *OK* when a prompt appears indicating that a firmware reset is happening.
+. After several minutes, use a new browser tab to log in to the BMC web UI.
+. On the BMC dashboard, go to *Device Information* > *More info*.
+. Confirm that the *Firmware Revision* is *3.84.07*.
 . Perform this procedure for the remaining H610S storage nodes in your cluster.
+
+[discrete]
+== Find more Information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
