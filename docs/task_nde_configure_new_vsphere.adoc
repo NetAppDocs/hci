@@ -1,0 +1,45 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_nde_config_vsphere_overview.html
+summary: Learn how to configure VMware vSphere during NetApp HCI deployment.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Configuring a new VMware vSphere environment
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+You can deploy a new vSphere environment as part of the NetApp HCI installation process by providing some of the network information that vSphere should use. Note that if you configure vSphere using an IP address, the address cannot be changed after installation.
+
+.Before you begin
+You have obtained the network information for the planned vSphere environment.
+
+.Steps
+. Click Configure a new vSphere deployment.
+. Select which version of vSphere the system should install during deployment.
+. Configure the new vSphere environment using one of the following options:
++
+|===
+|Option |Steps
+
+|Use a domain name (recommended).
+a|
+. Click *Configure Using a Fully Qualified Domain Name*.
+. Enter the vCenter Server domain name in the *vCenter Server Fully Qualified Domain Name* field.
+. Enter the DNS server IP address in the *DNS Server IP Address* field.
+. Click *Continue*.
+
+|Use an IP address.
+a|
+. Click *Configure Using an IP Address*.
+. Click *Continue*.
+|===
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]

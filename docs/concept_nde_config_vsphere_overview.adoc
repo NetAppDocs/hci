@@ -1,0 +1,29 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_nde_config_vsphere_overview.html
+summary: Learn how to configure VMware vSphere during NetApp HCI deployment.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= VMware vSphere configuration
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+NetApp HCI uses the vCenter Server and ESXi components of VMware vSphere. vCenter Server is used to manage and monitor the VMware ESXi hypervisor installed on each compute node. You can install and configure a new vSphere deployment, which also installs the NetApp Element Plug-in for vCenter Server, or you can join and extend an existing vSphere deployment.
+
+Be aware of the following caveats when you use the NetApp Deployment Engine to install a new vSphere deployment:
+* The NetApp Deployment Engine installs the new vCenter Server Appliance with the Small deployment size option.
+* The vCenter Server license is a temporary evaluation license. For continued operation after the evaluation period, you need to obtain a new license key from VMware and add it to the vCenter Server license inventory.
+
+NOTE: If your vSphere inventory configuration uses a folder to store the NetApp HCI cluster within the vCenter datacenter, some operations, such as expanding NetApp HCI compute resources, will fail. Ensure that the NetApp HCI cluster is directly under the datacenter in the vSphere web client inventory tree, and is not stored in a folder. See the NetApp Knowledgebase article for more information.
+
+If you install a new vCenter Server, you can install a vSphere standard switch or a vSphere distributed switch (VDS) during network configuration. A VDS enables a simplified, centralized management of virtual machine network configuration after NetApp HCI deployment. Cloud data services functionality on NetApp HCI requires a VDS; vSphere standard switches are not supported for cloud data services.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
