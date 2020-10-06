@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_nde_access_overview.html
-summary: Access the NetApp Deployment Engine. before deploying NetApp HCI using one of several methods, depending on your environment.
+summary: Access the NetApp Deployment Engine before deploying NetApp HCI using one of several methods, depending on your environment.
 keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
 ---
 

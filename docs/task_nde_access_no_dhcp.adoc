@@ -1,0 +1,42 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_access_no_dhcp.html
+summary: Learn how to access the NetApp Deployment Engine in environments without DHCP.
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
+---
+
+= Access the NetApp Deployment Engine in environments without DHCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+When DHCP is not in use on the network, you need to set a static IPv4 address on the Bond1G interface of one of the storage nodes (also known as a controlling storage node) that you will use to access the NetApp Deployment Engine. The NetApp Deployment Engine on the controlling storage node will discover and communicate with other compute and storage nodes using IPv4 addresses that have been auto-configured on the Bond10G interfaces of all nodes. You should use this method unless your network has special requirements.
+
+.Before you begin
+* You or your network administrator have completed the tasks in the Installation and Setup Instructions document.
+* You have physical access to the NetApp HCI nodes.
+* All of the NetApp HCI nodes are powered on.
+* DHCP is not enabled for the NetApp HCI networks and the NetApp HCI nodes have not obtained IP addresses from DHCP servers.
+* The NetApp HCI management network is configured as the native VLAN on the Bond1G and Bond10G interfaces of all nodes.
+
+.Steps
+. Plug a KVM into the back of one of the NetApp HCI storage nodes (this node will become the controlling storage node).
+. Configure the IP address, subnet mask, and gateway address for Bond1G in the user interface. You can also configure a VLAN ID for the Bond1G network if needed.
++
+NOTE: You cannot reuse this IPv4 address later during deployment with the NetApp Deployment Engine.
+
+. Open a web browser on a computer that can access the NetApp HCI management network.
+. Browse to the IP address you assigned to the controlling storage node. For example:
++
+----
+http://<Bond1G IP address>
+----
+This takes you to the NetApp Deployment Engine user interface.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
