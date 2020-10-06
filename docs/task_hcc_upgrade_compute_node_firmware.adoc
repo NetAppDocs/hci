@@ -24,7 +24,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 * *Compute drivers*: You have upgraded your compute node drivers.
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
-* *Minimum BMC and BIOS versions*: The node you intend to upgrade meets the following minimum requirements:
+* *Minimum BMC and BIOS versions*: The node you intend to upgrade using NetApp Hybrid Cloud Control meets the following minimum requirements:
 +
 [%header,cols=3*]
 |===
@@ -32,15 +32,29 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 |Minimum BMC version
 |Minimum BIOS version
 
+|H300E, H500E, H700E​
+|6.84.00
+|NA2.1
+
 |H410C​
 |All versions supported (no upgrade required)​
 |All versions supported (no upgrade required)​
 
 |H610C​
 |3.96.07​
-|3B01 ​ ​
+|3B01
+
+|H615C​
+|4.68.07
+|3B08.CO ​ ​
 
 |===
++
+NOTE: H615C compute nodes must update BMC firmware to version 4.68 using the https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.27.html[compute firmware bundle 2.27] to enable NetApp Hybrid Cloud Control to perform future firmware upgrades.
+
++
+NOTE: A Redfish license is required for H300E, H500E, and H700E compute nodes to enable NetApp Hybrid Cloud Control to perform future firmware upgrades. Contact NetApp Support to get the license installed manually until a new compute firmware bundle automates this process in a follow-on release.
+
 +
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 
@@ -61,8 +75,8 @@ For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be autom
 
 Choose the option that is relevant to your upgrade scenario:
 
-* For H610C and H410C: <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
-* For H610C and H410C: <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
+* <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
+* <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
 * For compute node image 12.0: <<Use a USB drive with the latest firmware image downloaded>>
 * For compute firmware 12.2.109: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
