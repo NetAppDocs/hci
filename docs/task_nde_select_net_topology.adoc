@@ -1,0 +1,37 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_select_net_topology.html
+summary: Learn how to configure VMware vSphere during NetApp HCI deployment.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Select a network topology
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+When cabling NetApp HCI nodes, you have the option of using different network cable configurations depending on your needs. For each compute node, you can use all six network ports, with different types of traffic assigned to each pair of ports, or you can use two ports with all types of traffic assigned to the ports. Storage nodes use the standard four-cable configuration. Your choice affects which compute nodes are selectable in the inventory.
+
+.Before you begin
+If you choose the two-cable network topology for compute nodes, consider the following requirements:
+
+* You have a VMware vSphere Enterprise Plus license ready to apply after deployment is complete.
+* You have verified that the configuration of your network and network switches is correct.
+* VLAN tagging is required for storage and vMotion networks for all compute and storage nodes.
+
+.Steps
+. On the Network Topology page, select a compute node topology that fits the way you installed compute nodes for NetApp HCI:
++
+* 6 Cable Option: The six-cable option provides dedicated ports for each type of traffic (management, virtual machine, and storage). You can optionally enable vSphere Distributed Switch (VDS). Enabling VDS configures a distributed switch, enabling simplified, centralized management of virtual machine network configuration after NetApp HCI deployment is complete. If you enable it, you must have a vSphere Enterprise Plus license ready to apply after deployment.
+* 2 Cable Option: The two-cable option combines management, virtual machine, and storage traffic on two bonded ports. This cabling option requires VDS, and automatically enables it. You must have a vSphere Enterprise Plus license ready to apply after deployment.
+
+. Some cabling options display multiple back panel views of different types of node hardware. Cycle through the back panel views to see how to connect the network cables for that specific node model and cabling option.
+. When finished, click *Continue*.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
