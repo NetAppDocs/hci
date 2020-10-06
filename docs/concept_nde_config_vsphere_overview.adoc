@@ -17,6 +17,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 NetApp HCI uses the vCenter Server and ESXi components of VMware vSphere. vCenter Server is used to manage and monitor the VMware ESXi hypervisor installed on each compute node. You can install and configure a new vSphere deployment, which also installs the NetApp Element Plug-in for vCenter Server, or you can join and extend an existing vSphere deployment.
 
 Be aware of the following caveats when you use the NetApp Deployment Engine to install a new vSphere deployment:
+
 * The NetApp Deployment Engine installs the new vCenter Server Appliance with the Small deployment size option.
 * The vCenter Server license is a temporary evaluation license. For continued operation after the evaluation period, you need to obtain a new license key from VMware and add it to the vCenter Server license inventory.
 
