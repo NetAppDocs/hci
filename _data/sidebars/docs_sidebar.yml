@@ -189,6 +189,8 @@ entries:
        url: /task_hci_removewn.html
   - title: Maintain H-series hardware
     entries:
+      - title: Replace DC power supply units in H615C and H610S nodes
+        url: /task_hci_dcpsurepl.html
      - title: Replace DIMMs in compute nodes
        url: /task_hci_dimmcomputerepl.html
      - title: Replace drives for storage nodes
