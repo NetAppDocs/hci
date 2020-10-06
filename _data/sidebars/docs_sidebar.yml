@@ -88,6 +88,8 @@ entries:
            url: /task_nde_access_dhcp.html
          - title: Manually assign IP addresses to access the NetApp Deployment Engine
            url: /task_nde_access_manual_ip.html
+     - title: Starting your deployment
+       url: /task_nde_start_deployment.html
   - title: Manage NetApp HCI
     entries:
       - title: Monitor your NetApp HCI system
