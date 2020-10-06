@@ -29,7 +29,8 @@ NOTE: All IP addresses you assign manually before using the NetApp Deployment En
 In this configuration, compute and storage nodes will use static IPv4 addresses to discover and communicate with other nodes during deployment. This configuration is not recommended.
 
 .Steps
-Plug a KVM into the back of one of the NetApp HCI storage nodes (this node will become the controlling storage node).
+
+. Plug a KVM into the back of one of the NetApp HCI storage nodes (this node will become the controlling storage node).
 . Configure the IP address, subnet mask, and gateway address for Bond1G and Bond10G in the user interface. You can also configure a VLAN ID for each network if needed.
 . Repeat step 2 for the remaining storage and compute nodes.
 . Open a web browser on a computer that can access the NetApp HCI management network.
