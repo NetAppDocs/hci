@@ -81,15 +81,50 @@ entries:
      - title: Access the NetApp Deployment Engine
        entries:
          - title: NetApp Deployment Engine access options overview
-           url: /task_nde_access_overview.html
+           url: /concept_nde_access_overview.html
          - title: Access the NetApp Deployment Engine in environments without DHCP
            url: /task_nde_access_no_dhcp.html
          - title: Access the NetApp Deployment Engine in environments with DHCP
            url: /task_nde_access_dhcp.html
          - title: Manually assign IP addresses to access the NetApp Deployment Engine
            url: /task_nde_access_manual_ip.html
-     - title: Starting your deployment
+     - title: Start your deployment
        url: /task_nde_start_deployment.html
+     - title: Configure VMware vSphere
+       entries:
+         - title: vSphere configuration overview
+           url: /concept_nde_config_vsphere_overview.html
+         - title: Configure a new VMware vSphere environment
+           url: /task_nde_configure_new_vsphere.html
+         - title: Join an existing VMware vSphere deployment
+           url: /task_nde_join_existing_vsphere.html
+     - title: Configure credentials
+       url: /task_nde_configure_credentials.html
+     - title: Select a network topology
+       url: /task_nde_select_net_topology.html
+     - title: Inventory selection
+       entries:
+         - title: Inventory selection and node compatibility
+           url: /concept_nde_node_compatibility.html
+         - title: Select inventory
+           url: /task_nde_select_inventory.html
+     - title: Configure network settings
+       url: /task_nde_configure_net_settings.html
+     - title: Review and deploy
+       url: /task_nde_review_deploy.html
+     - title: Post-deployment tasks
+       entries:
+         - title: Post-deployment tasks overview
+           url: /concept_nde_post_deployment_overview.html
+         - title: Supported networking changes
+           url: /task_nde_supported_net_changes.html
+         - title: Keep VMware vSphere up to date
+           url: /task_nde_update_vsphere.html
+         - title: Install GPU drivers for GPU-enabled compute nodes
+           url: /task_nde_install_GPU_drivers.html
+         - title: Access NetApp Hybrid Cloud Control
+           url: /task_nde_access_hcc.html
+
   - title: Manage NetApp HCI
     entries:
       - title: Monitor your NetApp HCI system
