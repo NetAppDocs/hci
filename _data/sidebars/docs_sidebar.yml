@@ -124,7 +124,6 @@ entries:
            url: /task_nde_install_GPU_drivers.html
          - title: Access NetApp Hybrid Cloud Control
            url: /task_nde_access_hcc.html
-
   - title: Manage NetApp HCI
     entries:
       - title: Monitor your NetApp HCI system
@@ -186,18 +185,18 @@ entries:
                 url: /task_mnode_manage_storage_cluster_assets.html
           - title: Enable remote NetApp Support connections
             url: /task_mnode_enable_remote_support_connections.html
-          - title: Power your NetApp HCI system off or on
-            entries:
-              - title: NetApp HCI power overview
-                url: /concept_nde_hci_power_off_on.html
-              - title: Powering off compute resources for a NetApp HCI system
-                url: /task_nde_hci_power_off_compute.html
-              - title: Powering off storage resources for a NetApp HCI system
-                url: /task_nde_hci_power_off_storage.html
-              - title: Powering on storage resources for a NetApp HCI system
-                url: /task_nde_hci_power_on_storage.html
-              - title: Powering on compute resources for a NetApp HCI system
-                url: /task_nde_hci_power_on_compute.html
+      - title: Power your NetApp HCI system off or on
+        entries:
+          - title: NetApp HCI power overview
+            url: /concept_nde_hci_power_off_on.html
+          - title: Powering off compute resources for a NetApp HCI system
+            url: /task_nde_hci_power_off_compute.html
+          - title: Powering off storage resources for a NetApp HCI system
+            url: /task_nde_hci_power_off_storage.html
+          - title: Powering on storage resources for a NetApp HCI system
+            url: /task_nde_hci_power_on_storage.html
+          - title: Powering on compute resources for a NetApp HCI system
+            url: /task_nde_hci_power_on_compute.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
