@@ -1,0 +1,47 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_select_inventory.html
+summary: Learn how to select NetApp HCI node inventory during deployment.
+keywords: netapp, hci, deployment, compatibility, nodes
+---
+
+= Select inventory
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+On the *Inventory* page, the NetApp Deployment Engine automatically detects available compute and storage nodes, enabling you to select and add all NetApp HCI resources to the deployment. If a node does not meet the requirements for deployment, it is not selectable and problems are indicated as errors. You can position your cursor over the error in the node's row to see an explanation. When choosing node inventory on the Inventory page, the storage node that is hosting the NetApp Deployment Engine is automatically selected, and you cannot deselect it.
+
+.Before you begin
+Jumbo frames must be enabled for proper inventory detection. If no nodes or only a subset of nodes appear in the inventory, verify that the switch ports used for NetApp HCI nodes (all SFP+/SFP28 interfaces) are configured with jumbo frames.
+
+.Steps
+. On the *Inventory* page, view the list of available nodes.
++
+If the system cannot detect any inventory, it displays an error. Correct the error before continuing.
+If your system uses DHCP for IP address assignment, the storage and compute resources might not appear in the inventory immediately.
+. Optional: If a resource does not appear in the inventory immediately, or if you address an error and need to refresh the inventory, click *Refresh Inventory*. You might need to refresh the inventory multiple times.
+. Optional: To filter the inventory on node attributes, such as node type:
+.. Click *Filter* in the header of the *Compute Nodes* or *Storage Nodes* lists.
+..  Choose criteria from the drop-down lists.
+..  Below the drop-down lists, enter information to satisfy the criteria.
+..  Click *Add Filter*.
+..  Clear individual filters by clicking *X* next to an active filter, or clear all filters by clicking *X* above the list of filters.
+.  Select all compute nodes that shipped with your system from the *Compute Nodes* list.
++
+You need to select at least two compute nodes to proceed with deployment.
+. Select all storage nodes that shipped with your system from the *Storage Nodes* list.
++
+You need to select at least two storage nodes to proceed with deployment.
+. Optional: If a storage node selection box is flagged, that storage node exceeds 33% of the total storage cluster capacity. Do of the following:
+* Clear the selection box for the flagged storage node.
+* Select additional storage nodes to more equally distribute the storage cluster capacity between nodes.
+. Click *Continue*.
+
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
