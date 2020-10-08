@@ -143,10 +143,10 @@ The following are the new BMC features and changes included in this release:
 
 * (H610S) Enabled INITRD support
 * (H610S) Updated SSL help message about X.509 certificates
-* (H610S) Disabled TLS 1.0 and 1.1 support
-* (H610S, H410S) Added Redfish remote media support
-* (H610S) Added the H5Viewer RKVM feature
-* (H610S) Added remote syslog support
+* (H610S) Disabled TLS 1.0 and 1.1 support to resolve security vulnerabilities
+* (H610S, H410S) Added the ability to mount remote media using Redfish APIs
+* (H610S) Added support for HTML5 web browser BMC management
+* (H610S) Added remote syslog support, to help with remote data center monitoring and management
 
 == Resolved issues
 The following are issues that have been resolved in this release:
