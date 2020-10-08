@@ -59,12 +59,14 @@ The *Network Settings Easy Form* dialog box appears.
 . Enter a naming prefix in the *Naming Prefix* field.
 +
 The naming prefix is applied to the name of each host and the name of the storage cluster. Naming prefixes have the following characteristics:
++
 * Must start with a letter
 * Can contain letters, numbers, and hyphens
 * Cannot exceed 55 characters
 . Choose one of the following options for assigning VLAN IDs.
 +
 At any time when using the form, click *Clear* next to a row to clear input from a row of fields.
++
 NOTE: When you assign VLAN IDs, you are configuring VLAN tags that NetApp HCI will apply to the network traffic. You do not need to enter your native VLAN as a VLAN ID; to use the native VLAN for a network, leave the appropriate field empty.
 
 +
