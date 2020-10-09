@@ -16,6 +16,7 @@ keywords: netapp, hci, deployment, review, deploy
 After you deploy NetApp HCI, you can make limited changes to the default networking configuration. However, certain settings are required for smooth operation and proper network detection. Changing these settings will cause unexpected behavior, and might prevent you from expanding compute and storage resources.
 
 After you deploy your system, you can make the following changes to the default network configuration in VMware vSphere as dictated by your network requirements:
+
 * Change vSwitch names
 * Change port group names
 * Add and remove additional port groups
@@ -108,11 +109,11 @@ This configuration is only supported when used with VMware vSphere Distributed S
 
 |iSCSI-A
 |vmk1
-|vmnic1 (Port B)
+|vmnic0 (Port B)
 
 |iSCSI-B
 |vmk2
-|vmnic0 (Port A)
+|vmnic1 (Port A)
 
 |vMotion
 |vmk3
