@@ -16,7 +16,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 [.lead]
 Configure NetApp HCI to take advantage of an existing vSphere deployment by providing the vCenter Server network information and credentials.
 
-.Before you begin
+.What you'll need
 * If you are joining an existing vSphere 6.7 deployment, make sure vCenter Server is running version 6.7 Update 1.
 * If you are joining an existing vSphere 6.5 deployment, make sure vCenter Server is running version 6.5 Update 2 or later.
 * Obtain the network details and administrator credentials for your existing vSphere deployment.

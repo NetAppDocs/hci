@@ -16,7 +16,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 [.lead]
 You can manually assign static IPv4 addresses to the Bond1G and Bond10G interfaces on all NetApp HCI nodes to access the NetApp Deployment Engine and deploy NetApp HCI. You should not use this method unless your network has special requirements.
 
-.Before you begin
+.What you'll need
 
 NOTE: All IP addresses you assign manually before using the NetApp Deployment Engine to deploy the system are temporary and cannot be reused. If you choose to manually assign IP addresses, you need to set aside a second permanent set of unused IP addresses that you can assign during final deployment.
 

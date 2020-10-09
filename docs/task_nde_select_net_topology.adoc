@@ -16,7 +16,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 [.lead]
 When cabling NetApp HCI nodes, you have the option of using different network cable configurations depending on your needs. For each compute node, you can use all six network ports, with different types of traffic assigned to each pair of ports, or you can use two ports with all types of traffic assigned to the ports. Storage nodes use the standard four-cable configuration. Your choice affects which compute nodes are selectable in the inventory.
 
-.Before you begin
+.What you'll need
 If you choose the two-cable network topology for compute nodes, consider the following requirements:
 
 * You have a VMware vSphere Enterprise Plus license ready to apply after deployment is complete.
