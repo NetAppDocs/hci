@@ -1,0 +1,42 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_nde_hci_power_off_on.html
+summary: Learn how to configure VMware vSphere during NetApp HCI deployment.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Powering your NetApp HCI system off or on
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+You can power off or power on your NetApp HCI system if you have a scheduled outage, need to perform hardware maintenance, or need to expand the system. Use the following tasks to power off or power on your NetApp HCI system as required.
+
+You might need to power off your NetApp HCI system under a number of different circumstances, such as:
+
+* Scheduled outages
+* Chassis fan replacements
+* Firmware upgrades
+* Storage or compute resource expansion
+
+ The following is an overview of the tasks you need to complete to power off a NetApp HCI system:
+
+* Power off all virtual machines except the VMware vCenter server (vCSA).
+* Power off all ESXi servers except the one hosting the vCSA.
+* Power off the vCSA.
+* Power off the NetApp HCI storage system.
+
+The following is an overview of the tasks you need to complete to power on a NetApp HCI system:
+
+* Power on all physical storage nodes.
+* Power on all physical compute nodes.
+* Power on the vCSA.
+* Verify the system and power on additional virtual machines.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
