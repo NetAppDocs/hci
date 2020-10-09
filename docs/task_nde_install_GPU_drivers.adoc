@@ -13,7 +13,7 @@ keywords: netapp, hci, deployment, review, GPU, install, driver, drivers
 :imagesdir: ../media/
 
 [.lead]
-Compute nodes with NVIDIA graphics processing units (GPUs), like the NetApp H610C, need the NVIDIA software drivers installed in VMware ESXi so that they can take advantage of the increased processing power. After deploying compute nodes with GPUs, you need to perform these steps on each GPU-enabled compute node to install the GPU drivers in ESXi.
+Compute nodes with NVIDIA graphics processing units (GPUs), like the H610C, need NVIDIA software drivers installed in VMware ESXi so that they can take advantage of the increased processing power. After deploying compute nodes with GPUs, you need to perform these steps on each GPU-enabled compute node to install the GPU drivers in ESXi.
 
 .Steps
 
