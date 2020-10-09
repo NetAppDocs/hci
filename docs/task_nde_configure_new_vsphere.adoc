@@ -20,7 +20,7 @@ You can deploy a new vSphere environment as part of the NetApp HCI installation 
 You have obtained the network information for the planned vSphere environment.
 
 .Steps
-. Click Configure a new vSphere deployment.
+. Click *Configure a new vSphere deployment*.
 . Select which version of vSphere the system should install during deployment.
 . Configure the new vSphere environment using one of the following options:
 +
@@ -29,15 +29,15 @@ You have obtained the network information for the planned vSphere environment.
 
 |Use a domain name (recommended).
 a|
-. Click *Configure Using a Fully Qualified Domain Name*.
-. Enter the vCenter Server domain name in the *vCenter Server Fully Qualified Domain Name* field.
-. Enter the DNS server IP address in the *DNS Server IP Address* field.
-. Click *Continue*.
+.. Click *Configure Using a Fully Qualified Domain Name*.
+.. Enter the vCenter Server domain name in the *vCenter Server Fully Qualified Domain Name* field.
+.. Enter the DNS server IP address in the *DNS Server IP Address* field.
+.. Click *Continue*.
 
 |Use an IP address.
 a|
-. Click *Configure Using an IP Address*.
-. Click *Continue*.
+.. Click *Configure Using an IP Address*.
+.. Click *Continue*.
 |===
 
 [discrete]
