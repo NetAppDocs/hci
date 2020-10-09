@@ -20,8 +20,8 @@ You have upgraded your management services to at least version 2.1.326. NetApp H
 
 .Steps
 
- Open a web browser and browse to the IP address of the management node. For example:
- +
+. Open a web browser and browse to the IP address of the management node. For example:
++
 ----
 https://<ManagementNodeIP>
 ----
