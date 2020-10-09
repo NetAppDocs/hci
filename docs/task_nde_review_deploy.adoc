@@ -25,7 +25,7 @@ You can save this file and refer to it later for configuration information.
 . Optional: To make changes to information in any displayed section:
 .. Click *Edit* in the corresponding section.
 .. Make the necessary changes.
-.. Click *Continue* until you reach the Review page. Your previous settings are saved on each page.
+.. Click *Continue* until you reach the *Review* page. Your previous settings are saved on each page.
 .. Repeat steps 2 and 3 to make any other necessary changes.
 . If you do not want to send cluster statistics and support information to NetApp-hosted SolidFire Active IQ servers, clear the final checkbox.
 +

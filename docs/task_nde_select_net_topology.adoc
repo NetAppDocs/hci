@@ -24,11 +24,10 @@ If you choose the two-cable network topology for compute nodes, consider the fol
 * VLAN tagging is required for storage and vMotion networks for all compute and storage nodes.
 
 .Steps
-. On the Network Topology page, select a compute node topology that fits the way you installed compute nodes for NetApp HCI:
+. On the *Network Topology* page, select a compute node topology that fits the way you installed compute nodes for NetApp HCI:
 +
-* 6 Cable Option: The six-cable option provides dedicated ports for each type of traffic (management, virtual machine, and storage). You can optionally enable vSphere Distributed Switch (VDS). Enabling VDS configures a distributed switch, enabling simplified, centralized management of virtual machine network configuration after NetApp HCI deployment is complete. If you enable it, you must have a vSphere Enterprise Plus license ready to apply after deployment.
-* 2 Cable Option: The two-cable option combines management, virtual machine, and storage traffic on two bonded ports. This cabling option requires VDS, and automatically enables it. You must have a vSphere Enterprise Plus license ready to apply after deployment.
-
+* *6 Cable Option*: The six-cable option provides dedicated ports for each type of traffic (management, virtual machine, and storage). You can optionally enable vSphere Distributed Switch (VDS). Enabling VDS configures a distributed switch, enabling simplified, centralized management of virtual machine network configuration after NetApp HCI deployment is complete. If you enable it, you must have a vSphere Enterprise Plus license ready to apply after deployment.
+* *2 Cable Option*: The two-cable option combines management, virtual machine, and storage traffic on two bonded ports. This cabling option requires VDS, and automatically enables it. You must have a vSphere Enterprise Plus license ready to apply after deployment.
 . Some cabling options display multiple back panel views of different types of node hardware. Cycle through the back panel views to see how to connect the network cables for that specific node model and cabling option.
 . When finished, click *Continue*.
 
