@@ -14,22 +14,23 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 :keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 
 [.lead]
-To power off NetApp HCI compute resources, you need to power off individual ESXi hosts as well as the VMware vCenter Server Appliance in a certain order.
+To power off NetApp HCI compute resources, you need to power off individual VMware ESXi hosts as well as the VMware vCenter Server Appliance in a certain order.
 
 .Steps
 
 . Log in to the vCenter instance controlling the NetApp HCI system and determine the ESXi machine hosting the vCenter Server Virtual Appliance (vCSA).
 .  After you have determined the ESXi host running the vCSA, power down all other virtual machines other than the vCSA as follows:
-.. Select a virtual machine, right-click and select Power > Shut Down Guest OS.
+.. Select a virtual machine.
+.. Right-click and select *Power > Shut Down Guest OS*.
 . Power off all ESXi hosts that are not the ESXi host running the vCSA.
 .  Power off the vCSA.
 +
-This will cause the vCenter session to fail because the vCSA disconnects during the power-off process.  At this point, all virtual machines should be shut down and only one ESXi host is still powered on.
-. Log in to the ESXi host.
+This will cause the vCenter session to end because the vCSA disconnects during the power-off process. All virtual machines should now be shut down with only one ESXi host powered on.
+. Log in to the running ESXi host.
 . Verify that all virtual machines on the host are powered off.
 . Shut down the ESXi host.
 +
-This should disconnect any iSCSI sessions open to the NetApp HCI storage cluster.
+This disconnects any iSCSI sessions open to the NetApp HCI storage cluster.
 
 [discrete]
 == Find more information

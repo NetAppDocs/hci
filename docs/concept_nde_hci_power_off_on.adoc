@@ -23,7 +23,7 @@ You might need to power off your NetApp HCI system under a number of different c
 * Firmware upgrades
 * Storage or compute resource expansion
 
- The following is an overview of the tasks you need to complete to power off a NetApp HCI system:
+The following is an overview of the tasks you need to complete to power off a NetApp HCI system:
 
 * Power off all virtual machines except the VMware vCenter server (vCSA).
 * Power off all ESXi servers except the one hosting the vCSA.
