@@ -1,0 +1,36 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_hci_power_off_storage.html
+summary: Learn how to power off NetApp HCI compute nodes.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Power off storage resources for a NetApp HCI system
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+When you power off storage resources for NetApp HCI, you need to use the `Shutdown` Element API method to properly halt the storage nodes.
+
+.Steps
+After you power off the compute resources, you use a web browser to shut down all the nodes of the NetApp HCI storage cluster.
+
+. Log in to the storage cluster and verify that the iSCSI session count is zero. Also, verify that you are connected to the correct MVIP.
+. Navigate to *Cluster > Nodes > Active*, and record the node IDs for all of the active nodes in the cluster.
+. To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 2. For example:
++
+----
+https://{MVIP}/json-rpc/1.0?method=Shutdown&nodes=[1,2,3,4]&option=halt
+----
+. Enter the cluster administrator user name and password.
+. Validate that the API call returned successfully by verifying that all storage cluster nodes are included in the `successful` section of the API result.
++
+You have successfully powered off all the NetApp HCI storage nodes.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
