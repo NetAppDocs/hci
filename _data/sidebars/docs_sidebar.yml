@@ -118,7 +118,7 @@ entries:
            url: /concept_nde_post_deployment_overview.html
          - title: Supported networking changes
            url: /task_nde_supported_net_changes.html
-         - title: Disable the `smartd` service on NetApp HCI compute nodes
+         - title: Disable the smartd service on NetApp HCI compute nodes
            url: /task_nde_disable_smartd.html
          - title: Keep VMware vSphere up to date
            url: /task_nde_update_vsphere.html
