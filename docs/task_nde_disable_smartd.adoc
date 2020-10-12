@@ -1,0 +1,36 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_disable_smartd.html
+summary: Learn how to disable the `smartd` service on compute nodes after you deploy NetApp HCI.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere, ESXi, compute, smartd, polling
+---
+
+= Disable the `smartd` service on NetApp HCI compute nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+By default, the `smartd` service periodically polls the drives in your compute nodes. You should disable this service on all compute nodes after you deploy NetApp HCI.
+
+.Steps
+. Log in to VMware ESXi on the compute node using root credentials with SSH or a local console session.
+. Stop the running `smartd` service:
++
+----
+/etc/init.d/smartd stop
+----
+. Prevent the `smartd` service from starting at boot:
++
+----
+chkconfig smartd off
+----
+. Repeat these steps on the rest of the compute nodes in your installation.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/SolidFire%3A_Turning_off_smartd_on_the_ESXi_hosts_makes_the_cmd_0x85_and_subsequent_%22state_in_doubt%22_messages_stop[Turn off the smartd service in VMware ESXi^]
+* https://kb.vmware.com/s/article/2133286[VMware KB article 2133286^]
