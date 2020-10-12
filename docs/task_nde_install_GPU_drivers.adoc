@@ -47,7 +47,7 @@ The resulting .VIB file is the uncompressed driver file.
 |ESXi 6.7
 |`scp $HOME/NVIDIA/ESX6.7/NVIDIA**.vib root@<ESXi_IP_ADDR>:/.`
 |===
-. Use the following steps to log in as root to the ESXi host and install the NVIDIA vGPU manager in ESXi.
+. Use the following steps to log in as root to the ESXi host and install the NVIDIA vGPU Manager in ESXi.
 .. Run the following command to log in to the ESXi host as the root user:
 +
 ----

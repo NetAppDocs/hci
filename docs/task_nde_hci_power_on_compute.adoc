@@ -20,7 +20,10 @@ You can power on compute resources for a NetApp HCI system after the scheduled o
 
 . Power on compute nodes using the same steps you performed for powering on the storage nodes.
 . When all the compute nodes are operational, log in to the ESXi host that was running the vCSA.
-. Log in to the compute host and verify that it sees all the NetApp HCI datastores. For a typical NetApp HCI system, you should see all the ESXi local datastores and at least the following shared datastores: `NetApp-HCI-Datastore-[01,02]`
+. Log in to the compute host and verify that it sees all the NetApp HCI datastores. For a typical NetApp HCI system, you should see all the ESXi local datastores and at least the following shared datastores:
+----
+NetApp-HCI-Datastore-[01,02]
+----
 . Assuming all storage is accessible, power on the vCSA and any other required virtual machines as follows:
 .. Select the virtual machines in the navigator, select all the virtual machines that you want to power on, and click the *Power on* button.
 . After you power on the virtual machines, wait for approximately 5 minutes and then use a web browser to navigate to the IP address or FQDN of the vCSA applicance.
