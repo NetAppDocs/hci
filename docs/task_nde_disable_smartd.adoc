@@ -17,7 +17,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere, ESXi, comp
 By default, the `smartd` service periodically polls the drives in your compute nodes. You should disable this service on all compute nodes after you deploy NetApp HCI.
 
 .Steps
-. Log in to VMware ESXi on the compute node using root credentials with SSH or a local console session.
+. Using SSH or a local console session, log in to VMware ESXi on the compute node using root credentials.
 . Stop the running `smartd` service:
 +
 ----
