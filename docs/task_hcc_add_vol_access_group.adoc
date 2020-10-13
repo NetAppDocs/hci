@@ -14,9 +14,7 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-As part of a NetApp HCI or SolidFire storage system upgrade, you upgrade NetApp Element software.
-
-You must use HealthTools suite of tools to upgrade storage node software.
+You can add a volume access group to NetApp HCI using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
