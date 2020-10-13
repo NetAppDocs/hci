@@ -42,7 +42,7 @@ Volume access groups have the following limits:
 . Select *Volumes*.
 . Select the *Access Groups* tab.
 . Select the *Create Access Group* button.
-. In the resulting dialog, enter a name for the new volume access group (this is required).
+. In the resulting dialog, enter a name for the new volume access group.
 . (Optional) In the *Initiators* section, select one or more initiators to associate with the new volume access group.
 +
 If you associate an initiator with the volume access group, that initiator can access each volume in the group without the need for authentication.
