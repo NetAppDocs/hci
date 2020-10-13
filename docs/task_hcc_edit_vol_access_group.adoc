@@ -1,0 +1,44 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_edit_vol_access_group.html
+summary: Learn how to edit a volume access group.
+keywords: netapp, hci, on premise, cluster, element
+---
+
+= Edit a volume access group
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+As part of a NetApp HCI or SolidFire storage system upgrade, you upgrade NetApp Element software.
+
+You must use HealthTools suite of tools to upgrade storage node software.
+
+.What you'll need
+
+* You are running management node 11.0, 11.1 or later.
+* You have upgraded your management services to at least version 2.1.326.
++
+NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
+
+
+.Steps
+
+. Determine the Element version on your storage cluster.
+. Use HealthTools to run pre-upgrade checks.
+. Upgrade your Element software version.
+. Upgrade your Element software version at dark sites.
+
+
+TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
+
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
