@@ -39,7 +39,8 @@ NOTE: In the case of component failures where the node is still online and funct
 
 .Steps
 
-. Remove the drive from the cluster using either the NetApp Element software UI or the NetApp Element Management extension point in Element plug-in for vCenter server.
+. If you have a DIMM failure, remove the drives from the cluster using either the NetApp Element software UI or the NetApp Element Management extension point in Element plug-in for vCenter server before you remove the node. If you do not have to remove drives from the cluster, you can skip this step and proceed to the next step.
+. Remove the nodes:
 +
 [%header,cols=2*]
 |===
