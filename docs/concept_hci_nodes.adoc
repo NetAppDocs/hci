@@ -15,12 +15,12 @@ keywords: netapp, hci, storage nodes, volumes, compute nodes, witness nodes, man
 [.lead]
 Nodes are hardware or virtual resources that are grouped into a cluster to provide block storage and compute capabilities.
 
-NetApp HCI and Element software defines various node roles for a cluster. The four types of node roles are *management node,* *storage node,* *compute node,* and *NetApp HCI Witness Nodes.*
+NetApp HCI and Element software defines various node roles for a cluster. The four types of node roles are *management node*, *storage node*, *compute node*, and *NetApp HCI Witness Nodes*.
 
 == Management node
-The management node (mNode) interacts with a storage cluster to perform management actions, but is not a member of the storage cluster. Management nodes periodically collect information about the cluster through API calls and report this information to Active IQ for remote monitoring (if enabled). Management nodes are also responsible for coordinating software upgrades of the cluster nodes.
+The management node (sometimes abbreviated as mNode) interacts with a storage cluster to perform management actions, but is not a member of the storage cluster. Management nodes periodically collect information about the cluster through API calls and report this information to Active IQ for remote monitoring (if enabled). Management nodes are also responsible for coordinating software upgrades of the cluster nodes.
 
-The management node is a virtual machine that runs in parallel with one or more Element software-based storage clusters. In addition to upgrades, it is used to provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting. As of the Element 11.3 release, the management node functions as a microservice host, allowing for quicker updates of select software services outside of major releases. These microservices or management services, such as the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service, are updated frequently as service bundles.
+The management node is a virtual machine that runs in parallel with one or more Element software-based storage clusters. In addition to upgrades, it is used to provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting. As of the Element 11.3 release, the management node functions as a microservice host, allowing for quicker updates of select software services outside of major releases. These microservices or management services, such as the Active IQ collector, QoSSIOC for the vCenter Plug-in, and management node service, are updated frequently as service bundles.
 
 
 == Storage nodes
@@ -32,7 +32,7 @@ NetApp HCI compute nodes are hardware that provides compute resources, such as C
 
 
 == Witness Nodes
-NetApp HCI Witness nodes are virtual machines that run on compute nodes in parallel with an Element software-based storage cluster. Witness Nodes do not host slice or block services. A Witness Node enables storage cluster availability in the event of a storage node failure. You can manage and upgrade Witness Nodes in the same way as other storage nodes. A storage cluster can have up to four Witness Nodes. Their primary purpose is to ensure that enough cluster nodes exist to form a valid ensemble quorum.
+NetApp HCI Witness Nodes are virtual machines that run on compute nodes in parallel with an Element software-based storage cluster. Witness Nodes do not host slice or block services. A Witness Node enables storage cluster availability in the event of a storage node failure. You can manage and upgrade Witness Nodes in the same way as other storage nodes. A storage cluster can have up to four Witness Nodes. Their primary purpose is to ensure that enough cluster nodes exist to form a valid ensemble quorum.
 
 TIP: Learn more about link:hci_prereqs_witness_nodes.html[Witness Node resource requirements^] and link:hci_prereqs_ip_address.html[Witness Node IP address requirements^].
 
