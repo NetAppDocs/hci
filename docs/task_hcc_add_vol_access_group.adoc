@@ -20,22 +20,23 @@ You must use HealthTools suite of tools to upgrade storage node software.
 
 .What you'll need
 
-* You are running management node 11.0, 11.1 or later.
-* You have upgraded your management services to at least version 2.1.326.
+* You are running management node 12.2 or later.
+* You have upgraded your management services to at least version 2.15.28.
+* Ensure you have a logical naming scheme for volume access groups.
 +
-NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
-
+NetApp Hybrid Cloud Control storage management is not available in earlier service bundle versions.
 
 .Steps
 
-. Determine the Element version on your storage cluster.
-. Use HealthTools to run pre-upgrade checks.
-. Upgrade your Element software version.
-. Upgrade your Element software version at dark sites.
-
-
-TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
-
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, expand the name of your storage cluster on the left navigation menu.
+. Select *Volumes*.
+. Select the *Access Groups* tab.
+. Select the *Create Access Group* button.
+. In the resulting dialog, enter a name for the new volume access group (this is required).
+. (Optional) In the *Initiators* section, select one or more initiators to associate with the new volume access group.
+. (Optional) In the *Volumes* section, select one or more volumes to include in this volume access group.
+. Select *Create Access Group*.
 
 [discrete]
 == Find more information
