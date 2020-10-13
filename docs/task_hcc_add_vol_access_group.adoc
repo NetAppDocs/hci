@@ -20,6 +20,7 @@ You must use HealthTools suite of tools to upgrade storage node software.
 
 .What you'll need
 
+* You have administrator credentials for this NetApp HCI system.
 * You are running management node 12.2 or later.
 * You have upgraded your management services to at least version 2.15.28.
 * Ensure you have a logical naming scheme for volume access groups.
