@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-You can edit the properties of an existing NetApp HCI volume access group using NetApp Hybrid Cloud Control.
+You can view the details of an existing NetApp HCI volume access group, such as attached volumes and initiators, using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
