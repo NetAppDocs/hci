@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_delete_vol_access_group.html
-summary: Learn how to delete a volume access group.
+summary: Learn how to delete volume access groups.
 keywords: netapp, hci, on premise, cluster, element
 ---
 

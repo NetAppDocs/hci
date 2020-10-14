@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_add_vol_access_group.html
-summary: Learn how to add a volume access group.
+summary: Learn how to add new a volume access groups to work with NetApp HCI storage volumes.
 keywords: netapp, hci, on premise, cluster, element
 ---
 
