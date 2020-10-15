@@ -1,0 +1,22 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_hci_volume_access_groups.html
+summary: Learn about volume access groups and how you can use them to access and manage volumes.
+keywords: netapp, hci, storage volume, solidfire volume, element volume, persistent volume, access group
+---
+
+= Volume access groups
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+A volume access group is a collection of volumes that users can access using either iSCSI or Fibre Channel initiators.
+
+By creating and using volume access groups, you can control access to a set of volumes. When you associate a set of volumes and a set of initiators with a volume access group, the access group grants those initiators access to that set of volumes.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

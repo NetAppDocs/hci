@@ -99,6 +99,7 @@ The *Volume Access Group Details* dialog appears.
 
 [discrete]
 == Find more information
-* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[Working with volume access groups and initiators^]
+* link:concept_hci_volume_access_groups.html[Learn about volume access groups]
+* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[Work with volume access groups and initiators^]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

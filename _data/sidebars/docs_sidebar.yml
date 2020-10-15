@@ -24,10 +24,12 @@ entries:
         url: /concept_hci_nodes.html
       - title: Storage
         entries:
-          - title: Volumes
-            url: /concept_hci_volumes.html
           - title: Maintenance mode
             url: /concept_hci_storage_maintenance_mode.html
+          - title: Volumes
+            url: /concept_hci_volumes.html
+          - title: Volume access groups
+            url: /concept_hci_volume_access_groups.html
           # url: /concept_hci_storage.html
       - title: Licensing
         url: /concept_cg_hci_licensing.html
