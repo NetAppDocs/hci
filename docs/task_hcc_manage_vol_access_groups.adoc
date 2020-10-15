@@ -33,7 +33,7 @@ Volume access groups have the following limits:
 * You have upgraded your management services to at least version 2.15.28. NetApp Hybrid Cloud Control storage management is not available in earlier service bundle versions.
 * Ensure you have a logical naming scheme for volume access groups.
 
-== Add a new volume access group
+== Add a volume access group
 You can add a volume access group to NetApp HCI using NetApp Hybrid Cloud Control.
 
 .Steps
