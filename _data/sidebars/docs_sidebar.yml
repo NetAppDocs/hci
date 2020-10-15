@@ -80,14 +80,10 @@ entries:
     entries:
       - title: Manage NetApp HCI storage
         entries:
-        - title: Add a volume access group
-          url: /task_hcc_add_vol_access_group.html
-        - title: Delete a volume access group
-          url: /task_hcc_delete_vol_access_group.html
-        - title: Edit a volume access group
-          url: /task_hcc_edit_vol_access_group.html
-        - title: View details of a volume access group
-          url: /task_hcc_view_vol_access_group.html
+        - title: Volume access groups overview
+          url: /task_hcc_manage_vol_access_groups.html
+        - title: Manage volume access groups
+          url: /task_hcc_manage_vol_access_groups.html
       - title: Monitor your NetApp HCI system
         entries:
           - title: View resources on the HCC Dashboard
