@@ -1,0 +1,125 @@
+---
+sidebar: sidebar
+permalink: task_hcc_qos_policies.html
+summary: You can set up and modify QoS policies to apply to volumes in your storage cluster.
+keywords: netapp, qos policy, quality of service, qos policies, volumes, element
+---
+
+= Create and manage volume QoS policies
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+A QoS (Quality of Service) policy enables you to create and save a standardized quality of service setting that can be applied to many volumes. The selected cluster must be Element 10.0 or later to use QoS policies; otherwise, QoS policy functions are not available.
+
+Using the NetApp Element Management extension point, you can configure and manage QoSSIOC by completing the following tasks:
+
+* <<Create a QoS policy>>
+* <<Apply a QoS policy to volumes>>
+* <<Change the QoS policy association of a volume>>
+* <<Edit a QoS policy>>
+* <<Delete a QoS policy>>
+
+== Create a QoS policy
+You can create QoS policies and apply them to volumes that should have equivalent performance.
+
+NOTE: If you are using QoS policies, do not use custom QoS on a volume. Custom QoS will override and adjust QoS policy values for volume QoS settings.
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, expand the menu for your storage cluster.
+. Select *Storage > Volumes*.
+. Click the *QoS Policies* sub-tab.
+. Click *Create Policy*.
+. Enter the *Policy Name*.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
+
+. Enter the minimum IOPS, maximum IOPS, and burst IOPS values.
+. Click *Create QoS Policy*.
++
+A system ID is generated for the policy and the policy appears on the QoS Policies page with its assigned QoS values.
+
+== Apply a QoS policy to volumes
+You can apply an existing QoS policy to multiple volumes. Use this process when you want to bulk apply a policy to one or more volumes.
+
+.What you'll need
+The QoS policy you want to bulk apply has been <<Create a QoS policy,created>>.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Volumes* sub-tab.
+. Select the check box for each volume to which you want to apply a QoS policy.
+. Click *Actions*.
+. In the resulting menu, select *Apply QoS Policy*.
+. In the dialog box, select the QoS policy from the drop-down list to apply to the selected volumes.
+. Click *OK*.
+
+== Change the QoS policy association of a volume
+You can remove a QoS policy association from a volume or select a different QoS policy or custom QoS.
+
+.What you'll need
+The volume you want to modify is <<Apply a QoS policy to volumes,associated>> with a QoS policy.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Volumes* sub-tab.
+. Select the check box for a volume that contains a QoS policy you want to modify.
+. Click *Actions*.
+. In the resulting menu, select *Edit*.
+. In the dialog box under *Quality of Service*, select a new QoS policy or custom settings to apply to the volume.
+. If you chose custom settings, modify the *Min IOPS*, *Max IOPS*, and *Burst IOPS* values.
++
+NOTE: You can also click *Reset Default QoS* to restore default IOPS values.
+
+. Click *OK*.
+
+== Edit a QoS policy
+You can change the name of an existing QoS policy or edit the values associated with the policy. Changing QoS policy performance values affects QoS for all volumes associated with the policy.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *QoS Policies* sub-tab.
+. Select the check box for the QoS policy you want to edit.
+. Click *Actions*.
+. In the resulting menu, select *Edit*.
+. In the *Edit QoS Policy* dialog box, modify the following properties as needed:
+* *Policy Name*: The user-defined name for the QoS policy.
+* *Min IOPS*: The minimum number of IOPS guaranteed for the volume.
+* *Max IOPS*: The maximum number of IOPS allowed for the volume.
+* *Burst IOPS*: The maximum number of IOPS allowed over a short period of time for the volume. Default = 15,000.
++
+NOTE: You can also click Reset Default QoS to restore default IOPS values.
+
+. Click *OK*.
+
+== Delete a QoS policy
+You can delete a QoS policy if it is no longer needed. When you delete a QoS policy, all volumes associated with the policy maintain the QoS values previously defined by the policy but as individual volume QoS. Any association with the deleted QoS policy is removed.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *QoS Policies* sub-tab.
+. Select the check box for the QoS policy you want to delete.
+. Click *Actions*.
+. In the resulting menu, select *Delete*.
+. Confirm the action.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
