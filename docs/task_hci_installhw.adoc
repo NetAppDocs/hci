@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hci_installhw.html
-summary: Use these instructions to install rails and H-series nodes.
+summary: Before you get started with using NetApp HCI, you should install the storage and compute nodes correctly.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes
 ---
 
@@ -14,13 +14,13 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 :imagesdir: ../media/
 
 [.lead]
-Use these instructions to install rails and H-series nodes.
+Before you get started with using NetApp HCI, you should install the storage and compute nodes correctly.
 
-TIP: See the link:../media/h-series_isi.pdf[poster] for a visual representation of the instructions.
+TIP: See the link:../media/hseries-isi.pdf[poster] for a visual representation of the instructions.
 
 * <<Workflow diagrams>>
 * <<Prepare for installation>>
-* <<Install rails>>
+* <<Install the rails>>
 * <<Install the node/chassis>>
 * <<Cable the nodes>>
 * <<Power on the nodes>>
@@ -176,13 +176,31 @@ Here is the two-cable configuration:
 
 image::HCI_ISI_compute_2cable.png[Shows the two-cable configuration for the H410C node.]
 
+image:blue circle.png[blue dot]  For ports D and E, connect two SFP28/SFP+ cables or transceivers for shared management, virtual machines, and storage connectivity.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect a CAT5e cable in the IPMI port for out-of-band management connectivity.
+
 Here is the six-cable configuration:
 
 image::HCI_ISI_compute_6cable.png[Shows the six-cable configuration of the H410C node.]
 
+image:green circle.png[green dot]  For ports A and B, connect two CAT5e or higher cables in ports A and B for management connectivity.
+
+image:orange circle.png[orange dot]  For ports C and F, connect two SFP28/SFP+ cables or transceivers for virtual machine connectivity.
+
+image:blue circle.png[blue dot]  For ports D and E, connect two SFP28/SFP+ cables or transceivers for storage connectivity.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect a CAT5e cable in the IPMI port for out-of-band management connectivity.
+
 Here is the cabling for the H410S node:
 
 image::HCI_ISI_storage_cabling.png[Shows the cabling for the H410S node.]
+
+image:green circle.png[green dot]  For ports A and B, connect two CAT5e or higher cables in ports A and B for management connectivity.
+
+image:blue circle.png[blue dot]  For ports C and D, connect two SFP28/SFP+ cables or transceivers for storage connectivity.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect a CAT5e cable in the IPMI port for out-of-band management connectivity.
 
 After you cable the nodes, connect the power cords to the two power supply units per chassis and plug them into 240V PDU or power outlet.
 
@@ -190,13 +208,29 @@ After you cable the nodes, connect the power cords to the two power supply units
 
 Here is the cabling for the H610C node:
 
+NOTE: H610C nodes are deployed only in the two-cable configuration. Ensure that all the VLANs are present on ports C and D.
+
 image::H610C_node-cabling.png[Shows the cabling for the H610C node.]
+
+image:dark green.png[dark green dot]  For ports C and D, connect the node to a 10/25GbE network using two SFP28/SFP+ cables.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect the node to a 1GbE network using an RJ45 connector in the IPMI port.
+
+image:light blue circle.png[light blue dot] Connect both power cables to the node, and plug the power cables to a 200‐240V power outlet.
 
 === H615C compute node
 
 Here is the cabling for the H615C node:
 
+NOTE: H615C nodes are deployed only in the two-cable configuration. Ensure that all the VLANs are present on ports A and B.
+
 image::H615C_node_cabling.png[Shows the cabling for the H615C node.]
+
+image:dark green.png[dark green dot] For ports A and B, connect the node to a 10/25GbE network using two SFP28/SFP+ cables.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect the node to a 1GbE network using an RJ45 connector in the IPMI port.
+
+image:light blue circle.png[light blue dot] Connect both power cables to the node, and plug the power cables to a 110-140V power outlet.
 
 === H610S storage node
 
@@ -204,11 +238,21 @@ Here is the cabling for the H610S node:
 
 image::H600S_ISI_noderear.png[Shows the cabling for the H610S node.]
 
+image:purple circle.png[purple dot] Connect the node to a 1GbE network using two RJ45 connector in the IPMI port.
+
+image:dark green.png[dark green dot] Connect the node to a 10/25GbE network using
+two SFP28 or SFP+ cables.
+
+image:orange circle.png[orange dot] Connect the node to a 1GbE network using
+an RJ45 connector in the IPMI port.
+
+image:light blue circle.png[light blue dot] Connect both power cables to the node.
+
 == Power on the nodes
 
 It takes approximately six minutes for the nodes to boot.
 
-Here is an illustration that shows the power button on the NetApp HCI chassis that has H410C and H410S nodes:
+Here is an illustration that shows the power button on the NetApp HCI 2U chassis:
 
 image::H410c_poweron_ISG.png[Shows the power button on the H-series 2U, four-node chassis.]
 
