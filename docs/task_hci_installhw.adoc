@@ -83,7 +83,7 @@ TIP: The hardware that is shipped to you depends on what you order. A new 2U, fo
 
 CAUTION: While installing the hardware, ensure that you remove all packing material and wrapping from the unit. This will prevent the nodes from overheating and shutting down.
 
-== Install rails
+== Install the rails
 
 The hardware order that was shipped to you includes a set of slide rails. You will need a screwdriver to complete the rail installation. The installation steps vary slightly for each node model.
 
@@ -269,7 +269,7 @@ image::H600S_ISI_nodefront.png[Shows the power button on the H610S/H615C node/ch
 Choose from one of the following options:
 
 * <<New NetApp HCI installation>>
-* <<Expanding an existing NetApp HCI installation>>
+* <<Expand an existing NetApp HCI installation>>
 
 === New NetApp HCI installation
 
@@ -287,7 +287,7 @@ NOTE: If you are using DHCP on the management network, you can connect to the DH
 +
 NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
-=== Expanding an existing NetApp HCI installation
+=== Expand an existing NetApp HCI installation
 
 .Steps
 
