@@ -199,7 +199,7 @@ https://[management node IP]/package-repository/1/
 .. Enter the firmware package ID you copied in the previous step in *id*.
 .. Click *Execute* to initiate the status request.
 +
-The response indicates `state` as `finished` when complete.
+The response indicates `state` as `SUCCESS` when complete.
 |===
 . Locate the installation asset ID:
 .. Open the management node REST API UI on the management node:

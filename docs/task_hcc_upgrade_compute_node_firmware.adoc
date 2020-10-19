@@ -240,7 +240,7 @@ https://[management node IP]/package-repository/1/
 .. Enter the package ID you copied in the previous step in *id*.
 .. Click *Execute* to initiate the status request.
 +
-The response indicates `state` as `finished` when complete.
+The response indicates `state` as `SUCCESS` when complete.
 .. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
 |===
 . Locate the compute controller ID and node hardware ID for the node you intend to upgrade:
