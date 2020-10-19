@@ -1,5 +1,5 @@
 ---
-sidebar: sidebar
+sidebar: docs_sidebar
 permalink: docs/task_hcc_qos_policies.html
 summary: You can set up and modify QoS policies to apply to volumes in your storage cluster.
 keywords: netapp, qos policy, quality of service, qos policies, volumes, element
@@ -15,7 +15,7 @@ keywords: netapp, qos policy, quality of service, qos policies, volumes, element
 [.lead]
 A QoS (Quality of Service) policy enables you to create and save a standardized quality of service setting that can be applied to many volumes. The selected cluster must be Element 10.0 or later to use QoS policies; otherwise, QoS policy functions are not available.
 
-NOTE: See NetApp HCI Concepts content for more information about using https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html#qos-policies[QoS policies] instead of individual volume https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS].
+NOTE: See NetApp HCI Concepts content for more information about using link:concept_hci_performance.html#qos-policies[QoS policies] instead of individual volume link:concept_hci_performance.html[QoS].
 
 Using NetApp Hybrid Cloud Control, you can create and manage QoS policies by completing the following tasks:
 
@@ -61,6 +61,7 @@ This task describes how to assign a QoS policy to an individual volume by changi
 . Click the *Actions* menu next to the volume you intend to modify.
 . In the resulting menu, select *Edit*.
 . In the dialog box, enable *Assign QoS Policy* and select the QoS policy from the drop-down list to apply to the selected volume.
++
 NOTE: Assigning QoS will override any individual volume QoS values that have been previously applied.
 
 . Click *Save*.

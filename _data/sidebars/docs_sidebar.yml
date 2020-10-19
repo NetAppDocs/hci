@@ -92,7 +92,7 @@ entries:
             url: /task_hcc_activeiq.html
           - title: Collect logs for troubleshooting
             url: /task_hcc_collectlogs.html
-      - title: Work with Element storage
+      - title: Manage NetApp HCI storage
         entries:
           - title: Create and manage volume QoS policies
             url: /task_hcc_qos_policies.html
