@@ -20,7 +20,7 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 
 .Before you begin
 
-* Your previous management node was running NetApp Element software version 11.3 or later with persistent volumes functionality engaged.
+* Your previous management node was running NetApp Element software version 11.3 or later with link:concept_hci_volumes.html#persistent-volumes[persistent volumes] functionality engaged.
 * You know the MVIP and SVIP of the cluster containing the persistent volumes.
 * Your cluster version is running NetApp Element software 11.3 or later.
 * Your installation uses IPv4. The management node 11.3 does not support IPv6.
@@ -37,9 +37,6 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 | Citrix XenServer | .iso
 | OpenStack | .iso
 |===
-
-.About this task
-Prior to completing this procedure, you should have an understanding of link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
 
 .Steps
 
