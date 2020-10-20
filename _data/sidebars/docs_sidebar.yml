@@ -196,7 +196,9 @@ entries:
      - title: Replace drives for storage nodes
        url: /task_hci_driverepl.html
      - title: Replace H410S nodes
-       url: /task_hci_h410srepl.html 
+       url: /task_hci_h410srepl.html
+     - title: Replace H610C and H615C nodes
+       url: /task_hci_h610ch615crepl.html 
      - title: Replace power supply units
        url: /task_hci_psurepl.html
   - title: Legal notices
