@@ -91,9 +91,23 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 sudo su
 ----
 
-. Ensure time is synced (NTP) between the management node and the storage cluster.
+. Ensure time is synced between the management node and the storage cluster using NTP or VMware Tools:
+
+* NTP
+.. Edit the `/etc/ntp.conf` file.
+.. Change the default time server(s) to the same NTP server used on the storage cluster.
+.. In vSphere, verify that the *Synchronize guest time with host* box is un-checked in the VM options.
 +
-NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
+NOTE: Do not enable this option if you make future changes to the VM.
+
+* VMware Tools
+.. Disable NTP on the management node:
++
+----
+systemctl disable ntp.service
+----
+
+.. In vSphere, enable *Synchronize guest time with host* in the VM options.
 
 . Create a temporary destination directory for the management services bundle contents:
 +
