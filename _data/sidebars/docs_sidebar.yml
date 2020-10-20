@@ -82,7 +82,7 @@ entries:
     entries:
       - title: Manage NetApp HCI storage
         entries:
-        - title: Manage volume access groups
+        - title: Create and manage volume access groups
           url: /task_hcc_manage_vol_access_groups.html
       - title: Monitor your NetApp HCI system
         entries:
