@@ -25,7 +25,7 @@ Manage the following types of accounts:
 
 == Manage authoritative cluster accounts
 
-Authoritative user accounts are managed from the top right menu User Management option in NetApp Hybrid Cloud Control. These enable you to authenticate against any storage asset associated with the NetApp Hybrid Cloud Control instance of nodes and clusters. With this account, you can manage volumes, accounts, access groups, and more across all clusters.
+Authoritative user accounts are managed from the top right menu User Management option in NetApp Hybrid Cloud Control. These types of accounts enable you to authenticate against any storage asset associated with a NetApp Hybrid Cloud Control instance of nodes and clusters. With this account, you can manage volumes, accounts, access groups, and more across all clusters.
 
 
 === Create an authoritative cluster account
@@ -92,7 +92,7 @@ Before you delete the account, delete and purge any volumes associated with the 
 
 
 == Manage volume accounts
-Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table. These accounts are specific only to the storage cluster on which they were created. They enable you to set permissions on volumes across the network, but have no effect outside of those volumes.
+Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table. These accounts are specific only to the storage cluster on which they were created. These types of accounts enable you to set permissions on volumes across the network, but have no effect outside of those volumes.
 
 A volume account contains the CHAP authentication required to access the volumes assigned to it.
 

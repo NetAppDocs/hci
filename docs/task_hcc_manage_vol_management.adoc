@@ -14,13 +14,12 @@ keywords: netapp, hci, on premise, cluster, element, volume
 :imagesdir: ../media/
 
 [.lead]
-You can create a volume and associate the volume with a given account. Every volume must be associated with an account. This association gives the account access to the volume through the iSCSI initiators using the CHAP credentials.
-
-.About this task
+You can create a volume and associate the volume with a given account. Associating a volume with an account gives the account access to the volume through the iSCSI initiators and CHAP credentials.
 
 You can specify QoS settings for a volume during creation.
 
 You can manage volumes in NetApp Hybrid Cloud Control in the following ways:
+
 * <<Create a volume>>
 * <<Apply a QoS policy to a volume>>
 * <<Edit a volume>>
@@ -133,6 +132,7 @@ TIP: When you change IOPS values, you should increment in tens or hundreds. Inpu
 
 == Clone a volume
 
+*QUESTION: I don't think you can create a clone in HCC yet, correct?*
 
 
 == Delete a volume
