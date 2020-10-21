@@ -41,6 +41,7 @@ Deployment begins and a progress page is displayed. Do not close the browser win
 +
 NOTE: If the deployment fails, save any error message text and contact NetApp Support.
 
++
 After deployment is complete, the compute nodes might reboot more than once before becoming ready for service.
 
 .After you finish
