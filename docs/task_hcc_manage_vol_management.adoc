@@ -20,42 +20,69 @@ You can create a volume and associate the volume with a given account. Every vol
 
 You can specify QoS settings for a volume during creation.
 
+You can manage volumes in NetApp Hybrid Cloud Control in the following ways:
+* <<Create a volume>>
+* <<Apply a QoS policy to a volume>>
+* <<Edit a volume>>
+* <<Clone a volume>>
+* <<Delete a volume>>
+* <<Restore a deleted volume>>
+* <<Purge a deleted volume>>
+
+
 == Create a volume
 You can create a volume in NetApp HCI using NetApp Hybrid Cloud Control.
 
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
-. Select *Volumes*.
-. Select the *Volumes* tab.
-. Select the *Create Volume* button.
-. In the resulting dialog, enter a name for the new volume.
+. Select *Volumes* > *Overview* tab.
+. Select *Create Volume*.
+. Enter a name for the new volume.
 . Enter the total size of the volume.
 +
 NOTE: The default volume size selection is in GB. You can create volumes using sizes measured in GB or GiB:
-+
-* 1GB = 1 000 000 000 bytes
-* 1GiB = 1 073 741 824 bytes
+1GB = 1 000 000 000 bytes
+1GiB = 1 073 741 824 bytes
 
-. Select a Block Size for the volume.
-. From the Account drop-down list, select the account that should have access to the volume.
+. Select a bock size for the volume.
+. From the Account list, select the account that should have access to the volume.
+//+
+//If an account does not exist, click the *Create Account* link, enter a new account name, and click *Create*. The account is created and associated with the new volume.
 +
-If an account does not exist, click the *Create Account* link, enter a new account name, and click *Create*. The account is created and associated with the new volume.
-+
-NOTE: If there are more than 50 accounts, the list does not appear. Begin typing and the auto-complete function displays possible values for you to choose.
+NOTE: If there are more than 50 accounts, the list does not appear. Begin typing and the auto-complete feature displays values for you to choose.
 
 . To set the Quality of Service, do one of the following:
-.. Under Policy, you can select an existing QoS policy, if available.
-.. Under Custom Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
+.. Select an existing QoS policy.
+.. Under QoS Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
 +
 Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
 
 . Click *Create Volume*.
 
 
+== Apply a QoS policy to a volume
+You can apply a QoS policy to an existing NetApp HCI volume by using NetApp Hybrid Cloud Control.
+
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, expand the name of your storage cluster on the left navigation menu.
+. Select *Volumes* > *Overview*.
+. In the *Actions* column in the volumes table, expand the menu for the volume and select *Edit*.
+. Change the Quality of Service by doing one of the following:
+.. Select an existing policy.
+.. Under Custom Settings, set the minimum, maximum, and burst values for IOPS or use the default values.
++
+NOTE: If you are using QoS policies on a volume, you can set custom QoS to remove the QoS policy affiliation with the volume. Custom QoS override QoS policy values for volume QoS settings.
++
+TIP: When you change IOPS values, increment in tens or hundreds. Input values require valid whole numbers. Configure volumes with an extremely high burst value. This enables the system to process occasional large block, sequential workloads more quickly, while still constraining the sustained IOPS for a volume.
+
+. Select *Save*.
+
+
 == Edit a volume
-You can edit the properties of an existing NetApp HCI volume by using NetApp Hybrid Cloud Control. You can edit volume attributes such as QoS values, volume size, and the unit of measurement by which byte values are calculated. You can also modify account access for replication usage or to restrict access to the volume.
+Using NetApp Hybrid Cloud Control, you can edit volume attributes such as QoS values, volume size, and the unit of measurement by which byte values are calculated. You can also modify account access for replication usage or to restrict access to the volume.
 
 .About this task
 You can resize a volume when there is sufficient space on the cluster under the following conditions:
@@ -66,25 +93,20 @@ You can resize a volume when there is sufficient space on the cluster under the 
 * The volume is being resynced.
 
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
-. Select *Volumes*.
-. Select the *Volumes* tab.
-. In the *Actions* column in the volumes table, expand the options menu for the volume you need to edit.
-. In the options menu, select *Edit*.
+. Select *Volumes* > *Overview*.
+. In the *Actions* column in the volumes table, expand the menu for the volume and select *Edit*.
 . Make changes as needed:
 .. Change the total size of the volume.
 +
-NOTE:
-* You can increase, but not decrease, the size of the volume. You can only resize one volume in a single resizing operation. Garbage collection operations and software upgrades do not interrupt the resizing operation.
-* If you are adjusting volume size for replication, you should first increase the size of the volume assigned as the replication target. Then you can resize the source volume. The target volume can be greater or equal in size to the source volume, but it cannot be smaller.
-
+NOTE: You can increase, but not decrease, the size of the volume. You can only resize one volume in a single resizing operation. Garbage collection operations and software upgrades do not interrupt the resizing operation.
++
+NOTE: If you are adjusting volume size for replication, first increase the size of the volume assigned as the replication target. Then you can resize the source volume. The target volume can be greater or equal in size to the source volume, but it cannot be smaller.
 +
 NOTE: The default volume size selection is in GB. You can create volumes using sizes measured in GB or GiB:
-+
-* 1GB = 1 000 000 000 bytes
-* 1GiB = 1 073 741 824 bytes
+1GB = 1 000 000 000 bytes
+1GiB = 1 073 741 824 bytes
 
 .. Select a different account access level:
 +
@@ -103,9 +125,9 @@ If there are more than 50 accounts, the list does not appear. Begin typing and t
 ... Select an existing policy.
 ... Under Custom Settings, set the minimum, maximum, and burst values for IOPS or use the default values.
 +
-NOTE: If you are using QoS policies on a volume, you can set custom QoS to remove the QoS policy affiliation with the volume. Custom QoS will override and adjust QoS policy values for volume QoS settings.
+NOTE: If you are using QoS policies on a volume, you can set custom QoS to remove the QoS policy affiliation with the volume. Custom QoS will override QoS policy values for volume QoS settings.
 +
-TIPS: When you change IOPS values, you should increment in tens or hundreds. Input values require valid whole numbers. Configure volumes with an extremely high burst value. This enables the system to process occasional large block sequential workloads more quickly, while still constraining the sustained IOPS for a volume.
+TIP: When you change IOPS values, you should increment in tens or hundreds. Input values require valid whole numbers. Configure volumes with an extremely high burst value. This enables the system to process occasional large block, sequential workloads more quickly, while still constraining the sustained IOPS for a volume.
 
 . Select *Save*.
 
@@ -117,55 +139,53 @@ TIPS: When you change IOPS values, you should increment in tens or hundreds. Inp
 You can delete one or more volumes from an Element storage cluster.
 
 .About this task
-The system does not immediately purge a deleted volume; the volume remains available for approximately eight hours. If you restore a volume before the system purges it, the volume comes back online and iSCSI connections are restored.
+The system does not immediately purge deleted volumes; they remain available for approximately eight hours. After eight hours, they are purged and no longer available. If you restore a volume before the system purges it, the volume comes back online and iSCSI connections are restored.
 
 If a volume used to create a snapshot is deleted, its associated snapshots become inactive. When the deleted source volumes are purged, the associated inactive snapshots are also removed from the system.
 
-IMPORTANT: Persistent volumes that are associated with management services are created and assigned to a new account during installation or upgrade. If you are using persistent volumes, do not modify or delete the volumes or their associated account.
+IMPORTANT: Persistent volumes that are associated with management services are created and assigned to a new account during installation or upgrade. If you are using persistent volumes, do not modify or delete the volumes or their associated account. If you do delete these volumes, you could render your management node unusable.
 
 
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
-. Select *Volumes*.
-. Select the *Volumes* tab.
-. In the *Actions* column of the Volumes table, expand the menu for the volume you need to delete.
-. In the options menu, select *Delete*.
+. Select *Volumes* > *Overview*.
+. Select one or more volumes to delete.
+. In the *Actions* column of the Volumes table, expand the menu for the volume and select *Delete*.
 . Confirm the delete by selecting *Yes*.
 
 == Restore a deleted volume
+After a volume is deleted, you can still restore it if you do so before eight hours after deletion.
 
-== Purge a volume
-
-== Assign LUNs to a Fibre Channel volume
-
-== Apply a QoS policy to a volume
-
-== Remove the QoS policy from a volume
-
-
-
-
-////
-== View details of a volume access group
-You can view the details of an existing NetApp HCI volume access group, such as attached volumes and initiators, using NetApp Hybrid Cloud Control.
+The system does not immediately purge deleted volumes; they remain available for approximately eight hours. After eight hours, they are purged and no longer available. If you restore a volume before the system purges it, the volume comes back online and iSCSI connections are restored.
 
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
-. Select *Volumes*.
-. Select the *Access Groups* tab.
-. In the *Actions* column of the table of access groups, expand the options menu for the access group you need to edit.
-. In the options menu, select *Details*.
-+
-The *Volume Access Group Details* dialog appears.
-////
+. Select *Volumes* > *Overview*.
+. Select *Deleted*.
+. In the *Actions* column of the Volumes table, expand the menu for the volume and select *Restore*.
+. Confirm the process by selecting *Yes*.
+
+
+== Purge a deleted volume
+After volumes are deleted, they remain available for approximately eight hours. After eight hours, they are purged automatically and no longer available. If you do not want to wait for the eight hours, you can delete
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, expand the name of your storage cluster on the left navigation menu.
+. Select *Volumes* > *Overview*.
+. Select *Deleted*.
+. Select one or more volumes to purge.
+. In the *Actions* column of the Volumes table, expand the menu for the volume and select *Purge*.
+. Confirm the process by selecting *Yes*.
+
+
+
 
 [discrete]
 == Find more information
-* link:concept_hci_volume_access_groups.html[Learn about volume access groups]
-* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[Work with volume access groups and initiators^]
+* link:concept_hci_volumes.html[Learn about volumes]
+* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-2D2EAC0D-DD28-4ACA-A189-AA45E982EFDB.html[Work with volumes^]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
