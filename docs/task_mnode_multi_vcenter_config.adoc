@@ -1,0 +1,113 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_multi_vcenter_config.html
+summary: You can add compute and controller assets to the management node configuration using the REST API UI.
+keywords: netapp, mnode, management node, multi-vcenter, hci
+---
+
+= Configure NetApp Hybrid Cloud Control for multiple vCenters
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add compute and controller assets to the management node configuration using the REST API UI.
+
+You might need to add an asset if you recently scaled your installation and new assets were not added automatically to your configuration. Use these APIs to add assets that are recent additions to your installation.
+
+.What you'll need
+* Your cluster version is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
+
+.About this task
+(NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
+
+.Steps
+. Get the base asset ID for the installation:
+.. Open the inventory service REST API UI on the management node:
++
+----
+https://[management node IP]/inventory/1/
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the code 200 response body, copy the `id` for the installation.
++
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      "id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",
+----
++
+NOTE: Your installation has a base asset configuration that was created during installation or upgrade.
+
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+.. From the response, copy and save the cluster controller ID (`"controllerId"`) for use in a later step.
+. (For compute nodes only) Locate the hardware tag for your compute node in vSphere:
+.. Select the host in the vSphere Web Client navigator.
+.. Click the *Monitor* tab, and click *Hardware Health*.
+.. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
+. To add a compute node or controller sub-asset to an existing base asset, click one of the following.
++
+[cols=2*,options="header",cols="40,60"]
+|===
+| Option
+| Description
+| POST /assets/{asset_id}/controllers
+a| . Open the mNode service REST API UI on the management node:
++
+----
+https://[management node IP]/mnode
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+. Click *POST /assets/{asset_id}/controllers*.
+. Click *Try it out*.
+. Enter the parent base asset ID in the *asset_id* field.
+. Add the required values to the payload.
+. Click *Execute*.
+| POST /assets/{asset_id}/compute-nodes
+a| . Open the mNode service REST API UI on the management node:
++
+----
+https://[management node IP]/mnode
+----
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+. Click *POST /assets/{asset_id}/compute-nodes*.
+. Click *Try it out*.
+. Enter the parent base asset ID you copied in an earlier step in the *asset_id* field.
+. In the payload, do the following:
+.. Enter the management IP for the node in the `ip` field.
+.. For `hardwareTag`, enter the hardware tag value you saved in an earlier step.
+.. Enter other values, as required.
+. Click *Execute*.
+|===
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
