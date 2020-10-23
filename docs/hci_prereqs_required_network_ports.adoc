@@ -198,10 +198,6 @@ The following abbreviations are used in the table:
 |2181
 |Intercluster communication for remote replication
 
-|Storage node SIP
-|Storage node SIP
-|3260
-|Internode iSCSI
 
 |Storage node SIP
 |Remote storage node SIP
