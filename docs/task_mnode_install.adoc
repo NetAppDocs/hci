@@ -39,6 +39,8 @@ NOTE: If you need to IPv6 support, you can use the management node 11.1.
 | OpenStack | .iso
 |===
 
+* (Management node 12.0 and 12.2 with proxy server) You have updated NetApp Hybrid Cloud Control to management services version 2.16 before configuring a proxy server.
+
 .About this task
 The Element 12.2 management node is an optional upgrade. It is not required for existing deployments.
 

@@ -95,9 +95,18 @@ https://[management node IP]/storage/1/
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
 ... Click *Authorize* to begin a session.
+... Close the authorization window.
 .. Click *POST /health-checks*.
 .. Click *Try it out*.
 .. Enter the storage cluster ID in the parameter field.
++
+----
+{
+"config": {},
+"storageId": "123a45b6-1a2b-12a3-1234-1a2b34c567d8"
+}
+----
+
 .. Click *Execute* to run a health check on the specified storage cluster.
 +
 The response should indicate state as `initializing`:
