@@ -12,64 +12,66 @@ entries:
         url: /rn_relatedrn.html
   - title: Concepts
     entries:
-     - title: Product overview
-       url: /concept_hci_product_overview.html
-     - title: Accounts
-       url: /concept_cg_hci_accounts.html
-     - title: Data protection
-       url: /concept_hci_dataprotection.html
-     - title: Clusters
-       url: /concept_hci_clusters.html
-     - title: Nodes
-       url: /concept_hci_nodes.html
-     - title: Storage
-       entries:
-         - title: Volumes
-           url: /concept_hci_volumes.html
-         - title: Maintenance mode
-           url: /concept_hci_storage_maintenance_mode.html
-         # url: /concept_hci_storage.html
-     - title: Licensing
-       url: /concept_cg_hci_licensing.html
-     - title: Security
-       url: /concept_cg_hci_security.html
-     - title: Performance
-       url: /concept_hci_performance.html
+      - title: Product overview
+        url: /concept_hci_product_overview.html
+      - title: Accounts
+        url: /concept_cg_hci_accounts.html
+      - title: Data protection
+        url: /concept_hci_dataprotection.html
+      - title: Clusters
+        url: /concept_hci_clusters.html
+      - title: Nodes
+        url: /concept_hci_nodes.html
+      - title: Storage
+        entries:
+          - title: Maintenance mode
+            url: /concept_hci_storage_maintenance_mode.html
+          - title: Volumes
+            url: /concept_hci_volumes.html
+          - title: Volume access groups
+            url: /concept_hci_volume_access_groups.html
+          # url: /concept_hci_storage.html
+      - title: Licensing
+        url: /concept_cg_hci_licensing.html
+      - title: Security
+        url: /concept_cg_hci_security.html
+      - title: Performance
+        url: /concept_hci_performance.html
   - title: Requirements and pre-deployment tasks
     entries:
-     - title: Network port requirements
-       url: /hci_prereqs_required_network_ports.html
-     - title: Network and switch requirements
-       url: /hci_prereqs_network_switch.html
-     - title: Network cable requirements
-       url: /hci_prereqs_network_cables.html
-     - title: IP address requirements
-       url: /hci_prereqs_ip_address.html
-     - title: Network configuration
-       entries:
-         - title: Network configuration options overview
-           url: /hci_prereqs_network_configuration.html
-         - title: Network configuration option A
-           url: /hci_prereqs_network_configuration_option_A.html
-         - title: Network configuration option B
-           url: /hci_prereqs_network_configuration_option_B.html
-         - title: Network configuration option C
-           url: /hci_prereqs_network_configuration_option_C.html
-     - title: DNS and timekeeping requirements
-       url: /hci_prereqs_timekeeping.html
-     - title: Environmental requirements
-       url: /hci_prereqs_environmental.html
-     - title: Protection Domains
-       url: /hci_prereqs_protection_domains.html
-     - title: Witness Node resource requirements for two-node storage clusters
-       url: /hci_prereqs_witness_nodes.html
+      - title: Network port requirements
+        url: /hci_prereqs_required_network_ports.html
+      - title: Network and switch requirements
+        url: /hci_prereqs_network_switch.html
+      - title: Network cable requirements
+        url: /hci_prereqs_network_cables.html
+      - title: IP address requirements
+        url: /hci_prereqs_ip_address.html
+      - title: Network configuration
+        entries:
+          - title: Network configuration options overview
+            url: /hci_prereqs_network_configuration.html
+          - title: Network configuration option A
+            url: /hci_prereqs_network_configuration_option_A.html
+          - title: Network configuration option B
+            url: /hci_prereqs_network_configuration_option_B.html
+          - title: Network configuration option C
+            url: /hci_prereqs_network_configuration_option_C.html
+      - title: DNS and timekeeping requirements
+        url: /hci_prereqs_timekeeping.html
+      - title: Environmental requirements
+        url: /hci_prereqs_environmental.html
+      - title: Protection Domains
+        url: /hci_prereqs_protection_domains.html
+      - title: Witness Node resource requirements for two-node storage clusters
+        url: /hci_prereqs_witness_nodes.html
   - title: Get started with NetApp HCI
     entries:
       - title: NetApp HCI installation and deployment overview
         url: /task_hci_getstarted.html
       - title: Install H-series hardware
         url: /task_hci_installhw.html
-        # For 20.2 consider putting multiple access topics or URLs
+         # For 20.2 consider putting multiple access topics or URLs
       - title: Configure LACP for optimal storage performance
         url: /hci_prereqs_LACP_configuration.html
       - title: Validate your environment with Active IQ Config Advisor
@@ -78,6 +80,10 @@ entries:
         url: /hci_prereqs_final_prep.html
   - title: Manage NetApp HCI
     entries:
+      - title: Manage NetApp HCI storage
+        entries:
+        - title: Create and manage volume access groups
+          url: /task_hcc_manage_vol_access_groups.html
       - title: Monitor your NetApp HCI system
         entries:
           - title: View resources on the HCC Dashboard
