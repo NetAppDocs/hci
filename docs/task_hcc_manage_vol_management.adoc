@@ -5,7 +5,7 @@ summary: Learn how to create a volume and associate the volume with a given acco
 keywords: netapp, hci, on premise, cluster, element, volume
 ---
 
-= Manage volumes by using NetApp Hybrid Cloud Control
+= Create and manage volumes by using NetApp Hybrid Cloud Control
 
 :hardbreaks:
 :nofooter:
