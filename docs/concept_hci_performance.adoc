@@ -78,11 +78,11 @@ As an example, if block sizes are 4k, and bandwidth is 4000 KBps, the IOPS are 1
 
 == QoS policies
 
-A QoS policy enables you to create and save a standardized quality of service setting that can be applied to many volumes. You can create, edit, and delete QoS policies.
+A QoS policy enables you to create and save a standardized quality of service setting that can be applied to many volumes.
 
-QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together. If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
+QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Individual volume QoS is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day.
 
-You can view QoS policies on the *Management* > *QoS Policies* page from the NetApp Element Management extension point.
+QoS and QoS policies should not be used together. If you are using QoS policies, do not use custom QoS on a volume. Custom QoS will override and adjust QoS policy values for volume QoS settings.
 
 NOTE: The selected cluster must be Element 10.0 or later to use QoS policies; otherwise, QoS policy functions are not available.
 
