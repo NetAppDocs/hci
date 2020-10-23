@@ -124,10 +124,9 @@ You can use NetApp Hybrid Cloud Control only if your NetApp HCI installation run
 `https://<ManagementNodeIP>/manager/login`
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
-The browser opens the NetApp Deployment Engine.
 . Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
 . On the Welcome page, select *No*.
-. Click *Continue*.
+. Select *Continue*.
 . On the Available Inventory page, select the storage node you want to add to the existing NetApp HCI installation.
 . Select *Continue*.
 . On the Network Settings page, some of the network information has been detected from the initial deployment. Each new storage node is listed by serial number, and you should assign new network information to it. Perform the following steps:

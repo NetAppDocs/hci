@@ -197,6 +197,8 @@ entries:
        url: /task_hci_dimmcomputerepl.html
      - title: Replace drives for storage nodes
        url: /task_hci_driverepl.html
+     - title: Replace H410C nodes
+       url: /task_hci_h410crepl.html
      - title: Replace H410S nodes
        url: /task_hci_h410srepl.html
      - title: Replace H610C and H615C nodes
