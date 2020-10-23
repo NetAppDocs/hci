@@ -21,7 +21,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 .What you'll need
 
-* *Compute drivers*: You have upgraded your compute node drivers.
+* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers do not meet version requirements, the upgrade will not start.
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Minimum BMC and BIOS versions*: The node you intend to upgrade using NetApp Hybrid Cloud Control meets the following minimum requirements:
