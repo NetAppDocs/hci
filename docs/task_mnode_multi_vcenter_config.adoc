@@ -23,10 +23,10 @@ You should use this process after your initial installation when you need to add
 * You have deployed a management node running version 11.3 or later.
 
 .Steps
-. link:docs/task_mnode_add_assets.html[Add new vCenters as controller assets] to the management node configuration.
-. link:docs/task_mnode_add_assets.html[Add new compute nodes as compute assets] to the management node configuration.
+. link:task_mnode_add_assets.html[Add new vCenters as controller assets] to the management node configuration.
+. link:task_mnode_add_assets.html[Add new compute nodes as compute assets] to the management node configuration.
 +
-NOTE: You might need to link:docs/task_hcc_edit_bmc_info.html[change BMC credentials for compute nodes] to resolve a `Hardware ID not available` or `Unable to Detect` error indicated in NetApp Hybrid Cloud Control.
+NOTE: You might need to link:task_hcc_edit_bmc_info.html[change BMC credentials for compute nodes] to resolve a `Hardware ID not available` or `Unable to Detect` error indicated in NetApp Hybrid Cloud Control.
 
 . Refresh the inventory service API on the management node:
 +
