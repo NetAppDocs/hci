@@ -128,7 +128,7 @@ entries:
               - title: Enable Active IQ and NetApp HCI monitoring
                 url: task_mnode_enable_activeIQ.html
               - title: Configure NetApp Hybrid Cloud Control for multiple vCenters
-                url: docs/task_mnode_multi_vcenter_config.html
+                url: task_mnode_multi_vcenter_config.html
               - title: Add compute and controller assets to the management node
                 url: task_mnode_add_assets.html
               - title: View or edit existing controller assets
