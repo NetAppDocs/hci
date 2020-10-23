@@ -5,7 +5,7 @@ summary: Learn how to add new a volume access groups to work with NetApp HCI sto
 keywords: netapp, hci, on premise, cluster, element
 ---
 
-= Manage volume access groups
+= Create and manage volume access groups
 
 :hardbreaks:
 :nofooter:
@@ -15,16 +15,6 @@ keywords: netapp, hci, on premise, cluster, element
 
 [.lead]
 You can add new volume access groups, delete existing volume access groups, edit the details of a volume access group, and view the details of a volume access group using NetApp Hybrid Cloud Control.
-
-[NOTE]
-======================
-Volume access groups have the following limits:
-
-* A maximum of 64 IQNs or WWPNs are allowed in an access group.
-* An access group can be made up of a maximum of 2000 volumes.
-* An IQN or WWPN can belong to only one access group.
-* A single volume can belong to a maximum of four access groups.
-======================
 
 .What you'll need
 
