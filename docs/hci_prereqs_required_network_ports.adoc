@@ -53,6 +53,46 @@ The following abbreviations are used in the table:
 |3260
 |Client iSCSI communications
 
+|Compute node BMC
+|Management node
+|111 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|445
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|2049 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|137-138 UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
+|Compute node BMC
+|139
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
+|Compute node BMC
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|VMware vCenter
+|5988-5989
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|VMware vCenter
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
+
 |Management node
 |`sfsupport.solidfire.com`
 |22
