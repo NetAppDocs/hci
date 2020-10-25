@@ -14,6 +14,9 @@ keywords: netapp, hci, H410C nodes, replacement, node replacement
 
 [.lead]
 You should replace a compute node in the event of CPU failure, other motherboard issues, or if it does not power on. The instructions apply to H410C nodes. If you have a H410C compute node that runs NetApp HCI Bootstrap OS version 1.6P1 or later, you do not have to replace the node if the memory DIMM fails; you need replace only the failed DIMM. If the DIMMs in your node have not failed, you can use them in the replacement node.
+
+NOTE: The replacement node should have the same version of NetApp HCI Bootstrap OS as the rest of the compute nodes in the NetApp HCI installation.
+
 .What you'll need
 
 * You have determined that the compute node needs to be replaced.
@@ -29,7 +32,7 @@ See link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastru
 .About this task
 Alarms in the VMware vSphere Web Client alert you when a node fails. You should match the serial number of the failed node from the VMware vSphere Web Client with the serial number on the sticker at the back of the node.
 
-When replacing an H410C compute node, keep the following considerations in mind:
+When replacing an H410C compute node, consider the following:
 
 * You can intermix the H410C compute node with existing NetApp HCI compute and storage nodes in the same chassis and cluster.
 * The H410C compute node operates only on high-line voltage (200-240 VAC). You should ensure that the power requirements are met when you add H410C nodes to an existing NetApp HCI system.
@@ -333,6 +336,248 @@ It might take a few minutes for the node to get added to the cluster. After the 
 .. Select the node, and then select *Manage > Networking > Virtual switches*, and perform the following steps:
 ... Select *vSwitch0*.
 You should see only vSwitch0 listed in the table that is displayed.
+... In the graphic that is displayed, select *VM Network*, and click *X* to remove the VM Network port group.
++
+image::h410c-esxi-1.gif[Shows the screen to remove the VM Network port group.]
+
+... Confirm the action.
+... Select *vSwitch0*, and then select the pencil icon to edit the settings.
+... In the vSwitch0 - Edit settings window, select *Teaming and failover*.
+... Ensure that vmnic3 is listed under Standby adapters, and select *OK*.
+... In the graphic that is displayed, select *Management Network*, and select the pencil icon to edit the settings.
++
+image::h410c-mgmtnetwork.gif[Shows the screen where you edit the management network.]
+
+... In the Management Network - Edit settings window, select *Teaming and failover*.
+... Move vmnic3 to Standby adapters by using the arrow icon, and select *OK*.
+.. From the Actions drop-down menu, select *Add Networking*, and enter the following details in the window that is displayed:
+... For connection type, select *Virtual Machine Port Group for a Standard Switch*, and select *Next*.
+... For target device, select the option to add a new standard switch, and select *Next*.
+... Select *+*.
+... In the Add Physical Adapters to Switch window, select vmnic0 and vmnic4, and select *OK*.
+vmnic0 and vmnic4 are now listed under Active adapters.
+... Select *Next*.
+... Under connection settings, verify that VM Network is the network label, and select *Next*.
+... If you are ready to proceed, select *Finish*.
+vSwitch1 is displayed in the list of virtual switches.
+.. Select *vSwitch1*, and select the pencil icon to edit the settings as follows:
+... Under Properties, set MTU to 9000, and select *OK*.
+In the graphic that is displayed, select *VM Network*, and click the pencil icon to edit the settings as follows:
+.. Select *Security*, and make the following selections:
++
+image::vswitch1.gif[Shows the security selections to make for the VM network.]
+... Select *Teaming and failover*, and select the *Override* checkbox.
+... Move vmnic0 to Standby adapters by using the arrow icon.
+... Select *OK*.
+.. With vSwitch1 selected, from the Actions drop-down menu, select *Add Networking*, and enter the following details in the window that is displayed:
+... For connection type, select *VMkernel Network Adapter*, and select *Next*.
+... For target device, select the option to use an existing standard switch, browse to vSwitch1, and select *Next*.
+... Under port properties, change the network label to vMotion, select the checkbox for vMotion traffic under Enable services, and select *Next*.
+... Under IPv4 settings, provide the IPv4 information, and select *Next*.
+The IP address you enter here is the vMotion IP address that you copied earlier.
+... If you are ready to proceed, select *Finish*.
+.. In the graphic that is displayed, select vMotion, and select the pencil icon to edit the settings as follows:
+... Select *Security*, and make the following selections:
++
+image::vmotion.gif[Shows the security selections for the vMotion.]
+... Select *Teaming and failover*, and select the *Override* checkbox.
+... Move vmnic4 to Standby adapters by using the arrow icon.
+... Select *OK*.
+.. With vSwitch1 selected, from the Actions drop-down menu, select *Add Networking* and enter the following details in the window that is displayed:
+... For connection type, select *VMkernel Network Adapter*, and select *Next*.
+... For target device, select the option to add a new standard switch, and select *Next*.
+... Select *+*.
+... In the Add Physical Adapters to Switch window, select vmnic1 and vmnic5, and select *OK*.
+vmnic1 and vmnic5 are now listed under Active adapters.
+... Select *Next*.
+... Under port properties, change the network label to iSCSI-B, and select *Next*.
+... Under IPv4 settings, provide the IPv4 information, and select *Next*.
+The IP address you enter here is the iSCSI-B IP address that you copied earlier.
+... If you are ready to proceed, select *Finish*.
+vSwitch2 is displayed in the list of virtual switches.
+.. Select *vSwitch2*, and select the pencil icon to edit the settings as follows:
+... Under Properties, set MTU to 9000, and select *OK*.
+.. In the graphic that is displayed, select *iSCSI-B*, and select the pencil icon to edit the settings as follows:
+... Select *Security*, and make the following selections:
++
+image::iscsi-b.gif[Shows the security selections for the iSCSI-B network.]
+... Select *Teaming and failover*, and select the *Override* checkbox.
+... Move vmnic1 to Unused adapters by using the arrow icon.
+... Select *OK*.
+.. From the Actions drop-down menu, select *Add Networking* and enter the following details in the window that is displayed:
+... For connection type, select *VMkernel Network Adapter*, and select *Next*.
+... For target device, select the option to use an existing standard switch, browse to vSwitch2, and select *Next*.
+... Under port properties, change the network label to iSCSI-A, and select *Next*.
+... Under IPv4 settings, provide the IPv4 information, and select *Next*.
+The IP address you enter here is the iSCSI-A IP address that you copied earlier.
+... If you are ready to proceed, select *Finish*.
+.. In the graphic that is displayed, select *iSCSI-A*, and select the pencil icon to edit the settings as follows:
+... Select *Security*, and make the following selections:
++
+image::iscsi-a.gif[Shows the security selections for the iSCSI-A network.]
+... Select *Teaming and failover*, and select the *Override* checkbox.
+... Move vmnic5 to Unused adapters by using the arrow icon.
+... Select *OK*.
+.. With the newly added node selected and the Manage tab open, select *Storage > Storage Adapters*, and perform the following steps:
+... Select *+* and select *Software iSCSI Adapter*.
+... To add the iSCSI adapter, select *OK* in the dialog box.
+... Under Storage Adapters, select the iSCSI adapter, and from the Properties tab, copy the iSCSI Name.
++
+image::iscsi adapter name.gif[Shows the IQN string of the iSCSI adapter.]
++
+NOTE: You need the iSCSI Name when you create the initiator.
+
+.. Perform the following steps in the NetApp SolidFire vCenter Plug-in:
+... Select *Management > Initiators > Create*.
+... Select *Create a Single Initiator*.
+... Enter the IQN address you copied earlier in the IQN/WWPN field.
+... Select *OK*.
+... Select *Bulk Actions*, and select *Add to Volume Access Group*.
+... Select *NetApp HCI*, and select *Add*.
+.. In the VMware vSphere Web Client, under Storage Adapters, select the iSCSI adapter, and perform the following steps:
+... Under Adapter Details, select *Targets > Dynamic Discovery > Add*.
+... Enter the SVIP IP address in the iSCSI Server field.
++
+NOTE: To get the SVIP IP address, select *NetApp Element Management*, and copy the SVIP IP address.
+Leave the default port number as is. It should be 3260.
+
+... Select *OK*.
+A message recommending a rescan of the storage adapter is displayed.
+... Select the rescan icon.
++
+image::rescan.gif[Shows the rescan icon for the storage adapters.]
+... Under Adapter Details, select *Network Port Binding*, and select *+*.
+... Select the check boxes for iSCSI-B and iSCSI-A, and click OK.
+A message recommending a rescan of the storage adapter is displayed.
+... Select the rescan icon.
+After the rescan is complete, verify if the volumes in the cluster are visible on the new compute node (host).
+
+== Redeploy Witness Nodes for two and three-node storage clusters
+After you physically replace the failed compute node, you should redeploy the NetApp HCI Witness Node VM if the failed compute node was hosting the Witness Node. These instructions apply only to compute nodes that are part of a NetApp HCI installation with two or three-node storage clusters.
+
+.What you'll need
+
+* Gather the following information:
+** Cluster name from the storage cluster
+** Subnet mask, gateway IP address, DNS server, and domain information for the management network
+** Subnet mask for the storage network
+* Ensure that you have access to the storage cluster to be able to add the Witness Nodes to the cluster.
+* Consider the following conditions to help you decide whether to remove the existing Witness Node from VMware vSphere Web Client or the storage cluster:
+** If you want to use the same VM name for the new Witness Node, you should delete all the references to the old Witness Node from vSphere.
+** If you want to use the same host name on the new Witness Node, you should first remove the old Witness Node from the storage cluster.
++
+NOTE: You cannot remove the old Witness Node if your cluster is down to only two physical storage nodes (and no Witness Nodes). In this scenario, you should add the new Witness Node to the cluster first before removing the old one.
+You can remove the Witness Node from the cluster using the NetApp Element Management extension point.
+
+.When should you redeploy Witness Nodes?
+
+You should redeploy Witness Nodes in the following scenarios:
+
+* You replaced a failed compute node that is part of a NetApp HCI installation, which has a two or three-node storage cluster and the failed compute node was hosting a Witness Node VM.
+* You performed the return to factory image (RTFI) procedure on the compute node.
+* The Witness Node VM is corrupted.
+* The Witness Node VM was accidentally removed from ESXi.
+The VM is configured using the template that is created as part of initial deployment using the NetApp Deployment Engine. Here is an example of what a Witness Node VM looks like:
++
+image::vm-template.png[Shows a screenshot of the Witness Node VM template.]
+
+.Steps
+. In the VMware vSphere Web Client, select *Hosts and Clusters*.
+. Right-click the compute node that will host the Witness Node VM, and select *New Virtual Machine*.
+. Select *Deploy from template*, and select *Next*.
+. Follow the steps in the wizard:
+.. Select *Data Center*, locate the VM template, and select *Next*.
+.. Enter a name for the VM in the following format: NetApp-Witness-Node-##
++
+NOTE: ## should be replaced with a number.
+
+.. Leave the default selection for VM location as is, and select *Next*.
+.. Leave the default selection for the destination compute resource as is, and select *Next*.
+.. Select the local datastore, and select *Next*.
+Free space on the local datastore varies depending on the compute platform.
+.. Select *Power on virtual machine after creation* from the list of deploy options, and select *Next*.
+.. Review the selections, and select *Finish*.
+. Configure the management and storage network, and cluster settings for the Witness Node as follows:
+.. In the VMware vSphere Web Client, select *Hosts and Clusters*.
+.. Right-click the Witness Node, and power it on if it is not already powered on.
+.. In the Summary view of the Witness Node, select *Launch Web Console*.
+.. Wait for the Witness Node to boot up to the menu with the blue background.
+.. Select anywhere inside the console to access the menu.
+.. Configure the management network as follows:
+... Press the down arrow key to navigate to Network, and then press *Enter* for OK.
+... Navigate to *Network config*, and then press *Enter* for OK.
+... Navigate to *net0*, and then press *Enter* for OK.
+... Press *Tab* till you get to the IPv4 field, and then if applicable, delete the existing IP in the field and enter the management IP information for the Witness Node. Check the subnet mask and gateway as well.
++
+NOTE: No VLAN tagging will be applied at the VM host level; tagging will be handled in vSwitch.
+
+... Press *Tab* to navigate to OK, and press *Enter* to save changes.
+After management network configuration, the screen returns to Network.
+.. Configure the storage network as follows:
+... Press the down arrow key to navigate to Network, and then press *Enter* for OK.
+... Navigate to *Network config*, and then press *Enter* for OK.
+... Navigate to *net1*, and then press *Enter* for OK.
+... Press *Tab* till you get to the IPv4 field, and then if applicable, delete the existing IP in the field and enter the storage IP information for the Witness Node.
+... Press *Tab* to navigate to OK, and press *Enter* to save the changes.
+... Set MTU to 9000.
++
+NOTE: If MTU is not set before you add the Witness Node to the cluster, you  see cluster warnings for inconsistent MTU settings. This can prevent garbage collection from running and cause performance problems.
+
+... Press *Tab* to navigate to OK, and press *Enter* to save changes.
+After storage network configuration, the screen returns to Network.
+.. Configure the cluster settings as follows:
+... Press *Tab* to navigate to Cancel, and press *Enter*.
+... Navigate to *Cluster settings*, and then press *Enter* for OK.
+... Press *Tab* to navigate to Change Settings, and press *Enter* for Change Settings.
+... Press *Tab* to navigate to Hostname field, and enter the host name.
+... Press the down arrow key to access the Cluster field and enter the cluster name from the storage cluster.
+... Press the *Tab* key to navigate to OK button, and press *Enter*.
+. Add the Witness Node to the storage cluster as follows:
+.. From the vSphere Web Client, access the NetApp Element Management extension point from the *Shortcuts* tab or the side panel.
+.. Select *NetApp Element Management > Cluster*.
+.. Select the *Nodes* sub-tab.
+.. Select *Pending* from the drop-down list to view the list of nodes.
+The Witness Node should appear in the pending nodes list.
+.. Select the check box for the node you want to add, and select *Add node*.
+When the action is complete, the node appears in the list of active nodes for the cluster.
+
+== Change the password if you received a replacement node with a non-standard BMC password
+Some replacement nodes may be shipped with non-standard passwords for the baseboard management controller (BMC) UI. If you receive a replacement node with a non-standard BMC password, you should change the password to the default, ADMIN.
+
+.Steps
+. Identify whether you received a replacement node with a non-standard BMC password:
+.. Look for a sticker under the IPMI port at the back of the replacement node that you received. If you locate a sticker under the IPMI port, it means that you received a node with a non-standard BMC password. See the following sample image:
++
+image::bmc pw sticker.png[Shows the back of the node with the sticker under the IPMI port.]
+.. Make a note of the password.
+. Log in to the BMC UI using the unique password found on the sticker.
+. Select *Factory Default*, and select the *Remove current settings and set the user defaults to ADMIN/ADMIN* radio button:
+. Select *Restore*.
+. Log out and then log back in to confirm that the credentials are now changed.
+
+== Upgrade the BMC firmware on your node
+After you replace the compute node, you might have to upgrade the firmware version.
+You can download the latest firmware file from the drop-down menu on the link:https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site (login required)^].
+
+.Steps
+. Log in to the baseboard management controller (BMC) UI.
+. Select *Maintenance > Firmware Update*.
++
+image::h410c-bmc1.png[Shows the BMC UI navigation for firmware updates.]
+. From within the BMC console, select *Maintenance*.
++
+image::h410c-bmc2.png[Shows the maintenance screen in the BMC UI.]
+. From within the Maintenance tab, select *Firmware Update* from the navigation on the left of the UI, and select *Enter Update Mode*.
++
+image::h410c-bmc3.png[Shows the firmware update screen in the BMC UI.]
+. Select *Yes* in the confirmation dialog box.
+. Select *Browse* to select the firmware image to upload, and select *Upload Firmware*.
+Loading firmware from a location outside of the direct vicinity of the node might cause extended load times and possible timeouts.
+. Allow the preserve configuration checks, and select *Start Upgrade*.
+The upgrade should take approximately 5 minutes. If your upload time exceeds 60 minutes, cancel the upload and transfer the file to a local machine within the vicinity of the node.
+If your session times out, you might see a number of alerts while attempting to log back in to the firmware update area of the BMC UI. If you cancel the upgrade, you are redirected to the login page.
+. After the update is complete, select *OK*, and wait for the node to reboot.
+Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
