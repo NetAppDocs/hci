@@ -16,12 +16,13 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 [.lead]
 Before you get started with using NetApp HCI, you should install the storage and compute nodes correctly.
 
-TIP: See the link:../media/hseries-isi.pdf[poster] for a visual representation of the instructions.
+TIP: See the link:../media/hseries-isi.pdf[poster^] for a visual representation of the instructions.
 
 * <<Workflow diagrams>>
 * <<Prepare for installation>>
 * <<Install the rails>>
 * <<Install the node/chassis>>
+* <<Install the switches>>
 * <<Cable the nodes>>
 * <<Power on the nodes>>
 * <<Configure NetApp HCI>>
@@ -125,7 +126,11 @@ TIP: There are left and right rails on the H610S and H615C. Position the screw h
 
 == Install the node/chassis
 
-You will install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, you will install the chassis/node directly onto the rails in the rack.
+You install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, install the chassis/node directly onto the rails in the rack.
+
+TIP: Starting with NetApp HCI 1.8, you can set up a storage cluster with two or three storage nodes.
+
+CAUTION: Remove all the packing material and wrapping from the unit. This prevents the nodes from overheating and shutting down.
 
 * <<H410C and H410S nodes>>
 * <<H610C node/chassis>>
@@ -156,6 +161,12 @@ In the case of H615C and H610S, the terms "node" and "chassis" are used intercha
 Here is an illustration for installing the node/chassis in the rack:
 
 image::h610s_chassis.gif[Shows the H615C or H610S node/chassis being installed in the rack.]
+
+== Install the switches
+If you want to use Mellanox SN2010, SN2100, and SN2700 switches in your NetApp HCI installation, follow the instructions provided here to install and cable the switches:
+
+* link:https://docs.mellanox.com/pages/viewpage.action?pageId=6884619[Mellanox hardware user manual^]
+* link:https://fieldportal.netapp.com/content/1075535?assetComponentId=1077676[TR-4836: NetApp HCI with Mellanox SN2100 and SN2700 Switch Cabling Guide (login required)^]
 
 == Cable the nodes
 
