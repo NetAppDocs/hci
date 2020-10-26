@@ -40,7 +40,7 @@ Choose one of the following Element software upgrade options:
 * <<Upgrade Element software at connected sites using HealthTools>>
 * <<Upgrade Element software at dark sites using HealthTools>>
 
-CAUTION: If you are upgrading an H610S cluster running a pre-11.8 version of Element to Element 12.2, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each H610S node in the cluster.
+IMPORTANT: If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, you will need to upgrade Element software (phase 1) and then perform additional upgrade steps (phase 2) for each H610S node in the cluster.
 
 == Use NetApp Hybrid Cloud Control UI to upgrade Element storage
 
@@ -333,7 +333,7 @@ a|
 ----
 . Click *Execute*.
 
-|If you are upgrading an H610S cluster running Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
+|If you are upgrading an H610S cluster running an Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
 a|
 . See <<Upgrading H610S storage nodes to Element 12.2 or later (phase 2)>> and complete the process for each node.
 . Reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
@@ -516,7 +516,7 @@ No staged builds present on nodeID=[2]
 Starting light cluster block service check
 ----
 
-IMPORTANT: If you are upgrading an H610S series node to Element 12.2, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.2 (phase 2)>>.
+IMPORTANT: If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.2 (phase 2)>>.
 
 == Upgrade Element software at dark sites using HealthTools
 You can use the HealthTools suite of tools to update NetApp Element software at a dark site.
@@ -569,7 +569,7 @@ sfinstall -u admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/
 +
 *Optional* You can add the `--stage` flag to the `sfinstall` command to pre-stage the upgrade in advance.
 
-IMPORTANT: If you are upgrading an H610S series node to Element 12.2, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.2 (phase 2)>>.
+IMPORTANT: If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (phase 2) for each storage node. See <<Upgrading H610S storage nodes to Element 12.2 (phase 2)>>.
 
 == What happens if an upgrade fails using HealthTools
 If the software upgrade fails, you can pause the upgrade.
@@ -592,7 +592,7 @@ NOTE: Aborting the cluster upgrade while a node is being updated might result in
 
 == Upgrading H610S storage nodes to Element 12.2 (phase 2)
 
-If you are upgrading an H610S series node to Element 12.2, the upgrade process involves two phases.
+If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, the upgrade process involves two phases.
 
 Phase 1, which is performed first, follows the same steps as the standard upgrade to Element 12.2 process. It installs Element Software and all 5 firmware updates in a rolling fashion across the cluster one node at a time. Due to the firmware payload, the process is estimated to take approximately 1.5 to 2 hours per H610S node, including a single cold-boot cycle at the end of the upgrade for each node.
 

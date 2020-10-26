@@ -63,7 +63,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 * Storage nodes are running Element 11.3 or later.
 
 .Steps
-. Do the following:
+. Configure the management node VM RAM:
 .. Power off the management node VM.
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
@@ -153,7 +153,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 
 .Steps
 
-. Do the following:
+. Configure the management node VM RAM:
 .. Power off the management node VM.
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
@@ -226,7 +226,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 
 .Steps
 
-. Do the following:
+. Configure the management node VM RAM:
 .. Power off the management node VM.
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
