@@ -15,7 +15,10 @@ keywords: netapp, hci, fqdn, ui, access, web, administration
 
 [.lead]
 
-NetApp HCI with Element 12.2 or later supports storage cluster web interface access using the Fully Qualified Domain Name (FQDN). If you want to use the FQDN to access web user interfaces such as the Element web UI, per-node UI, or management node UI, you must first add a storage cluster setting to identify the FQDN used by the cluster. This setting enables the cluster to properly redirect a login session and facilitates better integration with external services like key managers and identity providers for multi-factor authentication. This feature requires management services version 2.15 or later.
+NetApp HCI with Element 12.2 or later supports storage cluster web interface access using the Fully Qualified Domain Name (FQDN). If you want to use the FQDN to access web user interfaces such as the Element web UI, per-node UI, or management node UI, you must first add a storage cluster setting to identify the FQDN used by the cluster. This setting enables the cluster to properly redirect a login session and facilitates better integration with external services like key managers and identity providers for multi-factor authentication.
+
+.What you'll need
+* This feature requires management services version 2.15 or later.
 
 .Steps
 
