@@ -124,6 +124,8 @@ entries:
            url: /task_nde_update_vsphere.html
          - title: Install GPU drivers for GPU-enabled compute nodes
            url: /task_nde_install_GPU_drivers.html
+         - title: Configure Fully Qualified Domain Name web UI access
+           url: /task_nde_access_ui_fqdn.html
          - title: Access NetApp Hybrid Cloud Control
            url: /task_nde_access_hcc.html
   - title: Manage NetApp HCI
