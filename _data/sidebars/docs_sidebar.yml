@@ -80,21 +80,21 @@ entries:
         url: /hci_prereqs_final_prep.html
   - title: Manage NetApp HCI
     entries:
-      - title: Monitor your NetApp HCI system
+      - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
         entries:
-          - title: View resources on the HCC Dashboard
+          - title: View resources on the Dashboard of NetApp Hybrid Cloud Control
             url: /task_hcc_dashboard.html
-          - title: View your inventory on the Nodes page
+          - title: View your inventory on the Nodes page of NetApp Hybrid Cloud Control
             url: /task_hcc_nodes.html
-          - title: Edit BMC connection information
+          - title: Edit BMC connection information with NetApp Hybrid Cloud Control
             url: /task_hcc_edit_bmc_info.html
-          - title: Monitor volumes on your storage cluster
+          - title: Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
             url: /task_hcc_volumes.html
-          - title: Monitor performance, capacity, and cluster health with Active IQ
+          - title: Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
             url: /task_hcc_activeiq.html
           - title: Collect logs for troubleshooting
             url: /task_hcc_collectlogs.html
-      - title: Manage NetApp HCI storage
+      - title: Manage NetApp HCI storage with NetApp Hybrid Cloud Control
         entries:
           - title: Create and manage user accounts
             url: /task_hcc_manage_accounts.html
