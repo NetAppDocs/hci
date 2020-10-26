@@ -18,7 +18,7 @@ You can manually recover and redeploy the management node for your cluster runni
 
 You can deploy a new OVA and run a redeploy script to pull configuration data from a previously installed management node running version 11.3 and later.
 
-.Before you begin
+.What you'll need
 
 * Your previous management node was running NetApp Element software version 11.3 or later with persistent volumes functionality engaged.
 * You know the MVIP and SVIP of the cluster containing the persistent volumes.
