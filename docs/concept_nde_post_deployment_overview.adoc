@@ -13,7 +13,7 @@ keywords: netapp, hci, deployment, review, deploy
 :imagesdir: ../media/
 
 [.lead]
-Depending on your choices during the deployment process, you need to complete some final tasks before your NetApp HCI system is ready for production use, such as updating firmware and drivers and migrating to an existing vSphere instance (if needed).
+Depending on your choices during the deployment process, you need to complete some final tasks before your NetApp HCI system is ready for production use, such as updating firmware and drivers and making any needed final configuration changes.
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
