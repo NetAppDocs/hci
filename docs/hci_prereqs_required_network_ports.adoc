@@ -5,7 +5,7 @@ summary: TCP and UDP ports used by NetApp HCI.
 keywords: netapp, hci, ports, tcp, udp
 ---
 
-= Required network ports
+= Network port requirements
 :hardbreaks:
 :nofooter:
 :icons: font

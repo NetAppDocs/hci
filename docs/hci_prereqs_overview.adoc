@@ -5,7 +5,7 @@ summary: Learn about NetApp HCI deployment requirements.
 keywords: netapp, hci, deployment, requirements
 ---
 
-= Requirements for NetApp HCI deployment
+= Requirements for NetApp HCI deployment overview
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,6 +17,18 @@ keywords: netapp, hci, deployment, requirements
 NetApp HCI has specific physical and network requirements for proper operation in your datacenter. Ensure that you implement the following requirements and recommendations before you begin deployment.
 
 Before you receive your NetApp HCI hardware, ensure that you complete the checklist items in the pre-deployment workbook from NetApp Professional Services. This document contains a comprehensive list of tasks you need to complete to prepare your network and environment for a successful NetApp HCI deployment.
+
+Here are the links to the requirements and pre-deployment tasks:
+
+* link:hci_prereqs_required_network_ports.html[Network port requirements^]
+* link:hci_prereqs_network_switch.html[Network and switch requirements^]
+* link:hci_prereqs_network_cables.html[Network cable requirements^]
+* link:hci_prereqs_ip_address.html[IP address requirements^]
+* link:hci_prereqs_network_configuration.html[Network configuration^]
+* link:hci_prereqs_timekeeping.html[DNS and timekeeping requirements^]
+* link:hci_prereqs_environmental.html[Environmental requirements^]
+* link:hci_prereqs_protection_domains.html[Protection Domains^]
+* link:hci_prereqs_witness_nodes.html[Witness Node resource requirements for two-node storage clusters^]
 
 [discrete]
 == Find more information
