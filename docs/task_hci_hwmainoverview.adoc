@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 :imagesdir: ../media/
 
 [.lead]
-You can perform hardware maintenance tasks, such as replace your nodes, replace the drives in storage nodes, replace power supply units, and so on.
+You should perform hardware maintenance tasks, such as replace faulty nodes, replace faulty drives in the storage nodes, and so on to ensure that your system functions optimally.
 
 Here are the links to the hardware maintenance tasks:
 
