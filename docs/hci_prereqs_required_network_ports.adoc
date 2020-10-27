@@ -164,6 +164,11 @@ The following abbreviations are used in the table:
 |Element software upgrades
 
 |Storage node MIP
+|Management node
+|443
+|Element software upgrades
+
+|Storage node MIP
 |S3/Swift endpoint
 |80
 |(Optional) HTTP communication to S3/Swift endpoint for backup and recovery
