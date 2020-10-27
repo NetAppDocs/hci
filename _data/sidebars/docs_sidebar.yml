@@ -37,6 +37,8 @@ entries:
        url: /concept_hci_performance.html
   - title: Requirements and pre-deployment tasks
     entries:
+     - title: Requirements for NetApp HCI deployment
+       url: /hci_prereqs_overview.html
      - title: Network port requirements
        url: /hci_prereqs_required_network_ports.html
      - title: Network and switch requirements
