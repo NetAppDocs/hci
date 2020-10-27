@@ -189,6 +189,8 @@ entries:
        url: /task_hci_removewn.html
   - title: Maintain H-series hardware
     entries:
+     - title: H-series hardware maintenance overview
+       url: /task_hci_hwmainoverview.html
      - title: Replace 2U H-series chassis
        url: /task_hci_hserieschassisrepl.html
      - title: Replace DC power supply units in H615C and H610S nodes
