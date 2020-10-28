@@ -100,7 +100,7 @@ sudo umount /mnt
 sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
 ----
 
-.	(For persistent volumes configurations only) Copy the contents of the container folder for backup:
+.	(For configurations without persistent volumes only) Copy the contents of the container folder for backup:
 +
 ----
 sudo cp -r /var/lib/docker/volumes /sf/etc/mnode
@@ -114,18 +114,11 @@ sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_u
 +
 The management node reboots with a new OS after the upgrade process completes.
 
-.	Move the contents of the container folder back to original location:
-+
-* Persistent volumes configurations:
+.	(For configurations without persistent volumes only) Move the contents of the container folder back to original location:
 +
 ----
-sudo mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
-----
-+
-* Configurations without persistent volumes:
-+
-----
-sudo su mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
+sudo su
+mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
 ----
 
 . On the management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
