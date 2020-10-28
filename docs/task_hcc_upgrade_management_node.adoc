@@ -100,7 +100,7 @@ sudo umount /mnt
 sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
 ----
 
-.	Copy the contents of the container folder for backup:
+.	(For persistent volumes configurations only) Copy the contents of the container folder for backup:
 +
 ----
 sudo cp -r /var/lib/docker/volumes /sf/etc/mnode
@@ -116,8 +116,16 @@ The management node reboots with a new OS after the upgrade process completes.
 
 .	Move the contents of the container folder back to original location:
 +
+* Persistent volumes configurations:
++
 ----
 sudo mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
+----
++
+* Configurations without persistent volumes:
++
+----
+sudo su mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
 ----
 
 . On the management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
