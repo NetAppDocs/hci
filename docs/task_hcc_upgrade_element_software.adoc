@@ -250,7 +250,7 @@ The payload should look similar to the following example:
 ----
 .. Click *Execute* to initiate the upgrade.
 +
-The response should indicate state as `initializing`:
+The response should indicate the state as `initializing`:
 +
 ----
 {
