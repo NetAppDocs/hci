@@ -238,6 +238,16 @@ https://[management node IP]/storage/1/
 .. Click *Try it out*.
 .. Enter the upgrade package ID in the parameter field.
 .. Enter the storage cluster ID in the parameter field.
++
+The payload should look similar to the following example:
++
+----
+{
+"config": {},
+"packageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4",
+"storageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4"
+}
+----
 .. Click *Execute* to initiate the upgrade.
 +
 The response should indicate state as `initializing`:
