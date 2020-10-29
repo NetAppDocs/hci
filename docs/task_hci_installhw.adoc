@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hci_installhw.html
-summary: Use these instructions to install rails and H-series nodes.
+summary: Before you get started with using NetApp HCI, you should install the storage and compute nodes correctly.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes
 ---
 
@@ -14,14 +14,15 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 :imagesdir: ../media/
 
 [.lead]
-Use these instructions to install rails and H-series nodes.
+Before you get started with using NetApp HCI, you should install the storage and compute nodes correctly.
 
-TIP: See the link:../media/h-series_isi.pdf[poster] for a visual representation of the instructions.
+TIP: See the link:../media/hseries-isi.pdf[poster^] for a visual representation of the instructions.
 
 * <<Workflow diagrams>>
 * <<Prepare for installation>>
-* <<Install rails>>
+* <<Install the rails>>
 * <<Install the node/chassis>>
+* <<Install the switches>>
 * <<Cable the nodes>>
 * <<Power on the nodes>>
 * <<Configure NetApp HCI>>
@@ -83,7 +84,7 @@ TIP: The hardware that is shipped to you depends on what you order. A new 2U, fo
 
 CAUTION: While installing the hardware, ensure that you remove all packing material and wrapping from the unit. This will prevent the nodes from overheating and shutting down.
 
-== Install rails
+== Install the rails
 
 The hardware order that was shipped to you includes a set of slide rails. You will need a screwdriver to complete the rail installation. The installation steps vary slightly for each node model.
 
@@ -125,7 +126,11 @@ TIP: There are left and right rails on the H610S and H615C. Position the screw h
 
 == Install the node/chassis
 
-You will install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, you will install the chassis/node directly onto the rails in the rack.
+You install the H410C compute node and H410S storage node in a 2U, four-node chassis. For H610C, H615C, and H610S, install the chassis/node directly onto the rails in the rack.
+
+TIP: Starting with NetApp HCI 1.8, you can set up a storage cluster with two or three storage nodes.
+
+CAUTION: Remove all the packing material and wrapping from the unit. This prevents the nodes from overheating and shutting down.
 
 * <<H410C and H410S nodes>>
 * <<H610C node/chassis>>
@@ -157,6 +162,12 @@ Here is an illustration for installing the node/chassis in the rack:
 
 image::h610s_chassis.gif[Shows the H615C or H610S node/chassis being installed in the rack.]
 
+== Install the switches
+If you want to use Mellanox SN2010, SN2100, and SN2700 switches in your NetApp HCI installation, follow the instructions provided here to install and cable the switches:
+
+* link:https://docs.mellanox.com/pages/viewpage.action?pageId=6884619[Mellanox hardware user manual^]
+* link:https://fieldportal.netapp.com/content/1075535?assetComponentId=1077676[TR-4836: NetApp HCI with Mellanox SN2100 and SN2700 Switch Cabling Guide (login required)^]
+
 == Cable the nodes
 
 If you are adding nodes to an existing NetApp HCI installation, ensure that the cabling and network configuration of the nodes that you add are identical to the existing installation.
@@ -176,13 +187,31 @@ Here is the two-cable configuration:
 
 image::HCI_ISI_compute_2cable.png[Shows the two-cable configuration for the H410C node.]
 
+image:blue circle.png[blue dot]  For ports D and E, connect two SFP28/SFP+ cables or transceivers for shared management, virtual machines, and storage connectivity.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect a CAT5e cable in the IPMI port for out-of-band management connectivity.
+
 Here is the six-cable configuration:
 
 image::HCI_ISI_compute_6cable.png[Shows the six-cable configuration of the H410C node.]
 
+image:green circle.png[green dot]  For ports A and B, connect two CAT5e or higher cables in ports A and B for management connectivity.
+
+image:orange circle.png[orange dot]  For ports C and F, connect two SFP28/SFP+ cables or transceivers for virtual machine connectivity.
+
+image:blue circle.png[blue dot]  For ports D and E, connect two SFP28/SFP+ cables or transceivers for storage connectivity.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect a CAT5e cable in the IPMI port for out-of-band management connectivity.
+
 Here is the cabling for the H410S node:
 
 image::HCI_ISI_storage_cabling.png[Shows the cabling for the H410S node.]
+
+image:green circle.png[green dot]  For ports A and B, connect two CAT5e or higher cables in ports A and B for management connectivity.
+
+image:blue circle.png[blue dot]  For ports C and D, connect two SFP28/SFP+ cables or transceivers for storage connectivity.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect a CAT5e cable in the IPMI port for out-of-band management connectivity.
 
 After you cable the nodes, connect the power cords to the two power supply units per chassis and plug them into 240V PDU or power outlet.
 
@@ -190,13 +219,29 @@ After you cable the nodes, connect the power cords to the two power supply units
 
 Here is the cabling for the H610C node:
 
+NOTE: H610C nodes are deployed only in the two-cable configuration. Ensure that all the VLANs are present on ports C and D.
+
 image::H610C_node-cabling.png[Shows the cabling for the H610C node.]
+
+image:dark green.png[dark green dot]  For ports C and D, connect the node to a 10/25GbE network using two SFP28/SFP+ cables.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect the node to a 1GbE network using an RJ45 connector in the IPMI port.
+
+image:light blue circle.png[light blue dot] Connect both power cables to the node, and plug the power cables to a 200‐240V power outlet.
 
 === H615C compute node
 
 Here is the cabling for the H615C node:
 
+NOTE: H615C nodes are deployed only in the two-cable configuration. Ensure that all the VLANs are present on ports A and B.
+
 image::H615C_node_cabling.png[Shows the cabling for the H615C node.]
+
+image:dark green.png[dark green dot] For ports A and B, connect the node to a 10/25GbE network using two SFP28/SFP+ cables.
+
+image:purple circle.png[purple dot] (Optional, recommended) Connect the node to a 1GbE network using an RJ45 connector in the IPMI port.
+
+image:light blue circle.png[light blue dot] Connect both power cables to the node, and plug the power cables to a 110-140V power outlet.
 
 === H610S storage node
 
@@ -204,11 +249,21 @@ Here is the cabling for the H610S node:
 
 image::H600S_ISI_noderear.png[Shows the cabling for the H610S node.]
 
+image:purple circle.png[purple dot] Connect the node to a 1GbE network using two RJ45 connector in the IPMI port.
+
+image:dark green.png[dark green dot] Connect the node to a 10/25GbE network using
+two SFP28 or SFP+ cables.
+
+image:orange circle.png[orange dot] Connect the node to a 1GbE network using
+an RJ45 connector in the IPMI port.
+
+image:light blue circle.png[light blue dot] Connect both power cables to the node.
+
 == Power on the nodes
 
 It takes approximately six minutes for the nodes to boot.
 
-Here is an illustration that shows the power button on the NetApp HCI chassis that has H410C and H410S nodes:
+Here is an illustration that shows the power button on the NetApp HCI 2U chassis:
 
 image::H410c_poweron_ISG.png[Shows the power button on the H-series 2U, four-node chassis.]
 
@@ -225,7 +280,7 @@ image::H600S_ISI_nodefront.png[Shows the power button on the H610S/H615C node/ch
 Choose from one of the following options:
 
 * <<New NetApp HCI installation>>
-* <<Expanding an existing NetApp HCI installation>>
+* <<Expand an existing NetApp HCI installation>>
 
 === New NetApp HCI installation
 
@@ -243,7 +298,7 @@ NOTE: If you are using DHCP on the management network, you can connect to the DH
 +
 NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
-=== Expanding an existing NetApp HCI installation
+=== Expand an existing NetApp HCI installation
 
 .Steps
 
@@ -284,4 +339,3 @@ If your H615C node has GPUs in it, install GPU drivers in ESXi for each H615C no
 *	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
 * https://mysupport.netapp.com/site/tools[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
-* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]

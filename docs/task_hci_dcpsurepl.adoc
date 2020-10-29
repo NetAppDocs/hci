@@ -1,0 +1,70 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_dcpsurepl.html
+summary: H615C and H610S nodes support two –48 V to –60 V DC power supply units. These units are available as optional add-ons when you order H615C or H610S nodes. You can use the same set of instructions to remove the AC power supply units in the chassis and replace them with DC power supply units, or to replace a faulty DC power supply unit with a new DC power supply unit.
+keywords: netapp, hci, psu, replace power supply, H610S, H615C, DC
+---
+
+= Replace DC power supply units in H615C and H610S nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+H615C and H610S nodes support two –48 V to –60 V DC power supply units. These units are available as optional add-ons when you order H615C or H610S nodes. You can use the these instructions to remove the AC power supply units in the chassis and replace them with DC power supply units, or to replace a faulty DC power supply unit with a new DC power supply unit.
+
+.What you'll need
+
+* If you are replacing a faulty DC power supply unit, you have procured a replacement DC power supply unit.
+* If you are swapping out the AC power supply units in your chassis with DC units, you have taken into consideration the downtime for the procedure.
+* You have an electrostatic discharge (ESD) wristband, or you have taken other antistatic precautions.
+* You have ensured that the power supply requirements are met:
+** Supply voltage: –(48-60) V DC
+** Current consumption: 37A (maximum)
+** Breaker requirements: 40A breaker
+* You have ensured that the materials in your environment adhere to the RoHS specifications.
+* You have ensured that the cable requirements are met:
+** One UL 10 AWG, 2 m maximum (stranded) black cable [–(48-60) V DC]
+** One UL 10 AWG, 2 m maximum (stranded) red cable [V DC return]
+** One UL 10 AWG, 2 m maximum green/yellow cable, green with a yellow stripe, stranded wire (safety ground)
+
+.About this task
+The procedure applies to the following node models:
+
+* One rack unit (1U) H615C compute chassis
+* 1U H610S storage chassis
++
+NOTE: In the case of H615C and H610S, the terms "node" and "chassis" are used interchangeably because node and chassis are not separate components, unlike in the case of the 2U, four-node chassis.
+
+CAUTION: You cannot mix AC and DC power supply units in your installation.
+
+.Steps
+
+. Turn off the power supply units and unplug the power cords. If you are replacing a faulty DC power supply unit, turn off the power source and remove all the cables inserted into the blue connector.
+. Lift the cam handle, and press the blue latch to slide out the power supply unit.
++
+image::psu-remove.gif[Shows the cam handle being lifted and the power supply unit being slid out of the chassis.]
++
+NOTE: The illustration is an example. The location of the power supply unit in the chassis and the color of the release button vary depending on the type of chassis you have.
++
+IMPORTANT: Ensure that you use both hands to support the weight of the power supply unit.
+
+. Using both hands, align the edges of the power supply unit with the opening in the chassis, gently push the unit into the chassis using the cam handle until it locks into place, and return the cam handle to the upright position.
++
+image::psu-install.gif[Shows the power supply unit being installed in the chassis.]
+. Cable the DC power supply units. Ensure that the power source is off while cabling the DC power supply unit and the power source.
+.. Insert the black, red, and green/yellow cables to the blue connectors.
+.. Insert the blue connector to the DC power supply units and the power source.
++
+image::dc-psu.png[Shows the cabling on the DC power supply unit.]
+. Power on the DC power supply units.
++
+TIP: The power supply LEDs are lit when the DC power supply unit comes online. Green LED lights indicate that the power supply units are working correctly.
+
+. Return the faulty unit to NetApp by following the instructions in the box that was shipped to you.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
