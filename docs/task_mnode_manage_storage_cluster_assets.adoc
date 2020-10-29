@@ -16,7 +16,7 @@ keywords: netapp, mnode, management node, rest api, hci, assets
 [.lead]
 You can add new storage cluster assets to the management node, edit the stored credentials for known storage cluster assets, and delete storage cluster assets from the management node using the REST API.
 
-.Before you begin
+.What you'll need
 * Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 

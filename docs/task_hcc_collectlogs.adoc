@@ -17,7 +17,7 @@ keywords: netapp, hci, logs, collection, troubleshooting, monitor
 
 If you have trouble with your NetApp HCI or SolidFire all-flash storage installation, you can collect logs to send to NetApp Support to help with diagnosis. You can either use NetApp Hybrid Cloud Control or the REST API to collect logs on NetApp HCI or Element systems.
 
-.Before you begin
+.What you'll need
 * Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 

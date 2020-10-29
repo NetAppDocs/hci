@@ -5,7 +5,7 @@ summary: TCP and UDP ports used by NetApp HCI.
 keywords: netapp, hci, ports, tcp, udp
 ---
 
-= Required network ports
+= Network port requirements
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,7 +14,9 @@ keywords: netapp, hci, ports, tcp, udp
 :keywords: netapp, hci, ports, tcp, udp
 
 [.lead]
-You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system. All ports are TCP unless stated otherwise, and should be open bidirectionally.
+
+You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system. All ports are TCP unless stated otherwise.
+
 
 [NOTE]
 ======================
@@ -35,8 +37,22 @@ The following abbreviations are used in the table:
 * MVIP: Management virtual IP address
 * SVIP: Storage virtual IP address
 
+All ports in the table are TCP unless stated otherwise.
+
 |===
 |Source |Destination |Port |Description
+
+|Baseboard management controller (BMC)
+|Management node
+|139
+445
+|Samba port for transferring firmware upgrade packages to the BMC.
+
+|Baseboard management controller (BMC)
+|Management node
+|111 TCP/UDP
+2049 TCP/UDP
+|NFS port for transferring firmware upgrade packages to the BMC.
 
 |iSCSI clients
 |Storage cluster MVIP
@@ -52,6 +68,46 @@ The following abbreviations are used in the table:
 |Storage node SIP
 |3260
 |Client iSCSI communications
+
+|Compute node BMC
+|Management node
+|111 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|445
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|2049 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|137-138 UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
+|Compute node BMC
+|139
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
+|Compute node BMC
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|VMware vCenter
+|5988-5989
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|VMware vCenter
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
 
 |Management node
 |`sfsupport.solidfire.com`
@@ -94,6 +150,11 @@ The following abbreviations are used in the table:
 |UI and API access to storage node and Element software upgrades
 
 |Management node
+|Baseboard management controller (BMC)
+|443
+|Hardware monitoring and inventory connection (Redfish and IPMI commands)
+
+|Management node
 |`23.32.54.122`, `216.240.21.15`
 |443
 |Element software upgrades
@@ -121,6 +182,11 @@ The following abbreviations are used in the table:
 |Storage node MIP
 |Management node
 |80
+|Element software upgrades
+
+|Storage node MIP
+|Management node
+|443
 |Element software upgrades
 
 |Storage node MIP
@@ -198,10 +264,6 @@ The following abbreviations are used in the table:
 |2181
 |Intercluster communication for remote replication
 
-|Storage node SIP
-|Storage node SIP
-|3260
-|Internode iSCSI
 
 |Storage node SIP
 |Remote storage node SIP
