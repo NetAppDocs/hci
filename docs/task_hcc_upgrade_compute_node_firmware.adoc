@@ -63,7 +63,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 * *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
-* *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_hcc_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
+* *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
 
 .About this task
 

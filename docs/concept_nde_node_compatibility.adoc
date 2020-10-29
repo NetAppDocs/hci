@@ -1,0 +1,40 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_nde_node_compatibility.html
+summary: Learn about NetApp HCI node compatibility requirements for deployment.
+keywords: netapp, hci, deployment, compatibility, nodes
+---
+
+= Inventory selection and node compatibility
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+When choosing nodes for your deployment, some restrictions apply to the node configurations you can combine in the same deployment.
+
+== Storage node compatibility
+NetApp HCI supports storage nodes and drives with SED (Self-encrypting drive) and FIPS 140-2 drive encryption capability. When deploying or expanding NetApp HCI, you can mix nodes with different reported levels of encryption, but NetApp HCI only supports the more basic form of encryption in this situation. For example, if you mix a storage node that is FIPS encryption capable with nodes that only support SED encryption, SED encryption is supported with this configuration, but FIPS drive encryption is not.
+
+NOTE: Adding storage nodes capable of FIPS drive encryption to the storage cluster does not automatically enable the FIPS drive encryption feature. After you deploy or expand an installation with FIPS-capable nodes, you need to manually enable FIPS drive encryption. See the Element Software User Guide for instructions.
+
+All storage nodes must run the same minor version of Element software to be compatible in the same deployment. For example, you cannot mix a storage node running Element 11.3.1 with other storage nodes running Element 11.5.
+
+NOTE: Depending on node hardware configuration, H410S storage nodes might appear in the inventory list labeled as H300S, H500S, or H700S storage nodes.
+
+NetApp HCI supports only certain storage node models in two-node or three-node storage clusters. For more information, see the Release Notes for your NetApp HCI version.
+
+== Compute node compatibility
+Compute nodes must meet the following requirements to be selectable as inventory:
+
+* The CPU generations in all compute nodes must match for proper VMware vMotion functionality. After you select a compute node from the inventory, you cannot select compute nodes with different CPU generations.
+* You cannot intermix compute nodes with GPU-enabled compute nodes in the same compute cluster. If you select a GPU-enabled compute node, CPU-only compute nodes become unselectable, and vice versa.
+* The software version running on the compute node must match the major and minor version of the NetApp Deployment Engine hosting the deployment. If this is not the case, you need to reimage the compute node using the RTFI process. See the NetApp Knowledgebase articles regarding RTFI for instructions.
+* The compute node must have the cabling configuration you selected on the Network Topology page to be selectable in the *Compute Nodes* list.
+* The network cabling configurations for compute nodes of the same model must match within a single compute cluster.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

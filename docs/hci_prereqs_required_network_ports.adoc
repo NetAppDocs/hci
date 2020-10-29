@@ -5,7 +5,7 @@ summary: TCP and UDP ports used by NetApp HCI.
 keywords: netapp, hci, ports, tcp, udp
 ---
 
-= Required network ports
+= Network port requirements
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,7 +14,9 @@ keywords: netapp, hci, ports, tcp, udp
 :keywords: netapp, hci, ports, tcp, udp
 
 [.lead]
-You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system.
+
+You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system. All ports are TCP unless stated otherwise.
+
 
 [NOTE]
 ======================
@@ -66,6 +68,46 @@ All ports in the table are TCP unless stated otherwise.
 |Storage node SIP
 |3260
 |Client iSCSI communications
+
+|Compute node BMC
+|Management node
+|111 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|445
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|2049 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC
+|Management node
+|137-138 UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
+|Compute node BMC
+|139
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
+|Compute node BMC
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|VMware vCenter
+|5988-5989
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|VMware vCenter
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
 
 |Management node
 |`sfsupport.solidfire.com`
@@ -143,6 +185,11 @@ All ports in the table are TCP unless stated otherwise.
 |Element software upgrades
 
 |Storage node MIP
+|Management node
+|443
+|Element software upgrades
+
+|Storage node MIP
 |S3/Swift endpoint
 |80
 |(Optional) HTTP communication to S3/Swift endpoint for backup and recovery
@@ -217,10 +264,6 @@ All ports in the table are TCP unless stated otherwise.
 |2181
 |Intercluster communication for remote replication
 
-|Storage node SIP
-|Storage node SIP
-|3260
-|Internode iSCSI
 
 |Storage node SIP
 |Remote storage node SIP

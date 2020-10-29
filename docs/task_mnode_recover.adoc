@@ -18,7 +18,7 @@ You can manually recover and redeploy the management node for your cluster runni
 
 You can deploy a new OVA and run a redeploy script to pull configuration data from a previously installed management node running version 11.3 and later.
 
-.Before you begin
+.What you'll need
 
 * Your previous management node was running NetApp Element software version 11.3 or later with link:concept_hci_volumes.html#persistent-volumes[persistent volumes] functionality engaged.
 * You know the MVIP and SVIP of the cluster containing the persistent volumes.
@@ -84,6 +84,7 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
 == Configure the management node
+
 . Log in to the management node using SSH or the console provided by your hypervisor.
 . Run the following command to gain root privileges. Enter your password when prompted:
 +
@@ -107,7 +108,7 @@ mkdir -p /sf/etc/mnode/mnode-archive
 . Extract the downloaded bundle using the following command, replacing the value in [ ] brackets (including the brackets) with the name of the bundle file:
 +
 ----
-tar xvf /sf/etc/mnode/[management services bundle file]
+tar -C /sf/etc/mnode -xvf /sf/etc/mnode/[management services bundle file]
 ----
 . Extract the resulting file to the `/sf/etc/mnode-archive` directory:
 +

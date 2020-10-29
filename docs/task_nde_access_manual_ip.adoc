@@ -1,0 +1,45 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_access_manual_ip.html
+summary: Learn how to access the NetApp Deployment Engine by manually assigning IP addresses to NetApp HCI nodes.
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
+---
+
+= Manually assign IP addresses to access the NetApp Deployment Engine
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+You can manually assign static IPv4 addresses to the Bond1G and Bond10G interfaces on all NetApp HCI nodes to access the NetApp Deployment Engine and deploy NetApp HCI. You should not use this method unless your network has special requirements.
+
+.What you'll need
+
+* You or your network administrator have completed the tasks in the Installation and Setup Instructions document.
+* You have physical access to the NetApp HCI nodes.
+* All of the NetApp HCI nodes are powered on.
+* DHCP is not enabled for the NetApp HCI networks and the NetApp HCI nodes have not obtained IP addresses from DHCP servers.
+NOTE: All IP addresses you assign manually before using the NetApp Deployment Engine to deploy the system are temporary and cannot be reused. If you choose to manually assign IP addresses, you need to set aside a second permanent set of unused IP addresses that you can assign during final deployment.
+
+.About this task
+In this configuration, compute and storage nodes will use static IPv4 addresses to discover and communicate with other nodes during deployment. This configuration is not recommended.
+
+.Steps
+
+. Plug a KVM into the back of one of the NetApp HCI storage nodes (this node will become the controlling storage node).
+. Configure the IP address, subnet mask, and gateway address for Bond1G and Bond10G in the user interface. You can also configure a VLAN ID for each network if needed.
+. Repeat step 2 for the remaining storage and compute nodes.
+. Open a web browser on a computer that can access the NetApp HCI management network.
+. Browse to the Bond1G IP address you assigned to the controlling storage node. For example:
++
+----
+http://<Bond1G IP address>
+----
+This takes you to the NetApp Deployment Engine user interface.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
