@@ -42,7 +42,7 @@ NOTE: If you need to IPv6 support, you can use the management node 11.1.
 .About this task
 The Element 12.2 management node is an optional upgrade. It is not required for existing deployments.
 
-Prior to following this procedure, you should have an understanding of  link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
+Prior to following this procedure, you should have an understanding of  link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them. Persistent volumes are optional but recommended for management node configuration data recovery in the event of a VM loss.
 
 .Steps
 
@@ -102,9 +102,12 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 sudo su
 ----
 
-. Ensure time is synced (NTP) between the management node and the storage cluster.
+. Ensure time is synced between the management node and the storage cluster using NTP:
+.. Edit the `/etc/ntp.conf` file.
+.. Change the default time server(s) to the same NTP server used on the storage cluster.
+.. In vSphere, verify that the *Synchronize guest time with host* box is un-checked in the VM options.
 +
-NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
+NOTE: Do not enable this option if you make future changes to the VM.
 
 . Configure and run the management node setup command:
 +

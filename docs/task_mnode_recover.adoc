@@ -20,7 +20,7 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 
 .What you'll need
 
-* Your previous management node was running NetApp Element software version 11.3 or later with persistent volumes functionality engaged.
+* Your previous management node was running NetApp Element software version 11.3 or later with link:concept_hci_volumes.html#persistent-volumes[persistent volumes] functionality engaged.
 * You know the MVIP and SVIP of the cluster containing the persistent volumes.
 * Your cluster version is running NetApp Element software 11.3 or later.
 * Your installation uses IPv4. The management node 11.3 does not support IPv6.
@@ -37,9 +37,6 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 | Citrix XenServer | .iso
 | OpenStack | .iso
 |===
-
-.About this task
-Prior to completing this procedure, you should have an understanding of link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
 
 .Steps
 
@@ -95,9 +92,12 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 sudo su
 ----
 
-. Ensure time is synced (NTP) between the management node and the storage cluster.
+. Ensure time is synced between the management node and the storage cluster using NTP:
+.. Edit the `/etc/ntp.conf` file.
+.. Change the default time server(s) to the same NTP server used on the storage cluster.
+.. In vSphere, verify that the *Synchronize guest time with host* box is un-checked in the VM options.
 +
-NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
+NOTE: Do not enable this option if you make future changes to the VM.
 
 . Create a temporary destination directory for the management services bundle contents:
 +
