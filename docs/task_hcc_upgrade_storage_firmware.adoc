@@ -24,6 +24,8 @@ Starting with Element 12.0 and management services version 2.14, you can perform
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services*: You have updated your management services bundle to the latest version.
 
+IMPORTANT: If you are running Element software version 12.0 and planning to upgrade to the storage firmware bundle 2.27, you should contact NetApp Support to obtain the dPatch before you upgrade. See link:http://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html[Storage Firmware Bundle 2.27 Release Notes^].
+
 IMPORTANT: You must upgrade to the latest management services bundle before upgrading the firmware on your storage nodes.  If you are updating your Element software to version 12.2, you need management services 2.14.60 or later to proceed.
 
 * *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
