@@ -1,0 +1,27 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_hci_power_on_storage.html
+summary: Learn how to power off NetApp HCI compute nodes.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Power on storage resources for a NetApp HCI system
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+You can power on NetApp HCI after the scheduled outage is complete.
+
+.Steps
+
+. Power on all the storage nodes using either the physical power button or the BMC.
+. If using the BMC, log in to each node and navigate to *Remote Control > Power Control > Power On Server*.
+. When all the storage nodes are online, log in to the NetApp HCI storage system and verify that all nodes are operational.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
