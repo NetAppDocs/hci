@@ -31,7 +31,7 @@ image::hci_prodoverview.png[The image shows the various components in the NetApp
 
 * *Management services* or microservices include the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service; they are updated frequently as service bundles. As of the Element 11.3 release, *management services* are hosted on the management node, allowing for quicker updates of select software services outside of major releases. The *management node* (mNode) is a virtual machine that runs in parallel with one or more Element software-based storage clusters. It is used to upgrade and provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting.
 +
-TIP: Learn more about link:https://kb.netapp.com/app/answers/answer_view/a_id/1087586/loc/en_US[management services releases].
+TIP: Learn more about link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[management services releases].
 
 * *NetApp Hybrid Cloud Control* enables you to manage NetApp HCI. You can upgrade management services, expand your system, collect logs, and monitor your installation by using NetApp SolidFire Active IQ. You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
 
@@ -58,7 +58,7 @@ Here are the common URLs you use with NetApp HCI:
 |Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services. link:task_hci_getstarted.html[Learn more.]
 
 |`https://[IP address]:442`
-|From the per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/sfe-120/topic/com.netapp.doc.sfe-ug/GUID-35DD1677-05FE-4396-9654-343137102D3D.html[Learn more.]
+|From the per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-35DD1677-05FE-4396-9654-343137102D3D.html[Learn more.]
 
 |`https://[management node IP address]:9443`
 |Register the vCenter Plug-in package in the vSphere Web Client.

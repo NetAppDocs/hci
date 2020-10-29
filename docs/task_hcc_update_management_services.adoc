@@ -23,7 +23,7 @@ Beginning with the Element 11.3 management node release, the management node des
 
 * You must upgrade to the latest management services bundle before upgrading your Element software.
 
-NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[NetApp KB: Management Services Release Notes]
+NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[the management services release notes]
 
 .Update options
 
@@ -44,7 +44,7 @@ Management service bundles provide enhanced functionality and fixes to your inst
 * You must be running management node 11.3 or later.
 * You must have upgraded your management services to at least version 2.1.326. NetApp Hybrid Cloud Control upgrades are not available in earlier service bundles.
 
-NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/app/answers/answer_view/a_id/1087586[_Management Services Release Notes_^].
+NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes].
 
 .Steps
 . Open a web browser and browse to the IP address of the management node: `https://<ManagementNodeIP>`
