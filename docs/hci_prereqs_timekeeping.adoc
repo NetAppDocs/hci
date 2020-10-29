@@ -22,6 +22,7 @@ Make the following DNS and timeserver preparations before deploying NetApp HCI:
 * If you are deploying NetApp HCI with a new VMware vSphere installation using a fully qualified domain name, you must create one Pointer (PTR) record and one Address (A) record for vCenter Server on any DNS servers in use before deployment.
 * If you are deploying NetApp HCI with a new vSphere installation using only IP addresses, you do not need to create new DNS records for vCenter.
 * NetApp HCI requires a valid NTP server for timekeeping. You can use a publicly available time server if you do not have one in your environment.
+* Ensure that all storage and compute node clocks are in sync with each other, and that the clocks of devices you use to log in to NetApp HCI are in sync with the NetApp HCI nodes. 
 
 [discrete]
 == Find more information

@@ -1,0 +1,101 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_install_GPU_drivers.html
+summary: Learn about how to install GPU drivers for GPU-enabled compute nodes after you deploy NetApp HCI.
+keywords: netapp, hci, deployment, review, GPU, install, driver, drivers
+---
+
+= Install GPU drivers for GPU-enabled compute nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Compute nodes with NVIDIA graphics processing units (GPUs), like the H610C, need NVIDIA software drivers installed in VMware ESXi so that they can take advantage of the increased processing power. After deploying compute nodes with GPUs, you need to perform these steps on each GPU-enabled compute node to install the GPU drivers in ESXi.
+
+.Steps
+
+. Open a browser and browse to the NVIDIA licensing portal at the following URL:
++
+----
+https://nvid.nvidia.com/dashboard/
+----
+. Download one of the following driver packages to your computer, depending on your environment:
++
+|===
+|vSphere version |Driver package
+
+|vSphere 6.5
+|`NVIDIA-GRID-vSphere-6.5-410.92-410.91-412.16.zip`
+
+|vSphere 6.7
+|`NVIDIA-GRID-vSphere-6.7-410.92-410.91-412.16.zip`
+|===
+.  Extract the driver package on your computer.
++
+The resulting .VIB file is the uncompressed driver file.
+. Copy the `.VIB` driver file from your computer to ESXi running on the compute node. The following example commands for each version assume that the driver is located in the `$HOME/NVIDIA/ESX6.x/` directory on the management host. The SCP utility is readily available in most Linux distributions, or available as a downloadable utility for all versions of Windows:
++
+|===
+|ESXi version |Description
+
+|ESXi 6.5
+|`scp $HOME/NVIDIA/ESX6.5/NVIDIA**.vib root@<ESXi_IP_ADDR>:/.`
+
+|ESXi 6.7
+|`scp $HOME/NVIDIA/ESX6.7/NVIDIA**.vib root@<ESXi_IP_ADDR>:/.`
+|===
+. Use the following steps to log in as root to the ESXi host and install the NVIDIA vGPU Manager in ESXi.
+.. Run the following command to log in to the ESXi host as the root user:
++
+----
+ssh root@<ESXi_IP_ADDRESS>
+----
+.. Run the following command to verify that no NVIDIA GPU drivers are currently installed:
++
+----
+nvidia-smi
+----
++
+This command should return the message `nvidia-smi: not found`.
+.. Run the following commands to enable maintenance mode on the host and install the NVIDIA vGPU Manager from the VIB file:
++
+----
+esxcli system maintenanceMode set --enable true
+esxcli software vib install -v /NVIDIA**.vib
+----
++
+You should see the message `Operation finished successfully`.
+.. Run the following command and verify that all eight GPU drivers are listed in the command output:
++
+----
+nvidia-smi
+----
+.. Run the following command to verify that the NVIDIA vGPU package was installed and loaded correctly:
++
+----
+vmkload_mod -l | grep nvidia
+----
++
+The command should return output similar to the following: `nvidia 816 13808`
+.. Run the following command to reboot the host:
++
+----
+reboot -f
+----
+.. Run the following command to exit maintenance mode:
++
+----
+esxcli system maintenanceMode set --enable false
+----
+. Repeat steps 4-6 for any other newly deployed compute nodes with NVIDIA GPUs.
+. Perform the following tasks using the instructions in the NVIDIA documentation site:
+.. Install the NVIDIA license server.
+.. Configure the virtual machine guests for NVIDIA vGPU software.
+.. If you are using vGPU-enabled desktops in a virtual desktop infrastructure (VDI) context, configure VMware Horizon View for NVIDIA vGPU software.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

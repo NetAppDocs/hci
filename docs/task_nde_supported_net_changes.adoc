@@ -1,0 +1,125 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_supported_net_changes.html
+summary: Learn about post-deployment tasks you should perform after deploying NetApp HCI.
+keywords: netapp, hci, deployment, review, deploy
+---
+
+= Supported networking changes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you deploy NetApp HCI, you can make limited changes to the default networking configuration. However, certain settings are required for smooth operation and proper network detection. Changing these settings will cause unexpected behavior, and might prevent you from expanding compute and storage resources.
+
+After you deploy your system, you can make the following changes to the default network configuration in VMware vSphere as dictated by your network requirements:
+
+* Change vSwitch names
+* Change port group names
+* Add and remove additional port groups
+* Change the vmnic interface failover order for any additional port groups you have added
+
+== H300E, H500E, H700E and H410C compute nodes
+NetApp HCI expects the following network configuration for H300E, H500E, H700E and H410C nodes.
+
+The following is a six-interface configuration with VMware vSphere Distributed Switching (VDS). This configuration is only supported when used with VMware vSphere Distributed Switches, and requires VMware vSphere Enterprise Plus licensing.
+|===
+|Network function |vmkernel |vmnic (physical interface)
+
+|Management
+|vmk0
+|vmnic2 (Port A), vmnic3 (Port B)
+
+|iSCSI-A
+|vmk1
+|vmnic5 (Port E)
+
+|iSCSI-B
+|vmk2
+|vmnic1 (Port D)
+
+|vMotion
+|vmk3
+|vmnic4 (Port C), vmnic0 (Port F)
+|===
+
+The following is a six-interface configuration with VMware vSphere Standard Switching (VSS). This configuration uses VMware vSphere Standard Switches (VSS).
+
+|===
+|Network function |vmkernel |vmnic (physical interface)
+
+|Management
+|vmk0
+|vmnic1 (Port D), vmnic5 (Port E)
+
+|iSCSI-A
+|vmk1
+|vmnic1 (Port E)
+
+|iSCSI-B
+|vmk2
+|vmnic5 (Port D)
+
+|vMotion
+|vmk3
+|vmnic1 (Port C), vmnic5 (Port F)
+|===
+
+== H610C compute nodes
+NetApp HCI expects the following network configuration for H610C nodes.
+
+This configuration is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
+
+NOTE: Ports A and B are unused on the H610C.
+
+|===
+|Network function |vmkernel |vmnic (physical interface)
+
+|Management
+|vmk0
+|vmnic2 (Port C), vmnic3 (Port D)
+
+|iSCSI-A
+|vmk1
+|vmnic3 (Port D)
+
+|iSCSI-B
+|vmk2
+|vmnic2 (Port C)
+
+|vMotion
+|vmk3
+|vmnic2 (Port C), vmnic3 (Port D)
+|===
+
+== H615C compute nodes
+NetApp HCI expects the following network configuration for H615C nodes.
+
+This configuration is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
+
+|===
+|Network function |vmkernel |vmnic (physical interface)
+
+|Management
+|vmk0
+|vmnic0 (Port A), vmnic1 (Port B)
+
+|iSCSI-A
+|vmk1
+|vmnic0 (Port B)
+
+|iSCSI-B
+|vmk2
+|vmnic1 (Port A)
+
+|vMotion
+|vmk3
+|vmnic0 (Port A), vmnic1 (Port B)
+|===
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

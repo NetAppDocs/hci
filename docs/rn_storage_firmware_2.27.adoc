@@ -18,6 +18,8 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 [.lead]
 Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
+IMPORTANT: For H610S storage nodes running Element software version 12.0, you should apply D-patch SUST-909 before you upgrade to storage firmware bundle 2.27. Contact NetApp Support to obtain the D-patch before you upgrade.
+
 == What's New
 The storage firmware bundle version 2.27 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
@@ -141,12 +143,12 @@ This firmware package contains the following firmware versions for hardware comp
 == New BMC features
 The following are the new BMC features and changes included in this release:
 
-* (H610S) Enabled INITRD support
+* (H610S) Enabled INITRD support, for loading an initial ramdisk at boot time
 * (H610S) Updated SSL help message about X.509 certificates
-* (H610S) Disabled TLS 1.0 and 1.1 support
-* (H610S, H410S) Added Redfish remote media support
-* (H610S) Added the H5Viewer RKVM feature
-* (H610S) Added remote syslog support
+* (H610S) Disabled TLS 1.0 and 1.1 support to resolve security vulnerabilities
+* (H610S, H410S) Added the ability to mount remote media using Redfish APIs
+* (H610S) Added support for HTML5 web browser BMC management
+* (H610S) Added remote syslog support, to help with remote data center monitoring and management
 
 == Resolved issues
 The following are issues that have been resolved in this release:
