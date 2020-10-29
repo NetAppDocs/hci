@@ -27,7 +27,7 @@ You should follow these best practices for handling drives while removing and re
 * Always use approved packaging when shipping drives.
 * Do not stack drives on top of each other.
 
-You should follow these best practices for adding drives from the cluster:
+You should follow these best practices for adding drives to the cluster:
 
 * Add all the block drives and ensure that block syncing is complete before you add the slice drives.
 * For Element software 10.x and later, add all the block drives at once. Ensure that you don't this for more than three nodes at once.
