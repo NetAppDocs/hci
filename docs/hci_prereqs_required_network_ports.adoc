@@ -42,18 +42,6 @@ All ports in the table are TCP unless stated otherwise.
 |===
 |Source |Destination |Port |Description
 
-|Baseboard management controller (BMC)
-|Management node
-|139
-445
-|Samba port for transferring firmware upgrade packages to the BMC.
-
-|Baseboard management controller (BMC)
-|Management node
-|111 TCP/UDP
-2049 TCP/UDP
-|NFS port for transferring firmware upgrade packages to the BMC.
-
 |iSCSI clients
 |Storage cluster MVIP
 |443
@@ -164,6 +152,11 @@ All ports in the table are TCP unless stated otherwise.
 |9442
 |Per-node configuration API service
 
+|Management node
+|vCenter Server
+|9443
+|vCenter Plug-in registration. The port can be closed after registration is complete.
+
 |SNMP server
 |Storage cluster MVIP
 |161 UDP
@@ -263,7 +256,6 @@ All ports in the table are TCP unless stated otherwise.
 |Remote storage node SIP
 |2181
 |Intercluster communication for remote replication
-
 
 |Storage node SIP
 |Remote storage node SIP
