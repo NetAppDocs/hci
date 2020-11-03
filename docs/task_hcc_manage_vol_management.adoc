@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hcc_manage_vol_management.html
 summary: Learn how to create a volume and associate the volume with a given account.
-keywords: netapp, hci, on premise, cluster, element, volume
+keywords: netapp, hci, cluster, element, volume
 ---
 
 = Create and manage volumes by using NetApp Hybrid Cloud Control
@@ -23,7 +23,7 @@ You can manage volumes in NetApp Hybrid Cloud Control in the following ways:
 * <<Create a volume>>
 * <<Apply a QoS policy to a volume>>
 * <<Edit a volume>>
-* <<Clone a volume>>
+* <<Clone volumes>>
 * <<Delete a volume>>
 * <<Restore a deleted volume>>
 * <<Purge a deleted volume>>
@@ -130,10 +130,54 @@ TIP: When you change IOPS values, you should increment in tens or hundreds. Inpu
 
 . Select *Save*.
 
-== Clone a volume
+== Clone volumes
 
-*QUESTION: I don't think you can create a clone in HCC yet, correct?*
+You can create a clone of a single volume or clone a group of volumes to make a point-in-time copy of the data. When you clone a volume, the system creates a snapshot of the volume and then creates a copy of the data referenced by the snapshot.
 
+.Before you begin
+* At least one cluster must be added and running.
+* At least one volume has been created.
+* A user account has been created.
+* Available unprovisioned space must be equal to or more than the volume size.
+
+.About this task
+The cluster supports up to two running clone requests per volume at a time and up to 8 active volume clone operations at a time. Requests beyond these limits are queued for later processing.
+
+Volume cloning is an asynchronous process, and the amount of time the process requires depends on the size of the volume you are cloning and the current cluster load.
+
+NOTE: Cloned volumes do not inherit volume access group membership from the source volume.
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, expand the name of your storage cluster on the left navigation menu.
+. Select the *Volumes* > *Overview* tab.
+. Select each volume you want to clone and click the *Clone* button that appears.
+. Do one of the following:
+* To clone a single volume, perform the following steps:
+.. In the *Clone Volume* dialog box, enter a volume name for the volume clone.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
+
+.. Select an account access level:
+** Read Only
+** Read/Write
+** Locked
+** Replication Target
+
+.. Select a size in GB or GIB for the volume clone.
++
+NOTE: Increasing the volume size of a clone results in a new volume with additional free space at the end of the volume. Depending on how you use the volume, you may need to extend partitions or create new partitions in the free space to make use of it.
+
+.. Select an account to associate with the volume clone.
+.. Click *Clone Volumes*.
+
+* To clone multiple volumes, perform the following steps:
+.. In the *Clone Volumes* dialog box, enter an optional prefix for the volume clones in the *New Volume Name Prefix* field.
+.. Select a new type of access for the volume clones or copy the access type from the active volumes.
+.. Select a new account to associate with the volume clones or copy the account association from the active volumes.
+.. Click *Clone Volumes*.
+
+NOTE: The time to complete a cloning operation is affected by volume size and current cluster load. Refresh the page if the cloned volume does not appear in the volume list.
 
 == Delete a volume
 You can delete one or more volumes from an Element storage cluster.
@@ -179,9 +223,6 @@ After volumes are deleted, they remain available for approximately eight hours. 
 . Select one or more volumes to purge.
 . In the *Actions* column of the Volumes table, expand the menu for the volume and select *Purge*.
 . Confirm the process by selecting *Yes*.
-
-
-
 
 [discrete]
 == Find more information
