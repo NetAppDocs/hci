@@ -275,8 +275,6 @@ entries:
        url: /task_hci_h610ch615crepl.html
      - title: Replace H610S nodes
        url: /task_hci_h610srepl.html
-     - title: Replace NetApp SN2010, SN2100, and SN2700 switches
-       url: /task_hci_snswitches.html
      - title: Replace power supply units
        url: /task_hci_psurepl.html
   - title: Legal notices
