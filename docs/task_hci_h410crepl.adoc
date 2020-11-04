@@ -64,7 +64,7 @@ NOTE: See the VMware documentation for the migration steps.
 +
 [%header,cols=2*]
 |===
-|NetApp HCI versions
+|NetApp HCI version number
 |Steps
 
 |NetApp HCI 1.3 and later
