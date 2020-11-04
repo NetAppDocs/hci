@@ -64,10 +64,10 @@ NOTE: See the VMware documentation for the migration steps.
 +
 [%header,cols=2*]
 |===
-|NetApp HCI 1.3 and later
+|NetApp HCI version number
 |Steps
 
-|Using the Element UI
+|NetApp HCI 1.3 and later
 a|
 . Select the failed node, and select *Monitor > Hardware Status > Sensors*.
 . Note the serial number of the failed node.
