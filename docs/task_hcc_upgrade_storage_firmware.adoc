@@ -217,8 +217,9 @@ https://[management node IP]/inventory/1/
 .. Click *Execute*.
 .. From the response, copy the installation asset ID (`id`).
 +
+[subs=+quotes]
 ----
-"id": "abcd01e2-xx00-4ccf-11ee-11f111xx9a0b",
+*"id": "abcd01e2-xx00-4ccf-11ee-11f111xx9a0b",*
 "management": {
   "errors": [],
   "inventory": {
@@ -234,6 +235,7 @@ https://[management node IP]/inventory/1/
 .. Click *Execute*.
 .. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to upgrade for use in a later step.
 +
+[subs=+quotes]
 ----
 "storage": {
   "errors": [],
@@ -241,7 +243,7 @@ https://[management node IP]/inventory/1/
     "clusters": [
       {
         "clusterUuid": "a1bd1111-4f1e-46zz-ab6f-0a1111b1111x",
-        "id": "a1bd1111-4f1e-46zz-ab6f-a1a1a111b012",
+        *"id": "a1bd1111-4f1e-46zz-ab6f-a1a1a111b012",*
 ----
 
 . Run the storage firmware upgrade:
@@ -263,6 +265,7 @@ https://[management node IP]/storage/1/
 +
 The response should indicate state as `initializing`:
 +
+[subs=+quotes]
 ----
 {
   "_links": {
@@ -274,7 +277,7 @@ The response should indicate state as `initializing`:
   "upgradeId": "334f14a4-1a1a-11e9-1055-6c0b84e2001b4",
   "packageId": "774f14a4-1a1a-11e9-8888-6c0b84e200b4",
   "config": {},
-  "state": "initializing",
+  *"state": "initializing",*
   "status": {
     "availableActions": [
       "string"

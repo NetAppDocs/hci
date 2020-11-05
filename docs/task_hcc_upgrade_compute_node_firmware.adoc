@@ -264,6 +264,7 @@ https://[management node IP]/inventory/1/
 .. Click *Execute*.
 .. From the response, copy and save the cluster controller ID (`"controllerId"`)and node hardware ID (`"hardwareId"`) for use in a later step:
 +
+[subs=+quotes]
 ----
 "compute": {
   "errors": [],
@@ -271,9 +272,10 @@ https://[management node IP]/inventory/1/
     "clusters": [
       {
         "clusterId": "Test-1B",
-        "controllerId": "a1b23456-c1d2-11e1-1234-a12bcdef123a",
+        *"controllerId": "a1b23456-c1d2-11e1-1234-a12bcdef123a",*
 ----
 +
+[subs=+quotes]
 ----
 "nodes": [
   {
@@ -284,7 +286,7 @@ https://[management node IP]/inventory/1/
     },
     "chassisSerialNumber": "111930011231",
     "chassisSlot": "D",
-    "hardwareId": "123a4567-01b1-1243-a12b-11ab11ab0a15",
+    *"hardwareId": "123a4567-01b1-1243-a12b-11ab11ab0a15",*
     "hardwareTag": "00000000-0000-0000-0000-ab1c2de34f5g",
     "id": "e1111d10-1a1a-12d7-1a23-ab1cde23456f",
     "model": "H410C",
