@@ -34,7 +34,7 @@ NOTE: If you are using QoS policies, do not use custom QoS on a volume. Custom Q
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the menu for your storage cluster.
 . Select *Storage > Volumes*.
-. Click the *QoS Policies* sub-tab.
+. Click the *QoS Policies* tab.
 . Click *Create Policy*.
 . Enter the *Policy Name*.
 +
@@ -99,7 +99,7 @@ You can change the name of an existing QoS policy or edit the values associated 
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the menu for your storage cluster.
 . Select *Storage > Volumes*.
-. Click the *QoS Policies* sub-tab.
+. Click the *QoS Policies* tab.
 . Click the *Actions* menu next to the QoS policy you intend to modify.
 . Click *Edit*.
 . In the *Edit QoS Policy* dialog box, change one or more of the following:
@@ -122,7 +122,7 @@ You can delete a QoS policy if it is no longer needed. When you delete a QoS pol
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the menu for your storage cluster.
 . Select *Storage > Volumes*.
-. Click the *QoS Policies* sub-tab.
+. Click the *QoS Policies* tab.
 . Click the *Actions* menu next to the QoS policy you intend to modify.
 . Click *Delete*.
 . Confirm the action.
