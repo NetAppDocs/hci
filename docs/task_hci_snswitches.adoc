@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hci_snswitches.html
-summary: If a drive fails or if the drive wear level falls below a threshold, you must replace it. You can hot-swap a failed drive.
+summary: You can replace a faulty switch non-disruptively by following the best practices and steps provided by NetApp.
 keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
 ---
 
-= Replace NetApp SN2010, SN2100, and SN2700 switches 
+= Replace NetApp SN2010, SN2100, and SN2700 switches
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,32 @@ keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
 :imagesdir: ../media/
 
 [.lead]
-If a drive is faulty or if the drive wear level falls below a threshold, you should replace it. Alarms in the Element software UI and VMware vSphere Web Client notify you when a drive has failed or is going to fail. You can hot-swap a failed drive.
+You can replace a faulty switch non-disruptively by following the best practices and steps provided by NetApp.
+
+.What you'll need
+
+* Ensure that Putty is installed on the laptop and that you capture the output. See this video to learn how to configure Putty to capture the output session.
+
+video::2LZfWH8HffA[YouTube]
+* Ensure that you run NetApp Config Advisor before and after the replacement. This can help identify other problems before the maintenance starts. Download and install Config Advisor, and access the Quick Start Guide from link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/download[here (login required)^].
+* Obtain a power cable, the basic hand tools, and labels.
+* Ensure that you have planned for a two to four-hour maintenance window.
+* Familiarize yourself with the switch ports below:
+
+.SN2010 switch faceplate and ports
+[#img-sn2010]
+[caption="Figure 1: ",]
+image::sn2010.png[SN2010,600,400]
+
+.SN2100 switch faceplate and ports
+[#img-sn2100]
+[caption="Figure 2: ",]
+image::sn2100.png[SN2100,600,400]
+
+.SN2010 and SN2100 switch rear
+[#img-sn2010/2100]
+[caption="Figure 3: ",]
+image::sn2010_rear.png[SN2010 and SN2100 rear,600,400]
 
 .About this task
 This procedure is for replacing drives in H410S and H610S storage nodes. Removing a drive takes the drive offline. Any data on the drive is removed and migrated to other drives in the cluster. The data migration to other active drives in the system can take a few minutes to an hour depending on capacity utilization and active I/O on the cluster.
