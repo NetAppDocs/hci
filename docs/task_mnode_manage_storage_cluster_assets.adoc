@@ -121,7 +121,7 @@ https://[management node IP]/storage/1/
 
 |`installationId`
 |string
-|The installation in which to create the new storage cluster. Enter the installation ID you saved earlier into this parameter.
+|The installation in which to add the new storage cluster. Enter the installation ID you saved earlier into this parameter.
 
 |`mvip`
 |string
