@@ -51,10 +51,11 @@ https://[management node IP]/inventory/1/
 The API returns a list of all known installations.
 . From the code 200 response body, save the value in the `id` field, which you can find in the list of installations. This is the installation ID. For example:
 +
+[subs=+quotes]
 ----
 "installations": [
     {
-      "id": "1234a678-12ab-35dc-7b4a-1234a5b6a7ba",
+      *"id": "1234a678-12ab-35dc-7b4a-1234a5b6a7ba",*
       "name": "my-hci-installation",
       "_links": {
         "collection": "https://localhost/inventory/1/installations",
