@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-You can add new volume access groups, delete existing volume access groups, edit the details of a volume access group, and view the details of a volume access group using NetApp Hybrid Cloud Control.
+You can add new volume access groups, delete existing volume access groups, edit the details of a volume access group, and view the details of a volume access group by using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
@@ -24,7 +24,7 @@ You can add new volume access groups, delete existing volume access groups, edit
 * Ensure you have a logical naming scheme for volume access groups.
 
 == Add a volume access group
-You can add a volume access group to NetApp HCI using NetApp Hybrid Cloud Control.
+You can add a volume access group to a storage cluster by using NetApp Hybrid Cloud Control.
 
 .Steps
 
@@ -41,7 +41,7 @@ If you associate an initiator with the volume access group, that initiator can a
 . Select *Create Access Group*.
 
 == Edit a volume access group
-You can edit the properties of an existing NetApp HCI volume access group using NetApp Hybrid Cloud Control.
+You can edit the properties of an existing volume access group by using NetApp Hybrid Cloud Control.
 
 .Steps
 
@@ -58,7 +58,7 @@ The *Edit Access Group* dialog appears.
 . In the *Access Groups* table, verify that the access group reflects your changes.
 
 == Delete a volume access group
-You can remove a volume access group from NetApp HCI using NetApp Hybrid Cloud Control, and at the same time remove the initiators associated with this access group from the system.
+You can remove a volume access group by using NetApp Hybrid Cloud Control, and at the same time remove the initiators associated with this access group from the system.
 
 .Steps
 

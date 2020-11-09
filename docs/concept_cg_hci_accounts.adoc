@@ -5,7 +5,7 @@ summary: Each NetApp HCI system that has cloud services enabled is associated wi
 keywords: netapp, hci, on premise, administrator, user account, cloud services, cluster
 ---
 
-= NetApp HCI user accounts
+= User accounts
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ keywords: netapp, hci, on premise, administrator, user account, cloud services, 
 :imagesdir: ../media/
 
 [.lead]
-To use NetApp HCI, you'll need to set up some user accounts.
+To access storage resources on your system, you'll need to set up user accounts.
 
 
 == User account management
@@ -68,7 +68,7 @@ While many NetApp Hybrid Cloud Control features work with multiple storage clust
 == Volume accounts
 Volume-specific accounts are specific only to the storage cluster on which they were created. These accounts enable you to set permissions on specific volumes across the network, but have no effect outside of those volumes.
 
-Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table. 
+Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table.
 
 [discrete]
 == Find more information

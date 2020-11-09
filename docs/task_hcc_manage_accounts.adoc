@@ -14,7 +14,9 @@ keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybr
 :imagesdir: ../media/
 
 [.lead]
-In SolidFire storage systems, user accounts enable clients to connect to volumes on a node. When you create a volume, it is assigned to a specific user account.
+In SolidFire storage systems, authoritative cluster users can be created to enable login access to NetApp Hybrid Cloud Control depending on the permissions you wish to grant "Administrator" or "Read-only" users. In addition to cluster users, there are also volume accounts, which enable clients to connect to volumes on a storage node. 
+
+When you create a volume, it is assigned to a specific user account.
 
 An account can have up to two-thousand volumes assigned to it, but a volume can belong to only one account.
 
@@ -29,7 +31,7 @@ Authoritative user accounts are managed from the top right menu User Management 
 
 
 === Create an authoritative cluster account
-You can create an account in NetApp HCI by using NetApp Hybrid Cloud Control.
+You can create an account by using NetApp Hybrid Cloud Control.
 
 This account can be used to log in to the Hybrid Cloud Control, the per-node UI for the cluster, and the storage cluster in NetApp Element software.
 
@@ -37,7 +39,7 @@ This account can be used to log in to the Hybrid Cloud Control, the per-node UI 
 
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *User Management*.
-. Select *Create Account*.
+. Select *Create User*.
 . Enter a name and password for the new account.
 //. In the CHAP Settings section, enter the following information:
 //+
@@ -64,9 +66,9 @@ You can change the permissions or password on a user account by using NetApp Hyb
 
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the icon in the top right and select *User Management*.
-. Optionally filter the list of user accounts by selecting *Cluster* or *LDAP*.
+. Optionally filter the list of user accounts by selecting *Cluster*, *LDAP*, or *Idp*.
 +
-If you configured users on the storage cluster with LDAP, those accounts show a User Type of "LDAP".
+If you configured users on the storage cluster with LDAP, those accounts show a User Type of "LDAP." If you configured users on the storage cluster with Idp, those accounts show a User Type of "Idp."
 
 . In the *Actions* column in the table, expand the  menu for the account and select *Edit*.
 . Make changes as needed.
@@ -76,12 +78,8 @@ If you configured users on the storage cluster with LDAP, those accounts show a 
 === Delete an authoritative user account
 You can delete one or more accounts when it is no longer needed.
 
-You cannot delete the administrator user account.
+You cannot delete the primary administrator user account for the authoritative cluster.
 
-IMPORTANT: Persistent volumes that are associated with management services are assigned to a new account during installation or upgrade. If you are using persistent volumes, do not modify or delete the volumes or their associated account. If you do delete these accounts, you could render your management node unusable.
-
-.What you'll need
-Before you delete the account, delete and purge any volumes associated with the account first.
 
 .Steps
 
@@ -103,6 +101,7 @@ Create an account specific to this volume.
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, select *Storage* > *Volumes*.
+. Select the *Accounts* tab.
 . Select the *Create Account* button.
 . Enter a name for the new account.
 . In the CHAP Settings section, enter the following information:
@@ -134,6 +133,8 @@ Delete an account that you no longer need.
 Before you delete a volume account, delete and purge any volumes associated with the account first.
 
 IMPORTANT: Deleting or locking an account associated with the management node results in an inaccessible management node.
+
+NOTE: Persistent volumes that are associated with management services are assigned to a new account during installation or upgrade. If you are using persistent volumes, do not modify or delete the volumes or their associated account. If you do delete these accounts, you could render your management node unusable.
 
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.

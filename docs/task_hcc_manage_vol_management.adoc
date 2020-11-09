@@ -30,7 +30,7 @@ You can manage volumes in NetApp Hybrid Cloud Control in the following ways:
 
 
 == Create a volume
-You can create a volume in NetApp HCI using NetApp Hybrid Cloud Control.
+You can create a storage volume using NetApp Hybrid Cloud Control.
 
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
@@ -61,7 +61,7 @@ Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might requi
 
 
 == Apply a QoS policy to a volume
-You can apply a QoS policy to an existing NetApp HCI volume by using NetApp Hybrid Cloud Control.
+You can apply a QoS policy to an existing storage volume by using NetApp Hybrid Cloud Control.
 
 
 .Steps
@@ -116,9 +116,7 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 
 .. Select the account that should have access to the volume.
 +
-If the account does not exist, click the *Create Account* link, enter a new account name, and click *Create*. The account is created and associated with the volume.
-+
-If there are more than 50 accounts, the list does not appear. Begin typing and the auto-complete function displays possible values for you to choose.
+Begin typing and the auto-complete function displays possible values for you to choose.
 
 .. Change the Quality of Service by doing one of the following:
 ... Select an existing policy.
@@ -132,7 +130,7 @@ TIP: When you change IOPS values, you should increment in tens or hundreds. Inpu
 
 == Clone volumes
 
-You can create a clone of a single volume or clone a group of volumes to make a point-in-time copy of the data. When you clone a volume, the system creates a snapshot of the volume and then creates a copy of the data referenced by the snapshot.
+You can create a clone of a single storage volume or clone a group of volumes to make a point-in-time copy of the data. When you clone a volume, the system creates a snapshot of the volume and then creates a copy of the data referenced by the snapshot.
 
 .Before you begin
 * At least one cluster must be added and running.
@@ -195,11 +193,14 @@ IMPORTANT: Persistent volumes that are associated with management services are c
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes* > *Overview*.
 . Select one or more volumes to delete.
-. In the *Actions* column of the Volumes table, expand the menu for the volume and select *Delete*.
+. Do one of the following:
++
+* If you selected multiple volumes, click the *Delete* quick filter at the top of the table.
+* If you selected a single volume, in the *Actions* column of the Volumes table, expand the menu for the volume and select *Delete*.
 . Confirm the delete by selecting *Yes*.
 
 == Restore a deleted volume
-After a volume is deleted, you can still restore it if you do so before eight hours after deletion.
+After a storage volume is deleted, you can still restore it if you do so before eight hours after deletion.
 
 The system does not immediately purge deleted volumes; they remain available for approximately eight hours. After eight hours, they are purged and no longer available. If you restore a volume before the system purges it, the volume comes back online and iSCSI connections are restored.
 
@@ -213,7 +214,7 @@ The system does not immediately purge deleted volumes; they remain available for
 
 
 == Purge a deleted volume
-After volumes are deleted, they remain available for approximately eight hours. After eight hours, they are purged automatically and no longer available. If you do not want to wait for the eight hours, you can delete
+After storage volumes are deleted, they remain available for approximately eight hours. After eight hours, they are purged automatically and no longer available. If you do not want to wait for the eight hours, you can delete
 
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
@@ -221,6 +222,10 @@ After volumes are deleted, they remain available for approximately eight hours. 
 . Select *Volumes* > *Overview*.
 . Select *Deleted*.
 . Select one or more volumes to purge.
+. Do one of the following:
++
+* If you selected multiple volumes, click the *Purge* quick filter at the top of the table.
+* If you selected a single volume, in the *Actions* column of the Volumes table, expand the menu for the volume and select *Purge*.
 . In the *Actions* column of the Volumes table, expand the menu for the volume and select *Purge*.
 . Confirm the process by selecting *Yes*.
 
