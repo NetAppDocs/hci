@@ -243,9 +243,9 @@ The payload should look similar to the following example:
 +
 ----
 {
-"config": {},
-"packageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4",
-"storageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4"
+  "config": {},
+  "packageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4",
+  "storageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4"
 }
 ----
 .. Click *Execute* to initiate the upgrade.
