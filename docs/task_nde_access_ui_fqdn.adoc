@@ -55,3 +55,7 @@ https://[management node IP]/mnode/2/
 .. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter.
 .. Enter any proxy setting values you recorded earlier in the remaining parameters in the request body. If you leave the proxy parameters empty or do not include them in the request body, existing proxy settings will be removed.
 .. Click *Execute*.
+
+[discrete]
+== Find more information
+* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-93942724-1C4C-4F3D-B352-89498F7722ED.html[CreateClusterInterfacePreference API information in the SolidFire and Element Documentation Center^]
