@@ -42,7 +42,7 @@ https://10.10.1.10/json-rpc/12.2?method=CreateClusterInterfacePreference&name=mv
 ----
 https://[management node IP]/mnode/2/
 ----
-.. Click *Authorize* or any lock icon and enter the cluster user name and password
+.. Click *Authorize* or any lock icon and enter the cluster user name and password.
 .. Enter the client ID as `mnode-client`.
 .. Click *Authorize* to begin a session and then close the window.
 .. From the server list, select `mnode2`.
