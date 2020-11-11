@@ -102,8 +102,8 @@ https://[management node IP]/storage/1/
 +
 ----
 {
-"config": {},
-"storageId": "123a45b6-1a2b-12a3-1234-1a2b34c567d8"
+  "config": {},
+  "storageId": "123a45b6-1a2b-12a3-1234-1a2b34c567d8"
 }
 ----
 
