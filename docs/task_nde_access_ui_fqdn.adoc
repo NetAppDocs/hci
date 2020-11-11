@@ -1,0 +1,49 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_access_ui_fqdn.html
+summary: Learn how to configure your system for FQDN access to the web UIs.
+keywords: netapp, hci, fqdn, ui, access, web, administration
+---
+
+= Configure Fully Qualified Domain Name web UI access
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+
+NetApp HCI with Element 12.2 or later enables you to access storage cluster web interfaces using the Fully Qualified Domain Name (FQDN). If you want to use the FQDN to access web user interfaces such as the Element web UI, per-node UI, or management node UI, you must first add a storage cluster setting to identify the FQDN used by the cluster. This enables the cluster to properly redirect a login session and improves integration with external services such as key managers and identity providers for multi-factor authentication.
+
+.What you'll need
+* This feature requires Element 12.2 or later and management services version 2.15 or later.
+
+.Steps
+
+. Create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, inserting the cluster MVIP FQDN for the preference value:
++
+* Name: `mvip_fqdn`
+* Value: <Fully Qualified Domain Name for the Cluster MVIP>
++
+----
+https://<mvip>/json-rpc/12.0?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=<fqdn>
+----
+
+. Change the management node settings using the management node REST API:
+.. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example: `https://[management node IP]/mnode/2/`
+.. Click *Authorize* or any lock icon and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. Click *GET /settings*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. Record any proxy settings reported in the response body.
+.. Click *PUT /settings*.
+.. Click *Try it out*.
+.. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter.
+.. Enter any proxy setting values you recorded earlier in the remaining parameters in the request body. If you leave the proxy parameters empty or do not include them in the request body, existing proxy settings will be removed.
+.. Click *Execute*.

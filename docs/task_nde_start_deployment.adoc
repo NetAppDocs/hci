@@ -1,0 +1,34 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_start_deployment.html
+summary: Begin deploying NetApp HCI.
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
+---
+
+= Start your deployment
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+Before continuing with your NetApp HCI deployment, you need to read and understand the end user license agreements.
+
+.Steps
+
+. On the *Welcome to NetApp HCI* page, click *Get Started*.
+. On the *Prerequisites* page, do the following:
+.. Ensure each prerequisite is met, and click each associated checkbox to confirm.
+.. Click *Continue*.
+. On the *End User Licenses* page, do the following:
+.. Read the NetApp End User License Agreement
+.. If you accept the terms, click *I accept* at the bottom of the agreement text.
+.. Read the VMware End User License Agreement.
+.. If you accept the terms, click *I accept* at the bottom of the agreement text.
+.. Click *Continue*.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]

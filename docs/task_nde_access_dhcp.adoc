@@ -1,0 +1,39 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_access_dhcp.html
+summary: Learn how to access the NetApp Deployment Engine in environments that use DHCP to assign IP addresses.
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access, dhcp
+---
+
+= Access the NetApp Deployment Engine in environments with DHCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+In environments where servers automatically acquire IPv4 configuration from DHCP, you can access the NetApp Deployment Engine using the IPv4 address assigned to the Bond1G interface on one of the storage nodes. You can use a USB stick to retrieve the IPv4 address from one of the storage nodes. The NetApp Deployment Engine will automatically discover other compute and storage nodes that use DHCP-assigned IPv4 addresses. You should not use this method unless your network has special requirements.
+
+.What you'll need
+* You or your network administrator have completed the tasks in the Installation and Setup Instructions document.
+* You have physical access to the NetApp HCI nodes.
+* All of the NetApp HCI nodes are powered on.
+* DHCP is enabled on the NetApp HCI management and storage networks.
+* The DHCP address pool is large enough to accommodate two IPv4 addresses per NetApp HCI node.
+
+NOTE: For the NetApp HCI deployment to succeed, all nodes in the deployment must either have DHCP-acquired or auto-configured IPv4 addresses (you cannot mix IPv4 address assignment methods).
+
+.About this task
+If DHCP is in use only for the storage network (Bond10G interfaces), you should use the steps outlined in link: link:task_nde_access_no_dhcp.html[Access the NetApp Deployment Engine in environments without DHCP] to access the NetApp Deployment Engine.
+
+.Steps
+. Wait several minutes for the nodes to request IP addresses.
+. Choose a storage node and insert a USB stick into the node. Leave it in for at least five seconds.
+. Remove the USB stick, and insert it into your computer.
+. Open the `readme.html` file. This takes you to the NetApp Deployment Engine user interface.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]

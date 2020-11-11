@@ -1,0 +1,36 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_join_existing_vsphere.html
+summary: Learn how to configure VMware vSphere during NetApp HCI deployment.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Join an existing VMware vSphere deployment
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+Configure NetApp HCI to take advantage of an existing vSphere deployment by providing the vCenter Server network information and credentials.
+
+.What you'll need
+* If you are joining an existing vSphere 6.7 deployment, make sure vCenter Server is running version 6.7 Update 1.
+* If you are joining an existing vSphere 6.5 deployment, make sure vCenter Server is running version 6.5 Update 2 or later.
+* Obtain the network details and administrator credentials for your existing vSphere deployment.
+
+.About this task
+If you join multiple vCenter Server systems that are connected using vCenter Linked Mode, NetApp HCI only recognizes one of the vCenter Server systems.
+
+.Steps
+. Click *Join and extend an existing vSphere deployment*.
+. Enter the domain name or IP address in the *vCenter Server Domain Name or IP address* field.
+If you enter a domain name, you also need to enter the IP address of an active DNS server in the *DNS Server IP Address* field that appears.
+. Enter the credentials of a vSphere administrator in the *User Name and Password* fields.
+. Click *Continue*.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]

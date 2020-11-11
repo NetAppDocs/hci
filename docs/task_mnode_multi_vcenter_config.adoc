@@ -44,6 +44,13 @@ NOTE: As an alternative, you can wait 15 minutes for the inventory to update in 
 .. From the REST API UI, click *GET ​/installations*.
 .. Click *Try it out*.
 .. Click *Execute*.
+.. From the response, copy the installation asset ID (`"id"`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Set refresh to `True`.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+. Refresh the NetApp Hybrid Cloud Control browser to see the changes.
 
 [discrete]
 == Find more information

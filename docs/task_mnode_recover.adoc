@@ -18,10 +18,10 @@ You can manually recover and redeploy the management node for your cluster runni
 
 You can deploy a new OVA and run a redeploy script to pull configuration data from a previously installed management node running version 11.3 and later.
 
-.Before you begin
+.What you'll need
 
-* Your previous management node was running NetApp Element software version 11.3 or later with persistent volumes functionality engaged.
-* You know the MVIP of the cluster containing the persistent volumes.
+* Your previous management node was running NetApp Element software version 11.3 or later with link:concept_hci_volumes.html#persistent-volumes[persistent volumes] functionality engaged.
+* You know the MVIP and SVIP of the cluster containing the persistent volumes.
 * Your cluster version is running NetApp Element software 11.3 or later.
 * Your installation uses IPv4. The management node 11.3 does not support IPv6.
 * You have permission to download software from the NetApp Support Site.
@@ -37,9 +37,6 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 | Citrix XenServer | .iso
 | OpenStack | .iso
 |===
-
-.About this task
-Prior to completing this procedure, you should have an understanding of link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them.
 
 .Steps
 
@@ -87,6 +84,7 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
 == Configure the management node
+
 . Log in to the management node using SSH or the console provided by your hypervisor.
 . Run the following command to gain root privileges. Enter your password when prompted:
 +
@@ -94,9 +92,12 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 sudo su
 ----
 
-. Ensure time is synced (NTP) between the management node and the storage cluster.
+. Ensure time is synced between the management node and the storage cluster using NTP:
+.. Edit the `/etc/ntp.conf` file.
+.. Change the default time server(s) to the same NTP server used on the storage cluster.
+.. In vSphere, verify that the *Synchronize guest time with host* box is un-checked in the VM options.
 +
-NOTE: In vSphere, the *Synchronize guest time with host* box should be checked in the VM options. Do not disable this option if you make future changes to the VM.
+NOTE: Do not enable this option if you make future changes to the VM.
 
 . Create a temporary destination directory for the management services bundle contents:
 +
@@ -107,7 +108,7 @@ mkdir -p /sf/etc/mnode/mnode-archive
 . Extract the downloaded bundle using the following command, replacing the value in [ ] brackets (including the brackets) with the name of the bundle file:
 +
 ----
-tar xvf /sf/etc/mnode/[management services bundle file]
+tar -C /sf/etc/mnode -xvf /sf/etc/mnode/[management services bundle file]
 ----
 . Extract the resulting file to the `/sf/etc/mnode-archive` directory:
 +
