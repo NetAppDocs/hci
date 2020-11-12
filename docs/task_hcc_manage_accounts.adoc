@@ -16,7 +16,7 @@ keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybr
 [.lead]
 In SolidFire storage systems, authoritative cluster users can be created to enable login access to NetApp Hybrid Cloud Control depending on the permissions you wish to grant "Administrator" or "Read-only" users. In addition to cluster users, there are also volume accounts, which enable clients to connect to volumes on a storage node. 
 
-When you create a volume, it is assigned to a specific user account.
+When you create a volume, it is assigned to a specific volume account.
 
 An account can have up to two-thousand volumes assigned to it, but a volume can belong to only one account.
 
@@ -121,10 +121,10 @@ IMPORTANT: Deleting or locking an account associated with the management node re
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, select *Storage* > *Volumes*.
+. Select the *Accounts* tab.
 . In the *Actions* column in the table, expand the menu for the account and select *Edit*.
 . Make changes as needed.
-. Optionally, set the account to a Locked status.
-. Select *Save*.
+. Confirm the changes by selecting *Yes*.
 
 
 === Delete a volume account
@@ -139,10 +139,9 @@ NOTE: Persistent volumes that are associated with management services are assign
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, select *Storage* > *Volumes*.
+. Select the *Accounts* tab.
 . In the *Actions* column in the table, expand the menu for the account and select *Delete*.
 . Confirm the deletion by selecting *Yes*.
-
-
 
 [discrete]
 == Find more information

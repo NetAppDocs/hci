@@ -44,7 +44,7 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 1GB = 1 000 000 000 bytes
 1GiB = 1 073 741 824 bytes
 
-. Select a bock size for the volume.
+. Select a block size for the volume.
 . From the Account list, select the account that should have access to the volume.
 //+
 //If an account does not exist, click the *Create Account* link, enter a new account name, and click *Create*. The account is created and associated with the new volume.
