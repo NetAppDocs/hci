@@ -1,0 +1,36 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_hci_power_on_compute.html
+summary: Learn how to power on NetApp HCI compute nodes.
+keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+---
+
+= Power on compute resources for a NetApp HCI system
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
+
+[.lead]
+You can power on compute resources for a NetApp HCI system after the scheduled outage is complete.
+
+.Steps
+
+. Power on compute nodes using the same steps you performed for powering on the storage nodes.
+. When all the compute nodes are operational, log in to the ESXi host that was running the vCSA.
+. Log in to the compute host and verify that it sees all the NetApp HCI datastores. For a typical NetApp HCI system, you should see all the ESXi local datastores and at least the following shared datastores:
+----
+NetApp-HCI-Datastore-[01,02]
+----
+. Assuming all storage is accessible, power on the vCSA and any other required virtual machines as follows:
+.. Select the virtual machines in the navigator, select all the virtual machines that you want to power on, and click the *Power on* button.
+. After you power on the virtual machines, wait for approximately 5 minutes and then use a web browser to navigate to the IP address or FQDN of the vCSA applicance.
++
+If you do not wait long enough, a message appears stating that the vSphere Client web server is initializing.
+. After the vSphere Client initializes, log in and verify that all ESXi hosts and virtual machines are online.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]

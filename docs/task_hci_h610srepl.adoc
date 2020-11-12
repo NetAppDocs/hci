@@ -1,0 +1,74 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_h610srepl.html
+summary: You might need to replace the chassis if the fan, central processing unit (CPU), or dual inline memory module (DIMM) fails, or to fix overheating issues or problems with the boot process. The blinking amber LED in the front of the chassis is an indication of a possible need for chassis replacement. You should contact NetApp Support before you proceed.
+keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement
+---
+
+= Replace H610S nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You might need to replace the chassis if the fan, central processing unit (CPU), or dual inline memory module (DIMM) fails, or to fix overheating issues or problems with the boot process. The blinking amber LED in the front of the chassis is an indication of a possible need for chassis replacement. You should contact NetApp Support before you proceed.
+
+NOTE: See the link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/NetApp_H610S_installation_requirements_for_replacement_or_expansion_nodes[KB article^] for information about installation requirements for H610S nodes. New and spare H610S storage nodes might have additional installation requirements based on the existing Element software version of the storage cluster. Contact NetApp Support for more information.
+
+TIP: The terms "node" and "chassis" are used interchangeably in the case of H610S, which is a one rack unit (1U) chassis.
+
+.What you'll need
+
+* You have contacted NetApp Support.
+If you are ordering a replacement, you should have a case open with NetApp Support.
+
+* You have obtained the replacement node.
+* You have an electrostatic discharge (ESD) wristband, or you have taken other antistatic protection.
+* If you need to perform the Return to Factory Image (RTFI) process, you have obtained the USB key.
+NetApp Support can help you decide if you need to perform the RTFI process.
+* You have a keyboard and monitor.
+* You have removed the failed node correctly from the cluster.
+* If a DIMM has failed, you have removed drives before you remove the node from the cluster.
+
+.About this task
+Alarms in the VMware vSphere Web Client alert you when a host fails. You must match the serial number of the failed host from the VMware vSphere Web Client with the serial number on the sticker at the back of the node.
+
+.Steps
+
+. Locate the service tag at the front of the failed chassis.
++
+image::h610s-servicetag.gif[Shows the service tag at the front of the H610S chassis.]
+. Verify that the serial number on the service tag matches the NetApp Support case number when you ordered the replacement chassis.
+. Plug in the keyboard and monitor to the back of the failed chassis.
+. Verify the serial number of the failed node with NetApp Support.
+. Power down the chassis.
+. Label the drives in the front and cables at the back with their locations, so that you can put them back in the same locations after the replacement.
+. Remove the power supply units and cables.
+. Remove the drives carefully, and place them on an antistatic, level surface.
+. Remove the chassis by unscrewing the thumbscrews on the mounting ears.
+You must package and return the failed chassis to NetApp.
+. Optional: Remove the rails and install the new rails that were shipped with your replacement.
+You can also reuse the existing rails.
+. Slide the replacement chassis on to the rails.
+. Insert the drives you removed earlier.
++
+NOTE: You should insert the drives in the same slots they were in before you removed them.
+
+. Install the power supply units.
+. Insert the power supply cables, and the network cables in their original ports.
+. Small form-factor pluggable (SFP) transceivers might be inserted in the 10GbE ports of the replacement node. You should remove them before you cable the 10GbE ports.
++
+NOTE: See your switch vendor's documentation if your switch does not recognize the cables.
+
+. Power on the chassis by pressing the power button at the front.
+It takes approximately five minutes and 30 seconds for the node to boot.
+. Perform the configuration steps.
+** If the H610S node is part of a NetApp HCI installation, use NetApp Hybrid Cloud Control to configure the storage resource. See link:https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
+** If the H610S node is part of a SolidFire all-flash storage installation, configure the node using the NetApp Element software user interface (UI).
+Contact NetApp Support for assistance.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

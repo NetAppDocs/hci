@@ -20,7 +20,7 @@ You can also see details on active and deleted volumes.
 
 With this view, you might first want to monitor the Used capacity column.
 
-You can access this information only if you have NetApp Hybrid Cloud Control (HCC) administrative privileges.
+You can access this information only if you have NetApp Hybrid Cloud Control administrative privileges.
 
 
 .Steps
@@ -35,8 +35,6 @@ https://[management node IP address]
 +
 The Hybrid Cloud Control Dashboard appears.
 . In the left navigation, select the cluster and select *Storage* > *Volumes*.
-+
-The Volumes page Overview tab appears.
 +
 image::hcc_volumes_overview_active.png[HCC Volumes page > Overview tab image]
 
@@ -57,11 +55,11 @@ image::hcc_volumes_icons.png[HCC Volumes page icons]
 . From the Volumes view, click the tabs to see additional details about the volumes:
 .. *Access Groups*: You can see the volume access groups that are mapped from initiators to a collection of volumes for secured access.
 +
-See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[access groups] in the _NetApp Element User Guide_.
+See information about link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html[volume access groups].
 
 .. *Accounts*: You can see the user accounts, which enable clients to connect to volumes on a node. When you create a volume, it is assigned to a specific user account.
 +
-See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-E93D3BAF-5A60-414D-86AF-0C1F86D43F26.html[user accounts] in the _NetApp Element User Guide_.
+See information about link:https://docs.netapp.com/us-en/hci/docs/concept_cg_hci_accounts.html[NetApp HCI user accounts].
 
 .. *Initiators*: You can see the iSCSI initiator IQN or Fibre Channel WWPNs for the volume. Each IQN added to an access group can access each volume in the group without requiring CHAP authentication. Each WWPN added to an access group enables Fibre Channel network access to the volumes in the access group.
 +
@@ -69,7 +67,10 @@ See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-u
 
 .. *QoS Policies*: You can see the QoS policy applied to the volume. A QoS policy applies standardized settings for minimum IOPS, maximum IOPS, and burst IOPS to multiple volumes.
 +
+See information about link:https://docs.netapp.com/us-en/hci/docs/concept_hci_performance#qos-performance.html[performance and QoS policies].
++
 See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-C90C0C1C-AE38-46FA-A854-BB425B55BEF4.html[Quality of Service policies] in the _NetApp Element User Guide_.
+
 
 [discrete]
 == Find more information

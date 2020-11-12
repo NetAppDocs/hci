@@ -1,0 +1,104 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_configure_net_settings.html
+summary: Learn how to configure NetApp HCI deployment network settings.
+keywords: netapp, hci, deployment, compatibility, nodes
+---
+
+= Configure network settings
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+NetApp HCI provides a network settings page with an easy form to simplify network configuration. When you complete the easy form, NetApp HCI automatically populates much of the rest of the information on the network settings page. You can then enter final network settings and verify that the network configuration is correct before proceeding. You do not need to complete the form in its entirety.
+
+.What you'll need
+* You have obtained the following information:
+** The planned naming prefix for the hosts and storage cluster
+** All planned subnet mask, starting IP address, default gateway, and VLAN IDs for the management, iSCSI, and vMotion networks
+** The IP address, default gateway, VLAN IDs, and subnet mask information for any planned VMware vCenter deployment
+** The Network Time Protocol (NTP) server address for NetApp HCI
+** The DNS server IP address information for NetApp HCI
+* If you are deploying a vSphere Distributed Switch, you have a vSphere Enterprise Plus license ready to apply after deployment is complete.
+* If you assigned VLAN IDs to node ports during terminal user interface (TUI) configuration, you have configured those ports with the same VLAN ID during network configuration. You do not need to configure tagged host ports as access ports or native VLANs on the connected switch ports.
+* You have verified that your network switch configuration is correct. Incorrect switch configurations (such as incorrect VLANs or MTU size) will cause deployment errors.
+
+.About this task
+If you selected the two-cable network topology for compute nodes, you must use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks).
+
+NOTE: In environments that require host-side VLAN tagging before deployment, if you have configured VLAN IDs on compute and storage nodes so they are discoverable by the NetApp Deployment Engine, ensure you use the correct VLANs when configuring network settings in the NetApp Deployment Engine.
+
+If you are deploying using a two-node or three-node storage cluster, you can complete IP address information for Witness Nodes on the *Network Settings* page after using the easy form.
+
+.Steps
+. Optional: To disable live validation of network information you enter on this page, toggle the *Live network validation is* switch to *Off*.
+.  In the *Infrastructure Services* section of the *Network Settings* page, enter the DNS and NTP server information for NetApp HCI in the following fields:
++
+|===
+|Field |Description
+
+|*DNS Server IP Address 1*
+|The IP address of the primary DNS server for NetApp HCI. If you specified a DNS server on the vCenter Configuration page, this field is populated and read-only.
+
+|*DNS Server IP Address 2 (Optional)*
+|An optional IP address of a secondary DNS server for NetApp HCI.
+
+|*NTP Server Address 1*
+|The IP address or fully qualified domain name of the primary NTP server for this infrastructure.
+
+|*NTP Server Address 2 (Optional)*
+|An optional IP address or fully qualified domain name of the secondary NTP server for this infrastructure.
+|===
+. Click *To save time, launch the easy form* to enter fewer network settings.
++
+The *Network Settings Easy Form* dialog box appears.
+
+. Enter a naming prefix in the *Naming Prefix* field.
++
+The naming prefix is applied to the name of each host and the name of the storage cluster. Naming prefixes have the following characteristics:
++
+* Must start with a letter
+* Can contain letters, numbers, and hyphens
+* Cannot exceed 55 characters
+. Choose one of the following options for assigning VLAN IDs.
++
+At any time when using the form, click *Clear* next to a row to clear input from a row of fields.
++
+NOTE: When you assign VLAN IDs, you are configuring VLAN tags that NetApp HCI will apply to the network traffic. You do not need to enter your native VLAN as a VLAN ID; to use the native VLAN for a network, leave the appropriate field empty.
+
++
+|===
+|Option |Steps
+
+|Assign VLAN IDs
+a|
+. Select *Yes* for the *Will you assign VLAN IDs* option.
+. In the *VLAN ID* column, enter a VLAN tag to use for each type of network traffic you want to assign to a VLAN.
++
+Both compute vMotion traffic and iSCSI traffic must use an unshared VLAN ID.
+. Click *Next*.
+. In the *Subnet* column, enter subnet definitions in CIDR format for each type of network traffic in each network; for example, 192.168.1.0/24.
+. In the *Default Gateway* column, enter the IP address of the default gateway for each type of network traffic in each network.
+. In the *Starting IP* column, enter the first useable IP address for each network subnet in each network.
+
+|Do not assign VLAN IDs
+a|
+. Select *No* for the *Will you assign VLAN IDs* option.
+. In the *Subnet* column, enter subnet definitions in CIDR format for each type of network traffic in each network; for example, 192.168.1.0/24.
+. In the *Default Gateway* column, enter the IP address of the default gateway for each type of network traffic in each network.
+. In the *Starting IP* column, enter the first useable IP address for each type of network traffic in each network.
+|===
+. Click *Apply to Network Settings*.
+.  Click *Yes* to confirm.
++
+This populates the *Network Settings* page with the settings you entered in the easy form. NetApp HCI validates the IP addresses you entered. You can disable this validation with the Disable Live Network Validation button.
+. Verify that the automatically populated data is correct.
+. Click *Continue*.
+
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

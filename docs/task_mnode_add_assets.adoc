@@ -42,6 +42,7 @@ https://[management node IP]/inventory/1/
 .. Click *Execute*.
 .. From the code 200 response body, copy the `id` for the installation.
 +
+[subs=+quotes]
 ----
 {
   "installations": [
@@ -50,7 +51,7 @@ https://[management node IP]/inventory/1/
         "collection": "https://10.111.211.111/inventory/1/installations",
         "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
       },
-      "id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",
+      *"id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",*
 ----
 +
 NOTE: Your installation has a base asset configuration that was created during installation or upgrade.

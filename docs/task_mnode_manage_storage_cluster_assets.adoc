@@ -5,7 +5,7 @@ summary: You can add, remove, and change management node storage cluster assets 
 keywords: netapp, mnode, management node, rest api, hci, assets
 ---
 
-= Manage storage cluster assets
+= Create and manage storage cluster assets
 
 :hardbreaks:
 :nofooter:
@@ -16,7 +16,7 @@ keywords: netapp, mnode, management node, rest api, hci, assets
 [.lead]
 You can add new storage cluster assets to the management node, edit the stored credentials for known storage cluster assets, and delete storage cluster assets from the management node using the REST API.
 
-.Before you begin
+.What you'll need
 * Ensure that your storage cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
 
@@ -51,10 +51,11 @@ https://[management node IP]/inventory/1/
 The API returns a list of all known installations.
 . From the code 200 response body, save the value in the `id` field, which you can find in the list of installations. This is the installation ID. For example:
 +
+[subs=+quotes]
 ----
 "installations": [
     {
-      "id": "1234a678-12ab-35dc-7b4a-1234a5b6a7ba",
+      *"id": "1234a678-12ab-35dc-7b4a-1234a5b6a7ba",*
       "name": "my-hci-installation",
       "_links": {
         "collection": "https://localhost/inventory/1/installations",
@@ -83,9 +84,13 @@ The API returns a list of all known storage clusters in this installation.
 . From the code 200 response body, find the correct storage cluster and save the value in the cluster's `storageId` field. This is the storage cluster ID.
 
 == Add a new storage cluster asset
-You can use the REST API to add a new storage cluster asset to the management node inventory. When you add a new storage cluster asset, it is automatically registered with the management node.
+You can use the REST API to add one or more new storage cluster assets to the management node inventory. When you add a new storage cluster asset, it is automatically registered with the management node.
 
-NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and cluster ID of a storage cluster asset>> before continuing.
+.What you'll need
+* You have copied the <<Retrieve the installation ID and cluster ID of a storage cluster asset, storage cluster ID and installation ID>> for any storage clusters you want to add.
+* If you are adding more than one storage node, you have read and understood the limitations of the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative cluster] and multiple storage cluster support.
++
+NOTE: All users defined on the authoritative cluster are defined as users on all other clusters tied to the Hybrid Cloud Control instance.
 
 .Steps
 . Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
@@ -94,7 +99,6 @@ NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and c
 https://[management node IP]/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
-+
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client`.
 .. Click *Authorize* to begin a session.
@@ -103,24 +107,35 @@ https://[management node IP]/storage/1/
 . Click *Try it out*.
 . Enter the new storage cluster's information in the following parameters in the *Request body* field:
 +
+----
+{
+  "installationId": "a1b2c34d-e56f-1a2b-c123-1ab2cd345d6e",
+  "mvip": "10.0.0.1",
+  "password": "admin",
+  "userId": "admin"
+}
+----
+
++
 |===
 |Parameter |Type |Description
 
 |`installationId`
 |string
-|The installation in which to create the new storage cluster. Enter the installation ID you saved earlier into this parameter.
+|The installation in which to add the new storage cluster. Enter the installation ID you saved earlier into this parameter.
 
 |`mvip`
 |string
 |The IPv4 management virtual IP address (MVIP) of the storage cluster.
 
+|`password`
+|string
+|The password used to communicate with the storage cluster.
+
 |`userId`
 |string
 |The user ID used to communicate with the storage cluster (the user must have administrator privileges).
 
-|`password`
-|string
-|The password used to communicate with the storage cluster.
 |===
 . Click *Execute*.
 +
@@ -148,16 +163,24 @@ https://[management node IP]/storage/1/
 . Paste the storage cluster ID you copied earlier into the `storageId` parameter.
 . Change one or both of the following parameters in the *Request body* field:
 +
+----
+{
+  "password": "adminadmin",
+  "userId": "admin"
+}
+----
+
++
 |===
 |Parameter |Type |Description
-
-|`userId`
-|string
-|The user ID used to communicate with the storage cluster (the user must have administrator privileges).
 
 |`password`
 |string
 |The password used to communicate with the storage cluster.
+
+|`userId`
+|string
+|The user ID used to communicate with the storage cluster (the user must have administrator privileges).
 |===
 . Click *Execute*.
 
@@ -187,5 +210,6 @@ Upon success, the API returns an empty response.
 
 [discrete]
 == Find more information
+* link:concept_hci_clusters.html#authoritative-storage-clusters[Authoritative cluster]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

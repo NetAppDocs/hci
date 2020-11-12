@@ -1,0 +1,246 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_hserieschassisrepl.html
+summary: If your chassis has a fan failure or a power issue, you should replace it as soon as possible. The steps in the chassis replacement procedure depend on your NetApp HCI configuration and cluster capacity, which requires careful consideration and planning. You should contact NetApp Support for guidance and to order a replacement chassis.
+keywords: netapp, hci, chassis replacement,2U chassis replacement, h-series
+---
+
+= Replace 2U H-series chassis
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+If your chassis has a fan failure or a power issue, you should replace it as soon as possible. The steps in the chassis replacement procedure depend on your NetApp HCI configuration and cluster capacity, which requires careful consideration and planning. You should contact NetApp Support for guidance and to order a replacement chassis.
+
+.About this task
+You should consider the following before you replace the chassis:
+
+* Does your rack have additional space for a new chassis?
+* Do any of the chassis in your deployment have unused node slots?
+* If your rack has additional space, can you move each of the nodes from the failed chassis to the new chassis, one at a time? You should keep in mind that this process might take time.
+* Can your storage cluster remain online when you remove the nodes that are part of the failed chassis?
+* Can your virtual machines (VMs) and ESXi cluster handle the workload when you remove the compute nodes that are part of the failed chassis?
+
+.Replacement options
+
+Choose from one of the following options below:
+<<Replace the chassis when additional unused space is available in the rack>>
+<<Replace the chassis when additional unused space is not available in the rack>>
+
+== Replace the chassis when additional unused space is available in the rack
+If your rack has additional space, you can install the new chassis and move nodes one at a time to the new chassis. If any of the installed chassis have unused node slots, you can move nodes from the failed chassis to the unused slots one at a time, and then remove the failed chassis. Before you being the procedure, ensure that the cable lengths are sufficient and switch ports are available.
+
+NOTE: The steps for moving compute nodes are different from the steps for moving storage nodes. You should ensure that the nodes are correctly shut down before you move them. After you move all the nodes from the failed chassis, you should remove the chassis from the rack and return it to NetApp.
+
+=== Install the new chassis
+You can install the new chassis into the rack space available, and move the nodes into it.
+
+.What you'll need
+* You have an electrostatic discharge (ESD) wristband, or you have taken other antistatic protection.
+* You have the replacement chassis.
+* You have a lift or two or more persons to perform the steps.
+* You have a #1 Phillips screwdriver.
+
+.Steps
+
+. Put on antistatic protection.
+. Unpack the replacement chassis.
+Keep the packaging for when you return the failed chassis to NetApp.
+. Insert the rails that were shipped to you along with the chassis.
+. Slide the replacement chassis into the rack.
++
+TIP: Always use sufficient manpower or a lift while installing the chassis.
+
+. Secure the chassis to the rack with the front mounting thumb screws, and tighten the screws with the screwdriver.
+
+=== Move a compute node
+Before you move a compute node to the new chassis or to an existing chassis that has additional unused slots, you should migrate the virtual machines (VMs), shut the node down correctly, and label the cables inserted into the node.
+
+NOTE: Ensure that you have antistatic protection when you move the node.
+
+.Steps
+
+. Make a note of the serial number of the node from the sticker at the back of the node.
+. In the VMware vSphere Web Client, select *Hosts and Clusters*, select a node (host), and then select *Monitor > Hardware Status > Sensors*.
+. In the *Sensors* section, look for the serial number that you noted from the sticker at the back of the node.
+. After you find the matching serial number, migrate the VMs to another available host.
++
+NOTE: See the VMware documentation for the migration steps.
+
+. Right-click the node, and select *Power > Shut Down*.
+You are now ready to physically removing the node from the chassis.
+. Label the node and all the cables at the back of the node.
+. Remove the node from the chassis by pulling down the cam handle on the right side of each node, and pulling the node out using both the cam handles.
+. Reinstall the node into the new chassis by pushing the node in until you hear a click.
+The labels you had attached to the node before you removed it help guide you. The node powers on automatically when you install it correctly.
++
+CAUTION: Ensure that you support the node from under when you install it. Do not use excessive force while pushing the node into the chassis.
++
+NOTE: If installing into the new chassis, ensure that you install the node into its original slot in the chassis.
+
+. Reconnect the cables to the same ports at the back of the node.
+The labels you had on the cables when you disconnected them help guide you.
++
+CAUTION: Ensure that you do not force the cables into the ports; you might damage the cables, ports, or both.
+
+. Confirm that the compute node (host) is listed in the ESXi cluster in the VMware vSphere Web Client.
+. Perform these steps for all the compute nodes in the failed chassis.
+
+=== Move a storage node
+Before you move the storage nodes to the new chassis, you should remove the drives, shut down the nodes correctly, and label all the components.
+
+.Steps
+
+. Identify the node that you are going to remove as follows:
+.. Note down the serial number of the node from the sticker at the back of the node.
+.. In the VMware vSphere Web Client, select *NetApp Element Management*, and copy the MVIP IP address.
+.. Use the MVIP IP address in a web browser to log in to the NetApp Element software UI with the user name and password that you configured in the NetApp Deployment Engine.
+.. Select *Cluster > Nodes*.
+.. Match the serial number you noted down with the serial number (service tag) listed.
+.. Make a note of the node ID of the node.
+. After you identify the node, move iSCSI sessions away from the node by using the following API call:
+`wget --no-check-certificate -q --user=<USER> --password=<PASS> -O - --post-data '{ "method":"MovePrimariesAwayFromNode", "params":{"nodeID":<NODEID>} }' https://<MVIP>/json-rpc/8.0`
+MVIP is the MVIP IP address, NODEID is the node ID, USER is the user name you configured in the NetApp Deployment Engine when you set up NetApp HCI, and PASS is the password you configured in the NetApp Deployment Engine when you set up NetApp HCI.
+. Select *Cluster > Drives* to remove the drives associated with the node.
++
+NOTE: You should wait for the drives that you removed to show up as Available before you remove the node.
+
+. Select *Cluster > Nodes > Actions > Remove* to remove the node.
+. Use the following API call to shut down the node:
+`wget --no-check-certificate -q --user=<USER> --password=<PASS> -O - --post-data '{ "method":"Shutdown", "params":{"option":"halt", "nodes":[ <NODEID>]} }' https://<MVIP>/json-rpc/8.0`
+MVIP is the MVIP IP address, NODEID is the node ID, USER is the user name you configured in the NetApp Deployment Engine when you set up NetApp HCI, and PASS is the password you configured in the NetApp Deployment Engine when you set up NetApp HCI.
+After the node is shut down, you are ready to physically remove it from the chassis.
+. Remove the drives from the node in the chassis as follows:
+.. Remove the bezel.
+.. Label the drives.
+.. Open the cam handle, and slide each drive out carefully using both hands.
+.. Place the drives on an antistatic, level surface.
+. Remove the node from the chassis as follows:
+.. Label the node and cables attached to it.
+.. Pull down the cam handle on the right side of each node, and pull the node out using both the cam handles.
+. Reinstall the node into the chassis by pushing the node in until you hear a click.
+The labels you had attached to the node before you removed it help guide you.
++
+CAUTION: Ensure that you support the node from under when you install it. Do not use excessive force while pushing the node into the chassis.
++
+NOTE: If installing into the new chassis, ensure that you install the node into its original slot in the chassis.
+
+. Install the drives into their respective slots in the node by pressing down the cam handle on each drive until it clicks.
+. Reconnect the cables to the same ports at the back of the node.
+The labels you had attached to the cables when you disconnected them will help guide you.
++
+CAUTION: Ensure that you do not force the cables into the ports; you might damage the cables, ports, or both.
+
+. After the node powers on, add the node to the cluster.
++
+NOTE: It might take up to 15 minutes for the node to get added and be displayed under *Nodes > Active*.
+
+. Add the drives.
+. Perform these steps for all the storage nodes in the chassis.
+
+== Replace the chassis when additional unused space is not available in the rack
+If your rack does not have additional space and if none of the chassis in your deployment has unused node slots, you should determine what can stay online, if anything, before you do the replacement procedure.
+
+.About this task
+
+You should take the following points into consideration before you do the chassis replacement:
+
+* Can your storage cluster remain online without the storage nodes in the failed chassis?
+If the answer is no, you should shut down all the nodes (both compute and storage) in your NetApp HCI deployment.
+If the answer is yes, you can shut down only the storage nodes in the failed chassis.
+* Can your VMs and ESXi cluster stay online without the compute nodes in the failed chassis?
+If the answer is no, you must shut down or migrate the appropriate VMs to be able to shut down the compute nodes in the failed chassis.
+If the answer is yes, you can shut down only the compute nodes in the failed chassis.
+
+=== Shut down a compute node
+Before you move the compute node to the new chassis, you should migrate the VMs, shut it down correctly, and label the cables inserted into the node.
+
+.Steps
+. Make a note of the serial number of the node from the sticker at the back of the node.
+. In the VMware vSphere Web Client, select *Hosts and Clusters*, select a node (host), and then select *Monitor > Hardware Status > Sensors*.
+. In the *Sensors* section, look for the serial number that you noted from the sticker at the back of the node.
+. After you find the matching serial number, migrate the VMs to another available host.
++
+NOTE: See the VMware documentation for the migration steps.
+
+. Right-click the node, and select *Power > Shut Down*.
+You are now ready to physically removing the node from the chassis.
+
+=== Shut down a storage node
+See the steps <<move a storage node,here>>.
+
+=== Remove the node
+You should ensure that you remove the node carefully from the chassis and label all the components. The steps to physically remove the node are the same for both storage and compute nodes. For a storage node, remove the drive before you remove the node.
+
+.Steps
+. For a storage node, remove the drives from the node in the chassis as follows:
+.. Remove the bezel.
+.. Label the drives.
+.. Open the cam handle, and slide each drive out carefully using both hands.
+.. Place the drives on an antistatic, level surface.
+. Remove the node from the chassis as follows:
+.. Label the node and cables attached to it.
+.. Pull down the cam handle on the right side of each node, and pull the node out using both the cam handles.
+. Perform these steps for all the nodes you want to remove.
+You are now ready to remove the failed chassis.
+
+=== Replace the chassis
+If your rack does not have additional space, you should uninstall the failed chassis and replace it with the new chassis.
+
+.Steps
+. Put on antistatic protection.
+. Unpack the replacement chassis, and keep it on a level surface.
+Keep the packaging for when you return the failed unit to NetApp.
+. Remove the failed chassis from the rack, and place it on a level surface.
++
+NOTE: Use sufficient manpower or a lift while moving a chassis.
+
+. Remove the rails.
+. Install the new rails that were shipped to you with the replacement chassis.
+. Slide the replacement chassis into the rack.
+. Secure the chassis to the rack with the front mounting thumb screws, and tighten the screws with the screwdriver.
+. Install the nodes into the new chassis as follows:
+.. Reinstall the node into its original slot in the chassis by pushing the node in until you hear a click.
+The labels you attached to the node before you removed it help guide you.
++
+CAUTION: Ensure that you support the node from under when you install it. Do not use excessive force while pushing the node into the chassis.
+
+.. For storage nodes, install the drives into their respective slots in the node by pressing down the cam handle on each drive until it clicks.
+.. Reconnect the cables to the same ports at the back of the node.
+The labels you attached to the cables when you disconnected them help guide you.
++
+CAUTION: Ensure that you do not force the cables into the ports; you might damage the cables, ports, or both.
+
+. Ensure that the nodes are online as follows:
++
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|If you reinstalled all the nodes (both storage and compute) in your NetApp HCI deployment
+a|
+. In the VMware vSphere Web Client, confirm that the compute nodes (hosts) are listed in the ESXi cluster.
+. In the Element plug-in for vCenter server, confirm that the storage nodes are listed as Active.
+
+|If you reinstalled only the nodes in the failed chassis
+a|
+. In the VMware vSphere Web Client, confirm that the compute nodes (hosts) are listed in the ESXi cluster.
+. In the Element plug-in for vCenter server, select *Cluster > Nodes > Pending*.
+. Select the node, and select *Add*.
++
+NOTE: It might take up to 15 minutes for the node to get added and be displayed under *Nodes > Active*.
+
+. Select *Drives*.
+. From the Available list, add the drives.
+. Perform these steps for all the storage nodes you reinstalled.
+
+|===
+. Verify that the volumes and datastores are up and accessible.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
