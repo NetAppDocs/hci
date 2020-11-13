@@ -1,0 +1,30 @@
+---
+sidebar: docs_sidebar
+permalink: docs/concept_hci_volume_access_groups.html
+summary: Learn about volume access groups and how you can use them to access and manage volumes.
+keywords: netapp, hci, storage volume, solidfire volume, element volume, persistent volume, access group
+---
+
+= Volume access groups
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+A volume access group is a collection of volumes that users can access using either iSCSI or Fibre Channel initiators.
+
+By creating and using volume access groups, you can control access to a set of volumes. When you associate a set of volumes and a set of initiators with a volume access group, the access group grants those initiators access to that set of volumes.
+
+Volume access groups have the following limits:
+
+* A maximum of 64 IQNs or WWPNs are allowed in an access group.
+* An access group can be made up of a maximum of 2000 volumes.
+* An IQN or WWPN can belong to only one access group.
+* A single volume can belong to a maximum of four access groups.
+
+== Find more information
+* link:task_hcc_manage_vol_access_groups.html[Manage volume access groups^]
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
