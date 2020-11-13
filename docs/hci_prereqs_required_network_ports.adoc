@@ -57,33 +57,33 @@ All ports in the table are TCP unless stated otherwise.
 |3260
 |Client iSCSI communications
 
-|Compute node BMC
+|Compute node BMC/IPMI
 |Management node
 |111 TCP/UDP
 |NetApp Hybrid Cloud Control API communication
 
-|Compute node BMC
+|Compute node BMC/IPMI
 |Management node
 |445
 |NetApp Hybrid Cloud Control API communication
 
-|Compute node BMC
+|Compute node BMC/IPMI
 |Management node
 |2049 TCP/UDP
 |NetApp Hybrid Cloud Control API communication
 
-|Compute node BMC
+|Compute node BMC/IPMI
 |Management node
 |137-138 UDP
 |NetApp Hybrid Cloud Control API communication
 
 |Management node
-|Compute node BMC
+|Compute node BMC/IPMI
 |139
 |NetApp Hybrid Cloud Control API communication
 
 |Management node
-|Compute node BMC
+|Compute node BMC/IPMI
 |443
 |NetApp Hybrid Cloud Control HTTPS communication
 
