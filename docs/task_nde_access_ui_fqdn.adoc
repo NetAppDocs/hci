@@ -19,25 +19,33 @@ NetApp HCI with Element 12.2 or later enables you to access storage cluster web 
 
 .What you'll need
 * This feature requires Element 12.2 or later and management services version 2.15 or later.
+* To use REST APIs, you must have deployed a management node running version 11.5 or later.
 
 .Steps
 
-. Create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, inserting the cluster MVIP FQDN for the preference value:
+. Ensure that the Element storage nodes and the management node have DNS configured correctly for the network environment so that FQDNs in the environment can be resolved. To set DNS, go to the per-node UI for storage nodes and to the management node, then select *Network Settings* > *Management Network*.
+.. Per-node UI for storage nodes: `https://<storage_node_management_IP>:442`
+.. Per-node UI for the management node: `https://<management_node_IP>:442`
+. Access the Element API and create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, inserting the cluster MVIP FQDN for the preference value:
 +
 * Name: `mvip_fqdn`
 * Value: <Fully Qualified Domain Name for the Cluster MVIP>
 +
+For example, where the FQDN is `storagecluster.my.org`:
++
 ----
-https://<mvip>/json-rpc/12.0?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=<fqdn>
+https://<Cluster_MVIP>/json-rpc/12.2?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=storagecluster.my.org
 ----
-
-. Change the management node settings using the management node REST API:
-.. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example: `https://[management node IP]/mnode/2/`
-.. Click *Authorize* or any lock icon and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
-... Close the window.
+. Change the management node settings using the REST API on the management node:
+.. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example:
++
+----
+https://[management node IP]/mnode/2/
+----
+.. Click *Authorize* or any lock icon and enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Click *Authorize* to begin a session and then close the window.
+.. From the server list, select `mnode2`.
 .. Click *GET /settings*.
 .. Click *Try it out*.
 .. Click *Execute*.
@@ -47,3 +55,7 @@ https://<mvip>/json-rpc/12.0?method=CreateClusterInterfacePreference&name=mvip_f
 .. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter.
 .. Enter any proxy setting values you recorded earlier in the remaining parameters in the request body. If you leave the proxy parameters empty or do not include them in the request body, existing proxy settings will be removed.
 .. Click *Execute*.
+
+[discrete]
+== Find more information
+* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-93942724-1C4C-4F3D-B352-89498F7722ED.html[CreateClusterInterfacePreference API information in the SolidFire and Element Documentation Center^]
