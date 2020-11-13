@@ -40,9 +40,10 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses.
 
-* link:../media/compute_firmware_bundle_2.27_notices.pdf[Notice for Compute Firmware Bundle 2.27]
-* link:../media/compute_iso_notice.pdf[Notice for compute firmware ISO]
-* link:../media/H610S_BMC_notice.pdf[Notice for H610S BMC]
+* link:../media/compute_firmware_bundle_2.27_notices.pdf[Notice for Compute Firmware Bundle 2.27^]
+* link:../media/compute_iso_notice.pdf[Notice for compute firmware ISO^]
+* link:../media/H610S_BMC_notice.pdf[Notice for H610S BMC^]
+* link:../media/2.16_notice.pdf[Notice for Management Services 2.16^]
 * link:../media/mgmt_svcs_2.14_notice.pdf[Notice for Management Services 2.14^]
 * link:../media/2.13_notice.pdf[Notice for Management Services 2.13^]
 * link:../media/mgmt_svcs2.11_notice.pdf[Notice for Management Services 2.11^]
