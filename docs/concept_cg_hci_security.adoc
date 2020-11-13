@@ -51,7 +51,7 @@ You can pair multi-factor authentication with common SAML 2.0 compatible identit
 
 To configure MFA, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-B1C8D8E2-CE95-41FD-9A3E-A0C424EC84F3.html[Enabling multi-factor authentication] in the SolidFire and Element Documentation Center.
 
-== FIPS 140-2 HTTPS and data at rest encryption
+== FIPS 140-2 for HTTPS and data at rest encryption
 
 NetApp SolidFire storage clusters and NetApp HCI systems support encryption that complies with the Federal Information Processing Standard (FIPS) 140-2 requirements for cryptographic modules. You can enable FIPS 140-2 compliance on your NetApp HCI or SolidFire cluster for both HTTPS communications and drive encryption.
 
