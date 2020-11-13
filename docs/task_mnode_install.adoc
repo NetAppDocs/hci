@@ -39,6 +39,8 @@ NOTE: If you need to IPv6 support, you can use the management node 11.1.
 | OpenStack | .iso
 |===
 
+* (Management node 12.0 and 12.2 with proxy server) You have updated NetApp Hybrid Cloud Control to management services version 2.16 before configuring a proxy server.
+
 .About this task
 The Element 12.2 management node is an optional upgrade. It is not required for existing deployments.
 
@@ -68,10 +70,7 @@ NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/do
 .. Create a new 64-bit virtual machine from your hypervisor with the following configuration:
 +
 * Six virtual CPUs
-* 12GB RAM for most configurations or 24GB RAM for Element 12.2 configurations.
-+
-NOTE: For Element 12.2 configurations, the increased provisioned memory capacity accommodates management services upgrades and is  not used in normal operation.
-
+* 24GB RAM
 * 400GB virtual disk, thin provisioned
 * One virtual network interface with internet access and access to the storage MVIP.
 * (Optional for SolidFire all-flash storage) One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
