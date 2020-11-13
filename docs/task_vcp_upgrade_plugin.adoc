@@ -80,7 +80,7 @@ NOTE: If the vCenter Plug-in icons are not visible, see Element Plug-in for vCen
 +
 You should see the following version details or details of a more recent version:
 ----
-NetApp Element Plug-in Version: 4.6.0
+NetApp Element Plug-in Version: 4.6
 NetApp Element Plug-in Build Number: 29
 ----
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
