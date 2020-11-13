@@ -78,19 +78,20 @@ https://[management node IP]/inventory/1/
 .. Click *Execute*.
 .. From the response, copy and save the node asset id (`id`), BMC IP address (`bmcAddress`), and node serial number (`chassisSerialNumber`) for use in a later step.
 +
+[subs=+quotes]
 ----
 "nodes": [
   {
     "bmcDetails": {
-      "bmcAddress": "10.117.1.111",
+      *"bmcAddress": "10.117.1.111",*
       "credentialsAvailable": false,
       "credentialsValidated": false
     },
-    "chassisSerialNumber": "221111019323",
+    *"chassisSerialNumber": "221111019323",*
     "chassisSlot": "C",
     "hardwareId": null,
     "hardwareTag": "00000000-0000-0000-0000-ac1f6ab4ecf6",
-    "id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",
+    *"id": "8cd91e3c-1b1e-1111-b00a-4c9c4900b000",*
 ----
 
 . Open the hardware service REST API UI on the management node:

@@ -5,7 +5,7 @@ summary: You can view storage and compute resources on the NetApp Hybrid Cloud C
 keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, storage performance, utilization, capacity
 ---
 
-= Monitor storage and compute resources with the HCC Dashboard
+= Monitor storage and compute resources on the Hybrid Cloud Control Dashboard
 
 :hardbreaks:
 :nofooter:
@@ -14,9 +14,9 @@ keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, 
 :imagesdir: ../media/
 
 [.lead]
-With the NetApp Hybrid Control (HCC) Dashboard, you can view all your storage and compute resources at a glance. Additionally, you can monitor storage capacity, storage performance, and compute utilization.
+With the NetApp Hybrid Cloud Control Dashboard, you can view all your storage and compute resources at a glance. Additionally, you can monitor storage capacity, storage performance, and compute utilization.
 
-Only compute nodes that are managed and clusters with at least one managed node in H-series hardware appear on the HCC Dashboard.
+Only compute nodes that are managed and clusters with at least one managed node in H-series hardware appear on the Hybrid Cloud Control Dashboard.
 
 *	<<Access the NetApp HCC Dashboard>>
 * <<Monitor storage resources>>
@@ -34,12 +34,12 @@ Only compute nodes that are managed and clusters with at least one managed node 
 https://[management node IP address]
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
-. View the HCC Dashboard.
+. View the Hybrid Cloud Control Dashboard.
 +
 image::hcc_dashboard_all.png[HCC Dashboard]
 
 
-TIP: You might see some or all these panes, depending on your installation. For example, for storage-only installations, the HCC Dashboard shows only the Storage pane, the Storage Capacity pane, and the Storage Performance pane.
+TIP: You might see some or all these panes, depending on your installation. For example, for storage-only installations, the Hybrid Cloud Control Dashboard shows only the Storage pane, the Storage Capacity pane, and the Storage Performance pane.
 
 == Monitor storage resources
 Use the *Storage* pane to see your total storage environment. You can monitor the number of storage clusters, storage nodes, and total volumes.
@@ -104,7 +104,7 @@ image::hcc_dashboard_storage_perform_throughput.png[Storage Performance > Throug
 +
 image::hcc_dashboard_storage_perform_utlization.png[Storage Performance > Utilization tab]
 
-. For further analysis, look at storage performance by using the Element Plug-in for vCenter Server.
+. For further analysis, look at storage performance by using the NetApp Element Plug-in for vCenter Server.
 +
 http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-180/GUID-6CF7C136-BF9C-453A-B9F7-6B67549F4F70.html[Performance shown in the NetApp Element Plug-in for vCenter Server].
 

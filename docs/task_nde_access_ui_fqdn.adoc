@@ -26,6 +26,11 @@ NetApp HCI with Element 12.2 or later enables you to access storage cluster web 
 +
 * Name: `mvip_fqdn`
 * Value: <Fully Qualified Domain Name for the Cluster MVIP>
++
+----
+https://<mvip>/json-rpc/12.0?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=<fqdn>
+----
+
 . Change the management node settings using the management node REST API:
 .. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example: `https://[management node IP]/mnode/2/`
 .. Click *Authorize* or any lock icon and complete the following:
