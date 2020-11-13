@@ -21,7 +21,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 .What you'll need
 
-* *Compute drivers*: You have upgraded your compute node drivers.
+* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] for driver and firmware compatibility information.
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Minimum BMC and BIOS versions*: The node you intend to upgrade using NetApp Hybrid Cloud Control meets the following minimum requirements:
@@ -59,7 +59,7 @@ NOTE: A Redfish license is required for H300E, H500E, and H700E compute nodes to
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
 
 * *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
-* *BMC credentials*: Update your BMC credentials for your node using either the NetApp Hybrid Cloud Control link:task_hcc_edit_bmc_info.html#use-netapp-hybrid-cloud-control-to-edit-bmc-information[UI] or link:task_hcc_edit_bmc_info.html#use-the-rest-api-to-edit-bmc-information[API] methods. Updating BMC information prior to upgrade refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
+* *BMC credentials*: Update the credentials NetApp Hybrid Cloud Control uses to connect to the compute node BMC. You can do this using either the NetApp Hybrid Cloud Control link:task_hcc_edit_bmc_info.html#use-netapp-hybrid-cloud-control-to-edit-bmc-information[UI] or link:task_hcc_edit_bmc_info.html#use-the-rest-api-to-edit-bmc-information[API]. Updating BMC information prior to upgrade refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
 * *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
@@ -264,6 +264,7 @@ https://[management node IP]/inventory/1/
 .. Click *Execute*.
 .. From the response, copy and save the cluster controller ID (`"controllerId"`)and node hardware ID (`"hardwareId"`) for use in a later step:
 +
+[subs=+quotes]
 ----
 "compute": {
   "errors": [],
@@ -271,9 +272,10 @@ https://[management node IP]/inventory/1/
     "clusters": [
       {
         "clusterId": "Test-1B",
-        "controllerId": "a1b23456-c1d2-11e1-1234-a12bcdef123a",
+        *"controllerId": "a1b23456-c1d2-11e1-1234-a12bcdef123a",*
 ----
 +
+[subs=+quotes]
 ----
 "nodes": [
   {
@@ -284,7 +286,7 @@ https://[management node IP]/inventory/1/
     },
     "chassisSerialNumber": "111930011231",
     "chassisSlot": "D",
-    "hardwareId": "123a4567-01b1-1243-a12b-11ab11ab0a15",
+    *"hardwareId": "123a4567-01b1-1243-a12b-11ab11ab0a15",*
     "hardwareTag": "00000000-0000-0000-0000-ab1c2de34f5g",
     "id": "e1111d10-1a1a-12d7-1a23-ab1cde23456f",
     "model": "H410C",

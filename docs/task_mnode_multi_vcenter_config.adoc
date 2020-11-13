@@ -1,0 +1,58 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_multi_vcenter_config.html
+summary: You can configure the NetApp Hybrid Cloud Control to use multiple vCenters using the REST API UI.
+keywords: netapp, mnode, management node, multi-vcenter, hci
+---
+
+= Configure NetApp Hybrid Cloud Control for multiple vCenters
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can configure NetApp Hybrid Cloud Control to manage assets from two or more vCenters that are not using Linked Mode.
+
+You should use this process after your initial installation when you need to add assets for a recently scaled installation or when new assets were not added automatically to your configuration. Use these APIs to add assets that are recent additions to your installation.
+
+.What you'll need
+* Your cluster version is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
+
+.Steps
+. link:task_mnode_add_assets.html[Add new vCenters as controller assets] to the management node configuration.
+. link:task_mnode_add_assets.html[Add new compute nodes as compute assets] to the management node configuration.
++
+NOTE: You might need to link:task_hcc_edit_bmc_info.html[change BMC credentials for compute nodes] to resolve a `Hardware ID not available` or `Unable to Detect` error indicated in NetApp Hybrid Cloud Control.
+
+. Refresh the inventory service API on the management node:
++
+----
+https://[management node IP]/inventory/1/
+----
++
+NOTE: As an alternative, you can wait 15 minutes for the inventory to update in NetApp Hybrid Cloud Control UI.
+
+.. Click *Authorize* and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as `mnode-client`.
+... Click *Authorize* to begin a session.
+... Close the window.
+.. From the REST API UI, click *GET ​/installations*.
+.. Click *Try it out*.
+.. Click *Execute*.
+.. From the response, copy the installation asset ID (`"id"`).
+.. From the REST API UI, click *GET /installations/{id}*.
+.. Click *Try it out*.
+.. Set refresh to `True`.
+.. Paste the installation asset ID into the *id* field.
+.. Click *Execute*.
+. Refresh the NetApp Hybrid Cloud Control browser to see the changes.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
