@@ -18,10 +18,9 @@ For H-series compute nodes, you can upgrade the firmware for hardware components
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
-
 .What you'll need
 
-* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] for driver and firmware compatibility information.
+* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)] for driver and firmware compatibility information, and check the link:rn_relatedrn.html[latest compute node firmware release notes] for important late-breaking firmware and driver details.
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Minimum BMC and BIOS versions*: The node you intend to upgrade using NetApp Hybrid Cloud Control meets the following minimum requirements:
