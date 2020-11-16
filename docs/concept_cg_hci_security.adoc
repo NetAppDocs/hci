@@ -57,8 +57,6 @@ NetApp SolidFire storage clusters and NetApp HCI systems support encryption that
 
 When you enable FIPS 140-2 operating mode on your cluster, the cluster activates the NetApp Cryptographic Security Module (NCSM) and leverages FIPS 140-2 Level 1 certified encryption for all communication via HTTPS to the NetApp Element UI and API. You use the `EnableFeature` Element API with the `fips` parameter to enable FIPS 140-2 HTTPS encryption. On storage clusters with FIPS-compatible hardware, you can also enable FIPS drive encryption for data at rest using the `EnableFeature` Element API with the `FipsDrives` parameter.
 
-For more information about preparing a new storage cluster for FIPS 140-2 encryption, see
-http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-4645FF0D-3FCD-4440-91A9-A47F7BCC5C50.html[Creating a cluster supporting FIPS drives].
+For more information about preparing a new storage cluster for FIPS 140-2 encryption, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-4645FF0D-3FCD-4440-91A9-A47F7BCC5C50.html[Creating a cluster supporting FIPS drives].
 
-For more information about enabling FIPS 140-2 on an existing, prepared cluster, see
-http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-F2726BCA-D59C-47EE-B86C-DC465C96563B.html[The EnableFeature Element API].
+For more information about enabling FIPS 140-2 on an existing, prepared cluster, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-F2726BCA-D59C-47EE-B86C-DC465C96563B.html[The EnableFeature Element API].
