@@ -57,7 +57,7 @@ https://$mnode_IP:442/json-rpc/10.0 \
                                    "status" : "Up"
                                    }
                           },
-              "cluster": {
+               "cluster": {
                          "name": "$mnode_host_name"
                          }
              },
@@ -92,10 +92,10 @@ https://$mnode_IP:442/json-rpc/10.0 \
                                    "mtu" : "9000",
                                    "netmask" : "$subnet_mask",
                                    "status" : "Up",
-				                           "virtualNetworkTag" : "$vlan_id"
+                                   "virtualNetworkTag" : "$vlan_id"
                                    }
                           },
-              "cluster": {
+               "cluster": {
                          "name": "$mnode_host_name",
                          "cipi": "$eth1.$vlan_id",
                          "sipi": "$eth1.$vlan_id"
