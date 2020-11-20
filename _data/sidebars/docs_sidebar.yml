@@ -134,6 +134,10 @@ entries:
            url: /task_nde_access_hcc.html
   - title: Manage NetApp HCI
     entries:
+      - title: Update your credentials
+        entries:
+          - title: Update vCenter and ESXi credentials 
+            url: /task_hci_credentials_vcenter_esxi.html
       - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
         entries:
           - title: View resources on the Dashboard of NetApp Hybrid Cloud Control
