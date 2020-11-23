@@ -53,6 +53,28 @@ The following is a six-interface configuration with VMware vSphere Standard Swit
 
 |Management
 |vmk0
+|vmnic2 (Port A), vmnic3 (Port B)
+
+|iSCSI-A
+|vmk2
+|vmnic1 (Port E)
+
+|iSCSI-B
+|vmk3
+|vmnic5 (Port D)
+
+|vMotion
+|vmk1
+|vmnic4 (Port C), vmnic0 (Port F)
+|===
+
+The following is a two-interface configuration. This configuration is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
+
+|===
+|Network function |vmkernel |vmnic (physical interface)
+
+|Management
+|vmk0
 |vmnic1 (Port D), vmnic5 (Port E)
 
 |iSCSI-A
