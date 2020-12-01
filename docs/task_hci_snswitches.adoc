@@ -43,7 +43,7 @@ image::sn2010_rear.png[SN2010 and SN2100 rear,600,400]
 .SN2700 switch front and rear
 [#img-sn2700]
 [caption="Figure 4: ",]
-image::sn2700.png[SN2700 front and rear,600,400]
+image::SN2700.png[SN2700 front and rear,600,400]
 
 .About this task
 You should perform the steps in this procedure in the order below. This is to ensure that the downtime is minimal and the replacement switch is pre-configured before the switch replacement.
@@ -72,7 +72,7 @@ Perform the following steps before you replace the faulty switch.
 .. The passwords for administration access.
 
 == Create the configuration file
-You can configure a switch by using the configuration files you create. Choose from one of the following options to create the configuration file for the faulty switch.
+You can configure a switch by using the configuration files you create. Choose from one of the following options to create the configuration file for the switch.
 
 [%header,cols=2*]
 |===
