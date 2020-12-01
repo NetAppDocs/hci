@@ -36,7 +36,7 @@ NetApp HCI Witness Nodes are virtual machines that run on compute nodes in paral
 
 TIP: Learn more about link:hci_prereqs_witness_nodes.html[Witness Node resource requirements^] and link:hci_prereqs_ip_address.html[Witness Node IP address requirements^].
 
-NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure. When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see *Redeploying Witness Nodes for two and three-node storage clusters* link:task_hci_h410crepl.html[here^].
+NOTE: In a two-node storage cluster, a minimum of two Witness Nodes are deployed for redundancy in the event of a Witness Node failure. When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the *Redeploy Witness Nodes for two and three-node storage clusters* section link:task_hci_h410crepl.html[here^].
 
 == Find more information
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
