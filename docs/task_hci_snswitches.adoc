@@ -1,0 +1,251 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_snswitches.html
+summary: You can replace a faulty SN2000 series switch non-disruptively by following the best practices and steps provided by NetApp.
+keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
+---
+
+= Replace SN2010, SN2100, and SN2700 switches
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can replace a faulty SN2000 series switch non-disruptively by following the best practices and steps provided by NetApp.
+
+.What you'll need
+
+* Ensure that Putty is installed on the laptop and that you capture the output. See this video to learn how to configure Putty to capture the output session.
+
+video::2LZfWH8HffA[youtube]
+* Ensure that you run NetApp Config Advisor before and after the replacement. This can help identify other problems before the maintenance starts. Download and install Config Advisor, and access the Quick Start Guide from link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/download[here (login required)^].
+* Obtain a power cable, the basic hand tools, and labels.
+* Ensure that you have planned for a two to four-hour maintenance window.
+* Familiarize yourself with the switch ports below:
+
+.SN2010 switch faceplate and ports
+[#img-sn2010]
+[caption="Figure 1: ",]
+image::sn2010.png[SN2010,600,400]
+
+.SN2100 switch faceplate and ports
+[#img-sn2100]
+[caption="Figure 2: ",]
+image::sn2100.png[SN2100,600,400]
+
+.SN2010 and SN2100 switch rear
+[#img-sn2010/2100]
+[caption="Figure 3: ",]
+image::sn2010_rear.png[SN2010 and SN2100 rear,600,400]
+
+.SN2700 switch front and rear
+[#img-sn2700]
+[caption="Figure 4: ",]
+image::sn2700.png[SN2700 front and rear,600,400]
+
+.About this task
+You should perform the steps in this procedure in the order below. This is to ensure that the downtime is minimal and the replacement switch is pre-configured before the switch replacement.
+
+NOTE: Contact NetApp Support if you need guidance.
+
+Here is an overview of the steps in the procedure:
+<<Prepare to replace the faulty switch>>
+<<Create the configuration file>>
+<<Remove the faulty switch and install the replacement>>
+<<Verify the operating system version on the switch>>
+<<Configure the replacement switch>>
+<<Complete the replacement>>
+
+== Prepare to replace the faulty switch
+Perform the following steps before you replace the faulty switch.
+
+.Steps
+
+. Verify that the replacement switch is the same model as the faulty switch.
+. Label all the cables connected to the faulty switch.
+. Identify the external file server where the switch configuration files are saved.
+. Ensure that you have obtained the following information:
+.. The interface used for the initial configuration: RJ-45 port or the Serial Terminal Interface.
+.. The credentials needed for switch access: IP address of the management port of the non-faulty switch and the faulty switch.
+.. The passwords for administration access.
+
+== Create the configuration file
+You can configure a switch by using the configuration files you create. Choose from one of the following options to create the configuration file for the faulty switch.
+
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|Create the backup configuration file from the faulty switch
+a|
+. Connect to your switch remotely using SSH as shown in the following example:
++
+----
+ssh admin@<switch_IP_address
+----
+. Enter Configuration mode as shown in the following example:
++
+----
+switch > enable
+switch # configure terminal
+----
+. Find the available configuration files as shown in the following example:
++
+----
+switch (config) #
+switch (config) # show configuration files
+----
+. Save the active BIN configuration file to an external server:
++
+----
+switch (config) # configuration upload my-filename scp://myusername@my-server/path/to/my/<file>
+----
+
+|Create the backup configuration file by modifying the file from another switch
+a|
+. Connect to your switch remotely using SSH as shown in the following example:
++
+----
+ssh admin@<switch_IP_address
+----
+. Enter Configuration mode as shown in the following example:
++
+----
+switch > enable
+switch # configure terminal
+----
+. Upload a text-based configuration file from the switch to an external server as shown in the following example:
++
+----
+switch (config) #
+switch (config) # configuration text file my-filename upload scp://root@my-server/root/tmp/my-filename
+----
+. Modify the following fields in the text file to match the faulty switch:
++
+----
+## Network interface configuration
+##
+no interface mgmt0 dhcp
+   interface mgmt0 ip address XX.XXX.XX.XXX /22
+
+##
+## Other IP configuration
+##
+   hostname oldhostname
+----
+
+|===
+
+== Remove the faulty switch and install the replacement
+Perform the steps to remove the faulty switch and the install the replacement.
+
+.Steps
+
+. Locate the power cables on the faulty switch.
+. Label and unplug the power cables after the switch reboots.
+. Label and unplug all the cables from the faulty switch and secure them to prevent damage during switch replacement.
+. Remove the switch from the rack.
+. Install the replacement switch in the rack.
+. Connect the power cables and management port cables.
++
+NOTE: The switch automatically powers on when AC power is applied. There is no power button. It might take up to five minutes for the System Status LED to turn green.
+
+. Connect to the switch using the RJ-45 management port or the Serial Terminal Interface.
+
+== Verify the operating system version on the switch
+Verify the OS software version on the switch. The version on the faulty switch and the healthy switch should match.
+
+.Steps
+
+. Connect to your switch remotely using SSH.
+. Enter Configuration mode.
+. Run the `show version` command. See the following example:
++
+----
+SFPS-HCI-SW02-A (config) #show version
+Product name:      Onyx
+Product release:   3.7.1134
+Build ID:          #1-dev
+Build date:        2019-01-24 13:38:57
+Target arch:       x86_64
+Target hw:         x86_64
+Built by:          jenkins@e4f385ab3f49
+Version summary:   X86_64 3.7.1134 2019-01-24 13:38:57 x86_64
+
+Product model:     x86onie
+Host ID:           506B4B3238F8
+System serial num: MT1812X24570
+System UUID:       27fe4e7a-3277-11e8-8000-506b4b891c00
+
+Uptime:            307d 3h 6m 33.344s
+CPU load averages: 2.40 / 2.27 / 2.21
+Number of CPUs:    4
+System memory:     3525 MB used / 3840 MB free / 7365 MB total
+Swap:              0 MB used / 0 MB free / 0 MB total
+
+----
+. If the versions do not match, you should upgrade the OS. See the link:https://community.mellanox.com/s/article/howto-upgrade-switch-os-software-on-mellanox-switch-systems[Mellanox software Upgrade Guide^] for details.
+
+== Configure the replacement switch
+Perform the steps to configure the replacement switch. See link:https://docs.mellanox.com/display/MLNXOSv381000/Configuration+Management[Mellanox configuration management^] for details.
+
+.Steps
+. Choose from the option that applies to you:
+
+[%header,cols=2*]
+|===
+|Option
+|Steps
+
+|From the BIN configuration file
+a|
+. Fetch the BIN configuration file as shown in the following example:
++
+----
+switch (config) # configuration fetch scp://myusername@my-server/path/to/my/<file>
+----
+. Load the BIN configuration file you fetched in the previous step as shown in the following example:
++
+----
+switch (config) # configuration switch-to my-filename
+----
+. Type `yes` to confirm the reboot.
+
+|From the text file
+a|
+. Reset the switch to factory default:
++
+----
+switch (config) # reset factory keep-basic
+----
+. Apply the text-based configuration file:
++
+----
+switch (config) # configuration text file my-filename apply
+----
+. Upload a text-based configuration file from the switch to an external server as shown in the following example:
++
+----
+switch (config) #
+switch (config) # configuration text file my-filename upload scp://root@my-server/root/tmp/my-filename
+----
++
+NOTE: A reboot is not required when you apply the text file.
+
+|===
+
+== Complete the replacement
+Perform the steps to complete the replacement procedure.
+
+.Steps
+. Insert the cables by using the labels to guide you.
+. Run NetApp Config Advisor. Access the Quick Start Guide from link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/download[here (login required)^].
+. Verify your storage environment.
+. Return the faulty switch to NetApp.
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
