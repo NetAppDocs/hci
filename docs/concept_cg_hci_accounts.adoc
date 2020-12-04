@@ -25,7 +25,7 @@ When you create a volume, it is assigned to an account. If you have created a vi
 Here are some additional considerations:
 
 * The account contains the CHAP authentication required to access the volumes assigned to it.
-* An account can have up to two thousand volumes assigned to it, but a volume can belong to only one account.
+* An account can have up to 2000 volumes assigned to it, but a volume can belong to only one account.
 * User accounts can be managed from the NetApp Element Management extension point.
 
 Using NetApp Hybrid Cloud Control, you can create and manage the following types of accounts:
@@ -33,7 +33,6 @@ Using NetApp Hybrid Cloud Control, you can create and manage the following types
 * Administrator user accounts for the storage cluster
 * Authoritative user accounts
 * Volume accounts, specific only to the storage cluster on which they were created.
-
 
 == Storage cluster administrator accounts
 

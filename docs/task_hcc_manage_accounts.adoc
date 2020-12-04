@@ -14,11 +14,7 @@ keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybr
 :imagesdir: ../media/
 
 [.lead]
-In SolidFire storage systems, authoritative cluster users can be created to enable login access to NetApp Hybrid Cloud Control depending on the permissions you wish to grant "Administrator" or "Read-only" users. In addition to cluster users, there are also volume accounts, which enable clients to connect to volumes on a storage node. 
-
-When you create a volume, it is assigned to a specific volume account.
-
-An account can have up to two-thousand volumes assigned to it, but a volume can belong to only one account.
+In Element-based storage systems, authoritative cluster users can be created to enable login access to NetApp Hybrid Cloud Control depending on the permissions you want to grant "Administrator" or "Read-only" users. In addition to cluster users, there are also volume accounts, which enable clients to connect to volumes on a storage node. 
 
 Manage the following types of accounts:
 
@@ -27,8 +23,7 @@ Manage the following types of accounts:
 
 == Manage authoritative cluster accounts
 
-Authoritative user accounts are managed from the top right menu User Management option in NetApp Hybrid Cloud Control. These types of accounts enable you to authenticate against any storage asset associated with a NetApp Hybrid Cloud Control instance of nodes and clusters. With this account, you can manage volumes, accounts, access groups, and more across all clusters.
-
+link:concept_cg_hci_accounts.html#authoritative-user-accounts[Authoritative user accounts] are managed from the top right menu User Management option in NetApp Hybrid Cloud Control. These types of accounts enable you to authenticate against any storage asset associated with a NetApp Hybrid Cloud Control instance of nodes and clusters. With this account, you can manage volumes, accounts, access groups, and more across all clusters.
 
 === Create an authoritative cluster account
 You can create an account by using NetApp Hybrid Cloud Control.
@@ -36,7 +31,6 @@ You can create an account by using NetApp Hybrid Cloud Control.
 This account can be used to log in to the Hybrid Cloud Control, the per-node UI for the cluster, and the storage cluster in NetApp Element software.
 
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *User Management*.
 . Select *Create User*.
@@ -55,15 +49,12 @@ TIP: To view the permissions from NetApp Element software, click *Show legacy pe
 . Check the box indicating that "I have read and accept the NetApp End User License Agreement."
 . Click *Create User*.
 
-
 === Edit an authoritative cluster account
 You can change the permissions or password on a user account by using NetApp Hybrid Cloud Control.
 
 //You can edit volume attributes such as QoS values, volume size, and the unit of measurement by which byte values are calculated. You can also modify account access for replication usage or to restrict access to the volume.
 
-
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the icon in the top right and select *User Management*.
 . Optionally filter the list of user accounts by selecting *Cluster*, *LDAP*, or *Idp*.
@@ -73,27 +64,28 @@ If you configured users on the storage cluster with LDAP, those accounts show a 
 . In the *Actions* column in the table, expand the  menu for the account and select *Edit*.
 . Make changes as needed.
 . Select *Save*.
+. Log out of NetApp Hybrid Cloud Control.
+. link:task_mnode_manage_storage_cluster_assets.html#edit-the-stored-credentials-for-a-storage-cluster-asset[Update the credentials] for the authoritative cluster asset using the NetApp Hybrid Cloud Control API.
++
+NOTE: It might take the NetApp Hybrid Cloud Control UI up to 15 minutes to refresh the inventory. To manually refresh inventory, access the REST API UI inventory service `https://[management node IP]/inventory/1/` and run `GET /installations​/{id}` for the cluster.
 
+. Log into NetApp Hybrid Cloud Control.
 
 === Delete an authoritative user account
 You can delete one or more accounts when it is no longer needed.
 
 You cannot delete the primary administrator user account for the authoritative cluster.
 
-
 .Steps
-
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the icon in the top right and select *User Management*.
 . In the *Actions* column in the Users table, expand the menu for the account and select *Delete*.
 . Confirm the deletion by selecting *Yes*.
 
-
 == Manage volume accounts
-Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table. These accounts are specific only to the storage cluster on which they were created. These types of accounts enable you to set permissions on volumes across the network, but have no effect outside of those volumes.
+link:concept_cg_hci_accounts.html#volume-accounts[Volume accounts] are managed within the NetApp Hybrid Cloud Control Volumes table. These accounts are specific only to the storage cluster on which they were created. These types of accounts enable you to set permissions on volumes across the network, but have no effect outside of those volumes.
 
 A volume account contains the CHAP authentication required to access the volumes assigned to it.
-
 
 === Create a volume account
 Create an account specific to this volume.
@@ -125,7 +117,6 @@ IMPORTANT: Deleting or locking an account associated with the management node re
 . In the *Actions* column in the table, expand the menu for the account and select *Edit*.
 . Make changes as needed.
 . Confirm the changes by selecting *Yes*.
-
 
 === Delete a volume account
 Delete an account that you no longer need.
