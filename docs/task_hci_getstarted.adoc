@@ -92,6 +92,7 @@ CAUTION: For precautions and details, see link:task_hci_installhw.html[Install H
 
 . Install the rails and the chassis.
 . Install nodes in the chassis and install drives for storage nodes. (Applies only if you are installing H410C and H410S in a NetApp H-series chassis.)
+. Install the switches.
 . Cable the compute node.
 . Cable the storage node.
 . Connect the power cords.
