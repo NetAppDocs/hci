@@ -136,7 +136,7 @@ entries:
     entries:
       - title: Update your credentials
         entries:
-          - title: Update vCenter and ESXi credentials 
+          - title: Update vCenter and ESXi credentials
             url: /task_hci_credentials_vcenter_esxi.html
       - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
         entries:
@@ -295,5 +295,7 @@ entries:
        url: /task_hci_h610srepl.html
      - title: Replace power supply units
        url: /task_hci_psurepl.html
+     - title: Replace SN2010, SN2100, and SN2700 switchess
+       url: /task_hci_snswitches.html
   - title: Legal notices
     url: /reference_notices_hci.html
