@@ -274,6 +274,7 @@ entries:
      - title: Remove Witness Nodes after expanding cluster
        url: /task_hci_removewn.html
   - title: Use Rancher on NetApp HCI
+    url: /concept_rancher_product_overview.html
     entries:
      - title: Rancher on NetApp HCI overview
        url: /concept_rancher_product_overview.html
