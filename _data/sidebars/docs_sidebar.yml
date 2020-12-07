@@ -274,14 +274,19 @@ entries:
      - title: Remove Witness Nodes after expanding cluster
        url: /task_hci_removewn.html
   - title: Use Rancher on NetApp HCI
-    url: /concept_rancher_product_overview.html
     entries:
      - title: Rancher on NetApp HCI overview
        url: /concept_rancher_product_overview.html
      - title: Concepts
        url: /concept_rancher_concepts_overview.html
      - title: Requirements for Rancher on NetApp HCI
-       url: /concept_rancher_requirements_overview.html
+       entries:
+        - title: Requirements for Rancher on NetApp HCI overview
+          url: /rancher_prereqs_overview.html
+        - title: Port and URL requirements
+          url: /concept_rancher_port_requirements.html
+        - title: vSphere requirements
+          url: /concept_rancher_vsphere_requirements.html
      - title: Deploy Rancher on NetApp HCI
        url: /concept_rancher_deploy_overview.html
      - title: Post deployment tasks
