@@ -14,3 +14,14 @@ keywords: netapp, hci, Rancher, install, installation, requirements
 
 [.lead]
 There are things you need to know and preparations you need to make so that you can successfully install Rancher on NetApp HCI. Ensure that you implement the following requirements and recommendations before you install Rancher on NetApp HCI.
+
+Review the standard Rancher installation https://rancher.com/docs/rancher/v2.x/en/installation/requirements/[requirements^], and ensure that they are met alongside these Rancher on NetApp HCI requirements.
+
+== VMware vSphere requirements
+
+Ensure that your vSphere instance meets the following requirements before installing Rancher on NetApp HCI.
+
+* Setup for anti-affinity rules for the management cluster
+* Must have a vSphere Enterprise Plus license applied to the vSphere server instance
+* Recommendation to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS configuration (and mention the licensing implications -> enterprise plus).  If you use VSS you are restricted to single host
+* 

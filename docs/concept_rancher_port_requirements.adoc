@@ -13,10 +13,41 @@ keywords: netapp, hci, Rancher, install, URL, ports, requirements
 :imagesdir: ../media/
 
 [.lead]
-Rancher on NetApp HCI needs to be able to access the following IP ports and URLs after installation.
+The following ports and URLs must be open to and from nodes running Rancher server. In addition to this list, ensure that the list of ports in the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/[Rancher documentation^] are open as well.
+
+== Required URLs
+The following URLs should be accessible from Rancher server:
 
 |===
 |URL |Description
+
+|https://charts.jetstack.io/
+|No description - 404
+
+|https://releases.rancher.com/server-charts/stable
+|No description - empty XML
+
+|https://entropy.ubuntu.com/
+|Ubuntu entropy service for random number generation
+
+|https://raw.githubusercontent.com/vmware/cloud-init-vmware-guestinfo/v1.3.1/install.sh
+|VMware guest additions install script
+
+|https://download.docker.com/linux/ubuntu/gpg
+|Docker Ubuntu GPG public key
+
+|https://download.docker.com/linux/ubuntu
+|Docker download link
+
+|https://hub.docker.com/
+|Docker hub for NetApp Hybrid Cloud Control
+|===
+
+== Required ports
+The following ports should be accessible from Rancher server:
+
+|===
+|Port |Description
 
 |https://charts.jetstack.io/
 |No description - 404
