@@ -17,11 +17,12 @@ There are things you need to know and preparations you need to make so that you 
 
 Review the standard Rancher installation https://rancher.com/docs/rancher/v2.x/en/installation/requirements/[requirements^], and ensure that they are met alongside these Rancher on NetApp HCI requirements.
 
-== VMware vSphere requirements
-
-Ensure that your vSphere instance meets the following requirements before installing Rancher on NetApp HCI.
-
-* Setup for anti-affinity rules for the management cluster
-* Must have a vSphere Enterprise Plus license applied to the vSphere server instance
-* Recommendation to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS configuration (and mention the licensing implications -> enterprise plus).  If you use VSS you are restricted to single host
-* 
+* Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
+** Rancher Server requires 3 static IP addresses.
+** Each user cluster requires 1 static IP address.
+* Ensure that you have set up DNS records for each static IP address you need.
+* Create a DNS entry for the main Rancher URL that you will use to access the Rancher control plane.
+* Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
+* As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same portgroups, in the same way that you would ensure for regular VMs.
+* Ensure you deploy Rancher on NetApp HCI on a network that has management access.
