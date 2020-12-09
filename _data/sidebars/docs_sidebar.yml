@@ -290,7 +290,15 @@ entries:
      - title: Deploy Rancher on NetApp HCI
        url: /concept_rancher_deploy_overview.html
      - title: Post deployment tasks
-       url: /concept_rancher_post_deployment_overview.html
+       entries:
+        - title: Post deployment tasks overview
+          url: /concept_rancher_post_deployment_overview.html
+        - title: Configure load balancing
+          url: /task_rancher_load_balancing.html
+        - title: Configure resiliency
+          url: /task_rancher_resiliency.html
+        - title: Update Rancher on NetApp HCI
+          url: /task_rancher_update.html
      - title: Manage a Rancher on NetApp HCI deployment
        url: /concept_rancher_management_overview.html
      - title: Upgrade Rancher on NetApp HCI
