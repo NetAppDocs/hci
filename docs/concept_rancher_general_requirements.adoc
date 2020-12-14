@@ -16,6 +16,7 @@ keywords: netapp, hci, Rancher, install, general, requirements
 Before you install Rancher on NetApp HCI, ensure your environment and your NetApp HCI system meet these general requirements.
 
 * Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+* Ensure that your management node can use DNS to resolve the host name `nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
 ** Rancher Server requires 3 static IP addresses.
 ** Each user cluster requires 1 static IP address.

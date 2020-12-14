@@ -21,9 +21,6 @@ The following URLs should be accessible from the host where the Rancher control 
 |===
 |URL |Description
 
-|https://nip.io/
-|Wildcard DNS
-
 |https://charts.jetstack.io/
 |No description - 404
 
