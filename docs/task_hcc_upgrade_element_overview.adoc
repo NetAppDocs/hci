@@ -40,5 +40,5 @@ TIP: To view the number of storage and compute resources, look at the NetApp Hyb
 [discrete]
 == Find more information
 
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

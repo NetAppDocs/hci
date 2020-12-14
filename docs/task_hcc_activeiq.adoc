@@ -54,5 +54,5 @@ TIP: To view the number of storage and compute resources, look at the Hybrid Clo
 [discrete]
 == Find more information
 * https://help.monitoring.solidfire.com[NetApp SolidFire Active IQ Documentation^]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

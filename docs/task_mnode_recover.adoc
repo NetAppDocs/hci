@@ -144,5 +144,5 @@ NOTE: You can add the user name or allow the script to prompt you for the inform
 [discrete]
 == Find more Information
 * link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

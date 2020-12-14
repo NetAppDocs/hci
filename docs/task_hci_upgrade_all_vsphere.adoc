@@ -24,7 +24,7 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 +
 NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
 
-. https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-mg-vcp/GUID-9F20918F-19A3-4FA7-B58D-F8FF49716BF1.html[Register^] the Element Plug-in for vCenter Server again with vCenter.
+. https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#register-the-plug-in-with-vcenter[Register^] the Element Plug-in for vCenter Server again with vCenter.
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[Add clusters^] using the plug-in.
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure QoSSIOC settings^] using the plug-in.
 . https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#enabling-qossioc-automation-on-datastores[Enable QoSSIOC^] for all datastores controlled by the plug-in.
@@ -33,6 +33,6 @@ NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/medi
 [discrete]
 == Find more information
 
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster Technical Report^]
