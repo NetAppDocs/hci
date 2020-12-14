@@ -26,7 +26,7 @@ This task uses the REST API to remove the three virtual machines that were set u
 
 .Steps
 
-. Enter the management node IP address followed by /k8sdeployer/api/:
+. Enter the management node IP address followed by `/k8sdeployer/api/`:
 +
 ----
 https://[IP address]/k8sdeployer/api/
