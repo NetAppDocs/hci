@@ -506,5 +506,5 @@ CAUTION: During the powering on process, for approximately five minutes, the KVM
 [discrete]
 == Find more information
 
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
