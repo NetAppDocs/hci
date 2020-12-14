@@ -309,8 +309,6 @@ entries:
        entries:
         - title: Troubleshooting Rancher on NetApp HCI overview
           url: /concept_rancher_troubleshoot_overview.html
-        - title: Remove incorrect Rancher on NetApp HCI deployment
-          url: /task_rancher_remove_incorrect_deployment.html
   - title: Maintain H-series hardware
     entries:
      - title: H-series hardware maintenance overview
