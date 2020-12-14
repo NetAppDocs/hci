@@ -211,5 +211,5 @@ Upon success, the API returns an empty response.
 [discrete]
 == Find more information
 * link:concept_hci_clusters.html#authoritative-storage-clusters[Authoritative cluster]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

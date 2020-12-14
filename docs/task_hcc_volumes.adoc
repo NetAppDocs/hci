@@ -75,5 +75,5 @@ See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-u
 [discrete]
 == Find more information
 * https://docs.netapp.com/sfe-122/index.jsp[NetApp SolidFire and Element Documentation Center^]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

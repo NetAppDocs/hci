@@ -106,7 +106,7 @@ image::hcc_dashboard_storage_perform_utlization.png[Storage Performance > Utiliz
 
 . For further analysis, look at storage performance by using the NetApp Element Plug-in for vCenter Server.
 +
-http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-180/GUID-6CF7C136-BF9C-453A-B9F7-6B67549F4F70.html[Performance shown in the NetApp Element Plug-in for vCenter Server].
+https://docs.netapp.com/us-en/vcp/vcp_task_reports_volume_performance.html[Performance shown in the NetApp Element Plug-in for vCenter Server^].
 
 == Monitor compute utilization
 In addition to monitoring IOPS and throughput of your storage resources, you also might want to view the CPU and memory usage of your compute assets. The total IOPS that a node can provide is based on the physical characteristics of the node, for example, the number of CPUs, the CPU speed, and the amount of RAM.
@@ -122,11 +122,9 @@ image::hcc_dashboard_compute_util_cpu.png[Compute Utilization panes]
 ..	*CPU* tab: See the current average of CPU utilization on the compute cluster.
 ..	*Memory* tab: See the current average memory usage on the compute cluster.
 
-. For further analysis on compute information, look at these resources:
-.. http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-180/GUID-F602104D-D2FC-4664-835F-B3F308779F81.html[NetApp Element Plug-in for vCenter Server for cluster management details]
-.. https://activeiq.solidfire.com[NetApp SolidFire Active IQ for historical data]
+. For further analysis on compute information, see https://activeiq.solidfire.com[NetApp SolidFire Active IQ for historical data].
 
 [discrete]
 == Find more information
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
