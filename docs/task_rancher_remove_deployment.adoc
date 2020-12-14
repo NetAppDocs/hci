@@ -15,7 +15,7 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 
 [.lead]
 
-If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher URL), there is no way to correct the installation without redeploying. You will need to remove the Rancher on NetApp HCI instance using the REST API and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI.
+If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher URL), there is no way to correct the installation without redeploying. Follow these steps to remove the Rancher on NetApp HCI instance using the REST API.
 
 .What you'll need
 
@@ -46,4 +46,4 @@ NOTE:  If you get the `Auth Error TypeError: Failed to fetch` error message afte
 . In the request body text box, enter the Rancher server FQDN as the `serverURL` value.
 . Click *Execute*.
 +
-After several minutes, the Rancher server virtual machines should no longer be visible in the Hosts and Clusters list in vSphere Client.
+After several minutes, the Rancher server virtual machines should no longer be visible in the Hosts and Clusters list in vSphere Client. After removal, you can use NetApp Hybrid Cloud Control to redeploy Rancher on NetApp HCI.
