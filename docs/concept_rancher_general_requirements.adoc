@@ -21,7 +21,7 @@ Before you install Rancher on NetApp HCI, ensure your environment and your NetAp
 
 == Network requirements
 
-* Ensure you deploy Rancher on NetApp HCI on a network that has management access.
+* Ensure you deploy Rancher on NetApp HCI on a network that has management network access.
 * Ensure that your management node can use DNS to resolve the host name `nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
 ** Rancher Server requires 3 static IP addresses.
@@ -34,4 +34,4 @@ Before you install Rancher on NetApp HCI, ensure your environment and your NetAp
 * As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
 * Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
 
-NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher URL), there is no way to correct the installation without redeploying. You will need to remove the Rancher on NetApp HCI instance using the REST API and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See troubleshooting << URL NEEDED >> for more information.
+NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher URL), there is no way to correct the installation without redeploying. You will need to remove the Rancher on NetApp HCI instance using the REST API and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[troubleshooting^] for more information.
