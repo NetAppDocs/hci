@@ -19,7 +19,7 @@ If you accidentally deploy Rancher on NetApp HCI with incorrect information (suc
 
 .What you'll need
 
-* To use Rancher on NetApp HCI REST APIs, your storage cluster must be running NetApp Element software 12.2 or later and you must have deployed a management node running version 12.2 or later.
+To use Rancher on NetApp HCI REST APIs, your storage cluster must be running NetApp Element software 12.2 or later and you must have deployed a management node running version 12.2 or later.
 
 .About this task
 This task uses the REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
