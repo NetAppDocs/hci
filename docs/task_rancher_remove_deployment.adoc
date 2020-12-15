@@ -1,0 +1,49 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_remove_deployment.html
+summary: Learn how to remove an erroneous or incorrect Rancher on NetApp HCI deployment, so that you can redeploy.
+keywords: netapp, hci, api, REST, remove, Rancher, redeploy
+---
+
+= Remove an incorrect Rancher on NetApp HCI deployment
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+
+If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the installation without redeploying. Follow these steps to remove the Rancher on NetApp HCI instance using the REST API.
+
+.What you'll need
+
+To use Rancher on NetApp HCI REST APIs, your storage cluster must be running NetApp Element software 12.2 or later and you must have deployed a management node running version 12.2 or later.
+
+.About this task
+This task uses the REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
+
+.Steps
+
+. Enter the management node IP address followed by `/k8sdeployer/api/`:
++
+----
+https://[IP address]/k8sdeployer/api/
+----
+. Click *Authorize* or any lock icon and enter cluster admin credentials for permissions to use APIs.
+.. Enter the cluster user name and password.
+.. Select *Request body* from the type drop-down list if the value is not already selected.
+.. Enter the client ID as `mnode-client` if the value is not already populated.
+.. Do not enter a value for the client secret.
+.. Click *Authorize* to begin a session.
++
+NOTE:  If you get the `Auth Error TypeError: Failed to fetch` error message after you attempt to authorize, you might need to accept the SSL certificate for the MVIP of your cluster. Copy the IP address in the Token URL, paste the IP into another browser tab, and authorize again. If you attempt to run a command after the token expires, you get an `Error: UNAUTHORIZED` error. If you receive this response, authorize again.
+
+. Close the *Available authorizations* dialog box.
+. Click *POST/destroy*.
+. Click *Try it out*.
+. In the request body text box, enter the Rancher server FQDN as the `serverURL` value.
+. Click *Execute*.
++
+After several minutes, the Rancher server virtual machines should no longer be visible in the Hosts and Clusters list in vSphere Client. After removal, you can use NetApp Hybrid Cloud Control to redeploy Rancher on NetApp HCI.

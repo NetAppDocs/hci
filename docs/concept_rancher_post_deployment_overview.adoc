@@ -1,0 +1,16 @@
+---
+sidebar: docs_sidebar
+permalink: docs/rancher_post_deployment_overview.html
+summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
+keywords: netapp, hci, Rancher, install, post installation, requirements, tasks
+---
+
+= Post deployment tasks overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+There are things you need to know and preparations you need to make so that you can successfully install Rancher on NetApp HCI. Ensure that you implement the following requirements and recommendations before you install Rancher on NetApp HCI.
