@@ -280,11 +280,7 @@ entries:
      - title: Concepts
        url: /concept_rancher_concepts_overview.html
      - title: Requirements for Rancher on NetApp HCI
-       entries:
-        - title: Requirements for Rancher on NetApp HCI overview
-          url: /rancher_prereqs_overview.html
-        - title: Requirements for Rancher on NetApp HCI
-          url: /concept_rancher_requirements.html
+       url: /rancher_prereqs_overview.html
      - title: Deploy Rancher on NetApp HCI
        url: /concept_rancher_deploy_overview.html
      - title: Post deployment tasks

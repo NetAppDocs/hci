@@ -5,7 +5,7 @@ summary: Learn about the requirements for a successful Rancher on NetApp HCI ins
 keywords: netapp, hci, Rancher, install, installation, requirements
 ---
 
-= Rancher on NetApp HCI requirements overview
+= Requirements for Rancher on NetApp HCI
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,9 +13,65 @@ keywords: netapp, hci, Rancher, install, installation, requirements
 :imagesdir: ../media/
 
 [.lead]
-There are things you need to know and preparations you need to make so that you can successfully install Rancher on NetApp HCI. Ensure that you implement the following requirements and recommendations before you install Rancher on NetApp HCI.
+Before you install Rancher on NetApp HCI, ensure your environment and your NetApp HCI system meet these requirements.
 
-Review the standard Rancher installation https://rancher.com/docs/rancher/v2.x/en/installation/requirements/[requirements^], and ensure that they are met alongside these Rancher on NetApp HCI requirements.
+NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the deployment without removing it and redeploying. You will need to remove the Rancher on NetApp HCI instance using the REST API and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[troubleshooting^] for more information.
 
-* link:concept_rancher_general_requirements.html[General requirements]
-* link:concept_rancher_port_requirements.html[Port and URL requirements]
+== Node requirements
+
+* Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+
+== Network requirements
+
+* Ensure you deploy Rancher on NetApp HCI on a network that has management network access.
+* Ensure that your management node can use DNS to resolve the host name `nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
+* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
+** Rancher Server requires 3 static IP addresses.
+** Each user cluster requires 1 static IP address.
+* Ensure that you have set up DNS records for each static IP address you need.
+* Create a DNS entry for the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+
+== VMware vSphere requirements
+
+* As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
+* Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
+
+== Required ports
+
+The following ports must be open in your firewall configuration to and from the nodes running Rancher server. In addition to this list, ensure that the list of ports in the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/[Rancher documentation^] are open as well.
+
+|===
+|Port |Description
+
+|443
+|Rancher web UI access
+|===
+
+== Required URLs
+
+The following URLs should be accessible from the hosts where the Rancher control plane resides:
+
+|===
+|URL |Description
+
+|https://charts.jetstack.io/
+|No description - 404
+
+|https://releases.rancher.com/server-charts/stable
+|No description - empty XML
+
+|https://entropy.ubuntu.com/
+|Ubuntu entropy service for random number generation
+
+|https://raw.githubusercontent.com/vmware/cloud-init-vmware-guestinfo/v1.3.1/install.sh
+|VMware guest additions install script
+
+|https://download.docker.com/linux/ubuntu/gpg
+|Docker Ubuntu GPG public key
+
+|https://download.docker.com/linux/ubuntu
+|Docker download link
+
+|https://hub.docker.com/
+|Docker hub for NetApp Hybrid Cloud Control
+|===
