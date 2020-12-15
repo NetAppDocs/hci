@@ -15,7 +15,7 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 
 [.lead]
 
-If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher URL), there is no way to correct the installation without redeploying. Follow these steps to remove the Rancher on NetApp HCI instance using the REST API.
+If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the installation without redeploying. Follow these steps to remove the Rancher on NetApp HCI instance using the REST API.
 
 .What you'll need
 
