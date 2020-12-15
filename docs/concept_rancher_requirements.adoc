@@ -19,7 +19,7 @@ NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect informatio
 
 == Node requirements
 
-* Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
 
 == Network requirements
 
