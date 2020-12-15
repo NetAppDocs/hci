@@ -29,7 +29,7 @@ NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect informatio
 ** Rancher Server requires 3 static IP addresses.
 ** Each user cluster requires 1 static IP address.
 * Ensure that you have set up DNS records for each static IP address you need.
-* Create a DNS entry for the FQDN that you will use to access the host from which the Rancher web UI is served once the installation is complete (you will also enter this FQDN during Rancher on NetApp HCI deployment.)
+* Create a DNS entry for the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
 
 == VMware vSphere requirements
 
