@@ -23,16 +23,16 @@ Ensure that your NetApp HCI system has at least 3 compute nodes; this is require
 
 == Network requirements
 
-* Ensure you deploy Rancher on NetApp HCI on a network that has management network access.
-* Ensure that your management node can use DNS to resolve the host name `nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
+* Ensure that the network that you intend to deploy Rancher on NetApp HCI on has management network access.
+* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
+** Rancher Server requires 3 static IP addresses.
+** Each user cluster requires 1 static IP address.
 * If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, gather your proxy information. If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
 +
 ----
 127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, .svc, .cluster.local
 ----
-* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
-** Rancher Server requires 3 static IP addresses.
-** Each user cluster requires 1 static IP address.
+* Ensure that your management node can use DNS to resolve the host name `nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have set up DNS records for each static IP address you need.
 * Create a DNS entry for the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
 +
@@ -40,8 +40,8 @@ NOTE: DNS names that end in .local are reserved for multicast DNS. The DNS entry
 
 == VMware vSphere requirements
 
-* As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
 * Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
+* As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
 
 == Required ports
 
