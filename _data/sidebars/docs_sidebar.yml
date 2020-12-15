@@ -293,7 +293,7 @@ entries:
        url: /task_hci_h610ch615crepl.html
      - title: Replace H610S nodes
        url: /task_hci_h610srepl.html
-     - title: Replace node in two-node cluster
+     - title: Replace a node in a two-node cluster
        url: /task_hci_2noderepl.html
      - title: Replace power supply units
        url: /task_hci_psurepl.html
