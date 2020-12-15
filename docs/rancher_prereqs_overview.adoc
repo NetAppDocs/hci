@@ -24,8 +24,8 @@ Ensure that your NetApp HCI system has at least 3 compute nodes; this is require
 == Network requirements
 
 * Ensure that the network that you intend to deploy Rancher on NetApp HCI on has management network access.
-* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher Server) and the user (k8s) clusters.
-** Rancher Server requires 3 static IP addresses.
+* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher server) and the user (k8s) clusters.
+** Rancher server requires 3 static IP addresses.
 ** Each user cluster requires 1 static IP address.
 * If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, gather your proxy information. If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
 +
