@@ -296,7 +296,7 @@ entries:
      - title: Manage a Rancher on NetApp HCI deployment
        url: /concept_rancher_management_overview.html
      - title: Upgrade Rancher on NetApp HCI
-       url: /concept_rancher_upgrade_overview.html
+       url: /task_rancher_upgrades.html
      - title: Remove Rancher on NetApp HCI
        url: /concept_rancher_removal_overview.html
      - title: Troubleshooting Rancher on NetApp HCI
