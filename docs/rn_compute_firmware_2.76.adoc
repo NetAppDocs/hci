@@ -29,21 +29,21 @@ This firmware package contains the following firmware versions for hardware comp
 
 |BIOS
 |NA2.1
-|NA3.7
-|*3B03*
-|*3B08.CO*
+|*NATP3.9*
+|3B03
+|3B08.CO
 
 |BMC
 |6.84.00
-|*6.71.18*
-|*4.00.07*
-|*4.68.07*
+|6.71.18
+|4.00.07
+|4.68.07
 
 |NIC / Mellanox
-|*14.25.1020*
-|*14.25.1020*
-|*14.25.1020*
-|*14.24.1000*
+|14.25.1020
+|14.25.1020
+|14.25.1020
+|14.24.1000
 |===
 
 === Changes in firmware components
