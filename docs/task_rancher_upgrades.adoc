@@ -64,9 +64,7 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Click *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Rancher*.
-+
-The *Rancher* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page.
-. Choose from the following options and perform the set of steps that are applicable to your cluster:
+. Choose from the following options that are applicable to your installation:
 +
 [%header,cols=2*]
 |===
@@ -75,7 +73,7 @@ The *Rancher* tab lists the storage clusters that are part of your installation.
 
 |Your management node has external connectivity.
 a|
-. Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available under the *Element* tab.
+. Select the *Actions* menu for the software you want to upgrade, and select *Upgrade*.
 . Click *Begin Upgrade*.
 
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
@@ -139,7 +137,23 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 
 == Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment
 
-You can use APIs to upgrade storage nodes in a cluster to the latest Element software version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+You can use APIs to upgrade the separate components in your Rancher deployment, including Rancher server, Rancher Kubernetes Engine (RKE), and the management cluster's node OS (for security updates). You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+
+.Options
+* <<Upgrade Rancher Server>>
+-Check for latest upgrade packages `POST /upgrade​/rancher-versions` /test connection
+-Download package, if dark site
+-`PUT /upgrade​/rancher​/{version}`
+* <<Upgrade RKE>>
+-Check for latest upgrade packages `POST /upgrade​/rke-versions`/test connection
+-Download package, if dark site
+-`PUT /upgrade​/rke​/{version}`
+* <<Upgrade node OS>>
+NOTE: Node upgrades happen automatically. However, you need to reboot the nodes sequentially to apply upgrades.
+
+-Check for latest upgrade packages `GET /upgrade​/checkNodeUpdates`/test connection
+-Download package, if dark site
+-`POST ​/upgrade​/applyNodeUpdates`
 
 .Steps
 
