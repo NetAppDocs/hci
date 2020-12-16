@@ -27,26 +27,26 @@ The storage firmware bundle version 2.76 contains various bug fixes and new feat
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
 
 |===
-|Component |Dell R630 |H410S |H610S
+|Component |SolidFire SF-series |H410S |H610S
 
 |BIOS
 |N/A
 |NA2.1
-|3B03
+|*3B06*
 
 |BMC
 |N/A
-|*6.84.00*
-|*3.84.07*
+|6.84.00
+|*3.86.07*
 
 |NIC / Mellanox
 |-
-|14.21.1000
-|14.22.1002
+|*14.25.1020*
+|*14.25.1020*
 
 |RMS200
 |ae3b8cc
-|7d8422bc
+|ae3b8cc
 |-
 
 |RMS300
@@ -90,8 +90,8 @@ This firmware package contains the following firmware versions for hardware comp
 |-
 
 |PM883, SED
-|HXT7104Q
-|HXT7104Q
+|*HXT7904Q*
+|*HXT7904Q*
 |-
 
 |Hawk-4, SED
@@ -117,22 +117,22 @@ This firmware package contains the following firmware versions for hardware comp
 |PM983, SED
 |-
 |-
-|*EDA5302Q*
+|*EDA5402Q*
 
 |PM983, NSED
 |-
 |-
-|*EDA5600Q*
+|*EDA5700Q*
 
 |CD5, SED
 |-
 |-
-|0108
+|0109
 
 |CD5, NSED
 |-
 |-
-|0108
+|0109
 
 |CD5, FIPS
 |-
