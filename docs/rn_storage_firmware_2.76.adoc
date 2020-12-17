@@ -18,8 +18,6 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 [.lead]
 Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
-IMPORTANT: For H610S storage nodes running Element software version 12.0, you should apply D-patch SUST-909 before you upgrade to storage firmware bundle 2.76. Contact NetApp Support to obtain the D-patch before you upgrade.
-
 == What's New
 The storage firmware bundle version 2.76 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
