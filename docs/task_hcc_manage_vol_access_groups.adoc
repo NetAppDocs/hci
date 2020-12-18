@@ -14,12 +14,11 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-You can add new volume access groups, delete existing volume access groups, edit the details of a volume access group, and view the details of a volume access group by using NetApp Hybrid Cloud Control.
+You can create new volume access groups, make changes to the name, associated initiators, or associated volumes of access groups, or delete existing volume access groups using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
 * You have administrator credentials for this NetApp HCI system.
-* You are running management node 12.2 or later.
 * You have upgraded your management services to at least version 2.15.28. NetApp Hybrid Cloud Control storage management is not available in earlier service bundle versions.
 * Ensure you have a logical naming scheme for volume access groups.
 
@@ -40,22 +39,8 @@ If you associate an initiator with the volume access group, that initiator can a
 . (Optional) In the *Volumes* section, select one or more volumes to include in this volume access group.
 . Select *Create Access Group*.
 
-== Add initiators to a volume access group
-You can add initiators to an volume access group. When you add an initiator to a volume access group, the initiator enables access to all volumes in that volume access group.
-
-.Steps
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
-. From the Dashboard, expand the name of your storage cluster on the left navigation menu.
-. Select *Volumes*.
-. Select the *Access Groups* tab.
-. In the *Actions* column of the table of access groups, expand the options menu for the access group you need to edit.
-. In the options menu, select *Edit*.
-. Select one or more initiators you want to add.
-. Confirm your changes by selecting *Save*.
-. In the *Access Groups* table, verify that the access group reflects your changes.
-
 == Edit a volume access group
-You can edit the properties of an existing volume access group by using NetApp Hybrid Cloud Control.
+You can edit the properties of an existing volume access group by using NetApp Hybrid Cloud Control. You can make changes to the name, associated initiators, or associated volumes of an access group.
 
 .Steps
 
