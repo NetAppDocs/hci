@@ -25,7 +25,7 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 ** The native administrator account that was created during initial deployment
 ** A custom user account with Cluster Admin, Drives, Volumes, and Nodes permissions
 * Ensure that you have performed the following actions with each new node:
-** Installed the new node in the NetApp HCI chassis by following the installation instructions available in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
+** Installed the new node in the NetApp HCI chassis by following the  https://docs.netapp.com/us-en/hci/docs/task_hci_installhw.html[installation instructions].
 ** Cabled and powered on the new node
 * Ensure that you have the management IPv4 address of an already installed storage node. You can find the IP address in the *NetApp Element Management* > *Cluster* > *Nodes* tab of the NetApp Element Plug-in for vCenter Server.
 * Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.
@@ -57,7 +57,7 @@ NOTE: If you click Create New Datacenter, the Cluster field is automatically pop
 
 .. If you selected an existing datacenter, select a vSphere cluster with which the new compute nodes should be associated.
 +
-NOTE: If NetApp HCI cannot recognize the network settings of the cluster you have selected for expansion, ensure that the vmkernel and vmnic mapping for the management, storage and vMotion networks are set to the deployment defaults. See Supported networking changes in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^] for more information.
+NOTE: If NetApp HCI cannot recognize the network settings of the cluster you have selected for expansion, ensure that the vmkernel and vmnic mapping for the management, storage and vMotion networks are set to the deployment defaults. See https://docs.netapp.com/us-en/hci/docs/task_nde_supported_net_changes.html[supported networking changes] for more information.
 
 .. Click *Continue*.
 . On the *ESXi Credentials* page, enter an ESXi root password for the compute node or nodes you are adding.

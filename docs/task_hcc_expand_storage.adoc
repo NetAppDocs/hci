@@ -22,7 +22,7 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 ** The native administrator account that was created during initial deployment
 ** A custom user account with Cluster Admin, Drives, Volumes, and Nodes permissions
 * Ensure that you have performed the following actions with each new node:
-** Installed the new node in the NetApp HCI chassis by following the installation instructions available in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
+** Installed the new node in the NetApp HCI chassis by following the  https://docs.netapp.com/us-en/hci/docs/task_hci_installhw.html[installation instructions].
 ** Cabled and powered on the new node
 * Ensure that you have the management IPv4 address of an already installed storage node. You can find the IP address in the *NetApp Element Management* > *Cluster* > *Nodes* tab of the NetApp Element Plug-in for vCenter Server.
 * Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.

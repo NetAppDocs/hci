@@ -580,5 +580,5 @@ If your session times out, you might see a number of alerts while attempting to 
 Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

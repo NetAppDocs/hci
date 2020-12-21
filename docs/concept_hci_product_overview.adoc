@@ -52,7 +52,7 @@ Here are the common URLs you use with NetApp HCI:
 |Description
 
 |`https://[IPv4 address of Bond1G interface on a storage node]`
-|Access the NetApp Deployment Engine wizard to install and configure NetApp HCI. https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-8CED8C44-68D4-4AFD-9DB8-F611914AA637.html[Learn more.]
+|Access the NetApp Deployment Engine wizard to install and configure NetApp HCI. https://docs.netapp.com/us-en/hci/docs/concept_nde_access_overview.html[Learn more.]
 
 |`https://[management node IP address]`
 |Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services. link:task_hci_getstarted.html[Learn more.]
@@ -76,5 +76,4 @@ Here are the common URLs you use with NetApp HCI:
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

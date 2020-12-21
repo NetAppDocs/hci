@@ -123,9 +123,9 @@ NetApp HCI uses a storage node management network IPv4 address for initial acces
 
 .Steps
 
-. If you do not know the initial storage node management network IP, use the Terminal User Interface (TUI), which is accessed via keyboard and monitor on the storage node or https://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/GUID-511EA889-41D6-471A-BE84-C3146350A082.html[use a USB stick^].
+. If you do not know the initial storage node management network IP, use the Terminal User Interface (TUI), which is accessed via keyboard and monitor on the storage node or https://docs.netapp.com/us-en/hci/docs/task_nde_access_dhcp.html[use a USB stick^].
 +
-For details, see https://docs.netapp.com/hci/index.jsp?topic=%2Fcom.netapp.doc.hci-ude-180%2FGUID-511EA889-41D6-471A-BE84-C3146350A082.html[_Accessing the NetApp Deployment Engine_^].
+For details, see https://docs.netapp.com/us-en/hci/docs/concept_nde_access_overview.html[_Accessing the NetApp Deployment Engine_].
 . If you do know the IP address, from a web browser, connect to the Bond1G address of the primary node via HTTP, not HTTPS.
 +
 *Example*: `http://<IP_address>:442/nde/`
@@ -152,7 +152,7 @@ image::hci_nde_network_settings_ui.png[NDE Network Settings page]
 ..	Click *No* for Will you assign VLAN IDs? (You assign them later in the main Network Settings page.)
 ..	Type the subnet CIDR, default gateway, and starting IP address for the management, vMotion, and iSCI networks according to your workbook. (Refer to the IP Assignment Method section of the _NetApp HCI Installation Discovery Workbook_ for these values.)
 ..	Click *Apply to Network Settings*.
-.	Join an existing vCenter (optional). See the _NetApp HCI Deployment Guide_ in the https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^].
+.	Join an https://docs.netapp.com/us-en/hci/docs/task_nde_join_existing_vsphere.html[existing vCenter] (optional).
 .	Record node serial numbers in the _NetApp HCI Installation Discovery Workbook_.
 .	Specify a VLAN ID for the vMotion Network and any network that requires VLAN tagging. See the _NetApp HCI Installation Discovery Workbook_.
 .	Download your configuration as a .CSV file.
