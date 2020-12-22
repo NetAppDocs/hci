@@ -49,7 +49,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 |===
 +
-NOTE: H615C compute nodes must update BMC firmware to version 4.68 using the https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.27.html[compute firmware bundle 2.27] to enable NetApp Hybrid Cloud Control to perform future firmware upgrades.
+NOTE: H615C compute nodes must update BMC firmware to version 4.68 using the link:rn_compute_firmware_2.27.html[compute firmware bundle 2.27] to enable NetApp Hybrid Cloud Control to perform future firmware upgrades.
 
 +
 NOTE: A Redfish license is required for H300E, H500E, and H700E compute nodes to enable NetApp Hybrid Cloud Control to perform future firmware upgrades. Contact NetApp Support to get the license installed manually until a new compute firmware bundle automates this process in a follow-on release.
