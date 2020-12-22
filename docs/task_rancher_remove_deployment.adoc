@@ -15,11 +15,37 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 
 [.lead]
 
-If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the installation without redeploying. Follow these steps to remove the Rancher on NetApp HCI instance.
+If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), you need to remove the installation and then redeploy. Follow these steps to remove the Rancher on NetApp HCI instance.
+
+== Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control
 
 .What you'll need
 
-To use Rancher on NetApp HCI REST APIs, your storage cluster must be running NetApp Element software 12.2 or later and you must have deployed a management node running version 12.2 or later.
+Your storage cluster and management node must be running NetApp Element software 12.2 or later.
+
+.About this task
+This task uses the NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. From the Dashboard, click the menu on the upper right.
+. Select *Configure*.
+. In the *Rancher Server Clusters* pane, click *Configure Rancher Server Clusters*.
+. Select the *Actions* menu for the Rancher installation you need to remove.
+. Select *Delete*.
+. Confirm the action.
+
+== Remove Rancher on NetApp HCI using the REST API
+
+.What you'll need
+
+To use Rancher on NetApp HCI REST APIs, your storage cluster and management node must be running NetApp Element software 12.2 or later.
 
 .About this task
 This task uses the REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
