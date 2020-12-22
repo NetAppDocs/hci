@@ -47,7 +47,7 @@ Here is a high-level overview of the steps in this procedure:
 <<Redeploy Witness Nodes for two and three-node storage clusters>>
 
 Here are some additional tasks, which you might need to perform if your system has the specific conditions they are applicable to:
-link:https://docs.netapp.com/us-en/hci/docs/task_hci_removewn.html[Remove Witness Nodes to free up compute resources^]
+link:task_hci_removewn.html[Remove Witness Nodes to free up compute resources]
 <<Change the password if you received a replacement node with a non-standard BMC password>>
 <<Upgrade the BMC firmware on your node>>
 

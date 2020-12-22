@@ -22,7 +22,7 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 * Ensure that you have free and unused IPv4 addresses on the same network segment as existing nodes (each new node must be installed on the same network as existing nodes of its type).
 * Ensure that you have the vCenter administrator account credentials ready.
 * Ensure that you have performed the following actions with each new node:
-** Installed the new node in the NetApp HCI chassis by following the  https://docs.netapp.com/us-en/hci/docs/task_hci_installhw.html[installation instructions].
+** Installed the new node in the NetApp HCI chassis by following the link:task_hci_installhw.html[installation instructions].
 ** Cabled and powered on the new node
 * Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.
 
@@ -48,7 +48,7 @@ NOTE: If you click Create New Datacenter, the Cluster field is automatically pop
 
 .. If you selected an existing datacenter, select a vSphere cluster with which the new compute nodes should be associated.
 +
-NOTE: If NetApp HCI cannot recognize the network settings of the cluster you have selected for expansion, ensure that the vmkernel and vmnic mapping for the management, storage and vMotion networks are set to the deployment defaults. See https://docs.netapp.com/us-en/hci/docs/task_nde_supported_net_changes.html[supported networking changes] for more information.
+NOTE: If NetApp HCI cannot recognize the network settings of the cluster you have selected for expansion, ensure that the vmkernel and vmnic mapping for the management, storage and vMotion networks are set to the deployment defaults. See link:task_nde_supported_net_changes.html[supported networking changes] for more information.
 
 .. Click *Continue*.
 . On the *ESXi Credentials* page, enter an ESXi root password for the compute node or nodes you are adding.
