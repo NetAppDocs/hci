@@ -47,7 +47,7 @@ Here is a high-level overview of the steps in this procedure:
 <<Redeploy Witness Nodes for two and three-node storage clusters>>
 
 Here are some additional tasks, which you might need to perform if your system has the specific conditions they are applicable to:
-link:https://docs.netapp.com/us-en/hci/docs/task_hci_removewn.html[Remove Witness Nodes to free up compute resources^]
+link:task_hci_removewn.html[Remove Witness Nodes to free up compute resources]
 <<Change the password if you received a replacement node with a non-standard BMC password>>
 <<Upgrade the BMC firmware on your node>>
 
@@ -580,5 +580,5 @@ If your session times out, you might see a number of alerts while attempting to 
 Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
