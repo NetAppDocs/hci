@@ -217,5 +217,5 @@ NOTE: If the DIMM is not installed correctly, the node will operate normally but
 TIP: After the DIMM replacement procedure, you can clear the warnings and errors on the Hardware Status tab in vCenter. You can do this if you want to erase the history of errors related to the hardware that you replaced. https://kb.vmware.com/s/article/2011531[Learn more^].
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
