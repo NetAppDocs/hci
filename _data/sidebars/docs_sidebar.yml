@@ -278,11 +278,11 @@ entries:
      - title: Rancher on NetApp HCI overview
        url: /concept_rancher_product_overview.html
      - title: Concepts
-       url: /concept_rancher_concepts_overview.html
+       url: /concept_rancher_concepts.html
      - title: Requirements for Rancher on NetApp HCI
        url: /rancher_prereqs_overview.html
      - title: Deploy Rancher on NetApp HCI
-       url: /concept_rancher_deploy_overview.html
+       url: /task_rancher_deploy.html
      - title: Post deployment tasks
        entries:
         - title: Post deployment tasks overview
@@ -297,9 +297,9 @@ entries:
        url: /concept_rancher_upgrade_overview.html
      - title: Remove Rancher on NetApp HCI
        url: /concept_rancher_removal_overview.html
-     - title: Troubleshooting Rancher on NetApp HCI
+     - title: Troubleshoot Rancher on NetApp HCI
        entries:
-        - title: Troubleshooting Rancher on NetApp HCI overview
+        - title: Troubleshoot Rancher on NetApp HCI overview
           url: /concept_rancher_troubleshoot_overview.html
         - title: Remove an incorrect Rancher on NetApp HCI deployment
           url: /task_rancher_remove_deployment.html
