@@ -13,20 +13,21 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes
 :imagesdir: ../media/
 
 [.lead]
-You want to use Rancher to deploy Kubernetes clusters on your NetApp HCI environment. You will deploy a Kubernetes cluster containing the Rancher Server.
-
+To use Rancher on your NetApp HCI environment, you first deploy Rancher on NetApp HCI.
 
 
 == What happens when you deploy Rancher on NetApp HCI?
 The deployment involves the following steps, each described further:
 
-* Use the Hybrid Cloud Control to initiate the deployment.
+* Use the NetApp Hybrid Cloud Control to initiate the deployment.
 
 * The Rancher deployment creates a management cluster, which includes three virtual machines.
 +
 Each virtual machine is assigned all Kubernetes roles for both the Control Plane and Worker. This means that the Rancher UI is available on each node.
 
 * The Rancher Control Plane (or _Rancher Server_) is also installed, using the NetApp HCI node template in Rancher for easier deployment. The Rancher Control Plane automatically works with the configuration used in the NetApp Deployment Engine, which was used to build the NetApp HCI infrastructure.
+
+* After deployment, you will receive an email from NetApp providing you with the option to register for NetApp Support on Rancher deployments on NetApp HCI.
 
 * After deployment, Dev and Ops teams can then deploy their user clusters, similar to any Rancher deployment.
 
@@ -67,7 +68,7 @@ The installation requires assignment of a Rancher URL, which includes the fully 
 In all cases the Rancher UI is accessible in your browser over https protocol (port 443).
 
 
-[cols=3*,options="header",cols="15,15, 15"]
+[cols=3*,options="header",cols="20,20, 55"]
 |===
 | IP addressing
 | Rancher FQDN
@@ -95,6 +96,10 @@ All nodes have the following characteristics:
 A minimum of 60GB is required to deploy Rancher Server.
 
 == Steps to deploy Rancher on NetApp HCI
+* <<Access the NetApp Hybrid Cloud Control>>
+* <<Deploy Rancher on NetApp HCI>>
+* <<Verify your deployment by using vCenter Server>>
+* <<Obtain and register Technical Support>>
 
 === Access the NetApp Hybrid Cloud Control
 
@@ -187,7 +192,7 @@ After deployment, an email is sent to you that includes a Support registration c
 After deployment, you can do the following:
 
 * Deploy user clusters
-* Change the admin user credentials
+* Change the Rancher admin user credentials
 * Install Trident with Rancher on NetApp HCI
 
 ZZ MAYBE MAKE THESE THEIR OWN POST DEPLOYMENT TASKS And LINK TO THEM
@@ -199,7 +204,7 @@ After deployment, Dev and Ops teams can then deploy their user clusters, similar
 
 See ZZ LINK to RANCHER DOCS
 
-=== Change the admin user credentials and URL
+=== Change the Rancher admin user credentials and URL
 
 . Go to myrancher.org
 . Change the password for the default Rancher admin user.

@@ -13,7 +13,7 @@ keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes
 :imagesdir: ../media/
 
 [.lead]
-Learn about basic concepts related to Rancher on NetApp HCI.
+Learn basic concepts related to Rancher on NetApp HCI.
 
 * *Control plane*: The Rancher control plane, sometimes called the _Rancher Server_, provisions, manages, and monitors Kubernetes clusters used by Development and Operations teams.
 
@@ -26,7 +26,7 @@ Learn about basic concepts related to Rancher on NetApp HCI.
 * *Rancher node template*: Hybrid Cloud Control uses a Rancher node template to make deployment simpler.
 
 +
-See  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/[Rancher documentation about node templates]
+See  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/[Rancher documentation about node templates].
 
 * *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on a NetApp HCI compute node or nodes.
 
