@@ -1,7 +1,7 @@
 ---
 sidebar: solutions_sidebar
 permalink: solutions/index.html
-summary: NetApp HCI solutions can help you achieve performance at scale with multiple workloads on the same infrastructure without friction.  
+summary: NetApp HCI solutions can help you achieve performance at scale with multiple workloads on the same infrastructure without friction.
 keywords: netapp, hci, solutions, catalog, solution
 ---
 
@@ -20,4 +20,4 @@ The NetApp HCI Solutions Catalog has moved to https://docs.netapp.com/us-en/hci-
 
 == Find more information:
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Documentation Resources]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

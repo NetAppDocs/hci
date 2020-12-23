@@ -102,7 +102,7 @@ entries:
            url: /task_nde_configure_new_vsphere.html
          - title: Join an existing VMware vSphere deployment
            url: /task_nde_join_existing_vsphere.html
-     - title: Configure credentials
+     - title: Configure NetApp HCI credentials
        url: /task_nde_configure_credentials.html
      - title: Select a network topology
        url: /task_nde_select_net_topology.html

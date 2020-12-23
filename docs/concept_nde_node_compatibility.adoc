@@ -36,5 +36,5 @@ Compute nodes must meet the following requirements to be selectable as inventory
 * The network cabling configurations for compute nodes of the same model must match within a single compute cluster.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
