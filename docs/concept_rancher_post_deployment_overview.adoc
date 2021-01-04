@@ -13,4 +13,15 @@ keywords: netapp, hci, Rancher, install, post installation, requirements, tasks
 :imagesdir: ../media/
 
 [.lead]
-There are things you need to know and preparations you need to make so that you can successfully install Rancher on NetApp HCI. Ensure that you implement the following requirements and recommendations before you install Rancher on NetApp HCI.
+After you deploy Rancher on NetApp HCI, you should continue with post-deployment activities.
+
+* link:task_rancher_load_balancing.html[Configure load balancing]
+* link:task_rancher_resiliency.html[Configure resiliency]
+* Install Trident software
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

@@ -37,7 +37,7 @@ Trident, itself a Kubernetes-native application, runs directly within a Kubernet
 
 * *Trident software with Rancher*: Rancher on NetApp HCI employs Trident software to provision storage automatically to containerized applications. Trident is automatically deployed and configured when new Kubernetes clusters are created. When a containerized application issues a persistent volume claim (PVC) request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
 
-For details, visit the Trident website. ZZ INCLUDE link
+For details, visit the Trident documentation. ZZ INCLUDE link
 
 [discrete]
 == Find more information

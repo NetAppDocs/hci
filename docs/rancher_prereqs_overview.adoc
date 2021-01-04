@@ -21,6 +21,22 @@ NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect informatio
 
 Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
 
+=== Node details
+
+Rancher on NetApp HCI deploys a three-node management cluster.
+
+All nodes have the following characteristics:
+
+[cols=3*,options="header",cols="15,15, 15"]
+|===
+| vCPU
+| RAM (GB)
+| Disk (GB)
+| 2 | 8 | 20
+|===
+
+A minimum of 60GB is required to deploy the Rancher Server.
+
 == Network requirements
 
 * Ensure that the network that you intend to deploy the Rancher on NetApp HCI management cluster has a route to the management node management network.

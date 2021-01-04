@@ -1,0 +1,46 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_post-deploy.html
+summary: Learn about tasks you complete after installing Rancher on NetApp HCI.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes
+---
+
+= Complete post-deployment activities for Rancher on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After deploying Rancher on NetApp HCI, you should complete post-deployment activities for successful implementation.
+
+After deployment, you can do the following:
+
+* Install Trident with Rancher on NetApp HCI
+* link:task_rancher_load_balancing.html[Configure load balancing]
+* link:task_rancher_resiliency.html[Configure resiliency]
+
+
+
+=== Install Trident
+
+The Rancher installer makes a catalog for Trident on Rancher.
+
+. From the Rancher UI, click *Tools* > *Catalog*.
+. Select your user clusters.
+. Click *Apps*.
+. Click the *NetApp Trident* catalog.
++
+The Catalog for the Trident installer appears.
+
+. Provision persistent volumes that will use NetApp HCI storage.
+
+
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

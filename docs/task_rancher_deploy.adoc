@@ -15,6 +15,8 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes
 [.lead]
 To use Rancher on your NetApp HCI environment, you first deploy Rancher on NetApp HCI.
 
+TIP: Before starting the deployment, be sure to check the link:rancher_prereqs_overview.html[Requirements for Rancher on NetApp HCI].
+
 
 == What happens when you deploy Rancher on NetApp HCI?
 The deployment involves the following steps, each described further:
@@ -35,10 +37,10 @@ Each virtual machine is assigned all Kubernetes roles for both the Control Plane
 You might want to review the following considerations:
 
 * Types of deployments
-* Round-robin DNS
-* L4 load balancer
+** Demo deployments
+** Production deployments
 * Rancher FQDN
-* Node details
+
 
 === Types of deployments
 You can deploy Rancher on NetApp HCI in the following ways:
@@ -55,15 +57,12 @@ If your organization does not use DHCP, you can still try it out by using four s
 +
 We recommend an L4 load balancer or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.
 
-==== Round-robin DNS
-This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
-
-==== L4 load balancer
-This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
+* *L4 load balancer*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
+* *Round-robin DNS*: This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
 
 === Rancher FQDN
 
-The installation requires assignment of a Rancher URL, which includes the fully qualified domain name (FQDN) of the host where the Rancher UI will be served once the installation is complete.  The following table demonstrates how you will access the Rancher UI based on configuration parameters of the deployment.
+The installation requires assignment of a Rancher URL, which includes the fully qualified domain name (FQDN) of the host where the Rancher UI will be served after the installation is complete.  The following table lists how you will access the Rancher UI based on configuration parameters of the deployment.
 
 In all cases the Rancher UI is accessible in your browser over https protocol (port 443).
 
@@ -79,21 +78,6 @@ In all cases the Rancher UI is accessible in your browser over https protocol (p
 | Static | FQDN | Served by the FQDN, which resolves based on your DNS.
 |===
 
-=== Node details
-
-Rancher on NetApp HCI deploys a three-node management cluster.
-
-All nodes have the following characteristics:
-
-[cols=3*,options="header",cols="15,15, 15"]
-|===
-| vCPU
-| RAM (GB)
-| Disk (GB)
-| 2 | 8 | 20
-|===
-
-A minimum of 60GB is required to deploy Rancher Server.
 
 == Steps to deploy Rancher on NetApp HCI
 * <<Access the NetApp Hybrid Cloud Control>>
@@ -191,49 +175,15 @@ After deployment, an email is sent to you that includes a Support registration c
 == What's next?
 After deployment, you can do the following:
 
-* Deploy user clusters
-* Change the Rancher admin user credentials
-* Install Trident with Rancher on NetApp HCI
-
-ZZ MAYBE MAKE THESE THEIR OWN POST DEPLOYMENT TASKS And LINK TO THEM
-
-=== Deploy user clusters
-After deployment, Dev and Ops teams can then deploy their user clusters, similar to any Rancher deployment.
-
-. Go to the Rancher URL provided to you at the end of the Rancher deployment.
-
-See ZZ LINK to RANCHER DOCS
-
-=== Change the Rancher admin user credentials and URL
-
-. Go to myrancher.org
-. Change the password for the default Rancher admin user.
-. Review and accept the terms.
-. Click *Continue*.
-+
-Rancher displays a field where you can enter the Rancher URL.
-
-. Enter the Rancher URL that you can use to access your Rancher deployment.
-. Click *Save URL.*
-+
-The Rancher Clusters page shows that the virtual machines.
-
-=== Install Trident
-
-ZZ MOVE THIS TO ITS OWN TOPIC and LINK TO IT.
-
-The Rancher installer makes a catalog for Trident on Rancher.
-
-. From the Rancher UI, click *Tools* > *Catalog*.
-. Select your user clusters.
-. Click *Apps*.
-. Click the *NetApp Trident* catalog.
-+
-The Catalog for the Trident installer appears.
-
-. Provision peristent volumes that will use NetApp HCI storage.
-
-
+* link:task_rancher_post-deploy.html[Complete post-deployment tasks]
+** Configure load balancing
+** Configure resiliency
+** Install Trident with Rancher on NetApp HCI
+* link:task_rancher_manage.html[Manage Rancher on NetApp HCI]
+** Change the Rancher admin user credentials
+** Deploy user clusters
+** Delete a control plane
+** Monitor Rancher on NetApp HCI
 
 [discrete]
 == Find more information
