@@ -23,11 +23,15 @@ ZZZ Need to determine how to monitor with each.
 
 == Monitor Rancher using the Rancher UI
 
+ZZZ TBD
+
 == Monitor Rancher using the NetApp Hybrid Cloud Control
 
+ZZZ TBD
 
 == Monitor Rancher using vCenter Server
 
+ZZZ TBD 
 
 
 [discrete]
