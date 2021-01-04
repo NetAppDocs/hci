@@ -1,0 +1,98 @@
+---
+sidebar: docs_sidebar
+permalink: docs/rancher_prereqs_overview.html
+summary: Learn about the requirements for a successful Rancher on NetApp HCI installation.
+keywords: netapp, hci, Rancher, install, installation, requirements
+---
+
+= Requirements for Rancher on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Before you install Rancher on NetApp HCI, ensure your environment and your NetApp HCI system meet these requirements.
+
+NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the deployment without removing it and redeploying. You will need to remove the Rancher on NetApp HCI instance and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[troubleshooting^] for more information.
+
+== Node requirements
+
+Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+
+=== Node details
+
+Rancher on NetApp HCI deploys a three-node management cluster.
+
+All nodes have the following characteristics:
+
+[cols=3*,options="header",cols="15,15, 15"]
+|===
+| vCPU
+| RAM (GB)
+| Disk (GB)
+| 2 | 8 | 20
+|===
+
+A minimum of 60GB is required to deploy the Rancher Server.
+
+== Network requirements
+
+* Ensure that the network that you intend to deploy the Rancher on NetApp HCI management cluster has a route to the management node management network.
+* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher server) and the user (k8s) clusters.
+** Rancher server requires 3 static IP addresses.
+** Each user cluster requires 3 static IP addresses.
+* If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, gather your proxy information. If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
++
+----
+127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, .svc, .cluster.local
+----
+* Ensure that your management node can use DNS to resolve the host name `<any IP address>.nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
+* Ensure that you have set up DNS records for each static IP address you need.
+* Create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+
+== VMware vSphere requirements
+
+* Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
+* As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
+
+== Required ports
+
+The following ports must be open in your firewall configuration to and from the nodes running Rancher server. In addition to this list, ensure that the list of ports in the *RKE* tab of the *Rancher Nodes* section of the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/[Rancher documentation^] are open as well.
+
+|===
+|Port |Description
+
+|443
+|Rancher web UI access
+|===
+
+== Required URLs
+
+The following URLs should be accessible from the hosts where the Rancher control plane resides:
+
+|===
+|URL |Description
+
+|https://charts.jetstack.io/
+|No description - 404
+
+|https://releases.rancher.com/server-charts/stable
+|No description - empty XML
+
+|https://entropy.ubuntu.com/
+|Ubuntu entropy service for random number generation
+
+|https://raw.githubusercontent.com/vmware/cloud-init-vmware-guestinfo/v1.3.1/install.sh
+|VMware guest additions install script
+
+|https://download.docker.com/linux/ubuntu/gpg
+|Docker Ubuntu GPG public key
+
+|https://download.docker.com/linux/ubuntu
+|Docker download link
+
+|https://hub.docker.com/
+|Docker hub for NetApp Hybrid Cloud Control
+|===

@@ -102,7 +102,7 @@ entries:
            url: /task_nde_configure_new_vsphere.html
          - title: Join an existing VMware vSphere deployment
            url: /task_nde_join_existing_vsphere.html
-     - title: Configure credentials
+     - title: Configure NetApp HCI credentials
        url: /task_nde_configure_credentials.html
      - title: Select a network topology
        url: /task_nde_select_net_topology.html
@@ -273,6 +273,42 @@ entries:
        url: /task_hcc_expand_compute_and_storage.html
      - title: Remove Witness Nodes after expanding cluster
        url: /task_hci_removewn.html
+  - title: Use Rancher on NetApp HCI
+    entries:
+     - title: Rancher on NetApp HCI overview
+       url: /concept_rancher_product_overview.html
+     - title: Concepts
+       url: /concept_rancher_concepts.html
+     - title: Requirements for Rancher on NetApp HCI
+       url: /rancher_prereqs_overview.html
+     - title: Deploy Rancher on NetApp HCI
+       url: /task_rancher_deploy.html
+     - title: Post deployment tasks
+       entries:
+        - title: Post deployment tasks overview
+          url: /concept_rancher_post_deployment_overview.html
+        - title: Install the Trident catalog
+          url: /task_rancher_trident.html
+        - title: Configure load balancing
+          url: /task_rancher_load_balancing.html
+        - title: Configure resiliency
+          url: /task_rancher_resiliency.html
+     - title: Manage a Rancher on NetApp HCI deployment
+       entries:
+        - title: Manage Rancher on NetApp HCI
+          url: /task_rancher_manage.html
+        - title: Monitor Rancher on NetApp HCI
+          url: /task_rancher_monitor.html
+     - title: Upgrade Rancher on NetApp HCI
+       url: /concept_rancher_upgrade_overview.html
+     - title: Remove Rancher on NetApp HCI
+       url: /concept_rancher_removal_overview.html
+     - title: Troubleshoot Rancher on NetApp HCI
+       entries:
+        - title: Troubleshoot Rancher on NetApp HCI overview
+          url: /concept_rancher_troubleshoot_overview.html
+        - title: Remove an incorrect Rancher on NetApp HCI deployment
+          url: /task_rancher_remove_deployment.html
   - title: Maintain H-series hardware
     entries:
      - title: H-series hardware maintenance overview

@@ -29,4 +29,4 @@ See https://www.netapp.com/us/products/converged-systems/hyper-converged-infrast
 * In the NetApp HCI and SolidFire ecosystem, storage is provisioned using volumes.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

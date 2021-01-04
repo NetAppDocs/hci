@@ -16,6 +16,8 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10,
 [.lead]
 You can upgrade your management node to management node version 12.2 from version 11.0 or later.
 
+NOTE: Upgrading the management node operating system is no longer required to upgrade Element software on the storage cluster. If the management node is version 11.3 or higher, you can simply upgrade the management services to the latest version to perform Element upgrades using NetApp Hybrid Cloud Control. Follow the management node upgrade procedure for your scenario if you would like to upgrade the management node operating system for other reasons, such as security remediation.
+
 .What you'll need
 
 * The vCenter Plug-in 4.4 or later requires a management node 11.3 or later that is created with modular architecture and provides individual services.
@@ -483,5 +485,5 @@ The response body indicates that reconfiguration was successful.
 [discrete]
 == Find more information
 
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
