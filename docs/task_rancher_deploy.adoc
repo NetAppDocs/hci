@@ -57,8 +57,9 @@ If your organization does not use DHCP, you can still try it out by using four s
 +
 We recommend an L4 load balancer or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.
 
-* *L4 load balancer*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
-* *Round-robin DNS*: This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
++
+** *L4 load balancer*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
+** *Round-robin DNS*: This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
 
 === Rancher FQDN
 

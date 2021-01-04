@@ -287,8 +287,6 @@ entries:
        entries:
         - title: Post deployment tasks overview
           url: /concept_rancher_post_deployment_overview.html
-        - title: Complete post-deployment activities
-          url: /task_rancher_post-deploy.html
         - title: Install the Trident catalog
           url: /task_rancher_trident.html
         - title: Configure load balancing
