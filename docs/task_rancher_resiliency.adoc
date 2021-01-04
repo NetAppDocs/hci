@@ -1,0 +1,16 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_resiliency.html
+summary: Learn about how to configure VM placement for optimal resiliency after installing Rancher on NetApp HCI.
+keywords: netapp, hci, Rancher, install, resiliency, vm, affinity
+---
+
+= Configure resiliency
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+There are things you need to know and preparations you need to make so that you can successfully install Rancher on NetApp HCI. Ensure that you implement the following requirements and recommendations before you install Rancher on NetApp HCI.
