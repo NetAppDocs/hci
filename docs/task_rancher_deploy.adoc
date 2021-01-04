@@ -178,7 +178,7 @@ After deployment, you can do the following:
 * link:task_rancher_post-deploy.html[Complete post-deployment tasks]
 ** Configure load balancing
 ** Configure resiliency
-** Install Trident with Rancher on NetApp HCI
+** link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI]
 * link:task_rancher_manage.html[Manage Rancher on NetApp HCI]
 ** Change the Rancher admin user credentials
 ** Deploy user clusters

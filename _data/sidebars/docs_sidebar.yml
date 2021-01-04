@@ -297,7 +297,7 @@ entries:
           url: /task_rancher_resiliency.html
      - title: Manage a Rancher on NetApp HCI deployment
        url: /concept_rancher_management_overview.html
-        entries:
+       entries:
         - title: Manage Rancher on NetApp HCI
           url: /task_rancher_manage.html
         - title: Monitor Rancher on NetApp HCI
