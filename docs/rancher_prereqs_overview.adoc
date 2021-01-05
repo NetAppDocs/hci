@@ -35,7 +35,8 @@ All nodes have the following characteristics:
 | 2 | 8 | 20
 |===
 
-Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 60GB of free space.
+* Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 60GB of free space.
+* Ensure that the storage nodes in your NetApp HCI storage cluster are running Element version 8.0 or later and management services version 2.17.x or later.
 
 == Network requirements
 
