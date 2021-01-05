@@ -293,7 +293,7 @@ entries:
           url: /task_rancher_load_balancing.html
         - title: Configure resiliency
           url: /task_rancher_resiliency.html
-     - title: Manage a Rancher on NetApp HCI deployment
+     - title: Manage Rancher on NetApp HCI
        entries:
         - title: Manage Rancher on NetApp HCI
           url: /task_rancher_manage.html

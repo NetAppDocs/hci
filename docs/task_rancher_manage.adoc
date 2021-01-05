@@ -5,7 +5,7 @@ summary: Learn about how you can manage Rancher on NetApp HCI.
 keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload
 ---
 
-= Manage a Rancher on NetApp HCI implementation
+= Manage Rancher on NetApp HCI
 :hardbreaks:
 :nofooter:
 :icons: font
