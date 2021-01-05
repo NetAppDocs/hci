@@ -52,7 +52,7 @@ A minimum of 60GB is required to deploy the Rancher Server.
 ----
 * Ensure that your management node can use DNS to resolve the host name `<any IP address>.nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have set up DNS records for each static IP address you need.
-* Create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+* Rancher on NetApp HCI is not resilient to node failures unless you configure some type of network load balancing. As a best practice, create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
 
 == VMware vSphere requirements
 
