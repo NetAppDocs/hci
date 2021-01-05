@@ -1,0 +1,238 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_upgrades.html
+summary: You can use NetApp Hybrid Cloud Control to upgrade components of your Rancher deployment on NetApp HCI that you installed previously using HCC.
+keywords: netapp, hci, rancher, upgrade, hcc
+---
+
+= Upgrade Rancher on NetApp HCI
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+To upgrade Rancher software, you can use the NetApp Hybrid Cloud Control (HCC) UI or REST API. HCC provides an easy button process to upgrade the components of your Rancher deployment, including Rancher server, Rancher Kubernetes Engine (RKE), and the management cluster's node OS (for security updates). You can alternatively use the API to help automate upgrades.
+
+Upgrades are available by component instead of a cumulative package. As such, some component upgrades such as the Ubuntu OS come available on a more rapid cadence. Upgrades affect only your Rancher server instance and the management cluster that Rancher Server is deployed on. Upgrades to the management cluster node's Ubuntu OS are for critical security patches only and do not upgrade the operating system. User clusters cannot be upgraded from NetApp Hybrid Cloud Control.
+
+.What you'll need
+
+* *Admin privileges*: You have storage cluster administrator permissions to perform the upgrade.
+* *Management services*: You have updated your management services bundle to the latest version.
+
+IMPORTANT: You must upgrade to the latest management services bundle 2.17.xx or later for Rancher functionality.
+
+* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
+
+.Upgrade options
+
+Choose one of the following upgrade processes:
+
+* <<Use NetApp Hybrid Cloud Control UI to upgrade a Rancher deployment>>
+* <<Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment>>
+
+== Use NetApp Hybrid Cloud Control UI to upgrade a Rancher deployment
+
+Using the NetApp Hybrid Cloud Control UI, you can upgrade any of these components in your Rancher deployment:
+
+* Rancher server
+* Rancher Kubernetes Engine (RKE)
+* Node OS security updates
+
+The upgrade process takes approximately xx minutes per component.
+
+.What you'll need
+* A good internet connection. Dark site upgrades are not available.
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Select *Upgrade* near the top right of the interface.
+. On the *Upgrades* page, select *Rancher*.
+. Select the *Actions* menu for the software you want to upgrade.
+
+* Rancher server
+* Rancher Kubernetes Engine (RKE)
+* Node OS security updates
+
+. Select *Upgrade* for Rancher server or RKE upgrades or *Apply Upgrade* for Node OS security updates.
++
+NOTE: For node OS, unattended upgrades for security patches are run on a daily basis but the node is not rebooted automatically. By applying upgrades, you are rebooting each node for the security updates to take effect.
+
+A banner appears indicating the component upgrade is successful. There could be up to a 15 minute delay before NetApp Hybrid Cloud Control UI shows the updated version number.
+
+== Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment
+
+You can use APIs to upgrade any of these components in your Rancher deployment:
+
+* Rancher server
+* Rancher Kubernetes Engine (RKE)
+* Node OS (for security updates)
+
+You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
+
+.Options
+* <<Upgrade Rancher Server>>
+* <<Upgrade RKE>>
+* <<Apply node OS security updates>>
++
+NOTE: For node OS, unattended upgrades for security patches are run on a daily basis but the node is not rebooted automatically. By applying upgrades, you are rebooting each node for the security updates to take effect.
+
+=== Upgrade Rancher Server
+. Open the management node REST API UI on the management node:
++
+----
+https://[managementNodeIP]/k8sdeployer/api/
+----
+. Select *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the authorization window.
+. Check for the latest upgrade package:
+* API commands:
+.. Initiate the list upgrade versions request:
++
+----
+curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/rancher-versions" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+.. Get task status using task ID from previous command:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+* REST UI:
+.. From the REST API UI, run *POST /upgrade​/rancher-versions*.
+.. From the response, copy the task ID.
+.. Run *GET /task​/{taskID}* with the task ID from the previous step.
+. From the */task​/{taskID}* response, copy the latest version number you want to use for the upgrade.
+. Run the Rancher Server upgrade:
+* API command:
+.. Initiate upgrade request:
++
+----
+curl -X PUT "https://<mNodeIP>/k8sdeployer/1/upgrade/rancher/<version number>" -H "accept: application/json" -H "Authorization: Bearer"
+----
+.. Get task status using task ID from previous command:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+* REST UI:
+.. From the REST API UI, run *PUT /upgrade​/rancher​/{version}* with the latest version number from the previous step.
+.. From the response, copy the task ID.
+.. Run *GET /task​/{taskID}* with the task ID from the previous step.
+
+The upgrade has finished successfully when the `PercentComplete` indicates `100` and `results` indicates the upgraded version number.
+
+=== Upgrade RKE
+. Open the management node REST API UI on the management node:
++
+----
+https://[managementNodeIP]/k8sdeployer/api/
+----
+. Select *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the authorization window.
+. Check for the latest upgrade package:
+* API commands:
+.. Initiate the list upgrade versions request:
++
+----
+curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/rke-versions" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+.. Get task status using task ID from previous command:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+* REST UI:
+.. From the REST API UI, run *POST /upgrade​/rke-versions*.
+.. From the response, copy the task ID.
+.. Run *GET /task​/{taskID}* with the task ID from the previous step.
+. From the */task​/{taskID}* response, copy the latest version number you want to use for the upgrade.
+. Run the RKE upgrade:
+* API commands:
+.. Initiate the upgrade request
++
+----
+curl -X PUT "https://<mNodeIP>/k8sdeployer/1/upgrade/rke/<version number>" -H "accept: application/json" -H "Authorization: Bearer"
+----
+.. Get task status using task ID from previous command:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+* REST UI:
+.. From the REST API UI, run *PUT /upgrade/rke/{version}* with the latest version number from the previous step.
+.. Copy the task ID from the response.
+.. Run *GET /task​/{taskID}* with the task ID from the previous step.
+
+The upgrade has finished successfully when the `PercentComplete` indicates `100` and `results` indicates the upgraded version number.
+
+=== Apply node OS security updates
+. Open the management node REST API UI on the management node:
++
+----
+https://[managementNodeIP]/k8sdeployer/api/
+----
+. Select *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the authorization window.
+. Verify if an upgrade package is available:
+* API commands:
+.. Initiate the check upgrades request:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/upgrade/checkNodeUpdates" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+.. Get task status using task ID from previous command:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+* REST UI:
+.. From the REST API UI, run *GET /upgrade/checkNodeUpdates*.
+.. From the response, copy the task ID.
+.. Run *GET /task​/{taskID}* with the task ID from the previous step.
+.. From the */task​/{taskID}* response, verify that there is a more recent version number than the one currently applied to your nodes.
+. Apply the node OS upgrades:
++
+NOTE: For node OS, unattended upgrades for security patches are run on a daily basis but the node is not rebooted automatically. By applying upgrades, you are rebooting each node sequentially for the security updates to take effect.
+
+* API commands:
+.. Apply the node updates:
++
+----
+curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/applyNodeUpdates" -H "accept: application/json" -H "Authorization: Bearer"
+----
+.. Get task status using task ID from previous command:
++
+----
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+----
+* REST API:
+.. From the REST API UI, run *POST /upgrade​/applyNodeUpdates*.
+.. From the response, copy the task ID.
+.. Run *GET /task​/{taskID}* with the task ID from the previous step.
+.. From the */task​/{taskID}* response, verify that the upgrade has been applied.
+
+The upgrade has finished successfully when the `PercentComplete` indicates `100` and `results` indicates the upgraded version number.
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
