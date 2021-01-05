@@ -5,7 +5,7 @@ summary: Learn how to remove a Rancher installation on NetApp HCI deployment so 
 keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 ---
 
-= Remove an incorrect Rancher installation on NetApp HCI
+= Remove a Rancher installation on NetApp HCI
 
 :hardbreaks:
 :nofooter:
