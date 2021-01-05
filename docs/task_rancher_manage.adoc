@@ -1,0 +1,54 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_manage.html
+summary: Learn about how you can manage Rancher on NetApp HCI.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload
+---
+
+= Manage Rancher on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After deploying Rancher on NetApp HCI, you can change Rancher credentials, set up user clusters, and provision user clusters.
+
+
+== Change the Rancher admin user credentials and URL
+
+. Go to myrancher.org
+. Change the password for the default Rancher admin user.
+. Review and accept the terms.
+. Click *Continue*.
++
+Rancher displays a field where you can enter the Rancher URL.
+
+. Enter the Rancher URL that you can use to access your Rancher deployment.
+. Click *Save URL.*
++
+The Rancher Clusters page shows the virtual machines.
+
+== Deploy user clusters
+After deployment, Dev and Ops teams can then deploy their Kubernetes user clusters, similar to any Rancher deployment.
+
+. Go to the Rancher URL provided to you at the end of the Rancher deployment.
+. Access the Rancher UI using that URL.
+. Create user clusters. See https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/workload/[Deploying workloads].
+. Provision user clusters in Rancher on NetApp HCI. See https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/[Setting up Kubernetes clusters in Rancher].
+
+
+== Delete a control plane
+
+ZZZ Need to identify how to do this and what the implications are.
+
+
+
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/concept_rancher_post_deployment_overview.html
-summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
-keywords: netapp, hci, Rancher, install, post installation, requirements, tasks
+permalink: docs/task_rancher_post-deploy.html
+summary: Learn about tasks you complete after installing Rancher on NetApp HCI.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes
 ---
 
-= Post deployment tasks overview
+= Complete post-deployment activities for Rancher on NetApp HCI
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,14 @@ keywords: netapp, hci, Rancher, install, post installation, requirements, tasks
 :imagesdir: ../media/
 
 [.lead]
-After you deploy Rancher on NetApp HCI, you should continue with post-deployment activities.
+After deploying Rancher on NetApp HCI, you should complete post-deployment activities for successful implementation.
+
+After deployment, you can do the following:
 
 * link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI]
 * link:task_rancher_load_balancing.html[Configure load balancing]
 * link:task_rancher_resiliency.html[Configure resiliency]
+
 
 [discrete]
 == Find more information
