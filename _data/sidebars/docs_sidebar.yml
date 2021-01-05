@@ -301,12 +301,10 @@ entries:
           url: /task_rancher_monitor.html
      - title: Upgrade Rancher on NetApp HCI
        url: /task_rancher_upgrades.html
-     - title: Troubleshooting Rancher on NetApp HCI
-       entries:
-        - title: Troubleshoot Rancher on NetApp HCI overview
-          url: /concept_rancher_troubleshoot_overview.html
-        - title: Remove an incorrect Rancher on NetApp HCI deployment
-          url: /task_rancher_remove_deployment.html
+     - title: Troubleshoot Rancher on NetApp HCI overview
+       url: /concept_rancher_troubleshoot_overview.html
+     - title: Remove an incorrect Rancher on NetApp HCI deployment
+       url: /task_rancher_remove_deployment.html
   - title: Maintain H-series hardware
     entries:
      - title: H-series hardware maintenance overview

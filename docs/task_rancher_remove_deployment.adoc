@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_rancher_remove_deployment.html
-summary: Learn how to remove an erroneous or incorrect Rancher on NetApp HCI deployment, so that you can redeploy.
+summary: Learn how to remove a Rancher installation on NetApp HCI deployment so that you can redeploy.
 keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 ---
 
-= Remove an incorrect Rancher on NetApp HCI deployment
+= Remove an incorrect Rancher installation on NetApp HCI
 
 :hardbreaks:
 :nofooter:
@@ -15,16 +15,14 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 
 [.lead]
 
-If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), you need to remove the installation and then redeploy. Follow these steps to remove the Rancher on NetApp HCI instance.
+If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), you need to remove the installation and then redeploy. Follow these steps to remove the Rancher installation on NetApp HCI instance.
+
+.Options
+* <<Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control>>
+* <<Remove Rancher on NetApp HCI using the REST API>>
 
 == Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control
-
-.What you'll need
-
-Your storage cluster and management node must be running NetApp Element software 12.2 or later.
-
-.About this task
-This task uses the NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
+You can use NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
 
 .Steps
 
@@ -42,13 +40,7 @@ https://<ManagementNodeIP>
 . Confirm the action.
 
 == Remove Rancher on NetApp HCI using the REST API
-
-.What you'll need
-
-To use Rancher on NetApp HCI REST APIs, your storage cluster and management node must be running NetApp Element software 12.2 or later.
-
-.About this task
-This task uses the REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
+You can use the NetApp Hybrid Cloud Control REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
 
 .Steps
 
