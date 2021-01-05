@@ -36,6 +36,8 @@ You can create a storage volume using NetApp Hybrid Cloud Control.
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes* > *Overview* tab.
++
+image::hcc_volumes_overview_active.png[HCC Volumes page > Overview tab image]
 . Select *Create Volume*.
 . Enter a name for the new volume.
 . Enter the total size of the volume.
@@ -46,8 +48,9 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 
 . Select a block size for the volume.
 . From the Account list, select the account that should have access to the volume.
-//+
-//If an account does not exist, click the *Create Account* link, enter a new account name, and click *Create*. The account is created and associated with the new volume.
++
+If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the new volume.
+
 +
 NOTE: If there are more than 50 accounts, the list does not appear. Begin typing and the auto-complete feature displays values for you to choose.
 
@@ -117,6 +120,9 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 .. Select the account that should have access to the volume.
 +
 Begin typing and the auto-complete function displays possible values for you to choose.
+
++
+If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the new volume.
 
 .. Change the Quality of Service by doing one of the following:
 ... Select an existing policy.
