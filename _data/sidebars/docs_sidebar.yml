@@ -287,6 +287,8 @@ entries:
        entries:
         - title: Post deployment tasks overview
           url: /concept_rancher_post_deployment_overview.html
+        - title: Create user clusters
+          url: /task_rancher_createcluster.html 
         - title: Install the Trident catalog
           url: /task_rancher_trident.html
         - title: Configure load balancing

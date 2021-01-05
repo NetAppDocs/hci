@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_rancher_trident.html
 summary: Learn about how to install Trident after you install Rancher on NetApp HCI. Trident enables you to create, manage, and interact with persistent storage volumes in the standard Kubernetes format that you are familiar with.
-keywords: netapp, hci, Rancher, install, trident, persistent volumes, pv
+keywords: netapp, hci, rancher, install, trident, persistent volumes, pv
 ---
 
 = Install Trident
@@ -15,7 +15,7 @@ keywords: netapp, hci, Rancher, install, trident, persistent volumes, pv
 [.lead]
 Learn about how to install Trident after you install Rancher on NetApp HCI. Trident is a storage orchestrator, which integrates with Docker and Kubernetes, as well as platforms built on these technologies, such as Red Hat OpenShift, Rancher, and IBM Cloud Private. The goal of Trident is to make the provisioning, connection, and consumption of storage transparent and frictionless for the applications. Trident is a fully supported open source project maintained by NetApp. Trident enables you to create, manage, and interact with persistent storage volumes in the standard Kubernetes format that you are familiar with.
 
-TIP: For more information about Trident, see the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
+TIP: For more information about Trident, see the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation^].
 
 .What you'll need
 
@@ -31,7 +31,7 @@ As part of the Rancher installation, NetApp provides a node template. If you are
 
 . From the Rancher UI, select the *default* project for your user cluster.
 +
-TIP: For information about projects and namespaces, see the https://rancher.com/docs/rancher/v2.x/en/cluster-admin/projects-and-namespaces/[Rancher documentation].
+TIP: For information about projects and namespaces, see the https://rancher.com/docs/rancher/v2.x/en/cluster-admin/projects-and-namespaces/[Rancher documentation^].
 
 . Select *Apps*, and select *Launch*.
 +
@@ -60,3 +60,10 @@ image::rancher-trident-workload.jpg[Shows the Trident namespace components.]
 . (Optional) Select *Storage* for the user cluster to see the storage classes that you can use for your persistent volumes.
 +
 NOTE: The three storage classes are *solidfire-gold*, *solidfire-silver*, and *solidfire-bronze*. You can make one of these storage classes the default by selecting the icon under the *Default* column.
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
