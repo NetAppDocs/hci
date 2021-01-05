@@ -26,7 +26,6 @@ Upgrades are available by component instead of a cumulative package. As such, so
 IMPORTANT: You must upgrade to the latest management services bundle 2.17.xx or later for Rancher functionality.
 
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
-* *Backup of your VM*: It is highly recommended that you create snapshots of your Rancher cluster VMs at a known good state before attempting upgrades.??Not clear if this is still recommended??
 
 .Upgrade options
 
@@ -47,8 +46,6 @@ The upgrade process takes approximately xx minutes per component.
 
 .What you'll need
 * A good internet connection. Dark site upgrades are not available.
-
-NOTE: For potential issues during Rancher component upgrades using NetApp Hybrid Cloud Control, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
 .Steps
 
