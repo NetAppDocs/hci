@@ -278,26 +278,32 @@ entries:
      - title: Rancher on NetApp HCI overview
        url: /concept_rancher_product_overview.html
      - title: Concepts
-       url: /concept_rancher_concepts_overview.html
+       url: /concept_rancher_concepts.html
      - title: Requirements for Rancher on NetApp HCI
        url: /rancher_prereqs_overview.html
      - title: Deploy Rancher on NetApp HCI
-       url: /concept_rancher_deploy_overview.html
+       url: /task_rancher_deploy.html
      - title: Post deployment tasks
        entries:
         - title: Post deployment tasks overview
           url: /concept_rancher_post_deployment_overview.html
+        - title: Install the Trident catalog
+          url: /task_rancher_trident.html
         - title: Configure load balancing
           url: /task_rancher_load_balancing.html
         - title: Configure resiliency
           url: /task_rancher_resiliency.html
      - title: Manage a Rancher on NetApp HCI deployment
-       url: /concept_rancher_management_overview.html
+       entries:
+        - title: Manage Rancher on NetApp HCI
+          url: /task_rancher_manage.html
+        - title: Monitor Rancher on NetApp HCI
+          url: /task_rancher_monitor.html
      - title: Upgrade Rancher on NetApp HCI
        url: /task_rancher_upgrades.html
      - title: Troubleshooting Rancher on NetApp HCI
        entries:
-        - title: Troubleshooting Rancher on NetApp HCI overview
+        - title: Troubleshoot Rancher on NetApp HCI overview
           url: /concept_rancher_troubleshoot_overview.html
         - title: Remove an incorrect Rancher on NetApp HCI deployment
           url: /task_rancher_remove_deployment.html

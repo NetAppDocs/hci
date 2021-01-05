@@ -13,4 +13,4 @@ keywords: netapp, hci, Rancher, install, resiliency, vm, affinity
 :imagesdir: ../media/
 
 [.lead]
-There are things you need to know and preparations you need to make so that you can successfully install Rancher on NetApp HCI. Ensure that you implement the following requirements and recommendations before you install Rancher on NetApp HCI.
+Learn about how to configure virtual machine placement for optimal resiliency after installing Rancher on NetApp HCI.
