@@ -1,0 +1,16 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_deploy.html
+summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes
+---
+
+= Deploy Rancher on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+To use Rancher on your NetApp HCI environment, you first deploy Rancher on NetApp HCI.
