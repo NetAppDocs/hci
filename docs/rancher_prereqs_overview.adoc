@@ -19,8 +19,7 @@ NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect informatio
 
 == Node requirements
 
-* Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
-* Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 65GB of free space.
+Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
 
 === Node details
 
@@ -36,7 +35,7 @@ All nodes have the following characteristics:
 | 2 | 8 | 20
 |===
 
-A minimum of 60GB is required to deploy the Rancher Server.
+Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 60GB of free space.
 
 == Network requirements
 
