@@ -65,7 +65,8 @@ TIP: To use LDAP, you must first enable LDAP or LDAPS. See <<Enable LDAP>>.
 +
 TIP: To view the permissions from NetApp Element software, click *Show legacy permissions*. If you select a subset of these permissions, the account is assigned Read-only permissions. If you select all legacy permissions, the account is assigned Administrator permissions.
 
-+TIP: To ensure that all children of a group inherit permissions, create a DN organization admin group in the LDAP server. All the children accounts of that group will inherit those permissions.
++
+TIP: To ensure that all children of a group inherit permissions, create a DN organization admin group in the LDAP server. All the children accounts of that group will inherit those permissions.
 
 . Check the box indicating that "I have read and accept the NetApp End User License Agreement."
 . Click *Create User*.

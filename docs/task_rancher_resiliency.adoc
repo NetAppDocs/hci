@@ -14,3 +14,15 @@ keywords: netapp, hci, Rancher, install, resiliency, vm, affinity
 
 [.lead]
 Learn about how to configure virtual machine placement for optimal resiliency after installing Rancher on NetApp HCI.
+
+You might consider resiliency for these aspects:
+
+* Management clusters are resilient if you configure load balancing or round robin proxy.
+* For user clusters, you can set up resiliency depending on how you want to configure those user clusters.
+
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
