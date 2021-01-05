@@ -16,6 +16,7 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, moni
 There are multiple ways to monitor Rancher management clusters on NetApp HCI:
 
 * Rancher UI. See https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/[Monitoring in Rancher v2.5].
+* NetApp Hybrid Cloud Control
 * NetApp Active IQ
 * vCenter Server
 
@@ -31,7 +32,7 @@ ZZZ TBD
 
 == Monitor Rancher using vCenter Server
 
-ZZZ TBD 
+ZZZ TBD
 
 
 [discrete]
