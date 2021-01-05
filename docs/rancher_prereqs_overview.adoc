@@ -19,7 +19,8 @@ NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect informatio
 
 == Node requirements
 
-Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+* Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
+* Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 65GB of free space.
 
 === Node details
 
@@ -43,14 +44,15 @@ A minimum of 60GB is required to deploy the Rancher Server.
 * Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher server) and the user (k8s) clusters.
 ** Rancher server requires 3 static IP addresses.
 ** Each user cluster requires 3 static IP addresses.
-* If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, gather your proxy information. If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
+* If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, you need to make a pre-deployment change to the management node. Log in to your management node using SSH and follow the https://docs.docker.com/config/daemon/systemd/#httphttps-proxy[instructions^] in the Docker documentation to manually update the proxy settings for Docker.
+* If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
 +
 ----
 127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, .svc, .cluster.local
 ----
 * Ensure that your management node can use DNS to resolve the host name `<any IP address>.nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have set up DNS records for each static IP address you need.
-* Create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+* Rancher on NetApp HCI is not resilient to node failures unless you configure some type of network load balancing. As a best practice, create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
 
 == VMware vSphere requirements
 
