@@ -289,12 +289,10 @@ entries:
           url: /concept_rancher_post_deployment_overview.html
         - title: Configure Rancher VM anti-affinity rules
           url: /task_rancher_config_anti_affinity.html
+        - title: Configure monitoring
+          url: /task_rancher_enable_monitoring.html
         - title: Install the Trident catalog
           url: /task_rancher_trident.html
-        - title: Configure load balancing
-          url: /task_rancher_load_balancing.html
-        - title: Configure resiliency
-          url: /task_rancher_resiliency.html
      - title: Manage Rancher on NetApp HCI
        entries:
         - title: Manage Rancher on NetApp HCI
