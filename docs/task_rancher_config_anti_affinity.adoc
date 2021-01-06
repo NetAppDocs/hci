@@ -5,7 +5,7 @@ summary: Learn about how to configure anti-affinity rules for Rancher VMs to hel
 keywords: netapp, hci, rancher, deploy, cluster, kubernetes, anti, affinity, resiliency
 ---
 
-= Configure Rancher VM anti-affinity rules
+= Improve Rancher VM resiliency
 :hardbreaks:
 :nofooter:
 :icons: font
