@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_rancher_deploy.html
-summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
-keywords: netapp, hci, rancher, deploy, cluster, kubernetes
+permalink: docs/task_rancher_config_anti_affinity.html
+summary: Learn about how to configure anti-affinity rules for Rancher VMs to help with host resiliency.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, anti, affinity, resiliency
 ---
 
-= Deploy Rancher on NetApp HCI
+= Configure Rancher VM anti-affinity rules
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,6 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes
 :imagesdir: ../media/
 
 [.lead]
-To use Rancher on your NetApp HCI environment, you first deploy Rancher on NetApp HCI.
+After you deploy Rancher on NetApp HCI, your vSphere environment will contain three new virtual machines to host the Rancher environment. The Rancher web UI is available from each of these new nodes. For full resiliency, each of these nodes should reside on a different physical host.
+
+To ensure that each VM remains on a different physical host, you can create VMware vSphere Distributed Resource Scheduler (DRS) anti-affinity rules. This is not automated as part of Rancher on NetApp HCI deployment.
