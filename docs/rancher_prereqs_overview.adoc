@@ -20,7 +20,8 @@ NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect informatio
 == Node requirements
 
 * Ensure that your NetApp HCI system has at least 3 compute nodes; this is required for full resiliency. Rancher on NetApp HCI is not supported on storage-only configurations.
-* Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 65GB of free space.
+* Ensure that the datastore you intend to use for the Rancher on NetApp HCI deployment has at least 60GB of free space.
+* Ensure that your NetApp HCI cluster is running management services version 2.17.x or later.
 
 === Node details
 
@@ -35,8 +36,6 @@ All nodes have the following characteristics:
 | Disk (GB)
 | 2 | 8 | 20
 |===
-
-A minimum of 60GB is required to deploy the Rancher Server.
 
 == Network requirements
 
@@ -56,6 +55,7 @@ A minimum of 60GB is required to deploy the Rancher Server.
 
 == VMware vSphere requirements
 
+* Ensure that the VMware vSphere instance you are using is version 6.0, 6.5, or 7.0.
 * Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
 * As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
 

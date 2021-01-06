@@ -162,6 +162,7 @@ image::rancher_deploy_complete_url.png[Rancher deployment completion and URL]
 
 In your vSphere client, you can see the Rancher management cluster, which includes the three virtual machines.
 
+IMPORTANT: Once you have finished deployment, do not modify the configuration of the Rancher server virtual machine cluster or remove the virtual machines. Rancher on NetApp HCI relies on the deployed RKE management cluster configuration to function normally.
 
 === Obtain and register Technical Support
 
