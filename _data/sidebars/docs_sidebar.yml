@@ -209,11 +209,13 @@ entries:
                 url: /task_mnode_configure_proxy_server.html
               - title: Create and manage storage cluster assets
                 url: /task_mnode_manage_storage_cluster_assets.html
+              - title: Verify management node OS and services versions
+                url: /task_mnode_api_find_mgmt_svcs_version.html
           - title: Manage support connections
             entries:
               - title: Start a remote NetApp Support session
                 url: /task_mnode_enable_remote_support_connections.html
-              - title: Manage SSH support functionality on the management node
+              - title: Manage SSH functionality on the management node
                 url: /task_mnode_ssh_management.html
       - title: Power your NetApp HCI system off or on
         entries:

@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_mnode_ssh_management.html
-summary: You can enable, disable, or determine the status of SSH support connection capability on the management node using the REST API UI.
-keywords: netapp, mnode, management node, rest api, hci
+summary: You can disable, enable, or determine the status of SSH support connection capability on the management node using the REST API UI.
+keywords: netapp, mnode, management node, ssh, disable, enable, rest api
 ---
 
-= Manage SSH support functionality on the management node
+= Manage SSH functionality on the management node
 
 :hardbreaks:
 :nofooter:
@@ -14,81 +14,68 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You can enable, disable, or determine the status of the SSH support connection capability on the management node (mNode) using the REST API. By default, SSH capability is enabled until you disable it.
+You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
 
 .Before you begin
 * *Authoritative cluster administrator permissions*: You have permissions as administrator on the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster].
 * *Element software*: Your cluster is running NetApp Element software 11.3 or later.
 * *Management node*: You have deployed a management node running version 11.3 or later.
-* *Management services updates*: You have updated your https://mysupport.netapp.com/products/p/mgmtservices.html[management services bundle] to the version 2.17.
+* *Management services updates*: You have updated your https://mysupport.netapp.com/products/p/mgmtservices.html[management services bundle] to version 2.17.
 
 .Options
-You can do any of the following tasks after you link:task_mnode_api_get_authorizationtouse.html[authenticate].
-* <<Disable the SSH support capability on the management node>>
-* <<Enable the SSH support capability on the management node>>
-* <<Determine status of the SSH support capability on the management node>>
+You can do any of the following tasks after you link:task_mnode_api_get_authorizationtouse.html[authenticate]:
 
-== Disable the SSH support capability on the management node
-You can edit the stored user name or password for any of the existing vCenter controllers registered with the management node. You cannot edit the stored IP address of an existing vCenter controller.
+* <<Disable or enable the SSH capability on the management node>>
+* <<Determine status of the SSH capability on the management node>>
 
-.Steps
-. Click *PUT /compute/controllers/{controller_id}*.
-. Enter the controller ID of a vCenter controller in the `controller_id` parameter.
-. Click *Try it out*.
-. Change either of the following parameters in the *Request body* field:
+== Disable or enable the SSH capability on the management node
+You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default. If you disable it and elect to re-enable it at a later time, you can do so using the same API.
+
+.API command
+----
+curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+----
+
+.REST API UI steps
+. Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
 +
-|===
-|Parameter |Type |Description
+----
+https://<managementNodeIP>/mnode/
+----
+. Select *Authorize* and complete the following:
+.. Enter the authoritative cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+. From the REST API UI, select *PUT /settings​/ssh*.
+.. Click *Try it out*.
+.. Set the *enabled* parameter to `false` to disable SSH or `true` to re-enable SSH capability that you previously disabled.
+.. Click *Execute*.
 
-|`userId`
-|string
-|Change the user ID used to communicate with the vCenter controller (the user must have administrator privileges).
+== Determine status of the SSH capability on the management node
+You can determine the SSH capability on the management node using a management node service API. SSH is enabled by default on the management node.
 
-|`password`
-|string
-|Change the password used to communicate with the vCenter controller.
-|===
-. Click *Execute*.
+.API command
+----
+curl -X GET "https://<managementNodeIP>/mnode/settings/ssh" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+----
+
+.REST API UI steps
+. Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
 +
-The API returns updated controller information.
-
-== Enable the SSH support capability on the management node
-You can edit the stored user name or password for any of the existing vCenter controllers registered with the management node. You cannot edit the stored IP address of an existing vCenter controller.
-
-.Steps
-. Click *PUT /compute/controllers/{controller_id}*.
-. Enter the controller ID of a vCenter controller in the `controller_id` parameter.
-. Click *Try it out*.
-. Change either of the following parameters in the *Request body* field:
-+
-|===
-|Parameter |Type |Description
-
-|`userId`
-|string
-|Change the user ID used to communicate with the vCenter controller (the user must have administrator privileges).
-
-|`password`
-|string
-|Change the password used to communicate with the vCenter controller.
-|===
-. Click *Execute*.
-+
-The API returns updated controller information.
-
-== Determine status of the SSH support capability on the management node
-You can list existing vCenter controllers that are registered with the management node and view stored information about them using the REST API.
-
-.Steps
-. Click *GET /compute/controllers*.
-. Click *Try it out*.
-. Click *Execute*.
-+
-The API returns a list of all known vCenter controllers, along with the IP address, controller ID, hostname, and user ID used to communicate with each controller.
-. If you want the connection status of a particular controller, copy the controller ID from the `id` field of that controller to your clipboard and see <<View the status of an existing controller>>.
+----
+https://<managementNodeIP>/mnode/
+----
+. Select *Authorize* and complete the following:
+.. Enter the authoritative cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+. From the REST API UI, select *GET /settings​/ssh*.
+.. Click *Try it out*.
+.. Click *Execute*.
 
 [discrete]
 == Find more information
-* link:task_mnode_add_assets.html[Add an asset to the management node]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

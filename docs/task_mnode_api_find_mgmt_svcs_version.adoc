@@ -1,0 +1,66 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_api_find_mgmt_svcs_version.html
+summary: You can find the management node OS and management services versions used by the management node using the REST API.
+keywords: netapp, hci, management node, management services, version, bundle version, what is
+---
+
+= Verify management node OS and services versions
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can verify the version numbers of the management node OS, management services bundle, and individual services running on the management node using the REST API in the management node.
+
+.Before you begin
+
+* Your cluster is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
+
+.Options
+* <<API commands>>
+* <<REST API UI steps>>
+
+== API commands
+* Get version information about the management node OS, the management services bundle, and the management node API (mnode-api) service that are running on the management node:
++
+----
+curl -X GET "https://<managementNodeIP>/mnode/about" -H  "accept: application/json"
+----
+* Get version information about individual services running on the management node:
++
+----
+curl -X GET "https://<managementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer <ID>"
+----
+
+== REST API UI steps
+
+. Access the REST API UI for the service by entering the management node IP address followed by `/mnode/`:
++
+----
+https://<managementNodeIP>/mnode/
+----
+. Do one of the following:
+* Get version information about the management node OS, the management services bundle, and the management node API (mnode-api) service that are running on the management node:
+.. Select *GET /about*.
+.. Select *Try it out*.
+.. Select *Execute*.
++
+The management services bundle version (`"mnode_bundle_version"`), management node OS version (`"os_version"`), and management node API version (`"version"`) are indicated in the response body.
+
+* Get version information about individual services running on the management node:
+.. Select *GET /services*.
+.. Select *Try it out*.
+.. Select the status as *Running*.
+.. Select *Execute*.
++
+The services that are running on the management node are indicated in the response body.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
