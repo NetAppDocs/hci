@@ -16,11 +16,11 @@ keywords: netapp, mnode, management node, ssh, disable, enable, rest api
 [.lead]
 You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
 
-.Before you begin
-* *Authoritative cluster administrator permissions*: You have permissions as administrator on the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster].
+.What you'll need
+* *Cluster administrator permissions*: You have permissions as administrator on the storage cluster.
 * *Element software*: Your cluster is running NetApp Element software 11.3 or later.
 * *Management node*: You have deployed a management node running version 11.3 or later.
-* *Management services updates*: You have updated your https://mysupport.netapp.com/products/p/mgmtservices.html[management services bundle] to version 2.17.
+* *Management services updates*: You have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle] to version 2.17.
 
 .Options
 You can do any of the following tasks after you link:task_mnode_api_get_authorizationtouse.html[authenticate]:
@@ -43,7 +43,7 @@ curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>"
 https://<managementNodeIP>/mnode/
 ----
 . Select *Authorize* and complete the following:
-.. Enter the authoritative cluster user name and password.
+.. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client`.
 .. Select *Authorize* to begin a session.
 .. Close the window.
@@ -53,7 +53,7 @@ https://<managementNodeIP>/mnode/
 .. Click *Execute*.
 
 == Determine status of the SSH capability on the management node
-You can determine the SSH capability on the management node using a management node service API. SSH is enabled by default on the management node.
+You can determine whether or not SSH capability is enabled on the management node using a management node service API. SSH is enabled by default on the management node.
 
 .API command
 ----
@@ -67,7 +67,7 @@ curl -X GET "https://<managementNodeIP>/mnode/settings/ssh" -H  "accept: applica
 https://<managementNodeIP>/mnode/
 ----
 . Select *Authorize* and complete the following:
-.. Enter the authoritative cluster user name and password.
+.. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client`.
 .. Select *Authorize* to begin a session.
 .. Close the window.

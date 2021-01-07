@@ -38,7 +38,7 @@ https://<managementNodeIP>/mnode/
 NOTE: Alternately, you can click on a lock icon next to any service API.
 
 . Complete the following:
-.. Enter the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster] user name and password.
+.. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client`.
 .. Do not enter a value for the client secret.
 .. Click *Authorize* to begin a session.

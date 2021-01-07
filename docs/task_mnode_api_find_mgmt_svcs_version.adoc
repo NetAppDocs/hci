@@ -16,7 +16,7 @@ keywords: netapp, hci, management node, management services, version, bundle ver
 [.lead]
 You can verify the version numbers of the management node OS, management services bundle, and individual services running on the management node using the REST API in the management node.
 
-.Before you begin
+.What you'll need
 
 * Your cluster is running NetApp Element software 11.3 or later.
 * You have deployed a management node running version 11.3 or later.
