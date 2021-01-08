@@ -2,10 +2,10 @@
 sidebar: docs_sidebar
 permalink: docs/task_mnode_enable_remote_support_connections.html
 summary: You can use the management node to enable NetApp Support access for troubleshooting.
-keywords: netapp, mnode, management node, netapp support connect, support tunnel
+keywords: netapp, mnode, management node, connect to support, support tunnel, rst
 ---
 
-= Enable remote NetApp Support connections
+= Start a remote NetApp Support session
 
 :hardbreaks:
 :nofooter:
@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, netapp support connect, support tunnel
 :imagesdir: ../media/
 
 [.lead]
-If you require technical support for your NetApp Element software-based storage system, NetApp Support can connect remotely with your system if you enable remote access. To gain remote access, NetApp Support can open a reverse Secure Shell (SSH) connection to your environment.
+If you require technical support for your NetApp HCI or SolidFire all-flash storage system, NetApp Support can connect remotely with your system. To start a session and gain remote access, NetApp Support can open a reverse Secure Shell (SSH) connection to your environment.
 
 .About this task
 You can open a TCP port for an SSH reverse tunnel connection with NetApp Support. This connection enables NetApp Support to log in to your management node. If your management node is behind a proxy server, the following TCP ports are required in the sshd.config file:
@@ -27,6 +27,8 @@ You can open a TCP port for an SSH reverse tunnel connection with NetApp Support
 | 443 | API calls/HTTPS for reverse port forwarding via open support tunnel to the web UI | Management node to storage nodes
 | 22 | SSH login access | Management node to storage nodes or from storage nodes to management node
 |===
+
+NOTE: By default, the capability for remote access is enabled on the management node. To disable remote access functionality, see link:task_mnode_ssh_management.html[Manage SSH functionality on the management node]. You can enable remote access functionality again, if needed.
 
 .Steps
 * Log in to your management node and open a terminal session.

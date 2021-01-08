@@ -26,12 +26,12 @@ NetApp HCI with Element 12.2 or later enables you to access storage cluster web 
 . Ensure that the Element storage nodes and the management node have DNS configured correctly for the network environment so that FQDNs in the environment can be resolved. To set DNS, go to the per-node UI for storage nodes and to the management node, then select *Network Settings* > *Management Network*.
 .. Per-node UI for storage nodes: `https://<storage_node_management_IP>:442`
 .. Per-node UI for the management node: `https://<management_node_IP>:442`
-. Access the Element API and create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, inserting the cluster MVIP FQDN for the preference value:
+. Access the Element API and create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, and insert the cluster MVIP FQDN for the preference value:
 +
 * Name: `mvip_fqdn`
 * Value: <Fully Qualified Domain Name for the Cluster MVIP>
 +
-For example, where the FQDN is `storagecluster.my.org`:
+For example, the FQDN here is `storagecluster.my.org`:
 +
 ----
 https://<Cluster_MVIP>/json-rpc/12.2?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=storagecluster.my.org
@@ -40,22 +40,30 @@ https://<Cluster_MVIP>/json-rpc/12.2?method=CreateClusterInterfacePreference&nam
 .. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example:
 +
 ----
-https://[management node IP]/mnode/2/
+https://<management_node_IP>/mnode/2/
 ----
-.. Click *Authorize* or any lock icon and enter the cluster user name and password.
+.. Click *Authorize* or any lock icon and enter the Element cluster user name and password.
 .. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session and then close the window.
-.. From the server list, select `mnode2`.
+.. Click *Authorize* to begin a session.
+.. Close the window.
 .. Click *GET /settings*.
 .. Click *Try it out*.
 .. Click *Execute*.
-.. Record any proxy settings reported in the response body.
+.. Note whether or not the proxy is used as indicated in `"use_proxy"` by `true` or `false`.
 .. Click *PUT /settings*.
 .. Click *Try it out*.
-.. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter.
-.. Enter any proxy setting values you recorded earlier in the remaining parameters in the request body. If you leave the proxy parameters empty or do not include them in the request body, existing proxy settings will be removed.
+.. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter. Also specify whether the proxy should be used (`true` or `false` from the previous step) for the `use_proxy` parameter.
++
+----
+{
+  "mnode_fqdn": "mnode.my.org",
+  "use_proxy": false
+}
+----
 .. Click *Execute*.
 
 [discrete]
 == Find more information
 * http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-93942724-1C4C-4F3D-B352-89498F7722ED.html[CreateClusterInterfacePreference API information in the SolidFire and Element Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
