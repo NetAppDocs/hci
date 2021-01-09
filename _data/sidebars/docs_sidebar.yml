@@ -287,12 +287,8 @@ entries:
        entries:
         - title: Post deployment tasks overview
           url: /concept_rancher_post_deployment_overview.html
-        - title: Install the Trident catalog
-          url: /task_rancher_trident.html
-        - title: Configure load balancing
-          url: /task_rancher_load_balancing.html
-        - title: Configure resiliency
-          url: /task_rancher_resiliency.html
+     - title: Deploy user clusters and applications
+       url: /task_rancher_deploy_user_clusters.html
      - title: Manage Rancher on NetApp HCI
        entries:
         - title: Manage Rancher on NetApp HCI

@@ -17,14 +17,14 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 
 If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), you need to remove the installation and then redeploy. Follow these steps to remove the Rancher on NetApp HCI instance.
 
+This action does not delete the user clusters.
+
+TIP: You might want to retain the user clusters. If you do retain them, you can later migrate them to another Rancher implementation. If you want to delete the user clusters, you should do that first before deleting the Rancher server; otherwise, deleting the user clusters after the Rancher server is deleted is more difficult.
+
+
 == Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control
 
-.What you'll need
-
-Your storage cluster and management node must be running NetApp Element software 12.2 or later.
-
-.About this task
-This task uses the NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
+You can use the NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
 
 .Steps
 
@@ -36,19 +36,19 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . From the Dashboard, click the menu on the upper right.
 . Select *Configure*.
++
+image::hcc_configure.png[Rancher Configuration page]
+
 . In the *Rancher Server Clusters* pane, click *Configure Rancher Server Clusters*.
 . Select the *Actions* menu for the Rancher installation you need to remove.
++
+CAUTION: Clicking *Delete* next removes the Rancher on NetApp HCI implementation and removes all management clusters.
+
 . Select *Delete*.
-. Confirm the action.
 
 == Remove Rancher on NetApp HCI using the REST API
 
-.What you'll need
-
-To use Rancher on NetApp HCI REST APIs, your storage cluster and management node must be running NetApp Element software 12.2 or later.
-
-.About this task
-This task uses the REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
+You can use the NetApp Hybrid Cloud Control REST API to remove the three virtual machines that were set up during deployment to host the Rancher server.
 
 .Steps
 
@@ -63,9 +63,6 @@ https://[IP address]/k8sdeployer/api/
 .. Enter the client ID as `mnode-client` if the value is not already populated.
 .. Do not enter a value for the client secret.
 .. Click *Authorize* to begin a session.
-+
-NOTE:  If you get the `Auth Error TypeError: Failed to fetch` error message after you attempt to authorize, you might need to accept the SSL certificate for the MVIP of your cluster. Copy the IP address in the Token URL, paste the IP into another browser tab, and authorize again. If you attempt to run a command after the token expires, you get an `Error: UNAUTHORIZED` error. If you receive this response, authorize again.
-
 . Close the *Available authorizations* dialog box.
 . Click *POST/destroy*.
 . Click *Try it out*.
