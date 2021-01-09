@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_rancher_remove_deployment.html
-summary: Learn how to remove an erroneous or incorrect Rancher on NetApp HCI deployment, so that you can redeploy.
+summary: Learn how to remove a Rancher installation on NetApp HCI deployment so that you can redeploy.
 keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 ---
 
-= Remove an incorrect Rancher on NetApp HCI deployment
+= Remove a Rancher installation on NetApp HCI
 
 :hardbreaks:
 :nofooter:
@@ -15,7 +15,7 @@ keywords: netapp, hci, api, REST, remove, Rancher, redeploy
 
 [.lead]
 
-If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), you need to remove the installation and then redeploy. Follow these steps to remove the Rancher on NetApp HCI instance.
+If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), you need to remove the installation and then redeploy. Follow these steps to remove the Rancher installation on NetApp HCI instance.
 
 This action does not delete the user clusters.
 
@@ -25,6 +25,13 @@ TIP: You might want to retain the user clusters. If you do retain them, you can 
 == Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control
 
 You can use the NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
+
+.Options
+* <<Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control>>
+* <<Remove Rancher on NetApp HCI using the REST API>>
+
+== Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control
+You can use NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
 
 .Steps
 
@@ -63,6 +70,7 @@ https://[IP address]/k8sdeployer/api/
 .. Enter the client ID as `mnode-client` if the value is not already populated.
 .. Do not enter a value for the client secret.
 .. Click *Authorize* to begin a session.
+.. Close the window.
 . Close the *Available authorizations* dialog box.
 . Click *POST/destroy*.
 . Click *Try it out*.
