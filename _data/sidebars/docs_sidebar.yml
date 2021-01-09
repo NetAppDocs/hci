@@ -299,6 +299,8 @@ entries:
           url: /task_rancher_enable_monitoring.html
         - title: Install the Trident catalog
           url: /task_rancher_trident.html
+     - title: Deploy user clusters and applications
+       url: /task_rancher_deploy_user_clusters.html
      - title: Manage Rancher on NetApp HCI
        entries:
         - title: Manage Rancher on NetApp HCI

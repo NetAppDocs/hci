@@ -49,17 +49,13 @@ image::rancher_architecture_diagram.png[Rancher on NetApp HCI architecture]
 +
 TIP: You can use Hybrid Cloud Control also to upgrade NetApp HCI management services, expand your system, collect logs, and monitor your installation with NetApp Active IQ.
 
-* *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on a NetApp HCI compute node or nodes.
-
-* The *NetApp Element Plug-in for vCenter Server* is a web-based tool integrated with the VMware vSphere user interface (UI). The plug-in is an extension and interface for VMware vSphere that can manage and monitor storage clusters running NetApp Element software. You can use the plug-in  interface to discover and configure clusters, and to manage, monitor, and allocate storage from cluster capacity to configure datastores and virtual datastores (for virtual volumes).
+* *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on one or more NetApp HCI compute node.
 
 * *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
 TIP: For the best performance and greater security, consider using a dedicated Kubernetes cluster for the Rancher management server. You should not run your user workloads on the management cluster.
 
-* *User clusters*: The downstream Kubernetes clusters run your apps and services. Any cluster that you deploy from Rancher or import into Rancher is a user cluster.
-
-* *EZ Rancher*, part of Rancher, helps to deploy the Rancher server on vSphere. It creates the virtual machines infrastructure, configures the Rancher server, and optionally creates a Rancher user cluster.
+* *User clusters*: The downstream Kubernetes user clusters run your apps and services. Any cluster that you deploy from Rancher or import into Rancher is a user cluster.
 
 
 [discrete]
