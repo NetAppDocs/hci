@@ -293,8 +293,8 @@ entries:
        entries:
         - title: Post deployment tasks overview
           url: /concept_rancher_post_deployment_overview.html
-        - title: Ensure license parity
-          url: /task_rancher_ensure_license_parity.html
+        - title: Ensure Rancher Support parity
+          url: /task_rancher_ensure_rancher_support_parity.html
         - title: Improve Rancher VM resiliency
           url: /task_rancher_config_anti_affinity.html
         - title: Configure monitoring
