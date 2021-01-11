@@ -18,14 +18,15 @@ keywords: netapp, hci, api, REST, remove, compute, asset
 If you physically replace a compute node or need to remove it from the NetApp HCI cluster, you must remove the compute node asset using the management node APIs.
 
 .What you'll need
-* To use REST APIs, your storage cluster must be running NetApp Element software 11.5 or later and you must have deployed a management node running version 11.5 or later.
+* Your storage cluster is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
 
 .Steps
 
-. Enter the management node IP address followed by /mnode/1/:
+. Enter the management node IP address followed by `/mnode/1/`:
 +
 ----
-https://[IP address]/mnode/1/
+https://<managementNodeIP>/mnode/1/
 ----
 . Click *Authorize* or any lock icon and enter cluster admin credentials for permissions to use APIs.
 .. Enter the cluster user name and password.
@@ -33,9 +34,7 @@ https://[IP address]/mnode/1/
 .. Enter the client ID as `mnode-client` if the value is not already populated.
 .. Do not enter a value for the client secret.
 .. Click *Authorize* to begin a session.
-+
-NOTE:  If you get the `Auth Error TypeError: Failed to fetch` error message after you attempt to authorize, you might need to accept the SSL certificate for the MVIP of your cluster. Copy the IP address in the Token URL, paste the IP into another browser tab, and authorize again. If you attempt to run a command after the token expires, you get an `Error: UNAUTHORIZED` error. If you receive this response, authorize again.
-
+.. Close the window.
 . Close the *Available authorizations* dialog box.
 . Click *GET/assets*.
 . Click *Try it out*.
@@ -43,5 +42,5 @@ NOTE:  If you get the `Auth Error TypeError: Failed to fetch` error message afte
 . Scroll down in the response body to the *Compute* section, and copy the `parent` and `id` values for the failed compute node.
 . Click *DELETE/assets/{asset_id}/compute-nodes/{compute_id}*.
 . Click *Try it out*.
-. Enter the `parent` and `id` values you got in step 7.
+. Enter the `parent` and `id` values you copied in a previous step.
 . Click *Execute*.
