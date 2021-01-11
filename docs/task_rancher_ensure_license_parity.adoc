@@ -1,0 +1,25 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_ensure_license_parity.html
+summary: Learn about ensuring that the licenses in use for Rancher match what you purchased.
+keywords: netapp, hci, Rancher, licensing
+---
+
+= Ensure license parity
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you deploy Rancher on NetApp HCI, you should ensure that the number of CPU cores you purchased with your Rancher support license matches the number of CPU cores in use for Rancher management and user clusters.
+
+
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
