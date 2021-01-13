@@ -44,9 +44,9 @@ The Rancher Server Clusters page displays a list of Rancher server clusters that
 
 == Delete a Rancher server instance
 
-You can delete the Rancher server, which deletes the management clusters. This action does not delete the user clusters.
+Deleting the Rancher server deletes the management clusters but does not delete the user clusters.
 
-TIP: You might want to retain the user clusters. If you do retain them, you can later migrate them to another Rancher implementation. If you want to delete the user clusters, you should do that first before deleting the Rancher server; otherwise, deleting the user clusters after the Rancher server is deleted is more difficult.
+TIP: You could retain the user clusters, if you want to migrate them later to another Rancher implementation. Conversely, if you want to delete the user clusters, you should do that first before deleting the Rancher server. Otherwise, deleting the user clusters after the Rancher server is deleted is more difficult.
 
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.

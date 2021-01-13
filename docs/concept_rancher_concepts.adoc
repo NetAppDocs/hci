@@ -33,9 +33,9 @@ See  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/[Ranc
 == Trident software and persistent storage concepts
 Trident, itself a Kubernetes-native application, runs directly within a Kubernetes cluster. With Trident, Kubernetes users (such as developers, data scientists, and Kubernetes administrators) can create, manage, and interact with persistent storage volumes in the standard Kubernetes format that they are already familiar with. With Trident, NetApp solutions can meet persistent volume claims that are made by Kubernetes clusters.
 
-* *Persistent storage*: With Rancher, you can use a persistent volume, one that exists independently of any specific pod and with its own lifetime. Persistent volumes can be used to support stateful applications, such as database services, enabling all components of an enterprise solution to be deployed and managed by NKS. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
+With Rancher, you can use a persistent volume, one that exists independently of any specific pod and with its own lifetime. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
 
-* *Trident software with Rancher*: Rancher on NetApp HCI employs Trident software to provision storage automatically to containerized applications. Trident is automatically deployed and configured when new Kubernetes clusters are created. When a containerized application issues a persistent volume claim (PVC) request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
+A Trident catalog is available to Rancher on NetApp HCI. When a containerized application issues a persistent volume claim (PVC) request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
 
 For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
 
