@@ -15,7 +15,7 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes
 [.lead]
 To use Rancher on your NetApp HCI environment, you first deploy Rancher on NetApp HCI.
 
-TIP: Before starting the deployment, be sure to check the link:rancher_prereqs_overview.html[Requirements for Rancher on NetApp HCI].
+TIP: Before starting the deployment, be sure to check the datastore free space and other link:rancher_prereqs_overview.html[requirements for Rancher on NetApp HCI].
 
 
 == What happens when you deploy Rancher on NetApp HCI?
@@ -32,51 +32,6 @@ Each virtual machine is assigned all Kubernetes roles for both the Control Plane
 * After deployment, you will receive an email from NetApp providing you with the option to register for NetApp Support on Rancher deployments on NetApp HCI.
 
 * After deployment, Dev and Ops teams can then deploy their user clusters, similar to any Rancher deployment.
-
-== Deployment considerations
-You might want to review the following considerations:
-
-* Types of deployments
-** Demo deployments
-** Production deployments
-* Rancher FQDN
-
-
-=== Types of deployments
-You can deploy Rancher on NetApp HCI in the following ways:
-
-* *Demo deployments*: If DHCP is available in the targeted deployment environment and you want to demo the Rancher on NetApp HCI capability, then a DHCP deployment makes the most sense.
-+
-In this deployment model, the Rancher UI is accessible from each of the three nodes in the management cluster.
-
-+
-If your organization does not use DHCP, you can still try it out by using four static IP addresses allocated prior the deployment, similar to what you would do for a production deployment.
-
-* *Production deployments*: For production deployments or when DHCP is not available in the targeted deployment environment, a little more pre-deployment work is required.  The first step is to obtain three consecutive IP addresses. You enter the first during the deployment.
-
-+
-We recommend an L4 load balancer or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.
-
-** *L4 load balancer*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
-** *Round-robin DNS*: This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
-
-=== Rancher FQDN
-
-The installation requires assignment of a Rancher URL, which includes the fully qualified domain name (FQDN) of the host where the Rancher UI will be served after the installation is complete.  The following table lists how you will access the Rancher UI based on configuration parameters of the deployment.
-
-In all cases the Rancher UI is accessible in your browser over https protocol (port 443).
-
-
-[cols=3*,options="header",cols="20,20, 55"]
-|===
-| IP addressing
-| Rancher FQDN
-| Rancher UI access
-|DHCP | Not applicable | Available from all three nodes by wildcard DNS. Consider adding round-robin DNS or a load balancer.
-| DHCP | FQDN | Served by the FQDN, which resolves based on your DNS.
-| Static | Not applicable | Available from all three nodes by wildcard DNS. Consider adding round-robin DNS or a load balancer.
-| Static | FQDN | Served by the FQDN, which resolves based on your DNS.
-|===
 
 
 == Steps to deploy Rancher on NetApp HCI
@@ -114,34 +69,34 @@ The Rancher UI appears.
 image::rancher_hcc_deploy_vcenter.png[Rancher deployment page]
 Your vCenter credentials are collected based on your NetApp Deployment Engine installation.
 
-. Enter *vCenter Resources* information
+. Enter *vCenter Resources* information. Some fields are described next.
 
 * *Datacenter*: Select a datacenter. After you select the datacenter, all other fields are prepopulated, although you can change them.
-* *Datastore*:
-* *Resource Pool*:
-* *Management network*:
+* *Datastore*: Select a datastore on the NetApp HCI storage nodes. This datastore should be resilient and accessible to all of the VMware hosts. Do not select a local datastore that is accessible to only one of the hosts.
+//* *Resource Pool*:
+* *Management network*: This should be accessible from the management stations and from the virtual machine network where the user clusters will be hosted.
 
 . Enter *Deployment Settings* information
 
-* *Rancher Server Admin Password*:
-* *Cluster name*:
-* *DNS Servers*: Optionally, enter
+//* *Rancher Server Admin Password*:
+//* *Cluster name*:
+* *DNS Servers*: Optional. If you use load balancing, enter the internal DNS server information.
 * *Rancher Server FQDN*: To ensure that the Rancher Server remains available during node failures, provide a fully-qualified domain name (FQDN) that your DNS server can resolve to any of the IP addresses assigned to the Rancher Server cluster's nodes. This FQDN with the "https" prefix becomes the Rancher URL that you will use to access your Rancher implementation.
 +
 If no domain name is provided, wildcard DNS will be used instead and you will be able to access the Rancher Server using one of the URLs presented after the deployment completes.
 
 . Enter *Advanced Settings* information
 
-* *Assign Static IP Addresses*:
-+
-If you enable static IP addressing, the following additional fields appear:
+* *Assign Static IP Addresses*: If you enable static IP addressing, provide starting IP addresses for three IPv4 addresses in sequence, one for each management cluster virtual machine. Rancher on NetApp HCI deploys three management cluster virtual machines.
+//+
+//If you enable static IP addressing, the following additional fields appear:
 
-** Subnet Mask:
-** Default Gateway:
-** Starting IP Address:
-** Ending IP Address:
+//** Subnet Mask
+//** Default Gateway
+//** Starting IP and Ending Address
 
 * *Configure Proxy Server*:
+// Enter link to Rancher proxy server workaround.
 
 . Review and select the checkbox for the Rancher End User License Agreement.
 . Review and select the checkbox to acknowledge information about Rancher software.
@@ -163,12 +118,12 @@ image::rancher_deploy_complete_url.png[Rancher deployment completion and URL]
 
 In your vSphere client, you can see the Rancher management cluster, which includes the three virtual machines.
 
+IMPORTANT: Once you have finished deployment, do not modify the configuration of the Rancher server virtual machine cluster or remove the virtual machines. Rancher on NetApp HCI relies on the deployed RKE management cluster configuration to function normally.
 
 === Obtain and register Technical Support
 
-After deployment, an email is sent to you that includes a Support registration code.
+After deployment, an email is sent to you that includes a Support registration code that you use to register for Support, if you chose the Rancher Support option.
 
-. Go to https://mysupport.netapp.com and log in. ZZ WHERE DO YOU GO TO GET THE SUPPORT OPTION?
 . Open the email sent to you from NetApp after the Rancher on NetApp HCI deployment and locate the Support registration code.
 . Use the code to register your deployment with Rancher as well as NetApp Support.
 
@@ -176,18 +131,16 @@ After deployment, an email is sent to you that includes a Support registration c
 After deployment, you can do the following:
 
 * link:task_rancher_post-deploy.html[Complete post-deployment tasks]
-** Configure load balancing
-** Configure resiliency
 ** link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI]
+* link:task_rancher_deploy_user_clusters.html[Deploy user clusters and applications]
 * link:task_rancher_manage.html[Manage Rancher on NetApp HCI]
 ** Change the Rancher admin user credentials
-** Deploy user clusters
-** Delete a control plane
 ** Monitor Rancher on NetApp HCI
+** Delete a Rancher server instance
+
 
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
