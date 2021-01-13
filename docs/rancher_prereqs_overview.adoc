@@ -51,6 +51,7 @@ All nodes have the following characteristics:
 ----
 * Ensure that your management node can use DNS to resolve the host name `<any IP address>.nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have set up DNS records for each static IP address you need.
+* If you plan on using DHCP addressing for the Rancher control plane or user clusters, ensure that the DHCP lease is configured to be renewed no more frequently than every 24 hours.
 
 
 == VMware vSphere requirements
@@ -60,6 +61,7 @@ All nodes have the following characteristics:
 * As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
 
 == Deployment considerations
+
 You might want to review the following considerations:
 
 * Types of deployments
