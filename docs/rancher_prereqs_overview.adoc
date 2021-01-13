@@ -67,7 +67,7 @@ You might want to review the following considerations:
 ** Production deployments
 * Rancher FQDN
 
-TIP: Rancher on NetApp HCI is not resilient to node failures unless you configure some type of network load balancing. As a best practice, create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+TIP: Rancher on NetApp HCI is not resilient to node failures unless you configure some type of network load balancing. As a simple solution, create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
 
 === Types of deployments
 You can deploy Rancher on NetApp HCI in the following ways:
@@ -82,29 +82,18 @@ If your organization does not use DHCP, you can still try it out by using four s
 * *Production deployments*: For production deployments or when DHCP is not available in the targeted deployment environment, a little more pre-deployment work is required.  The first step is to obtain three consecutive IP addresses. You enter the first during the deployment.
 
 +
-We recommend an L4 load balancer or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.
+We recommend using L4 load balancing or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.
 
-** *L4 load balancer*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
+** *L4 load balancing*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
 ** *Round-robin DNS*: This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
 
 === Rancher FQDN
 
-The installation requires assignment of a Rancher URL, which includes the fully qualified domain name (FQDN) of the host where the Rancher UI will be served after the installation is complete.  The following table lists how you will access the Rancher UI based on configuration parameters of the deployment.
+The installation requires assignment of a Rancher URL, which includes the fully qualified domain name (FQDN) of the host where the Rancher UI will be served after the installation is complete.
 
 In all cases the Rancher UI is accessible in your browser over https protocol (port 443).
 
-
-[cols=3*,options="header",cols="20,20, 55"]
-|===
-| IP addressing
-| Rancher FQDN
-| Rancher UI access
-|DHCP | Not applicable | Available from all three nodes by wildcard DNS. Consider adding round-robin DNS or a load balancer.
-| DHCP | FQDN | Served by the FQDN, which resolves based on your DNS.
-| Static | Not applicable | Available from all three nodes by wildcard DNS. Consider adding round-robin DNS or a load balancer.
-| Static | FQDN | Served by the FQDN, which resolves based on your DNS.
-|===
-
+Production deployments require an FQDN configured that load balances across the management cluster nodes. Without using FQDN and load balancing, the environment is not resilient and is suitable only for demo environments.
 
 == Required ports
 
