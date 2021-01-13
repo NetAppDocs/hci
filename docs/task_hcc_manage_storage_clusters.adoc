@@ -1,0 +1,98 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_manage_storage_clusters.html
+summary: Learn how to create a storage cluster after you have configured all of the individual nodes.
+keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc
+---
+
+= Create and manage storage clusters by using NetApp Hybrid Cloud Control
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can create a storage cluster after you have configured all of the individual nodes.
+
+When you create a cluster, a cluster administrator user account is automatically created for you. The cluster administrator has permission to manage all cluster attributes and can create other cluster administrator accounts.
+
+During new node configuration, 1G or 10G Management IP (MIP) addresses are assigned to each node. You must use one of the node IP addresses created during configuration. The IP address you use depends on the network you chose for cluster management.
+
+Adding a storage cluster to this installation removes it from the installation to which it currently belongs. The authoritative storage cluster and the only storage cluster in an installation cannot be moved.
+
+//Consider these points:
+
+//* If you are using storage nodes that reside in a shared chassis, you might want to consider designing for chassis-level failure protection using the protection domains feature.
+//* If a shared chassis in not in use, you can define a custom protection domain layout.
+
+.What you'll need
+
+* You should have already installed the management node.
+* You should have already configured all of the individual nodes.
+
+
+
+=== Add a storage cluster
+You can add a storage cluster by using NetApp Hybrid Cloud Control.
+
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, click on the top right Options icon and select *Configure*.
+. Select *Add Storage Cluster*.
+. Enter the following information:
++
+* Storage cluster management IP address. Only remote storage clusters that are not currently managed by a management node can be added.
+* Storage cluster user name and password
+
+. Select *Add*.
++
+NOTE: The system might take several minutes to create the cluster depending on the number of nodes in the cluster. On a properly configured network, a small cluster of five nodes should take less than one minute.
+
+. If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
+
+=== Identify the storage cluster status
+You can review a list of storage clusters and identify their statuses.
+
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, click on the top right Options icon and select *Configure*.
+. Review the list of storage clusters and their statuses.
+. From the Storage Clusters pane, select *Storage Cluster Details*.
+
+
+=== Edit storage cluster credentials
+You can edit the storage cluster's user name and password.
+
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, click on the top right Options icon and select *Configure*.
+. Select the *Actions* ellipses and select *Edit Cluster Credentials*.
+. Update the storage cluster user name and password.
+. Select *Save*.
+
+
+
+=== Remove a storage cluster
+Removing a storage cluster from the NetApp HCI installation removes the cluster from the management node. After you remove the storage cluster, you can access it only by navigating directly to its management IP address.
+
+TIP: To move this storage cluster instead to an existing installation, navigate to the destination installation and add it from there.
+
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, click on the top right Options icon and select *Configure*.
+. Select the *Actions* ellipses and select *Remove from installation*.
++
+CAUTION: Clicking *Yes* next removes the cluster from the installation.
+
+. Select *Yes*.
+
+[discrete]
+== Find more information
+* link:concept_hci_clusters.html[Learn about clusters]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

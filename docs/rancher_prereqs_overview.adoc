@@ -51,13 +51,60 @@ All nodes have the following characteristics:
 ----
 * Ensure that your management node can use DNS to resolve the host name `<any IP address>.nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have set up DNS records for each static IP address you need.
-* Rancher on NetApp HCI is not resilient to node failures unless you configure some type of network load balancing. As a best practice, create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+
 
 == VMware vSphere requirements
 
-* Ensure that the VMware vSphere instance you are using is version 6.0, 6.5, or 7.0.
+* Ensure that the VMware vSphere instance you are using is version 6.5 or 7.0.
 * Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
 * As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
+
+== Deployment considerations
+You might want to review the following considerations:
+
+* Types of deployments
+** Demo deployments
+** Production deployments
+* Rancher FQDN
+
+TIP: Rancher on NetApp HCI is not resilient to node failures unless you configure some type of network load balancing. As a best practice, create a round robin DNS entry for the three static IP addresses reserved for Rancher server. These DNS entries should resolve to the Rancher server FQDN that you will use to access the Rancher server host, which serves the Rancher web UI once deployment is complete.
+
+=== Types of deployments
+You can deploy Rancher on NetApp HCI in the following ways:
+
+* *Demo deployments*: If DHCP is available in the targeted deployment environment and you want to demo the Rancher on NetApp HCI capability, then a DHCP deployment makes the most sense.
++
+In this deployment model, the Rancher UI is accessible from each of the three nodes in the management cluster.
+
++
+If your organization does not use DHCP, you can still try it out by using four static IP addresses allocated prior the deployment, similar to what you would do for a production deployment.
+
+* *Production deployments*: For production deployments or when DHCP is not available in the targeted deployment environment, a little more pre-deployment work is required.  The first step is to obtain three consecutive IP addresses. You enter the first during the deployment.
+
++
+We recommend an L4 load balancer or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.
+
+** *L4 load balancer*: This is a technique where a virtual machine or container hosting an application like nginx is configured to distribute requests among the three nodes of the management cluster.
+** *Round-robin DNS*: This is a technique where a single host name is configured in the DNS system that rotates requests among the three hosts that form the management cluster.
+
+=== Rancher FQDN
+
+The installation requires assignment of a Rancher URL, which includes the fully qualified domain name (FQDN) of the host where the Rancher UI will be served after the installation is complete.  The following table lists how you will access the Rancher UI based on configuration parameters of the deployment.
+
+In all cases the Rancher UI is accessible in your browser over https protocol (port 443).
+
+
+[cols=3*,options="header",cols="20,20, 55"]
+|===
+| IP addressing
+| Rancher FQDN
+| Rancher UI access
+|DHCP | Not applicable | Available from all three nodes by wildcard DNS. Consider adding round-robin DNS or a load balancer.
+| DHCP | FQDN | Served by the FQDN, which resolves based on your DNS.
+| Static | Not applicable | Available from all three nodes by wildcard DNS. Consider adding round-robin DNS or a load balancer.
+| Static | FQDN | Served by the FQDN, which resolves based on your DNS.
+|===
+
 
 == Required ports
 

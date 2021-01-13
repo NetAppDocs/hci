@@ -13,7 +13,7 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, moni
 :imagesdir: ../media/
 
 [.lead]
-After deploying Rancher on NetApp HCI, you can change Rancher credentials, set up user clusters, and provision user clusters. You can also delete the Rancher server.
+After deploying Rancher on NetApp HCI, you can change Rancher credentials and view the Rancher server cluster URLs and status. You can also delete the Rancher server.
 
 
 == Change the Rancher admin user credentials and URL
@@ -30,18 +30,12 @@ Rancher displays a field where you can enter the Rancher URL.
 +
 The Rancher Clusters page shows the virtual machines.
 
-== Deploy user clusters
-After deployment, Dev and Ops teams can then deploy their Kubernetes user clusters, similar to any Rancher deployment, on which they can deploy apps.
 
-. Access the Rancher UI using that URL provided to you at the end of the Rancher deployment.
-. Create user clusters. See https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/workload/[Deploying workloads].
-. Provision user clusters in Rancher on NetApp HCI. See https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/[Setting up Kubernetes clusters in Rancher].
-
-== View Rancher server cluster URLs and status
-You can view Rancher server cluster URLs and server status.
+== Identify Rancher server cluster URLs and status
+You can identify Rancher server cluster URLs and determine server status.
 
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
-. From the Dashboard, click on the top right Options icon and select *Configure*.
+. From the Dashboard, select on the top right Options icon and select *Configure*.
 +
 image::hcc_configure.png[Rancher Configuration page]
 
@@ -50,20 +44,20 @@ The Rancher Server Clusters page displays a list of Rancher server clusters that
 
 == Delete a Rancher server instance
 
-You can delete the Rancher server, which deletes the management clusters. This action does not delete the user clusters.
+Deleting the Rancher server deletes the management clusters but does not delete the user clusters.
 
-TIP: You might want to retain the user clusters. If you do retain them, you can later migrate them to another Rancher implementation. If you want to delete the user clusters, you should do that first before deleting the Rancher server; otherwise, deleting the user clusters after the Rancher server is deleted is more difficult.
+TIP: You could retain the user clusters, if you want to migrate them later to another Rancher implementation. Conversely, if you want to delete the user clusters, you should do that first before deleting the Rancher server. Otherwise, deleting the user clusters after the Rancher server is deleted is more difficult.
 
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.
 +
 image::hcc_configure.png[Rancher Configuration page]
 
-. From the Configuration page, click *Configure Rancher Server Clusters*.
+. From the Configuration page, select *Configure Rancher Server Clusters*.
 +
 CAUTION: Clicking *Delete* removes the Rancher on NetApp HCI implementation and removes all management clusters.
 
-. Click on the Actions ellipses and click *Delete*.
+. Select the *Actions* ellipses and select *Delete*.
 
 
 
@@ -72,5 +66,4 @@ CAUTION: Clicking *Delete* removes the Rancher on NetApp HCI implementation and 
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

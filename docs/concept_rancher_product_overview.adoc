@@ -15,15 +15,14 @@ keywords: netapp, hci, rancher, architecture, kubernetes, cluster
 [.lead]
 Rancher is a complete software stack for teams adopting containers. Rancher addresses the operational and security challenges of managing multiple Kubernetes clusters across different infrastructures, while providing DevOps teams with integrated tools for running containerized workloads.
 
-Deploying Rancher on NetApp HCI deploys the Rancher Control plane, also referred to as the _Rancher Server_,  enables you to create on-premises Kubernetes clusters. You deploy the Rancher Control Plane by using the Hybrid Cloud Control.
+Deploying Rancher on NetApp HCI deploys the Rancher control plane, also referred to as the _Rancher server_,  and enables you to create on-premises Kubernetes clusters. You deploy the Rancher control plane by using the NetApp Hybrid Cloud Control.
 
-After deployment, using the Rancher Control Plane, you provision, manage, and monitor Kubernetes clusters used by Dev and Ops teams. Dev and Ops teams can use Rancher to perform activities on user clusters that reside on NetApp HCI itself, a public cloud provider, or any other infrastructure that Rancher enables.
+After deployment, using the Rancher control Plane, you provision, manage, and monitor Kubernetes clusters used by Dev and Ops teams. Dev and Ops teams can use Rancher to perform activities on user clusters that reside on NetApp HCI itself, a public cloud provider, or any other infrastructure that Rancher enables.
 
 == Benefits of Rancher on NetApp HCI
 
-*	Ease of installation: You do not need to learn how to install and configure Rancher. You can deploy a template-based implementation jointly developed by NetApp HCI and Rancher.
-*	Lifecycle management:  In a manual Rancher implementation, updates for the Rancher Server application or the Rancher Kubernetes Engine (RKE) cluster are not automated. Rancher on NetApp HCI provides the ability for updates to the management cluster, that includes the Rancher Server and the RKE.
-
+*	Ease of installation: You do not need to learn how to install and configure Rancher. You can deploy a template-based implementation, which was jointly developed by NetApp HCI and Rancher.
+*	Lifecycle management:  In a manual Rancher implementation, updates for the Rancher server application or the Rancher Kubernetes Engine (RKE) cluster are not automated. Rancher on NetApp HCI provides the ability for updates to the management cluster, that includes the Rancher server and the RKE.
 
 == What you can do with Rancher on NetApp HCI
 With Rancher on NetApp HCI, you can:
@@ -37,7 +36,7 @@ With Rancher on NetApp HCI, you can:
 == Technical Support option
 Using Rancher on NetApp HCI and Kubernetes open-source software includes free deployment and usage. License keys are not required.
 
-You can choose a NetApp Rancher Support option to obtain core-based Rancher enterprise support.
+You can choose a NetApp Rancher Support option to obtain core-based, Rancher enterprise support.
 
 == Rancher on NetApp HCI architecture and components
 
@@ -49,21 +48,16 @@ image::rancher_architecture_diagram.png[Rancher on NetApp HCI architecture]
 +
 TIP: You can use Hybrid Cloud Control also to upgrade NetApp HCI management services, expand your system, collect logs, and monitor your installation with NetApp Active IQ.
 
-* *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on a NetApp HCI compute node or nodes.
+* *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on one or more NetApp HCI compute node.
 
-* The *NetApp Element Plug-in for vCenter Server* is a web-based tool integrated with the VMware vSphere user interface (UI). The plug-in is an extension and interface for VMware vSphere that can manage and monitor storage clusters running NetApp Element software. You can use the plug-in  interface to discover and configure clusters, and to manage, monitor, and allocate storage from cluster capacity to configure datastores and virtual datastores (for virtual volumes).
-
-* *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
+* *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using NetApp Hybrid Cloud Control, vCenter Server, or the Rancher user interface. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
 TIP: For the best performance and greater security, consider using a dedicated Kubernetes cluster for the Rancher management server. You should not run your user workloads on the management cluster.
 
-* *User clusters*: The downstream Kubernetes clusters run your apps and services. Any cluster that you deploy from Rancher or import into Rancher is a user cluster.
-
-* *EZ Rancher*, part of Rancher, helps to deploy the Rancher server on vSphere. It creates the virtual machines infrastructure, configures the Rancher server, and optionally creates a Rancher user cluster.
+* *User clusters*: The downstream Kubernetes user clusters run your apps and services. Any cluster that you deploy from Rancher or import into Rancher is a user cluster.
 
 
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
