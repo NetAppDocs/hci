@@ -301,7 +301,7 @@ entries:
           url: /task_rancher_config_anti_affinity.html
         - title: Configure monitoring
           url: /task_rancher_enable_monitoring.html
-        - title: Install the Trident catalog
+        - title: Install Trident 
           url: /task_rancher_trident.html
      - title: Deploy user clusters and applications
        url: /task_rancher_deploy_user_clusters.html
