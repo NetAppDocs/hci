@@ -37,7 +37,7 @@ With Rancher on NetApp HCI, you can:
 == Technical Support option
 Using Rancher on NetApp HCI and Kubernetes open-source software includes free deployment and usage. License keys are not required.
 
-You can choose a NetApp Rancher Support option to obtain core-based Rancher enterprise support.
+You can choose a NetApp Rancher Support option to obtain core-based, Rancher enterprise support.
 
 == Rancher on NetApp HCI architecture and components
 
@@ -51,7 +51,7 @@ TIP: You can use Hybrid Cloud Control also to upgrade NetApp HCI management serv
 
 * *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on one or more NetApp HCI compute node.
 
-* *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
+* *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using NetApp Hybrid Cloud Control, vCenter Server, or the Rancher user interface. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
 TIP: For the best performance and greater security, consider using a dedicated Kubernetes cluster for the Rancher management server. You should not run your user workloads on the management cluster.
 
