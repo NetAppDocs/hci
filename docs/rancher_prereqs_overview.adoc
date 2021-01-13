@@ -61,14 +61,7 @@ All nodes have the following characteristics:
 
 == Required ports
 
-The following ports must be open in your firewall configuration to and from the nodes running Rancher server. In addition to this list, ensure that the list of ports in the *RKE* tab of the *Rancher Nodes* section of the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/[Rancher documentation^] are open as well.
-
-|===
-|Port |Description
-
-|443
-|Rancher web UI access
-|===
+Ensure that the list of ports in the *RKE* tab of the *Rancher Nodes* section of the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/[Rancher documentation^] are open in your firewall configuration to and from the nodes running Rancher server.
 
 == Required URLs
 
