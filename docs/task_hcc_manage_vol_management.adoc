@@ -122,7 +122,7 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 Begin typing and the auto-complete function displays possible values for you to choose.
 
 +
-If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the new volume.
+If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the existing volume.
 
 .. Change the Quality of Service by doing one of the following:
 ... Select an existing policy.
@@ -173,6 +173,9 @@ TIP: Use descriptive naming best practices. This is especially important if mult
 NOTE: Increasing the volume size of a clone results in a new volume with additional free space at the end of the volume. Depending on how you use the volume, you may need to extend partitions or create new partitions in the free space to make use of it.
 
 .. Select an account to associate with the volume clone.
++
+If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the volume.
+
 .. Click *Clone Volumes*.
 
 * To clone multiple volumes, perform the following steps:
