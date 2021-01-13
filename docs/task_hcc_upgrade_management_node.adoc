@@ -210,6 +210,8 @@ NOTE: The script retains previous management services configuration, including c
 sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 ----
 
+IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
+
 == Upgrade a management node to version 12.2 from 11.1 or 11.0
 You can perform an in-place upgrade of the management node from 11.0 or 11.1 to version 12.2 without needing to provision a new management node virtual machine.
 
@@ -356,6 +358,8 @@ Your installation has a base asset configuration that was created during install
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and paste the hardware tag you saved during a previous step for `hardware_tag`.
 .. Click *Execute*.
+
+IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default. 
 
 == Migrating from management node version 10.x to 11.x
 If you have a management node at version 10.x, you cannot upgrade from 10.x to 11.x. You can instead use this migration procedure to copy over the configuration from 10.x to a newly deployed 11.1 management node. If your management node is currently at 11.0 or higher, you should skip this procedure. You need management node 11.0 or 11.1 and the latest HealthTools to upgrade Element software from 10.3 + through 11.x.

@@ -42,7 +42,7 @@ You can choose a NetApp Rancher Support option to obtain core-based, Rancher ent
 
 Here is an overview of the various components of Rancher on NetApp HCI:
 
-image::rancher_architecture_diagram.png[Rancher on NetApp HCI architecture]
+image::rancher_architecture_diagram1.png[Rancher on NetApp HCI architecture]
 
 * *NetApp Hybrid Cloud Control*: This interface enables you to deploy Rancher on NetApp HCI and NetApp Element software, required for Rancher on NetApp HCI.
 +
