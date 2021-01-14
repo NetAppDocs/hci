@@ -71,6 +71,7 @@ You can edit the storage cluster's user name and password.
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.
+. In the *Storage Clusters* pane, select *Storage Cluster Details*.
 . Select the *Actions* ellipses and select *Edit Cluster Credentials*.
 . Update the storage cluster user name and password.
 . Select *Save*.
