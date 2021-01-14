@@ -40,9 +40,10 @@ All nodes have the following characteristics:
 == Network requirements
 
 * Ensure that the network that you intend to deploy the Rancher on NetApp HCI management cluster has a route to the management node management network.
-* Ensure that you have allocated the necessary static IP addresses for Rancher control plane (Rancher server) and the user (k8s) clusters.
+* Rancher on NetApp HCI supports DHCP addresses for the control plane (Rancher server) and user clusters, but we recommend static IP addresses for production environments. Ensure that you have allocated the necessary static IP addresses if you are deploying in a production environment.
 ** Rancher server requires 3 static IP addresses.
 ** Each user cluster requires 3 static IP addresses.
+** If you plan on using DHCP addressing for the Rancher control plane or user clusters, ensure that the DHCP lease duration is at least 24 hours.
 * If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, you need to make a pre-deployment change to the management node. Log in to your management node using SSH and follow the https://docs.docker.com/config/daemon/systemd/#httphttps-proxy[instructions^] in the Docker documentation to manually update the proxy settings for Docker.
 * If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
 +
@@ -51,8 +52,6 @@ All nodes have the following characteristics:
 ----
 * Ensure that your management node can use DNS to resolve the host name `<any IP address>.nip.io` to an IP address. This is the DNS provider used during deployment; if the management node cannot resolve this URL, deployment will fail.
 * Ensure that you have set up DNS records for each static IP address you need.
-* If you plan on using DHCP addressing for the Rancher control plane or user clusters, ensure that the DHCP lease is configured to be renewed no more frequently than every 24 hours.
-
 
 == VMware vSphere requirements
 
@@ -81,7 +80,7 @@ In this deployment model, the Rancher UI is accessible from each of the three no
 +
 If your organization does not use DHCP, you can still try it out by using four static IP addresses allocated prior the deployment, similar to what you would do for a production deployment.
 
-* *Production deployments*: For production deployments or when DHCP is not available in the targeted deployment environment, a little more pre-deployment work is required.  The first step is to obtain three consecutive IP addresses. You enter the first during the deployment.
+* *Production deployments*: For production deployments or when DHCP is not available in the targeted deployment environment, a little more pre-deployment work is required. The first step is to obtain three consecutive IP addresses. You enter the first during the deployment.
 
 +
 We recommend using L4 load balancing or round-robin DNS configuration for production environments.  This requires a fourth IP address and separate entry in your DNS configuration.

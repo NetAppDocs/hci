@@ -156,7 +156,7 @@ entries:
         entries:
           - title: Create and manage user accounts
             url: /task_hcc_manage_accounts.html
-          - title: Create and manage storage clusters
+          - title: Manage storage clusters
             url: /task_hcc_manage_storage_clusters.html
           - title: Create and manage volumes
             url: /task_hcc_manage_vol_management.html
@@ -303,7 +303,7 @@ entries:
           url: /task_rancher_config_anti_affinity.html
         - title: Configure monitoring
           url: /task_rancher_enable_monitoring.html
-        - title: Install Trident 
+        - title: Install Trident
           url: /task_rancher_trident.html
      - title: Deploy user clusters and applications
        url: /task_rancher_deploy_user_clusters.html
