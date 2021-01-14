@@ -1,11 +1,11 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_manage_storage_clusters.html
-summary: Learn how to create a storage cluster after you have configured all of the individual nodes.
+summary: Learn how to manage storage clusters after you have configured all of the individual nodes.
 keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc
 ---
 
-= Create and manage storage clusters by using NetApp Hybrid Cloud Control
+= Manage storage clusters by using NetApp Hybrid Cloud Control
 
 :hardbreaks:
 :nofooter:
@@ -32,8 +32,6 @@ Adding a storage cluster to this installation removes it from the installation t
 * You should have already installed the management node.
 * You should have already configured all of the individual nodes.
 
-
-
 === Add a storage cluster
 You can add a storage cluster by using NetApp Hybrid Cloud Control.
 
@@ -49,7 +47,7 @@ You can add a storage cluster by using NetApp Hybrid Cloud Control.
 
 . Select *Add*.
 +
-NOTE: The system might take several minutes to create the cluster depending on the number of nodes in the cluster. On a properly configured network, a small cluster of five nodes should take less than one minute.
+NOTE: After you add the storage cluster, the cluster inventory can take up to 15 minutes to refresh and display the new addition. You need to refresh the page in your browser to see the changes.
 
 . If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
 
