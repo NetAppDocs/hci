@@ -37,14 +37,14 @@ Adding a storage cluster to this installation removes it from the installation t
 === Add a storage cluster
 You can add a storage cluster by using NetApp Hybrid Cloud Control.
 
-
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.
+. In the *Storage Clusters* pane, select *Storage Cluster Details*.
 . Select *Add Storage Cluster*.
 . Enter the following information:
 +
-* Storage cluster management IP address. Only remote storage clusters that are not currently managed by a management node can be added.
+* Storage cluster management virtual IP address (only remote storage clusters that are not currently managed by a management node can be added)
 * Storage cluster user name and password
 
 . Select *Add*.
@@ -61,7 +61,7 @@ You can review a list of storage clusters and identify their statuses.
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.
 . Review the list of storage clusters and their statuses.
-. From the Storage Clusters pane, select *Storage Cluster Details*.
+. From the *Storage Clusters* pane, select *Storage Cluster Details*.
 
 
 === Edit storage cluster credentials
@@ -86,7 +86,8 @@ TIP: To move this storage cluster instead to an existing installation, navigate 
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.
-. Select the *Actions* ellipses and select *Remove from installation*.
+. In the *Storage Clusters* pane, select *Storage Cluster Details*.
+. For the cluster you want to remove, select the *Actions* ellipses and select *Remove Storage Cluster*.
 +
 CAUTION: Clicking *Yes* next removes the cluster from the installation.
 
