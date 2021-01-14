@@ -49,7 +49,7 @@ image::hcc_configure.png[Rancher Configuration page]
 . In the *Rancher Server Clusters* pane, click *Configure Rancher Server Clusters*.
 . Select the *Actions* menu for the Rancher installation you need to remove.
 +
-CAUTION: Clicking *Delete* next removes the Rancher on NetApp HCI implementation and removes all management clusters.
+CAUTION: Clicking *Delete* immediately removes the Rancher on NetApp HCI management cluster.
 
 . Select *Delete*.
 

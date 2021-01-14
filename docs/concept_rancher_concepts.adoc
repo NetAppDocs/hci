@@ -17,7 +17,7 @@ Learn basic concepts related to Rancher on NetApp HCI.
 
 * *Rancher server* or *Control plane*: The Rancher control plane, sometimes called the _Rancher Server_, provisions, manages, and monitors Kubernetes clusters used by Development and Operations teams.
 
-* *Catalogs*: Catalogs are GitHub repositories or Helm Chart repositories filled with applications that are ready-made for deployment. Rancher provides the ability to use a catalog of Helm charts that make it easy to deploy applications repeatedly. Rancher includes two types of catalogs: built-in global catalogs and custom catalogs. Trident is deployed as a catalog.  See https://www.rancher.co.jp/docs/rancher/v2.x/en/catalog/[Rancher documentation about catalogs].
+* *Catalogs*: Catalogs are GitHub repositories or Helm Chart repositories filled with applications that are ready-made for deployment. Rancher provides the ability to use a catalog of Helm charts that make it easy to deploy applications repeatedly. Rancher includes two types of catalogs: built-in global catalogs and custom catalogs. Trident is deployed as a catalog.  See https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/[Rancher documentation about catalogs].
 
 * *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
@@ -35,7 +35,11 @@ Trident, itself a Kubernetes-native application, runs directly within a Kubernet
 
 With Rancher, you can use a persistent volume, one that exists independently of any specific pod and with its own lifetime. Using Trident to manage persistent volume claims (PVCs) insulates the developers creating pods from the lower-level implementation details of the storage that they are accessing.
 
-A Trident catalog is available to Rancher on NetApp HCI. When a containerized application issues a persistent volume claim (PVC) request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
+When a containerized application issues a persistent volume claim (PVC) request, Trident dynamically provisions storage per the parameters requested against the NetApp Element software storage layer in NetApp HCI.
+
+A Trident catalog is available to Rancher on NetApp HCI and runs in the user clusters. As part of the Rancher on NetApp HCI implementation, a Trident installer is available in the Rancher catalog by default. Inclusion of this catalog simplifies the Trident deployment to user clusters.
+
+See link::task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
 
 For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
 
