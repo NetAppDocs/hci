@@ -27,7 +27,7 @@ TIP: You might want to retain the user clusters. If you do retain them, you can 
 You can use the NetApp Hybrid Cloud Control web UI to remove the three virtual machines that were set up during deployment to host the Rancher server.
 
 .Options
-* <<Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control>>
+* <<Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control>> (Recommended)
 * <<Remove Rancher on NetApp HCI using the REST API>>
 
 == Remove Rancher on NetApp HCI using NetApp Hybrid Cloud Control
@@ -78,3 +78,9 @@ https://[IP address]/k8sdeployer/api/
 . Click *Execute*.
 +
 After several minutes, the Rancher server virtual machines should no longer be visible in the Hosts and Clusters list in vSphere Client. After removal, you can use NetApp Hybrid Cloud Control to redeploy Rancher on NetApp HCI.
+
+[discrete]
+== Find more Information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting[Rancher deployment troubleshooting]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

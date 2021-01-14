@@ -35,6 +35,7 @@ Tasks you can perform with REST APIs:
 * link:task_mnode_remove_assets.html[Remove an asset from the management node]
 * link:task_hcc_collectlogs.html#use-the-rest-api-to-collect-netapp-hci-logs[Use the REST API to collect NetApp HCI logs]
 * link:task_mnode_api_find_mgmt_svcs_version.html[Verify management node OS and services versions]
+* link:task_mnode_logs.html[Getting logs from management services]
 
 [discrete]
 == Find more information

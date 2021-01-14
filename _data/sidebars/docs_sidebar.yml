@@ -213,6 +213,8 @@ entries:
                 url: /task_mnode_configure_proxy_server.html
               - title: Verify management node OS and services versions
                 url: /task_mnode_api_find_mgmt_svcs_version.html
+              - title: Getting logs from management services
+                url: /task_mnode_logs.html
           - title: Manage support connections
             entries:
               - title: Start a remote NetApp Support session
@@ -311,8 +313,6 @@ entries:
        url: /task_rancher_monitor.html
      - title: Upgrade Rancher on NetApp HCI
        url: /task_rancher_upgrades.html
-     - title: Troubleshoot Rancher on NetApp HCI overview
-       url: /concept_rancher_troubleshoot_overview.html
      - title: Remove a Rancher installation on NetApp HCI
        url: /task_rancher_remove_deployment.html
   - title: Maintain H-series hardware
