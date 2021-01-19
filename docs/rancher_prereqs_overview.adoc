@@ -41,8 +41,8 @@ All nodes have the following characteristics:
 
 * Ensure that the network that you intend to deploy the Rancher on NetApp HCI management cluster has a route to the management node management network.
 * Rancher on NetApp HCI supports DHCP addresses for the control plane (Rancher server) and user clusters, but we recommend static IP addresses for production environments. Ensure that you have allocated the necessary static IP addresses if you are deploying in a production environment.
-** Rancher server requires 3 static IP addresses.
-** Each user cluster requires at least 3 static IP addresses, but the total number of IP addresses needed depends on the number of nodes you select to be a part of the user cluster.
+** Rancher server requires three static IP addresses.
+** Each user cluster requires as many static IP addresses as nodes in the cluster. For example, a user cluster with four nodes requires four static IP addresses.
 ** If you plan on using DHCP addressing for the Rancher control plane or user clusters, ensure that the DHCP lease duration is at least 24 hours.
 * If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, you need to make a pre-deployment change to the management node. Log in to your management node using SSH and follow the https://docs.docker.com/config/daemon/systemd/#httphttps-proxy[instructions^] in the Docker documentation to manually update the proxy settings for Docker.
 * If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
