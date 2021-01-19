@@ -98,7 +98,7 @@ Production deployments require an FQDN configured that load balances across the 
 
 == Required ports
 
-Ensure that the list of ports in the *RKE* tab of the *Rancher Nodes* section of the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/[Rancher documentation^] are open in your firewall configuration to and from the nodes running Rancher server.
+Ensure that the list of ports in the "Ports for Rancher Server Nodes on RKE" section of the *Rancher Nodes* section of the official https://rancher.com/docs/rancher/v2.x/en/installation/requirements/ports/#ports-for-rancher-server-nodes-on-rke[Rancher documentation^] are open in your firewall configuration to and from the nodes running Rancher server.
 
 == Required URLs
 
