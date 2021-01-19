@@ -15,7 +15,7 @@ keywords: netapp, hci, Rancher, install, installation, requirements
 [.lead]
 Before you install Rancher on NetApp HCI, ensure your environment and your NetApp HCI system meet these requirements.
 
-NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the deployment without removing it and redeploying. You will need to remove the Rancher on NetApp HCI instance and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[troubleshooting^] for more information.
+NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the deployment without removing it and redeploying. You will need to remove the Rancher on NetApp HCI instance and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[Remove a Rancher installation on NetApp HCI^] for more information.
 
 == Node requirements
 
@@ -41,8 +41,8 @@ All nodes have the following characteristics:
 
 * Ensure that the network that you intend to deploy the Rancher on NetApp HCI management cluster has a route to the management node management network.
 * Rancher on NetApp HCI supports DHCP addresses for the control plane (Rancher server) and user clusters, but we recommend static IP addresses for production environments. Ensure that you have allocated the necessary static IP addresses if you are deploying in a production environment.
-** Rancher server requires 3 static IP addresses.
-** Each user cluster requires 3 static IP addresses.
+** Rancher server requires three static IP addresses.
+** Each user cluster requires as many static IP addresses as nodes in the cluster. For example, a user cluster with four nodes requires four static IP addresses.
 ** If you plan on using DHCP addressing for the Rancher control plane or user clusters, ensure that the DHCP lease duration is at least 24 hours.
 * If you need to use an HTTP proxy to enable internet access for Rancher on NetApp HCI, you need to make a pre-deployment change to the management node. Log in to your management node using SSH and follow the https://docs.docker.com/config/daemon/systemd/#httphttps-proxy[instructions^] in the Docker documentation to manually update the proxy settings for Docker.
 * If you enable and configure a proxy server during deployment, the following IP address ranges and domains are automatically added to the Rancher server noProxy settings:
@@ -55,7 +55,7 @@ All nodes have the following characteristics:
 
 == VMware vSphere requirements
 
-* Ensure that the VMware vSphere instance you are using is version 6.5 or 7.0.
+* Ensure that the VMware vSphere instance you are using is version 6.5, 6.7, or 7.0.
 * Ensure that the VMware vSphere instance you are using is equipped with a vSphere Enterprise Plus license.
 * As a best practice, ensure that the VMware vSphere instance you are using is configured to use VMware vSphere Distributed Switch (VDS) rather than vSphere Standard Switch VSS. You can use VSS, but if you do, ensure that the virtual switches and physical hosts used for Rancher VMs can access all the same port groups, in the same way that you would ensure for regular VMs.
 
