@@ -16,7 +16,7 @@ keywords: netapp, hci, element, storage cluster, hybrid cloud control, hcc
 [.lead]
 You can add storage clusters to the management node assets inventory so that they can be managed using NetApp Hybrid Cloud Control (HCC). The first storage cluster added during system setup is the default link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster], but additional clusters can be added using HCC UI.
 
-After a storage cluster is added, you can monitor cluster performance, change storage cluster credentials for the managed asset, or a remove a storage cluster from the management node asset inventory if it no longer needs to be managed using HCC.
+After a storage cluster is added, you can monitor cluster performance, change storage cluster credentials for the managed asset, or remove a storage cluster from the management node asset inventory if it no longer needs to be managed using HCC.
 
 .What you'll need
 * *Cluster administrator permissions*: You have permissions as administrator on the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster]. The authoritative cluster is the first cluster added to the management node inventory during system setup.
