@@ -33,6 +33,8 @@ entries:
           # url: /concept_hci_storage.html
       - title: Licensing
         url: /concept_cg_hci_licensing.html
+      - title: NetApp Hybrid Cloud Control configuration capabilities
+        url: /reference_hcc_config_capabilities.html
       - title: Security
         url: /concept_cg_hci_security.html
       - title: Performance
