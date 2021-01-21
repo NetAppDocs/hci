@@ -31,7 +31,7 @@ If you exceed these tested maximums, you might experience issues with NetApp Hyb
 |5
 
 
-|Sum of ESXi hosts (NetApp branded and third-party) in connected vCenter instances
+|Sum of ESXi hosts (NetApp-branded and third-party) in connected vCenter instances
 |500
 
 
