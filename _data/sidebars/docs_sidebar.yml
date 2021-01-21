@@ -156,7 +156,7 @@ entries:
         entries:
           - title: Create and manage user accounts
             url: /task_hcc_manage_accounts.html
-          - title: Manage storage clusters
+          - title: Add and manage storage clusters
             url: /task_hcc_manage_storage_clusters.html
           - title: Create and manage volumes
             url: /task_hcc_manage_vol_management.html
