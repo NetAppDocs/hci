@@ -53,4 +53,4 @@ network:
 . Repeat steps 4-6 for each remaining node in the user cluster.
 . When complete, your apps deployed in the user cluster should be able to make use of persistent storage.
 
-NOTE: You can make these changes as part of a custom node template if you like for future user clusters.
+NOTE: You can make these changes as part of a custom node template to use for future user clusters.
