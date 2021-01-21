@@ -25,6 +25,14 @@ You should replace a storage node in the event of dual inline memory module (DIM
 .About this task
 The replacement procedure applies to H410S storage nodes in a two rack unit (2U), four-node NetApp HCI chassis.
 
+Here is the rear view of a four-node chassis with H410S nodes:
+
+image::h410s_chassis_rear.png[Shows the back of a four-node chassis with H410S nodes.]
+
+Here is the front view of a four-node chassis with H410S nodes, showing the bays that correspond to each node:
+
+image::h410s_ssd_bays.png[Shows the bays associated with each node in a four-node chassis with H410S nodes.]
+
 .Steps overview
 
 Here is a high-level overview of the steps in this procedure:
@@ -213,5 +221,5 @@ NOTE: It might take up to 15 minutes for the node to be added to the cluster and
 . Select the drives you want to add, and select *Add*.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

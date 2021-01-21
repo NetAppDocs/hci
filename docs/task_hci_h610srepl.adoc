@@ -65,10 +65,10 @@ NOTE: See your switch vendor's documentation if your switch does not recognize t
 . Power on the chassis by pressing the power button at the front.
 It takes approximately five minutes and 30 seconds for the node to boot.
 . Perform the configuration steps.
-** If the H610S node is part of a NetApp HCI installation, use NetApp Hybrid Cloud Control to configure the storage resource. See link:https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
+** If the H610S node is part of a NetApp HCI installation, use NetApp Hybrid Cloud Control to configure the storage resource. See link:task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
 ** If the H610S node is part of a SolidFire all-flash storage installation, configure the node using the NetApp Element software user interface (UI).
 Contact NetApp Support for assistance.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

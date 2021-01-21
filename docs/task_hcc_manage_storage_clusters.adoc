@@ -1,0 +1,94 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_manage_storage_clusters.html
+summary: You can add, remove, and change storage clusters using the NetApp Hybrid Control UI.
+keywords: netapp, hci, element, storage cluster, hybrid cloud control, hcc
+---
+
+= Add and manage storage clusters using NetApp Hybrid Cloud Control
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add storage clusters to the management node assets inventory so that they can be managed using NetApp Hybrid Cloud Control (HCC). The first storage cluster added during system setup is the default link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster], but additional clusters can be added using HCC UI.
+
+After a storage cluster is added, you can monitor cluster performance, change storage cluster credentials for the managed asset, or remove a storage cluster from the management node asset inventory if it no longer needs to be managed using HCC.
+
+.What you'll need
+* *Cluster administrator permissions*: You have permissions as administrator on the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster]. The authoritative cluster is the first cluster added to the management node inventory during system setup.
+* *Element software*: Your storage cluster version is running NetApp Element software 11.3 or later.
+* *Management node*: You have deployed a management node running version 11.3 or later.
+* *Management services*: You have updated your management services bundle to version 2.17 or later.
+
+.Options
+* <<Add a storage cluster>>
+* <<Confirming storage cluster status>>
+* <<Edit storage cluster credentials>>
+* <<Remove a storage cluster>>
+
+=== Add a storage cluster
+You can add a storage cluster to the  management node assets inventory using NetApp Hybrid Cloud Control. This allows you to manage and monitor the cluster using the HCC UI.
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the authoritative storage cluster administrator credentials.
+. From the Dashboard, select the options menu on the top right and select *Configure*.
+. In the *Storage Clusters* pane, select *Storage Cluster Details*.
+. Select *Add Storage Cluster*.
+. Enter the following information:
++
+* Storage cluster management virtual IP address
++
+NOTE: Only remote storage clusters that are not currently managed by a management node can be added.
+
+* Storage cluster user name and password
+
+. Select *Add*.
++
+NOTE: After you add the storage cluster, the cluster inventory can take up to 15 minutes to refresh and display the new addition. You might need to refresh the page in your browser to see the changes.
+
+. If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
+
+=== Confirming storage cluster status
+You can monitor the connection status of storage clusters assets using the NetApp Hybrid Cloud Control UI.
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the authoritative storage cluster administrator credentials.
+. From the Dashboard, select the options menu on the top right and select *Configure*.
+. Review the status of storage clusters in the inventory.
+. From the *Storage Clusters* pane, select *Storage Cluster Details* for additional detail.
+
+
+=== Edit storage cluster credentials
+You can edit the storage cluster's administrator user name and password using the NetApp Hybrid Cloud Control UI.
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the authoritative storage cluster administrator credentials.
+. From the Dashboard, select the options menu on the top right and select *Configure*.
+. In the *Storage Clusters* pane, select *Storage Cluster Details*.
+. Select the *Actions* menu for the cluster and select *Edit Cluster Credentials*.
+. Update the storage cluster user name and password.
+. Select *Save*.
+
+=== Remove a storage cluster
+Removing a storage cluster from NetApp Hybrid Cloud Control removes the cluster from the management node inventory. After you remove a storage cluster, the cluster can no longer be managed by HCC and you can access it only by navigating directly to its management IP address.
+
+IMPORTANT: You cannot remove the authoritative cluster from the inventory. To determine the authoritative cluster, go to *User Management > Users*. The authoritative cluster is listed next to the heading *Users*.
+
+.Steps
+. Log in to NetApp Hybrid Cloud Control by providing the authoritative storage cluster administrator credentials.
+. From the Dashboard, select the options menu on the top right and select *Configure*.
+. In the *Storage Clusters* pane, select *Storage Cluster Details*.
+. Select the *Actions* menu for the cluster and select *Remove Storage Cluster*.
++
+CAUTION: Clicking *Yes* next removes the cluster from the installation.
+
+. Select *Yes*.
+
+[discrete]
+== Find more information
+* link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

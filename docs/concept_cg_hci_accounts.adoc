@@ -54,7 +54,7 @@ Authoritative user accounts can authenticate against any storage asset associate
 
 Authoritative user accounts are managed from the top right menu User Management option in NetApp Hybrid Cloud Control.
 
-The authoritative storage cluster is the storage cluster that NetApp Hybrid Cloud Control uses to authenticate users.
+The link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster] is the storage cluster that NetApp Hybrid Cloud Control uses to authenticate users.
 
 All users created on the authoritative storage cluster can log into the NetApp Hybrid Cloud Control. Users created on other storage clusters _cannot_ log into Hybrid Cloud Control.
 

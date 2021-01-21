@@ -1,0 +1,31 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_nde_start_deployment.html
+summary: Begin deploying NetApp HCI.
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
+---
+
+= Create a node template with Trident networking support
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+After installing Trident, you need to enable Trident communication between the management and storage networks. You can do this by creating a new node template with storage networking support, and using the new template when you create Trident-enabled user clusters.
+
+.Steps
+
+. Open the Rancher IP address or domain name in a web browser, and log in to the web UI.
+. At the top right of the page, click on the user menu.
+. In the resulting menu, Select *Node Templates*.
+. For the active template (vsphere-default), click the ellipses at the far right of the row.
+. From the resulting menu, select *Clone*.
+. On the *Clone node template from* page, scroll to the third section, *Instance Options*.
+. Under the *Networks* heading, select the network labeled `NetApp HCI VDS 01-HCI_Internal_Storage_Data_Network` from the list.
+. Near the bottom of the page, enter a name for the newly cloned template in the *Name* field.
+. Click *Save*.
+
+When you create new user clusters that use Trident, use the newly created node template.

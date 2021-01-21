@@ -35,6 +35,8 @@ entries:
           # url: /concept_hci_storage.html
       - title: Licensing
         url: /concept_cg_hci_licensing.html
+      - title: NetApp Hybrid Cloud Control configuration maximums
+        url: /reference_hcc_config_maximums.html
       - title: Security
         url: /concept_cg_hci_security.html
       - title: Performance
@@ -104,7 +106,7 @@ entries:
            url: /task_nde_configure_new_vsphere.html
          - title: Join an existing VMware vSphere deployment
            url: /task_nde_join_existing_vsphere.html
-     - title: Configure credentials
+     - title: Configure NetApp HCI credentials
        url: /task_nde_configure_credentials.html
      - title: Select a network topology
        url: /task_nde_select_net_topology.html
@@ -158,6 +160,8 @@ entries:
         entries:
           - title: Create and manage user accounts
             url: /task_hcc_manage_accounts.html
+          - title: Add and manage storage clusters
+            url: /task_hcc_manage_storage_clusters.html
           - title: Create and manage volumes
             url: /task_hcc_manage_vol_management.html
           - title: Create and manage volume access groups
@@ -205,16 +209,24 @@ entries:
                 url: task_mnode_multi_vcenter_config.html
               - title: Add compute and controller assets to the management node
                 url: task_mnode_add_assets.html
-              - title: Remove an asset from the management node
-                url: task_mnode_remove_assets.html
-              - title: View or edit existing controller assets
-                url: task_mnode_edit_vcenter_assets.html
-              - title: Configure a proxy server for the management node
-                url: /task_mnode_configure_proxy_server.html
               - title: Create and manage storage cluster assets
                 url: /task_mnode_manage_storage_cluster_assets.html
-          - title: Enable remote NetApp Support connections
-            url: /task_mnode_enable_remote_support_connections.html
+              - title: View or edit existing controller assets
+                url: task_mnode_edit_vcenter_assets.html
+              - title: Remove an asset from the management node
+                url: task_mnode_remove_assets.html
+              - title: Configure a proxy server for the management node
+                url: /task_mnode_configure_proxy_server.html
+              - title: Verify management node OS and services versions
+                url: /task_mnode_api_find_mgmt_svcs_version.html
+              - title: Getting logs from management services
+                url: /task_mnode_logs.html
+          - title: Manage support connections
+            entries:
+              - title: Start a remote NetApp Support session
+                url: /task_mnode_enable_remote_support_connections.html
+              - title: Manage SSH functionality on the management node
+                url: /task_mnode_ssh_management.html
       - title: Power your NetApp HCI system off or on
         entries:
           - title: NetApp HCI power overview
@@ -277,6 +289,38 @@ entries:
        url: /task_hcc_expand_compute_and_storage.html
      - title: Remove Witness Nodes after expanding cluster
        url: /task_hci_removewn.html
+  - title: Use Rancher on NetApp HCI
+    entries:
+     - title: Rancher on NetApp HCI overview
+       url: /concept_rancher_product_overview.html
+     - title: Concepts
+       url: /concept_rancher_concepts.html
+     - title: Requirements for Rancher on NetApp HCI
+       url: /rancher_prereqs_overview.html
+     - title: Deploy Rancher on NetApp HCI
+       url: /task_rancher_deploy.html
+     - title: Post deployment tasks
+       entries:
+        - title: Post deployment tasks overview
+          url: /concept_rancher_post_deployment_overview.html
+        - title: Ensure Rancher Support parity
+          url: /task_rancher_ensure_rancher_support_parity.html
+        - title: Improve Rancher VM resiliency
+          url: /task_rancher_config_anti_affinity.html
+        - title: Configure monitoring
+          url: /task_rancher_enable_monitoring.html
+        - title: Install Trident
+          url: /task_rancher_trident.html
+     - title: Deploy user clusters and applications
+       url: /task_rancher_deploy_user_clusters.html
+     - title: Manage Rancher on NetApp HCI
+       url: /task_rancher_manage.html
+     - title: Monitor Rancher on NetApp HCI
+       url: /task_rancher_monitor.html
+     - title: Upgrade Rancher on NetApp HCI
+       url: /task_rancher_upgrades.html
+     - title: Remove a Rancher installation on NetApp HCI
+       url: /task_rancher_remove_deployment.html
   - title: Maintain H-series hardware
     entries:
      - title: H-series hardware maintenance overview
@@ -301,5 +345,7 @@ entries:
        url: /task_hci_psurepl.html
      - title: Replace SN2010, SN2100, and SN2700 switches
        url: /task_hci_snswitches.html
+     - title: Replace storage node in a two-node cluster
+       url: /task_hci_2noderepl.html
   - title: Legal notices
     url: /reference_notices_hci.html

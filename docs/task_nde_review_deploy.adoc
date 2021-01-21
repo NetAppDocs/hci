@@ -50,5 +50,6 @@ Begin using NetApp HCI by clicking *Launch vSphere*.
 NOTE: For NetApp HCI installations using vSphere 6.7, this link launches the HTML5 vSphere web interface. For installations using vSphere 6.5, this link launches the Adobe Flash vSphere web interface.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

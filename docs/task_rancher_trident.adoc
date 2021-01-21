@@ -1,0 +1,69 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_trident.html
+summary: Learn about how to install Trident after you install Rancher on NetApp HCI. Trident enables you to create, manage, and interact with persistent storage volumes in the standard Kubernetes format that you are familiar with.
+keywords: netapp, hci, rancher, install, trident, persistent volumes, pv
+---
+
+= Install Trident
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Learn about how to install Trident after you install Rancher on NetApp HCI. Trident is a storage orchestrator, which integrates with Docker and Kubernetes, as well as platforms built on these technologies, such as Red Hat OpenShift, Rancher, and IBM Cloud Private. The goal of Trident is to make the provisioning, connection, and consumption of storage transparent and frictionless for the applications. Trident is a fully supported open source project maintained by NetApp. Trident enables you to create, manage, and interact with persistent storage volumes in the standard Kubernetes format that you are familiar with.
+
+TIP: For more information about Trident, see the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation^].
+
+.What you'll need
+
+* You have installed Rancher on NetApp HCI.
+* You have deployed your user clusters.
+
+.About this task
+
+The Trident installer catalog is installed as part of the Rancher installation using NetApp Hybrid Cloud Control. In this task, you use the installer catalog to install and configure Trident.
+As part of the Rancher installation, NetApp provides a node template. If you are not planning to use the node template that NetApp provides, and you want to provision on RHEL or CentOS, there might be additional requirements. If you change your worker node to RHEL or CentOS, there are several prerequisites that should be met. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation].
+
+.Steps
+
+. From the Rancher UI, select the *default* project for your user cluster.
++
+TIP: For information about projects and namespaces, see the https://rancher.com/docs/rancher/v2.x/en/cluster-admin/projects-and-namespaces/[Rancher documentation^].
+
+. Select *Apps*, and select *Launch*.
++
+image::rancher-install-trident.jpg[Shows the navigation to launch the Trident installer.]
+
+. On the *Catalog* page, select the Trident installer.
++
+image::rancher-trident.jpg[The Trident installer on the Catalog page in Rancher.]
++
+NOTE: On the page that opens, you can select the *Detailed Descriptions* arrow to learn more about the Trident app and also to find the link to the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
+
+. Select the *Configurations Options* arrow, and enter the credentials and storage configuration information.
++
+image::rancher-trident-config.jpg[Shows the storage configuration information that you should enter for Trident.]
++
+NOTE: The default storage tenant is NetApp HCI. You can change this value. You can also change the backend name. However, do not change the default storage driver value, which is *solidfire-san*.
+
+. Select *Launch*.
++
+This installs the Trident workload on the *trident* namespace.
+
+. Select *Resources > Workloads*, and verify that the *trident* namespace includes the following components:
++
+image::rancher-trident-workload.jpg[Shows the Trident namespace components.]
+
+. (Optional) Select *Storage* for the user cluster to see the storage classes that you can use for your persistent volumes.
++
+NOTE: The three storage classes are *solidfire-gold*, *solidfire-silver*, and *solidfire-bronze*. You can make one of these storage classes the default by selecting the icon under the *Default* column.
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

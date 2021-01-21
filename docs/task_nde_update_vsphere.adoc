@@ -18,5 +18,6 @@ After deploying NetApp HCI, you should use VMware vSphere Lifecycle Manager to a
 Use the https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Tool] to ensure that all versions of software are compatible. See the https://docs.vmware.com/en/VMware-vSphere/index.html[VMware vSphere Lifecycle Manager documentation] for more information.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

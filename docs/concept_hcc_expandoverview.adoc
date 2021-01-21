@@ -21,7 +21,7 @@ NOTE: New and spare H610S storage nodes might have additional installation requi
 After installing the node in the NetApp HCI chassis, you use NetApp Hybrid Cloud Control to configure NetApp HCI to use the new resources. NetApp HCI detects the existing network configuration and offers you configuration options within the existing networks and VLANs, if any.
 
 NOTE: If you recently expanded your installation and the new assets were not added automatically to your configuration, you might need to add the assets manually.
-See link:https://docs.netapp.com/us-en/hci/docs/task_mnode_work_overview.html[Management node overview].
+See link:task_mnode_work_overview.html[Management node overview].
 
 NetApp HCI uses VMware Enhanced vMotion Compatibility (EVC) to ensure vMotion functionality when there are compute nodes with different CPU generations in the vSphere cluster. When EVC is required for expansion, NetApp HCI enables it automatically whenever possible.
 

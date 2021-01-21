@@ -1,0 +1,52 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_2noderepl.html
+summary: Before you replace a node that is part of a two-node cluster, you should first add a third storage node (which requires a new set of IP addresses), allow syncing to complete, and then remove your faulty node.
+ four-node cluster. You requires an Additional MIP and SIP.
+keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement
+---
+
+= Replace storage node in a two-node cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Before you replace a storage node that is part of a two-node cluster, you should first add a third storage node (which requires a new set of IP addresses), allow syncing to complete, and then remove your faulty node.
+The cluster stays in the degraded state until a replacement node joins the cluster.
+
+.What you'll need
+
+* You have new management IP and storage IP addresses.
+* You have verified that the cluster shows the `ClusterCannotSync` alert after the node goes offline. This ensures that the cluster does a full resync when the new node is added back to the cluster. This alert is displayed approximately six minutes after the storage node goes offline.
+* You have contacted NetApp Support.
+If you are ordering a replacement, you should have a case open with NetApp Support.
+
+* You have obtained the replacement node.
+* You have an electrostatic discharge (ESD) wristband, or you have taken other antistatic protection.
+
+.About this task
+Alarms in the VMware vSphere Web Client alert you when a host fails. You must match the serial number of the failed host from the VMware vSphere Web Client with the serial number on the sticker at the back of the node.
+
+.Steps
+
+. Physically remove the faulty node from the rack. The steps depend on the type of storage node you have. See link:task_hci_h410srepl.html[Replace H410S nodes^] and link:task_hci_h610srepl.html[Replace H610S nodes^].
++
+NOTE: Do not remove the node from the cluster at this point.
+
+. Install the replacement node in the same slot.
+. Cable the node.
+. Power on the node.
+. Connect a keyboard and monitor to the node.
+. Perform the configuration steps:
+.. Configure the IPMI/BMC IP address.
+.. Configure the new node with the new management IP and storage IP addresses, and the Cluster Name.
+. After the node is added to the cluster, add the drives.
+. After the sync is finished, remove the failed drives and the failed node from the cluster.
+. Use NetApp Hybrid Cloud Control to configure the new storage node that you added. See link:https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
+
+== Find more information
+* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

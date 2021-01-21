@@ -66,5 +66,5 @@ TIP: The power supply LEDs are lit when the DC power supply unit comes online. G
 . Return the faulty unit to NetApp by following the instructions in the box that was shipped to you.
 
 == Find more information
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

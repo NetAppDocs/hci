@@ -1,0 +1,85 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_ssh_management.html
+summary: You can disable, enable, or determine the status of SSH support connection capability on the management node using the REST API UI.
+keywords: netapp, mnode, management node, ssh, disable, enable, rest api
+---
+
+= Manage SSH functionality on the management node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
+
+.What you'll need
+* *Cluster administrator permissions*: You have permissions as administrator on the storage cluster.
+* *Element software*: Your cluster is running NetApp Element software 11.3 or later.
+* *Management node*: You have deployed a management node running version 11.3 or later.
+* *Management services updates*: You have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle] to version 2.17.
+
+.Options
+You can do any of the following tasks after you link:task_mnode_api_get_authorizationtouse.html[authenticate]:
+
+* <<Disable or enable the SSH capability on the management node>>
+* <<Determine status of the SSH capability on the management node>>
+
+== Disable or enable the SSH capability on the management node
+You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default. Disabling SSH does not terminate or disconnect existing SSH client sessions to the management node. If you disable SSH and elect to re-enable it at a later time, you can do so using the same API.
+
+.API command
+----
+curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+----
++
+NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
+
+.REST API UI steps
+. Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
++
+----
+https://<managementNodeIP>/mnode/
+----
+. Select *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+. From the REST API UI, select *PUT /settings​/ssh*.
+.. Click *Try it out*.
+.. Set the *enabled* parameter to `false` to disable SSH or `true` to re-enable SSH capability that you previously disabled.
+.. Click *Execute*.
+
+== Determine status of the SSH capability on the management node
+You can determine whether or not SSH capability is enabled on the management node using a management node service API. SSH is enabled by default on the management node.
+
+.API command
+----
+curl -X GET "https://<managementNodeIP>/mnode/settings/ssh" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+----
++
+NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
+
+.REST API UI steps
+. Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
++
+----
+https://<managementNodeIP>/mnode/
+----
+. Select *Authorize* and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+. From the REST API UI, select *GET /settings​/ssh*.
+.. Click *Try it out*.
+.. Click *Execute*.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -26,5 +26,5 @@ Volume access groups have the following limits:
 
 == Find more information
 * link:task_hcc_manage_vol_access_groups.html[Manage volume access groups^]
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

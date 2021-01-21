@@ -1,0 +1,55 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_manage.html
+summary: Learn about how you can manage Rancher on NetApp HCI.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload
+---
+
+= Manage Rancher on NetApp HCI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After deploying Rancher on NetApp HCI, you can change Rancher credentials and view the Rancher server cluster URLs and status. You can also delete the Rancher server.
+
+.Options
+
+* <<Change the Rancher admin user credentials and URL>>
+* <<Identify Rancher server cluster URLs and status>>
+
+== Change the Rancher admin user credentials and URL
+
+. Go to myrancher.org
+. Change the password for the default Rancher admin user.
+. Review and accept the terms.
+. Click *Continue*.
++
+Rancher displays a field where you can enter the Rancher URL.
+
+. Enter the Rancher URL that you can use to access your Rancher deployment.
+. Click *Save URL.*
++
+The Rancher Clusters page shows the virtual machines.
+
+
+== Identify Rancher server cluster URLs and status
+You can identify Rancher server cluster URLs and determine server status.
+
+. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. From the Dashboard, select on the top right Options icon and select *Configure*.
++
+image::hcc_configure.png[Rancher Configuration page]
+
++
+The Rancher Server Clusters page displays a list of Rancher server clusters that have been deployed, the associated URL and status.
+
+
+[discrete]
+== Find more information
+* link:task_rancher_remove_deployment.html[Remove Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
