@@ -46,6 +46,7 @@ network:
     version: 2
 ----
 . Use the following command to reconfigure the network with the changed file:
++
 ----
 `netplan try`
 ----
