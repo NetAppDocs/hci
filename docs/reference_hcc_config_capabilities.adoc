@@ -1,8 +1,8 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_hcc_collectlogs.html
-summary: You can use NetApp Hybrid Cloud Control to collect logs from your NetApp HCI or Element installation to help with troubleshooting.
-keywords: netapp, hci, logs, collection, troubleshooting, monitor
+permalink: docs/reference_hcc_config_capabilities.html
+summary: NetApp Hybrid Cloud Control has specific capabilities, and NetApp recommends operating within them.
+keywords: netapp, hci, HCC, configuration, capabilities, limits, maximums
 ---
 
 = NetApp Hybrid Cloud Control configuration capabilities
