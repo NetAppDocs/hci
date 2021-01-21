@@ -1,41 +1,35 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/task_nde_start_deployment.html
-summary: Begin deploying NetApp HCI.
-keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access
+permalink: docs/task_trident_enable_networking.html
+summary: Enable Trident support for user clusters.
+keywords: netapp, hci, netapp, networking, clusters, user, trident, rancher
 ---
 
-= Create a node template with Trident networking support
+= Enable Trident support for user clusters
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
-If your NetApp HCI environment does not have a route between the management and storage networks, and you deploy user clusters with Trident persistent storage support, you need to further configure your networks after installing Trident. You need to enable communication between the management and storage networks for the user clusters you deploy. You can do this by creating a new node template with storage networking support, and using the new template when you create Trident-enabled user clusters.
+If your NetApp HCI environment does not have a route between the management and storage networks, and you deploy user clusters with Trident persistent storage support, you need to further configure your networks after installing Trident. You need to enable communication between the management and storage networks for the user clusters you deploy. You can do this by modifying the networking configuration for each node in the user cluster.
+
+.About this task
+Follow these general steps to modify the networking configuration for each node in the user cluster. These steps assume that the user cluster you have created was creating using the default node template that is installed with Rancher on NetApp HCI.
 
 .Steps
 
-. Open the Rancher IP address or domain name in a web browser, and log in to the web UI.
-. At the top right of the page, click on the user menu.
-. In the resulting menu, Select *Node Templates*.
-. For the active template (vsphere-default), click the ellipses at the far right of the row.
-. From the resulting menu, select *Clone*.
-. On the *Clone node template from* page, scroll to the third section, *Instance Options*.
-. Under the *Networks* heading, select the network labeled `NetApp HCI VDS 01-HCI_Internal_Storage_Data_Network` from the list.
-. Near the bottom of the page, enter a name for the newly cloned template in the *Name* field.
-. Click *Save*.
-
-When you create new user clusters that use Trident, use the newly created node template.
-
-1. Deploy a user cluster with existing default template
-2. Connect storage network to the user cluster.
-3. In Rancher, grab ssh private keys for each node in the user cluster, pairing with the IPs
-(node steps for each node)
-4. (if using default node template) ssh in to each node (ssh -i <private key filename> <ip address>), edit `/etc/netplan/50-cloud-init.yaml` file, and update the file so that it resembles this example:
-
+. Deploy a user cluster with existing default template.
+. Connect storage network to the user cluster. (how?)
+. In Rancher, record the SSH private key for each node in the user cluster.
+. Connect using SSH to a node in the user cluster, using the private key that you have recorded for that node:
++
+----
+ssh -i <private key filename> <ip address>
+----
+. As the superuser, edit the `/etc/netplan/50-cloud-init.yaml` file so that it resembles this example (the ens224 section has been added):
++
 ----
 network:
     ethernets:
@@ -51,9 +45,11 @@ network:
             set-name: ens224
     version: 2
 ----
-
-5. Run command `netplan try` and monitor the output. It should work with no further input
-(end node steps)
-6. You are good!
+. Use the following command `netplan try` to reconfigure the network with the changed file:
+----
+`netplan try`
+----
+. Repeat steps 4-6 for each remaining node in the user cluster.
+. When complete, your apps deployed in the user cluster should be able to make use of persistent storage.
 
 NOTE: You can make these changes as part of a custom node template if you like for future user clusters.
