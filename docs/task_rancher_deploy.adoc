@@ -98,7 +98,7 @@ A bar indicates the deployment progress.
 TIP: The Rancher deployment could take about 15 minutes.
 
 +
-When the deployment is complete, Rancher displSays a message about the completion and provides a Rancher URL.
+When the deployment is complete, Rancher displays a message about the completion and provides a Rancher URL.
 +
 image::rancher_deploy_complete_url.png[Rancher deployment completion and URL]
 
@@ -121,12 +121,11 @@ After deployment, an email is sent to you that includes a Support registration c
 After deployment, you can do the following:
 
 * link:task_rancher_post-deploy.html[Complete post-deployment tasks]
-** link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI]
+* link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI]
 * link:task_rancher_deploy_user_clusters.html[Deploy user clusters and applications]
 * link:task_rancher_manage.html[Manage Rancher on NetApp HCI]
-** Change the Rancher admin user credentials
-** Monitor Rancher on NetApp HCI
-** Delete a Rancher server instance
+* link:task_rancher_monitor.html[Monitor Rancher on NetApp HCI]
+
 
 
 [discrete]
