@@ -76,27 +76,17 @@ Your vCenter credentials are collected based on your NetApp Deployment Engine in
 //* *Resource Pool*:
 * *Management network*: This should be accessible from the management stations and from the virtual machine network where the user clusters will be hosted.
 
-. Enter *Deployment Settings* information
+. Enter *Deployment Settings* information:
 
-//* *Rancher Server Admin Password*:
-//* *Cluster name*:
 * *DNS Servers*: Optional. If you use load balancing, enter the internal DNS server information.
 * *Rancher Server FQDN*: To ensure that the Rancher Server remains available during node failures, provide a fully-qualified domain name (FQDN) that your DNS server can resolve to any of the IP addresses assigned to the Rancher Server cluster's nodes. This FQDN with the "https" prefix becomes the Rancher URL that you will use to access your Rancher implementation.
 +
 If no domain name is provided, wildcard DNS will be used instead and you will be able to access the Rancher Server using one of the URLs presented after the deployment completes.
 
-. Enter *Advanced Settings* information
+. Enter *Advanced Settings* information:
 
 * *Assign Static IP Addresses*: If you enable static IP addressing, provide starting IP addresses for three IPv4 addresses in sequence, one for each management cluster virtual machine. Rancher on NetApp HCI deploys three management cluster virtual machines.
-//+
-//If you enable static IP addressing, the following additional fields appear:
-
-//** Subnet Mask
-//** Default Gateway
-//** Starting IP and Ending Address
-
 * *Configure Proxy Server*:
-// Enter link to Rancher proxy server workaround.
 
 . Review and select the checkbox for the Rancher End User License Agreement.
 . Review and select the checkbox to acknowledge information about Rancher software.
@@ -108,11 +98,11 @@ A bar indicates the deployment progress.
 TIP: The Rancher deployment could take about 15 minutes.
 
 +
-When the deployment is complete, Rancher displays a message about the completion and provides a Rancher URL.
+When the deployment is complete, Rancher displSays a message about the completion and provides a Rancher URL.
 +
 image::rancher_deploy_complete_url.png[Rancher deployment completion and URL]
 
-. Record that Rancher URL that displays at the end of the deployment. You will use this URL to access the Rancher UI.
+. Record that Rancher URL that Sdisplays at the end of the deployment. You will use this URL to access the Rancher UI.
 
 === Verify your deployment by using vCenter Server
 
@@ -141,7 +131,7 @@ After deployment, you can do the following:
 
 [discrete]
 == Find more information
-* * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting[Rancher deployment troubleshooting]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting[Rancher deployment troubleshooting]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
