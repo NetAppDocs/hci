@@ -27,28 +27,10 @@ image::hcc_configure.png[Rancher Configuration page]
 +
 The Rancher Server Clusters page displays a list of Rancher server clusters that have been deployed, the associated URL and status.
 
-== Delete a Rancher server instance
-
-Deleting the Rancher server deletes the management clusters but does not delete the user clusters.
-
-TIP: You could retain the user clusters, if you want to migrate them later to another Rancher implementation. Conversely, if you want to delete the user clusters, you should do that first before deleting the Rancher server. Otherwise, deleting the user clusters after the Rancher server is deleted is more difficult.
-
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
-. From the Dashboard, click on the top right Options icon and select *Configure*.
-+
-image::hcc_configure.png[Rancher Configuration page]
-
-. From the Configuration page, select *Configure Rancher Server Clusters*.
-+
-CAUTION: Clicking *Delete* removes the Rancher on NetApp HCI implementation and removes all management clusters.
-
-. Select the *Actions* ellipses and select *Delete*.
-
-
-
 
 [discrete]
 == Find more information
+* link:task_rancher_remove_deployment.html[Remove Rancher]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

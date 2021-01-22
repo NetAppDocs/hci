@@ -26,6 +26,7 @@ You can verify the version numbers of the management node OS, management service
 * <<REST API UI steps>>
 
 == API commands
+
 * Get version information about the management node OS, the management services bundle, and the management node API (mnode-api) service that are running on the management node:
 +
 ----
@@ -36,6 +37,8 @@ curl -X GET "https://<managementNodeIP>/mnode/about" -H  "accept: application/js
 ----
 curl -X GET "https://<managementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer <ID>"
 ----
++
+NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
 
 == REST API UI steps
 
