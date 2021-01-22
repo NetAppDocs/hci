@@ -28,8 +28,6 @@ Learn basic concepts related to Rancher on NetApp HCI.
 +
 See  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/[Rancher documentation about node templates].
 
-* *Management service for Kubernetes*: This NetApp HCI service enables you to manage Kubernetes clusters deployed with NetApp Hybrid Cloud Control and Rancher. The service is installed as virtual machines on a NetApp HCI compute node or nodes.
-
 == Trident software and persistent storage concepts
 Trident, itself a Kubernetes-native application, runs directly within a Kubernetes cluster. With Trident, Kubernetes users (such as developers, data scientists, and Kubernetes administrators) can create, manage, and interact with persistent storage volumes in the standard Kubernetes format that they are already familiar with. With Trident, NetApp solutions can meet persistent volume claims that are made by Kubernetes clusters.
 

@@ -37,7 +37,7 @@ image::hcc_configure.png[Rancher Configuration page]
 
 Using the Rancher UI, you can see information about Rancher on NetApp HCI management clusters and user clusters.
 
-TIP: Management clusters are referred to in the Rancher UI as "local clusters."
+TIP: In the Rancher UI, management clusters are referred to as "local clusters."
 
 . Access the Rancher UI using that URL provided to you at the end of the Rancher deployment.
 . See https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/[Monitoring in Rancher v2.5].

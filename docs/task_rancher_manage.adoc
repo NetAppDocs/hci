@@ -13,26 +13,7 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, moni
 :imagesdir: ../media/
 
 [.lead]
-After deploying Rancher on NetApp HCI, you can change Rancher credentials and view the Rancher server cluster URLs and status. You can also delete the Rancher server.
-
-.Options
-
-* <<Change the Rancher admin user credentials and URL>>
-* <<Identify Rancher server cluster URLs and status>>
-
-== Change the Rancher admin user credentials and URL
-
-. Go to myrancher.org
-. Change the password for the default Rancher admin user.
-. Review and accept the terms.
-. Click *Continue*.
-+
-Rancher displays a field where you can enter the Rancher URL.
-
-. Enter the Rancher URL that you can use to access your Rancher deployment.
-. Click *Save URL.*
-+
-The Rancher Clusters page shows the virtual machines.
+After deploying Rancher on NetApp HCI, you can view the Rancher server cluster URLs and status. You can also delete the Rancher server.
 
 
 == Identify Rancher server cluster URLs and status
