@@ -21,6 +21,7 @@ TIP: For more information about Trident, see the https://netapp-trident.readthed
 
 * You have installed Rancher on NetApp HCI.
 * You have deployed your user clusters.
+* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation] 
 
 .About this task
 
@@ -29,7 +30,7 @@ As part of the Rancher installation, NetApp provides a node template. If you are
 
 .Steps
 
-. From the Rancher UI, select the *default* project for your user cluster.
+. From the Rancher UI, select a project for your user cluster.
 +
 TIP: For information about projects and namespaces, see the https://rancher.com/docs/rancher/v2.x/en/cluster-admin/projects-and-namespaces/[Rancher documentation^].
 
