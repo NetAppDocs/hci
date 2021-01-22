@@ -13,7 +13,7 @@ keywords: netapp, hci, netapp, networking, clusters, user, trident, rancher
 :imagesdir: ../media/
 
 [.lead]
-If your NetApp HCI environment does not have a route between the management and storage networks, and you deploy user clusters with Trident persistent storage support, you need to further configure your networks after installing Trident. You need to enable communication between the management and storage networks for the user clusters you deploy. You can do this by modifying the networking configuration for each node in the user cluster.
+If your NetApp HCI environment does not have a route between the management and storage networks, and you deploy user clusters that need Trident support, you need to further configure your user cluster networks after installing Trident. You need to enable communication between the management and storage networks for the user clusters you deploy. You can do this by modifying the networking configuration for each node in the user cluster.
 
 .About this task
 Follow these general steps to modify the networking configuration for each node in the user cluster. These steps assume that you created the user cluster with the default node template that is installed with Rancher on NetApp HCI.
@@ -21,9 +21,15 @@ Follow these general steps to modify the networking configuration for each node 
 .Steps
 
 . Deploy a user cluster with existing default template.
-. Connect storage network to the user cluster. (how?)
-. In Rancher, record the SSH private key for each node in the user cluster.
-. Connect using SSH to a node in the user cluster, using the private key that you have recorded for that node:
+. Connect the storage network to the user cluster.
+.. Open the VMware vSphere web client for the connected vCenter instance.
+.. In the Hosts and Clusters inventory tree, select a node in the newly deployed user cluster.
+.. Edit the node's settings.
+.. In the settings dialog, add a new network adapter.
+.. In the *New Network* drop down list, browse for a network and select *HCI_Internal_Storage_Data_Network*.
+.. Click *OK*.
+. In Rancher, download the SSH private key for each node in the user cluster.
+. Connect using SSH to a node in the user cluster, using the private key file that you have downloaded for that node:
 +
 ----
 ssh -i <private key filename> <ip address>
@@ -51,6 +57,6 @@ network:
 `netplan try`
 ----
 . Repeat steps 4-6 for each remaining node in the user cluster.
-. When complete, your apps deployed in the user cluster should be able to make use of persistent storage.
+. When you have reconfigured the network for each node in the user cluster, you should be able to deploy applications in the user cluster that utilize Trident.
 
 NOTE: You can make these changes as part of a custom node template to use for future user clusters.
