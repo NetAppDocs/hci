@@ -28,7 +28,7 @@ Follow these general steps to modify the networking configuration for each node 
 .. In the settings dialog, add a new network adapter.
 .. In the *New Network* drop down list, browse for a network and select *HCI_Internal_Storage_Data_Network*.
 .. Click *OK*.
-. In Rancher, download the SSH private key for each node in the user cluster.
+. In Rancher, download the SSH private key file for each node in the user cluster.
 . Connect using SSH to a node in the user cluster, using the private key file that you have downloaded for that node:
 +
 ----
@@ -56,7 +56,7 @@ network:
 ----
 `netplan try`
 ----
-. Repeat steps 4-6 for each remaining node in the user cluster.
+. Repeat steps 4 through 6 for each remaining node in the user cluster.
 . When you have reconfigured the network for each node in the user cluster, you can deploy applications in the user cluster that utilize Trident.
 
 NOTE: You can make these changes as part of a custom node template to use for future user clusters.
