@@ -312,7 +312,7 @@ entries:
         - title: Install Trident
           url: /task_rancher_trident.html
         - title: Enable Trident support for user clusters
-          url: /task_trident_enable_networking.html
+          url: /task_trident_configure_networking.html
      - title: Deploy user clusters and applications
        url: /task_rancher_deploy_user_clusters.html
      - title: Manage Rancher on NetApp HCI
