@@ -21,7 +21,7 @@ TIP: For more information about Trident, see the https://netapp-trident.readthed
 
 * You have installed Rancher on NetApp HCI.
 * You have deployed your user clusters.
-* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation] 
+* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation]. 
 
 .About this task
 
