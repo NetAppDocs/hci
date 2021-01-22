@@ -13,7 +13,7 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, moni
 :imagesdir: ../media/
 
 [.lead]
-There are multiple ways to monitor Rancher server, management clusters and other details.
+There are multiple ways to monitor Rancher server, management clusters, and other details.
 
 
 * NetApp Hybrid Cloud Control
@@ -26,7 +26,7 @@ There are multiple ways to monitor Rancher server, management clusters and other
 
 Using the NetApp Hybrid Cloud Control, you can view the Rancher URL and Rancher server cluster status. You can also monitor the nodes in which Rancher is running.
 
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. Log in to NetApp Hybrid Cloud Control by providing Element storage cluster administrator credentials.
 . From the Dashboard, click on the top right Options icon and select *Configure*.
 +
 image::hcc_configure.png[Rancher Configuration page]
@@ -47,7 +47,7 @@ TIP: In the Rancher UI, management clusters are referred to as "local clusters."
 
 Using NetApp Active IQ, you can view Rancher telemetry, such as installation information, nodes, clusters, status, namespace information, and more.
 
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. Log in to NetApp Hybrid Cloud Control by providing Element storage cluster administrator credentials.
 . From the top right menu, select *NetApp Active IQ*.
 
 == Monitor Rancher using vCenter Server

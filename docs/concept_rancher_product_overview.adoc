@@ -46,7 +46,7 @@ image::rancher_architecture_diagram1.png[Rancher on NetApp HCI architecture]
 
 * *NetApp Hybrid Cloud Control*: This interface enables you to deploy Rancher on NetApp HCI and NetApp Element software, required for Rancher on NetApp HCI.
 +
-TIP: You can use Hybrid Cloud Control also to upgrade NetApp HCI management services, expand your system, collect logs, and monitor your installation with NetApp Active IQ.
+TIP: You can use NetApp Hybrid Cloud Control also to upgrade management services, expand your system, collect logs, and monitor your installation.
 
 * *Management services*: Management services run on the management node and enable you to deploy Rancher on NetApp HCI using NetApp Hybrid Cloud Control.
 

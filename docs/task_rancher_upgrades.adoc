@@ -23,9 +23,9 @@ Upgrades are available by component instead of a cumulative package. As such, so
 * *Admin privileges*: You have storage cluster administrator permissions to perform the upgrade.
 * *Management services*: You have updated your management services bundle to the latest version.
 
-IMPORTANT: You must upgrade to the latest management services bundle 2.17.xx or later for Rancher functionality.
+IMPORTANT: You must upgrade to the latest management services bundle 2.17 or later for Rancher functionality.
 
-* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:https://review.docs.netapp.com/us-en/hci_mgmt_svcs_brycecanyon_review/docs/rancher_prereqs_overview.html#required-ports[Network ports] for more information.
+* *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:rancher_prereqs_overview.html#required-ports[Network ports] for more information.
 
 .Upgrade options
 

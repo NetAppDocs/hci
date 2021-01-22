@@ -18,8 +18,8 @@ You can use link:concept_hci_initiators.html[initiators] for CHAP-based rather t
 
 .What you'll need
 
-* You have administrator credentials for this NetApp HCI system.
-* You have upgraded your management services to at least version 2.17.xx. NetApp Hybrid Cloud Control initiator management is not available in earlier service bundle versions.
+* You have cluster administrator credentials.
+* You have upgraded your management services to at least version 2.17. NetApp Hybrid Cloud Control initiator management is not available in earlier service bundle versions.
 
 .Options
 * <<Create an initiator>>
@@ -46,7 +46,7 @@ A sample of the format is as follows:
 
 .Steps
 
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. Log in to NetApp Hybrid Cloud Control by providing the Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes*.
 . Select the *Initiators* tab.
@@ -74,7 +74,7 @@ a|.. Select *Bulk Add IQNs/WWPNs*.
 You can add initiators to an volume access group. When you add an initiator to a volume access group, the initiator enables access to all volumes in that volume access group.
 
 .Steps
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. Log in to NetApp Hybrid Cloud Control by providing the Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes*.
 . Select the *Initiators* tab.
@@ -88,7 +88,7 @@ You can change the alias of an existing initiator or add an alias if one does no
 
 .Steps
 
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. Log in to NetApp Hybrid Cloud Control by providing the Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes*.
 . Select the *Initiators* tab.
@@ -102,7 +102,7 @@ You can delete one or more initiators. When you delete an initiator, the system 
 
 .Steps
 
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
+. Log in to NetApp Hybrid Cloud Control by providing the Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes*.
 . Select the *Initiators* tab.
@@ -114,7 +114,6 @@ You can delete one or more initiators. When you delete an initiator, the system 
 [discrete]
 == Find more information
 * link:concept_hci_initiators.html[Learn about initiators]
-* link:concept_hci_volume_access_groups.html#Add-initiators-to-a-volume-access-group[Add initiators to volume access group]
 * link:concept_hci_volume_access_groups.html[Learn about volume access groups]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

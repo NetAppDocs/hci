@@ -26,7 +26,7 @@ After a storage cluster is added, you can monitor cluster performance, change st
 
 .Options
 * <<Add a storage cluster>>
-* <<Confirming storage cluster status>>
+* <<Confirm storage cluster status>>
 * <<Edit storage cluster credentials>>
 * <<Remove a storage cluster>>
 
@@ -52,7 +52,7 @@ NOTE: After you add the storage cluster, the cluster inventory can take up to 15
 
 . If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
 
-=== Confirming storage cluster status
+=== Confirm storage cluster status
 You can monitor the connection status of storage clusters assets using the NetApp Hybrid Cloud Control UI.
 
 .Steps

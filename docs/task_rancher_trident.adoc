@@ -21,7 +21,7 @@ TIP: For more information about Trident, see the https://netapp-trident.readthed
 
 * You have installed Rancher on NetApp HCI.
 * You have deployed your user clusters.
-* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation]. 
+* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation].
 
 .About this task
 
@@ -64,6 +64,7 @@ NOTE: The three storage classes are *solidfire-gold*, *solidfire-silver*, and *s
 
 [discrete]
 == Find more information
+* link:task_trident_configure_networking.html[Enable Trident support for user clusters]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

@@ -72,6 +72,6 @@ You can remove a volume access group by using NetApp Hybrid Cloud Control, and a
 [discrete]
 == Find more information
 * link:concept_hci_volume_access_groups.html[Learn about volume access groups]
-* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[Work with volume access groups and initiators^]
+* link:task_hcc_manage_initiators.html#add-initiators-to-a-volume-access-group[Add initiator to a volume access group]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
