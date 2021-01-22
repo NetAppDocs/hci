@@ -35,7 +35,7 @@ Follow these general steps to modify the networking configuration for each node 
 ----
 ssh -i <private key filename> <ip address>
 ----
-. As the superuser, edit the `/etc/netplan/50-cloud-init.yaml` file so that it resembles this example (the `ens224` section has been added), replacing <MAC address> with the MAC address you recorded earlier:
+. As the superuser, edit and save the `/etc/netplan/50-cloud-init.yaml` file so that it includes the `ens224` section, similar to the following example. Replace `<MAC address>` with the MAC address you recorded earlier:
 +
 ----
 network:
@@ -52,7 +52,7 @@ network:
             set-name: ens224
     version: 2
 ----
-. Use the following command to reconfigure the network with the changed file:
+. Use the following command to reconfigure the network:
 +
 ----
 `netplan try`
