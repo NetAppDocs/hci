@@ -13,7 +13,7 @@ keywords: netapp, hci, netapp, networking, clusters, user, trident, rancher
 :imagesdir: ../media/
 
 [.lead]
-If your NetApp HCI environment does not have a route between the management and storage networks, and you deploy user clusters that need Trident support, you need to further configure your user cluster networks after installing Trident. You need to enable communication between the management and storage networks for the user clusters you deploy. You can do this by modifying the networking configuration for each node in the user cluster.
+If your NetApp HCI environment does not have a route between the management and storage networks, and you deploy user clusters that need Trident support, you need to further configure your user cluster networks after installing Trident. For each user cluster, you need to enable communication between the management and storage networks. You can do this by modifying the networking configuration for each node in the user cluster.
 
 .About this task
 Follow these general steps to modify the networking configuration for each node in the user cluster. These steps assume that you created the user cluster with the default node template that is installed with Rancher on NetApp HCI.
