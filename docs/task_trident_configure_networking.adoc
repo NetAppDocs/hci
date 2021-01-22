@@ -57,6 +57,6 @@ network:
 `netplan try`
 ----
 . Repeat steps 4-6 for each remaining node in the user cluster.
-. When you have reconfigured the network for each node in the user cluster, you should be able to deploy applications in the user cluster that utilize Trident.
+. When you have reconfigured the network for each node in the user cluster, you can deploy applications in the user cluster that utilize Trident.
 
 NOTE: You can make these changes as part of a custom node template to use for future user clusters.
