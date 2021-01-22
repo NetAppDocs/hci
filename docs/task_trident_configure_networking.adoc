@@ -27,6 +27,7 @@ Follow these general steps to modify the networking configuration for each node 
 .. Edit the node's settings.
 .. In the settings dialog, add a new network adapter.
 .. In the *New Network* drop down list, browse for a network and select *HCI_Internal_Storage_Data_Network*.
+.. Expand the network adapter section and record the MAC address for the new network adapter.
 .. Click *OK*.
 . In Rancher, download the SSH private key file for each node in the user cluster.
 . Connect using SSH to a node in the user cluster, using the private key file that you have downloaded for that node:
@@ -34,7 +35,7 @@ Follow these general steps to modify the networking configuration for each node 
 ----
 ssh -i <private key filename> <ip address>
 ----
-. As the superuser, edit the `/etc/netplan/50-cloud-init.yaml` file so that it resembles this example (the `ens224` section has been added):
+. As the superuser, edit the `/etc/netplan/50-cloud-init.yaml` file so that it resembles this example (the `ens224` section has been added), replacing <MAC address> with the MAC address you recorded earlier:
 +
 ----
 network:
@@ -47,7 +48,7 @@ network:
         ens224:
             dhcp4: true
             match:
-                macaddress: 00:50:56:91:5b:e9
+                macaddress: <MAC address>
             set-name: ens224
     version: 2
 ----
