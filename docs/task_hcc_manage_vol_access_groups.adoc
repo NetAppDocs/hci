@@ -14,12 +14,11 @@ keywords: netapp, hci, on premise, cluster, element
 :imagesdir: ../media/
 
 [.lead]
-You can add new volume access groups, delete existing volume access groups, edit the details of a volume access group, and view the details of a volume access group by using NetApp Hybrid Cloud Control.
+You can create new volume access groups, make changes to the name, associated initiators, or associated volumes of access groups, or delete existing volume access groups using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
 * You have administrator credentials for this NetApp HCI system.
-* You are running management node 12.2 or later.
 * You have upgraded your management services to at least version 2.15.28. NetApp Hybrid Cloud Control storage management is not available in earlier service bundle versions.
 * Ensure you have a logical naming scheme for volume access groups.
 
@@ -41,7 +40,7 @@ If you associate an initiator with the volume access group, that initiator can a
 . Select *Create Access Group*.
 
 == Edit a volume access group
-You can edit the properties of an existing volume access group by using NetApp Hybrid Cloud Control.
+You can edit the properties of an existing volume access group by using NetApp Hybrid Cloud Control. You can make changes to the name, associated initiators, or associated volumes of an access group.
 
 .Steps
 
@@ -51,8 +50,6 @@ You can edit the properties of an existing volume access group by using NetApp H
 . Select the *Access Groups* tab.
 . In the *Actions* column of the table of access groups, expand the options menu for the access group you need to edit.
 . In the options menu, select *Edit*.
-+
-The *Edit Access Group* dialog appears.
 . Make any needed changes to the name, associated initiators, or associated volumes.
 . Confirm your changes by selecting *Save*.
 . In the *Access Groups* table, verify that the access group reflects your changes.
@@ -68,30 +65,13 @@ You can remove a volume access group by using NetApp Hybrid Cloud Control, and a
 . Select the *Access Groups* tab.
 . In the *Actions* column of the table of access groups, expand the options menu for the access group you need to delete.
 . In the options menu, select *Delete*.
-+
-The *Delete Access Group* dialog appears.
 . If you do not wish to delete the initiators that are associated with the access group, deselect the *Delete initiators in this access group* checkbox.
 . Confirm the delete operation by selecting *Yes*.
 
-////
-== View details of a volume access group
-You can view the details of an existing NetApp HCI volume access group, such as attached volumes and initiators, using NetApp Hybrid Cloud Control.
-
-.Steps
-
-. Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
-. From the Dashboard, expand the name of your storage cluster on the left navigation menu.
-. Select *Volumes*.
-. Select the *Access Groups* tab.
-. In the *Actions* column of the table of access groups, expand the options menu for the access group you need to edit.
-. In the options menu, select *Details*.
-+
-The *Volume Access Group Details* dialog appears.
-////
 
 [discrete]
 == Find more information
 * link:concept_hci_volume_access_groups.html[Learn about volume access groups]
-* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[Work with volume access groups and initiators^]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* link:task_hcc_manage_initiators.html#add-initiators-to-a-volume-access-group[Add initiator to a volume access group]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

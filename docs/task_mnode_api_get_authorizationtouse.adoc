@@ -27,10 +27,10 @@ Authorization functionality is set up for you during management node installatio
 
 .Steps
 
-. Open the REST API UI on the management node:
+. Access the REST API UI for the service by entering the management node IP address followed by the service name, for example `/mnode/`:
 +
 ----
-https://[management node IP address]/mnode
+https://<managementNodeIP>/mnode/
 ----
 
 . Click *Authorize*.
@@ -39,21 +39,14 @@ NOTE: Alternately, you can click on a lock icon next to any service API.
 
 . Complete the following:
 .. Enter the cluster user name and password.
-.. Select *Request body* from the Type drop-down list.
 .. Enter the client ID as `mnode-client`.
 .. Do not enter a value for the client secret.
 .. Click *Authorize* to begin a session.
-+
-NOTE: If the error message `Auth Error TypeError: Failed to fetch` is returned after you attempt to authorize, you might need to accept the SSL certificate for the MVIP of your cluster. Copy the IP in the Token URL, paste the IP into another browser tab, and authorize again.
-
-+
-The Available authorizations screen indicates *Authorized*.
-
-. Close the Available authorizations dialog box.
+. Close the *Available authorizations* dialog box.
 +
 NOTE: If you try to run a command after the token expires, a `401 Error: UNAUTHORIZED` message appears. If you see this, authorize again.
 
 [discrete]
 == Find more information
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

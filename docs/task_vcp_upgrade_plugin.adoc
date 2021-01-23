@@ -31,7 +31,7 @@ IMPORTANT: The plug-in is compatible with vSphere Web Client version 6.7 U2 for 
 * *Admin privileges*: You have vCenter Administrator role privileges to install a plug-in.
 * *vSphere upgrades*: You have performed any required vCenter upgrades before upgrading the NetApp Element Plug-in for vCenter Server. This procedure assumes that vCenter upgrades have already been completed.
 * *vCenter Server*: Your vCenter Plug-in version 4.x is registered with a vCenter Server. From the registration utility (`https://[management node IP]:9443`), click *Registration Status*, complete the necessary fields, and click *Check Status* to verify that the vCenter Plug-in is already registered and the version number of the current installation.
-* *Management services updates*: You have updated your https://mysupport.netapp.com/products/p/mgmtservices.html[management services bundle] to the latest version. Updates to the vCenter plug-in are distributed using management services updates that are released outside of major product releases for NetApp HCI and SolidFire all-flash storage.
+* *Management services updates*: You have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle] to the latest version. Updates to the vCenter plug-in are distributed using management services updates that are released outside of major product releases for NetApp HCI and SolidFire all-flash storage.
 * *Management node upgrades*: You are running a management node that has been link:task_hcc_upgrade_management_node.html[upgraded] to version 11.3 or later. vCenter Plug-in 4.4 or later requires a an 11.3 or later management node with a modular architecture that provides individual services. Your management node must be powered on with its IP address or DHCP address configured.
 * *Element storage upgrades*: You have a cluster running NetApp Element software 11.3 or later.
 * *vSphere Web Client*: For vSphere 6.5 and 6.7, you have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out. For vSphere 7.0, you do not need to log out of the web client.
@@ -88,5 +88,5 @@ NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help
 [discrete]
 == Find more information
 
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

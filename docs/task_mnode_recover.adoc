@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_mnode_recover.html
 summary: You can recover and redeploy a management node for your cluster running NetApp Element software. Depending on your configuration, you might need to reconfigure authentication for the management node.
-keywords: netapp, element, management node, mnode, disaster recovery, VM
+keywords: netapp, element, management node, mnode, disaster recovery, redeploy, VM
 ---
 
 = Recover a management node
@@ -141,8 +141,10 @@ NOTE: You can add the user name or allow the script to prompt you for the inform
 .. Run the `redeploy-mnode` command. The script displays a success message when the redeployment is complete.
 .. If you access Element or NetApp HCI web interfaces (such as the management node or NetApp Hybrid Cloud Control) using the Fully Qualified Domain Name (FQDN) of the system, link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api[reconfigure authentication for the management node^].
 
+IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default. 
+
 [discrete]
 == Find more Information
 * link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -104,7 +104,7 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 .Before you begin
 * You have deployed a NetApp Element software management node 11.3 or later.
 * Your cluster version is running NetApp Element software 11.3 or later.
-* You have downloaded the service bundle update from the https://mysupport.netapp.com/products/p/mgmtservices.html[NetApp Support Site] to a device that can be used in the dark site.
+* You have downloaded the service bundle update from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site] to a device that can be used in the dark site.
 
 .Steps
 . Open the REST API UI on the management node: `https://[management node IP]/mnode`
@@ -130,5 +130,5 @@ A successful update returns a result similar to the following example:
 [discrete]
 == Find more information
 
-* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

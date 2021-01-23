@@ -34,4 +34,4 @@ This is due to the following reasons:
 [discrete]
 == Find more information
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
