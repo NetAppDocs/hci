@@ -39,13 +39,20 @@ https://[management node IP address]
 image::hcc_dashboard_all.png[HCC Dashboard]
 
 
+
 TIP: You might see some or all these panes, depending on your installation. For example, for storage-only installations, the Hybrid Cloud Control Dashboard shows only the Storage pane, the Storage Capacity pane, and the Storage Performance pane.
 
 == Monitor storage resources
 Use the *Storage* pane to see your total storage environment. You can monitor the number of storage clusters, storage nodes, and total volumes.
 
+To see details, in the Storage pane, click *Show Details*.
+
+TIP: To see the most recent storage cluster data, use the Storage Clusters page, where polling occurs more frequently than on the Dashboard.
+
 == Monitor compute resources
 Use the *Compute* pane to see your total NetApp H-series compute environment. You can monitor the number of compute clusters and total compute nodes.
+
+To see details, in the Compute panes, click *Show Details*.
 
 == Monitor storage capacity
 Monitoring the storage capacity of your environment is critical. Using the Storage Capacity pane, you can determine your storage capacity efficiency gains with or without compression, deduplication, and thin provisioning features enabled.

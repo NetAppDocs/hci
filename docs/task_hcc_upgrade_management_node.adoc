@@ -132,6 +132,8 @@ NOTE: The script retains previous management services configuration, including c
 sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 ----
 
+IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
+
 == Upgrade a management node to version 12.2 from 11.3 through 11.8
 
 You can perform an in-place upgrade of the management node from version 11.3, 11.5, 11.7, or 11.8 to version 12.2 without needing to provision a new management node virtual machine.
@@ -209,6 +211,8 @@ NOTE: The script retains previous management services configuration, including c
 ----
 sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 ----
+
+IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
 
 == Upgrade a management node to version 12.2 from 11.1 or 11.0
 You can perform an in-place upgrade of the management node from 11.0 or 11.1 to version 12.2 without needing to provision a new management node virtual machine.

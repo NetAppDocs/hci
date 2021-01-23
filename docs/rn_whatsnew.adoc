@@ -73,10 +73,11 @@ Element 12.2 includes firmware updates for storage nodes. http://docs.netapp.com
 Element 12.2 resolves security vulnerabilities for storage nodes and the management node. http://security.netapp.com/[Learn more^] about these security enhancements.
 
 === New SMART warning for failing drives
-Element 12.2 now performs periodic health checks on SolidFire appliance drives using SMART health data from the drives. A drive that fails the SMART health check might be close to failure. If a drive fails the SMART health check, a new critical severity cluster fault appears: `Drive with serial: <serial number> in slot: <node slot><drive slot> has failed the SMART overall health check. To resolve this fault, replace the drive`.
+Element 12.2 now performs periodic health checks on SolidFire appliance drives using SMART health data from the drives. A drive that fails the SMART health check might be close to failure. If a drive fails the SMART health check, a new critical severity cluster fault appears: `Drive with serial: <serial number> in slot: <node slot><drive slot> has failed the SMART overall health check. To resolve this fault, replace the drive`
 
 [discrete]
 == Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[NetApp Hybrid Cloud Control and Management Services Release Notes^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
