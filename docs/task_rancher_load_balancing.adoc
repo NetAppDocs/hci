@@ -1,0 +1,27 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_load_balancing.html
+summary: Learn about how to configure load balancing after installing Rancher on NetApp HCI.
+keywords: netapp, hci, Rancher, install, installation, load, balance
+---
+
+= Configure load balancing
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Learn about how to configure load balancing after installing Rancher on NetApp HCI. Load balancing for Rancher on NetApp HCI involves the management clusters.
+
+For production workloads, you should consider a technique like round-robin DNS or an L4 load balancer for the value of the Rancher URL. Either one of these techniques will distribute access to the Rancher UI and provide the most resiliency.
+
+L4 load balancing is a technique where a virtual machine or container hosting an application is configured to distribute requests among the three nodes of the management cluster.
+
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_mnode_work_overview_UI.html
-summary: With the management node UI (https:// [mNode IP}:442), you can make changes to network and cluster settings, run system tests, or use system utilities.
+summary: With the management node UI (https://<mNodeIP>:442), you can make changes to network and cluster settings, run system tests, or use system utilities.
 keywords: netapp, management node ui, mnode ui, :442, element
 ---
 
@@ -14,7 +14,7 @@ keywords: netapp, management node ui, mnode ui, :442, element
 :imagesdir: ../media/
 
 [.lead]
-With the management node UI (`https://[management node IP]:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
+With the management node UI (`https://<managementNodeIP>:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
 
 Tasks you can perform with the management node UI:
 

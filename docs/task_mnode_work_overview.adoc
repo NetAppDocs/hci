@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_mnode_work_overview.html
-summary: You can use the management node (mNode) to upgrade system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
+summary: You can use the management node (mNode) to use system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
 keywords: netapp, mnode, api, rest api, mnode ui, management node ui
 ---
 
@@ -14,7 +14,7 @@ keywords: netapp, mnode, api, rest api, mnode ui, management node ui
 :imagesdir: ../media/
 
 [.lead]
-You can use the management node (mNode) to upgrade system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
+You can use the management node (mNode) to use system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
 
 For clusters running Element software version 11.3 or later, you can work with the management node by using one of two interfaces:
 
@@ -31,27 +31,18 @@ Access the management node:
 
 * link:task_mnode_access_ui.html[Access the management node (UI or REST API)]
 
-Tasks you can perform with the management node UI:
+Perform tasks with the management node UI:
 
-* link:task_mnode_enable_alerts.html[Configure alert monitoring on NetApp HCI]
-* link:task_mnode_settings.html[Modify and test the management node network, cluster, and system settings]
-* link:task_mnode_run_system_utilities.html[Run system utilities from the management node]
+* link:task_mnode_work_overview_UI.html[Management node UI overview]
 
-Tasks you can perform with the management node REST APIs:
+Perform tasks with the management node REST APIs:
 
-* link:task_mnode_api_get_authorizationtouse.html[Get authorization to use REST APIs]
-* link:task_mnode_enable_activeIQ.html[Enable Active IQ and NetApp HCI monitoring]
-* link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
-//* link:task_mnode_change_storage_cluster_admin_password.html[Change the storage cluster administrator password]
-* link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
-* link:task_mnode_edit_vcenter_assets.html[View or edit existing controller assets]
-* link:task_mnode_configure_proxy_server.html[Configure a proxy server for the management node]
-* link:task_hcc_collectlogs.html#use-the-rest-api-to-collect-netapp-hci-logs[Use the REST API to collect NetApp HCI logs]
+* link:task_mnode_work_overview_API.html[Management node REST API UI overview]
 
-Enable remote NetApp Support connections to help you troubleshoot:
+Disable or enable remote SSH functionality or start a remote support tunnel session with NetApp Support to help you troubleshoot:
 
 * link:task_mnode_enable_remote_support_connections.html[Enable remote NetApp Support connections]
-
+* link:task_mnode_ssh_management[Manage SSH functionality on the management node]
 
 [discrete]
 == Find more information

@@ -1,0 +1,56 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_logs.html
+summary: You can retrieve logs from the services running on the management ndoe using the REST API.
+keywords: netapp, element, management node, management services, mnode, logs
+---
+
+= Getting logs from management services
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can retrieve logs from the services running on the management node using the REST API. You can pull logs from all public services or specify specific services and use query parameters to better define the return results.
+
+.What you'll need
+* Your cluster version is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
+
+.Steps
+. Open the REST API UI on the management node:
++
+----
+https://[managementNodeIP]/mnode
+----
+
+. Select *Authorize* or any lock icon and complete the following:
+.. Enter the cluster user name and password.
+.. Enter the client ID as mnode-client if the value is not already populated.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+. Select *GET /logs*.
+. Select *Try it out*.
+. Specify the following parameters:
+* `Lines`: Enter the number of lines you want the log to return. This parameter is an integer that defaults to 1000.
++
+TIP: Avoid requesting the entire history of log content by setting Lines to 0.
+
+* `since`: Adds a ISO-8601 timestamp for the service logs starting point.
++
+TIP: Use a reasonable `since` parameter when gathering logs of wider timespans.
+
+* `service-name`: Enter a service name.
++
+TIP: Use the `GET /services` command to list services on the management node.
+
+* `stopped`: Set to `true` to retrieve logs from stopped services.
+. Select *Execute*.
+
+[discrete]
+== Find more Information
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

@@ -1,0 +1,64 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_rancher_monitor.html
+summary: Learn about how you can monitor Rancher on NetApp HCI.
+keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload
+---
+
+= Monitor a Rancher on NetApp HCI implementation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+There are multiple ways to monitor Rancher server, management clusters, and other details.
+
+
+* NetApp Hybrid Cloud Control
+* Rancher UI
+* NetApp Active IQ
+* vCenter Server
+
+
+== Monitor Rancher using the NetApp Hybrid Cloud Control
+
+Using the NetApp Hybrid Cloud Control, you can view the Rancher URL and Rancher server cluster status. You can also monitor the nodes in which Rancher is running.
+
+. Log in to NetApp Hybrid Cloud Control by providing Element storage cluster administrator credentials.
+. From the Dashboard, click on the top right Options icon and select *Configure*.
++
+image::hcc_configure.png[Rancher Configuration page]
+
+. To view nodes information, from the Hybrid Cloud Control Dashboard, expand the name of your storage cluster and click *Nodes*.
+
+== Monitor Rancher using the Rancher UI
+
+Using the Rancher UI, you can see information about Rancher on NetApp HCI management clusters and user clusters.
+
+TIP: In the Rancher UI, management clusters are referred to as "local clusters."
+
+. Access the Rancher UI using that URL provided to you at the end of the Rancher deployment.
+. See https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/[Monitoring in Rancher v2.5].
+
+
+== Monitor Rancher using NetApp Active IQ
+
+Using NetApp Active IQ, you can view Rancher telemetry, such as installation information, nodes, clusters, status, namespace information, and more.
+
+. Log in to NetApp Hybrid Cloud Control by providing Element storage cluster administrator credentials.
+. From the top right menu, select *NetApp Active IQ*.
+
+== Monitor Rancher using vCenter Server
+
+Using vCenter Server, you can monitor the Rancher virtual machines.
+
+
+
+[discrete]
+== Find more information
+* https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
