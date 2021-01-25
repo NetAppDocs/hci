@@ -21,6 +21,7 @@ After you deploy Rancher on NetApp HCI, you should continue with post-deployment
 * link:task_rancher_trident.html[Install the Trident catalog]
 * link:task_trident_configure_networking.html[Enable Trident support for user clusters]
 
+
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
