@@ -17,8 +17,8 @@ After you deploy Rancher on NetApp HCI, you should continue with post-deployment
 
 * link:task_rancher_ensure_rancher_support_parity.html[Ensure Rancher Support parity]
 * link:task_rancher_config_anti_affinity.html[Improve Rancher VM resiliency]
-* link:task_rancher_enable_monitoring.html[Enable monitoring]
-* link:task_rancher_trident.html[Install the Trident catalog]
+* link:task_rancher_enable_monitoring.html[Configure monitoring]
+* link:task_rancher_trident.html[Install Trident]
 * link:task_trident_configure_networking.html[Enable Trident support for user clusters]
 
 
