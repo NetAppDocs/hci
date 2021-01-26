@@ -37,7 +37,7 @@ When a containerized application issues a persistent volume claim (PVC) request,
 
 A Trident catalog is available to Rancher on NetApp HCI and runs in the user clusters. As part of the Rancher on NetApp HCI implementation, a Trident installer is available in the Rancher catalog by default. Inclusion of this catalog simplifies the Trident deployment to user clusters.
 
-See link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
+See link::task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
 
 For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
 

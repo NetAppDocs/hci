@@ -1,0 +1,30 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hci_manage_overview.html
+summary: You can manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
+keywords: netapp, hci, install, deploy, get started
+---
+
+= NetApp HCI management overview
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
+
+Here are the items you can work with:
+
+* link:task_hci_credentials_vcenter_esxi.html[Update vCenter and ESXi credentials]
+* link:task_hcc_manage_storage_overview.html[Manage NetApp HCI storage assets]
+* link:task_mnode_work_overview.html[Work with the management node]
+* link:concept_nde_hci_power_off_on.html[Power your NetApp HCI system off or on]
+
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

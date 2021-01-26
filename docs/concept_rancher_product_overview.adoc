@@ -38,6 +38,9 @@ Using Rancher on NetApp HCI and Kubernetes open-source software includes free de
 
 You can choose a NetApp Rancher Support option to obtain core-based, Rancher enterprise support.
 
+NOTE:	Rancher Support is not included in your NetApp Support Edge agreement. Contact NetApp Sales or your reseller for options. If you purchase Rancher Support from NetApp, you will receive an email with instructions.
+
+
 == Rancher on NetApp HCI architecture and components
 
 Here is an overview of the various components of Rancher on NetApp HCI:

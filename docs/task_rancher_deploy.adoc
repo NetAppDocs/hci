@@ -17,6 +17,8 @@ To use Rancher on your NetApp HCI environment, you first deploy Rancher on NetAp
 
 TIP: Before starting the deployment, be sure to check the datastore free space and other link:rancher_prereqs_overview.html[requirements for Rancher on NetApp HCI].
 
+NOTE:	Rancher Support is not included in your NetApp Support Edge agreement. Contact NetApp Sales or your reseller for options. If you purchase Rancher Support from NetApp, you will receive an email with instructions.
+
 
 == What happens when you deploy Rancher on NetApp HCI?
 The deployment involves the following steps, each described further:
@@ -34,11 +36,12 @@ Each virtual machine is assigned all Kubernetes roles for both the Control Plane
 * After deployment, Dev and Ops teams can then deploy their user clusters, similar to any Rancher deployment.
 
 
+
 == Steps to deploy Rancher on NetApp HCI
 * <<Access the NetApp Hybrid Cloud Control>>
 * <<Deploy Rancher on NetApp HCI>>
 * <<Verify your deployment by using vCenter Server>>
-* <<Obtain and register Technical Support>>
+
 
 === Access the NetApp Hybrid Cloud Control
 
@@ -110,12 +113,6 @@ In your vSphere client, you can see the Rancher management cluster, which includ
 
 IMPORTANT: Once you have finished deployment, do not modify the configuration of the Rancher server virtual machine cluster or remove the virtual machines. Rancher on NetApp HCI relies on the deployed RKE management cluster configuration to function normally.
 
-=== Obtain and register Technical Support
-
-After deployment, an email is sent to you that includes a Support registration code that you use to register for Support, if you chose the Rancher Support option.
-
-. Open the email sent to you from NetApp after the Rancher on NetApp HCI deployment and locate the Support registration code.
-. Use the code to register your deployment with Rancher as well as NetApp Support.
 
 == What's next?
 After deployment, you can do the following:
