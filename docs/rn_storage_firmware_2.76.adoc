@@ -1,0 +1,210 @@
+---
+sidebar: docs_sidebar
+permalink: docs/rn_storage_firmware_2.76.html
+summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
+keywords: netapp, hci, storage firmware
+---
+////
+This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
+////
+= Storage Firmware Bundle 2.76 Release Notes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+
+== What's New
+The storage firmware bundle version 2.76 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+
+=== Updated firmware components
+This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
+
+|===
+|Component |SolidFire SF-series |H410S |H610S
+
+|BIOS
+|N/A
+|NA2.1
+|*3B06*
+
+|BMC
+|N/A
+|6.84.00
+|*3.86.07*
+
+|NIC / Mellanox
+|-
+|*14.25.1020*
+|*14.25.1020*
+
+|RMS200
+|ae3b8cc
+|ae3b8cc
+|-
+
+|RMS300
+|7d8422bc
+|7d8422bc
+|-
+
+|NVDIMM, Smart
+|-
+|-
+|3.1
+
+|BPM, Smart
+|-
+|-
+|2.16
+
+|NVDIMM, Micron Gen1
+|-
+|-
+|26.2c
+
+|NVDIMM, Micron Gen2
+|-
+|-
+|25.3c
+
+|PGEM, Micron
+|-
+|-
+|1.40
+
+|PM863, SED
+|GXT5404Q
+|GXT5404Q
+|-
+
+|PM863, NSED
+|GXT5103Q
+|GXT5103Q
+|-
+
+|PM883, SED
+|*HXT7904Q*
+|*HXT7904Q*
+|-
+
+|Hawk-4, SED
+|8ENP7101
+|8ENP7101
+|-
+
+|Hawk-4, NSED
+|8ENP6101
+|8ENP6101
+|-
+
+|PM963, SED
+|-
+|-
+|CXV8202Q
+
+|PM963, NSED
+|-
+|-
+|CXV8501Q
+
+|PM983, SED
+|-
+|-
+|*EDA5402Q*
+
+|PM983, NSED
+|-
+|-
+|*EDA5700Q*
+
+|CD5, SED
+|-
+|-
+|0109
+
+|CD5, NSED
+|-
+|-
+|0109
+
+|CD5, FIPS
+|-
+|-
+|0108
+|===
+
+== New BMC features
+The following are the new BMC features and changes included in this release:
+
+* (H610S)
+* (H610S)
+* (H610S)
+* (H610S, H410S)
+* (H610S)
+* (H610S) 
+
+== Resolved issues
+The following are issues that have been resolved in this release:
+
+|===
+|Issue |Description
+
+|N/A
+|The debug user sysadmin can log in using SSH after resetting the BMC.
+
+|N/A
+|When you use the console to ping the BMC IP address, the BMC does not respond.
+
+|N/A
+|During an AC power cycle stress test, the access permissions of the SOLSSH config file are lost.
+
+|CSESF-116
+|During an AC power cycle stress test, "PROCHOT" CPU thermal warnings appear in the BMC logs.
+
+|CSESF-121
+|The create and update service account API takes longer than expected.
+
+|CSD-3321 / CSESF-129
+|The H610S BMC can hang and become inaccessible with the error "BMC Self Test Failed".
+
+|CSESF-197
+|The BMC web UI inventory API returns the wrong memory serial number format.
+|===
+
+== Resolved security vulnerabilities
+The following are security vulnerabilities that have been resolved in this release:
+
+=== H410S BMC 6.84.00
+
+* CVE-2019-16649
+* CVE-2019-16650
+* CVE-2019-6260
+
+=== H610S BMC 3.84.07
+
+* CVE-2019-1552
+* CVE-2019-1547, CVE-2019-1563
+* CVE-2019-5482
+* CVE-2019-15903
+* CVE-2018-20843
+* CVE-2019-14821, CVE-2019-15916, CVE-2019-16413
+* CVE-2019-10638, CVE-2019-10639
+* CVE-2019-11478, CVE-2019-11479, CVE-2019-11477
+* CVE-2019-12819
+* CVE-2019-14835, CVE-2019-14814, CVE-2019-14816, CVE-2019-16746
+* CVE-2019-19062
+* CVE-2019-19922, CVE-2019-20054
+* CVE-2019-19447, CVE-2019-19767, CVE-2019-10220
+
+== Known issues
+There are no known issues in this release.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
