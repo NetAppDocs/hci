@@ -97,7 +97,8 @@ sudo service ntpd stop
 
 .. Edit the NTP configuration file `/etc/ntp.conf`:
 ...	Comment out the default servers (`server 0.gentoo.pool.ntp.org`) by adding a `#` in front of each.
-...	Add a new line for each default time server you want to add. The default time server(s) must be the same NTP server used on the storage cluster. Use the same storage MVIP you specified for `/sf/packages/mnode/setup-mnode`.
+...	Add a new line for each default time server you want to add. The default time servers must be the same NTP servers used on the storage cluster that you will use in a link:task_mnode_recover.html#configure-the-management-node[later step].
+
 +
 ----
 vi /etc/ntp.conf
@@ -106,7 +107,7 @@ vi /etc/ntp.conf
 #server 1.gentoo.pool.ntp.org
 #server 2.gentoo.pool.ntp.org
 #server 3.gentoo.pool.ntp.org
-server <insert the name or MVIP of the default time server>
+server <insert the hostname or IP address of the default time server>
 ----
 
 ...	Save the configuration file when complete.
@@ -166,7 +167,7 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 ----
 .. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:
 +
-* *[mvip IP address]*: The management virtual IP address of the storage cluster.
+* *[mvip IP address]*: The management virtual IP address of the storage cluster. Configure the management node with the same storage cluster that you used during link:task_mnode_recover.html#configure-time-sync[NTP servers configuration].
 * *[persistent volume account name]*: The name of the account associated with all persistent volumes in this storage cluster.
 
 . Configure and run the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:

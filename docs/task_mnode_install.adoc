@@ -97,7 +97,6 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 == Configure time sync
 
 . Ensure time is synced between the management node and the storage cluster using NTP:
-.. SSH into the management node.
 .. Log in to the management node using SSH or the console provided by your hypervisor.
 .. Stop NTPD:
 +
@@ -107,7 +106,7 @@ sudo service ntpd stop
 
 .. Edit the NTP configuration file `/etc/ntp.conf`:
 ...	Comment out the default servers (`server 0.gentoo.pool.ntp.org`) by adding a `#` in front of each.
-...	Add a new line for each default time server you want to add. The default time server(s) must be the same NTP server used on the storage cluster. Use the same storage MVIP you specified for `/sf/packages/mnode/setup-mnode`.
+...	Add a new line for each default time server you want to add. The default time servers must be the same NTP servers used on the storage cluster that you will use in a link:task_mnode_install.html#set-up-the-management-node[later step].
 +
 ----
 vi /etc/ntp.conf
@@ -116,7 +115,7 @@ vi /etc/ntp.conf
 #server 1.gentoo.pool.ntp.org
 #server 2.gentoo.pool.ntp.org
 #server 3.gentoo.pool.ntp.org
-server <insert the name or MVIP of the default time server>
+server <insert the hostname or IP address of the default time server>
 ----
 
 ...	Save the configuration file when complete.
@@ -168,7 +167,7 @@ NOTE: The abbreviated form of the command name is in parentheses ( ) and can be 
 
 +
 * *--mnode_admin_user (-mu) [username]*: The username for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
-* *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software.
+* *--storage_mvip (-sm) [MVIP address]*: The management virtual IP address (MVIP) of the storage cluster running Element software. Configure the management node with the same storage cluster that you used during link:task_mnode_install.html#configure-time-sync[NTP servers configuration].
 * *--storage_username (-su) [username]*: The storage cluster administrator username for the cluster specified by the `--storage_mvip` parameter.
 * *--telemetry_active (-t) [true]*: Retain the value true that enables data collection for analytics by Active IQ.
 .. (Optional): Add Active IQ endpoint parameters to the command:
