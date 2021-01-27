@@ -46,6 +46,11 @@ Management service bundles provide enhanced functionality and fixes to your inst
 
 NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes].
 
+* If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
+.. Power off the management node VM.
+.. Change the RAM of the management node VM from 12GB to 24GB RAM.
+.. Power on the management node VM.
+
 .Steps
 . Open a web browser and browse to the IP address of the management node: `https://<ManagementNodeIP>`
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
