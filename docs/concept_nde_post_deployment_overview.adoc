@@ -15,6 +15,13 @@ keywords: netapp, hci, deployment, review, deploy
 [.lead]
 Depending on your choices during the deployment process, you need to complete some final tasks before your NetApp HCI system is ready for production use, such as updating firmware and drivers and making any needed final configuration changes.
 
+* link:task_nde_supported_net_changes.html[Supported networking changes^]
+* link:task_nde_disable_smartd.html[Disable the smartd service on NetApp HCI compute nodes^]
+* link:task_nde_update_vsphere.html[Keep VMware vSphere up to date^]
+* link:task_nde_install_GPU_drivers.html[Install GPU drivers for GPU-enabled compute nodes^]
+* link:task_nde_access_ui_fqdn.html[Configure Fully Qualified Domain Name web UI access^]
+* link:task_nde_access_hcc.html[Access NetApp Hybrid Cloud Control^]
+
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
