@@ -43,6 +43,7 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 . <<Download ISO or OVA and deploy the VM>>
 . <<Configure the network>>
 . <<Configure the management node>>
+. <<Configure time sync>>
 
 == Download ISO or OVA and deploy the VM
 
@@ -83,21 +84,9 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 +
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
+
+
 == Configure the management node
-
-. Log in to the management node using SSH or the console provided by your hypervisor.
-. Run the following command to gain root privileges. Enter your password when prompted:
-+
-----
-sudo su
-----
-
-. Ensure time is synced between the management node and the storage cluster using NTP:
-.. Edit the `/etc/ntp.conf` file.
-.. Change the default time server(s) to the same NTP server used on the storage cluster.
-.. In vSphere, verify that the *Synchronize guest time with host* box is un-checked in the VM options.
-+
-NOTE: Do not enable this option if you make future changes to the VM.
 
 . Create a temporary destination directory for the management services bundle contents:
 +
@@ -141,7 +130,63 @@ NOTE: You can add the user name or allow the script to prompt you for the inform
 .. Run the `redeploy-mnode` command. The script displays a success message when the redeployment is complete.
 .. If you access Element or NetApp HCI web interfaces (such as the management node or NetApp Hybrid Cloud Control) using the Fully Qualified Domain Name (FQDN) of the system, link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api[reconfigure authentication for the management node^].
 
-IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default. 
+IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
+
+== Configure time sync
+
+. Ensure time is synced between the management node and the storage cluster using NTP:
+.. Log in to the management node using SSH or the console provided by your hypervisor.
+.. Stop NTPD:
++
+----
+sudo service ntpd stop
+----
+
+.. Edit the NTP configuration file `/etc/ntp.conf`:
+...	Comment out the default servers (`server 0.gentoo.pool.ntp.org`) by adding a `#` in front of each.
+...	Add a new line for each default time server you want to add. The default time server(s) must be the same NTP server used on the storage cluster. Use the same storage MVIP you specified for `/sf/packages/mnode/setup-mnode`.
++
+----
+vi /etc/ntp.conf
+
+#server 0.gentoo.pool.ntp.org
+#server 1.gentoo.pool.ntp.org
+#server 2.gentoo.pool.ntp.org
+#server 3.gentoo.pool.ntp.org
+server <insert the name or MVIP of the default time server>
+----
+
+...	Save the configuration file when complete.
+.. Force an NTP sync with the newly added server.
++
+----
+sudo ntpd -gq
+----
+
+.. Restart NTPD.
++
+----
+sudo service ntpd start
+----
+
+.. Disable time synchronization with host via the hypervisor (the following is a VMware example):
++
+NOTE: If you deploy the mNode in a hypervisor environment other than VMware, for example, from the .iso image in an Openstack environment, refer to the hypervisor documentation for the equivalent commands.
+
+...	Disable periodic time synchronization:
++
+----
+vmware-toolbox-cmd timesync disable
+----
+
+...	Display and confirm the current status of the service:
++
+----
+vmware-toolbox-cmd timesync status
+----
+...	In vSphere, verify that the `Synchronize guest time with host` box is un-checked in the VM options.
+
+NOTE: Do not enable this option if you make future changes to the VM.
 
 [discrete]
 == Find more Information
