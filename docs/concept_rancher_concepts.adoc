@@ -21,7 +21,7 @@ Learn basic concepts related to Rancher on NetApp HCI.
 
 * *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
-* *User clusters*: These downstream Kubernetes clusters run your apps and services. In Kubernetes installations of Rancher, the management cluster should be separate from the user clusters. Any cluster that a Rancher user deploys from Rancher, or imports into Rancher, would be considered a user cluster.
+* *User clusters*: These downstream Kubernetes clusters run your apps and services. In Kubernetes installations of Rancher, the management cluster should be separate from the user clusters. Any cluster that a Rancher user deploys from Rancher, or imports into Rancher, is considered a user cluster.
 
 * *Rancher node template*: Hybrid Cloud Control uses a Rancher node template to make deployment simpler.
 
@@ -37,7 +37,7 @@ When a containerized application issues a persistent volume claim (PVC) request,
 
 A Trident catalog is available to Rancher on NetApp HCI and runs in the user clusters. As part of the Rancher on NetApp HCI implementation, a Trident installer is available in the Rancher catalog by default. Inclusion of this catalog simplifies the Trident deployment to user clusters.
 
-See link::task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
+See link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
 
 For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
 
