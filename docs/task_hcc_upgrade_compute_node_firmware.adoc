@@ -76,8 +76,8 @@ Choose the option that is relevant to your upgrade scenario:
 
 * <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
 * <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
-* For compute node image 12.0: <<Use a USB drive with the latest compute node firmware ISO downloaded>>
-* For compute firmware 12.2.109: <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
+* <<Use a USB drive imaged with the latest compute node firmware bundle ISO>>
+* <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
 == Use NetApp Hybrid Cloud Control UI to upgrade a compute node
 
@@ -375,7 +375,7 @@ https://[management node IP]/hardware/2/
 .. Click *Execute*.
 .. Verify in the response that firmware for all components has been successfully upgraded from the previous version to the latest firmware.
 
-== Use a USB drive with the latest compute node firmware ISO downloaded
+== Use a USB drive imaged with the latest compute node firmware bundle ISO
 
 You can insert a USB drive with the latest compute node firmware ISO downloaded to a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the ISO on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure that your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
 
