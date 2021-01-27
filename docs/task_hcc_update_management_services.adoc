@@ -29,7 +29,7 @@ NOTE: For the latest management services release notes describing major services
 
 You can update management services using the NetApp Hybrid Cloud Control (HCC) UI or the management node REST API:
 
-* <<Update management services using Hybrid Cloud Control>> (Preferred method)
+* <<Update management services using Hybrid Cloud Control>> (Recommended method)
 * <<Update management services using the management node API>>
 * <<Update management services using the management node API for dark sites>>
 
@@ -42,12 +42,10 @@ Management service bundles provide enhanced functionality and fixes to your inst
 .Before you begin
 
 * You are running management node 11.3 or later.
-+
-IMPORTANT: If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
+* If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
 .. Power off the management node VM.
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
-
 * Your cluster version is running NetApp Element software 11.3 or later.
 * You have upgraded your management services to at least version 2.1.326. NetApp Hybrid Cloud Control upgrades are not available in earlier service bundles.
 
@@ -76,8 +74,7 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 
 .Before you begin
 * You are running management node 11.3 or later.
-+
-IMPORTANT: If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
+* If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
 .. Power off the management node VM.
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
@@ -118,6 +115,10 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 
 .Before you begin
 * You have deployed a NetApp Element software management node 11.3 or later.
+* If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
+.. Power off the management node VM.
+.. Change the RAM of the management node VM from 12GB to 24GB RAM.
+.. Power on the management node VM.
 * Your cluster version is running NetApp Element software 11.3 or later.
 * You have downloaded the service bundle update from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site] to a device that can be used in the dark site.
 
@@ -137,7 +138,7 @@ A successful update returns a result similar to the following example:
 ----
 {
 "current_version": "2.10.29",
-"details": "Updated to version 2.14.60",
+"details": "Updated to version 2.17.52",
 "status": "success"
 }
 ----
