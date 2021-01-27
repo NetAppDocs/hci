@@ -1,0 +1,30 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_manage_storage_overview.html
+summary: With NetApp HCI, you can manage storage assets by using the NetApp Hybrid Cloud Control.
+keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc
+---
+
+= Manage NetApp HCI storage overview
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+With NetApp HCI, you can manage these storage assets by using the NetApp Hybrid Cloud Control.
+
+* link:task_hcc_manage_accounts.html[Create and manage user accounts]
+* link:task_hcc_manage_storage_clusters.html[Add and manage storage clusters]
+* link:task_hcc_manage_vol_management.html[Create and manage volumes]
+* link:task_hcc_manage_vol_access_groups.html[Create and manage volume access groups]
+* link:task_hcc_manage_initiators.html[Create and manage initiators]
+* link:task_hcc_qos_policies.html[Create and manage volume QoS policies]
+
+[discrete]
+== Find more information
+* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element 12.2 Documentation Center^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]

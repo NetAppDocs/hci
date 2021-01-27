@@ -138,26 +138,14 @@ entries:
            url: /task_nde_access_hcc.html
   - title: Manage NetApp HCI
     entries:
-      - title: Update your credentials
+      - title: Manage NetApp HCI overview
+        url: /task_hci_manage_overview.html
+      - title: Update vCenter and ESXi credentials
+        url: /task_hci_credentials_vcenter_esxi.html
+      - title: Manage NetApp HCI storage
         entries:
-          - title: Update vCenter and ESXi credentials
-            url: /task_hci_credentials_vcenter_esxi.html
-      - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
-        entries:
-          - title: View resources on the Dashboard of NetApp Hybrid Cloud Control
-            url: /task_hcc_dashboard.html
-          - title: View your inventory on the Nodes page of NetApp Hybrid Cloud Control
-            url: /task_hcc_nodes.html
-          - title: Edit BMC connection information with NetApp Hybrid Cloud Control
-            url: /task_hcc_edit_bmc_info.html
-          - title: Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
-            url: /task_hcc_volumes.html
-          - title: Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
-            url: /task_hcc_activeiq.html
-          - title: Collect logs for troubleshooting
-            url: /task_hcc_collectlogs.html
-      - title: Manage NetApp HCI storage with NetApp Hybrid Cloud Control
-        entries:
+          - title: Manage NetApp HCI storage overview
+            url: /task_hcc_manage_storage_overview.html 
           - title: Create and manage user accounts
             url: /task_hcc_manage_accounts.html
           - title: Add and manage storage clusters
@@ -239,6 +227,20 @@ entries:
             url: /task_nde_hci_power_on_storage.html
           - title: Power on compute resources for a NetApp HCI system
             url: /task_nde_hci_power_on_compute.html
+  - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
+    entries:
+      - title: View resources on the Dashboard of NetApp Hybrid Cloud Control
+        url: /task_hcc_dashboard.html
+      - title: View your inventory on the Nodes page of NetApp Hybrid Cloud Control
+        url: /task_hcc_nodes.html
+      - title: Edit BMC connection information with NetApp Hybrid Cloud Control
+        url: /task_hcc_edit_bmc_info.html
+      - title: Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
+        url: /task_hcc_volumes.html
+      - title: Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
+        url: /task_hcc_activeiq.html
+      - title: Collect logs for troubleshooting
+        url: /task_hcc_collectlogs.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
