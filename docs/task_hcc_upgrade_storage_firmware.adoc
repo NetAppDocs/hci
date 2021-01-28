@@ -31,6 +31,8 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 * *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
 
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+
 .Upgrade options
 
 Choose one of the following storage firmware upgrade options:

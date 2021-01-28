@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hci_h610srepl.html
 summary: You might need to replace the chassis if the fan, central processing unit (CPU), or dual inline memory module (DIMM) fails, or to fix overheating issues or problems with the boot process. The blinking amber LED in the front of the chassis is an indication of a possible need for chassis replacement. You should contact NetApp Support before you proceed.
-keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement
+keywords: netapp, hci, h610s, chassis replacement, node replacement
 ---
 
 = Replace H610S nodes
@@ -45,18 +45,15 @@ image::h610s-servicetag.gif[Shows the service tag at the front of the H610S chas
 . Verify the serial number of the failed node with NetApp Support.
 . Power down the chassis.
 . Label the drives in the front and cables at the back with their locations, so that you can put them back in the same locations after the replacement.
-. Remove the power supply units and cables.
-. Remove the drives carefully, and place them on an antistatic, level surface.
+. Remove the cables.
 . Remove the chassis by unscrewing the thumbscrews on the mounting ears.
-You must package and return the failed chassis to NetApp.
-. Optional: Remove the rails and install the new rails that were shipped with your replacement.
-You can also reuse the existing rails.
-. Slide the replacement chassis on to the rails.
-. Insert the drives you removed earlier.
+You should package and return the failed chassis to NetApp.
+. Install the replacement chassis.
+. Remove the drives carefully from the failed chassis, and insert them in the replacement chassis.
 +
 NOTE: You should insert the drives in the same slots they were in before you removed them.
 
-. Install the power supply units.
+. Remove the power supply units from the failed chassis, and insert them in the replacement chassis.
 . Insert the power supply cables, and the network cables in their original ports.
 . Small form-factor pluggable (SFP) transceivers might be inserted in the 10GbE ports of the replacement node. You should remove them before you cable the 10GbE ports.
 +
