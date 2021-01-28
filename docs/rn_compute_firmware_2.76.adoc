@@ -52,6 +52,14 @@ Here are the details of the improvements and changes included in each new firmwa
 |===
 |Node and firmware component |Improvements and changes
 
+|*BIOS Release NA3.8*
+a|
+* CSESF-284 Tatooine + BMC 6.71.18 does not report when PPR function work success event.
+* CSESF-289 NA3.7 BIOS does not have the ability to report a success on hPPR (hard PPR).
+
+|*BIOS Release NATP3.9*
+|Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
+
 |H300E, H500E, H700E BMC 6.84.00
 |Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
 
@@ -108,67 +116,73 @@ To download the Compute Firmware Bundle:
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
 
-== Resolved issues
-The following are issues that have been resolved in this release.
+== Resolved security vulnerabilities
+The following are security vulnerabilities that have been resolved in this release:
 
-|===
-|Issue |Description
+* CVE2020-0548, CVE2020-0549
+* CVE2019-11157, CVE2019-14607
 
-|CSD-3321 / CSESF-129
-|The BMC can hang and become inaccessible with the error `BMC Self Test Failed`. This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
+== Resolved issues - Link to BOL
+See the link to the BOL for details of issues that have been resolved in this release.
 
-|CSESF-234
-|The H610C BMC web UI inventory API returns the wrong memory serial number format. This is resolved in H610C BMC 4.00.07.
+// |===
+// |Issue |Description
+//
+// |CSD-3321 / CSESF-129
+// |The BMC can hang and become inaccessible with the error `BMC Self Test Failed`. This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
+//
+// |CSESF-234
+// |The H610C BMC web UI inventory API returns the wrong memory serial number format. This is resolved in H610C BMC 4.00.07.
+//
+// |PE-6708
+// |The Bonded NIC pair does not fail over to secondary when the NIC goes down or the port is disabled. This is resolved in Mellanox firmware 14.24.1000.
+// |===
 
-|PE-6708
-|The Bonded NIC pair does not fail over to secondary when the NIC goes down or the port is disabled. This is resolved in Mellanox firmware 14.24.1000.
-|===
+== Known issues - link to BOL
+See the link to the BOL for details of known issues in this release that might affect daily operation in some environments.
 
-== Known issues
-The following are known issues in this release that might affect daily operation in some environments.
-
-|===
-|Issue |Description |Workaround
-
-|CSESF-295
-|The compute node firmware update process fails with a BIOS update error when you update the firmware on a H410C node using the downloadable firmware package.
-a|Manually update the BIOS to version NA3.7 on the H410C node:
-
-. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI Downloads page^].
-. Enter `H410C_BIOS_3.7` in the drop down list text field.
-. Click *Go*.
-Instructions for updating are available in PDF format on the download page.
-
-After you update the BIOS and BMC, update the H410C node firmware using the compute firmware bundle 2.76 package.
-
-|CSESF-328
-|On H410C and H300E/H500E/H700E nodes, one NIC sensor for the Mellanox NIC in the BMC reports status as "NA" and reads "not present".
-|None
-
-|CSESF-309
-|H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
-|Run the following command to recover the ports: `esxcli network nic set -n vmnic2 -a`
-
-|CSESF-303
-|Network statistics errors are seen for the Mellanox NIC on H410C nodes.
-|None
-
-|CSESF-293 / PE-10130
-|Mellanox NIC firmware can be downgraded by Bootstrap OS after you upgrade to the Compute Firmware Bundle version 2.76.
-|Reinstall Compute Firmware Bundle version 2.76.
-
-|PE-11033
-|Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
-|None
-
-|PE-11032
-|Under heavy loads, transmit errors sometimes occur for the Mellanox NIC on H610C nodes.
-|None
-
-|PE-10954
-|H610C nodes sometimes reflect the incorrect MTU setting after you set the MTU using the Element software Terminal User Interface (TUI).
-|None
-|===
+// |===
+// |Issue |Description |Workaround
+//
+// |CSESF-295
+// |The compute node firmware update process fails with a BIOS update error when you update the firmware on a H410C node using the downloadable firmware package.
+// a|Manually update the BIOS to version NA3.7 on the H410C node:
+//
+// . Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI Downloads page^].
+// . Enter `H410C_BIOS_3.7` in the drop down list text field.
+// . Click *Go*.
+// Instructions for updating are available in PDF format on the download page.
+//
+// After you update the BIOS and BMC, update the H410C node firmware using the compute firmware bundle 2.76 package.
+//
+// |CSESF-328
+// |On H410C and H300E/H500E/H700E nodes, one NIC sensor for the Mellanox NIC in the BMC reports status as "NA" and reads "not present".
+// |None
+//
+// |CSESF-309
+// |H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
+// |Run the following command to recover the ports: `esxcli network nic set -n vmnic2 -a`
+//
+// |CSESF-303
+// |Network statistics errors are seen for the Mellanox NIC on H410C nodes.
+// |None
+//
+// |CSESF-293 / PE-10130
+// |Mellanox NIC firmware can be downgraded by Bootstrap OS after you upgrade to the Compute Firmware Bundle version 2.76.
+// |Reinstall Compute Firmware Bundle version 2.76.
+//
+// |PE-11033
+// |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
+// |None
+//
+// |PE-11032
+// |Under heavy loads, transmit errors sometimes occur for the Mellanox NIC on H610C nodes.
+// |None
+//
+// |PE-10954
+// |H610C nodes sometimes reflect the incorrect MTU setting after you set the MTU using the Element software Terminal User Interface (TUI).
+// |None
+// |===
 
 [discrete]
 == Find more information
