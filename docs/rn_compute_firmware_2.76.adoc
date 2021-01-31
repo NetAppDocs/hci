@@ -60,40 +60,41 @@ a|
 |*BIOS Release NATP3.9*
 |Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
 
-|H300E, H500E, H700E BMC 6.84.00
-|Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
-
-|H610C BIOS 3B03
-a|
-
-* Improved handling of memory failures
-* Added the latest Intel NVM firmware updates
-* Updated the RC version to 602.D02 (IPU 2020.1)
-* Updated the microcode version to MCU x6906
-* Updated the SPS ME version to 04.01.04.381.0
-* Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
-
-|H615C BIOS 3B08.CO
-a|
-
-* Improved handling of memory failures
-* Added the latest Intel NVM firmware updates
-* Updated the microcode version to MCU x2F01
-* Updated the RC version to 602.D02 (IPU 2020.1)
-* Updated the SPS ME version to 04.01.04.381.0
-* Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
-* Changed the option *Attempt Fast Cold Boot* default value to `disable`
-* Changed the option *Allow Correctables* default value to `enable`
-
-|H410C BMC 6.71.18
-|Add BMC reporting for ePPR memory SEL events
-
-|H610C BMC 4.00.07
-|Add remote syslog support
-
-|H615C BMC 4.68.07
-|Add remote syslog support
+// |H300E, H500E, H700E BMC 6.84.00
+// |Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
 |===
+
+// |H610C BIOS 3B03
+// a|
+//
+// * Improved handling of memory failures
+// * Added the latest Intel NVM firmware updates
+// * Updated the RC version to 602.D02 (IPU 2020.1)
+// * Updated the microcode version to MCU x6906
+// * Updated the SPS ME version to 04.01.04.381.0
+// * Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+//
+// |H615C BIOS 3B08.CO
+// a|
+//
+// * Improved handling of memory failures
+// * Added the latest Intel NVM firmware updates
+// * Updated the microcode version to MCU x2F01
+// * Updated the RC version to 602.D02 (IPU 2020.1)
+// * Updated the SPS ME version to 04.01.04.381.0
+// * Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+// * Changed the option *Attempt Fast Cold Boot* default value to `disable`
+// * Changed the option *Allow Correctables* default value to `enable`
+//
+// |H410C BMC 6.71.18
+// |Add BMC reporting for ePPR memory SEL events
+//
+// |H610C BMC 4.00.07
+// |Add remote syslog support
+//
+// |H615C BMC 4.68.07
+// |Add remote syslog support
+// |===
 
 === Mellanox NIC firmware driver compatibility
 The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
@@ -122,24 +123,21 @@ The following are security vulnerabilities that have been resolved in this relea
 * CVE2020-0548, CVE2020-0549
 * CVE2019-11157, CVE2019-14607
 
-== Resolved issues - Link to BOL
-See the link to the BOL for details of issues that have been resolved in this release.
+== Resolved and known issues
+See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
 
-// |===
-// |Issue |Description
-//
-// |CSD-3321 / CSESF-129
-// |The BMC can hang and become inaccessible with the error `BMC Self Test Failed`. This is resolved in H610C BMC 4.00.07 and H615C BMC 4.68.07.
-//
-// |CSESF-234
-// |The H610C BMC web UI inventory API returns the wrong memory serial number format. This is resolved in H610C BMC 4.00.07.
-//
-// |PE-6708
-// |The Bonded NIC pair does not fail over to secondary when the NIC goes down or the port is disabled. This is resolved in Mellanox firmware 14.24.1000.
-// |===
+=== Accessing the BOL tool
+. Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[BOL tool^] and select  *Element Software* from the drop-down list:
++
+image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
 
-== Known issues - link to BOL
-See the link to the BOL for details of known issues in this release that might affect daily operation in some environments.
+. In the keyword search field, type “Compute Firmware Bundle” and click *New Search*:
++
+image::compute_firmware_bundle_choice.png[Storage firmware bundle release notes, align="center"]
+
+. A list of resolved or open bugs is displayed. You can further refine the results as shown:
++
+image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="center"]
 
 // |===
 // |Issue |Description |Workaround
