@@ -109,7 +109,7 @@ NOTE: Support the node with both your hands when you pull it out of the chassis.
 
 . Place the node on a level surface.
 You should package the node and return it to NetApp.
-. Align the replacement node with the slot in the chassis into which you are installing the node.
+. Install the replacement node.
 . Push the node in until you hear a click.
 +
 CAUTION: Ensure that you do not use excessive force when sliding the node into the chassis.
