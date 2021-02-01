@@ -34,7 +34,9 @@ Upgrades using HCC are not available in earlier service bundle versions.
 
 . link:task_hcc_update_management_services.html[Update management services from Hybrid Cloud Control].
 +
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software.
+IMPORTANT: If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services.
++
+IMPORTANT: You must update to the latest management services bundle before upgrading your Element software.
 
 . link:task_upgrade_element_latest_healthtools.html[(Optional) Upgrade to the latest HealthTools].
 +
