@@ -98,7 +98,6 @@ sudo service ntpd stop
 .. Edit the NTP configuration file `/etc/ntp.conf`:
 ...	Comment out the default servers (`server 0.gentoo.pool.ntp.org`) by adding a `#` in front of each.
 ...	Add a new line for each default time server you want to add. The default time servers must be the same NTP servers used on the storage cluster that you will use in a link:task_mnode_recover.html#configure-the-management-node[later step].
-
 +
 ----
 vi /etc/ntp.conf
