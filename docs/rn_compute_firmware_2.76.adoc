@@ -52,12 +52,11 @@ Here are the details of the improvements and changes included in each new firmwa
 |===
 |Node and firmware component |Improvements and changes
 
-|*BIOS Release NA3.8*
+|*NATP3.9*
 a|
 * CSESF-284 Tatooine + BMC 6.71.18 does not report when PPR function work success event.
 * CSESF-289 NA3.7 BIOS does not have the ability to report a success on hPPR (hard PPR).
-
-|*BIOS Release NATP3.9*
+* Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
 |Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
 
 // |H300E, H500E, H700E BMC 6.84.00
