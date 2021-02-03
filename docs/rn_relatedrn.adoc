@@ -41,11 +41,13 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
 
 == Compute firmware
-* link:rn_compute_firmware_2.27.html[Compute Firmware Bundle 2.27 Release Notes (latest)]
+* link:rn_compute_firmware_2.76.html[Compute Firmware Bundle 2.76 Release Notes (latest)]
+* link:rn_compute_firmware_2.27.html[Compute Firmware Bundle 2.27 Release Notes]
 * link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes]
 
 == Storage firmware
-* link:rn_storage_firmware_2.27.html[Storage firmware Bundle 2.27 Release Notes (latest)]
+* link:rn_storage_firmware_2.76.html[Storage firmware Bundle 2.76 Release Notes (latest)]
+* link:rn_storage_firmware_2.27.html[Storage firmware Bundle 2.27 Release Notes]
 * link:rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes]
 
 ////
