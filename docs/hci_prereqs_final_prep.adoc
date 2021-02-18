@@ -89,4 +89,4 @@ You have configured the IPMI IP address for each compute and storage node.
 == Find more information
 * https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
