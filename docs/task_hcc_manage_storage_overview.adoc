@@ -27,4 +27,4 @@ With NetApp HCI, you can manage these storage assets by using the NetApp Hybrid 
 == Find more information
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element 12.2 Documentation Center^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
