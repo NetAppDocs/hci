@@ -15,9 +15,3 @@ keywords: netapp, hci, solutions, catalog, solution
 
 [.lead]
 The NetApp HCI Solutions Catalog has moved to https://docs.netapp.com/us-en/hci-solutions/index.html[NetApp HCI Solutions].
-
-
-
-== Find more information:
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Documentation Resources]
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
