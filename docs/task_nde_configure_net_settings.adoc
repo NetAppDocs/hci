@@ -13,7 +13,7 @@ keywords: netapp, hci, deployment, compatibility, nodes
 :imagesdir: ../media/
 
 [.lead]
-NetApp HCI provides a network settings page with an easy form to simplify network configuration. When you complete the easy form, NetApp HCI automatically populates much of the rest of the information on the network settings page. You can then enter final network settings and verify that the network configuration is correct before proceeding. You do not need to complete the form in its entirety.
+NetApp HCI provides a network settings page with several sections to simplify network configuration. You can proceed through each section and enter information or assign IP addresses for hosts and nodes in each network.
 
 .What you'll need
 * You have obtained the following information:
@@ -27,11 +27,13 @@ NetApp HCI provides a network settings page with an easy form to simplify networ
 * You have verified that your network switch configuration is correct. Incorrect switch configurations (such as incorrect VLANs or MTU size) will cause deployment errors.
 
 .About this task
-If you selected the two-cable network topology for compute nodes, you need to use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks). Note that NetApp HCI validates the IP addresses you enter during these steps, but you can disable this validation with the *Live network validation* button.
+If you selected the two-cable network topology for compute nodes, you need to use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks). Note that NetApp HCI validates the IP addresses you enter during these steps, but you can disable this validation with the *Live network validation is* button.
 
 NOTE: In environments that require host-side VLAN tagging before deployment, if you have configured VLAN IDs on compute and storage nodes so they are discoverable by the NetApp Deployment Engine, ensure you use the correct VLANs when configuring network settings in the NetApp Deployment Engine.
 
-If you are deploying using a two-node or three-node storage cluster, you can complete IP address information for Witness Nodes on the *Network Settings* page after using the easy form.
+If you are deploying a two-node or three-node storage cluster, you can complete IP address information for Witness Nodes on the *Network Settings* page.
+
+NOTE: In the IP address assignment pages, information you enter in the *Automatically assign IP addresses* mode does not affect information entered in the *Manually assign IP addresses* mode, and vice versa. If you enter IP addresses in both modes, NetApp HCI uses the IP address information in whatever mode is active when you click *Continue* at the bottom of the page.
 
 == Step 1: DNS / NTP
 .Steps
@@ -77,9 +79,7 @@ a|
 |===
 
 == Step 3: Management network
-NetApp HCI can automatically populate IP address ranges for the management network configuration page based on a starting IP address. You can choose this option, or you can choose to manually enter all IP address information on this page.
-
-NOTE: Information you enter in the *Automatically assign IP addresses* mode does not affect information entered in the *Manually assign IP addresses* mode, and vice versa. If you enter IP addresses in both modes, NetApp HCI uses the IP address information in whatever mode is active when you click *Continue* at the bottom of the page.
+You can choose to have NetApp HCI automatically populate IP address ranges for the Management network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
 
 .Steps
 
@@ -98,7 +98,98 @@ NetApp HCI automatically populates the ending IP addresses for each host or grou
 
 |Manually assign IP addresses
 a|
-. Select *No* for the *Will you assign VLAN IDs* option.
+. Select the *Manually assign IP addresses* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for each VLAN.
+. In the *Default Gateway* column, enter a default gateway for each VLAN.
+. In the row for each host or node, enter the IP address for that host or node.
+. Enter the Management Virtual IP (MVIP) address for the management network.
+. Click *Continue*.
+|===
+
+== Step 4: vMotion network
+You can choose to have NetApp HCI automatically populate IP address ranges for the vMotion network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
+
+.Steps
+
+|===
+|Option |Steps
+
+|Automatically assign IP addresses
+a|
+. Select the *Automatically assign IP addresses* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for each VLAN.
+. In the *Default Gateway* column, enter a default gateway for each VLAN.
+. In the *Subnet* column, enter a starting IP address to use for each VLAN and node type.
++
+NetApp HCI automatically populates the ending IP addresses for each host or group of hosts.
+. Click *Continue*.
+
+|Manually assign IP addresses
+a|
+. Select the *Manually assign IP addresses* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for each VLAN.
+. In the *Default Gateway* column, enter a default gateway for each VLAN.
+. In the row for each host or node, enter the IP address for that host or node.
+. Click *Continue*.
+|===
+
+== Step 5: iSCSI network
+You can choose to have NetApp HCI automatically populate IP address ranges for the iSCSI network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
+
+.Steps
+
+|===
+|Option |Steps
+
+|Automatically assign IP addresses
+a|
+. Select the *Automatically assign IP addresses* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for the iSCSI network.
+. In the *Default Gateway* column, enter a default gateway for the iSCSI network.
+. In the *Subnet* column, enter a starting IP address to use for each node type.
++
+NetApp HCI automatically populates the ending IP addresses for each host or group of hosts.
+. Click *Continue*.
+
+|Manually assign IP addresses
+a|
+. Select the *Manually assign IP addresses* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for the iSCSI network.
+. In the *Default Gateway* column, enter a default gateway for the iSCSI network.
+. In the *Management Node* section, enter an IP address for the management node.
+. For each node in the *Compute Nodes* section, enter the iSCSI A and iSCSI B IP addresses.
+. In the *Storage Virtual IP (SVIP)* row, enter the SVIP IP address for the iSCSI network.
+. In the remaining rows, for each host or node, enter the IP address for that host or node.
+. Click *Continue*.
+|===
+
+== Step 5: iSCSI network
+You can choose to have NetApp HCI automatically populate IP address ranges for the iSCSI network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
+
+.Steps
+
+|===
+|Option |Steps
+
+|Automatically assign cluster and host names
+a|
+. Select the *Automatically assign cluster / host names* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for the iSCSI network.
+. In the *Default Gateway* column, enter a default gateway for the iSCSI network.
+. In the *Subnet* column, enter a starting IP address to use for each node type.
++
+NetApp HCI automatically populates the ending IP addresses for each host or group of hosts.
+. Click *Continue*.
+
+|Manually assign cluster and host names
+a|
+. Select the *Manually assign cluster / host names* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for the iSCSI network.
+. In the *Default Gateway* column, enter a default gateway for the iSCSI network.
+. In the *Management Node* section, enter an IP address for the management node.
+. For each node in the *Compute Nodes* section, enter the iSCSI A and iSCSI B IP addresses.
+. In the *Storage Virtual IP (SVIP)* row, enter the SVIP IP address for the iSCSI network.
+. In the remaining rows, for each host or node, enter the IP address for that host or node.
 . Click *Continue*.
 |===
 
