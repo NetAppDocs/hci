@@ -73,6 +73,6 @@ Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table
 == Find more information
 * link:task_hcc_manage_accounts.html[Manage user accounts]
 * link:concept_hci_clusters.html[Learn about clusters]
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Documentation Center^]
