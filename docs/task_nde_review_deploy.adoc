@@ -20,7 +20,7 @@ NOTE: During deployment, the management node installation process creates volume
 .Steps
 . Optional: Click the *Download* icon to download installation information in CSV format. You can save this file and refer to it later for configuration information.
 +
-NOTE: You cannot import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine. The file formats are different.
+NOTE: You can import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine if needed during a future installation.
 
 . Expand each section and review the information. To expand all sections at once, click *Expand All*.
 . Optional: To make changes to information in any displayed section:
