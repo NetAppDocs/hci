@@ -243,4 +243,4 @@ The following are security vulnerabilities that have been resolved in this relea
 [discrete]
 == Find more information
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
