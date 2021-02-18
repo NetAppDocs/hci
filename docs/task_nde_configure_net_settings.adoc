@@ -63,7 +63,7 @@ You can assign VLAN IDs to NetApp HCI networks during this step, or choose to no
 NOTE: When you assign VLAN IDs, you are configuring VLAN tags that NetApp HCI will apply to the network traffic. You do not need to enter your native VLAN as a VLAN ID; to use the native VLAN for a network, leave the appropriate field empty.
 
 .Steps
-. Choose one of the following options:
+Choose one of the following options:
 |===
 |Option |Steps
 
@@ -85,7 +85,7 @@ a|
 You can choose to have NetApp HCI automatically populate IP address ranges for the Management network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
 
 .Steps
-. Choose one of the following options:
+Choose one of the following options:
 |===
 |Option |Steps
 
@@ -113,7 +113,7 @@ a|
 You can choose to have NetApp HCI automatically populate IP address ranges for the vMotion network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
 
 .Steps
-. Choose one of the following options:
+Choose one of the following options:
 |===
 |Option |Steps
 
@@ -140,7 +140,7 @@ a|
 You can choose to have NetApp HCI automatically populate IP address ranges for the iSCSI network based on a starting IP address, or you can choose to manually enter all IP address information on this page.
 
 .Steps
-. Choose one of the following options:
+Choose one of the following options:
 |===
 |Option |Steps
 
@@ -170,7 +170,7 @@ a|
 You can choose to have NetApp HCI automatically populate the cluster name and the names of the nodes in the cluster, based on a naming prefix, or you can choose to manually enter all of the names for the cluster and nodes.
 
 .Steps
-. Choose one of the following options:
+Choose one of the following options:
 |===
 |Option |Steps
 
