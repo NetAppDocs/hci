@@ -27,15 +27,15 @@ NetApp HCI provides a network settings page with an easy form to simplify networ
 * You have verified that your network switch configuration is correct. Incorrect switch configurations (such as incorrect VLANs or MTU size) will cause deployment errors.
 
 .About this task
-If you selected the two-cable network topology for compute nodes, you must use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks).
+If you selected the two-cable network topology for compute nodes, you need to use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks). Note that NetApp HCI validates the IP addresses you enter during these steps, but you can disable this validation with the *Live network validation* button.
 
 NOTE: In environments that require host-side VLAN tagging before deployment, if you have configured VLAN IDs on compute and storage nodes so they are discoverable by the NetApp Deployment Engine, ensure you use the correct VLANs when configuring network settings in the NetApp Deployment Engine.
 
 If you are deploying using a two-node or three-node storage cluster, you can complete IP address information for Witness Nodes on the *Network Settings* page after using the easy form.
 
+== Step 1: DNS / NTP
 .Steps
-. Optional: To disable live validation of network information you enter on this page, toggle the *Live network validation is* switch to *Off*.
-.  In the *Infrastructure Services* section of the *Network Settings* page, enter the DNS and NTP server information for NetApp HCI in the following fields:
+.  In the *DNS / NTP* section, enter the DNS and NTP server information for NetApp HCI in the following fields:
 +
 |===
 |Field |Description
@@ -52,24 +52,13 @@ If you are deploying using a two-node or three-node storage cluster, you can com
 |*NTP Server Address 2 (Optional)*
 |An optional IP address or fully qualified domain name of the secondary NTP server for this infrastructure.
 |===
-. Click *To save time, launch the easy form* to enter fewer network settings.
-+
-The *Network Settings Easy Form* dialog box appears.
 
-. Enter a naming prefix in the *Naming Prefix* field.
-+
-The naming prefix is applied to the name of each host and the name of the storage cluster. Naming prefixes have the following characteristics:
-+
-* Must start with a letter
-* Can contain letters, numbers, and hyphens
-* Cannot exceed 55 characters
-. Choose one of the following options for assigning VLAN IDs.
-+
-At any time when using the form, click *Clear* next to a row to clear input from a row of fields.
-+
+== Step 2: VLAN IDs
+
 NOTE: When you assign VLAN IDs, you are configuring VLAN tags that NetApp HCI will apply to the network traffic. You do not need to enter your native VLAN as a VLAN ID; to use the native VLAN for a network, leave the appropriate field empty.
 
-+
+.Steps
+
 |===
 |Option |Steps
 
@@ -79,25 +68,39 @@ a|
 . In the *VLAN ID* column, enter a VLAN tag to use for each type of network traffic you want to assign to a VLAN.
 +
 Both compute vMotion traffic and iSCSI traffic must use an unshared VLAN ID.
-. Click *Next*.
-. In the *Subnet* column, enter subnet definitions in CIDR format for each type of network traffic in each network; for example, 192.168.1.0/24.
-. In the *Default Gateway* column, enter the IP address of the default gateway for each type of network traffic in each network.
-. In the *Starting IP* column, enter the first useable IP address for each network subnet in each network.
+. Click *Continue*.
 
 |Do not assign VLAN IDs
 a|
 . Select *No* for the *Will you assign VLAN IDs* option.
-. In the *Subnet* column, enter subnet definitions in CIDR format for each type of network traffic in each network; for example, 192.168.1.0/24.
-. In the *Default Gateway* column, enter the IP address of the default gateway for each type of network traffic in each network.
-. In the *Starting IP* column, enter the first useable IP address for each type of network traffic in each network.
+. Click *Continue*.
 |===
-. Click *Apply to Network Settings*.
-.  Click *Yes* to confirm.
+
+== Step 3: Management network
+NetApp HCI can automatically populate IP address ranges for the management network configuration page based on a starting IP address. You can choose this option, or you can choose to manually enter all IP address information on this page.
+
+NOTE: Information you enter in the *Automatically assign IP addresses* mode does not affect information entered in the *Manually assign IP addresses* mode, and vice versa. If you enter IP addresses in both modes, NetApp HCI uses the IP address information in whatever mode is active when you click *Continue* at the bottom of the page.
+
+.Steps
+
+|===
+|Option |Steps
+
+|Automatically assign IP addresses
+a|
+. Select the *Automatically assign IP addresses* option.
+. In the *Subnet* column, enter a subnet definition in CIDR format for each VLAN.
+. In the *Default Gateway* column, enter a default gateway for each VLAN.
+. In the *Subnet* column, enter a starting IP address to use for each VLAN and node type.
 +
-This populates the *Network Settings* page with the settings you entered in the easy form. NetApp HCI validates the IP addresses you entered. You can disable this validation with the Disable Live Network Validation button.
-. Verify that the automatically populated data is correct.
+NetApp HCI automatically populates the ending IP addresses for each host or group of hosts.
 . Click *Continue*.
 
+|Manually assign IP addresses
+a|
+. Select *No* for the *Will you assign VLAN IDs* option.
+. Click *Continue*.
+|===
 
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
