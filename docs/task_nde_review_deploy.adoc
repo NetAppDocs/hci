@@ -18,9 +18,10 @@ You can review the information you provided before beginning deployment. You can
 NOTE: During deployment, the management node installation process creates volumes with names beginning with `NetApp-HCI-` in the Element storage cluster, and a SolidFire account beginning with the name `tenant_`. Do not delete these volumes or accounts; doing so will cause a loss in management functionality.
 
 .Steps
-. Optional: Click the *Download* icon to download installation information in CSV format.
+. Optional: Click the *Download* icon to download installation information in CSV format. You can save this file and refer to it later for configuration information.
 +
-You can save this file and refer to it later for configuration information.
+NOTE: You cannot import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine. The file formats are different.
+
 . Expand each section and review the information. To expand all sections at once, click *Expand All*.
 . Optional: To make changes to information in any displayed section:
 .. Click *Edit* in the corresponding section.

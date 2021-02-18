@@ -15,12 +15,17 @@ keywords: netapp, hci, deployment, compatibility, nodes, installation, profile, 
 [.lead]
 If you obtained the NetApp https://configbuilder.netapp.com/[ConfigBuilder^] profile output for your installation, you can import it during the NetApp HCI installation process to automatically fill out the fields in the NetApp Deployment Engine. This is an optional step.
 
+.About this task
+If you import an installation profile, you still need to enter credentials for NetApp HCI to use on the *Credentials* page of the NetApp Deployment Engine.
+
+NOTE: If fields in the installation profile are left blank or entered incorrectly, you might need to manually enter or correct the information in the NetApp Deployment Engine pages. If you need to add or correct information, ensure that you update the information in your records and the installation profile.
+
 .Import a profile
 . On the *Installation Profile* page, click *Browse* to search for and upload your installation profile.
 . In the file dialog, select and open the profile JSON file.
 . After the profile is successfully imported, click *Continue*.
 +
-You can step through each page of the deployment wizard and verify the settings that were imported from the installation profile.
+You can step through each page of the NetApp Deployment Engine and verify the settings that were imported from the installation profile.
 
 .Continue without importing a profile
 . To skip the import step, on the *Installation Profile* page, click *Continue*.
