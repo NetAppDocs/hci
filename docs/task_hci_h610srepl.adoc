@@ -19,6 +19,15 @@ NOTE: See the link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage
 
 TIP: The terms "node" and "chassis" are used interchangeably in the case of H610S, which is a one rack unit (1U) chassis.
 
+=== Best practices for adding and removing drives
+You should follow these best practices for adding drives to the cluster:
+
+* Add all the block drives and ensure that block syncing is complete before you add the slice drives.
+* For Element software 10.x and later, add all the block drives at once. Ensure that you don't this for more than three nodes at once.
+* For Element software 9.x and earlier, add three drives at once allowing them to completely sync before adding the next group of three.
+* Remove the slice drive and ensure that slice syncing is complete before removing the block drives.
+* Remove all the block drives from a single node at once. Ensure that all block syncing is complete before you move on to the next node.
+
 .What you'll need
 
 * You have contacted NetApp Support.
