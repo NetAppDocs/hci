@@ -55,12 +55,12 @@ NOTE: If you have the information about which DIMM needs to be replaced and do n
 . Press the power button at the front of the node.
 It takes approximately six minutes for the node to boot. The screen displays a boot menu.
 . Identify the slot that logged the error as follows:
-.. For H615C, log in to the BMC UI.
-.. Click *Logs & Reports > IPMI Event Log*.
-.. In the event log, find the memory error and identify the slot on which the error is logged.
+.. For H615C, do the following:
+... log in to the BMC UI.
+... Select *Logs & Reports* > *IPMI Event Log*.
+... In the event log, find the memory error and identify the slot on which the error is logged.
 +
 image::h615c_bmc_memoryerror.png[Shows the uncorrectable memory error in the BMC UI for H615C nodes, which indicates DIMM failure.]
-.. For H410C, need the steps and screenshots here.
 . For H410C and H615C nodes, perform the steps to identify the DIMM manufacturer.
 +
 IMPORTANT: H410C and H615C nodes include DIMMs from different manufacturers. You should not mix different DIMM types in the same chassis. You should identify the manufacturer of the faulty DIMM and order a replacement of the same type.

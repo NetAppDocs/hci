@@ -92,6 +92,8 @@ After you install the new storage node, you must insert the cables into the orig
 The cam handle that you should pull down has an arrow on it to indicate the direction in which it moves. The other cam handle does not move and is there to help you pull the node out.
 +
 NOTE: Support the node with both your hands when you pull it out of the chassis.
++
+image::HCI_stor_node_camhandles.png[Shows the storage node with the cam handles called out.]
 
 . Place the node on a level surface.
 . Install the replacement node.
@@ -211,7 +213,7 @@ TIP: It is best to use the same name for the new node as the node you replaced t
 . Enter `s` to save the settings.
 The cluster membership changes from Available to Pending.
 +
-NOTE: For best practices related to adding and removing drives, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_best_practice_on_adding_or_removing_drives_from_a_cluster_on_Element%3F[this KB article] (login required).
+IMPORTANT: Adding the drives all at once can lead to disruptions. For best practices related to adding and removing drives, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_best_practice_on_adding_or_removing_drives_from_a_cluster_on_Element%3F[this KB article] (login required).
 
 . In NetApp Element Plug-in for vCenter Server, select *NetApp Element Management > Cluster > Nodes*.
 . Select *Pending* from the drop-down list to view the list of available nodes.
