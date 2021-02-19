@@ -140,7 +140,7 @@ a|
 |Using the Element plug-in for vCenter server UI
 a|
 . From the NetApp Element Management extension point of the vSphere Web Client, select *NetApp Element Management > Cluster > Drives*.
-. From the Available drop-down list, select the drive, and click *Add*.
+. From the Available drop-down list, select the drive, and select *Add*.
 . Confirm the action.
 
 |===
