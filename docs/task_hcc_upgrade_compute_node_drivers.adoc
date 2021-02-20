@@ -27,9 +27,9 @@ Perform only one of these update operations at a time.
 .Steps
 
 . Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
-. Select *Compute_Firmware_Bundle* from the drop-down list.
+. Select *ESXI_drivers* from the drop-down list.
 . Accept the End User License Agreement.
-. Under the *Driver Packages for VMWare ESXi* heading, download the driver package for your node type and ESXi version.
+. Download the driver package for your node type and ESXi version.
 . Extract the downloaded driver bundle on your local computer.
 +
 NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; do not extract these ZIP files.
@@ -52,4 +52,4 @@ The drivers for all compute nodes in the cluster are updated one node at a time 
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

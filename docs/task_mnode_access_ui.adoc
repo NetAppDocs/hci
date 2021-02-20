@@ -60,4 +60,4 @@ image::mnode_swagger_ui.png[management node REST API UI]
 == Find more Information
 * link:task_hci_mnode_enable_activeIQ.html[Enable the Active IQ collector service for SolidFire all-flash storage]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -71,19 +71,15 @@ After you install the new chassis, you must insert the cables back into the orig
 . Disconnect all the cables from the back of the chassis.
 . Remove the chassis by unscrewing the thumbscrews on the mounting ears.
 You must package and return the failed chassis to NetApp.
-. Only for H615C. Remove the DIMMs from the chassis. You will insert these DIMMs in the replacement chassis.
-. Remove the two power supply units on either side of the chassis.
-You can use these power supply units in the new chassis.
-. Optional: Remove the rails and install the new rails that were shipped with your replacement chassis.
-If you choose to reuse the existing rails, you can skip this step.
 . Slide the replacement chassis on to the rails.
 +
 CAUTION: Ensure that you do not use excessive force when sliding the chassis on to the rails.
 
-. Place the chassis that you removed on a level surface.
-You should package it and return it to NetApp.
-. Replace the power supply units.
-. Only for H615C. Insert the DIMMs that you removed from the failed chassis, and insert them in the replacement chassis.
+. Only for H615C. Remove the DIMMs from the failed chassis and insert these DIMMs in the replacement chassis.
++
+NOTE: You should replace the DIMMs in the same slots they were removed from in the failed node.
+
+. Remove the two power supply units on either side of the failed chassis and insert them in the replacement chassis.
 . Reconnect the cables to the ports from which you originally disconnected them.
 The labels you had added on the cables when you disconnected them will help guide you.
 +

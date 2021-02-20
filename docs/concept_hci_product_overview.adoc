@@ -55,10 +55,10 @@ Here are the common URLs you use with NetApp HCI:
 |Access the NetApp Deployment Engine wizard to install and configure NetApp HCI. link:concept_nde_access_overview.html[Learn more.]
 
 |`https://[management node IP address]`
-|Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services. link:task_hci_getstarted.html[Learn more.]
+|Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services. link:task_nde_access_hcc.html[Learn more.]
 
 |`https://[IP address]:442`
-|From the per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-35DD1677-05FE-4396-9654-343137102D3D.html[Learn more.]
+|From the per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html#access-the-management-node-per-node-ui[Learn more.]
 
 |`https://[management node IP address]:9443`
 |Register the vCenter Plug-in package in the vSphere Web Client.
