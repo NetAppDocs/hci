@@ -88,4 +88,4 @@ The API returns updated controller information.
 == Find more information
 * link:task_mnode_add_assets.html[Add an asset to the management node]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

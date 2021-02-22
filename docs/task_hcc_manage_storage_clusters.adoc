@@ -91,4 +91,4 @@ CAUTION: Clicking *Yes* next removes the cluster from the installation.
 [discrete]
 == Find more information
 * link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -17,7 +17,9 @@ If a drive is faulty or if the drive wear level falls below a threshold, you sho
 
 .About this task
 This procedure is for replacing drives in H410S and H610S storage nodes. Removing a drive takes the drive offline. Any data on the drive is removed and migrated to other drives in the cluster. The data migration to other active drives in the system can take a few minutes to an hour depending on capacity utilization and active I/O on the cluster.
-You should follow these best practices for handling drives while removing and replacing them:
+
+=== Best practices for handling drives
+You should follow these best practices for handling drives:
 
 * Keep the drive in the ESD bag until you are ready to install it.
 * Open the ESD bag by hand or cut the top off with a pair of scissors.
@@ -27,14 +29,12 @@ You should follow these best practices for handling drives while removing and re
 * Always use approved packaging when shipping drives.
 * Do not stack drives on top of each other.
 
-You should follow these best practices for adding drives to the cluster:
+=== Best practices for adding and removing drives
+You should follow these best practices for adding drives to the cluster and removing drives from the cluster:
 
 * Add all the block drives and ensure that block syncing is complete before you add the slice drives.
 * For Element software 10.x and later, add all the block drives at once. Ensure that you don't this for more than three nodes at once.
 * For Element software 9.x and earlier, add three drives at once allowing them to completely sync before adding the next group of three.
-
-You should follow these best practices for removing drives from the cluster:
-
 * Remove the slice drive and ensure that slice syncing is complete before removing the block drives.
 * Remove all the block drives from a single node at once. Ensure that all block syncing is complete before you move on to the next node.
 
@@ -63,7 +63,7 @@ a|
 . If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 . Select *All* from the drop-down list to view the complete list of drives.
 . Select the check box for each drive you want to remove.
-. Click *Remove Drives*.
+. Select *Remove Drives*.
 . Confirm the action.
 +
 NOTE: If there is not enough capacity to remove active drives before removing a node, an error message appears when you confirm the drive removal. After you resolve the error, you can now physically remove the drive from the chassis.
@@ -112,6 +112,8 @@ NOTE: Ensure that the tray handle is fully open before you attempt to slide the 
 . Slide the drive out, and place it on a static-free, level surface.
 . Press the release button on the replacement drive before you insert it into the drive bay.
 The drive tray handle springs open.
++
+image::H600S_driveinstall.png[Shows the drive being installed in the H610S node.]
 . Insert the replacement drive without using excessive force.
 When the drive is inserted fully, you hear a click.
 . Close the drive tray handle carefully.
@@ -131,14 +133,14 @@ NOTE: When you install a new drive in an existing node, the drive automatically 
 
 |Using the Element UI
 a|
-. From the  Element UI, Select *Cluster > Drives*.
-. Click *Available* to view the list of available drives.
-. Click the Actions icon for the drive you want to add, and click *Add*.
+. From the  Element UI, select *Cluster > Drives*.
+. Select *Available* to view the list of available drives.
+. Select the Actions icon for the drive you want to add, and select *Add*.
 
 |Using the Element plug-in for vCenter server UI
 a|
 . From the NetApp Element Management extension point of the vSphere Web Client, select *NetApp Element Management > Cluster > Drives*.
-. From the Available drop-down list, select the drive, and click *Add*.
+. From the Available drop-down list, select the drive, and select *Add*.
 . Confirm the action.
 
 |===
