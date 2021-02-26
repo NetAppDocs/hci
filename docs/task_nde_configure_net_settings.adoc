@@ -19,7 +19,7 @@ NetApp HCI provides a network settings page with several sections to simplify ne
 * You have obtained the following information:
 ** The planned naming prefix for the hosts and storage cluster
 ** All planned subnet mask, starting IP address, default gateway, and VLAN IDs for the management, iSCSI, and vMotion networks
-** The IP address, default gateway, VLAN IDs, and subnet mask information for any planned VMware vCenter deployment
+** The subnet mask, IP address, default gateway, and VLAN IDs for any planned VMware vCenter deployment
 ** The Network Time Protocol (NTP) server address for NetApp HCI
 ** The DNS server IP address information for NetApp HCI
 * If you are deploying a vSphere Distributed Switch, you have a vSphere Enterprise Plus license ready to apply after deployment is complete.
@@ -27,7 +27,7 @@ NetApp HCI provides a network settings page with several sections to simplify ne
 * You have verified that your network switch configuration is correct. Incorrect switch configurations (such as incorrect VLANs or MTU size) will cause deployment errors.
 
 .About this task
-If you selected the two-cable network topology for compute nodes, you need to use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks). Note that NetApp HCI validates the IP addresses you enter during these steps, but you can disable this validation with the *Live network validation is* button.
+If you selected the two-cable network topology for compute nodes, you need to use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks). Note that NetApp HCI validates the IP addresses you enter during these steps, but you can disable this validation with the *Live network validation is* button. NetApp HCI also performs checks on other information that you enter during these steps, such as ensuring that no subnets overlap, ensuring that no VLAN IDs are assigned to multiple networks, and other basic validations.
 
 NOTE: In environments that require host-side VLAN tagging before deployment, if you have configured VLAN IDs on compute and storage nodes so they are discoverable by the NetApp Deployment Engine, ensure you use the correct VLANs when configuring network settings in the NetApp Deployment Engine.
 
@@ -58,7 +58,7 @@ NOTE: In the IP address assignment pages, information you enter in the *Automati
 |===
 
 == Assign VLAN IDs
-On the *VLAN IDs* page, you can assign VLAN IDs to NetApp HCI networks. You can also choose to not use VLAN IDs.
+On the *VLAN IDs* page, you can assign VLAN IDs to NetApp HCI networks. You can also choose to not use VLAN IDs. If you selected the two-cable network topology for compute nodes, you need to use VLAN IDs for the vMotion and storage networks for all compute and storage nodes in the deployment (VLAN IDs are optional for the management networks).
 
 NOTE: When you assign VLAN IDs, you are configuring VLAN tags that NetApp HCI will apply to the network traffic. You do not need to enter your native VLAN as a VLAN ID; to use the native VLAN for a network, leave the appropriate field empty.
 
@@ -82,7 +82,7 @@ a|
 |===
 
 == Configure the management network
-On the *Management* page, you can choose to have NetApp HCI automatically populate IP address ranges for the management network based on a starting IP address, or you can choose to manually enter all IP address information.
+On the *Management* page, you can choose to have NetApp HCI automatically populate IP address ranges for the management networks based on a starting IP address, or you can choose to manually enter all IP address information.
 
 .Steps
 Choose one of the following options:
@@ -121,7 +121,7 @@ Choose one of the following options:
 a|
 . Select the *Automatically assign IP addresses* option.
 . In the *Subnet* column, enter a subnet definition in CIDR format for each VLAN.
-. In the *Default Gateway* column, enter a default gateway for each VLAN.
+. (Optional) In the *Default Gateway* column, enter a default gateway for each VLAN.
 . In the *Subnet* column, enter a starting IP address to use for each VLAN and node type.
 +
 NetApp HCI automatically populates the ending IP addresses for each host or group of hosts.
@@ -131,7 +131,7 @@ NetApp HCI automatically populates the ending IP addresses for each host or grou
 a|
 . Select the *Manually assign IP addresses* option.
 . In the *Subnet* column, enter a subnet definition in CIDR format for each VLAN.
-. In the *Default Gateway* column, enter a default gateway for each VLAN.
+. (Optional) In the *Default Gateway* column, enter a default gateway for each VLAN.
 . In the row for each host or node, enter the IP address for that host or node.
 . Click *Continue*.
 |===
@@ -148,7 +148,7 @@ Choose one of the following options:
 a|
 . Select the *Automatically assign IP addresses* option.
 . In the *Subnet* column, enter a subnet definition in CIDR format for the iSCSI network.
-. In the *Default Gateway* column, enter a default gateway for the iSCSI network.
+. (Optional) In the *Default Gateway* column, enter a default gateway for the iSCSI network.
 . In the *Subnet* column, enter a starting IP address to use for each node type.
 +
 NetApp HCI automatically populates the ending IP addresses for each host or group of hosts.
@@ -158,7 +158,7 @@ NetApp HCI automatically populates the ending IP addresses for each host or grou
 a|
 . Select the *Manually assign IP addresses* option.
 . In the *Subnet* column, enter a subnet definition in CIDR format for the iSCSI network.
-. In the *Default Gateway* column, enter a default gateway for the iSCSI network.
+. (Optional) In the *Default Gateway* column, enter a default gateway for the iSCSI network.
 . In the *Management Node* section, enter an IP address for the management node.
 . For each node in the *Compute Nodes* section, enter the iSCSI A and iSCSI B IP addresses.
 . In the *Storage Virtual IP (SVIP)* row, enter the SVIP IP address for the iSCSI network.
