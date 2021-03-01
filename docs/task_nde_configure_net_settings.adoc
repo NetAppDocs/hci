@@ -48,7 +48,7 @@ NetApp HCI performs checks on the information you enter on these pages. Here are
 |The default gateway IP address does not match the subnet you provided. Choose a different subnet or default gateway IP address.
 
 |You complete several *Network Settings* configuration pages and realize that there is incorrect information on one of the previous pages in the sequence.
-|Using the numbered page sequence at the top of the page, you can select a page that you have previously completed and change information there. When finished, you can click "Continue" on the completed pages to return to the current page.
+|Using the numbered page sequence at the top of the page, you can select a page that you have previously completed and change information there. When finished, you can click *Continue* on the completed pages to return to the current page.
 |===
 
 == Configure DNS and NTP settings
