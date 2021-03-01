@@ -35,6 +35,22 @@ If you are deploying a two-node or three-node storage cluster, you can complete 
 
 NOTE: In the IP address assignment pages, information you enter in the *Automatically assign IP addresses* mode does not affect information entered in the *Manually assign IP addresses* mode, and vice versa. If you enter IP addresses in both modes, NetApp HCI uses the IP address information in whatever mode is active when you click *Continue* at the bottom of the page.
 
+.Possible error messages
+NetApp HCI performs checks on the information you enter on these pages. Here are some common error scenarios and workarounds:
+
+|===
+|Error scenario |Workaround
+
+|In automatic IP address assignment mode, after you enter a starting IP address, you see the message `IPs in the range are in use:` with a scrollable drop-down list of the in-use IP addresses.
+|NetApp HCI has assigned a contiguous range of IP addresses, but one of those IP addresses is already in use. Free the in-use IP addresses and try again, or use manual IP address assignment mode to assign specific IP addresses.
+
+|You complete several *Network Settings* configuration pages and realize that there is incorrect information on one of the previous pages in the sequence.
+|Using the numbered page sequence at the top of the page, you can select a page that you have previously completed and change information there. When finished, you can click "Continue" on the completed pages to return to the current page.
+
+|After entering a default gateway, you see the message `The gateway is not valid`.
+|The default gateway IP address does not match the subnet you provided. Choose a different subnet or default gateway IP address.
+|===
+
 == Configure DNS and NTP settings
 
 .Steps
