@@ -39,7 +39,7 @@ NOTE: In the IP address assignment pages, information you enter in the *Automati
 NetApp HCI performs checks on the information you enter on these pages. Here are some common problems and workarounds:
 
 |===
-|Error scenario |Workaround
+|Problem |Workaround
 
 |In automatic IP address assignment mode, after you enter a starting IP address, you see the message `IPs in the range are in use:` with a scrollable drop-down list of the in-use IP addresses.
 |NetApp HCI has assigned a contiguous range of IP addresses, but one of those IP addresses is already in use. Free the in-use IP addresses and try again, or use manual IP address assignment mode to assign specific IP addresses.
