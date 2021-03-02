@@ -42,10 +42,12 @@ NetApp HCI performs checks on the information you enter on these pages. Here are
 |Problem |Workaround
 
 |In automatic IP address assignment mode, after you enter a starting IP address, you see the message `IPs in the range are in use:` with a scrollable drop-down list of the in-use IP addresses.
-|NetApp HCI has assigned a contiguous range of IP addresses, but one of those IP addresses is already in use. Free the in-use IP addresses and try again, or use manual IP address assignment mode to assign specific IP addresses.
+|NetApp HCI has assigned a contiguous range of IP addresses, but one or more of those IP addresses is already in use. Free the in-use IP addresses and try again, or use manual IP address assignment mode to assign specific IP addresses.
 
 |After entering a default gateway, you see the message `The gateway is not valid`.
-|The default gateway IP address does not match the subnet you provided. Choose a different subnet or default gateway IP address.
+a|The default gateway IP address either does not match the subnet you provided, or there is an issue with the network or server you need to resolve. See the following KB articles for guidance:
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Troubleshoot_Invalid_Gateway_in_NDE[Troubleshoot an invalid gateway in the NetApp Deployment Engine^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/%22The_gateway_is_not_valid%22_during_NDE[The gateway is not valid in the NetApp Deployment Engine^]
 
 |You complete several *Network Settings* configuration pages and realize that there is incorrect information on one of the previous pages in the sequence.
 |Using the numbered page sequence at the top of the page, you can select a page that you have previously completed and change information there. When finished, you can click *Continue* on the completed pages to return to the current page.
