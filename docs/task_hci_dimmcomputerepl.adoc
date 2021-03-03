@@ -54,7 +54,7 @@ image::h615c_bmc_memoryerror.png[Shows the uncorrectable memory error in the BMC
 ... In the event log, find the memory error and identify the slot on which the error is logged.
 +
 image::dimm_h410c_bmc.png[Shows the memory error in the BMC UI for the H410C node.]
-. For H410C and H615C nodes, perform the steps to identify the DIMM manufacturer part number.
+. Perform the steps to identify the DIMM manufacturer part number.
 +
 IMPORTANT: H410C and H615C nodes include DIMMs from different manufacturers. You should not mix different DIMM types in the same chassis. You should identify the manufacturer of the faulty DIMM and order a replacement of the same type.
 +
@@ -107,7 +107,7 @@ a|
 . Contact NetApp Support for help with the next steps. NetApp Support requires the following information to process a part replacement:
 * Node serial number
 * Cluster name
-* System event log from the BMC UI (*Logs & Reports* > *IPMI Event Log*> *Download Event Logs*)
+* System event log details from the BMC UI
 * Output from the `smbiosDump` command
 
 == Replace the DIMM from the chassis
