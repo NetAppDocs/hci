@@ -355,5 +355,9 @@ entries:
        url: /task_hci_snswitches.html
      - title: Replace storage node in a two-node cluster
        url: /task_hci_2noderepl.html
+  - title: Previous versions
+    entries:
+     - title: NetApp HCI 1.8P1
+       url: http://docs.netapp.com/us-en/hci18/docs/index.html
   - title: Legal notices
     url: /reference_notices_hci.html
