@@ -33,7 +33,7 @@ jobs:
         on:
           all_branches: true
     - state: i18n
-      if: branch = main OR repo =~ /-internal/
+      if: branch = main AND not repo =~ /-internal/
       before_install:
       - echo -e "machine github.com\n login $GH_TOKEN" >> ~/.netrc && chmod 600 ~/.netrc
       - git submodule add https://github.com/NetAppDocs/jekyll-harmony dependencies/jekyll-harmony
