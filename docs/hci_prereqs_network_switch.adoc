@@ -39,7 +39,7 @@ NetApp HCI has the following switch requirements:
 * The switches handling storage, virtual machine, and vMotion traffic must support speeds of at least 10GbE per port (up to 25GbE per port is supported).
 * The switches handling management traffic must support speeds of at least 1GbE per port.
 * You must configure jumbo frames on the switch ports handling storage and vMotion traffic. Hosts must be able to send 9000 byte packets end-to-end for a successful installation.
-* You must configure the management network switch ports to allow whatever size MTU the management NIC ports on each host are set for. For example, if the host management network ports use an MTU size of 9000 bytes, the management network switch ports must be configured to allow an MTU of 9000 bytes.
+* You must configure the management network switch ports to allow whatever size MTU the management NIC ports on each host are set for. For example, if the host management network ports use an MTU size of 9000 bytes, the management network switch ports must be configured to allow an MTU of 9000 bytes. The MTU settings should be consistent end-to-end.
 * Round-trip network latency between all storage and compute nodes should not exceed 2ms.
 
 All NetApp HCI nodes provide additional out-of-band management capabilities via a dedicated management port. NetApp H300S, H300E, H500S, H500E, H700S, H700E and H410C nodes also allow for IPMI access via Port A. As a best practice, you should ease remote management of NetApp HCI by configuring out-of-band management for all nodes in your environment.
