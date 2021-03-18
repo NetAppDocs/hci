@@ -251,9 +251,9 @@ entries:
         url: /concept_hci_upgrade_overview.html
       - title: Upgrade sequences
         entries:
-          - title: Upgrade your NetApp HCI system for version 1.8
+          - title: Upgrade your NetApp HCI system for version 1.9
             url: /task_hcc_upgrade_all.html
-          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.2
+          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.3
             url: /task_sf_upgrade_all.html
       - title: System upgrade procedures
         entries:

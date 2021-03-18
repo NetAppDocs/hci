@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your NetApp SolidFire all-flash storage system for Element 12.2
+= Upgrade your NetApp SolidFire all-flash storage system for Element 12.3
 
 :hardbreaks:
 :nofooter:
