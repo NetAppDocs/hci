@@ -18,7 +18,7 @@ When choosing nodes for your deployment, some restrictions apply to the node con
 == Storage node compatibility
 NetApp HCI supports storage nodes and drives with SED (Self-encrypting drive) and FIPS 140-2 drive encryption capability. When deploying or expanding NetApp HCI, you can mix nodes with different reported levels of encryption, but NetApp HCI only supports the more basic form of encryption in this situation. For example, if you mix a storage node that is FIPS encryption capable with nodes that only support SED encryption, SED encryption is supported with this configuration, but FIPS drive encryption is not.
 
-NOTE: Adding storage nodes capable of FIPS drive encryption to the storage cluster does not automatically enable the FIPS drive encryption feature. After you deploy or expand an installation with FIPS-capable nodes, you need to manually enable FIPS drive encryption. See the Element Software  for instructions.
+NOTE: Adding storage nodes capable of FIPS drive encryption to the storage cluster does not automatically enable the FIPS drive encryption feature. After you deploy or expand an installation with FIPS-capable nodes, you need to manually enable FIPS drive encryption. See the https://docs.netapp.com/us-en/element-software/index.html[Element software documentation^] for instructions.
 
 All storage nodes must run the same minor version of Element software to be compatible in the same deployment. For example, you cannot mix a storage node running Element 11.3.1 with other storage nodes running Element 11.5.
 
@@ -37,4 +37,4 @@ Compute nodes must meet the following requirements to be selectable as inventory
 
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element software documentation^]
