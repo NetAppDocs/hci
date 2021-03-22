@@ -37,4 +37,4 @@ Choose one of the following sequences based on your system:
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Documentation Center^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation^]

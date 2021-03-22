@@ -40,4 +40,7 @@ You can see the states of maintenance mode operations when working with maintena
 * *ReadyForMaintenance*: The node is ready for maintenance to be performed.
 
 == Find more information
-* https://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Documentation Center^]
+
+*	https://docs.netapp.com/us-en/element-software/api/concept_element_api_about_the_api.html[NetApp Element API documentation^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
+*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
