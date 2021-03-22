@@ -24,8 +24,8 @@ The content in this section introduces recommended upgrade sequences for compone
 
 Choose one of the following sequences based on your system:
 
-* link:task_hcc_upgrade_all.html[Upgrade your NetApp HCI installation for version 1.8].
-* link:task_sf_upgrade_all.html[Upgrade your NetApp SolidFire all-flash storage system for Element 12.2].
+* link:task_hcc_upgrade_all.html[Upgrade your NetApp HCI installation for version 1.9].
+* link:task_sf_upgrade_all.html[Upgrade your NetApp SolidFire all-flash storage system for Element 12.3].
 
 == vSphere upgrade sequences including Element Plug-in for vCenter Server
 
