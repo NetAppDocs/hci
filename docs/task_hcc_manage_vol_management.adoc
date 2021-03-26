@@ -24,7 +24,7 @@ You can manage volumes in NetApp Hybrid Cloud Control in the following ways:
 * <<Apply a QoS policy to a volume>>
 * <<Edit a volume>>
 * <<Clone volumes>>
-* <<Add volumes to an access group>>
+* <<Add volumes to a volume access group>>
 * <<Delete a volume>>
 * <<Restore a deleted volume>>
 * <<Purge a deleted volume>>
