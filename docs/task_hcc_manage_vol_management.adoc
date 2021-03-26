@@ -29,7 +29,6 @@ You can manage volumes in NetApp Hybrid Cloud Control in the following ways:
 * <<Restore a deleted volume>>
 * <<Purge a deleted volume>>
 
-
 == Create a volume
 You can create a storage volume using NetApp Hybrid Cloud Control.
 
@@ -168,7 +167,7 @@ TIP: Use descriptive naming best practices. This is especially important if mult
 NOTE: Increasing the volume size of a clone results in a new volume with additional free space at the end of the volume. Depending on how you use the volume, you may need to extend partitions or create new partitions in the free space to make use of it.
 
 +
-* Click *Clone Volumes*.
+.. Click *Clone Volumes*.
 NOTE: The time to complete a cloning operation is affected by volume size and current cluster load. Refresh the page if the cloned volume does not appear in the volume list.
 
 == Add volumes to a volume access group
