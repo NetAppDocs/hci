@@ -47,40 +47,37 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 1GiB = 1 073 741 824 bytes
 
 . Select a block size for the volume.
-. From the Account list, select the account that should have access to the volume.
+. From the *Account* list, select the account that should have access to the volume.
 +
-If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the new volume.
+If an account does not exist, click *Create New Account*, enter a new account name, and click *Create Account*. The account is created and associated with the new volume in the *Account* list.
 
 +
 NOTE: If there are more than 50 accounts, the list does not appear. Begin typing and the auto-complete feature displays values for you to choose.
 
-. To set the Quality of Service, do one of the following:
-.. Select an existing QoS policy.
-.. Under QoS Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
+. To configure the Quality of Service for the volume, do one of the following:
+
+* Under *Quality of Service Settings*, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
+* Select an existing QoS policy by enabling the *Assign Quality of Service Policy* toggle and choosing an existing QoS policy from the resulting list.
+* Create and assign a new QoS policy by enabling the *Assign Quality of Service Policy* toggle and clicking *Create New QoS Policy*. In the resulting window, enter a name for the QoS policy and then enter QoS values. When finished, click *Create Quality of Service Policy*.
+
 +
 Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
 
 . Click *Create Volume*.
 
 
-== Apply a QoS policy to a volume
-You can apply a QoS policy to an existing storage volume by using NetApp Hybrid Cloud Control.
-
+== Apply an existing QoS policy to a volume
+You can apply a QoS policy to existing storage volumes by using NetApp Hybrid Cloud Control. If instead you need to set custom QoS values for a volume, you can <<Edit a volume>>. To create a new QoS policy, see link:task_hcc_qos_policies.html[Create and manage volume QoS policies^].
 
 .Steps
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, expand the name of your storage cluster on the left navigation menu.
 . Select *Volumes* > *Overview*.
-. In the *Actions* column in the volumes table, expand the menu for the volume and select *Edit*.
-. Change the Quality of Service by doing one of the following:
-.. Select an existing policy.
-.. Under Custom Settings, set the minimum, maximum, and burst values for IOPS or use the default values.
+. In the leftmost column of the volumes table, select the check box for each volume that needs a QoS policy assigned.
+. Click the *Actions* drop-down list at the top of the volumes table, and select *Apply QoS Policy*.
+. In the resulting window, select a QoS policy from the list and click *Apply QoS Policy*.
 +
-NOTE: If you are using QoS policies on a volume, you can set custom QoS to remove the QoS policy affiliation with the volume. Custom QoS override QoS policy values for volume QoS settings.
-+
-TIP: When you change IOPS values, increment in tens or hundreds. Input values require valid whole numbers. Configure volumes with an extremely high burst value. This enables the system to process occasional large block, sequential workloads more quickly, while still constraining the sustained IOPS for a volume.
-
-. Select *Save*.
+NOTE: If you are using QoS policies on a volume, you can set custom QoS to remove the QoS policy affiliation with the volume. Custom QoS values override QoS policy values for volume QoS settings.
 
 
 == Edit a volume
