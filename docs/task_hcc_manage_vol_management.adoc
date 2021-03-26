@@ -66,7 +66,7 @@ Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might requi
 . Click *Create Volume*.
 
 
-== Apply an existing QoS policy to a volume
+== Apply a QoS policy to a volume
 You can apply a QoS policy to existing storage volumes by using NetApp Hybrid Cloud Control. If instead you need to set custom QoS values for a volume, you can <<Edit a volume>>. To create a new QoS policy, see link:task_hcc_qos_policies.html[Create and manage volume QoS policies^].
 
 .Steps
