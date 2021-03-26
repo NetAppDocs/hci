@@ -98,6 +98,8 @@ entries:
            url: /task_nde_access_manual_ip.html
      - title: Start your deployment
        url: /task_nde_start_deployment.html
+     - title: Import an installation profile
+       url: /task_nde_import_installation_profile.html
      - title: Configure VMware vSphere
        entries:
          - title: vSphere configuration overview
@@ -355,5 +357,7 @@ entries:
        url: /task_hci_snswitches.html
      - title: Replace storage node in a two-node cluster
        url: /task_hci_2noderepl.html
+  - title: Earlier versions
+    url: /reference_earlier_versions.html
   - title: Legal notices
     url: /reference_notices_hci.html
