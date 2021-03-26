@@ -1,0 +1,115 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_compute_firmware_ansible.html
+summary: As part of a NetApp HCI system upgrade, you upgrade compute node firmware.
+keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role
+---
+
+= Upgrade compute node firmware with Ansible
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+For H-series compute nodes, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC by using Ansible.
+
+NOTE: The Ansible role for upgrades works only on NetApp HCI H-series compute nodes. You cannot use Ansible to upgrade third-party compute nodes.
+
+After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
+
+.What you'll need
+
+* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)] for driver and firmware compatibility information, and check the latest link:rn_relatedrn.html[compute node firmware release notes] for important late-breaking firmware and driver details.
+* *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
+* *Ansible*: You have https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide[installed Ansible 2.9 or later^] and have familiarized yourself with https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[Ansible roles^].
+* *Minimum BMC and BIOS versions*: The node you intend to upgrade meets the following minimum requirements: QUESTION FOR RUPAL: Do we need this for Ansible?
++
+[%header,cols=3*]
+|===
+|Model
+|Minimum BMC version
+|Minimum BIOS version
+
+|H300E, H500E, H700E​
+|6.84.00
+|NA2.1
+
+|H410C​
+|All versions supported (no upgrade required)​
+|All versions supported (no upgrade required)​
+
+|H610C​
+|3.96.07​
+|3B01
+
+|H615C​
+|4.68.07
+|3B08.CO ​ ​
+
+|===
+
++
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+
+* *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
+* *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
+* *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
+* *Hardware tag requirements*: You have https://docs.netapp.com/us-en/hci/docs/task_mnode_add_assets.html[added the hardware tag^] for the computes nodes to the base asset configuration.
+
+.About this task
+
+As part of the upgrade process, the Ansible upgrades role runs health checks before upgrading the compute firmware to ensure that all the compute nodes in your cluster are ready to be upgraded. The health checks might fail if a node in the cluster that you are upgrading hosts a https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#witness-nodes[Witness Node^] and no other nodes in the cluster are available to host the Witness Node.
+
+The upgrade role also checks that all the required libraries are present. QUESTION: Can the upgrade be paused after it starts?
+
+The upgrade steps are the same for a single-node upgrade and a cluster upgrade. The variables that you specify will vary as shown below. NetApp provides a README file with the upgrade role, which includes a list of all the required and optional variables that you should define.
+
+NOTE: Upgrading the firmware can take approximately 50 minutes per node.
+
+IMPORTANT: If an error happens during the upgrade or your cluster experiences a fault, the upgrade does not stop. It progresses to the extent that it can and prints out a list of all the nodes that were successfully and unsuccessfully upgraded. After you fix any errors, you can rerun the playbook or reject the file to complete the upgrade process.
+If the upgrade fails because of a fault, you should resolve it and resume the upgrade. The cluster remains in upgrade status until the upgrade is complete. You should contact NetApp Support for assistance.
+
+.Steps
+
+. Install the `nar_compute_nodes_firmware_upgrades` role provided by NetApp by running the following command:
++
+----
+??
+----
++
+NOTE: You can also manually install the role by copying it from the NetApp GitHub repository and placing the role in the `~/.ansible/roles` directory.
+
+. Specify the following variables in the `group_vars/all.yml` file:
+
+* `mnode_ip`
+* `username`
+* `password`
+* `package_name`
+* `version`
+* `controller_id` (required only for single-node upgrade)
+* `hardware_ids` (required only for single- node upgrade)
+* `cluster_id` (required only for cluster-level upgrade)
+* `vcenter_ip` (required only for cluster-level upgrade)
+
+. Update the `hosts` inventory file with the server/inventory details, such as IP addresses, username, and password.
++
+IMPORTANT: You should define the hosts in the inventory file by using IP addresses (and not fully qualified domain names [FQDNs]). The upgrade will fail if you define the hosts by using FQDNs. QUESTION: Is this assumption correct?
+. Create the playbook to use for upgrades. If you already have a playbook and want to use that, ensure that you specify the `nar_compute_nodes_firmware_upgrades` role in this playbook.
+. Run the playbook:
++
+----
+??
+----
+. After the upgrade is complete, verify the BMC, BOIS, and NIC versions:
+.. Open a web browser and browse to the IP address of the management node.
+.. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+.. In the left navigation, select *Nodes*, and then select *Compute*.
+
+[discrete]
+== Find more information
+
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

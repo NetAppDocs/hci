@@ -275,6 +275,8 @@ entries:
             url: /task_hcc_upgrade_compute_node_drivers.html
           - title: Upgrade compute node firmware
             url: /task_hcc_upgrade_compute_node_firmware.html
+          - title: Upgrade compute node firmware with Ansible
+            url: /task_hcc_upgrade_compute_firmware_ansible.html  
       - title: vSphere upgrade sequences with vCenter Plug-in
         entries:
           - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server

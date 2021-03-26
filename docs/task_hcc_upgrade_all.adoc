@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your NetApp HCI system for version 1.8
+= Upgrade your NetApp HCI system
 
 :hardbreaks:
 :nofooter:
@@ -56,7 +56,7 @@ NOTE: Upgrading the management node operating system is no longer required to up
 . link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
 . link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
 . link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
-
+. link:task_hcc_upgrade_compute_firmware_ansible[Upgrade your compute node firmware with Ansible].
 
 [discrete]
 == Find more information
