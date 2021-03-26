@@ -55,8 +55,7 @@ NOTE: Upgrading the management node operating system is no longer required to up
 . link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
 . link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
 . link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
-. link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware].
-. link:task_hcc_upgrade_compute_firmware_ansible[Upgrade your compute node firmware with Ansible].
+. link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware using NetApp Hybrid Cloud Control] or link:task_hcc_upgrade_compute_firmware_ansible.html[Upgrade your compute node firmware with Ansible].
 
 [discrete]
 == Find more information
