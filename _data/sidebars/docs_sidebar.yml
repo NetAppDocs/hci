@@ -251,7 +251,7 @@ entries:
         url: /concept_hci_upgrade_overview.html
       - title: Upgrade sequences
         entries:
-          - title: Upgrade your NetApp HCI system for version 1.8
+          - title: Upgrade your NetApp HCI system
             url: /task_hcc_upgrade_all.html
           - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.2
             url: /task_sf_upgrade_all.html
@@ -278,7 +278,7 @@ entries:
           - title: Upgrade compute node firmware
             url: /task_hcc_upgrade_compute_node_firmware.html
           - title: Upgrade compute node firmware with Ansible
-            url: /task_hcc_upgrade_compute_firmware_ansible.html  
+            url: /task_hcc_upgrade_compute_firmware_ansible.html
       - title: vSphere upgrade sequences with vCenter Plug-in
         entries:
           - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
