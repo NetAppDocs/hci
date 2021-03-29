@@ -43,7 +43,7 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade any of these component
 * Node OS security updates
 
 .What you'll need
-* A good internet connection. Dark site upgrades are not available.
+* A good internet connection. Dark site upgrades (upgrades at a site without external connectivity) are not available.
 
 .Steps
 

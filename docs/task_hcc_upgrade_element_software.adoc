@@ -529,7 +529,7 @@ Starting light cluster block service check
 IMPORTANT: If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (<<Upgrading H610S storage nodes to Element 12.2 (phase 2),phase 2>>) for each storage node. If you are running Element 11.8 or later, the additional upgrade steps (phase 2) are not required.
 
 == Upgrade Element software at dark sites using HealthTools
-You can use the HealthTools suite of tools to update NetApp Element software at a dark site.
+You can use the HealthTools suite of tools to update NetApp Element software at a dark site that has no external connectivity.
 
 .What you'll need
 
@@ -579,7 +579,7 @@ sfinstall -u admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/
 +
 *Optional* You can add the `--stage` flag to the `sfinstall` command to pre-stage the upgrade in advance.
 
-IMPORTANT: If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (<<Upgrading H610S storage nodes to Element 12.2 (phase 2), phase 2>>) for each storage node. If you are running Element 11.8 or later, the additional upgrade steps (phase 2) are not required. 
+IMPORTANT: If you are upgrading an H610S series node to Element 12.2 and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (<<Upgrading H610S storage nodes to Element 12.2 (phase 2), phase 2>>) for each storage node. If you are running Element 11.8 or later, the additional upgrade steps (phase 2) are not required.
 
 == What happens if an upgrade fails using HealthTools
 If the software upgrade fails, you can pause the upgrade.
