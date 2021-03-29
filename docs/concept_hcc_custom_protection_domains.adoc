@@ -1,5 +1,5 @@
 ---
-permalink: storage/concept_intro_custom_protection_domains.html
+permalink: storage/concept_hcc_custom_protection_domains.html
 sidebar: sidebar
 keywords: protection domain layout,user-defined,custom layout
 summary: 'You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain.'
