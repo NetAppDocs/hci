@@ -1,0 +1,32 @@
+---
+permalink: storage/concept_intro_custom_protection_domains.html
+sidebar: sidebar
+keywords: protection domain layout,user-defined,custom layout
+summary: 'You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain.'
+---
+= Custom protection domains
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain.
+
+If no custom protection domains are assigned:
+
+* Cluster operation is unaffected.
+* Custom level is neither tolerant nor resilient.
+
+If more than one custom protection domain is assigned, each subsystem will assign duplicates to separate custom protection domains. If this is not possible, it reverts to assigning duplicates to separate nodes. Each subsystem (for example, bins, slices, protocol endpoint providers, and ensemble) does this independently.
+
+NOTE: Using custom protection domains assumes that no nodes share a chassis.
+
+The following Element API methods expose these new protection domains:
+
+* GetProtectionDomainLayout - shows which chassis and which custom protection domain each node is in.
+* SetProtectionDomainLayout - allows a custom protection domain to be assigned to each node.
+
+Contact NetApp support for further details on using custom protection domains.
+
+== Find more information
+
+link:api/index.html[Manage storage with the Element API]
