@@ -65,7 +65,7 @@ https://<ManagementNodeIP>
 +
 NOTE: For node OS, unattended upgrades for security patches are run on a daily basis but the node is not rebooted automatically. By applying upgrades, you are rebooting each node for the security updates to take effect.
 
-A banner appears indicating the component upgrade is successful. There could be up to a 15 minute delay before NetApp Hybrid Cloud Control UI shows the updated version number.
+A banner appears indicating the component upgrade is successful. There could be up to a 2 minute delay before NetApp Hybrid Cloud Control UI shows the updated version number.
 
 == Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment
 

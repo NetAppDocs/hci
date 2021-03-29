@@ -48,7 +48,7 @@ NOTE: Only remote storage clusters that are not currently managed by a managemen
 
 . Select *Add*.
 +
-NOTE: After you add the storage cluster, the cluster inventory can take up to 15 minutes to refresh and display the new addition. You might need to refresh the page in your browser to see the changes.
+NOTE: After you add the storage cluster, the cluster inventory can take up to 2 minutes to refresh and display the new addition. You might need to refresh the page in your browser to see the changes.
 
 . If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
 
