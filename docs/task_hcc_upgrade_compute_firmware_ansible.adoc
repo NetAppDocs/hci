@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_compute_firmware_ansible.html
-summary: As part of a NetApp HCI system upgrade, you upgrade compute node firmware.
+summary: For H-series compute nodes, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC by using Ansible.
 keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role
 ---
 
@@ -188,24 +188,21 @@ https://[management node IP]/inventory/1/
     "id": "e1111d10-1a1a-12d7-1a23-ab1cde23456f",
     "model": "H410C",
 ----
-. Install the `nar_compute_nodes_firmware_upgrades` role provided by NetApp by running the following command:
-+
-----
-??
-----
-+
-NOTE: You can also manually install the role by copying it from the NetApp GitHub repository and placing the role in the `~/.ansible/roles` directory.
+. Download the https://github.com/NetApp/ansible[`nar_compute_nodes_firmware_upgrades`^] role provided by NetApp to your local machine.
 
+NOTE: You can also manually install the role by copying it from the https://github.com/NetApp/ansible[NetApp GitHub repository^] and placing the role in the `~/.ansible/roles` directory.
+
+. Specify the SSH credentials and environment details in the https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html[inventory file^], which is located in `etc/ansible/hosts`.
 . Specify the following variables in the `group_vars/all.yml` file:
 
 * `mnode_ip`: IP address of the management node.
-* `username`:
+* `username`
 * `password`
-* `package_name`: Use the value you copied in a previous step.
-* `version`: Use the value you copied in a previous step.
-* `controller_id` (required only for single-node upgrade): Use the value you copied in the previous step.
-* `hardware_id` (required only for single- node upgrade): Use the value you copied in the previous step.
-* `cluster_id` (required only for cluster-level upgrade): Use the value you copied in the previous step.
+* `package_name`: Use the value you copied in an earlier step.
+* `version`: Use the value you copied in an earlier step.
+* `controller_id` (required only for single-node upgrade): Use the value you copied in an earlier step.
+* `hardware_id` (required only for single- node upgrade): Use the value you copied in an earlier step.
+* `cluster_id` (required only for cluster-level upgrade): Use the value you copied in an earlier step.
 * `vcenter_ip` (required only for cluster-level upgrade): This is the IP address of the vCenter the cluster belongs to. QUESTION: Where can the user get this info from?
 
 . Update the `hosts` inventory file with the server/inventory details, such as IP addresses, username, and password.
@@ -215,7 +212,7 @@ IMPORTANT: You should define the hosts in the inventory file by using IP address
 . Run the playbook:
 +
 ----
-??
+ansible-playbook -i hosts site.yml -e 'username=username password=password client-id=client-id audience=mnode_api'
 ----
 . After the upgrade is complete, verify the BMC, BOIS, and NIC versions:
 .. Open a web browser and browse to the IP address of the management node.
