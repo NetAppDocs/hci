@@ -189,9 +189,8 @@ https://[management node IP]/inventory/1/
     "model": "H410C",
 ----
 . Download the https://github.com/NetApp/ansible[`nar_compute_nodes_firmware_upgrades`^] role provided by NetApp to your local machine.
-
++
 NOTE: You can also manually install the role by copying it from the https://github.com/NetApp/ansible[NetApp GitHub repository^] and placing the role in the `~/.ansible/roles` directory.
-
 . Specify the SSH credentials and environment details in the https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html[inventory file^], which is located in `etc/ansible/hosts`.
 . Specify the following variables in the `group_vars/all.yml` file:
 
