@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, ssh, disable, enable, rest api
 :imagesdir: ../media/
 
 [.lead]
-You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled on the management node by default.
+You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later.
 
 .What you'll need
 * *Cluster administrator permissions*: You have permissions as administrator on the storage cluster.
