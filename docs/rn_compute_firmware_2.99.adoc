@@ -1,0 +1,186 @@
+---
+sidebar: docs_sidebar
+permalink: docs/rn_compute_firmware_2.99.html
+summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
+keywords: netapp, hci, compute firmware
+---
+////
+This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
+////
+= Compute Firmware Bundle 2.99 Release Notes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
+
+== What's New
+Version 2.99 contains general bugfixes.
+
+=== Updated firmware components
+This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
+
+|===
+|Component |H300E, H500E, H700E |H410C |H610C |H615C
+
+|BIOS
+|NA2.1
+|NATP3.9
+|3B03
+|3B08.CO
+
+|BMC
+|6.84.00
+|*6.71.20*
+|4.00.07
+|4.68.07
+
+|NIC / Mellanox
+|14.25.1020
+|14.25.1020
+|14.25.1020
+|14.24.1000
+|===
+
+=== Changes in firmware components
+Here are the details of the improvements and changes included in each new firmware component:
+
+|===
+|Node and firmware component |Improvements and changes
+
+|NATP3.9
+a|
+* CSESF-284 Tatooine + BMC 6.71.18 does not report when PPR function work success event.
+* CSESF-289 NA3.7 BIOS does not have the ability to report a success on hPPR (hard PPR).
+* Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
+|Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
+
+// |H300E, H500E, H700E BMC 6.84.00
+// |Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
+|===
+
+// |H610C BIOS 3B03
+// a|
+//
+// * Improved handling of memory failures
+// * Added the latest Intel NVM firmware updates
+// * Updated the RC version to 602.D02 (IPU 2020.1)
+// * Updated the microcode version to MCU x6906
+// * Updated the SPS ME version to 04.01.04.381.0
+// * Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+//
+// |H615C BIOS 3B08.CO
+// a|
+//
+// * Improved handling of memory failures
+// * Added the latest Intel NVM firmware updates
+// * Updated the microcode version to MCU x2F01
+// * Updated the RC version to 602.D02 (IPU 2020.1)
+// * Updated the SPS ME version to 04.01.04.381.0
+// * Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
+// * Changed the option *Attempt Fast Cold Boot* default value to `disable`
+// * Changed the option *Allow Correctables* default value to `enable`
+//
+// |H410C BMC 6.71.18
+// |Add BMC reporting for ePPR memory SEL events
+//
+// |H610C BMC 4.00.07
+// |Add remote syslog support
+//
+// |H615C BMC 4.68.07
+// |Add remote syslog support
+// |===
+
+=== Mellanox NIC firmware driver compatibility
+The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
+
+* *ESXi 7.0*: H300E/H500E/H700E/H410C: Version 4.19.16.1
+* *ESXi 7.0*: H610C/H615C: Version 4.17.15.16
+* *ESXi 6.7*: Version 4.17.15.16
+* *ESXi 6.5*: Version 4.16.13.5
+
+NOTE: Before upgrading to version 2.99, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.99 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
+
+While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
+
+== Download Compute Firmware Bundle 2.99
+To download the Compute Firmware Bundle:
+
+. Go to https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
+. Choose *Compute_Firmware_Bundle* from the drop down list.
+. Click *Go*.
+
+Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
+
+== Resolved security vulnerabilities
+The following are security vulnerabilities that have been resolved in this release:
+
+* CVE2020-0548, CVE2020-0549
+* CVE2019-11157, CVE2019-14607
+
+== Resolved and known issues
+See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
+
+=== Accessing the BOL tool
+. Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[BOL tool^] and select  *Element Software* from the drop-down list:
++
+image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
+
+. In the keyword search field, type “Compute Firmware Bundle” and click *New Search*:
++
+image::compute_firmware_bundle_choice.png[Storage firmware bundle release notes, align="center"]
+
+. A list of resolved or open bugs is displayed. You can further refine the results as shown:
++
+image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="center"]
+
+// |===
+// |Issue |Description |Workaround
+//
+// |CSESF-295
+// |The compute node firmware update process fails with a BIOS update error when you update the firmware on a H410C node using the downloadable firmware package.
+// a|Manually update the BIOS to version NA3.7 on the H410C node:
+//
+// . Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI Downloads page^].
+// . Enter `H410C_BIOS_3.7` in the drop down list text field.
+// . Click *Go*.
+// Instructions for updating are available in PDF format on the download page.
+//
+// After you update the BIOS and BMC, update the H410C node firmware using the compute firmware bundle 2.76 package.
+//
+// |CSESF-328
+// |On H410C and H300E/H500E/H700E nodes, one NIC sensor for the Mellanox NIC in the BMC reports status as "NA" and reads "not present".
+// |None
+//
+// |CSESF-309
+// |H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
+// |Run the following command to recover the ports: `esxcli network nic set -n vmnic2 -a`
+//
+// |CSESF-303
+// |Network statistics errors are seen for the Mellanox NIC on H410C nodes.
+// |None
+//
+// |CSESF-293 / PE-10130
+// |Mellanox NIC firmware can be downgraded by Bootstrap OS after you upgrade to the Compute Firmware Bundle version 2.76.
+// |Reinstall Compute Firmware Bundle version 2.76.
+//
+// |PE-11033
+// |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
+// |None
+//
+// |PE-11032
+// |Under heavy loads, transmit errors sometimes occur for the Mellanox NIC on H610C nodes.
+// |None
+//
+// |PE-10954
+// |H610C nodes sometimes reflect the incorrect MTU setting after you set the MTU using the Element software Terminal User Interface (TUI).
+// |None
+// |===
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
