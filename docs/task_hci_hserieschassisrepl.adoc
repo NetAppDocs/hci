@@ -136,7 +136,7 @@ CAUTION: Ensure that you do not force the cables into the ports; you might damag
 
 . After the node powers on, add the node to the cluster.
 +
-NOTE: It might take up to 15 minutes for the node to get added and be displayed under *Nodes > Active*.
+NOTE: It might take up to 2 minutes for the node to get added and be displayed under *Nodes > Active*.
 
 . Add the drives.
 . Perform these steps for all the storage nodes in the chassis.
@@ -232,7 +232,7 @@ a|
 . In the Element plug-in for vCenter server, select *Cluster > Nodes > Pending*.
 . Select the node, and select *Add*.
 +
-NOTE: It might take up to 15 minutes for the node to get added and be displayed under *Nodes > Active*.
+NOTE: It might take up to 2 minutes for the node to get added and be displayed under *Nodes > Active*.
 
 . Select *Drives*.
 . From the Available list, add the drives.

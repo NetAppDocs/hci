@@ -34,7 +34,7 @@ NOTE: You might need to link:task_hcc_edit_bmc_info.html[change BMC credentials 
 https://[management node IP]/inventory/1/
 ----
 +
-NOTE: As an alternative, you can wait 15 minutes for the inventory to update in NetApp Hybrid Cloud Control UI.
+NOTE: As an alternative, you can wait 2 minutes for the inventory to update in NetApp Hybrid Cloud Control UI.
 
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.

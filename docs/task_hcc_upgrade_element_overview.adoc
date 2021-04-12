@@ -31,7 +31,7 @@ NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle
 . Determine the Element version on your storage cluster.
 . Use HealthTools to run pre-upgrade checks.
 . Upgrade your Element software version.
-. Upgrade your Element software version at dark sites.
+. Upgrade your Element software version at dark sites without external connectivity.
 
 
 TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[View storage and compute resources in HCC Dashboard].
