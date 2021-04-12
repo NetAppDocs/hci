@@ -99,12 +99,6 @@ sudo umount /mnt
 sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
 ----
 
-.	(For configurations without persistent volumes only) Copy the contents of the container folder for backup:
-+
-----
-sudo cp -r /var/lib/docker/volumes /sf/etc/mnode
-----
-
 . On the management node that you are upgrading, run the following command to upgrade your management node OS version. The script retains all necessary configuration files after the upgrade, such as Active IQ collector and proxy settings.
 +
 ----
@@ -112,13 +106,6 @@ sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_u
 ----
 +
 The management node reboots with a new OS after the upgrade process completes.
-
-.	(For configurations without persistent volumes only) Move the contents of the container folder back to original location:
-+
-----
-sudo su
-mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
-----
 
 . On the management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
 +
@@ -191,12 +178,6 @@ sudo umount /mnt
 sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
 ----
 
-.	(For configurations without persistent volumes only) Copy the contents of the container folder for backup:
-+
-----
-sudo cp -r /var/lib/docker/volumes /sf/etc/mnode
-----
-
 . On the management node that you are upgrading, run the following command to upgrade your management node OS version. The script retains all necessary configuration files after the upgrade, such as Active IQ collector and proxy settings.
 +
 ----
@@ -204,13 +185,6 @@ sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_u
 ----
 +
 The management node reboots with a new OS after the upgrade process completes.
-
-.	(For configurations without persistent volumes only) Move the contents of the container folder back to original location:
-+
-----
-sudo su
-mv /sf/etc/mnode/volumes/* /var/lib/docker/volumes/
-----
 
 . On the management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
 +
