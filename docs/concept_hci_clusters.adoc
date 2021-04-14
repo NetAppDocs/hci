@@ -27,10 +27,7 @@ Many NetApp Hybrid Cloud Control features are designed to work with multiple sto
 
 You can manage users with NetApp Hybrid Cloud Control.
 
-
-Before proceeding with managing multiple storage clusters, you should ensure that users defined on the authoritative clusters are defined on all other storage clusters with the same permissions. You can https://docs.netapp.com/sfe-122/index.jsp?topic=%2Fcom.netapp.doc.sfe-ug%2FGUID-E54EF120-2F00-4F43-B7CA-CCCBAAD1B5B6.html[manage users] from the Element software user interface (Element web UI).
-
-See link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets] for more information on working with management node storage cluster assets.
+Before proceeding with managing multiple storage clusters, you should ensure that users defined on the authoritative clusters are defined on all other storage clusters with the same permissions. See link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets] for more information on working with management node storage cluster assets.
 
 == Stranded capacity
 If a newly added node accounts for more than 50 percent of the total cluster capacity, some of the capacity of this node is made unusable ("stranded"), so that it complies with the capacity rule. This remains the case until more storage capacity is added. If a very large node is added that also disobeys the capacity rule, the previously stranded node will no longer be stranded, while the newly added node becomes stranded. Capacity should always be added in pairs to avoid this from happening. When a node becomes stranded, an appropriate cluster fault is thrown.

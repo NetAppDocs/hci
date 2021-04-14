@@ -14,12 +14,13 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 :keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 
 [.lead]
-Configure NetApp HCI to take advantage of an existing vSphere deployment by providing the vCenter Server network information and credentials.
+You can configure NetApp HCI to take advantage of an existing vSphere deployment by providing the vCenter Server network information and credentials.
 
 .What you'll need
 * If you are joining an existing vSphere 6.7 deployment, make sure vCenter Server is running version 6.7 Update 1.
 * If you are joining an existing vSphere 6.5 deployment, make sure vCenter Server is running version 6.5 Update 2 or later.
 * Obtain the network details and administrator credentials for your existing vSphere deployment.
+* If the NetApp Element Plug-in for vCenter Server is registered to the existing vCenter instance, you need to https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html[unregister^] it before continuing. The plug-in is re-registered after NetApp HCI deployment is complete.
 
 .About this task
 If you join multiple vCenter Server systems that are connected using vCenter Linked Mode, NetApp HCI only recognizes one of the vCenter Server systems.
@@ -30,6 +31,8 @@ If you join multiple vCenter Server systems that are connected using vCenter Lin
 If you enter a domain name, you also need to enter the IP address of an active DNS server in the *DNS Server IP Address* field that appears.
 . Enter the credentials of a vSphere administrator in the *User Name and Password* fields.
 . Click *Continue*.
+
+NOTE: If the NetApp Element Plug-in for vCenter Server was registered during this step, an error message appears requiring that you https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html[unregister^] the plug-in. Do so before continuing NetApp HCI deployment. The plug-in is re-registered after deployment is complete.
 
 [discrete]
 == Find more information
