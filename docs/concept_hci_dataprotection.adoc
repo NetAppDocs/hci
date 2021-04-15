@@ -121,13 +121,11 @@ Two different protection domain layouts, called protection domain levels, are su
 ** The chassis level layout is automatically determined from the hardware when the node is added to the cluster.
 ** In a cluster where each node is in a separate chassis, these two levels are functionally identical.
 
-You can manually enable protection domain monitoring using the NetApp Element Configuration extension point in the NetApp Element Plug-in for vCenter Server. You can select a protection domain threshold based on node or chassis domains.
+You can manually https://docs.netapp.com/us-en/vcp/vcp_task_clusters_manage.html#set-protection-domain-monitoring[enable protection domain monitoring] using the NetApp Element Plug-in for vCenter Server. You can select a protection domain threshold based on node or chassis domains.
 
 When creating a new cluster, if you are using storage nodes that reside in a shared chassis, you might want to consider designing for chassis-level failure protection using the protection domains feature.
 
 You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain.
-
-See https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-7D31AC22-8815-4BDA-984A-9AED750B96B1.html[SolidFire and Element 12.2 Documentation Center^].
 
 == Double Helix high availability
 

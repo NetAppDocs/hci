@@ -241,6 +241,6 @@ After storage volumes are deleted, they remain available for approximately eight
 [discrete]
 == Find more information
 * link:concept_hci_volumes.html[Learn about volumes]
-* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-2D2EAC0D-DD28-4ACA-A189-AA45E982EFDB.html[Work with volumes^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
