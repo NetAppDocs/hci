@@ -144,6 +144,8 @@ entries:
     entries:
       - title: Manage NetApp HCI overview
         url: /task_hci_manage_overview.html
+      - title: Change credentials in NetApp HCI
+        url: /task_post_deploy_credentials.html 
       - title: Update vCenter and ESXi credentials
         url: /task_hci_credentials_vcenter_esxi.html
       - title: Manage NetApp HCI storage
