@@ -25,7 +25,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 * *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)] for driver and firmware compatibility information, and check the latest link:rn_relatedrn.html[compute node firmware release notes] for important late-breaking firmware and driver details.
 * *Admin privileges*: You have cluster administrator permissions to perform the upgrade.
 * *Management node version*: You have management services version 2.15.28 or later.
-* *DHCP-configured nodes*: If your nodes use DHCP-assigned IPv4 addresses, your should contact NetApp Support before you start the upgrade. NEED MORE INFO.
+* *DHCP-configured nodes*: If your nodes use DHCP-assigned IPv4 addresses, you should contact NetApp Support to manually update the IP addresses. This is to resolve the issue of script failures because of stale BMC IP addresses leading to nodes being unreachable.
 * *Ansible*: You have https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide[installed Ansible 2.9 or later^] and have familiarized yourself with https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[Ansible roles^].
 * *Minimum BMC and BIOS versions*: The node you intend to upgrade meets the following minimum requirements:
 +
