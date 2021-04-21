@@ -259,7 +259,7 @@ IMPORTANT: You should define the hosts in the inventory file by using IP address
 ----
 ansible-playbook -i hosts site.yml -e 'username=username password=password client-id=client-id audience=mnode_api'
 ----
-. After the upgrade is complete, verify the BMC, BOIS, and NIC versions:
+. After the upgrade is complete, verify the BMC, BIOS, and NIC versions:
 .. Open a web browser and browse to the IP address of the management node.
 .. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 .. In the left navigation, select *Nodes*, and then select *Compute*.
