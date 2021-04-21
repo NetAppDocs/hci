@@ -142,75 +142,113 @@ The response indicates `state` as `SUCCESS` when complete.
 .. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
 |===
 . Locate the compute controller ID and hardware ID for the node you intend to upgrade:
-.. Open the inventory service REST API UI on the management node:
+.. Access the REST API UI for management services by entering the management node IP address followed by `/mnode/1`:
 +
 ----
-https://[management node IP]/inventory/1/
+https://[management node IP]/mnode/1/
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
 ... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, select *GET /installations*.
+.. From the REST API UI, select *GET /assets*.
 .. Select *Try it out*.
 .. Select *Execute*.
-.. From the response, copy the installation asset ID (`"id"`).
-.. From the REST API UI, Select *GET /installations/{id}*.
-.. Select *Try it out*.
-.. Paste the installation asset ID into the *id* field.
-.. Select *Execute*.
-.. From the response, copy and save the cluster controller ID (`"controllerId"`), cluster ID (`"clusterId"`), and hardware ID (`"hardwareId"`) for use in a later step:
+.. From the response, copy and save the controller ID (`"id"`) and hardware ID (`"id"`) for use in a later step. Additionally, for cluster-level upgrades, you should also copy the vCenter IP address from `"ip"` under "controller":
++
+[sub=+quotes]
+----
+"controller": [
+   {
+     "_links": {
+       "collection": "https://10.117.224.82/mnode/assets/c5c8669c-3194-4e22-8912-ce867a5d781f/controllers",
+       "parent": "https://10.117.224.82/mnode/assets/c5c8669c-3194-4e22-8912-ce867a5d781f",
+       "root": "https://10.117.224.82/mnode/assets",
+       "self": "https://10.117.224.82/mnode/assets/c5c8669c-3194-4e22-8912-ce867a5d781f/controllers/aceb935f-2f54-4339-801b-2eabaff9a200"
+     },
+     "config": {},
+     "credentialid": "6d1bce10-d46e-49b8-8a3e-cd97ede00961",
+     "host_name": "",
+     "id": "aceb935f-2f54-4339-801b-2eabaff9a200",
+     "ip": "10.117.224.52",
+     "parent": "c5c8669c-3194-4e22-8912-ce867a5d781f",
+     "type": "vCenter"
+   }
+ ]
+----
 +
 [subs=+quotes]
 ----
-"compute": {
-  "errors": [],
-  "inventory": {
-    "clusters": [
-      {
-        "clusterId": "Test-1B",
-        *"controllerId": "a1b23456-c1d2-11e1-1234-a12bcdef123a",*
+"hardware": [
+   {
+     "_links": {
+       "collection": "https://10.117.224.82/mnode/assets/c5c8669c-3194-4e22-8912-ce867a5d781f/hardware-nodes",
+       "parent": "https://10.117.224.82/mnode/assets/c5c8669c-3194-4e22-8912-ce867a5d781f",
+       "root": "https://10.117.224.82/mnode/assets",
+       "self": "https://10.117.224.82/mnode/assets/c5c8669c-3194-4e22-8912-ce867a5d781f/hardware-nodes/6f8d01bf-1e43-499a-ae79-42330c4b43a0"
+     },
+     "config": {},
+     "credentialid": "8e607621-bf48-4f4e-a252-1e69f65d971e",
+     "hardware_tag": "6ec5afb0-b3d2-11e8-8f84-d8c497b5d970",
+     "host_name": "bmc-host_10.117.2.173",
+     "id": "6f8d01bf-1e43-499a-ae79-42330c4b43a0",
+     "ip": "10.117.2.173",
+     "parent": "c5c8669c-3194-4e22-8912-ce867a5d781f",
+     "type": "BMC"
+   }
 ----
+. *(Cluster-level upgrade only)* Locate the cluster ID for the cluster you intend to upgrade:
+.. Access the REST API UI for management services by entering the management node IP address followed by `/vcenter/1/`:
 +
-[subs=+quotes]
 ----
-"nodes": [
-  {
-    "bmcDetails": {
-      "bmcAddress": "10.111.0.111",
-      "credentialsAvailable": true,
-      "credentialsValidated": true
-    },
-    "chassisSerialNumber": "111930011231",
-    "chassisSlot": "D",
-    *"hardwareId": "123a4567-01b1-1243-a12b-11ab11ab0a15",*
-    "hardwareTag": "00000000-0000-0000-0000-ab1c2de34f5g",
-    "id": "e1111d10-1a1a-12d7-1a23-ab1cde23456f",
-    "model": "H410C",
+https://[management node IP]/vcenter/1/
 ----
-. Locate the vCenter IP address for the node you intend to upgrade.
-.. Select *GET /compute/controllers*.
+.. Select *Authorize* or any lock icon and complete the following:
+... Enter the cluster user name and password.
+... Enter the client ID as mnode-client.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+.. Select *GET /vcenter/1/compute/{controller_id}*.
 .. Select *Try it out*.
+.. Enter the controller ID you copied in the previous step in the `controller_id` parameter.
 .. Select *Execute*.
+.. Copy and save the response value for `"clusterId"` under "clusters".
 +
-The API returns a list of all known vCenter controllers, along with the IP address, controller ID, hostname, and user ID used to communicate with each controller.
-.. Copy and save the vCenter IP address for use in a later step.
+[sub=+quotes]
+----
+"clusters": [
+   {
+     "clusterId": "domain-c7",
+     "clusterName": "NetApp-HCI-Cluster-01",
+     "clusterOid": "vim.ClusterComputeResource:domain-c7",
+     "configurationEx": {
+       "default_dpm_behavior": "automated",
+       "default_vm_behavior": "fullyAutomated",
+       "enable_vm_behavior_overrides": true,
+       "hb_datastore_candidate_policy": "allFeasibleDs",
+       "host_monitoring": "enabled",
+       "host_power_action_rate": 3,
+       "vm_component_protecting": "disabled",
+       "vm_monitoring": "vmMonitoringOnly",
+       "vmotion_rate": 3
+     },
+----
 . Download the https://github.com/NetApp/ansible[`nar_compute_nodes_firmware_upgrades`^] role provided by NetApp to your local machine.
 +
 NOTE: You can also manually install the role by copying it from the https://github.com/NetApp/ansible[NetApp GitHub repository^] and placing the role in the `~/.ansible/roles` directory.
 . Specify the SSH credentials and environment details in the https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html[inventory file^], which is located in `etc/ansible/hosts`.
-. Specify the following variables in the `group_vars/all.yml` file:
+. Specify the following variables in the `group_vars/all.yml` file. This is where you will enter the values that you copied in the previous steps.
 
-* `mnode_ip`: IP address of the management node.
+* `mnode_ip`
 * `username`
 * `password`
-* `package_name`: Use the value you copied in an earlier step.
-* `version`: Use the value you copied in an earlier step.
-* `controller_id` (required only for single-node upgrade): Use the value you copied in an earlier step.
-* `hardware_id` (required only for single- node upgrade): Use the value you copied in an earlier step.
-* `cluster_id` (required only for cluster-level upgrade): Use the value you copied in an earlier step.
-* `vcenter_ip` (required only for cluster-level upgrade): This is the IP address of the vCenter the cluster belongs to. Use the value you copied in an earlier step.
+* `package_name`
+* `version`
+* `controller_id` (required only for single-node upgrade)
+* `hardware_id` (required only for single- node upgrade)
+* `cluster_id` (required only for cluster-level upgrade)
+* `vcenter_ip` (required only for cluster-level upgrade)
 
 . Update the `hosts` inventory file with the server/inventory details, such as IP addresses, username, and password.
 +
