@@ -24,7 +24,7 @@ The command to configure a proxy server updates and then returns the current pro
 * You should know host and credential information for the proxy server you are configuring.
 * Ensure that your cluster version is running NetApp Element software 11.3 or later.
 * Ensure that you have deployed a management node running version 11.3 or later.
-* (Management node 12.0 and 12.2) You have updated NetApp Hybrid Cloud Control to management services version 2.16 before configuring a proxy server.
+* (Management node 12.0 and later) You have updated NetApp Hybrid Cloud Control to management services version 2.16 before configuring a proxy server.
 
 .Steps
 . Access the REST API UI on the management node by entering the management node IP address followed by `/mnode`:

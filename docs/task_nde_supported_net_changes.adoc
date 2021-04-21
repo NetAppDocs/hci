@@ -145,4 +145,4 @@ This configuration is only supported when used with VMware vSphere Distributed S
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
-* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]

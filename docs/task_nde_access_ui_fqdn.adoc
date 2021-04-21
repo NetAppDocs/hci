@@ -64,6 +64,6 @@ https://<management_node_IP>/mnode/2/
 
 [discrete]
 == Find more information
-* http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-93942724-1C4C-4F3D-B352-89498F7722ED.html[CreateClusterInterfacePreference API information in the SolidFire and Element Documentation Center^]
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_createclusterinterfacepreference.html[CreateClusterInterfacePreference API information in the SolidFire and Element Documentation^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
-* http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]
