@@ -45,6 +45,8 @@ entries:
     entries:
      - title: Requirements for NetApp HCI deployment
        url: /hci_prereqs_overview.html
+     - title: Management node requirements
+       url: /hci_prereqs_management_node.html
      - title: Network port requirements
        url: /hci_prereqs_required_network_ports.html
      - title: Network and switch requirements
@@ -145,7 +147,7 @@ entries:
       - title: Manage NetApp HCI overview
         url: /task_hci_manage_overview.html
       - title: Change credentials in NetApp HCI
-        url: /task_post_deploy_credentials.html 
+        url: /task_post_deploy_credentials.html
       - title: Update vCenter and ESXi credentials
         url: /task_hci_credentials_vcenter_esxi.html
       - title: Manage NetApp HCI storage

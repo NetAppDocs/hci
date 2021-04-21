@@ -16,6 +16,8 @@ keywords: netapp, mnode, api, rest api, mnode ui, management node ui
 [.lead]
 You can use the management node (mNode) to use system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
 
+NOTE: As a best practice, only associate one management node with one VMware vCenter instance, and avoid defining the same storage and compute resources in multiple management nodes.
+
 For clusters running Element software version 11.3 or later, you can work with the management node by using one of two interfaces:
 
 * With the management node UI (`https:// [mNode IP}:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
