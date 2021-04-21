@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: docs/task_hcc_upgrade_compute_firmware_ansible.html
-summary: For H-series compute nodes, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC by using Ansible.
+summary: For H-series compute nodes, NetApp provides an Ansible role that helps you automate firmware updgrade for hardware components such as the BMC, BIOS, and NIC.
 keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role
 ---
 
@@ -14,9 +14,9 @@ keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgra
 :imagesdir: ../media/
 
 [.lead]
-For H-series compute nodes, you can upgrade the firmware for hardware components such as the BMC, BIOS, and NIC by using Ansible.
+For H-series compute nodes, NetApp provides an Ansible role that helps you automate firmware updgrade for hardware components such as the BMC, BIOS, and NIC.
 
-NOTE: The Ansible role for upgrades works only on NetApp HCI H-series compute nodes. You cannot use Ansible to upgrade third-party compute nodes.
+NOTE: The Ansible role for upgrades works only on NetApp HCI H-series compute nodes. You cannot use this role to upgrade third-party compute nodes.
 
 After the upgrade, the compute node boots into ESXi and works as before, retaining the configuration.
 
