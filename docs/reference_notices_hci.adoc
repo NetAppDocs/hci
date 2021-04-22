@@ -50,6 +50,7 @@ Notice files provide information about third-party copyright and licenses.
 * link:../media/compute_iso_notice.pdf[Notice for compute firmware ISO^]
 * link:../media/H610S_BMC_notice.pdf[Notice for H610S BMC^]
 * link:../media/2.18_notice.pdf[Notice for Management Services 2.18.91^]
+* link:../media/2.17.56_notice.pdf[Notice for Management Services 2.17.56^]
 * link:../media/2.17_notice.pdf[Notice for Management Services 2.17.52^]
 * link:../media/2.16_notice.pdf[Notice for Management Services 2.16^]
 * link:../media/mgmt_svcs_2.14_notice.pdf[Notice for Management Services 2.14^]
