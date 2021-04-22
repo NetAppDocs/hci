@@ -149,7 +149,7 @@ https://[management node IP]/mnode/1/
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client`.
+... Enter the client ID.
 ... Select *Authorize* to begin a session.
 ... Close the authorization window.
 .. From the REST API UI, select *GET /assets*.
