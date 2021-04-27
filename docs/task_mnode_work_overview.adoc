@@ -20,8 +20,8 @@ NOTE: As a best practice, only associate one management node with one VMware vCe
 
 For clusters running Element software version 11.3 or later, you can work with the management node by using one of two interfaces:
 
-* With the management node UI (`https:// [mNode IP}:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
-* With the built-in REST API UI (`https://[mNode IP}/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
+* With the management node UI (`https://[mNode IP]:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
+* With the built-in REST API UI (`https://[mNode IP]/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
 
 Install or recover a management node:
 
