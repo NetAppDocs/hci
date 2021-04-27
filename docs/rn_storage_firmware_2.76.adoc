@@ -35,7 +35,7 @@ This firmware package contains the following firmware versions for hardware comp
 |BMC
 |N/A
 |6.84.00
-|*3.86.07*
+|*3.84.07*
 
 |NIC / Mellanox
 |-
@@ -156,7 +156,7 @@ This firmware package contains the following firmware versions for hardware comp
 a|
 * Improved handling of memory failures
 * Updated microcode version to MCU x6906
-| H610S BMC 3.86.07
+| H610S BMC 3.84.07
 a|
 * Added BIOS PPR event log parsing in BMC SEL
 * Prevent system overheat when BMC hangs
