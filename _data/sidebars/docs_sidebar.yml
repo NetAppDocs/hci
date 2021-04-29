@@ -32,6 +32,8 @@ entries:
             url: /concept_hci_volume_access_groups.html
           - title: Initiators
             url: /concept_hci_initiators.html
+          - title: Custom protection domains
+            url: /concept_hcc_custom_protection_domains.html
           # url: /concept_hci_storage.html
       - title: Licensing
         url: /concept_cg_hci_licensing.html

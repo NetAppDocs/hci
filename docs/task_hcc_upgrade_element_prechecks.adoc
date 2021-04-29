@@ -151,7 +151,7 @@ If all health checks are successful, the return is similar to the following exam
 
 You can verify that the storage cluster is ready to be upgraded by using the `sfupgradecheck` command. This command verifies information such as pending nodes, disk space, and cluster faults.
 
-If your management node is at a dark site, the upgrade readiness check needs the `metadata.json` file you downloaded during link:task_upgrade_element_latest_healthtools.html[HealthTools upgrades] to run successfully.
+If your management node is at a dark site without external connectivity, the upgrade readiness check needs the `metadata.json` file you downloaded during link:task_upgrade_element_latest_healthtools.html[HealthTools upgrades] to run successfully.
 
 .About this task
 

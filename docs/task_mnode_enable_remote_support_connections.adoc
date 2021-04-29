@@ -16,9 +16,13 @@ keywords: netapp, mnode, management node, connect to support, support tunnel, rs
 [.lead]
 If you require technical support for your NetApp HCI or SolidFire all-flash storage system, NetApp Support can connect remotely with your system. To start a session and gain remote access, NetApp Support can open a reverse Secure Shell (SSH) connection to your environment.
 
-.About this task
-You can open a TCP port for an SSH reverse tunnel connection with NetApp Support. This connection enables NetApp Support to log in to your management node. If your management node is behind a proxy server, the following TCP ports are required in the sshd.config file:
+You can open a TCP port for an SSH reverse tunnel connection with NetApp Support. This connection enables NetApp Support to log in to your management node.
 
+.Before you begin
+* For management services 2.18 and later, the capability for remote access is disabled on the management node by default. To enable remote access functionality, see link:task_mnode_ssh_management.html[Manage SSH functionality on the management node].
+
+* If your management node is behind a proxy server, the following TCP ports are required in the sshd.config file:
++
 [cols=3*,options="header",cols="15,25,60"]
 |===
 | TCP port
@@ -27,8 +31,6 @@ You can open a TCP port for an SSH reverse tunnel connection with NetApp Support
 | 443 | API calls/HTTPS for reverse port forwarding via open support tunnel to the web UI | Management node to storage nodes
 | 22 | SSH login access | Management node to storage nodes or from storage nodes to management node
 |===
-
-NOTE: By default, the capability for remote access is enabled on the management node. To disable remote access functionality, see link:task_mnode_ssh_management.html[Manage SSH functionality on the management node]. You can enable remote access functionality again, if needed.
 
 .Steps
 * Log in to your management node and open a terminal session.
@@ -40,6 +42,9 @@ NOTE: By default, the capability for remote access is enabled on the management 
 +
 `rst --killall`
 
+* (Optional) Disable link:task_mnode_ssh_management.html[remote access functionality] again.
++
+NOTE: SSH remains enabled if you do not disable it. SSH enabled configuration persists on the management node through updates and upgrades until it is manually disabled.
 
 [discrete]
 == Find more information
