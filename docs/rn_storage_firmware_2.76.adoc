@@ -221,7 +221,7 @@ The following are security vulnerabilities that have been resolved in this relea
 // * CVE-2019-16650
 // * CVE-2019-6260
 
-=== H610S BMC 3.84.07
+=== H610S BMC 3.86.07
 
 * CVE-2019-20636
 * CVE-2019-11599, CVE-2020-12826, CVE-2020-12464, CVE-2020-12114
