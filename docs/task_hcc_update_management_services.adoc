@@ -59,7 +59,7 @@ NOTE: For a list of available services for each service bundle version, see the 
 +
 The Management Services tab shows the current and available versions of management services software.
 +
-NOTE: If your installation cannot access the internet, only the current software version is shown.
+NOTE: If your installation cannot access the internet, only the current software version is shown. If you have external connectivity but NetApp HCI is unable to access the NetApp online repository, check your link:task_mnode_configure_proxy_server.html[proxy configuration^].
 
 . If your installation can access the internet and if a management services upgrade is available, click *Begin Upgrade*.
 . If your installation cannot access the internet, do the following:

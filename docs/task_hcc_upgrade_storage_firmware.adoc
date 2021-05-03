@@ -14,7 +14,7 @@ keywords: netapp, element, hcc, firmware, storage firmware
 :imagesdir: ../media/
 
 [.lead]
-Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 .What you'll need
 
@@ -51,7 +51,7 @@ You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware of the st
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
-TIP: The upgrade process takes approximately 30 minutes per node.
+TIP: The upgrade process takes approximately 30 minutes per storage node. If you are upgrading an Element storage cluster to storage firmware newer than version 2.76, individual storage nodes will only reboot during the upgrade if new firmware was written to the node.
 
 .Steps
 
