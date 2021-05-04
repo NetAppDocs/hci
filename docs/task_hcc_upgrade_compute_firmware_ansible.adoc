@@ -5,7 +5,7 @@ summary: For H-series compute nodes, NetApp provides an Ansible role that helps 
 keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role
 ---
 
-= Automate NetApp HCI compute node firmware upgrades with Ansible
+= Automate compute node firmware upgrades with Ansible
 
 :hardbreaks:
 :nofooter:
