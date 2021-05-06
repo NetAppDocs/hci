@@ -22,8 +22,8 @@ NOTE: The Ansible role for upgrades works only on NetApp HCI H-series compute no
 
 .What you'll need
 
-* *Readiness and prerequisites for firmware upgrades*: Your NetApp HCI installation must be ready for firmware upgrade as outlined in the instructions for link:task_hcc_upgrade_compute_node_firmware.html[performing firmware upgrades].
-* *Run automation on Ansible control node*: A physical or virtual server to run firmware update automation in Ansible.
+* *Readiness and prerequisites for firmware upgrades*: Your NetApp HCI installation must be ready for firmware upgrade as outlined in the instructions for link:task_hcc_upgrade_compute_node_firmware.html[performing firmware upgrades^].
+* *Readiness to run automation on Ansible control node*: A physical or virtual server to run firmware update automation in Ansible.
 
 .About this task
 
