@@ -484,6 +484,8 @@ The VM is configured using the template that is created as part of initial deplo
 +
 image::vm-template.png[Shows a screenshot of the Witness Node VM template.]
 
+NOTE: If you deleted the VM template, you should contact NetApp Support to get the Witness Node .ova image and redeploy it. You can download the template from link:https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/WN_12.0/downloads[here (login required)^]. However, you should engage Support for guidance with setting it up.
+
 .Steps
 . In the VMware vSphere Web Client, select *Hosts and Clusters*.
 . Right-click the compute node that will host the Witness Node VM, and select *New Virtual Machine*.
