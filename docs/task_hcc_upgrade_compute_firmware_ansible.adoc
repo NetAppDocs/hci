@@ -31,7 +31,7 @@ In a production environment, you should update compute nodes in a cluster in a N
 
 .Get started with firmware upgrade automation
 
-To get started, navigate to the https://github.com/NetApp/ansible/tree/master/nar_compute_nodes_firmware_upgrades[NetApp Ansible repository on GitHub^] and download the `nar_compute_nodes_firmware_upgrades` role and documentation.
+To get started, navigate to the https://github.com/NetApp-Automation/nar_compute_firmware_upgrade[NetApp Ansible repository on GitHub^] and download the `nar_compute_nodes_firmware_upgrades` role and documentation.
 
 [discrete]
 == Find more information
