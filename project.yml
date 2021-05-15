@@ -369,3 +369,28 @@ sidebar:
       url: /docs/reference_earlier_versions.html
     - title: Legal notices
       url: /docs/reference_notices_hci.html
+
+homepage:
+  tiles:
+    - title: Get started
+      links:
+        - title: Learn about HCI
+          summary: Get an overview of HCI before you get started.
+          url: /docs/concept_hci_product_overview.html
+        - title: Quick start
+          summary: Get started with NetApp HCI
+          url: /docs/task_hci_getstarted.html
+    - title: "What's New"
+      links:
+        - title: NetApp HCI
+          summary: "What's new in NetApp HCI"
+          url: /docs/rn_whatsnew.html
+        - title: NetApp Element software
+          summary: "What's new in NetApp Element software"
+          url: https://docs.netapp.com/us-en/element-software/concepts/concept_rn_whats_new_element.html
+        - title: Management services
+          summary: Management services for Element software and NetApp HCI
+          url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
+        - title: "NetApp Element Plug-in for vCenter Server"
+          summary: "What's new in NetApp Element Plug-in for vCenter Server"
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569
