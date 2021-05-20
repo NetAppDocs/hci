@@ -42,6 +42,31 @@ All ports in the table are TCP unless stated otherwise.
 |===
 |Source |Destination |Port |Description
 
+|Compute node BMC/IPMI
+|Management node
+|111 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC/IPMI
+|Management node
+|137-138 UDP
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC/IPMI
+|Management node
+|445
+|NetApp Hybrid Cloud Control API communication
+
+|Compute node BMC/IPMI
+|Management node
+|623 UDP
+|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+
+|Compute node BMC/IPMI
+|Management node
+|2049 TCP/UDP
+|NetApp Hybrid Cloud Control API communication
+
 |iSCSI clients
 |Storage cluster MVIP
 |443
@@ -56,56 +81,6 @@ All ports in the table are TCP unless stated otherwise.
 |Storage node SIP
 |3260
 |Client iSCSI communications
-
-|Compute node BMC/IPMI
-|Management node
-|111 TCP/UDP
-|NetApp Hybrid Cloud Control API communication
-
-|Compute node BMC/IPMI
-|Management node
-|445
-|NetApp Hybrid Cloud Control API communication
-
-|Compute node BMC/IPMI
-|Management node
-|2049 TCP/UDP
-|NetApp Hybrid Cloud Control API communication
-
-|Compute node BMC/IPMI
-|Management node
-|137-138 UDP
-|NetApp Hybrid Cloud Control API communication
-
-|Compute node BMC/IPMI
-|Management node
-|623 UDP
-|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
-
-|Management node
-|Compute node BMC/IPMI
-|139
-|NetApp Hybrid Cloud Control API communication
-
-|Management node
-|Compute node BMC/IPMI
-|443
-|NetApp Hybrid Cloud Control HTTPS communication
-
-|Management node
-|VMware vCenter
-|5988-5989
-|NetApp Hybrid Cloud Control HTTPS communication
-
-|Management node
-|VMware vCenter
-|443
-|NetApp Hybrid Cloud Control HTTPS communication
-
-|Management node
-|Compute node BMC/IPMI
-|623 UDP
-|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
 
 |Management node
 |`sfsupport.solidfire.com`
@@ -123,6 +98,11 @@ All ports in the table are TCP unless stated otherwise.
 |DNS lookup
 
 |Management node
+|Compute node BMC/IPMI
+|139
+|NetApp Hybrid Cloud Control API communication
+
+|Management node
 |Storage node MIP
 |442
 |UI and API access to storage node and Element software upgrades
@@ -133,19 +113,9 @@ All ports in the table are TCP unless stated otherwise.
 |UI and API access to storage node and Element software upgrades
 
 |Management node
-|`repo.netapp.com/downloads`,  `repo.netapp.com/bintray/api/package`
+|`23.32.54.122`, `216.240.21.15`
 |443
-|Management node service upgrades
-
-|Management node
-|`monitoring.solidfire.com`
-|443
-|Storage cluster reporting to Active IQ
-
-|Management node
-|Storage cluster MVIP
-|443
-|UI and API access to storage node and Element software upgrades
+|Element software upgrades
 
 |Management node
 |Baseboard management controller (BMC)
@@ -153,9 +123,40 @@ All ports in the table are TCP unless stated otherwise.
 |Hardware monitoring and inventory connection (Redfish and IPMI commands)
 
 |Management node
-|`23.32.54.122`, `216.240.21.15`
+|Compute node BMC/IPMI
 |443
-|Element software upgrades
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|`monitoring.solidfire.com`
+|443
+|Storage cluster reporting to Active IQ
+
+|Management node
+|`repo.netapp.com/downloads`,  `repo.netapp.com/bintray/api/package`
+|443
+|Management node service upgrades
+
+|Management node
+|Storage cluster MVIP
+|443
+|UI and API access to storage node and Element software upgrades
+
+
+|Management node
+|VMware vCenter
+|443
+|NetApp Hybrid Cloud Control HTTPS communication
+
+|Management node
+|Compute node BMC/IPMI
+|623 UDP
+|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+
+|Management node
+|VMware vCenter
+|5988-5989
+|NetApp Hybrid Cloud Control HTTPS communication
 
 |Management node
 |Witness Node
@@ -188,11 +189,6 @@ All ports in the table are TCP unless stated otherwise.
 |Element software upgrades
 
 |Storage node MIP
-|Management node
-|443
-|Element software upgrades
-
-|Storage node MIP
 |S3/Swift endpoint
 |80
 |(Optional) HTTP communication to S3/Swift endpoint for backup and recovery
@@ -218,6 +214,11 @@ All ports in the table are TCP unless stated otherwise.
 |(Optional) LDAP lookup
 
 |Storage node MIP
+|Management node
+|443
+|Element software upgrades
+
+|Storage node MIP
 |Remote storage cluster MVIP
 |443
 |Remote replication cluster pairing communication
@@ -233,6 +234,11 @@ All ports in the table are TCP unless stated otherwise.
 |(Optional) HTTPS communication to S3/Swift endpoint for backup and recovery
 
 |Storage node MIP
+|LDAPS server
+|636 TCP/UDP
+|LDAPS lookup
+
+|Storage node MIP
 |Management node
 |10514 TCP/UDP, 514 TCP/UDP
 |Syslog forwarding
@@ -243,11 +249,6 @@ All ports in the table are TCP unless stated otherwise.
 |Syslog forwarding
 
 |Storage node MIP
-|LDAPS server
-|636 TCP/UDP
-|LDAPS lookup
-
-|Storage node MIP
 |Remote storage node MIP
 |2181
 |Intercluster communication for remote replication
@@ -256,6 +257,11 @@ All ports in the table are TCP unless stated otherwise.
 |S3/Swift endpoint
 |80
 |(Optional) HTTP communication to S3/Swift endpoint for backup and recovery
+
+|Storage node SIP
+|Compute node SIP
+|442
+|Compute node API, configuration and validation, and access to software inventory
 
 |Storage node SIP
 |S3/Swift endpoint
@@ -271,11 +277,6 @@ All ports in the table are TCP unless stated otherwise.
 |Remote storage node SIP
 |4000 through 4020
 |Remote replication node-to-node data transfer
-
-|Storage node SIP
-|Compute node SIP
-|442
-|Compute node API, configuration and validation, and access to software inventory
 
 |System administrator PC
 |Storage node MIP
