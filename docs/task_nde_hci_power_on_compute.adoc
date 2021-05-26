@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_hci_power_on_compute.html
 summary: Learn how to power on NetApp HCI compute nodes.
 keywords: netapp, hci, netapp deployment engine, deployment, vsphere

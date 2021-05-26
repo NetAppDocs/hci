@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_removewn.html
 summary: After you expand a two-node storage cluster to a four or more nodes, you can delete the pair of Witness Nodes to free up compute resources in your NetApp HCI installation.
 keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compute nodes, virtual machine, vm

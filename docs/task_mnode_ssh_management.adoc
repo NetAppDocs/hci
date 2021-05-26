@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_ssh_management.html
 summary: You can disable, enable, or determine the status of SSH support connection capability on the management node using the REST API UI.
 keywords: netapp, mnode, management node, ssh, disable, enable, rest api

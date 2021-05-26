@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_install.html
 summary: You can install the management node for your cluster running NetApp Element software.
 keywords: netapp, element, management node, mnode, storage, install

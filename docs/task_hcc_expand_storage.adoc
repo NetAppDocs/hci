@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_expand_storage.html
 summary: After you finish NetApp HCI deployment, you can expand and configure NetApp HCI storage resources by using NetApp Hybrid Cloud Control.
 keywords: netapp, hci, on premise, expand, storage, cluster

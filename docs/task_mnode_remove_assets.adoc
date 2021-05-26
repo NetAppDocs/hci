@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_remove_assets.html
 summary: Learn how to remove compute node assets from your system using the REST API.
 keywords: netapp, hci, api, REST, remove, compute, asset

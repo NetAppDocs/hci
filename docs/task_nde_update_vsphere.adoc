@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_update_vsphere.html
 summary: Learn about how to keep VMware vSphere up to date after you deploy NetApp HCI.
 keywords: netapp, hci, deployment, review, deploy

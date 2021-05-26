@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_hci_initiators.html
 summary: Learn about initiators and how you can use them to permit access to storage in volume access groups.
 keywords: netapp, hci, initiator, storage volume, solidfire volume, element volume, access group

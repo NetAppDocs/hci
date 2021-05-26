@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_api_find_mgmt_svcs_version.html
 summary: You can find the management node OS and management services versions used by the management node using the REST API.
 keywords: netapp, hci, management node, management services, version, bundle version, what is

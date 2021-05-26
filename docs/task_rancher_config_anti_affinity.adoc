@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_config_anti_affinity.html
 summary: Learn about how to configure anti-affinity rules for Rancher VMs to help with host resiliency.
 keywords: netapp, hci, rancher, deploy, cluster, kubernetes, anti, affinity, resiliency

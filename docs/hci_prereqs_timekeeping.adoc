@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_timekeeping.html
 summary: Learn about DNS and timekeeping requirements for NetApp HCI.
 keywords: netapp, hci, timekeeping, NTP, DNS

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_review_deploy.html
 summary: Learn how to review your final configuration and deploy NetApp HCI with these settings.
 keywords: netapp, hci, deployment, review, deploy

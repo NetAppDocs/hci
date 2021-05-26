@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_access_manual_ip.html
 summary: Learn how to access the NetApp Deployment Engine by manually assigning IP addresses to NetApp HCI nodes.
 keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access

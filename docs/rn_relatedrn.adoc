@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/rn_relatedrn.html
 summary: Get links to release notes for products or components that are part of the NetApp HCI environment.
 keywords: netapp, hci, element, vcp, vcenter plugin, storage, management services, compute firmware

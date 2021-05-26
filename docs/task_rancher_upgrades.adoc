@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_upgrades.html
 summary: You can use NetApp Hybrid Cloud Control to upgrade components of your Rancher deployment on NetApp HCI that you installed previously using HCC.
 keywords: netapp, hci, rancher, upgrade, hcc

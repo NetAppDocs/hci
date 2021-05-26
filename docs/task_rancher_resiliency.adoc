@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_resiliency.html
 summary: Learn about how to configure VM placement for optimal resiliency after installing Rancher on NetApp HCI.
 keywords: netapp, hci, Rancher, install, resiliency, vm, affinity
