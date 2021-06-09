@@ -1,0 +1,38 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_mnode_locate_hardware_tag.html
+summary: You can add compute and controller assets to the management node configuration using the REST API UI.
+keywords: netapp, mnode, management node, rest api, hci
+---
+
+= How to locate a hardware tag for compute node
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You require the hardware tag when you need add, edit, or delete compute node assets in HCI UI.
+
+This section shows you how to locate the hardware tag for your compute node in vSphere.
+
+.What you'll need
+* Your cluster version is running NetApp Element software 11.3 or later.
+* You have deployed a management node running version 11.3 or later.
+
+.About this task
+
+.Steps
+. Select the host in the vSphere Web Client navigator.
+. For vsphere version 6.7u2, select the *Monitor* tab, and select *Hardware Health*.
++
+The node BIOS manufacturer and model number are listed. Copy and save the value for `Tag` for when you add, edit, or delete compute node assets.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// Doc-3482 06/09/2021
