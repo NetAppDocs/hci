@@ -48,7 +48,7 @@ NOTE: Only remote storage clusters that are not currently managed by a managemen
 
 . Select *Add*.
 +
-NOTE: After you add the storage cluster, the cluster inventory can take up to 15 minutes to refresh and display the new addition. You might need to refresh the page in your browser to see the changes.
+NOTE: After you add the storage cluster, the cluster inventory can take up to 2 minutes to refresh and display the new addition. You might need to refresh the page in your browser to see the changes.
 
 . If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
 
@@ -91,4 +91,4 @@ CAUTION: Clicking *Yes* next removes the cluster from the installation.
 [discrete]
 == Find more information
 * link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

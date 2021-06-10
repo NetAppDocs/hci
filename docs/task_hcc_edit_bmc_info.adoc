@@ -20,7 +20,7 @@ You can change Baseboard Management Controller (BMC) administrator credentials i
 
 Cluster administrator permissions to change BMC credentials.
 
-NOTE: If you set BMC credentials during a health check, there can be a delay of up to 15 minutes before the change is reflected on the *Nodes* page.
+NOTE: If you set BMC credentials during a health check, there can be a delay of up to 2 minutes before the change is reflected on the *Nodes* page.
 
 .Options
 
@@ -157,4 +157,4 @@ A successful result returns a response similar to the following:
 == Find more information
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[Known issues and workarounds for compute node upgrades^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

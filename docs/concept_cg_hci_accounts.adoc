@@ -45,9 +45,6 @@ NOTE: A local (non-LDAP) cluster administrator account is required to access act
 
 You can manage cluster administrator accounts by creating, deleting, and editing cluster administrator accounts, changing the cluster administrator password, and configuring LDAP settings to manage system access for users.
 
-For details, see the https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[SolidFire and Element Documentation Center^].
-
-
 == Authoritative user accounts
 
 Authoritative user accounts can authenticate against any storage asset associated with the NetApp Hybrid Cloud Control instance of nodes and clusters. With this account, you can manage volumes, accounts, access groups, and more across all clusters.
@@ -73,6 +70,5 @@ Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table
 == Find more information
 * link:task_hcc_manage_accounts.html[Manage user accounts]
 * link:concept_hci_clusters.html[Learn about clusters]
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Documentation Center^]

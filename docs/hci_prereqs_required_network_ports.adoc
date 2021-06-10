@@ -133,7 +133,7 @@ All ports in the table are TCP unless stated otherwise.
 |UI and API access to storage node and Element software upgrades
 
 |Management node
-|`repo.netapp.com/api/repos/netapp-downloads`, `repo.netapp.com/bintray/dl/`, `repo.netapp.com/bintray/api/package`, `netapp-downloads.bintray.com`, `bintray.com`, `repo.netapp.com`, `library.netapp.com`
+|`repo.netapp.com/downloads`,  `repo.netapp.com/bintray/api/package`
 |443
 |Management node service upgrades
 
@@ -335,5 +335,5 @@ All ports in the table are TCP unless stated otherwise.
 
 [discrete]
 == Find more information
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

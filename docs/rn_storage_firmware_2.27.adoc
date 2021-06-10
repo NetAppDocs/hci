@@ -16,7 +16,7 @@ This file isn't included in the docs_sidebar nav system. It is only linked to fr
 :keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
-Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your H-series storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 IMPORTANT: For H610S storage nodes running Element software version 12.0, you should apply D-patch SUST-909 before you upgrade to storage firmware bundle 2.27. Contact NetApp Support to obtain the D-patch before you upgrade.
 
@@ -209,4 +209,4 @@ There are no known issues in this release.
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -89,7 +89,7 @@ If you configured users on the storage cluster with LDAP, those accounts show a 
 . Log out of NetApp Hybrid Cloud Control.
 . link:task_mnode_manage_storage_cluster_assets.html#edit-the-stored-credentials-for-a-storage-cluster-asset[Update the credentials] for the authoritative cluster asset using the NetApp Hybrid Cloud Control API.
 +
-NOTE: It might take the NetApp Hybrid Cloud Control UI up to 15 minutes to refresh the inventory. To manually refresh inventory, access the REST API UI inventory service `https://[management node IP]/inventory/1/` and run `GET /installations​/{id}` for the cluster.
+NOTE: It might take the NetApp Hybrid Cloud Control UI up to 2 minutes to refresh the inventory. To manually refresh inventory, access the REST API UI inventory service `https://[management node IP]/inventory/1/` and run `GET /installations​/{id}` for the cluster.
 
 . Log into NetApp Hybrid Cloud Control.
 
@@ -161,4 +161,4 @@ NOTE: Persistent volumes that are associated with management services are assign
 * link:concept_hci_accounts.html[Learn about accounts]
 * http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-E93D3BAF-5A60-414D-86AF-0C1F86D43F26.html[Work with user accounts^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

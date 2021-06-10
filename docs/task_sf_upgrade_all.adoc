@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your NetApp SolidFire all-flash storage system for Element 12.2
+= Upgrade your NetApp SolidFire all-flash storage system for Element 12.3
 
 :hardbreaks:
 :nofooter:
@@ -34,7 +34,9 @@ Upgrades using HCC are not available in earlier service bundle versions.
 
 . link:task_hcc_update_management_services.html[Update management services from Hybrid Cloud Control].
 +
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software.
+IMPORTANT: If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services.
++
+IMPORTANT: You must update to the latest management services bundle before upgrading your Element software.
 
 . link:task_upgrade_element_latest_healthtools.html[(Optional) Upgrade to the latest HealthTools].
 +
@@ -56,4 +58,4 @@ NOTE: Upgrading the management node operating system is no longer required to up
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

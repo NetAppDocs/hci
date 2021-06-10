@@ -32,11 +32,13 @@ entries:
             url: /concept_hci_volume_access_groups.html
           - title: Initiators
             url: /concept_hci_initiators.html
+          - title: Custom protection domains
+            url: /concept_hcc_custom_protection_domains.html
           # url: /concept_hci_storage.html
       - title: Licensing
         url: /concept_cg_hci_licensing.html
-      #- title: NetApp Hybrid Cloud Control configuration maximums
-      #  url: /reference_hcc_config_maximums.html
+      - title: NetApp Hybrid Cloud Control configuration maximums
+        url: /reference_hcc_config_maximums.html
       - title: Security
         url: /concept_cg_hci_security.html
       - title: Performance
@@ -45,6 +47,8 @@ entries:
     entries:
      - title: Requirements for NetApp HCI deployment
        url: /hci_prereqs_overview.html
+     - title: Management node requirements
+       url: /hci_prereqs_management_node.html
      - title: Network port requirements
        url: /hci_prereqs_required_network_ports.html
      - title: Network and switch requirements
@@ -98,6 +102,8 @@ entries:
            url: /task_nde_access_manual_ip.html
      - title: Start your deployment
        url: /task_nde_start_deployment.html
+     - title: Import an installation profile
+       url: /task_nde_import_installation_profile.html
      - title: Configure VMware vSphere
        entries:
          - title: vSphere configuration overview
@@ -136,28 +142,20 @@ entries:
            url: /task_nde_access_ui_fqdn.html
          - title: Access NetApp Hybrid Cloud Control
            url: /task_nde_access_hcc.html
+         - title: Reduce boot media wear on a NetApp HCI compute node
+           url: /task_reduce_boot_media_wear.html
   - title: Manage NetApp HCI
     entries:
-      - title: Update your credentials
+      - title: Manage NetApp HCI overview
+        url: /task_hci_manage_overview.html
+      - title: Change credentials in NetApp HCI
+        url: /task_post_deploy_credentials.html
+      - title: Update vCenter and ESXi credentials
+        url: /task_hci_credentials_vcenter_esxi.html
+      - title: Manage NetApp HCI storage
         entries:
-          - title: Update vCenter and ESXi credentials
-            url: /task_hci_credentials_vcenter_esxi.html
-      - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
-        entries:
-          - title: View resources on the Dashboard of NetApp Hybrid Cloud Control
-            url: /task_hcc_dashboard.html
-          - title: View your inventory on the Nodes page of NetApp Hybrid Cloud Control
-            url: /task_hcc_nodes.html
-          - title: Edit BMC connection information with NetApp Hybrid Cloud Control
-            url: /task_hcc_edit_bmc_info.html
-          - title: Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
-            url: /task_hcc_volumes.html
-          - title: Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
-            url: /task_hcc_activeiq.html
-          - title: Collect logs for troubleshooting
-            url: /task_hcc_collectlogs.html
-      - title: Manage NetApp HCI storage with NetApp Hybrid Cloud Control
-        entries:
+          - title: Manage NetApp HCI storage overview
+            url: /task_hcc_manage_storage_overview.html
           - title: Create and manage user accounts
             url: /task_hcc_manage_accounts.html
           - title: Add and manage storage clusters
@@ -239,15 +237,29 @@ entries:
             url: /task_nde_hci_power_on_storage.html
           - title: Power on compute resources for a NetApp HCI system
             url: /task_nde_hci_power_on_compute.html
+  - title: Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
+    entries:
+      - title: View resources on the Dashboard of NetApp Hybrid Cloud Control
+        url: /task_hcc_dashboard.html
+      - title: View your inventory on the Nodes page of NetApp Hybrid Cloud Control
+        url: /task_hcc_nodes.html
+      - title: Edit BMC connection information with NetApp Hybrid Cloud Control
+        url: /task_hcc_edit_bmc_info.html
+      - title: Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
+        url: /task_hcc_volumes.html
+      - title: Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
+        url: /task_hcc_activeiq.html
+      - title: Collect logs for troubleshooting
+        url: /task_hcc_collectlogs.html
   - title: Upgrade your NetApp HCI or SolidFire system
     entries:
       - title: Upgrades overview
         url: /concept_hci_upgrade_overview.html
       - title: Upgrade sequences
         entries:
-          - title: Upgrade your NetApp HCI system for version 1.8
+          - title: Upgrade your NetApp HCI system for version 1.9
             url: /task_hcc_upgrade_all.html
-          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.2
+          - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.3
             url: /task_sf_upgrade_all.html
       - title: System upgrade procedures
         entries:
@@ -271,6 +283,8 @@ entries:
             url: /task_hcc_upgrade_compute_node_drivers.html
           - title: Upgrade compute node firmware
             url: /task_hcc_upgrade_compute_node_firmware.html
+          - title: Automate compute node firmware upgrades with Ansible
+            url: /task_hcc_upgrade_compute_firmware_ansible.html
       - title: vSphere upgrade sequences with vCenter Plug-in
         entries:
           - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
@@ -349,5 +363,7 @@ entries:
        url: /task_hci_snswitches.html
      - title: Replace storage node in a two-node cluster
        url: /task_hci_2noderepl.html
+  - title: Earlier versions
+    url: /reference_earlier_versions.html
   - title: Legal notices
     url: /reference_notices_hci.html

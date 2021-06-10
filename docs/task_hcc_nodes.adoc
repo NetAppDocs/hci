@@ -16,7 +16,7 @@ keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute
 [.lead]
 You can view both your storage and compute assets in your system and determine their IP addresses, names, and software versions.
 
-You can view storage information for your multiple node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters.
+You can view storage information for your multiple node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters. If link:concept_hcc_custom_protection_domains.html[custom protection domains^] are assigned, you can see which protection domains are assigned to specific nodes.
 Witness Nodes manage quorum within the cluster; they are not used for storage. Witness Nodes are applicable only to NetApp HCI and not to all-flash storage environments.
 
 For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes definitions].
@@ -57,4 +57,4 @@ TIP: To view the number of storage and compute resources, look at the NetApp Hyb
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

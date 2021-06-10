@@ -14,7 +14,7 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 :imagesdir: ../media/
 
 [.lead]
-For any H-Series compute node, you can update the drivers used on the nodes using VMware Update Manager.
+For any H-series compute node, you can update the drivers used on the nodes using VMware Update Manager.
 
 .What you'll need
 
@@ -24,17 +24,19 @@ See the firmware and driver matrix for your hardware in https://kb.netapp.com/Ad
 
 Perform only one of these update operations at a time.
 
+You should check the current ESXi driver version before you attempt compute firmware upgrades. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware for your compute nodes.
+
 .Steps
 
 . Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
-. Select *Compute_Firmware_Bundle* from the drop-down list.
+. Select *ESXI_drivers* from the drop-down list.
 . Accept the End User License Agreement.
-. Under the *Driver Packages for VMWare ESXi* heading, download the driver package for your node type and ESXi version.
+. Download the driver package for your node type and ESXi version.
 . Extract the downloaded driver bundle on your local computer.
 +
 NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; do not extract these ZIP files.
 
-. After upgrading the firmware on the compute nodes, go to *VMware Update Manager* in VMware vCenter.
+. Go to *VMware Update Manager* in VMware vCenter.
 . Import the driver offline bundle file for the compute nodes into the *Patch Repository*.
 . Create a new host baseline for the compute node.
 . Choose *Host Extension* for Name and Type and select all imported driver packages to be included in the new baseline.
@@ -52,4 +54,4 @@ The drivers for all compute nodes in the cluster are updated one node at a time 
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

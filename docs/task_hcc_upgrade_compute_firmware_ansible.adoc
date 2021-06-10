@@ -1,0 +1,39 @@
+---
+sidebar: docs_sidebar
+permalink: docs/task_hcc_upgrade_compute_firmware_ansible.html
+summary: For H-series compute nodes, NetApp provides an Ansible role that helps you automate firmware updgrade for hardware components such as the BMC, BIOS, and NIC.
+keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role
+---
+
+= Automate compute node firmware upgrades with Ansible
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can update system firmware on NetApp HCI compute nodes, including firmware for components such as the BMC, BIOS, and NIC using workflows in NetApp Hybrid Cloud Control. For installations with large compute clusters, you can automate the workflows by using Ansible to perform a rolling upgrade of the entire cluster.
+
+NOTE: While the Ansible role to automate compute node firmware upgrades is made available by NetApp, the automation is an auxiliary component that requires additional set up and software components to run. Modification of the Ansible automation is supported only on a best effort basis.
+
+NOTE: The Ansible role for upgrades works only on NetApp HCI H-series compute nodes. You cannot use this role to upgrade third-party compute nodes.
+
+.What you'll need
+
+* *Readiness and prerequisites for firmware upgrades*: Your NetApp HCI installation must be ready for firmware upgrade as outlined in the instructions for link:task_hcc_upgrade_compute_node_firmware.html[performing firmware upgrades^].
+* *Readiness to run automation on Ansible control node*: A physical or virtual server to run firmware update automation in Ansible.
+
+.About this task
+
+In a production environment, you should update compute nodes in a cluster in a NetApp HCI installation in a rolling fashion; one node after the other, one node at a time. APIs in NetApp Hybrid Cloud Control orchestrate the overall compute node firmware upgrade process for a single compute node, including running health checks, placing ESXi on the compute nodes into maintenance, and rebooting the compute node to apply the firmware upgrades. The Ansible role provides the option to orchestrate the firmware upgrade for a group of compute nodes or entire clusters.
+
+.Get started with firmware upgrade automation
+
+To get started, navigate to the https://github.com/NetApp-Automation/nar_compute_firmware_upgrade[NetApp Ansible repository on GitHub^] and download the `nar_compute_nodes_firmware_upgrades` role and documentation.
+
+[discrete]
+== Find more information
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

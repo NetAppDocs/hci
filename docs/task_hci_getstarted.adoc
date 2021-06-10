@@ -57,6 +57,9 @@ This mode requires vSphere Distributed Switches (vDS), which require VMware vSph
 
 
 === Networking requirements before you begin
+Here are highlights of prerequisites.
+
+For prerequisites details, see link:hci_prereqs_overview.html[Requirements for NetApp HCI deployment overview].
 
 * Bond1G is a logical interface that combines 1GbE network ports on storage nodes and a management interface on compute nodes.  This network is used for NDE API traffic.  All nodes must be able to communicate over the management interface in the same L2 network.
 * Bond10G is a logical interface that combines 10/25GbE ports and are used by NDE for beaconing and inventory.  All nodes must be able to communicate over the Bond10G interface with non-fragmented jumbo frames.
@@ -210,9 +213,9 @@ The NetApp Hybrid Cloud Control interface appears.
 
 [discrete]
 == Find more information
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 * link:../media/hseries-isi.pdf[NetApp HCI Installation and Setup Instructions^]
 * https://www.netapp.com/us/media/tr-4820.pdf[TR-4820: NetApp HCI Networking Quick Planning Guide^]
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server Guide^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server documentation^]
 * https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
 * https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]

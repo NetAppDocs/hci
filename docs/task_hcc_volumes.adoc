@@ -62,18 +62,13 @@ See information about link:concept_hci_volume_access_groups.html[volume access g
 See information about link:concept_cg_hci_accounts.html[NetApp HCI user accounts].
 
 .. *Initiators*: You can see the iSCSI initiator IQN or Fibre Channel WWPNs for the volume. Each IQN added to an access group can access each volume in the group without requiring CHAP authentication. Each WWPN added to an access group enables Fibre Channel network access to the volumes in the access group.
-+
-See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EBCB1031-1B2D-472C-92E3-E0CB52B4156C.html[access groups, initiators, and CHAP authentication methods] in the _NetApp Element User Guide_.
 
 .. *QoS Policies*: You can see the QoS policy applied to the volume. A QoS policy applies standardized settings for minimum IOPS, maximum IOPS, and burst IOPS to multiple volumes.
 +
 See information about link:concept_hci_performance#qos-performance.html[performance and QoS policies].
-+
-See information about https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-C90C0C1C-AE38-46FA-A854-BB425B55BEF4.html[Quality of Service policies] in the _NetApp Element User Guide_.
-
 
 [discrete]
 == Find more information
-* https://docs.netapp.com/sfe-122/index.jsp[NetApp SolidFire and Element Documentation Center^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

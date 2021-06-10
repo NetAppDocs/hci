@@ -71,7 +71,7 @@ Look at the vertical lines to determine whether your used capacity is less than 
 +
 NOTE: You can set the threshold for Warning, which defaults to 3% below the Error threshold. The Error and Critical thresholds are preset and not configurable by design. The Error threshold indicates that less than one node of capacity remains in the cluster. For steps on setting the threshold, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-C238E415-E83C-4F1F-92D4-E0534B601FCA.html[Setting cluster full threshold].
 +
-TIP: For details about the related cluster thresholds Element API, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-9B1D06D7-8FEE-4A52-B3C2-33F03D8540FB.html[“getClusterFullThreshold”] in the _Element API Guide_. To view details about block and metadata capacity, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-58E03E89-C183-4E23-B9B4-8D466210E8B4.html[Understanding cluster fullness levels] in the _Element User Guide_.
+TIP: For details about the related cluster thresholds Element API, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-9B1D06D7-8FEE-4A52-B3C2-33F03D8540FB.html[“getClusterFullThreshold”] in the _Element software API documentation_. To view details about block and metadata capacity, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-58E03E89-C183-4E23-B9B4-8D466210E8B4.html[Understanding cluster fullness levels] in the _Element software documentation_.
 
 .	Click the *EFFECTIVE* tab, to see information about total storage provisioned to connected hosts and to see efficiency ratings.
 
@@ -95,7 +95,7 @@ The Storage Performance pane helps you identify whether the performance is reach
 
 The information on this pane refreshes every 10 seconds and shows an average of all the points on the graph.
 
-For details about the associated Element API method, see the http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-63BEAEDE-74F7-421E-9360-08F166A603F4.html[GetClusterStats] method in the _Element API Reference Guide_.
+For details about the associated Element API method, see the http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-63BEAEDE-74F7-421E-9360-08F166A603F4.html[GetClusterStats] method in the _Element software API documentation_.
 
 .Steps
 
@@ -134,4 +134,4 @@ image::hcc_dashboard_compute_util_cpu.png[Compute Utilization panes]
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

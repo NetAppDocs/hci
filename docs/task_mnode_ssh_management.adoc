@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, ssh, disable, enable, rest api
 :imagesdir: ../media/
 
 [.lead]
-You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
+You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later.
 
 .What you'll need
 * *Cluster administrator permissions*: You have permissions as administrator on the storage cluster.
@@ -29,7 +29,7 @@ You can do any of the following tasks after you link:task_mnode_api_get_authoriz
 * <<Determine status of the SSH capability on the management node>>
 
 == Disable or enable the SSH capability on the management node
-You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default. Disabling SSH does not terminate or disconnect existing SSH client sessions to the management node. If you disable SSH and elect to re-enable it at a later time, you can do so using the same API.
+You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later. Disabling SSH does not terminate or disconnect existing SSH client sessions to the management node. If you disable SSH and elect to re-enable it at a later time, you can do so using the same API.
 
 .API command
 ----
@@ -51,11 +51,11 @@ https://<managementNodeIP>/mnode/
 .. Close the window.
 . From the REST API UI, select *PUT /settings​/ssh*.
 .. Click *Try it out*.
-.. Set the *enabled* parameter to `false` to disable SSH or `true` to re-enable SSH capability that you previously disabled.
+.. Set the *enabled* parameter to `false` to disable SSH or `true` to re-enable SSH capability that was previously disabled.
 .. Click *Execute*.
 
 == Determine status of the SSH capability on the management node
-You can determine whether or not SSH capability is enabled on the management node using a management node service API. SSH is enabled by default on the management node.
+You can determine whether or not SSH capability is enabled on the management node using a management node service API. SSH is disabled by default on management nodes running management services 2.18 or later.
 
 .API command
 ----
@@ -82,4 +82,4 @@ https://<managementNodeIP>/mnode/
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

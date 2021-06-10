@@ -43,7 +43,7 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade any of these component
 * Node OS security updates
 
 .What you'll need
-* A good internet connection. Dark site upgrades are not available.
+* A good internet connection. Dark site upgrades (upgrades at a site without external connectivity) are not available.
 
 .Steps
 
@@ -65,7 +65,7 @@ https://<ManagementNodeIP>
 +
 NOTE: For node OS, unattended upgrades for security patches are run on a daily basis but the node is not rebooted automatically. By applying upgrades, you are rebooting each node for the security updates to take effect.
 
-A banner appears indicating the component upgrade is successful. There could be up to a 15 minute delay before NetApp Hybrid Cloud Control UI shows the updated version number.
+A banner appears indicating the component upgrade is successful. There could be up to a 2 minute delay before NetApp Hybrid Cloud Control UI shows the updated version number.
 
 == Use NetApp Hybrid Cloud Control API to upgrade a Rancher deployment
 
@@ -246,4 +246,4 @@ The upgrade has finished successfully when the `PercentComplete` indicates `100`
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

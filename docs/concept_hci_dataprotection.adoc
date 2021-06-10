@@ -74,7 +74,7 @@ The relationship between the source volume in primary storage and the destinatio
 
 SnapMirror runs natively on the NetApp ONTAP controllers and is integrated into Element, which runs on NetApp HCI and SolidFire clusters. The logic to control SnapMirror resides in ONTAP software; therefore, all SnapMirror relationships must involve at least one ONTAP system to perform the coordination work. Users manage relationships between Element and ONTAP clusters primarily through the Element UI; however, some management tasks reside in NetApp ONTAP System Manager. Users can also manage SnapMirror through the CLI and API, which are both available in ONTAP and Element.
 
-See https://fieldportal.netapp.com/content/616239[TR-4651: NetApp SolidFire SnapMirror Architecture and Configuration^] (login required)
+See https://fieldportal.netapp.com/content/616239[TR-4651: NetApp SolidFire SnapMirror Architecture and Configuration^] (login required).
 
 You must manually enable SnapMirror functionality at the cluster level by using Element software. SnapMirror functionality is disabled by default, and it is not automatically enabled as part of a new installation or upgrade.
 
@@ -121,12 +121,11 @@ Two different protection domain layouts, called protection domain levels, are su
 ** The chassis level layout is automatically determined from the hardware when the node is added to the cluster.
 ** In a cluster where each node is in a separate chassis, these two levels are functionally identical.
 
-You can manually enable protection domain monitoring using the NetApp Element Configuration extension point in the NetApp Element Plug-in for vCenter Server. You can select a protection domain threshold based on node or chassis domains.
+You can manually https://docs.netapp.com/us-en/vcp/vcp_task_clusters_manage.html#set-protection-domain-monitoring[enable protection domain monitoring] using the NetApp Element Plug-in for vCenter Server. You can select a protection domain threshold based on node or chassis domains.
 
 When creating a new cluster, if you are using storage nodes that reside in a shared chassis, you might want to consider designing for chassis-level failure protection using the protection domains feature.
 
-You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain. For details, see
-https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-7D31AC22-8815-4BDA-984A-9AED750B96B1.html[SolidFire and Element 12.0 Documentation Center^].
+You can define a custom protection domain layout, where each node is associated with one and only one custom protection domain. By default, each node is assigned to the same default custom protection domain.
 
 == Double Helix high availability
 
@@ -135,5 +134,5 @@ Double Helix data protection is a replication method that spreads at least two r
 
 [discrete]
 == Find more information
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

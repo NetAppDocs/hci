@@ -2,7 +2,7 @@
 sidebar: docs_sidebar
 permalink: docs/task_hci_dimmcomputerepl.html
 summary: You can replace a faulty dual inline memory module (DIMM) in NetApp HCI compute nodes instead of replacing the entire node.
-keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S
+keywords: netapp, hci, dimm, compute nodes
 ---
 
 = Replace DIMMs in compute nodes
@@ -41,30 +41,20 @@ When issues with the DIMM occur, VMware ESXi displays alerts, such as `Memory Co
 
 .Steps
 
-. Access the node by logging in to vCenter Server.
-. Right-click the node that is reporting the error, and select the option to place the node in maintenance mode.
-. Migrate the virtual machines (VMs) to another available host.
+. Identify the slot that logged the error as follows:
+.. For H615C, do the following:
+... Log in to the BMC UI.
+... Select *Logs & Reports* > *IPMI Event Log*.
+... In the event log, find the memory error and identify the slot on which the error is logged.
 +
-NOTE: See the VMware documentation for the migration steps.
-
-. Power down the compute node.
+image::h615c_bmc_memoryerror.png[Shows the uncorrectable memory error in the BMC UI for H615C nodes, which indicates DIMM failure.]
+.. For H410C, do the following:
+... Log in to the BMC UI.
+... Select *Server Health* > *Health Event Log*.
+... In the event log, find the memory error and identify the slot on which the error is logged.
 +
-NOTE: If you have the information about which DIMM needs to be replaced and do not need to access the TUI, you can skip the following steps in this section.
-
-. Plug in a keyboard, video, and mouse (KVM) to the back of the node that reported the error.
-. Press the power button at the front of the node.
-It takes approximately six minutes for the node to boot. The screen displays a boot menu.
-. Use the keyboard to select *NetApp Safe Mode*.
-+
-IMPORTANT: You should do this in three seconds. If you miss the window, you should go through the boot process again.
-
-. In the TUI window that opens, navigate to *Maintenance Tasks > Check Hardware*, and select *OK*.
-A window opens with the results of the hardware check. If the check detects a DIMM issue, the results include a timestamp and a slot identifier. Here is a sample output from the hardware check:
-+
-image::dimm_hw_check.png[Shows a sample output from the hardware check.]
-. Record the CPU number and the DIMM slot number/ID.
-This will help you identify the failed DIMM in the chassis.
-. For H410C and H615C nodes, perform the steps to identify the DIMM manufacturer.
+image::dimm_h410c_bmc.png[Shows the memory error in the BMC UI for the H410C node.]
+. Perform the steps to identify the DIMM manufacturer part number.
 +
 IMPORTANT: H410C and H615C nodes include DIMMs from different manufacturers. You should not mix different DIMM types in the same chassis. You should identify the manufacturer of the faulty DIMM and order a replacement of the same type.
 +
@@ -114,11 +104,24 @@ a|
 . Press *Alt + F1* to enter shell, and log in to the node to run the command.
 
 |===
+. Contact NetApp Support for help with the next steps. NetApp Support requires the following information to process a part replacement:
+* Node serial number
+* Cluster name
+* System event log details from the BMC UI
+* Output from the `smbiosDump` command
 
 == Replace the DIMM from the chassis
 Before you physically remove and replace the faulty DIMM in the chassis, ensure that you have performed all the link:task_hci_dimmcomputerepl.html#prepare-to-replace-the-dimm[preparatory steps].
 
+IMPORTANT: DIMMs should be replaced in the same slots they were removed from.
+
 .Steps
+
+. Access the node by logging in to vCenter Server.
+. Right-click the node that is reporting the error, and select the option to place the node in maintenance mode.
+. Migrate the virtual machines (VMs) to another available host.
++
+NOTE: See the VMware documentation for the migration steps.
 
 . Power down the chassis or node.
 +

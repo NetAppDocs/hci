@@ -304,12 +304,10 @@ NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
 . Open a web browser and browse to the IP address of the management node.
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
-+
-See link:task_hcc_access.html[Access NetApp Hybrid Cloud Control].
 . Follow the steps in the wizard to add storage and/or compute nodes to your NetApp HCI installation.
 +
 TIP: To add H410C compute nodes, the existing installation must run NetApp HCI 1.4 or later. To add H615C compute nodes, the existing installation must run NetApp HCI 1.7 or later.
-
++
 NOTE: The newly installed NetApp HCI nodes on the same network will be discovered automatically.
 
 == Perform post-configuration tasks
@@ -335,7 +333,7 @@ If your H615C node has GPUs in it, install GPU drivers in ESXi for each H615C no
 
 [discrete]
 == Find more information
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
 * https://mysupport.netapp.com/site/tools[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool

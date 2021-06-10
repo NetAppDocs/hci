@@ -24,7 +24,7 @@ NOTE: The replacement node should have the same version of NetApp HCI Bootstrap 
 To order a replacement node, you should contact NetApp Support. The compute node is shipped to you with the Bootstrap OS installed.
 Nodes are shipped from the factory with the latest version of Bootstrap OS. You might need to perform the return to factory image (RTFI) process on the node in the following scenarios:
 ** Your current NetApp HCI installation is running a version of Bootstrap OS earlier than the latest version. In this case, the RTFI process will downgrade the new node to the OS version that your NetApp HCI installation is running.
-** In case the node shipped from the factory is running an OS version earlier than the latest version, and your existing NetApp HCI installation is already running the latest version. In this case, the RTFI process will upgrade the OS version on the new node to the latest version.
+** The replacement node that is shipped is running a bootstrap OS version earlier than the latest version, and the NetApp HCI installation where the node is being replaced is already running the latest version. In this case, the RTFI process will upgrade the OS version on the new node to the latest version.
 See link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/HCI_-_How_to_RTFI_using_a_USB_key[How to RTFI using a USB key (login required)^] and link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_RTFI_an_HCI_Compute_Node_via_BMC[How to RTFI by using the BMC (login required)^].
 * You have an electrostatic discharge (ESD) wristband, or you have taken other antistatic precautions.
 * You have labeled each cable that is connected to the compute node.
@@ -109,13 +109,16 @@ NOTE: Support the node with both your hands when you pull it out of the chassis.
 
 . Place the node on a level surface.
 You should package the node and return it to NetApp.
-. If you removed DIMMs from the failed node earlier, insert them into the replacement node.
-. Align the replacement node with the slot in the chassis into which you are installing the node.
+. Install the replacement node.
 . Push the node in until you hear a click.
 +
 CAUTION: Ensure that you do not use excessive force when sliding the node into the chassis.
 +
 NOTE: Ensure that the node powers on. If it does not power on automatically, push the power button at the front of the node.
+
+. If you removed DIMMs from the failed node earlier, insert them into the replacement node.
++
+NOTE: You should replace DIMMs in the same slots they were removed from in the failed node.
 
 . Reconnect the cables to the ports from which you originally disconnected them.
 The labels you had attached to the cables when you disconnected them help guide you.
@@ -480,6 +483,8 @@ You should redeploy Witness Nodes in the following scenarios:
 The VM is configured using the template that is created as part of initial deployment using the NetApp Deployment Engine. Here is an example of what a Witness Node VM looks like:
 +
 image::vm-template.png[Shows a screenshot of the Witness Node VM template.]
+
+NOTE: If you deleted the VM template, you should contact NetApp Support to get the Witness Node .ova image and redeploy it. You can download the template from link:https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/WN_12.0/downloads[here (login required)^]. However, you should engage Support for guidance with setting it up.
 
 .Steps
 . In the VMware vSphere Web Client, select *Hosts and Clusters*.

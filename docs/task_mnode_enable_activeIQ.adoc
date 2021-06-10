@@ -21,7 +21,7 @@ The Active IQ collector service forwards configuration data and Element software
 .Before you begin
 * Your storage cluster is running NetApp Element software 11.3 or later.
 * You have deployed a management node running version 11.3 or later.
-* You have internet access. The Active IQ collector service cannot be used from dark sites.
+* You have internet access. The Active IQ collector service cannot be used from dark sites that do not have external connectivity.
 
 .Steps
 . Get the base asset ID for the installation:
@@ -109,4 +109,4 @@ NOTE: `ip` is the vCenter IP address.
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -37,5 +37,5 @@ NOTE: When the NetApp HCI installation process installs Witness Nodes, a virtual
 
 [discrete]
 == Find more information
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

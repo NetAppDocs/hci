@@ -21,7 +21,7 @@ Learn basic concepts related to Rancher on NetApp HCI.
 
 * *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
-* *User clusters*: These downstream Kubernetes clusters run your apps and services. In Kubernetes installations of Rancher, the management cluster should be separate from the user clusters. Any cluster that a Rancher user deploys from Rancher, or imports into Rancher, would be considered a user cluster.
+* *User clusters*: These downstream Kubernetes clusters run your apps and services. In Kubernetes installations of Rancher, the management cluster should be separate from the user clusters. Any cluster that a Rancher user deploys from Rancher, or imports into Rancher, is considered a user cluster.
 
 * *Rancher node template*: Hybrid Cloud Control uses a Rancher node template to make deployment simpler.
 

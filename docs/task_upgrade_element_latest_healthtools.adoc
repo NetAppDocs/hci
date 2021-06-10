@@ -14,8 +14,9 @@ keywords: netapp, HealthTools upgrade, sfupdate-healthtools, element
 :imagesdir: ../media/
 
 [.lead]
-Before you begin the Element storage upgrade, you should upgrade your HealthTools suite. Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for performing Element upgrades using NetApp Hybrid Cloud Control.
+Before you begin an Element storage upgrade from 11.1 or earlier, you should upgrade your HealthTools suite. Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for link:task_hcc_upgrade_element_software.html[performing Element upgrades using NetApp Hybrid Cloud Control].
 
+IMPORTANT: Element software 12.3 is the final version that you can upgrade to using NetApp HealthTools. If you are running Element software 11.3 or later, you should use NetApp Hybrid Cloud Control to upgrade Element software. You can upgrade Element versions 11.1 or earlier using NetApp HealthTools.
 
 .What you'll need
 
@@ -71,4 +72,4 @@ Currently installed version of HealthTools:
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/documentation/hci.aspx[NetApp HCI Resources Page^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

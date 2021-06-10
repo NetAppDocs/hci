@@ -130,4 +130,4 @@ You can delete a QoS policy if it is no longer needed. When you delete a QoS pol
 [discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]

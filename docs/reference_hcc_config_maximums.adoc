@@ -1,0 +1,26 @@
+---
+sidebar: docs_sidebar
+permalink: docs/reference_hcc_config_maximums.html
+summary: NetApp Hybrid Cloud Control has specific capabilities, and NetApp recommends operating within them.
+keywords: netapp, hci, HCC, configuration, capabilities, limits, maximums
+---
+
+= NetApp Hybrid Cloud Control configuration maximums
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+
+NetApp HCI includes NetApp Hybrid Cloud Control to simplify compute lifecycle and storage management. It supports Element Software upgrades on storage nodes for NetApp HCI and NetApp SolidFire storage clusters, as well as firmware upgrades for NetApp HCI compute nodes in NetApp HCI. It is available by default on the management nodes in NetApp HCI.
+
+In addition to communicating the NetApp-provided hardware and software components in a NetApp HCI installation, NetApp Hybrid Cloud Control interacts with third-party components in the customer environment, like VMware vCenter. NetApp qualifies the functionality of NetApp Hybrid Cloud Control and its interaction with these third-party components in the customer environment up to a certain scale.  For optimal experience with NetApp Hybrid Cloud Control, NetApp recommends staying within the range of configuration maximums.
+
+If you exceed these tested maximums, you might experience issues with NetApp Hybrid Cloud Control, such as a slower user interface and API responses or functionality being unavailable. If you engage NetApp for product support with NetApp Hybrid Cloud Control in environments that are configured beyond the configuration maximums, NetApp Support will ask that you change the configuration to be within the documented configuration maximums.
+
+.Configuration maximums
+
+NetApp Hybrid Cloud Control supports VMware vSphere environments with up to 500 NetApp compute nodes. It supports up to 20 NetApp Element Software based storage clusters.
