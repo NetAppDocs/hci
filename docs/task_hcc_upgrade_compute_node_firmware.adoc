@@ -70,7 +70,7 @@ In production environments, upgrade the firmware on one compute node at a time.
 
 For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process if you have the DRS feature and required licensing. The node will be rebooted and after the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
 
-NOTE: Before upgrading, make sure you check the current ESXi driver version. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware for your compute nodes. 
+NOTE: Before upgrading, make sure you check the current ESXi driver version. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware for your compute nodes.
 
 .Upgrade options
 
@@ -129,7 +129,7 @@ CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated 
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
 
-CAUTION: While upgrading the firmware on H610C compute nodes, do not open the Serial-Over-LAN (SOL) console through the BMC web UI. This might cause the upgrade to fail.
+CAUTION: While upgrading the firmware on H610C and H615S compute nodes, do not open the Serial-Over-LAN (SOL) console through the BMC web UI. This might cause the upgrade to fail.
 
 The UI displays a message after the upgrade is complete. You can download logs after the upgrade is complete.
 
