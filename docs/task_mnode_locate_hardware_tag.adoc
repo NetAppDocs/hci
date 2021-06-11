@@ -5,7 +5,7 @@ summary: You can add compute and controller assets to the management node config
 keywords: netapp, mnode, management node, rest api, hci
 ---
 
-= How to locate a hardware tag for compute node
+= How to locate a hardware tag for a compute node
 
 :hardbreaks:
 :nofooter:
@@ -14,30 +14,25 @@ keywords: netapp, mnode, management node, rest api, hci
 :imagesdir: ../media/
 
 [.lead]
-You require the hardware tag when you need add, edit, or delete compute node assets in HCI UI.
+You require the hardware tag to add your compute node assets to the management node configuration using the REST API UI.
 
-This section shows you how to locate the hardware tag for your compute node in vSphere.
-
-.What you'll need
-
-.About this task
+This section shows you how to locate the hardware tag for your compute node.
 
 .Steps
 . Select the host in the vSphere Web Client navigator.
 . Select the *Monitor* tab, and select *Hardware Health*.
 +
-Depending on your version of vSphere, the hardware tag can be listed in one of two possible locations.
+. Depending on the version of vSphere that you are running, you can locate the hardware tag in one of the following locations on the *Hardware Health* screen.
 
-** You might find the hardware tag listed in the in the *Hardware Health* screen with the BIOS manufacturer and model number.
+** Check if the tag is listed with the BIOS manufacturer and model number.
 +
 image:../media/hw_tag_67.PNG[Hardware Health]
-** Select *Configure* and from the sidebar, select *Hardware* and *Overview*. You might find the hardware tag is listed in the `System` table.
++
+** Select the *Configure* tab. From the sidebar, select *Hardware* and *Overview*. Check if the hardware tag is listed in the `System` table.
 +
 image:../media/hw_tag_70.PNG[Hardware Health]
++
 . Copy and save the value for `Tag`.
-
-[discrete]
-== Find more information
-
+. To add your compute node asset to the management node, go to xref:task_mnode_add_assets.adoc[Add an asset to the management node].
 
 // Doc-3482 06/09/2021
