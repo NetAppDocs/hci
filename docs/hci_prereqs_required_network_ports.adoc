@@ -274,6 +274,11 @@ All ports in the table are TCP unless stated otherwise.
 |Intercluster communication for remote replication
 
 |Storage node SIP
+|Storage node SIP
+|3260
+|Internode iSCSI
+
+|Storage node SIP
 |Remote storage node SIP
 |4000 through 4020
 |Remote replication node-to-node data transfer
