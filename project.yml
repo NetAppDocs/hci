@@ -434,7 +434,7 @@ homepage:
           url: https://mysupport.netapp.com/site/products/all/details/netapp-hci/guideme-tab
     - title: Earlier versions
       links:
-        - title: NetApp HCI version 1.8 documentation
+        - title: NetApp HCI 1.8 documentation
           url: https://docs.netapp.com/us-en/hci18/index.html
         - title: NetApp HCI Documentation Center
           url: https://docs.netapp.com/hci/index.jsp
