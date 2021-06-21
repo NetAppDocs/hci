@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_ip_address.html
 summary: Learn about NetApp HCI IP address requirements.
 keywords: netapp, hci, IP address, requirements

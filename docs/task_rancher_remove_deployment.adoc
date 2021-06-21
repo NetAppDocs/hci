@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_remove_deployment.html
 summary: Learn how to remove a Rancher installation on NetApp HCI deployment so that you can redeploy.
 keywords: netapp, hci, api, REST, remove, Rancher, redeploy

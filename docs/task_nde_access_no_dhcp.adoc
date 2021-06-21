@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_access_no_dhcp.html
 summary: Learn how to access the NetApp Deployment Engine in environments without DHCP.
 keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access

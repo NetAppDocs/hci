@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_access_ui_fqdn.html
 summary: Learn how to configure your system for FQDN access to the web UIs.
 keywords: netapp, hci, fqdn, ui, access, web, administration

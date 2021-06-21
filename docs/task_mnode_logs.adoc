@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_logs.html
 summary: You can retrieve logs from the services running on the management ndoe using the REST API.
 keywords: netapp, element, management node, management services, mnode, logs

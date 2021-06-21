@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_deploy.html
 summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
 keywords: netapp, hci, rancher, deploy, cluster, kubernetes

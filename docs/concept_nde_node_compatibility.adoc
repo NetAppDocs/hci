@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_nde_node_compatibility.html
 summary: Learn about NetApp HCI node compatibility requirements for deployment.
 keywords: netapp, hci, deployment, compatibility, nodes

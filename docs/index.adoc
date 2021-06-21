@@ -1,8 +1,9 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/index.html
 summary: NetApp HCI provides both storage and compute resources, combining them to build a VMware vSphere environment backed by the capabilities of NetApp Element software.
 keywords: netapp, hci, on premise, hybrid cloud control, hcc, kubernetes
+redirect: hci/index.html
 ---
 
 = NetApp HCI configuration and management documentation

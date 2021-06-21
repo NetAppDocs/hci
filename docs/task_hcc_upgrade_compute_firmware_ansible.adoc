@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_upgrade_compute_firmware_ansible.html
 summary: For H-series compute nodes, NetApp provides an Ansible role that helps you automate firmware updgrade for hardware components such as the BMC, BIOS, and NIC.
 keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role
