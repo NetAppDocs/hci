@@ -372,23 +372,69 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: Learn about HCI
-          summary: Get an overview of HCI before you get started.
+        - title: Product overview
           url: /docs/concept_hci_product_overview.html
-        - title: Quick start
-          summary: Get started with NetApp HCI
-          url: /docs/task_hci_getstarted.html
-    - title: "What's New"
-      links:
-        - title: NetApp HCI
-          summary: "What's new in NetApp HCI"
+        - title: Release notes
+          url: docs/rn_relatedrn.html
+        - title: What's new
           url: /docs/rn_whatsnew.html
-        - title: NetApp Element software
-          summary: "What's new in NetApp Element software"
-          url: https://docs.netapp.com/us-en/element-software/concepts/concept_rn_whats_new_element.html
-        - title: Management services
-          summary: Management services for Element software and NetApp HCI
-          url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
-        - title: "NetApp Element Plug-in for vCenter Server"
-          summary: "What's new in NetApp Element Plug-in for vCenter Server"
-          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569
+    - title: Install & maintain hardware
+      links:
+        - title: H-series hardware installation
+          url: /docs/task_hci_installhw.html
+        - title: H-series hardware maintenance
+          url: docs/task_hci_hwmainoverview.html
+    - title: Install NetApp HCI
+      links:
+        - title: Installation and deployment overview
+          url: /docs/task_hci_getstarted.html
+        - title: Start your deployment with the NetApp Deployment Engine
+          url: /docs/concept_nde_access_overview.html
+        - title: Perform post-deployment tasks
+          url: /docs/concept_nde_post_deployment_overview.html
+    - title: Use NetApp HCI
+      links:
+        - title: Manage using NetApp Hybrid Cloud Control
+          url: /docs/task_nde_access_hcc.html
+        - title: Work with the management node
+          url: /docs/task_mnode_work_overview.html
+        - title: Use NetApp Element Plug-in for vCenter Server
+          url: https://docs.netapp.com/us-en/vcp/index.html
+        - title: Use Rancher
+          url: /docs/concept_rancher_product_overview.html
+        - title: Expand NetApp HCI
+          url: /docs/concept_hcc_expandoverview.html
+        - title: Upgrade NetApp HCI
+          url: /docs/concept_hci_upgrade_overview.html
+    - title: Troubleshoot
+      links:
+        - title: Troubleshoot NetApp HCI and Rancher
+          url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_HCI_and_Rancher_troubleshooting
+        - title: Reset BMC on compute nodes
+          url: https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_reset_BMC_on_NetApp_HCI_compute_nodes
+        - title: More knowledgebase articles
+          url: https://kb.netapp.com/Special:Search?query=netapp+hci&type=wiki
+    - title: Solutions
+      links:
+        - title: NetApp HCI Resources page
+          url: https://www.netapp.com/hybrid-cloud/hci-documentation/
+        - title: NetApp Solutions
+          url: https://docs.netapp.com/us-en/netapp-solutions/index.html
+    - title: Demos & tutorials
+      links:
+        - title: NetApp HCI video library
+          url: https://tv.netapp.com/category/videos/netapp-hci
+        - title: NetApp Learning Services
+          url: https://www.netapp.com/support-and-training/netapp-university/
+    - title: Blogs & community
+      links:
+        - title: NetApp community
+          url: https://community.netapp.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&q=hci
+        - title: Where to get help
+          url: https://mysupport.netapp.com/site/products/all/details/netapp-hci/guideme-tab
+    - title: Earlier versions
+      links:
+        - title: NetApp HCI version 1.8 documentation
+          url: https://docs.netapp.com/us-en/hci18/index.html
+        - title: NetApp HCI Documentation Center
+          url: https://docs.netapp.com/hci/index.jsp
