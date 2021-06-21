@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_dashboard.html
 summary: You can view storage and compute resources on the NetApp Hybrid Cloud Control Dashboard. Additionally, you can monitor storage capacity, storage performance, and compute utilization.
 keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, storage performance, utilization, capacity

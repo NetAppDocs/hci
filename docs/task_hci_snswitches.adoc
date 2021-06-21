@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_snswitches.html
 summary: You can replace a faulty SN2000 series switch non-disruptively by following the best practices and steps provided by NetApp.
 keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_overview.html
 summary: Learn about NetApp HCI deployment requirements.
 keywords: netapp, hci, deployment, requirements

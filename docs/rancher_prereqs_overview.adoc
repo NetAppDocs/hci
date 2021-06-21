@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/rancher_prereqs_overview.html
 summary: Learn about the requirements for a successful Rancher on NetApp HCI installation.
 keywords: netapp, hci, Rancher, install, installation, requirements

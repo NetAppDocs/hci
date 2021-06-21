@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_access_ui.html
 summary: You can access the management UI or the REST API UI.
 keywords: netapp, mnode, management node, api, hci

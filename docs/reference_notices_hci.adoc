@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/reference_notices_hci.html
 keywords: copyrights, notice, trademarks, patents, privacy, open source
 summary: Legal notices provide access to copyright statements, trademarks, patents, and more.

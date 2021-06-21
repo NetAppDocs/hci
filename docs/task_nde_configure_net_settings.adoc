@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_configure_net_settings.html
 summary: Learn how to configure NetApp HCI deployment network settings.
 keywords: netapp, hci, deployment, compatibility, nodes

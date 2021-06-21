@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_configure_new_vsphere.html
 summary: Learn how to configure VMware vSphere during NetApp HCI deployment.
 keywords: netapp, hci, netapp deployment engine, deployment, vsphere

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_install_add_storage_NIC.html
 summary: If you are using an additional NIC for storage, you should set up an untagged or tagged network interface.
 keywords: netapp, element, management node, mnode, network, nic, storage nic

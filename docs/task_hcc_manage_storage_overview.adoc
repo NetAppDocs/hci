@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_manage_storage_overview.html
 summary: With NetApp HCI, you can manage storage assets by using the NetApp Hybrid Cloud Control.
 keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc

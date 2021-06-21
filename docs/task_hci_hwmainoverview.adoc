@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_hwmainoverview.html
 summary: You can perform hardware maintenance tasks, such as replace your nodes, replace the drives in storage nodes, replace power supply units, and so on.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes

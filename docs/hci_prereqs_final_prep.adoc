@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_final_prep.html
 summary: Learn about final preparations and configuration you need to complete before deploying NetApp HCI.
 keywords: netapp, hci, final preparations, requirements

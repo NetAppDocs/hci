@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_manage.html
 summary: Learn about how you can manage Rancher on NetApp HCI.
 keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, monitor, user cluster, workload

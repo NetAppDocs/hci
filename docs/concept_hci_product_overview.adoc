@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_hci_product_overview.html
 summary:
 keywords: netapp, hci, on premise, cloud,
