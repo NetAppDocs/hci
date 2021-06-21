@@ -383,7 +383,7 @@ homepage:
         - title: H-series hardware installation
           url: /docs/task_hci_installhw.html
         - title: H-series hardware maintenance
-          url: docs/task_hci_hwmainoverview.html
+          url: /docs/task_hci_hwmainoverview.html
     - title: Install NetApp HCI
       links:
         - title: Installation and deployment overview
