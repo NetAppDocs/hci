@@ -375,7 +375,7 @@ homepage:
         - title: Product overview
           url: /docs/concept_hci_product_overview.html
         - title: Release notes
-          url: docs/rn_relatedrn.html
+          url: /docs/rn_relatedrn.html
         - title: What's new
           url: /docs/rn_whatsnew.html
     - title: Install & maintain hardware
