@@ -313,9 +313,9 @@ sidebar:
          url: /docs/rancher_prereqs_overview.html
        - title: Deploy Rancher on NetApp HCI
          url: /docs/task_rancher_deploy.html
-       - title: Post deployment tasks
+       - title: Post-deployment tasks
          entries:
-          - title: Post deployment tasks overview
+          - title: Post-deployment tasks overview
             url: /docs/concept_rancher_post_deployment_overview.html
           - title: Ensure Rancher Support parity
             url: /docs/task_rancher_ensure_rancher_support_parity.html
