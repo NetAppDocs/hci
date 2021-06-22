@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_psurepl.html
 summary: If a power supply unit is faulty, you should replace it as soon as possible to ensure that the chassis has a redundant power source.
 keywords: netapp, hci, psu, replace power supply, H410S, H610S, H410C, H610C, H615C

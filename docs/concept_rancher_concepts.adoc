@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_rancher_concepts.html
 summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
 keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes

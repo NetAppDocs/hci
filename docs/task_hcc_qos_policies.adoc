@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_qos_policies.html
 summary: You can set up and modify QoS policies to apply to volumes in your storage cluster.
 keywords: netapp, qos policy, quality of service, qos policies, volumes, element

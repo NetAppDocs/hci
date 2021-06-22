@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_witness_nodes.html
 summary: Learn about NetApp HCI Witness Node requirements.
 keywords: netapp, hci, element, Witness Node

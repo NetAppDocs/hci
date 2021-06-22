@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_run_system_utilities.html
 summary: You can create or delete cluster support bundles, reset node configuration settings, or restart networking.
 keywords: netapp, element, management node ui, mnode ui, system utilities

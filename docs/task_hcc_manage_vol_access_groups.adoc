@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_manage_vol_access_groups.html
 summary: Learn how to add new a volume access groups to work with NetApp HCI storage volumes, remove volume access groups from the system, edit existing volume access groups, and view details of volume access groups.
 keywords: netapp, hci, on premise, cluster, element

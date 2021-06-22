@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_manage_overview.html
 summary: You can manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
 keywords: netapp, hci, install, deploy, get started

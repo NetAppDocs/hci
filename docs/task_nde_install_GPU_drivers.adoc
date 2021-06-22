@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_install_GPU_drivers.html
 summary: Learn about how to install GPU drivers for GPU-enabled compute nodes after you deploy NetApp HCI.
 keywords: netapp, hci, deployment, review, GPU, install, driver, drivers

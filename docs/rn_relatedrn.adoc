@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/rn_relatedrn.html
 summary: Get links to release notes for products or components that are part of the NetApp HCI environment.
 keywords: netapp, hci, element, vcp, vcenter plugin, storage, management services, compute firmware
@@ -26,8 +26,11 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == NetApp Element software
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876498[NetApp Element Software 12.3 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2877210[NetApp Element Software 12.2.1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789[NetApp Element Software 12.2 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2877208[NetApp Element Software 12.0.1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022[NetApp Element Software 12.0 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2877206[NetApp Element Software 11.8.1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256[NetApp Element Software 11.8 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225[NetApp Element Software 11.7 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2863854[NetApp Element Software 11.5.1 Release Notes]

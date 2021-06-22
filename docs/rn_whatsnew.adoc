@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/rn_whatsnew.html
 summary: Learn what's new in this version of NetApp HCI.
 keywords: netapp, hci, element, new, whatsnew

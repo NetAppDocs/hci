@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_manage_initiators.html
 summary: Learn how to add create and manage initiators that enable communication between external clients and Element storage volumes.
 keywords: netapp, hci, initiator, storage, element, access group

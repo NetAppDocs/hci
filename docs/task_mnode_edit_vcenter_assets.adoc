@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_edit_vcenter_assets.html
 summary: You can edit vCenter management node controllers using the REST API UI.
 keywords: netapp, mnode, management node, rest api, hci

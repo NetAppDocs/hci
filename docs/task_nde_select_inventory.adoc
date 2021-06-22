@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_select_inventory.html
 summary: Learn how to select NetApp HCI node inventory during deployment.
 keywords: netapp, hci, deployment, compatibility, nodes

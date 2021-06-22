@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_task_validate_config_advisor.html
 summary: Learn how to validate your pre-deployment configuration using Active IQ Config Advisor.
 keywords: netapp, hci, element, configuration, validation
