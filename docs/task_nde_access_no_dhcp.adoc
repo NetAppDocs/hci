@@ -35,6 +35,10 @@ NOTE: You cannot reuse this IPv4 address later during deployment with the NetApp
 ----
 http://<Bond1G IP address>
 ----
++
+NOTE: Make sure to use the *http://* browser extension here.
++
+
 This takes you to the NetApp Deployment Engine user interface.
 
 [discrete]
