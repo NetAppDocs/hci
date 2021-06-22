@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_import_installation_profile.html
 summary: Learn how to import a NetApp HCI installation profile that will enable NetApp HCI to automatically fill in fields of the NetApp Deployment Engine wizard.
 keywords: netapp, hci, deployment, compatibility, nodes, installation, profile, import, settings, auto, fill

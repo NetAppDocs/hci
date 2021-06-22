@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_upgrade_compute_prechecks.html
 summary: As part of a NetApp HCI system upgrade, you need to run compute node health checks before performing firwamre upgrades.
 keywords: netapp, compute prechecks, compute node upgrade, netapp hci

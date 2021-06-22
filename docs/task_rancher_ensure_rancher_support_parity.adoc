@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_ensure_rancher_support_parity.html
 summary: Learn about ensuring that the licenses in use for Rancher match what you purchased.
 keywords: netapp, hci, Rancher, licensing

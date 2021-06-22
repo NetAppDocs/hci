@@ -14,8 +14,6 @@ jobs:
       - if [[ -z "$DEPLOY_BRANCH" ]]; then export DEPLOY_BRANCH=gh-pages; fi
       - cp -rl dependencies/jekyll/search.html ./docs/search.html
       - sed -i 's/permalink\:\s*\/search\.html/permalink\:\ docs\/search\.html/g' ./docs/search.html
-      - cp -rl dependencies/jekyll/search.html ./solutions/search.html
-      - sed -i 's/permalink\:\s*\/search\.html/permalink\:\ solutions\/search\.html/g' ./solutions/search.html
       - mv dependencies/jekyll/prod-build.sh ./ && ./prod-build.sh
       - sudo apt-get -y install graphicsmagick graphicsmagick-libmagick-dev-compat libmagickwand-dev
       script:
