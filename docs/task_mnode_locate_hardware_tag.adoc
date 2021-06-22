@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: docs/task_mnode_locate_hardware_tag.html
-summary: You can add compute and controller assets to the management node configuration using the REST API UI.
-keywords: netapp, mnode, management node, rest api, hci
+summary: You require the hardware tag to add your compute node assets to the management node configuration using the REST API UI.
+keywords: netapp, management node, rest api, hci, hardware tag
 ---
 
 = How to locate a hardware tag for a compute node
