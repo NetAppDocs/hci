@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_settings.html
 summary: You can modify and test the management node network, cluster, and system settings.
 keywords: netapp, management node ui, mnode ui, network settings, test network, cluster settings

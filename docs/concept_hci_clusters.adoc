@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_hci_clusters.html
 summary: A cluster is made up of a collection of storage nodes. A NetApp HCI storage cluster needs to have a minimum of two storage nodes. A cluster appears on the network as a single logical group and can then be accessed as block storage.
 keywords: netapp, hci, storage nodes, clusters, two-node cluster, three-node cluster, 2-node cluster, 3-node cluster

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_manage_vol_management.html
 summary: Learn how to create a volume and associate the volume with a given account.
 keywords: netapp, hci, cluster, element, volume

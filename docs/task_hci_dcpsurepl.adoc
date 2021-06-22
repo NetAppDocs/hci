@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_dcpsurepl.html
 summary: H615C and H610S nodes support two –48 V to –60 V DC power supply units. These units are available as optional add-ons when you order H615C or H610S nodes. You can use the same set of instructions to remove the AC power supply units in the chassis and replace them with DC power supply units, or to replace a faulty DC power supply unit with a new DC power supply unit.
 keywords: netapp, hci, psu, replace power supply, H610S, H615C, DC

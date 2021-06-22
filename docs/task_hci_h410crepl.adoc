@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_h410crepl.html
 summary: You should replace a compute node in the event of CPU failure, other motherboard issues, or if it does not power on. The instructions apply to H410C nodes. If you have a H410C compute node that runs NetApp HCI Bootstrap OS version 1.6P1 or later, you do not have to replace the node if the memory DIMM fails; you need replace only the failed DIMM. If the DIMMs in your node have not failed, you can use them in the replacement node.
 keywords: netapp, hci, H410C nodes, replacement, node replacement

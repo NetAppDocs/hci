@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_reduce_boot_media_wear.html
 summary: Learn how to Reduce boot media wear on a NetApp HCI compute node.
 keywords: netapp, hci, deployment, review, deploy, boot, drive, wear

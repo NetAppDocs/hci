@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_volumes.html
 summary: You can monitor volumes in your system by using the Hybrid Cloud Control Volumes page.
 keywords: netapp, hci, on premise, volumes, storage, access groups, initiators, capacity, data protection, QoS

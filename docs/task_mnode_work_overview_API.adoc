@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_work_overview_API.html
 summary: You can use the management node (mNode) API to upgrade system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable or disable NetApp Support SSH access for troubleshooting.
 keywords: netapp, mnode api, management node api, rest api

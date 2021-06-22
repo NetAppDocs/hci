@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_hci_storage.html
 summary: NetApp HCI is available in a range of configuration options for both compute and storage. From NetApp HCI 1.8 onwards, you can have a minimum starting configuration of two storage and two compute nodes. In earlier versions, the minimum configuration required was four storage nodes and two compute nodes.
 keywords: netapp, hci, storage nodes, volumes

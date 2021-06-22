@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_driverepl.html
 summary: If a drive fails or if the drive wear level falls below a threshold, you must replace it. You can hot-swap a failed drive.
 keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S

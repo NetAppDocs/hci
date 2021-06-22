@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_hci_storage_maintenance_mode.html
 summary: If you need to take a storage node offline for maintenance such as software upgrades or host repairs, you can minimize the I/O impact to the rest of the storage cluster by enabling maintenance mode for that node. You can use maintenance mode with both appliance nodes as well as SolidFire Enterprise SDS nodes.
 keywords: netapp, hci, storage nodes, maintenance, mode

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_start_deployment.html
 summary: Begin deploying NetApp HCI.
 keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access

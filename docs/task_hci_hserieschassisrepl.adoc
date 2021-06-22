@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_hserieschassisrepl.html
 summary: If your chassis has a fan failure or a power issue, you should replace it as soon as possible. The steps in the chassis replacement procedure depend on your NetApp HCI configuration and cluster capacity, which requires careful consideration and planning. You should contact NetApp Support for guidance and to order a replacement chassis.
 keywords: netapp, hci, chassis replacement,2U chassis replacement, h-series
