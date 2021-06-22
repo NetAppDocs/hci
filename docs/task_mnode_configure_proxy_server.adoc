@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_configure_proxy_server.html
 summary: You can add compute and controller assets to the management node configuration using the REST API UI.
 keywords: netapp, hci, mnode, api, management node, add proxy, proxy server

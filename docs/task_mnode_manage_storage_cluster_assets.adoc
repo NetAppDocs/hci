@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_manage_storage_cluster_assets.html
 summary: You can add, remove, and change management node storage cluster assets using the REST API UI.
 keywords: netapp, mnode, management node, rest api, hci, assets

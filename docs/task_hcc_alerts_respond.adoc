@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hcc_dashboard.html
 summary: You can respond to alerts on the Hybrid Cloud Control Dashboard.
 keywords: netapp, hci, hcc, on premise, alerts, warnings

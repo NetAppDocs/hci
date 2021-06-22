@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_required_network_ports.html
 summary: TCP and UDP ports used by NetApp HCI.
 keywords: netapp, hci, ports, tcp, udp

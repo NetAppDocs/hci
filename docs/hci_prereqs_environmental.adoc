@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_environmental.html
 summary: Learn about NetApp HCI environmental requirements.
 keywords: netapp, hci, environment, requirements

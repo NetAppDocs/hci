@@ -1,11 +1,11 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/rn_compute_firmware_2.76.10.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, compute firmware
 ---
 ////
-This file isn't included in the docs_sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
+This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
 = Compute Firmware Bundle 2.76.10 Release Notes
 :hardbreaks:

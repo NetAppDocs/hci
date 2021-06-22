@@ -1,11 +1,11 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_rancher_post_deployment_overview.html
 summary: Learn about tasks you might need to perform after installing Rancher on NetApp HCI.
 keywords: netapp, hci, Rancher, install, post installation, requirements, tasks
 ---
 
-= Post deployment tasks overview
+= Post-deployment tasks overview
 :hardbreaks:
 :nofooter:
 :icons: font

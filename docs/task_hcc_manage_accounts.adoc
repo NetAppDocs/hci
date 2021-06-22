@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_manage_accounts.html
 summary: Learn how to create a user account and associate it with a volume.
 keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc

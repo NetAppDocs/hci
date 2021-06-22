@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_network_configuration_option_C.html
 summary: Learn about NetApp HCI network configuration option C.
 keywords: netapp, hci, cabling, network configuration

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_enable_activeIQ.html
 summary: You can use the management node (mNode) to enable NetApp Active IQ and NetApp HCI telemetry.
 keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring
