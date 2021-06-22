@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_load_balancing.html
 summary: Learn about how to configure load balancing after installing Rancher on NetApp HCI.
 keywords: netapp, hci, Rancher, install, installation, load, balance

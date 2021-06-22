@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_getstarted.html
 summary: Use these instructions to install and deploy NetApp HCI.
 keywords: netapp, hci, install, deploy, get started

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_rancher_createcluster.html
 summary: After Rancher deployment, you can create Kubernetes user clusters using the Rancher UI.
 keywords: netapp, hci, rancher, kubernetes clusters, create cluster

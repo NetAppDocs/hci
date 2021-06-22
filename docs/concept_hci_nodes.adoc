@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/concept_hci_nodes.html
 summary: Nodes are the hardware that is grouped into a cluster to be accessed as block storage or compute resources.
 keywords: netapp, hci, storage nodes, volumes, compute nodes, witness nodes, management node

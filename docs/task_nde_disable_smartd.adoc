@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_disable_smartd.html
 summary: Learn how to disable the `smartd` service on compute nodes after you deploy NetApp HCI.
 keywords: netapp, hci, netapp deployment engine, deployment, vsphere, ESXi, compute, smartd, polling

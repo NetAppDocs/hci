@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_network_configuration.html
 summary: Learn about network configuration options for NetApp HCI.
 keywords: netapp, hci, cabling, network configuration

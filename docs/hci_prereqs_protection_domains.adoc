@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/hci_prereqs_protection_domains.html
 summary: Learn about the Protection Domains feature for NetApp HCI storge clusters.
 keywords: netapp, hci, element, storage, protection domains

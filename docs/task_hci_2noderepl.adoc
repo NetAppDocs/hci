@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_2noderepl.html
 summary: Before you replace a node that is part of a two-node cluster, you should first add a third storage node (which requires a new set of IP addresses), allow syncing to complete, and then remove your faulty node.
  four-node cluster. You requires an Additional MIP and SIP.

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_mnode_enable_alerts.html
 summary: You can configure settings to monitor alerts on your NetApp HCI system.
 keywords: netapp, element, management node, mnode, ui, alerts, alert monitoring

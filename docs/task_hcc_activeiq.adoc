@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_activeiq.html
 summary: You can monitor your cluster health with SolidFire Active IQ.
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance

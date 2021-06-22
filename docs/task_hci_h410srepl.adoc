@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_h410srepl.html
 summary: You should replace a storage node in the event of dual inline memory module (DIMM) failure, CPU failure, Radian card problems, other motherboard issues, or if it does not power on.
 keywords: netapp, hci, SSDs, drives, replace drives, H410S, H610S

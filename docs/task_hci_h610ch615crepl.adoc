@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hci_h610ch615crepl.html
 summary: You should replace a chassis to repair compute node failures related to the CPU, the motherboard, or if it does not power on. If you have a faulty DIMM in your H610C compute node that runs NetApp HCI Bootstrap OS version 1.6 or later, you can replace the DIMM and do not have to replace the chassis. For H615C nodes, you need not replace the chassis if a DIMM fails; you can replace only the failed DIMM.
 keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement

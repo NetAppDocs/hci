@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_nde_supported_net_changes.html
 summary: Learn about post-deployment tasks you should perform after deploying NetApp HCI.
 keywords: netapp, hci, deployment, review, deploy

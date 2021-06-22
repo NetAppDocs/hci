@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: docs/task_hcc_access.html
 summary: You can log in to NetApp Hybrid Cloud Control.
 keywords: netapp, hci, on premise, hybrid cloud control, hcc
