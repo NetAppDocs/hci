@@ -19,10 +19,10 @@ By creating and using volume access groups, you can control access to a set of v
 
 Volume access groups have the following limits:
 
-* A maximum of 64 IQNs or WWPNs are allowed in an access group.
+* A maximum of 128 initiators per volume access group.
+* A maximum of 64 access groups per volume.
 * An access group can be made up of a maximum of 2000 volumes.
-* An IQN or WWPN can belong to only one access group.
-* A single volume can belong to a maximum of four access groups.
+* An IQN or WWPN can belong to only one volume access group.
 
 == Find more information
 * link:task_hcc_manage_vol_access_groups.html[Manage volume access groups^]
