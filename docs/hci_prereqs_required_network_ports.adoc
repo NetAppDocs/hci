@@ -20,7 +20,7 @@ You might need to allow the following ports through your datacenter's edge firew
 
 [NOTE]
 ======================
-The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository, which uses JFrog Bintray as a distribution hub and Akamai Technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
+The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository, which uses JFrog Artifactory Cloud as a distribution hub and CDN technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
 
 .Steps
 
@@ -133,7 +133,11 @@ All ports in the table are TCP unless stated otherwise.
 |Storage cluster reporting to Active IQ
 
 |Management node
-|`repo.netapp.com/downloads`,  `repo.netapp.com/bintray/api/package`
+a|
+Online software repository:
+
+* `https://repo.netapp.com/bintray/api/package`
+* `https://netapp-downloads.bintray.com`
 |443
 |Management node service upgrades
 
