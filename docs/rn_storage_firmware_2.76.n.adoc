@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: docs/rn_storage_firmware_2.76n.html
+permalink: docs/rn_storage_firmware_2.76.n.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, storage firmware
 ---
