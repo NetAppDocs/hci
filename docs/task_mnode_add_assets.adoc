@@ -25,6 +25,8 @@ You might need to add an asset if you recently scaled your installation and new 
 .About this task
 (NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
 
+NOTE: When manually adding compute nodes, make sure that you also add the BMC assets otherwise an error is returned.
+
 .Steps
 . Get the base asset ID for the installation:
 .. Open the inventory service REST API UI on the management node:
