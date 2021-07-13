@@ -135,7 +135,7 @@ sidebar:
            - title: Disable the smartd service on NetApp HCI compute nodes
              url: /docs/task_nde_disable_smartd.html
            - title: Create a NetApp HCC role in vCenter
-             url: docs/task_mnode_create_netapp_hcc_role_vcenter.html
+             url: /docs/task_mnode_create_netapp_hcc_role_vcenter.html
            - title: Keep VMware vSphere up to date
              url: /docs/task_nde_update_vsphere.html
            - title: Install GPU drivers for GPU-enabled compute nodes
