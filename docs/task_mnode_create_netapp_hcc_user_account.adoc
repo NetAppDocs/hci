@@ -14,15 +14,15 @@ keywords:
 :imagesdir: ../media/
 
 [.lead]
-You should create a NetApp HCC role in vCenter before adding a vCenter asset (controllers) or a compute nodes (nodes) to a management node asset inventory. This NetApp HCC role limits your management node services view to NetApp only assets.
+You must create a NetApp HCC role in vCenter before adding vCenter assets (controllers) or compute nodes (nodes) to the management node. This NetApp HCC role limits your management node services view to NetApp only assets.
 
 .About this task
-To create a new NetApp HCC role, you first set up a HCC user account, create a NetApp HCC role in vCenter, and then assign the user permissions.
+To create a new NetApp HCC role, you first set up a new user account, create a NetApp HCC role in vCenter, and then assign the user permissions.
 
 For NetApp host clusters and NetApp ESXi host configurations, you might need to assign the user permissions in vCenter.
 
-== Set up a HCC user account
-You can setup a HCC user account in vCenter by using the following procedure.
+== Set up a new user account
+Perform the following steps to set up a new user account.
 
 .Steps
 .	Log into the vSphere Web Client as `\administrator@vsphere.local` or equivalent.
@@ -33,18 +33,18 @@ You can setup a HCC user account in vCenter by using the following procedure.
 .	Complete the *Add User* form.
 
 == Create a new NetApp HCC role in vCenter
-You can select the required permissions for the new NetApp HCC role in vCenter by using the following procedure.
+Perform the following steps to create a new NetApp HCC role in vCenter.
 
 .Steps
-. Select *Edit Role*.
+. Select *Edit Role*, and assign the required permissions.
 . In the left navigation pane, select *Goblal*.
 . Select *Diagnostics* and *Licenses*.
 . In the left navigation pane, select *Hosts*.
 . Select  *Maintenance*, *Power*, *Storage partition configuration*, and *Firmware*.
-. Save as the `NetApp HCC Role`.
+. Save as `NetApp HCC Role`.
 
-== Assign the user permissions to vCenter
-You can assign the user permissions to the new NetApp HCC role in vCenter by using the following procedure.
+== Assign user permissions to vCenter
+Perform the following steps to assign the user permissions to the new NetApp HCC role in vCenter.
 
 .Steps
 .	From the Menu, select *Hosts* and *Clusters*.
@@ -65,7 +65,7 @@ image::mnode_new_HCC_role_vcenter.PNG[depicts the Add permission window]
 NOTE: Do *NOT* select  *Propagate to children*.
 
 == Assign user permissions to a NetApp host cluster
-You can assign the user permissions to a NetApp host cluster in vCenter by using the following procedure.
+Perform the following steps to assign the user permissions to a NetApp host cluster in vCenter.
 
 .Steps
 . In the left navigation pane, select the NetApp host cluster.
@@ -83,7 +83,7 @@ Add the following details in the *Add permission* window:
 Use the new HCC user account that you created in <<Set up a HCC user account>> to add assets to the management node. See link:task_mnode_add_assets.html[Add compute and controller assets to the management node].
 
 == Add NetApp compute and hardware (BMC) assets
-You can add a NetApp compute or hardware (BMC) asset by using the `POST /assets/{asset_id}/controllers` described in this procedure.
+Perform the following steps to add a NetApp compute or hardware (BMC) asset by using `POST /assets/{asset_id}/controllers`.
 
 .Steps
 . Open the link:https://mnodeip/mnode[management node API UI^].
@@ -138,7 +138,7 @@ Add the following details in the *Add permission* window:
 +
 NOTE: Do *NOT* select *Propagate to children*.
 
-. In the left navigation pane, select a NetAapp ESXi host.
+. In the left navigation pane, select a NetApp ESXi host.
 . In the right navigation pane, select *Permissions*.
 . Select the *+* icon to add the new user.
 +
@@ -151,7 +151,7 @@ Add the following details in the *Add permission* window:
 . Repeat for remaining NetApp ESXi hosts in the host cluster.
 
 === Controller asset already exists on the management node
-If a controller asset already exists on the managment node, you can configure the controller by using the `PUT /assets /{asset_id} /controllers /{controller_id}` described in this procedure.
+If a controller asset already exists on the management node, perform the following steps to configure the controller by using `PUT /assets /{asset_id} /controllers /{controller_id}`.
 
 .Steps
 . Open the link:https://mnodeip/mnode[management node API UI^].
