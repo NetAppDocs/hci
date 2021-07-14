@@ -25,6 +25,8 @@ You might need to add an asset if you recently scaled your installation and new 
 .About this task
 (NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
 
+NOTE: When manually adding compute nodes, make sure that you also add the BMC assets otherwise an error is returned.
+
 .Steps
 . Get the base asset ID for the installation:
 .. Open the inventory service REST API UI on the management node:
@@ -61,10 +63,8 @@ NOTE: Your installation has a base asset configuration that was created during i
 .. Paste the installation asset ID into the *id* field.
 .. Click *Execute*.
 .. From the response, copy and save the cluster controller ID (`"controllerId"`) for use in a later step.
-. (For compute nodes only) Locate the hardware tag for your compute node in vSphere:
-.. Select the host in the vSphere Web Client navigator.
-.. Click the *Monitor* tab, and click *Hardware Health*.
-.. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
+. (For compute nodes only) To locate the hardware tag for your compute node in vSphere, go to xref:task_mnode_locate_hardware_tag.adoc[How to locate a hardware tag for compute node].
+
 . To add a compute node or controller sub-asset to an existing base asset, click one of the following.
 +
 [cols=2*,options="header",cols="40,60"]

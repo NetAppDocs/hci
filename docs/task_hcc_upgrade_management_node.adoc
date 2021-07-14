@@ -107,9 +107,7 @@ sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_u
 +
 The management node reboots with a new OS after the upgrade process completes.
 +
-NOTE: When running the `sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1` command, the SSH session is killed and console access is required for continued monitoring.
-If no console access is available to you when performing the upgrade, retry the SSH login and verify connectivity after 15 to 30 minutes.
-Once you login, the new OS version is confirmed in the SSH banner indicating that the upgrade was successful.
+NOTE: After you run the sudo command described in this step, the SSH session is killed. Console access is required for continued monitoring. If no console access is available to you when performing the upgrade, retry the SSH login and verify connectivity after 15 to 30 minutes. Once you log in, you can confirm the new OS version in the SSH banner that indicates that the upgrade was successful.
 +
 
 . On the management node, run the `redeploy-mnode` script to retain previous management services configuration settings:
