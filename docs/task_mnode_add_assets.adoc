@@ -5,7 +5,7 @@ summary: You can add compute and controller assets to the management node config
 keywords: netapp, mnode, management node, rest api, hci
 ---
 
-= Add an asset to the management node
+= Add compute and controller assets to the management node
 
 :hardbreaks:
 :nofooter:

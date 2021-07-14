@@ -33,7 +33,7 @@ You can setup a HCC user account in vCenter by using the following procedure.
 .	Complete the *Add User* form.
 
 == Create a new NetApp HCC role in vCenter
-You can select the required permissions for the new NetApp HCC role vCenter by using the following procedure.
+You can select the required permissions for the new NetApp HCC role in vCenter by using the following procedure.
 
 .Steps
 . Select *Edit Role*.
@@ -80,15 +80,13 @@ Add the following details in the *Add permission* window:
 .. Select *Propagate to children*.
 
 == Add an asset to the management node
-Use the new HCC user account that you created in <<Set up a HCC user account>> to add a controller asset to the management node. See link:task_mnode_add_assets.html[Add an asset to the management node].
+Use the new HCC user account that you created in <<Set up a HCC user account>> to add assets to the management node. See link:task_mnode_add_assets.html[Add compute and controller assets to the management node].
 
 == Add NetApp compute and hardware (BMC) assets
 You can add a NetApp compute or hardware (BMC) asset by using the `POST /assets/{asset_id}/controllers` described in this procedure.
 
 .Steps
-. Open the managment node API UI:
-+
-`https://mnodeip/mnode`
+. Open the link:https://mnodeip/mnode[management node API UI^].
 . Select *Authorize* and enter the credentials to access the API calls.
 . Select `GET /assets` to get the parent ID.
 . Select `POST /assets/{asset_id}/controllers` to add the controller.
@@ -148,18 +146,16 @@ Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
 .. Use the search to find the new user that you created in <<Set up a HCC user account>>.
-.. Select the `NetApp Role` or the `Administrator` role.
+.. Select `NetApp Role` or `Administrator`.
 .. Select *Propagate to children*.
 . Repeat for remaining NetApp ESXi hosts in the host cluster.
 
 === Controller asset already exists on the management node
-You can configure the controller by using the `PUT /assets /{asset_id} /controllers /{controller_id}` described in this procedure.
+If a controller asset already exists on the managment node, you can configure the controller by using the `PUT /assets /{asset_id} /controllers /{controller_id}` described in this procedure.
 
 .Steps
-. Open the managment node API UI:
-+
-`https://mnodeip/mnode`
-. Select *Authorize* and provide credentials to access the API calls.
+. Open the link:https://mnodeip/mnode[management node API UI^].
+. Select *Authorize* and enter the credentials to access the API calls.
 . Select `GET /assets` to get the parent ID.
 . Select `PUT /assets /{asset_id} /controllers /{controller_id}`.
 .. Enter the credentials created in account setup in the request body.
