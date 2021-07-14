@@ -37,7 +37,7 @@ Perform the following steps to create a new NetApp HCC role in vCenter.
 
 .Steps
 . Select *Edit Role*, and assign the required permissions.
-. In the left navigation pane, select *Goblal*.
+. In the left navigation pane, select *Global*.
 . Select *Diagnostics* and *Licenses*.
 . In the left navigation pane, select *Hosts*.
 . Select  *Maintenance*, *Power*, *Storage partition configuration*, and *Firmware*.
@@ -57,12 +57,12 @@ Perform the following steps to assign the user permissions to the new NetApp HCC
 Add the following details in the *Add permission* window:
 
 ..	Select `vsphere.local` or your LDAP domain
-..	Use the search to find the new user that you created in <<Set up a HCC user account>>.
+..	Use the search to find the new user that you created in <<Set up a new user account>>.
 ..	Select `NetApp HCC Role`.
 +
 image::mnode_new_HCC_role_vcenter.PNG[depicts the Add permission window]
 +
-NOTE: Do *NOT* select  *Propagate to children*.
+IMPORTANT: Do *NOT* select  *Propagate to children*.
 
 == Assign user permissions to a NetApp host cluster
 Perform the following steps to assign the user permissions to a NetApp host cluster in vCenter.
@@ -75,18 +75,20 @@ Perform the following steps to assign the user permissions to a NetApp host clus
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new HCC user that you created in <<Set up a HCC user account>>.
+.. Use the search to find the new HCC user that you created in <<Set up a new user account>>.
 .. Select `NetApp HCC Role` or `Administrator`.
 .. Select *Propagate to children*.
 
 == Add an asset to the management node
-Use the new HCC user account that you created in <<Set up a HCC user account>> to add assets to the management node. See link:task_mnode_add_assets.html[Add compute and controller assets to the management node].
+Use the new HCC user account that you created in <<Set up a new user account>> to add assets to the management node. See link:task_mnode_add_assets.html[Add compute and controller assets to the management node].
 
 == Add NetApp compute and hardware (BMC) assets
 Perform the following steps to add a NetApp compute or hardware (BMC) asset by using `POST /assets/{asset_id}/controllers`.
 
 .Steps
-. Open the link:https://mnodeip/mnode[management node API UI^].
+. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
++
+`https://[management node IP]/mnode`
 . Select *Authorize* and enter the credentials to access the API calls.
 . Select `GET /assets` to get the parent ID.
 . Select `POST /assets/{asset_id}/controllers` to add the controller.
@@ -118,7 +120,7 @@ If the NetApp ESXi host does not exist inside a vCenter host cluster, you can us
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new user that you created in <<Set up a HCC user account>>.
+.. Use the search to find the new user that you created in <<Set up a new user account>>.
 .. Select `NetApp HCC Role` or `Administrator`.
 . Select *Propagate to children*.
 
@@ -133,10 +135,10 @@ If a NetApp ESXi host exists in a vCenter host cluster with other vendor ESXi ho
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new user that you created in <<Set up a HCC user account>>.
+.. Use the search to find the new user that you created in <<Set up a new user account>>.
 .. Select `NetApp Role`.
 +
-NOTE: Do *NOT* select *Propagate to children*.
+IMPORTANT: Do *NOT* select *Propagate to children*.
 
 . In the left navigation pane, select a NetApp ESXi host.
 . In the right navigation pane, select *Permissions*.
@@ -145,7 +147,7 @@ NOTE: Do *NOT* select *Propagate to children*.
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new user that you created in <<Set up a HCC user account>>.
+.. Use the search to find the new user that you created in <<Set up a new user account>>.
 .. Select `NetApp Role` or `Administrator`.
 .. Select *Propagate to children*.
 . Repeat for remaining NetApp ESXi hosts in the host cluster.
@@ -154,7 +156,9 @@ Add the following details in the *Add permission* window:
 If a controller asset already exists on the management node, perform the following steps to configure the controller by using `PUT /assets /{asset_id} /controllers /{controller_id}`.
 
 .Steps
-. Open the link:https://mnodeip/mnode[management node API UI^].
+. Access the mnode service API UI on the management node:
++
+`https://[management node IP]/mnode`
 . Select *Authorize* and enter the credentials to access the API calls.
 . Select `GET /assets` to get the parent ID.
 . Select `PUT /assets /{asset_id} /controllers /{controller_id}`.
