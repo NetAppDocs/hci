@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: docs/task_mnode_create_netapp_hcc_role_vcenter.html
-summary:
-keywords:
+summary: You must create a NetApp HCC role in vCenter before adding vCenter assets or compute nodes to the management node.
+keywords: netapp, mnode, management node, vcenter, hci, role 
 ---
 
 = Create a NetApp HCC role in vCenter
