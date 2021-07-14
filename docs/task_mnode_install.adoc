@@ -249,7 +249,7 @@ https://[management node IP]/mnode
 [discrete]
 == Find more Information
 * link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
-* link:task_mnode_add_assets.html[Add an asset to the management node]
+* link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
 * link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
