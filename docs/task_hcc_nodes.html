@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>View your inventory on the Nodes page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="View your inventory on the Nodes page" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/hci/docs/task_hcc_nodes.html" />
+	<meta property="og:description" content="You can view both your storage and compute assets in your system by using the Hybrid Cloud Control Nodes page." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/hci/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="You can view both your storage and compute assets in your system by using the Hybrid Cloud Control Nodes page.">
+  <meta name="keywords" content=" netapp, hci, on premise, cluster, inventory, nodes, storage, compute">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/hci/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/hci/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/hci/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/hci/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/hci/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/hci/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/hci/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/hci/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/hci/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/hci/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/hci/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/hci/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/hci/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/us-en/hci/css/astra.css" type="text/css">
+  <link rel="stylesheet" href="/us-en/hci/css/tabbed-blocks.css" type="text/css">
+
+  
+
+  
+  <link rel='stylesheet' href='/us-en/hci/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/hci/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/hci/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/hci/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/hci/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/hci/js/na-utility.js'></script>
+  <script src='/us-en/hci/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/hci/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/hci/js/toc.js'></script>
+  <script src='/us-en/hci/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/hci/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/hci/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/hci/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="No results were found for {query}" data-did-you-mean="Search for {suggestion}." data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar"><!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">English</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <div class="n-language-selector-menu__header">
+            <span class="n-language-selector-menu__title">Select Your Language</span>
+          </div>
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/hci" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/hci" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li></ul>
+            </li>
+          </ul>
+          <div class="menu__footer">
+            <p>Current Language: English
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/hci/">HCI</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          View your inventory on the Nodes page
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
+      <span class="n-pdf-section-title">Site</span>
+    </div>
+    <li>
+      <a target="_blank" href="/us-en/hci/pdfs/fullsite-sidebar/NetApp_HCI_Documentation.pdf" >
+        <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+        NetApp HCI Documentation
+      </a>
+    </li>
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Release_Notes.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Release Notes
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Concepts.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Concepts
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Storage.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Requirements_and_pre_deployment_tasks.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Requirements and pre-deployment tasks
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Network_configuration.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Network configuration
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Get_started_with_NetApp_HCI.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Get started with NetApp HCI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Deploy_NetApp_HCI.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Deploy NetApp HCI
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Access_the_NetApp_Deployment_Engine.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Access the NetApp Deployment Engine
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Configure_VMware_vSphere.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Configure VMware vSphere
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Inventory_selection.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Inventory selection
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Post_deployment_tasks.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Post-deployment tasks
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Manage_NetApp_HCI.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Manage NetApp HCI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Manage_NetApp_HCI_storage.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Manage NetApp HCI storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Work_with_the_management_node.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Work with the management node
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Install_or_recover_a_management_node.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Install or recover a management node
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Work_with_the_management_node_UI.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Work with the management node UI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Work_with_the_management_node_REST_API.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Work with the management node REST API
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Manage_support_connections.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Manage support connections
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Power_your_NetApp_HCI_system_off_or_on.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Power your NetApp HCI system off or on
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Monitor_your_NetApp_HCI_system_with_NetApp_Hybrid_Cloud_Control.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
+          </a>
+        </li>
+        <span>
+          
+
+
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">This page</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/us-en/hci/pdfs/pages/docs/task_hcc_nodes.pdf" >
+    <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+    View your inventory on the Nodes page
+  </a>
+</li>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Upgrade_your_NetApp_HCI_or_SolidFire_system.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Upgrade your NetApp HCI or SolidFire system
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Upgrade_sequences.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Upgrade sequences
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/System_upgrade_procedures.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            System upgrade procedures
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/vSphere_upgrade_sequences_with_vCenter_Plug_in.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            vSphere upgrade sequences with vCenter Plug-in
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Expand_your_NetApp_HCI_system.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Expand your NetApp HCI system
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Use_Rancher_on_NetApp_HCI.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Use Rancher on NetApp HCI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Post_deployment_tasks.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Post-deployment tasks
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/hci/pdfs/sidebar/Maintain_H_series_hardware.pdf" >
+            <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>
+            Maintain H-series hardware
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/hci/index.html">
+        NetApp HCI Documentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/hci-solutions/index.html">
+        NetApp HCI Solutions
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Release Notes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/rn_whatsnew.html">
+        What's new in NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/rn_relatedrn.html">
+        Additional release information
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_product_overview.html">
+        Product overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_cg_hci_accounts.html">
+        Accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_dataprotection.html">
+        Data protection
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_clusters.html">
+        Clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_nodes.html">
+        Nodes
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_storage_maintenance_mode.html">
+        Maintenance mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_volumes.html">
+        Volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_volume_access_groups.html">
+        Volume access groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_initiators.html">
+        Initiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hcc_custom_protection_domains.html">
+        Custom protection domains
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_cg_hci_licensing.html">
+        Licensing
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/reference_hcc_config_maximums.html">
+        NetApp Hybrid Cloud Control configuration maximums
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_cg_hci_security.html">
+        Security
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_performance.html">
+        Performance
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Requirements and pre-deployment tasks</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_overview.html">
+        Requirements for NetApp HCI deployment
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_management_node.html">
+        Management node requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_required_network_ports.html">
+        Network port requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_network_switch.html">
+        Network and switch requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_network_cables.html">
+        Network cable requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_ip_address.html">
+        IP address requirements
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Network configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_network_configuration.html">
+        Network configuration options overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_network_configuration_option_A.html">
+        Network configuration option A
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_network_configuration_option_B.html">
+        Network configuration option B
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_network_configuration_option_C.html">
+        Network configuration option C
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_timekeeping.html">
+        DNS and timekeeping requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_environmental.html">
+        Environmental requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_protection_domains.html">
+        Protection Domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_witness_nodes.html">
+        Witness Node resource requirements for two-node storage clusters
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Get started with NetApp HCI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_getstarted.html">
+        NetApp HCI installation and deployment overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_installhw.html">
+        Install H-series hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_LACP_configuration.html">
+        Configure LACP for optimal storage performance
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_task_validate_config_advisor.html">
+        Validate your environment with Active IQ Config Advisor
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/hci_prereqs_final_prep.html">
+        Configure IPMI for each node
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deploy NetApp HCI</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Access the NetApp Deployment Engine</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_nde_access_overview.html">
+        NetApp Deployment Engine access options overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_access_no_dhcp.html">
+        Access the NetApp Deployment Engine in environments without DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_access_dhcp.html">
+        Access the NetApp Deployment Engine in environments with DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_access_manual_ip.html">
+        Manually assign IP addresses to access the NetApp Deployment Engine
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_start_deployment.html">
+        Start your deployment
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_import_installation_profile.html">
+        Import an installation profile
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure VMware vSphere</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_nde_config_vsphere_overview.html">
+        vSphere configuration overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_configure_new_vsphere.html">
+        Configure a new VMware vSphere environment
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_join_existing_vsphere.html">
+        Join an existing VMware vSphere deployment
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_configure_credentials.html">
+        Configure NetApp HCI credentials
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_select_net_topology.html">
+        Select a network topology
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Inventory selection</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_nde_node_compatibility.html">
+        Inventory selection and node compatibility
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_select_inventory.html">
+        Select inventory
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_configure_net_settings.html">
+        Configure network settings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_review_deploy.html">
+        Review and deploy
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Post-deployment tasks</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_nde_post_deployment_overview.html">
+        Post-deployment tasks overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_supported_net_changes.html">
+        Supported networking changes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_disable_smartd.html">
+        Disable the smartd service on NetApp HCI compute nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_update_vsphere.html">
+        Keep VMware vSphere up to date
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_install_GPU_drivers.html">
+        Install GPU drivers for GPU-enabled compute nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_access_ui_fqdn.html">
+        Configure Fully Qualified Domain Name web UI access
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_access_hcc.html">
+        Access NetApp Hybrid Cloud Control
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_reduce_boot_media_wear.html">
+        Reduce boot media wear on a NetApp HCI compute node
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage NetApp HCI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_manage_overview.html">
+        Manage NetApp HCI overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_post_deploy_credentials.html">
+        Change credentials in NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_credentials_vcenter_esxi.html">
+        Update vCenter and ESXi credentials
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage NetApp HCI storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_manage_storage_overview.html">
+        Manage NetApp HCI storage overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_manage_accounts.html">
+        Create and manage user accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_manage_storage_clusters.html">
+        Add and manage storage clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_manage_vol_management.html">
+        Create and manage volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_manage_vol_access_groups.html">
+        Create and manage volume access groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_manage_initiators.html">
+        Create and manage initiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_qos_policies.html">
+        Create and manage volume QoS policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Work with the management node</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_work_overview.html">
+        Management node overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install or recover a management node</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_install.html">
+        Install a management node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_install_add_storage_NIC.html">
+        Configure a storage Network Interface Controller (NIC)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_recover.html">
+        Recover a management node
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_access_ui.html">
+        Access the management node
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Work with the management node UI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_work_overview_UI.html">
+        Management node UI overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_enable_alerts.html">
+        Configure alert monitoring on NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_settings.html">
+        Modify and test the management node network, cluster, and system settings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_run_system_utilities.html">
+        Run system utilities from the management node
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Work with the management node REST API</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_work_overview_API.html">
+        Management node REST API UI overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_api_get_authorizationtouse.html">
+        Get authorization to use REST APIs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_enable_activeIQ.html">
+        Enable Active IQ and NetApp HCI monitoring
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_multi_vcenter_config.html">
+        Configure NetApp Hybrid Cloud Control for multiple vCenters
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_add_assets.html">
+        Add compute and controller assets to the management node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_locate_hardware_tag.html">
+        How to locate a hardware tag for compute node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_manage_storage_cluster_assets.html">
+        Create and manage storage cluster assets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_edit_vcenter_assets.html">
+        View or edit existing controller assets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_remove_assets.html">
+        Remove an asset from the management node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_configure_proxy_server.html">
+        Configure a proxy server for the management node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_api_find_mgmt_svcs_version.html">
+        Verify management node OS and services versions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_logs.html">
+        Getting logs from management services
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage support connections</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_enable_remote_support_connections.html">
+        Start a remote NetApp Support session
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_mnode_ssh_management.html">
+        Manage SSH functionality on the management node
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Power your NetApp HCI system off or on</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_nde_hci_power_off_on.html">
+        NetApp HCI power overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_hci_power_off_compute.html">
+        Power off compute resources for a NetApp HCI system
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_hci_power_off_storage.html">
+        Power off storage resources for a NetApp HCI system
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_hci_power_on_storage.html">
+        Power on storage resources for a NetApp HCI system
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_nde_hci_power_on_compute.html">
+        Power on compute resources for a NetApp HCI system
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Monitor your NetApp HCI system with NetApp Hybrid Cloud Control</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_dashboard.html">
+        View resources on the Dashboard of NetApp Hybrid Cloud Control
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_nodes.html">
+        View your inventory on the Nodes page of NetApp Hybrid Cloud Control
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_edit_bmc_info.html">
+        Edit BMC connection information with NetApp Hybrid Cloud Control
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_volumes.html">
+        Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_activeiq.html">
+        Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_collectlogs.html">
+        Collect logs for troubleshooting
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Upgrade your NetApp HCI or SolidFire system</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hci_upgrade_overview.html">
+        Upgrades overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Upgrade sequences</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_all.html">
+        Upgrade your NetApp HCI system for version 1.9
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_sf_upgrade_all.html">
+        Upgrade your NetApp SolidFire all-flash storage system for Element 12.3
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> System upgrade procedures</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_update_management_services.html">
+        Update management services
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_upgrade_element_latest_healthtools.html">
+        Upgrade to the latest HealthTools
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_element_prechecks.html">
+        Run Element storage health checks prior to upgrading storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_element_software.html">
+        Upgrade Element software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_storage_firmware.html">
+        Upgrade storage firmware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_management_node.html">
+        Upgrade a management node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_vcp_upgrade_plugin.html">
+        Upgrade the NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_upgrade_compute_prechecks.html">
+        Run compute node health checks prior to upgrading compute firmware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_compute_node_drivers.html">
+        Update compute node drivers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_compute_node_firmware.html">
+        Upgrade compute node firmware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_upgrade_compute_firmware_ansible.html">
+        Automate compute node firmware upgrades with Ansible
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> vSphere upgrade sequences with vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_upgrade_all_vsphere.html">
+        Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_sf_upgrade_all_vsphere.html">
+        Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Expand your NetApp HCI system</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_hcc_expandoverview.html">
+        Expand overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_expand_storage.html">
+        Expand NetApp HCI storage resources
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_expand_compute.html">
+        Expand NetApp HCI compute resources
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hcc_expand_compute_and_storage.html">
+        Expand NetApp storage and compute resources
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_removewn.html">
+        Remove Witness Nodes after expanding cluster
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Use Rancher on NetApp HCI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_rancher_product_overview.html">
+        Rancher on NetApp HCI overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_rancher_concepts.html">
+        Concepts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/rancher_prereqs_overview.html">
+        Requirements for Rancher on NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_deploy.html">
+        Deploy Rancher on NetApp HCI
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Post-deployment tasks</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/concept_rancher_post_deployment_overview.html">
+        Post-deployment tasks overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_ensure_rancher_support_parity.html">
+        Ensure Rancher Support parity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_config_anti_affinity.html">
+        Improve Rancher VM resiliency
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_enable_monitoring.html">
+        Configure monitoring
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_trident.html">
+        Install Trident
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_trident_configure_networking.html">
+        Enable Trident support for user clusters
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_deploy_user_clusters.html">
+        Deploy user clusters and applications
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_manage.html">
+        Manage Rancher on NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_monitor.html">
+        Monitor Rancher on NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_upgrades.html">
+        Upgrade Rancher on NetApp HCI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_rancher_remove_deployment.html">
+        Remove a Rancher installation on NetApp HCI
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Maintain H-series hardware</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_hwmainoverview.html">
+        H-series hardware maintenance overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_hserieschassisrepl.html">
+        Replace 2U H-series chassis
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_dcpsurepl.html">
+        Replace DC power supply units in H615C and H610S nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_dimmcomputerepl.html">
+        Replace DIMMs in compute nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_driverepl.html">
+        Replace drives for storage nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_h410crepl.html">
+        Replace H410C nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_h410srepl.html">
+        Replace H410S nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_h610ch615crepl.html">
+        Replace H610C and H615C nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_h610srepl.html">
+        Replace H610S nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_psurepl.html">
+        Replace power supply units
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_snswitches.html">
+        Replace SN2010, SN2100, and SN2700 switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/task_hci_2noderepl.html">
+        Replace storage node in a two-node cluster
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/reference_earlier_versions.html">
+        Earlier versions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/hci/docs/reference_notices_hci.html">
+        Legal notices
+      </a></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+
+
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">View your inventory on the Nodes page</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-07-01 19:57:32 +0000">07/01/2021</time>
+    
+  
+
+<span>Contributors
+  <a target="_blank" href="https://github.com/amgrissino">
+    <img  class="avatar avatar-small"
+          alt="amgrissino"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/36450105?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-dbagwell">
+    <img  class="avatar avatar-small"
+          alt="netapp-dbagwell"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53352450?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-amitha">
+    <img  class="avatar avatar-small"
+          alt="netapp-amitha"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/42010398?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/akseldavis">
+    <img  class="avatar avatar-small"
+          alt="akseldavis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/33839009?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+  <span>
+    <a target="_blank" href="/us-en/hci/pdfs/pages/docs/task_hcc_nodes.pdf" role="button">
+      <img src="/us-en/hci/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
+  </span>
+
+
+</p>
+
+
+<div class="paragraph lead">
+<p>You can view both your storage and compute assets in your system and determine their IP addresses, names, and software versions.</p>
+</div>
+<div class="paragraph">
+<p>You can view storage information for your multiple node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters. If <a href="concept_hcc_custom_protection_domains.html" target="_blank" rel="noopener">custom protection domains</a> are assigned, you can see which protection domains are assigned to specific nodes.<br>
+Witness Nodes manage quorum within the cluster; they are not used for storage. Witness Nodes are applicable only to NetApp HCI and not to all-flash storage environments.</p>
+</div>
+<div class="paragraph">
+<p>For more information about Witness Nodes, see <a href="concept_hci_nodes.html">Nodes definitions</a>.</p>
+</div>
+<div class="paragraph">
+<p>For SolidFire Enterprise SDS nodes, you can monitor inventory on the Storage tab.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Open a web browser and browse to the IP address of the management node. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>https://[management node IP address]</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.</p>
+<div class="paragraph">
+<p>The NetApp Hybrid Cloud Control Dashboard appears.</p>
+</div>
+</li>
+<li>
+<p>In the left navigation, click <strong>Nodes</strong>.</p>
+<div class="paragraph">
+<p>The Storage tab appears.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hcc_nodes_storage_2nodes.png" alt="Hybrid Cloud Control Nodes page image">
+</div>
+</div>
+</li>
+<li>
+<p>On the <strong>Storage</strong> tab of the Nodes page, review the following information:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Two-node clusters: A “two-node” label appears on the Storage tab and the associated Witness Nodes are listed.</p>
+</li>
+<li>
+<p>Three-node clusters: The storage nodes and associated Witness Nodes are listed. Three-node clusters have a Witness Node deployed on standby to maintain high availability in the case of node failure.</p>
+</li>
+<li>
+<p>Clusters with four nodes or more: Information for clusters with four or more nodes appears. Witness Nodes do not apply. If you started with two or three storage nodes and added more nodes, the Witness Nodes still appear. Otherwise, the Witness Nodes table does not appear.</p>
+</li>
+<li>
+<p>The firmware bundle version: Starting with management services version 2.14, if you have clusters running Element 12.0 or later, you can see the firmware bundle version for these clusters. If the nodes in a cluster have different firmware versions on them, you can see <strong>Multiple</strong> in the <strong>Firmware Bundle Version</strong> column.</p>
+</li>
+<li>
+<p>Custom protection domains: If custom protection domains are in use on the cluster, you can see custom protection domain assignments for each node in the cluster. If custom protection domains are not enabled, this column does not appear.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To view compute inventory information, click <strong>Compute</strong>.</p>
+</li>
+<li>
+<p>You can manipulate the information on these pages in several ways:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To filter the list of items in the results, click the <strong>Filter</strong> icon and select the filters. You can also enter text for the filter.</p>
+</li>
+<li>
+<p>To show or hide columns, click the <strong>Show/Hide Columns</strong> icon.</p>
+</li>
+<li>
+<p>To download the table, click the <strong>Download</strong> icon.</p>
+</li>
+<li>
+<p>To add or edit the stored BMC credentials for a compute node with BMC connection errors, click <strong>Edit connection settings</strong> in the error message text in the <strong>BMC Connection Status</strong> column. Only if the connection attempt fails for a compute node, an error message is displayed in this column for that node.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See <a href="task_hcc_dashboard.html">Monitor storage and compute resources with the HCC Dashboard</a>.
+</td>
+</tr>
+</table>
+</div>
+<h2 id="find-more-information" class="discrete">Find more information</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/vcp/index.html" target="_blank" rel="noopener">NetApp Element Plug-in for vCenter Server</a></p>
+</li>
+<li>
+<p><a href="https://www.netapp.com/hybrid-cloud/hci-documentation/" target="_blank" rel="noopener">NetApp HCI Resources Page</a></p>
+</li>
+</ul>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/hci/blob/main/docs/task_hcc_nodes.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/hci/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/hci/issues/new?body=Page%3A%20[View your inventory on the Nodes page](https://docs.netapp.com/us-en/hci/docs/task_hcc_nodes.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/hci/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/hci/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/hci/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/hci/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/hci/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/hci/js/www-ntap.js'></script>
+    <script src='/us-en/hci/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
