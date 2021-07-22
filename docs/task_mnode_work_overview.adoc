@@ -44,7 +44,7 @@ Perform tasks with the management node REST APIs:
 Disable or enable remote SSH functionality or start a remote support tunnel session with NetApp Support to help you troubleshoot:
 
 * link:task_mnode_enable_remote_support_connections.html[Enable remote NetApp Support connections]
-* link:task_mnode_ssh_management[Manage SSH functionality on the management node]
+* link:task_mnode_ssh_management.html[Manage SSH functionality on the management node]
 
 [discrete]
 == Find more information
