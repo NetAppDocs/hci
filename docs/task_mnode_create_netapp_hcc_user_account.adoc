@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_mnode_create_netapp_hcc_role_vcenter.html
 summary: You must create a NetApp HCC role in vCenter before adding vCenter assets or compute nodes to the management node.
-keywords: netapp, mnode, management node, vcenter, hci, role 
+keywords: netapp, mnode, management node, vcenter, hci, role
 ---
 
 = Create a NetApp HCC role in vCenter
@@ -14,14 +14,19 @@ keywords: netapp, mnode, management node, vcenter, hci, role
 :imagesdir: ../media/
 
 [.lead]
-You must create a NetApp HCC role in vCenter before adding vCenter assets (controllers) or compute nodes (nodes) to the management node. This NetApp HCC role limits your management node services view to NetApp only assets.
+You should create a NetApp HCC role in vCenter before you manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or modify existing controllers or nodes. This NetApp HCC role limits your management node services view to NetApp only assets.
 
 .About this task
-* To create a new NetApp HCC role, you first set up a new user account, create a NetApp HCC role in vCenter, and then assign the user permissions.
-* For NetApp host clusters and NetApp ESXi host configurations, you might need to assign the user permissions in vCenter.
+* To create a new NetApp HCC role, you first set up a new user account in vCenter, create a NetApp HCC role, and then assign the user permissions.
+* For NetApp ESXi host configurations, you might need to assign the user permissions in vCenter:
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-does-not-exist-inside-a-vCenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-exists-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host exists in a vCenter host cluster.
 
-== Set up a new user account
-Perform the following steps to set up a new user account.
+
+== Configuration name TBD
+
+=== Set up a new user account in vCenter
+Perform the following steps to set up a new user account in vCenter.
 
 .Steps
 .	Log into the vSphere Web Client as `\administrator@vsphere.local` or equivalent.
@@ -31,7 +36,7 @@ Perform the following steps to set up a new user account.
 .	Select *Add User*.
 .	Complete the *Add User* form.
 
-== Create a new NetApp HCC role in vCenter
+=== Create a new NetApp HCC role in vCenter
 Perform the following steps to create a new NetApp HCC role in vCenter.
 
 .Steps
@@ -42,7 +47,7 @@ Perform the following steps to create a new NetApp HCC role in vCenter.
 . Select  *Maintenance*, *Power*, *Storage partition configuration*, and *Firmware*.
 . Save as `NetApp Role`.
 
-== Assign user permissions to vCenter
+=== Assign user permissions to vCenter
 Perform the following steps to assign the user permissions to the new NetApp HCC role in vCenter.
 
 .Steps
@@ -56,14 +61,14 @@ Perform the following steps to assign the user permissions to the new NetApp HCC
 Add the following details in the *Add permission* window:
 
 ..	Select `vsphere.local` or your LDAP domain
-..	Use the search to find the new user that you created in <<Set up a new user account>>.
+..	Use the search to find the new user that you created in <<Set up a new user account in vCenter>>.
 ..	Select `NetApp Role`.
 +
 image::mnode_new_HCC_role_vcenter.PNG[depicts the Add permission window]
 +
 IMPORTANT: Do *NOT* select  *Propagate to children*.
 
-== Assign user permissions to a NetApp host cluster
+=== Assign user permissions to a NetApp host cluster
 Perform the following steps to assign the user permissions to a NetApp host cluster in vCenter.
 
 .Steps
@@ -74,35 +79,10 @@ Perform the following steps to assign the user permissions to a NetApp host clus
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new HCC user that you created in <<Set up a new user account>>.
+.. Use the search to find the new HCC user that you created in <<Set up a new user account in vCenter>>.
 .. Select `NetApp Role` or `Administrator`.
 .. Select *Propagate to children*.
 
-== Add an asset to the management node
-Use the new HCC user account that you created in <<Set up a new user account>> to add assets to the management node. See link:task_mnode_add_assets.html[Add compute and controller assets to the management node].
-
-== Add NetApp compute and hardware (BMC) assets
-Perform the following steps to add NetApp compute and hardware (BMC) assets to the management node by using `POST /assets/{asset_id}/controllers`.
-
-.Steps
-. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
-+
-`https://[management node IP]/mnode`
-. Select *Authorize* and enter the credentials to access the API calls.
-. Select `GET /assets` to get the parent ID.
-. Select `POST /assets/{asset_id}/controllers` to add the controller.
-.. Enter the credentials created in the account setup in the request body.
-+
-----
-{
- "config": {},
- "host_name": "YourvCenter",
- "ip": "YourvCenterIP",
- "password": "YourPassword",
- "type": "vCenter",
- "username": "netapp@vsphere.local"
-}
-----
 
 == Other configurations
 
@@ -119,7 +99,7 @@ If the NetApp ESXi host does not exist inside a vCenter host cluster, you can us
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new user that you created in <<Set up a new user account>>.
+.. Use the search to find the new user that you created in <<Set up a new user account in vCenter>>.
 .. Select `NetApp Role` or `Administrator`.
 . Select *Propagate to children*.
 
@@ -134,7 +114,7 @@ If a NetApp ESXi host exists in a vCenter host cluster with other vendor ESXi ho
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new user that you created in <<Set up a new user account>>.
+.. Use the search to find the new user that you created in <<Set up a new user account in vCenter>>.
 .. Select `NetApp Role`.
 +
 IMPORTANT: Do *NOT* select *Propagate to children*.
@@ -146,12 +126,18 @@ IMPORTANT: Do *NOT* select *Propagate to children*.
 Add the following details in the *Add permission* window:
 
 .. Select `vsphere.local` or your LDAP domain.
-.. Use the search to find the new user that you created in <<Set up a new user account>>.
+.. Use the search to find the new user that you created in <<Set up a new user account in vCenter>>.
 .. Select `NetApp Role` or `Administrator`.
 .. Select *Propagate to children*.
 . Repeat for remaining NetApp ESXi hosts in the host cluster.
 
-=== Controller asset already exists on the management node
+== Add an asset to the management node
+If you need to manually link:task_mnode_add_assets.html[add a new asset] post installation, use the new HCC user account that you created in <<Set up a new user account in vCenter>>.
+
+== Add a NetApp compute nodes and BMC assets
+If you need manually link:task_mnode_add_assets.html[add a compute node and BMC assets] post installation, use the new HCC user account that you created in <<Set up a new user account in vCenter>>.
+
+== Controller asset already exists on the management node
 If a controller asset already exists on the management node, perform the following steps to configure the controller by using `PUT /assets /{asset_id} /controllers /{controller_id}`.
 
 .Steps
