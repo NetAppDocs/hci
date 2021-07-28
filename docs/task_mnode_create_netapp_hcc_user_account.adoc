@@ -88,7 +88,7 @@ Add the following details in the *Add permission* window:
 .. Select *Propagate to children*.
 
 
-== Other configurations
+== NetApp ESXi host configurations
 
 === NetApp ESXi host does not exist in a vCenter host cluster
 If the NetApp ESXi host does not exist inside a vCenter host cluster, you can use the following procedure to assign the NetApp HCC role and user permissions in vCenter.
