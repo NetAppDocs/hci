@@ -14,16 +14,16 @@ keywords: netapp, mnode, management node, vcenter, hci, role
 :imagesdir: ../media/
 
 [.lead]
-You should create a NetApp HCC role in vCenter before you manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or modify existing controllers or nodes. This NetApp HCC role limits your management node services view to NetApp only assets.
+It is recommended that you create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes. This NetApp HCC role limits your management node services view to NetApp only assets.
 
 .About this task
 * To create a new NetApp HCC role, you first set up a new user account in vCenter, create a NetApp HCC role, and then assign the user permissions.
 * For NetApp ESXi host configurations, you might need to assign the user permissions in vCenter:
-** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-does-not-exist-inside-a-vCenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
-** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-exists-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host exists in a vCenter host cluster.
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-does-not-exist-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-exists-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host exists inside a vCenter host cluster.
 
 
-== Configuration name TBD
+== Create a new NetApp HCC role
 
 === Set up a new user account in vCenter
 Perform the following steps to set up a new user account in vCenter.
@@ -86,7 +86,7 @@ Add the following details in the *Add permission* window:
 
 == Other configurations
 
-=== NetApp ESXi host does not exist inside a vCenter host cluster
+=== NetApp ESXi host does not exist in a vCenter host cluster
 If the NetApp ESXi host does not exist inside a vCenter host cluster, you can use the following procedure to assign the NetApp HCC role and user permissions in vCenter.
 
 .Steps
