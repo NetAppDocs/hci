@@ -62,7 +62,7 @@ Prior to following this procedure, you should have an understanding of  link:con
 Element software: https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab
 NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab
 
-.. Click *Download Latest Release* and accept the EULA.
+.. Select *Download Latest Release* and accept the EULA.
 .. Select the management node image you want to download.
 . If you downloaded the OVA, follow these steps:
 .. Deploy the OVA.
@@ -203,20 +203,20 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 ----
 https://[management node IP]/inventory/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
-.. From the REST API UI, click *GET ​/installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
+... Select *Authorize* to begin a session.
+.. From the REST API UI, select *GET ​/installations*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the code 200 response body, copy and save the `id` for the installation for use in a later step.
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 
 . (NetApp HCI only) Locate the hardware tag for your compute node in vSphere:
 .. Select the host in the vSphere Web Client navigator.
-.. Click the *Monitor* tab, and click *Hardware Health*.
+.. Select the *Monitor* tab, and select *Hardware Health*.
 .. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 . Add a vCenter controller asset for NetApp HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
 .. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
@@ -225,25 +225,28 @@ Your installation has a base asset configuration that was created during install
 https://[management node IP]/mnode
 ----
 
-.. Click *Authorize* or any lock icon and complete the following:
+.. Select *Authorize* or any lock icon and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the window.
-.. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
-.. Click *Try it out*.
+.. Select *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
++
+NOTE: It is recommended that you create a new NetApp HCC role in vCenter to add a controller sub-asset. This new NetApp HCC role will limit the management node services view to NetApp only assets. See link:task_mnode_create_netapp_hcc_role_vcenter.html[Create a NetApp HCC role in vCenter].
+
+.. Select *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. Enter the required payload values with type `vCenter` and vCenter credentials.
-.. Click *Execute*.
+.. Select *Execute*.
 
 == (NetApp HCI only) Configure compute node assets
 
 . (For NetApp HCI only) Add a compute node asset to the management node known assets:
-.. Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
-.. Click *Try it out*.
+.. Select *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+.. Select *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and enter the hardware tag you saved during a previous step for `hardware_tag`.
-.. Click *Execute*.
+.. Select *Execute*.
 
 
 [discrete]
