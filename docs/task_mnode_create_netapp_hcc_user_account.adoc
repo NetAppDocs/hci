@@ -18,9 +18,9 @@ It is recommended that you create a NetApp HCC role in vCenter to manually add v
 
 .About this task
 * To create a new NetApp HCC role, you first set up a new user account in vCenter, create a NetApp HCC role, and then assign the user permissions.
-* For NetApp ESXi host configurations, you might need to assign the user permissions in vCenter:
-** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-does-not-exist-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
-** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#NetApp-ESXi-host-exists-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host exists inside a vCenter host cluster.
+* For NetApp ESXi host configurations, you might need to assign the user permissions in vcenter:
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#netapp-esxi-host-does-not-exist-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#netapp-esxi-host-exists-in-a-vcenter-host-cluster[this option] if your NetApp ESXi host exists inside a vCenter host cluster.
 
 
 == Create a new NetApp HCC role
@@ -104,7 +104,7 @@ Add the following details in the *Add permission* window:
 . Select *Propagate to children*.
 
 === NetApp ESXi host exists in a vCenter host cluster
-If a NetApp ESXi host exists in a vCenter host cluster with other vendor ESXi hosts, you can use the following procedure to assign the NetApp HCC role and user permissions in vCenter.
+If a NetApp ESXi host exists inside a vCenter host cluster with other vendor ESXi hosts, you can use the following procedure to assign the NetApp HCC role and user permissions in vCenter.
 
 . From the Menu, select *Hosts* and *Clusters*.
 . In the left navigation pane, expand the desired host cluster.
