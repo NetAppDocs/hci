@@ -14,13 +14,17 @@ keywords: netapp, mnode, management node, vcenter, hci, role
 :imagesdir: ../media/
 
 [.lead]
-It is recommended that you create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes. This NetApp HCC role limits your management node services view to NetApp only assets.
+It is recommended that you create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes.
+
+This NetApp HCC role limits your management node services view to NetApp only assets.
 
 .About this task
-* To create a new NetApp HCC role, you first set up a new user account in vCenter, create a NetApp HCC role, and then assign the user permissions.
-* For NetApp ESXi host configurations, you might need to assign the user permissions in vcenter:
+* To link:task_mnode_create_netapp_hcc_role_vcenter.html#create-a-new-netapp-hcc-role[create a new NetApp HCC role], you first set up a new user account in vCenter, create a NetApp HCC role, and then assign the user permissions.
+* For NetApp ESXi host configurations, you might need to assign the NetApp HCC role and user permissions in vCenter:
 ** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#netapp-esxi-host-does-not-exist-in-a-vCenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
-** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#netapp-esxi-host-exists-in-a-vcenter-host-cluster[this option] if your NetApp ESXi host exists inside a vCenter host cluster.
+** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#netapp-esxi-host-exists-in-a-vcenter-host-cluster[this option] if your NetApp ESXi host exists inside a vCenter host cluster
+* Use the new NetApp HCC role to add  link:task_mnode_create_netapp_hcc_role_vcenter.html#add-an-asset-to-the-management-node[an asset] or a link:task_mnode_create_netapp_hcc_role_vcenter.html#add-a-netapp-compute-node-and-bmc-assets[compute node] to the management node.
+* You can link:task_mnode_create_netapp_hcc_role_vcenter.html#controller-asset-already-exists-on-the-management-node[configure an asset] that already exists on the management node.
 
 
 == Create a new NetApp HCC role
@@ -134,7 +138,7 @@ Add the following details in the *Add permission* window:
 == Add an asset to the management node
 If you need to manually link:task_mnode_add_assets.html[add a new asset] post installation, use the new HCC user account that you created in <<Set up a new user account in vCenter>>.
 
-== Add a NetApp compute nodes and BMC assets
+== Add a NetApp compute node and BMC assets
 If you need manually link:task_mnode_add_assets.html[add a compute node and BMC assets] post installation, use the new HCC user account that you created in <<Set up a new user account in vCenter>>.
 
 == Controller asset already exists on the management node
