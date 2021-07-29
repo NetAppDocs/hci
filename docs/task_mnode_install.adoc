@@ -232,7 +232,7 @@ https://[management node IP]/mnode
 ... Close the window.
 .. Select *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
 +
-NOTE: It is recommended that you create a new NetApp HCC role in vCenter to add a controller sub-asset. This new NetApp HCC role will limit the management node services view to NetApp only assets. See link:task_mnode_create_netapp_hcc_role_vcenter.html[Create a NetApp HCC role in vCenter].
+NOTE: It is recommended that you create a new NetApp HCC role in vCenter to add a controller sub-asset. This new NetApp HCC role will limit the management node services view to NetApp-only assets. See link:task_mnode_create_netapp_hcc_role_vcenter.html[Create a NetApp HCC role in vCenter].
 
 .. Select *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
