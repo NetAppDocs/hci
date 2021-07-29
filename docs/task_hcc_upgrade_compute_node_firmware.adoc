@@ -91,6 +91,8 @@ TIP: For dark site upgrades, you can reduce upload time if the upgrade package a
 
 NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host.
 
+NOTE: In order to manage a compute node in HCC, you must add the compute node to a vCenter host cluster. 
+
 .What you'll need
 * If your management node is not connected to the internet, you have downloaded the compute node firmware package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
 +
