@@ -81,17 +81,18 @@ https://[management node IP]/mnode
 .. Select *Execute*.
 .. From the response, copy the `"id"` from the storage section of the cluster you intend to check for upgrade readiness.
 +
-NOTE: Do not use the `parent` value in this section because this is the mNode’s ID, not the storage cluster’s ID.
+NOTE: Do not use the `"parent"` value in this section because this is the mNode’s ID, not the storage cluster’s ID.
 +
+[subs=+quotes]
 ----
 "config": {},
 "credentialid": "12bbb2b2-f1be-123b-1234-12c3d4bc123e",
 "host_name": "SF_DEMO",
-*"id": "12cc3a45-e6e7-8d91-a2bb-0bdb3456b789"*,
+*"id": "12cc3a45-e6e7-8d91-a2bb-0bdb3456b789",*
 "ip": "10.123.12.12",
 "parent": "d123ec42-456e-8912-ad3e-4bd56f4a789a",
 "sshcredentialid": null,
-"ssl_certificate": null 
+"ssl_certificate": null
 ----
 
 . Run health checks on the storage cluster:
