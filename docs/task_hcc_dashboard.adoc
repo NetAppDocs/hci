@@ -54,7 +54,7 @@ Use the *Compute* pane to see your total NetApp H-series compute environment. Yo
 
 To see details, in the Compute panes, click *Show Details*.
 
-NOTE: In order to manage a compute node in HCC, you must add the compute node to a vCenter host cluster. The following example displays Node1 and Node2 in a host cluster. Node3 is outside the host cluster, it is displayed in the HCC nodes view but it cannot be managed.
+NOTE: In order to manage a compute node in HCC, you must add the compute node to a vCenter host cluster. In the following example, Node1 and Node2 are in the host cluster where as Node3 is outside the host cluster. In this scenario, Node3 is displayed in the HCC nodes view but it cannot be managed.
 
 image::hcc_monitor_compute_resources.png[Monitor compute resources]
 
