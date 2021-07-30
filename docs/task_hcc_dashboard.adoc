@@ -54,9 +54,7 @@ Use the *Compute* pane to see your total NetApp H-series compute environment. Yo
 
 To see details, in the Compute panes, click *Show Details*.
 
-NOTE: In order to manage a compute node in HCC, you must add the compute node to a vCenter host cluster. In the following example, Node1 and Node2 are in the host cluster where as Node3 is outside the host cluster. In this scenario, Node3 is displayed in the HCC nodes view but it cannot be managed.
-
-image::hcc_monitor_compute_resources.png[Monitor compute resources]
+NOTE: In order to manage a compute node in HCC, you must add the compute node to a vCenter host cluster. In the following example, Node1 and Node2 are in the host cluster where as Node3 is outside the host cluster. In this scenario, Node3 is displayed in the HCC nodes view but cannot be managed.
 
 == Monitor storage capacity
 Monitoring the storage capacity of your environment is critical. Using the Storage Capacity pane, you can determine your storage capacity efficiency gains with or without compression, deduplication, and thin provisioning features enabled.
