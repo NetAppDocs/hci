@@ -71,19 +71,13 @@ You can use REST API to verify that a storage cluster is ready to be upgraded. T
 ----
 https://[management node IP]/mnode
 ----
-.. From the REST API UI, select `GET /assets` to get your *storageID*.
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
 ... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, select *GET /installations*.
+.. From the REST API UI, select `GET /assets` to get your *storageID*.
 .. Select *Try it out*.
-.. Select *Execute*.
-.. From the response, copy the installation asset ID (`"id"`).
-.. From the REST API UI, select *GET /installations/{id}*.
-.. Select *Try it out*.
-.. Paste the installation asset ID into the *id* field.
 .. Select *Execute*.
 .. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
 . Run health checks on the storage cluster:
@@ -131,15 +125,20 @@ The response should indicate state as `initializing`:
 ----
 .. Copy the `healthCheckID` that is part of response.
 . Verify the results of the health checks:
-.. Select *GET ​/health-checks​/{healthCheckId}/log*.
+.. Select *GET ​/health-checks​/{healthCheckId}*.
 .. Select *Try it out*.
 .. Enter the health check ID in the parameter field.
 .. Select *Execute*.
 .. Scroll to the bottom of the response body.
 . If the `message` return indicates that there were problems regarding cluster health, do the following:
+.. Select *GET ​/health-checks​/{healthCheckId}/log* to list the KB articles.
+.. Select *Try it out*.
+.. Enter the health check ID in the parameter field.
+.. Select *Execute*.
+.. Scroll to the bottom of the response body.
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
-.. After you have resolved cluster issues, run *GET ​/health-checks​/{healthCheckId}/log* again.
+.. After you have resolved cluster issues, run *GET ​/health-checks​/{healthCheckId}* again.
 
 If all health checks are successful, the return is similar to the following example:
 ----
