@@ -131,7 +131,7 @@ The response should indicate state as `initializing`:
 .. Select *Execute*.
 .. Scroll to the bottom of the response body.
 . If the `message` return indicates that there were problems regarding cluster health, do the following:
-.. Select *GET ​/health-checks​/{healthCheckId}/log* to list the KB articles.
+.. Select *GET ​/health-checks​/{healthCheckId}/log* to list the KB articles for each issue.
 .. Select *Try it out*.
 .. Enter the health check ID in the parameter field.
 .. Select *Execute*.
