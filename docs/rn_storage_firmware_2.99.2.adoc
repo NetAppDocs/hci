@@ -168,7 +168,7 @@ a|
 |===
 
 == Resolved and known issues
-See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues. Test for merge.
+See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
 
 === Accessing the BOL tool
 . Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[BOL tool^] and select  *Element Software* from the drop-down list:
