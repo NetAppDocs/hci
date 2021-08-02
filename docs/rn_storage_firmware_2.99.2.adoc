@@ -158,9 +158,9 @@ This firmware package contains the following firmware versions for hardware comp
 //* Updated microcode version to MCU x6906
 | H610S BMC 3.91.07
 a|
-* Added BIOS PPR event log parsing in BMC SEL
-* Prevent system overheat when BMC hangs
-* Changed length of Group Domain of LDAP from 64 to 128 characters
+* Improve BMC flash wear utilization
+//* Prevent system overheat when BMC hangs
+//* Changed length of Group Domain of LDAP from 64 to 128 characters
 //|H410S/H610S NIC, Mellanox 14.25.1020
 //| N/A
 //|Various Drive Firmware Updates
