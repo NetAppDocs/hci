@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar
-permalink: docs/rn_storage_firmware_2.76.n.html
+permalink: docs/rn_storage_firmware_2.99.2.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, storage firmware
 ---
 ////
 This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Storage Firmware Bundle 2.76 Release Notes
+= Storage Firmware Bundle 2.99.2 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
-The storage firmware bundle version 2.76.? contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+The storage firmware bundle version 2.99.2 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
@@ -152,19 +152,19 @@ This firmware package contains the following firmware versions for hardware comp
 
 |===
 |Component |Improvement/Change
-|H610S BIOS 3B06
-a|
-* Improved handling of memory failures
-* Updated microcode version to MCU x6906
+//|H610S BIOS 3B06
+//a|
+//* Improved handling of memory failures
+//* Updated microcode version to MCU x6906
 | H610S BMC 3.91.07
 a|
 * Added BIOS PPR event log parsing in BMC SEL
 * Prevent system overheat when BMC hangs
 * Changed length of Group Domain of LDAP from 64 to 128 characters
-|H410S/H610S NIC, Mellanox 14.25.1020
-| N/A
-|Various Drive Firmware Updates
-| N/A
+//|H410S/H610S NIC, Mellanox 14.25.1020
+//| N/A
+//|Various Drive Firmware Updates
+//| N/A
 |===
 
 == Resolved and known issues
@@ -212,13 +212,11 @@ image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="cen
 == Resolved security vulnerabilities
 The following are security vulnerabilities that have been resolved in this release:
 
-*Do we have an updated list of resolved security vulnerabilities?*
+//=== H410S BMC 6.84.00
 
-=== H410S BMC 6.84.00
-
-* CVE-2020-0542, CVE-2020-0532, CVE-2020-0538, CVE-2020-0534, CVE-2020-0541, CVE-2020-0533, CVE-2020-0537, CVE-2020-0531
-* CVE-2020-0535, CVE-2020-0536, CVE-2020-0545, CVE-2020-0540, CVE-2020-0566, CVE-2020-0539, CVE-2020-0586, CVE-2020-0594
-* CVE-2020-0595, CVE-2020-0596, CVE-2020-8674, CVE-2020-0597 CVE-2020-0543 CVE-2020-0548, CVE-2020-0549
+//* CVE-2020-0542, CVE-2020-0532, CVE-2020-0538, CVE-2020-0534, CVE-2020-0541, CVE-2020-0533, CVE-2020-0537, CVE-2020-0531
+//* CVE-2020-0535, CVE-2020-0536, CVE-2020-0545, CVE-2020-0540, CVE-2020-0566, CVE-2020-0539, CVE-2020-0586, CVE-2020-0594
+//* CVE-2020-0595, CVE-2020-0596, CVE-2020-8674, CVE-2020-0597 CVE-2020-0543 CVE-2020-0548, CVE-2020-0549
 // * CVE-2019-16649
 // * CVE-2019-16650
 // * CVE-2019-6260
