@@ -1,0 +1,246 @@
+---
+sidebar: sidebar
+permalink: docs/rn_storage_firmware_2.99.2.html
+summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
+keywords: netapp, hci, storage firmware
+---
+////
+This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
+////
+= Storage Firmware Bundle 2.99.2 Release Notes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+
+== What's New
+The storage firmware bundle version 2.99.2 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+
+=== Updated firmware components
+This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
+
+|===
+|Component |SolidFire SF-series |H410S |H610S
+
+|BIOS
+|N/A
+|NA2.1
+|3B06
+
+|BMC
+|N/A
+|6.84.00
+|*3.91.07*
+
+|NIC / Mellanox
+|-
+|14.25.1020
+|14.25.1020
+
+|RMS200
+|ae3b8cc
+|ae3b8cc
+|-
+
+|RMS300
+|7d8422bc
+|7d8422bc
+|-
+
+|NVDIMM, Smart
+|-
+|-
+|3.1
+
+|BPM, Smart
+|-
+|-
+|2.16
+
+|NVDIMM, Micron Gen1
+|-
+|-
+|26.2c
+
+|NVDIMM, Micron Gen2
+|-
+|-
+|25.3c
+
+|PGEM, Micron
+|-
+|-
+|1.40
+
+|PM863, SED
+|GXT5404Q
+|GXT5404Q
+|-
+
+|PM863, NSED
+|GXT5103Q
+|GXT5103Q
+|-
+
+|PM883, SED
+|HXT7904Q
+|HXT7904Q
+|-
+
+|Hawk-4, SED
+|8ENP7101
+|8ENP7101
+|-
+
+|Hawk-4, NSED
+|8ENP6101
+|8ENP6101
+|-
+
+|PM963, SED
+|-
+|-
+|CXV8202Q
+
+|PM963, NSED
+|-
+|-
+|CXV8501Q
+
+|PM983, SED
+|-
+|-
+|EDA5402Q
+
+|PM983, NSED
+|-
+|-
+|EDA5700Q
+
+|CD5, SED
+|-
+|-
+|0109
+
+|CD5, NSED
+|-
+|-
+|0109
+
+|CD5, FIPS
+|-
+|-
+|0108
+|===
+
+// == New BMC features
+// The following are the new BMC features and changes included in this release:
+//
+// * (H610S)
+// * (H610S)
+// * (H610S)
+// * (H610S, H410S)
+// * (H610S)
+// * (H610S)
+
+== Changes in Storage firmware components
+
+|===
+|Component |Improvement/Change
+//|H610S BIOS 3B06
+//a|
+//* Improved handling of memory failures
+//* Updated microcode version to MCU x6906
+| H610S BMC 3.91.07
+a|
+* Improve BMC flash wear utilization
+//* Prevent system overheat when BMC hangs
+//* Changed length of Group Domain of LDAP from 64 to 128 characters
+//|H410S/H610S NIC, Mellanox 14.25.1020
+//| N/A
+//|Various Drive Firmware Updates
+//| N/A
+|===
+
+== Resolved and known issues
+See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
+
+=== Accessing the Bugs Online tool
+. Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select  *Element Software* from the drop-down list:
++
+image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
+
+. In the keyword search field, type “Storage Firmware Bundle” and click *New Search*:
++
+image::storage_firmware_bundle_choice.png[Storage firmware bundle release notes, align="center"]
+
+. A list of resolved or open bugs is displayed. You can further refine the results as shown:
++
+image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="center"]
+// The following are issues that have been resolved in this release:
+//
+// |===
+// |Issue |Description
+//
+// |N/A
+// |The debug user sysadmin can log in using SSH after resetting the BMC.
+//
+// |N/A
+// |When you use the console to ping the BMC IP address, the BMC does not respond.
+//
+// |N/A
+// |During an AC power cycle stress test, the access permissions of the SOLSSH config file are lost.
+//
+// |CSESF-116
+// |During an AC power cycle stress test, "PROCHOT" CPU thermal warnings appear in the BMC logs.
+//
+// |CSESF-121
+// |The create and update service account API takes longer than expected.
+//
+// |CSD-3321 / CSESF-129
+// |The H610S BMC can hang and become inaccessible with the error "BMC Self Test Failed".
+//
+// |CSESF-197
+// |The BMC web UI inventory API returns the wrong memory serial number format.
+// |===
+
+== Resolved security vulnerabilities
+The following are security vulnerabilities that have been resolved in this release:
+
+//=== H410S BMC 6.84.00
+
+//* CVE-2020-0542, CVE-2020-0532, CVE-2020-0538, CVE-2020-0534, CVE-2020-0541, CVE-2020-0533, CVE-2020-0537, CVE-2020-0531
+//* CVE-2020-0535, CVE-2020-0536, CVE-2020-0545, CVE-2020-0540, CVE-2020-0566, CVE-2020-0539, CVE-2020-0586, CVE-2020-0594
+//* CVE-2020-0595, CVE-2020-0596, CVE-2020-8674, CVE-2020-0597 CVE-2020-0543 CVE-2020-0548, CVE-2020-0549
+// * CVE-2019-16649
+// * CVE-2019-16650
+// * CVE-2019-6260
+
+=== H610S BMC 3.91.07
+
+* CVE-2019-20636
+* CVE-2019-11599, CVE-2020-12826, CVE-2020-12464, CVE-2020-12114
+* CVE-2016-3706, CVE-2011-5320, CVE-2015-8984, CVE-2015-8983, CVE-2015-8982, CVE-2006-7254, CVE-2005-3590
+// * CVE-2019-15903
+// * CVE-2018-20843
+// * CVE-2019-14821, CVE-2019-15916, CVE-2019-16413
+// * CVE-2019-10638, CVE-2019-10639
+// * CVE-2019-11478, CVE-2019-11479, CVE-2019-11477
+// * CVE-2019-12819
+// * CVE-2019-14835, CVE-2019-14814, CVE-2019-14816, CVE-2019-16746
+// * CVE-2019-19062
+// * CVE-2019-19922, CVE-2019-20054
+// * CVE-2019-19447, CVE-2019-19767, CVE-2019-10220
+
+// == Known issues
+// There are no known issues in this release.
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
