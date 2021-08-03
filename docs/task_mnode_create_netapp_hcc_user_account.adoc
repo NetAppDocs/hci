@@ -90,6 +90,7 @@ Add the following details in the *Add permission* window:
 
 
 == NetApp ESXi host configurations
+For NetApp ESXi host configurations, you should update the NDE-created user account to the new NetApp HCC role.
 
 === NetApp ESXi host does not exist in a vCenter host cluster
 If the NetApp ESXi host does not exist inside a vCenter host cluster, you can use the following procedure to assign the NetApp HCC role and user permissions in vCenter.
