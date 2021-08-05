@@ -31,12 +31,17 @@ You can do any of the following tasks after you link:task_mnode_api_get_authoriz
 == Disable or enable the SSH capability on the management node
 You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later. Disabling SSH does not terminate or disconnect existing SSH client sessions to the management node. If you disable SSH and elect to re-enable it at a later time, you can do so using the same API.
 
-.API command
+.API steps
+. Get the bearer `${TOKEN}` by running the following API command and retrieving it from the curl response:
++
 ----
-curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+TOKEN=`curl -k -X POST https://MVIP/auth/connect/token -F client_id=mnode-client -F grant_type=password -F username=CLUSTER_ADMIN -F password=CLUSTER_PASSWORD|awk -F':' '{print $2}'|awk -F',' '{print $1}'|sed s/\"//g
 ----
-
-NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
+. Disable or enable SSH capability on the management node:
++
+----
+curl -k -X PUT "https://<<managementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
 
 .REST API UI steps
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
