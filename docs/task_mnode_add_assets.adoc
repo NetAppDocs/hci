@@ -5,7 +5,7 @@ summary: You can add compute and controller assets to the management node config
 keywords: netapp, mnode, management node, rest api, hci
 ---
 
-= Add an asset to the management node
+= Add compute and controller assets to the management node
 
 :hardbreaks:
 :nofooter:
@@ -21,6 +21,7 @@ You might need to add an asset if you recently scaled your installation and new 
 .What you'll need
 * Your cluster version is running NetApp Element software 11.3 or later.
 * You have deployed a management node running version 11.3 or later.
+* You have created a new NetApp HCC role in vCenter to limit the management node services view to NetApp-only assets. See link:task_mnode_create_netapp_hcc_role_vcenter.html[Create a NetApp HCC role in vCenter].
 
 .About this task
 (NetApp HCI only) If you do not see compute nodes in Hybrid Cloud Control (HCC) after scaling your NetApp HCI system, you can add a compute node using the `POST /assets/{asset_id}/compute-nodes` described in this procedure.
@@ -34,14 +35,14 @@ NOTE: When manually adding compute nodes, make sure that you also add the BMC as
 ----
 https://[management node IP]/inventory/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the window.
-.. From the REST API UI, click *GET ​/installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET ​/installations*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the code 200 response body, copy the `id` for the installation.
 +
 [subs=+quotes]
@@ -58,14 +59,14 @@ https://[management node IP]/inventory/1/
 +
 NOTE: Your installation has a base asset configuration that was created during installation or upgrade.
 
-.. From the REST API UI, click *GET /installations/{id}*.
-.. Click *Try it out*.
+.. From the REST API UI, select *GET /installations/{id}*.
+.. Select *Try it out*.
 .. Paste the installation asset ID into the *id* field.
-.. Click *Execute*.
+.. Select *Execute*.
 .. From the response, copy and save the cluster controller ID (`"controllerId"`) for use in a later step.
 . (For compute nodes only) To locate the hardware tag for your compute node in vSphere, go to xref:task_mnode_locate_hardware_tag.adoc[How to locate a hardware tag for compute node].
 
-. To add a compute node or controller sub-asset to an existing base asset, click one of the following.
+. To add a compute node and the BMC assets, or a controller sub-asset, to an existing base asset, select one of the following.
 +
 [cols=2*,options="header",cols="40,60"]
 |===
@@ -77,35 +78,35 @@ a| . Open the mNode service REST API UI on the management node:
 ----
 https://[management node IP]/mnode
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the window.
-. Click *POST /assets/{asset_id}/controllers*.
-. Click *Try it out*.
+. Select *POST /assets/{asset_id}/controllers*.
+. Select *Try it out*.
 . Enter the parent base asset ID in the *asset_id* field.
 . Add the required values to the payload.
-. Click *Execute*.
+. Select *Execute*.
 | POST /assets/{asset_id}/compute-nodes
 a| . Open the mNode service REST API UI on the management node:
 +
 ----
 https://[management node IP]/mnode
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the window.
-. Click *POST /assets/{asset_id}/compute-nodes*.
-. Click *Try it out*.
+. Select *POST /assets/{asset_id}/compute-nodes*.
+. Select *Try it out*.
 . Enter the parent base asset ID you copied in an earlier step in the *asset_id* field.
 . In the payload, do the following:
 .. Enter the management IP for the node in the `ip` field.
 .. For `hardwareTag`, enter the hardware tag value you saved in an earlier step.
 .. Enter other values, as required.
-. Click *Execute*.
+. Select *Execute*.
 |===
 
 [discrete]
