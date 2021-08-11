@@ -42,7 +42,7 @@ curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>"
 ----
 // Will follow up on management node endpoints at a future date.
 
-NOTE: You can find the link:task_mnode_api_get_authorizationtouse.html[bearer] `${TOKEN}` used by the API by using the REST API and retrieving it from the curl response.
+NOTE: You can find the link:task_mnode_api_get_authorizationtouse.html[bearer] `${TOKEN}` used by the API command using the REST API and retrieving it from the curl response.
 
 .REST API UI steps
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
@@ -74,7 +74,8 @@ curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>"
 ----
 // Will follow up on management node endpoints at a future date.
 
-NOTE: You can find the link:task_mnode_api_get_authorizationtouse.html[bearer] `${TOKEN}` used by the API by running an API command or using the REST API UI steps.
+NOTE: You can find the link:task_mnode_api_get_authorizationtouse.html[bearer] `${TOKEN}` used by the API command using the REST API and retrieving it from the curl response.
+
 .REST API UI steps
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
 +
