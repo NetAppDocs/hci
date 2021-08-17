@@ -46,10 +46,10 @@ Beginning with Element 12.3, known and resolved issues are now listed in the Net
 
 . Go to https://mysupport.netapp.com/site/products/all/details/solidfire-elementos/bugsonline-tab[NetApp Bugs Online^].
 . Type the product name, for example "Element", in the *Search by Keyword* field.
-. Select the image:plus_icon.PNG[plus icon], select *Fixed in Versions*, and select *OK*.
+. Select the image:plus_icon.PNG[plus icon] icon, select *Fixed in Versions*, and select *OK*.
 +
 image:bol_filters.PNG[BOL filters, align "center" ]
-. Type the release version in the *Fixed in Versions* field.
+. To filter by release, type the release version in the *Fixed in Versions* field.
 
 === FIFO snapshot queue support
 Element 12.3 enables you to create a First-In-First-Out (FIFO) queue for volume snapshots. Using the Element API, you can specify the minimum and maximum number of FIFO snapshot slots that should be reserved when you create a volume. When the FIFO snapshot queue for a volume is full, the next snapshot you create for that volume removes the oldest snapshot of that volume from the system. FIFO and non-FIFO snapshots both use the same pool of available snapshot slots on a volume.
