@@ -48,8 +48,8 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
 .What you'll need
 * If your management node is not connected to the internet, you have downloaded the package from the relevant location:
-** https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[Storage firmware package for NetApp HCI storage clusters^]
-** https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Storage firmware package for SolidFire storage clusters running Element software^]
+** https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software package for NetApp HCI storage clusters^]
+** https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element software upgrade package (.tar.gz) for SolidFire storage clusters^]
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
