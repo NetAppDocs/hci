@@ -28,7 +28,9 @@ Choose one of the following management node upgrade options:
 
 * If you are upgrading from management node 12.3:
 There are no additional functionality changes or bug fixes, so if you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
-Note that if you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.1 will complete. However, it might encounter an error during restart. If this occurs, reboot the management node so that it correctly starts on 12.3.1.
+
+NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.1 will complete. However, it might encounter an error during restart. If this occurs, reboot the management node so that it correctly starts on 12.3.1.
+
 * If you are upgrading from management node 12.2:
 <<Upgrade a management node to version 12.3.1 from 12.2>>
 * If you are upgrading from management node 12.0:
