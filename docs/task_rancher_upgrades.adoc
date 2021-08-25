@@ -90,15 +90,15 @@ NOTE: For node OS, unattended upgrades for security patches are run on a daily b
 . Initiate the list upgrade versions request:
 +
 ----
-curl -X POST "https://<managementNodeIP>/k8sdeployer/1/upgrade/rancher-versions" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X POST "https://<managementNodeIP>/k8sdeployer/1/upgrade/rancher-versions" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 +
-NOTE: You can find the bearer ID used by the APIs by running a GET command and retrieving it from the curl response.
+NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
 
 . Get task status using task ID from previous command and copy the latest version number from the response:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 
 . Initiate Rancher server upgrade request:
@@ -109,7 +109,7 @@ curl -X PUT "https://<mNodeIP>/k8sdeployer/1/upgrade/rancher/<version number>" -
 . Get task status using task ID from upgrade command response:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 
 .REST API UI steps
@@ -141,15 +141,15 @@ The upgrade has finished successfully when the `PercentComplete` indicates `100`
 . Initiate the list upgrade versions request:
 +
 ----
-curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/rke-versions" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X POST "https://<mNodeIP>/k8sdeployer/1/upgrade/rke-versions" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 +
-NOTE: You can find the bearer ID used by the APIs by running a GET command and retrieving it from the curl response.
+NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
 
 . Get task status using task ID from previous command and copy the latest version number from the response:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 . Initiate the RKE upgrade request
 +
@@ -159,7 +159,7 @@ curl -X PUT "https://<mNodeIP>/k8sdeployer/1/upgrade/rke/<version number>" -H "a
 . Get task status using task ID from upgrade command response:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 
 .REST API UI steps
@@ -191,15 +191,15 @@ The upgrade has finished successfully when the `PercentComplete` indicates `100`
 . Initiate the check upgrades request:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/upgrade/checkNodeUpdates" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/upgrade/checkNodeUpdates" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 +
-NOTE: You can find the bearer ID used by the APIs by running a GET command and retrieving it from the curl response.
+NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
 
 . Get task status using task ID from previous command and verify a more recent version number is available from the response:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 . Apply the node updates:
 +
@@ -212,7 +212,7 @@ NOTE: For node OS, unattended upgrades for security patches are run on a daily b
 . Get task status using task ID from the upgrade `applyNodeUpdates` response:
 +
 ----
-curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer <ID>"
+curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: application/json" -H "Authorization: Bearer ${TOKEN}"
 ----
 
 .REST API UI steps
