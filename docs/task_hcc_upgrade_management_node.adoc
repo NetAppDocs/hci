@@ -27,9 +27,9 @@ NOTE: The vCenter Plug-in 4.4 or later requires a management node 11.3 or later 
 Choose one of the following management node upgrade options:
 
 * If you are upgrading from management node 12.3:
-There are no additional functionality changes or bug fixes, so if you are already running management node 12.3, you do not need to upgrade it to 12.3.x.
+There are no additional functionality changes or bug fixes in management node 12.3.1. If you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
 
-NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.x will complete. However, it might encounter an error during restart. If this occurs, reboot the management node so that it correctly starts on 12.3.x.
+NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.1 will complete. However, the upgrade might encounter an error during restart. If this occurs, reboot the management node so that it correctly shows 12.3.1.
 
 * If you are upgrading from management node 12.2:
 <<Upgrade a management node to version 12.3.x from 12.2>>
@@ -64,7 +64,7 @@ TIP: To check the version of your management node, log in to your management nod
 
 * You have updated your management services bundle to the latest version using NetApp Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
 
-* If you are updating your management node to version 12.3.1, you need management services 2.14.60 or later to proceed.
+* If you are updating your management node to version 12.3.x, you need management services 2.14.60 or later to proceed.
 
 * You have configured an additional network adapter (if required) using the instructions for link:task_mnode_install_add_storage_NIC.html[configuring an additional storage NIC].
 +
