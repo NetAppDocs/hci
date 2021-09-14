@@ -25,6 +25,8 @@ You can configure NetApp HCI to take advantage of an existing vSphere deployment
 .About this task
 If you join multiple vCenter Server systems that are connected using vCenter Linked Mode, NetApp HCI only recognizes one of the vCenter Server systems.
 
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+
 .Steps
 . Click *Join and extend an existing vSphere deployment*.
 . Enter the domain name or IP address in the *vCenter Server Domain Name or IP address* field.
