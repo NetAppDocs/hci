@@ -25,7 +25,12 @@ Authorization functionality is set up for you during management node installatio
 * Your cluster version should be running NetApp Element software 11.3 or later.
 * You should have deployed a management node running version 11.3 or later.
 
-.Steps
+.API command
+----
+TOKEN=`curl -k -X POST https://MVIP/auth/connect/token -F client_id=mnode-client -F grant_type=password -F username=CLUSTER_ADMIN -F password=CLUSTER_PASSWORD|awk -F':' '{print $2}'|awk -F',' '{print $1}'|sed s/\"//g`
+----
+
+.REST API UI steps
 
 . Access the REST API UI for the service by entering the management node IP address followed by the service name, for example `/mnode/`:
 +
