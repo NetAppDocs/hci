@@ -97,6 +97,19 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 == Configure time sync
 
 . Ensure time is synced between the management node and the storage cluster using NTP:
+
+[NOTE]
+====
+Beginning with the NetApp Element Plug-in for vCenter Server 4.8, substeps a. to e. are performed automatically. As a result, when you run the link:task_mnode_install.html#set_up_the_management_node[setup command], you see output in the setup script similar to the following:
+----
+[2021-09-10T22:17:33.014675Z]:[config_util:1649] INFO:Setting up NTP configuration using MVIP: 10.117.148.204.
+[2021-09-10T22:17:33.076224Z]:[config_util:1664] INFO:NTP configuration file setup complete.
+[2021-09-10T22:17:33.076717Z]:[config_util:1666] INFO:Setting system clock to match MVIP's.
+[2021-09-10T22:17:39.205925Z]:[config_util:1671] INFO:NTP setup complete.
+----
+It is not recommended to edit the NTP after you complete the time sync configuration because it affects the NTP when you run the setup command on the management node.
+====
+
 .. Log in to the management node using SSH or the console provided by your hypervisor.
 .. Stop NTPD:
 +

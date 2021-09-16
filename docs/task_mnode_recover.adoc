@@ -88,6 +88,19 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 == Configure time sync
 
 . Ensure time is synced between the management node and the storage cluster using NTP:
+
+[NOTE]
+====
+Beginning with the NetApp Element Plug-in for vCenter Server 4.8, substeps a. to e. are performed automatically. As a result, when you run the <<step_6_recover_mnode_redeploy,redeploy command>>, you see output in the redeploy script similar to the following:
+----
+[2021-09-10T22:17:33.014675Z]:[config_util:1649] INFO:Setting up NTP configuration using MVIP: 10.117.148.204.
+[2021-09-10T22:17:33.076224Z]:[config_util:1664] INFO:NTP configuration file setup complete.
+[2021-09-10T22:17:33.076717Z]:[config_util:1666] INFO:Setting system clock to match MVIP's.
+[2021-09-10T22:17:39.205925Z]:[config_util:1671] INFO:NTP setup complete.
+----
+It is not recommended to edit the NTP after you complete the time sync configuration because it affects the NTP when you run the redeploy command on the management node.
+====
+
 .. Log in to the management node using SSH or the console provided by your hypervisor.
 .. Stop NTPD:
 +
@@ -169,7 +182,7 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 * *[mvip IP address]*: The management virtual IP address of the storage cluster. Configure the management node with the same storage cluster that you used during link:task_mnode_recover.html#configure-time-sync[NTP servers configuration].
 * *[persistent volume account name]*: The name of the account associated with all persistent volumes in this storage cluster.
 
-. Configure and run the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:
+. [[step_6_recover_mnode_redeploy]]Configure and run the management node redeploy command to connect to persistent volumes hosted on the cluster and start services with previous management node configuration data:
 +
 NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
 
