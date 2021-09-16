@@ -27,7 +27,7 @@ IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for VCP 
 
 * You are upgrading to a 6.7 Flash vSphere Web Client.
 
-IMPORTANT: The plug-in is compatible with vSphere Web Client version 6.7 U2 for Flash, 6.7 U3 (Flash and HTML5), and 7.0 U1 and U2. The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in].
+IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in].
 
 .What you'll need
 
