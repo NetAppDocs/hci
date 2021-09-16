@@ -570,6 +570,7 @@ https://[management node IP]/mnode
 +
 The response body indicates that reconfiguration was successful.
 
+
 [discrete]
 == Find more information
 
