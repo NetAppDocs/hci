@@ -35,10 +35,10 @@ curl -X GET "https://<managementNodeIP>/mnode/about" -H  "accept: application/js
 * Get version information about individual services running on the management node:
 +
 ----
-curl -X GET "https://<managementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer <ID>"
+curl -X GET "https://<managementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer ${TOKEN}"
 ----
 +
-NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
+NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
 
 == REST API UI steps
 

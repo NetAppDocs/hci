@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_vcp_upgrade_plugin.html
 summary: As part of a NetApp HCI or SolidFire storage system upgrade, you can upgrade the Element Plug-in for vCenter Server.
-keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8
 ---
 
 = Upgrade the Element Plug-in for vCenter Server
@@ -20,11 +20,14 @@ You can update the plug-in registration on vCenter Server Virtual Appliance (vCS
 
 This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to VCP 4.7, 4.6, 4.5, or 4.4.
+* You are upgrading to VCP 4.8, 4.7, 4.6, 4.5, or 4.4.
 * You are upgrading to a 7.0, 6.7, or 6.5 HTML5 vSphere Web Client.
-* You are upgrading to a 6.7 or 6.5 Flash vSphere Web Client.
++
+IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for VCP 4.7 and later.
 
-IMPORTANT: The plug-in is compatible with vSphere Web Client version 6.7 U2 for Flash, 6.7 U3 (Flash and HTML5), and 7.0 U1. The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in].
+* You are upgrading to a 6.7 Flash vSphere Web Client.
+
+IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in].
 
 .What you'll need
 
