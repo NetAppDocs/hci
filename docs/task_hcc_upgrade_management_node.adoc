@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_management_node.html
 summary: As part of a NetApp HCI or SolidFire storage system upgrade, you upgrade the management node.
-keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1
+keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.x
 ---
 
 = Upgrade a management node
@@ -14,6 +14,7 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10,
 :imagesdir: ../media/
 
 [.lead]
+
 You can upgrade your management node to management node version 12.3.1 or 12.3 from version 11.0 or later.
 
 //NOTE: If you upgrade your management node version from 12.3.0 to a later version, for example Element 12.3.1, on management nodes deployed using NDE, the upgrade might fail. If this occurs you should reboot the management node.
@@ -29,9 +30,9 @@ Choose one of the following management node upgrade options:
 NOTE: There are no additional functionality changes or bug fixes in management node 12.3.1. If you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
 
 * If you are upgrading from management node 12.3:
-There are no additional functionality changes or bug fixes, so if you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
+There are no additional functionality changes or bug fixes in management node 12.3.1. If you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
 
-NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.1 will complete. However, it might encounter an error during restart. If this occurs, reboot the management node so that it correctly starts on 12.3.1.
+NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.1 will complete. However, the upgrade might encounter an error during restart. If this occurs, reboot the management node so that it correctly shows 12.3.1.
 
 * If you are upgrading from management node 12.2:
 <<Upgrade a management node to version 12.3.x from 12.2>>
@@ -571,6 +572,7 @@ https://[management node IP]/mnode
 . Click *Execute*.
 +
 The response body indicates that reconfiguration was successful.
+
 
 [discrete]
 == Find more information
