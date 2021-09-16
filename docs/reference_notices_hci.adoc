@@ -13,32 +13,11 @@ translate: false
 :linkattrs:
 :imagesdir: ../media/
 
-[.lead]
-Legal notices provide access to copyright statements, trademarks, patents, and more.
+// Include the common notices
+include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-legal-notices.adoc[]
 
-== Copyright
-
-http://www.netapp.com/us/legal/copyright.aspx[^]
-
-== Trademarks
-
-NETAPP, the NETAPP logo, and the marks listed on the NetApp Trademarks page are trademarks of NetApp, Inc. Other company and product names may be trademarks of their respective owners.
-
-http://www.netapp.com/us/legal/netapptmlist.aspx[^]
-
-== Patents
-
-A current list of NetApp owned patents can be found at:
-
-https://www.netapp.com/us/media/patents-page.pdf[^]
-
-== Privacy policy
-
-https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
-
-== Open source
-
-Notice files provide information about third-party copyright and licenses.
+// Include the open source notice intro
+include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
 * link:../media/ansible-products-notice.pdf[Notice for Ansible Role for Compute Upgrades^]
 * link:../media/Ember_12.3_notice.pdf[Notice for Ember OS 12.3.1^]

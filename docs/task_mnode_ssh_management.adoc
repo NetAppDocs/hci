@@ -32,11 +32,17 @@ You can do any of the following tasks after you link:task_mnode_api_get_authoriz
 You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later. Disabling SSH does not terminate or disconnect existing SSH client sessions to the management node. If you disable SSH and elect to re-enable it at a later time, you can do so using the same API.
 
 .API command
+For management services 2.18 or later:
 ----
-curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+curl -k -X PUT "https://<<managementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
 ----
+For management services 2.17 or earlier:
+----
+curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
+// Will follow up on management node endpoints at a future date.
 
-NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
+NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
 
 .REST API UI steps
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
@@ -58,11 +64,17 @@ https://<managementNodeIP>/mnode/
 You can determine whether or not SSH capability is enabled on the management node using a management node service API. SSH is disabled by default on management nodes running management services 2.18 or later.
 
 .API command
+For management services 2.18 or later:
 ----
-curl -X GET "https://<managementNodeIP>/mnode/settings/ssh" -H  "accept: application/json" -H  "Authorization: Bearer <ID>"
+curl -k -X PUT "https://<<managementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
 ----
+For management services 2.17 or earlier:
+----
+curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
+// Will follow up on management node endpoints at a future date.
 
-NOTE: You can find the bearer ID used by the API by running a GET command and retrieving it from the curl response.
+NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
 
 .REST API UI steps
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
