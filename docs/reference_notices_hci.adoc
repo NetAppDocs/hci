@@ -41,8 +41,8 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 Notice files provide information about third-party copyright and licenses.
 
 * link:../media/ansible-products-notice.pdf[Notice for Ansible Role for Compute Upgrades^]
-* link:../media/Ember_12.3_notice.pdf[Notice for Ember OS^ 12.3.1]
-* link:../media/Ember_12.3_notice.pdf[Notice for Ember OS^ 12.3]
+* link:../media/Ember_12.3_notice.pdf[Notice for Ember OS 12.3.1^]
+* link:../media/Ember_12.3_notice.pdf[Notice for Ember OS 12.3^]
 * link:../media/mNode_12.3_notice.pdf[Notice for Management Node 12.3.1^]
 * link:../media/mNode_12.3_notice.pdf[Notice for Management Node 12.3^]
 * link:../media/NetApp_HCI_1.9_notice.pdf[Notice for NetApp HCI 1.9P1^]
