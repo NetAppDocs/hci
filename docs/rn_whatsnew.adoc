@@ -20,6 +20,10 @@ NetApp periodically updates NetApp HCI to bring you new features, enhancements, 
 
 * The <<Element 12.3.1>> section describes new features and updates in NetApp Element 12.3.1.
 
+//* The <<NetApp HCI 1.9P1>> section describes new features and updates in NetApp HCI version 1.9P1.
+
+//* The <<Element 12.3.1>> section describes new features and updates in NetApp Element 12.3.1.
+
 == NetApp HCI 1.9P1
 NetApp HCI 1.9P1 includes security and stability improvements.
 
