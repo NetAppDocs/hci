@@ -20,7 +20,7 @@ NetApp periodically updates NetApp HCI to bring you new features, enhancements, 
 
 * The <<Element 12.3>> section describes new features and updates in NetApp Element 12.3.
 
-== NetApp HCI 1.9
+== NetApp HCI 1.9P1
 NetApp HCI 1.9P1 includes security and stability improvements.
 
 //=== Deployment configuration profile support
@@ -41,6 +41,17 @@ NetApp HCI 1.9P1 includes security and stability improvements.
 == Element 12.3.1
 NetApp HCI 1.9P1 includes Element 12.3.1 for storage clusters.
 //Element 12.3 introduces software encryption at rest enhancements, security enhancements, storage firmware updates, enhanced snapshot functionality, and improved behavior for failing drives.
+
+==== Storage Firmware Bundle 2.99.2
+The Element 12.3.1 release includes the storage firmware bundle version 2.99.2. If your storage cluster is already at Element 12.3, you have the option to simply install the new 2.99.2 firmware bundle.
+
+=== What’s new in SolidFire eSDS
+
+==== Dynamic Node Rating
+Dynamic node rating allows for performance to scale with the number of cores on the platform. For release 12.3.1, when the number of cores is greater than 16, IOPS is capped at 100K.
+
+==== Support for single bond network configuration
+You can now use a single bond network configuration for your host with eSDS.
 
 === NetApp Bugs Online contains known and resolved issues
 //Beginning with Element 12.3,
