@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your NetApp HCI system for version 1.9
+= Upgrade your NetApp HCI system for version 1.9 or 1.9P1
 
 :hardbreaks:
 :nofooter:
