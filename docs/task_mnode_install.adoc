@@ -100,7 +100,7 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 
 [NOTE]
 ====
-Beginning with the NetApp Element Plug-in for vCenter Server 4.8, substeps a. to e. are performed automatically. As a result, when you run the link:task_mnode_install.html#set-up-the-management-node[setup command], you see output in the setup script similar to the following:
+Beginning with the management services 2.19 release, substeps (a) to (e) are performed automatically. As a result, when you run the link:task_mnode_install.html#set-up-the-management-node[setup command], you see output in the setup script similar to the following:
 ----
 [2021-09-10T22:17:33.014675Z]:[config_util:1649] INFO:Setting up NTP configuration using MVIP: 10.117.148.204.
 [2021-09-10T22:17:33.076224Z]:[config_util:1664] INFO:NTP configuration file setup complete.
