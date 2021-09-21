@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_compute_node_firmware.html
 summary: As part of a NetApp HCI system upgrade, you upgrade compute node firmware.
-keywords: netapp,hci,on premise,cluster,element,compute node,vmware
+keywords: netapp, hci, on premise, cluster, element, compute node, vmware, upgrade firmware
 ---
 
 = Upgrade compute node firmware
