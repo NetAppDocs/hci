@@ -68,7 +68,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-The ESXi host must be taken out of lockdown mode prior to running a healthcheck and proceeding with the firmware upgrade. See
+The ESXi host must be taken out of lockdown mode prior to running a health check and proceeding with the firmware upgrade. See
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_disable_lockdown_mode_on_ESXi_host[How to disable lockdown mode on ESXi host] and
 link:https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-F8F105F7-CF93-46DF-9319-F8991839D265.html[VMware lockdown mode behavior] for more information.
 
