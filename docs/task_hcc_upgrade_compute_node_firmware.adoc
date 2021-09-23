@@ -68,9 +68,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-NOTE: The ESXi host must be taken out of lockdown mode prior to running a health check and proceeding with the firmware upgrade. See
-link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_disable_lockdown_mode_on_ESXi_host[How to disable lockdown mode on ESXi host] and
-link:https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-F8F105F7-CF93-46DF-9319-F8991839D265.html[VMware lockdown mode behavior] for more information.
+NOTE: The ESXi host must be taken out of lockdown mode prior to running a health check and proceeding with the firmware upgrade. See link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_disable_lockdown_mode_on_ESXi_host[How to disable lockdown mode on ESXi host] and link:https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-F8F105F7-CF93-46DF-9319-F8991839D265.html[VMware lockdown mode behavior] for more information.
 
 For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process if you have the DRS feature and required licensing. The node will be rebooted and after the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
 
