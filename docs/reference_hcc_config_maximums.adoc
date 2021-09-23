@@ -23,4 +23,4 @@ If you exceed these tested maximums, you might experience issues with NetApp Hyb
 
 .Configuration maximums
 
-NetApp Hybrid Cloud Control supports VMware vSphere environments with up to 500 NetApp compute nodes. It supports up to 20 NetApp Element Software based storage clusters.
+NetApp Hybrid Cloud Control supports VMware vSphere environments with up to 500 NetApp compute nodes. It supports up to 20 NetApp Element Software based storage clusters with 40 storage nodes per cluster.
