@@ -100,7 +100,7 @@ This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature op
 * *Element software*: Your storage cluster version is running NetApp Element software 12.2 or later.
 * *Management node*: You have deployed a management node running version 12.2 or later.
 * *Management services*: You have updated your management services bundle to version 2.19 or later.
-* You have access to login at the administrator level.
+* You have access to log in at the administrator level.
 
 .Steps
 .	Open a web browser and browse to the IP address of the management node. For example:
@@ -108,7 +108,7 @@ This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature op
 `https://[management node IP address]`
 .	Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 +
-NOTE: If you log in at read-only level, you will not have access to the maintenance mode feature options.
+NOTE: The maintenance mode feature options are disabled at the read-only level.
 
 .	In the left navigation blue box, select the NetApp HCI installation.
 +
@@ -116,7 +116,7 @@ The NetApp Hybrid Cloud Control Dashboard appears.
 .	In the left navigation pane, select *Nodes*.
 .	To view storage inventory information, select *Storage*.
 +
-.	Enable the maintenance mode for your selected node:
+.	Enable maintenance mode for your selected node:
 +
 NOTE: It is recommended that you refresh the nodes table before each action by using the refresh icon located on the upper-right side of the nodes table.
 
