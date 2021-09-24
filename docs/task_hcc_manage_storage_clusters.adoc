@@ -116,7 +116,7 @@ The NetApp Hybrid Cloud Control Dashboard appears.
 .	In the left navigation pane, select *Nodes*.
 .	To view storage inventory information, select *Storage*.
 +
-.	Enable maintenance mode for your selected node:
+.	Enable maintenance mode on a storage node:
 +
 NOTE: It is recommended that you refresh the nodes table before each action by using the refresh icon located on the upper-right side of the nodes table.
 
