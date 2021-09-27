@@ -107,6 +107,8 @@ Starting with Element 12.5, substeps (a) to (e) are performed automatically. As 
 [2021-09-10T22:17:33.076717Z]:[config_util:1666] INFO:Setting system clock to match MVIP's.
 [2021-09-10T22:17:39.205925Z]:[config_util:1671] INFO:NTP setup complete.
 ----
+Proceed to <<substep_f_install_config_time_sync,substep (f)>> to complete the time sync configuration procedure.
+
 It is not recommended to edit the NTP after you complete the time sync configuration because it affects the NTP when you run the setup command on the management node.
 ====
 
@@ -144,7 +146,9 @@ sudo ntpd -gq
 sudo service ntpd start
 ----
 
-.. Disable time synchronization with host via the hypervisor (the following is a VMware example):
+.. [[substep_f_install_config_time_sync]]*Starting with Element 12.2, you can manually continue the procedure from here.*
++
+Disable time synchronization with host via the hypervisor (the following is a VMware example):
 +
 NOTE: If you deploy the mNode in a hypervisor environment other than VMware, for example, from the .iso image in an Openstack environment, refer to the hypervisor documentation for the equivalent commands.
 
