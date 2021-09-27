@@ -118,11 +118,13 @@ The NetApp Hybrid Cloud Control Dashboard appears.
 +
 .	Enable maintenance mode on a storage node:
 +
-NOTE: It is recommended that you refresh the nodes table before each action by using the refresh icon located on the upper-right side of the nodes table.
+[NOTE]
+====
+It is recommended that you refresh the nodes table before each action by using the refresh icon located on the upper-right side of the nodes table.
 
-..	Under *Actions*, select image:three_dots.PNG[Three dots image] > *Enable Maintenance Mode*.
-+
 image:hcc_enable_maintenance_mode.PNG[Enable maintenance mode]
+====
+..	Under *Actions*, select image:three_dots.PNG[Three dots image] > *Enable Maintenance Mode*.
 +
 The *Node Status* column displays *Enabling Maintenance Mode*.
 +
