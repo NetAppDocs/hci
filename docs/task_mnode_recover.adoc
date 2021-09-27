@@ -138,7 +138,7 @@ sudo ntpd -gq
 sudo service ntpd start
 ----
 
-.. [[substep_f_recover_config_time_sync]]*Starting with Element 12.2, you can manually continue the procedure from here.*
+.. [[substep_f_recover_config_time_sync]]*Starting with Element 12.5, you can manually continue the procedure from here.*
 +
 Disable time synchronization with host via the hypervisor (the following is a VMware example):
 +
