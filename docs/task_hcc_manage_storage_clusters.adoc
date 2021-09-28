@@ -94,7 +94,7 @@ CAUTION: Clicking *Yes* next removes the cluster from the installation.
 [discrete]
 
 === Enable and disable maintenance mode
-This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature options give you the capability to enable and disable maintenance mode for a storage cluster node.
+This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature options give you the capability to <<enable_main_mode,enable>> and <<disable_main_mode,disable>> maintenance mode for a storage cluster node.
 
 .What you'll need
 * *Element software*: Your storage cluster version is running NetApp Element software 12.2 or later.
@@ -102,7 +102,7 @@ This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature op
 * *Management services*: You have updated your management services bundle to version 2.19 or later.
 * You have access to log in at the administrator level.
 
-==== Enable maintenance mode
+==== [[enable_main_mode]]Enable maintenance mode
 You can use the following procedure to enable maintenance mode for a storage cluster node.
 
 NOTE: Only one node can be in maintenance mode at a time.
@@ -137,7 +137,7 @@ After *Enabling Maintenance Mode* completes, the *Node Status* column displays a
 +
 A green success banner also displays at the top of the nodes table stating: "*Maintenance mode is enabled on storage node <node-name>. It is now safe to perform maintenance activities on the node*".
 
-==== Disable maintenance mode
+==== [[disable_main_mode]]Disable maintenance mode
 After a node is successfully placed in maintenance mode, the *Disable Maintenance Mode* action is available for this node. Actions on the other nodes are unavailable until maintenance mode is disabled successfully on the node undergoing maintenance.
 
 .Steps
