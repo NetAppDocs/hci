@@ -91,17 +91,13 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 
 [NOTE]
 ====
-Starting with Element 12.5, substeps (a) to (e) are performed automatically. As a result, when you run the <<step_6_recover_mnode_redeploy,redeploy command>>, you see output in the redeploy script similar to the following:
+Starting with Element 12.5, substeps (a) to (e) are performed automatically. For management node 12.5, proceed to substep (f) to complete the time sync configuration. As a result, when you run the <<step_6_recover_mnode_redeploy,redeploy command>>, you see output in the redeploy script similar to the following:
 ----
 [2021-09-10T22:17:33.014675Z]:[config_util:1649] INFO:Setting up NTP configuration using MVIP: 10.117.148.204.
 [2021-09-10T22:17:33.076224Z]:[config_util:1664] INFO:NTP configuration file setup complete.
 [2021-09-10T22:17:33.076717Z]:[config_util:1666] INFO:Setting system clock to match MVIP's.
 [2021-09-10T22:17:39.205925Z]:[config_util:1671] INFO:NTP setup complete.
 ----
-
-Proceed to <<substep_f_recover_config_time_sync,substep (f)>> to complete the time sync configuration procedure.
-
-It is not recommended to edit the NTP after you complete the time sync configuration because it affects the NTP when you run the redeploy command on the management node.
 ====
 
 .. Log in to the management node using SSH or the console provided by your hypervisor.
@@ -138,9 +134,7 @@ sudo ntpd -gq
 sudo service ntpd start
 ----
 
-.. [[substep_f_recover_config_time_sync]]*Starting with Element 12.5, you can manually continue the procedure from here.*
-+
-Disable time synchronization with host via the hypervisor (the following is a VMware example):
+.. [[substep_f_recover_config_time_sync]]Disable time synchronization with host via the hypervisor (the following is a VMware example):
 +
 NOTE: If you deploy the mNode in a hypervisor environment other than VMware, for example, from the .iso image in an Openstack environment, refer to the hypervisor documentation for the equivalent commands.
 
@@ -156,8 +150,10 @@ vmware-toolbox-cmd timesync disable
 vmware-toolbox-cmd timesync status
 ----
 ...	In vSphere, verify that the `Synchronize guest time with host` box is un-checked in the VM options.
-
++
 NOTE: Do not enable this option if you make future changes to the VM.
+
+NOTE: Do not edit the NTP after you complete the time sync configuration because it affects the NTP when you run the <<step_6_recover_mnode_redeploy,redeploy command>> on the management node.
 
 == Configure the management node
 
