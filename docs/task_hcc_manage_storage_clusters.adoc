@@ -141,7 +141,7 @@ A green success banner also displays at the top of the nodes table stating: "*Ma
 After a node is successfully placed in maintenance mode, the *Disable Maintenance Mode* action is available for this node. Actions on the other nodes are unavailable until maintenance mode is disabled successfully on the node undergoing maintenance.
 
 .Steps
-.	For the node under maintenance mode, under *Actions*, select *Disabling Maintenance Mode*.
+.	For the node under maintenance mode, under *Actions*, select *Disable Maintenance Mode*.
 +
 While *Disabling Maintenance Mode* is enabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
 +
