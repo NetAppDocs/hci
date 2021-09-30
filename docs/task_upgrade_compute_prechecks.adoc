@@ -60,6 +60,8 @@ After the health check completes without errors, the compute nodes in the cluste
 
 You can use REST API to verify that compute nodes in a cluster are ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues. You will need to run compute node health checks for each compute cluster in your environment.
 
+NOTE: If you have multiple two-node storage cluster configurations, each within their own vCenter, Witness Nodes health checks might not report accurately. Therefore, when you are ready to upgrade ESXi hosts, you must only shut down the Witness Node on the ESXi host that is being upgraded. You must ensure that you always have one Witness Node running in your NetApp HCI installation by powering off the Witness Nodes in an alternate fashion.
+
 .Steps
 
 . Locate the controller ID and cluster ID:
