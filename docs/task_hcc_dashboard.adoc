@@ -16,6 +16,8 @@ keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, 
 [.lead]
 With the NetApp Hybrid Cloud Control Dashboard, you can view all your storage and compute resources at a glance. Additionally, you can monitor storage capacity, storage performance, and compute utilization.
 
+NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first time, there might be a delay with loading the NetApp Hybrid Cloud Control Dashboard view when the management node is managing many clusters. The loading time varies depending on the number of clusters being actively managed by the management node. For subsequent launches, you will experience faster loading times.
+
 Only compute nodes that are managed and clusters with at least one managed node in H-series hardware appear on the Hybrid Cloud Control Dashboard.
 
 *	<<Access the NetApp HCC Dashboard>>
