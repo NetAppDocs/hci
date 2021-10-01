@@ -38,7 +38,7 @@ The Storage tab appears.
 +
 image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes page image]
 +
-NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first time, there might be a delay with loading the NetApp Hybrid Cloud Control Nodes page when the management node is managing many clusters. The loading time varies depending on the number of clusters being actively managed by the management node. For subsequent launches, you will experience faster loading times.
+NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first time, there might be a delay with loading the NetApp Hybrid Cloud Control Nodes page when the management node is managing many clusters. The loading time varies depending on the number of clusters being actively managed by the management node. After the initial launch, you will experience faster loading times.
 
 . On the *Storage* tab of the Nodes page, review the following information:
 .. Two-node clusters: A “two-node” label appears on the Storage tab and the associated Witness Nodes are listed.
