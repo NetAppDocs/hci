@@ -34,8 +34,6 @@ https://[management node IP address]
 
 . In the left navigation, click *Nodes*.
 +
-The Storage tab appears.
-+
 image::hcc_nodes_storage_2nodes.png[Hybrid Cloud Control Nodes page image]
 +
 NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first time, there might be a delay with loading the NetApp Hybrid Cloud Control Nodes page when the management node is managing many clusters. The loading time varies depending on the number of clusters being actively managed by the management node. For subsequent launches, you will experience faster loading times.
