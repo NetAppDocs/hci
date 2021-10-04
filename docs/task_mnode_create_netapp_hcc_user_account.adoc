@@ -58,7 +58,10 @@ Perform the following steps to assign the user permissions to the new NetApp HCC
 .	From the Menu, select *Hosts* and *Clusters*.
 .	In the left navigation pane, select one of the following options:
 * The top level vCenter.
-* Your desired vCenter if you are in linked mode.
+* Your desired vCenter if you are in Linked Mode.
++
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^] is limited to local storage clusters only.
+
 .	In the right navigation pane, select *Permissions*.
 .	Select the *+* icon to add the new user.
 +

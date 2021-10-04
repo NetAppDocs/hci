@@ -19,7 +19,29 @@ NetApp HCI with Element 12.2 or later enables you to access storage cluster web 
 
 .What you'll need
 * This feature requires Element 12.2 or later and management services version 2.15 or later.
+* Configuring this feature using NetApp Hybrid Cloud Control requires management services version 2.19 or later.
 * To use REST APIs, you must have deployed a management node running version 11.5 or later.
+* You need fully qualified domain names for the management node and each storage cluster that resolve correctly to the management node IP address and each storage cluster IP address.
+
+== Configure FQDN web UI access using NetApp Hybrid Cloud Control
+
+.Steps
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Click the menu icon at the top right of the page.
+. Select *Configure*.
+. In the *Fully Qualified Domain Names* pane, click *Set Up*.
+. In the resulting window, enter the FQDNs for the management node and each storage cluster.
+. Click *Save*.
++
+The *Fully Qualified Domain Names* pane lists each storage cluster with its associated MVIP and FQDN.
+
+== Configure FQDN web UI access using the REST API
 
 .Steps
 
@@ -61,6 +83,35 @@ https://<management_node_IP>/mnode/2/
 }
 ----
 .. Click *Execute*.
+
+== Troubleshooting
+If FQDNs are configured incorrectly, you might have problems accessing either the management node, a storage cluster, or both. Use the following information to help troubleshoot the issue.
+
+|===
+|Issue |Cause |Resolution
+
+a|
+
+* You get a browser error when attempting to access either the management node or the storage cluster using the FQDN.
+* You cannot log in to either the management node or the storage cluster using an IP address.
+|The management node FQDN and storage cluster FQDN are both incorrectly configured.
+|Use the REST API instructions on this page to remove the FQDN settings and configure them again.
+
+a|
+
+* You get a browser error when attempting to access the storage cluster FQDN.
+* You cannot log in to either the management node or the storage cluster using an IP address.
+|The management node FQDN is correctly configured, but the storage cluster FQDN is incorrectly configured.
+|Use the REST API instructions on this page to remove the FQDN settings and configure them again.
+
+a|
+
+* You get a browser error when attempting to access the management node FQDN.
+* You can log in to the management node and storage cluster using an IP address.
+|The management node FQDN is incorrectly configured, but the storage cluster FQDN is correctly configured.
+|Log in to NetApp Hybrid Cloud Control to correct the FQDN settings in the UI, or use the REST API instructions on this page to correct the settings.
+|===
+
 
 [discrete]
 == Find more information

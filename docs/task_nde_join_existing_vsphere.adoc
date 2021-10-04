@@ -19,11 +19,14 @@ You can configure NetApp HCI to take advantage of an existing vSphere deployment
 .What you'll need
 * If you are joining an existing vSphere 6.7 deployment, make sure vCenter Server is running version 6.7 Update 1.
 * If you are joining an existing vSphere 6.5 deployment, make sure vCenter Server is running version 6.5 Update 2 or later.
+
 * Obtain the network details and administrator credentials for your existing vSphere deployment.
 * If the NetApp Element Plug-in for vCenter Server is registered to the existing vCenter instance, you need to https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html[unregister^] it before continuing. The plug-in is re-registered after NetApp HCI deployment is complete.
 
 .About this task
 If you join multiple vCenter Server systems that are connected using vCenter Linked Mode, NetApp HCI only recognizes one of the vCenter Server systems.
+
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^] is limited to local storage clusters only.
 
 .Steps
 . Click *Join and extend an existing vSphere deployment*.
