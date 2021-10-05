@@ -122,7 +122,7 @@ NOTE: The maintenance mode feature options are disabled at the read-only level.
 +
 [NOTE]
 ====
-There is a two-minute polling interval on the storage nodes table to update the table for non-user initiated actions. Before an action, to ensure the you have the most up-to-date status, you can refresh the nodes table by using the refresh icon located on the upper-right side of the nodes table.
+The storage nodes table is updated automatically every two minutes for non-user initiated actions. Before an action, to ensure that you have the most up-to-date status, you can refresh the nodes table by using the refresh icon located on the upper-right side of the nodes table.
 
 image:hcc_enable_maintenance_mode.PNG[Enable maintenance mode]
 ====
