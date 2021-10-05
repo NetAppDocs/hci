@@ -122,14 +122,14 @@ NOTE: The maintenance mode feature options are disabled at the read-only level.
 +
 [NOTE]
 ====
-It is recommended that you refresh the nodes table before each action by using the refresh icon located on the upper-right side of the nodes table.
+There is a two-minute polling interval on the storage nodes table to update the table for non-user initiated actions. Before an action, to ensure the you have the most up-to-date status, you can refresh the nodes table by using the refresh icon located on the upper-right side of the nodes table.
 
 image:hcc_enable_maintenance_mode.PNG[Enable maintenance mode]
 ====
 
 ..	Under *Actions*, select *Enable Maintenance Mode*.
 +
-While *Maintenance Mode* is enabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
+While *Maintenance Mode* is being enabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
 +
 After *Enabling Maintenance Mode* completes, the *Node Status* column displays a wrench icon and the text "*Maintenance Mode*" for the node that is in maintenance mode.
 
@@ -139,7 +139,7 @@ After a node is successfully placed in maintenance mode, the *Disable Maintenanc
 .Steps
 .	For the node under maintenance mode, under *Actions*, select *Disable Maintenance Mode*.
 +
-While *Disabling Maintenance Mode* is enabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
+While *Maintenance Mode* is being disabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
 +
 After *Disabling Maintenance Mode* completes, the *Node Status* column displays *Active*.
 +
