@@ -45,14 +45,18 @@ TIP: You might see some or all these panes, depending on your installation. For 
 == Monitor storage resources
 Use the *Storage* pane to see your total storage environment. You can monitor the number of storage clusters, storage nodes, and total volumes.
 
-To see details, in the Storage pane, click *Show Details*.
+To see details, in the Storage pane, select *Show Details*.
+
+image::hcc_dashboard_storage_node_number.PNG[Storage view]
+
+NOTE: The Total Storage Nodes number does not include witness nodes from two-node storage clusters. The witness nodes are included in the Nodes number in the details section for that cluster.
 
 TIP: To see the most recent storage cluster data, use the Storage Clusters page, where polling occurs more frequently than on the Dashboard.
 
 == Monitor compute resources
 Use the *Compute* pane to see your total NetApp H-series compute environment. You can monitor the number of compute clusters and total compute nodes.
 
-To see details, in the Compute panes, click *Show Details*.
+To see details, in the Compute panes, select *Show Details*.
 
 == Monitor storage capacity
 Monitoring the storage capacity of your environment is critical. Using the Storage Capacity pane, you can determine your storage capacity efficiency gains with or without compression, deduplication, and thin provisioning features enabled.
@@ -65,7 +69,7 @@ TIP: To view cluster health, also look at the SolidFire Active IQ Dashboard. See
 
 .Steps
 
-.	Click the *RAW* tab, to see the total physical storage space used and available in your cluster.
+.	Select the *RAW* tab, to see the total physical storage space used and available in your cluster.
 +
 Look at the vertical lines to determine whether your used capacity is less than the total or less than Warning, Error, or Critical thresholds. Hover over the lines to see details.
 +
@@ -73,7 +77,7 @@ NOTE: You can set the threshold for Warning, which defaults to 3% below the Erro
 +
 TIP: For details about the related cluster thresholds Element API, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-9B1D06D7-8FEE-4A52-B3C2-33F03D8540FB.html[“getClusterFullThreshold”] in the _Element software API documentation_. To view details about block and metadata capacity, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-58E03E89-C183-4E23-B9B4-8D466210E8B4.html[Understanding cluster fullness levels] in the _Element software documentation_.
 
-.	Click the *EFFECTIVE* tab, to see information about total storage provisioned to connected hosts and to see efficiency ratings.
+.	Select the *EFFECTIVE* tab, to see information about total storage provisioned to connected hosts and to see efficiency ratings.
 
 .. Optionally, check *Include Thin Provisioning* to see thin provisioning efficiency rates  in the Effective Capacity bar chart.
 .. *Effective Capacity bar chart*: Look at the vertical lines to determine whether your used capacity is less than the total or less than Warning, Error, or Critical thresholds. Similar to the Raw tab, you can hover over the vertical lines to see details.
