@@ -37,6 +37,8 @@ You can also find out more about compute node health checks that are run by the 
 
 Using NetApp Hybrid Cloud Control (HCC), you can verify that a compute node is ready for a firmware upgrade.
 
+NOTE: If you have multiple two-node storage cluster configurations, each within their own vCenter, Witness Nodes health checks might not report accurately. Therefore, when you are ready to upgrade ESXi hosts, you must only shut down the Witness Node on the ESXi host that is being upgraded. You must ensure that you always have one Witness Node running in your NetApp HCI installation by powering off the Witness Nodes in an alternate fashion.
+
 .Steps
 
 . Open a web browser and browse to the IP address of the management node:
@@ -59,8 +61,6 @@ After the health check completes without errors, the compute nodes in the cluste
 == Use API to run compute node health checks prior to upgrading firmware
 
 You can use REST API to verify that compute nodes in a cluster are ready to be upgraded. The health check verifies that there are no obstacles to upgrading, such as ESXi host issues or other vSphere issues. You will need to run compute node health checks for each compute cluster in your environment.
-
-NOTE: If you have multiple two-node storage cluster configurations, each within their own vCenter, Witness Nodes health checks might not report accurately. Therefore, when you are ready to upgrade ESXi hosts, you must only shut down the Witness Node on the ESXi host that is being upgraded. You must ensure that you always have one Witness Node running in your NetApp HCI installation by powering off the Witness Nodes in an alternate fashion.
 
 .Steps
 
