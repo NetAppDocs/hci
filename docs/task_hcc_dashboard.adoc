@@ -49,7 +49,7 @@ To see details, in the Storage pane, select *Show Details*.
 
 image::hcc_dashboard_storage_node_number.PNG[Storage view]
 
-NOTE: The Total Storage Nodes number does not include witness nodes from two-node storage clusters. The witness nodes are included in the Nodes number in the details section for that cluster.
+NOTE: The Total Storage Nodes number does not include Witness Nodes from two-node storage clusters. The Witness Nodes are included in the Nodes number in the details section for that cluster.
 
 TIP: To see the most recent storage cluster data, use the Storage Clusters page, where polling occurs more frequently than on the Dashboard.
 
