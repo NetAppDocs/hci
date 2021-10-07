@@ -19,6 +19,7 @@ You can configure the Fully Qualified Domain Name and manage credentials for Net
 Here are the items you can work with:
 
 * link:task_nde_access_ui_fqdn.html[Configure Fully Qualified Domain Name web UI access]
+* link:task_post_deploy_credentials.html[Change credentials in NetApp HCI]
 * link:task_hci_credentials_vcenter_esxi.html[Update vCenter and ESXi credentials]
 * link:task_hcc_manage_storage_overview.html[Manage NetApp HCI storage assets]
 * link:task_mnode_work_overview.html[Work with the management node]
