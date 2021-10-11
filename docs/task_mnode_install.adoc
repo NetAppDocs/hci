@@ -97,17 +97,8 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 == Configure time sync
 
 . Ensure time is synced between the management node and the storage cluster using NTP:
-
-[NOTE]
-====
-Starting with Element 12.5, substeps (a) to (e) are performed automatically. For management node 12.5, proceed to substep (f) to complete the time sync configuration. As a result, when you run the link:task_mnode_install.html#set-up-the-management-node[setup command], you see output in the setup script similar to the following:
-----
-[2021-09-10T22:17:33.014675Z]:[config_util:1649] INFO:Setting up NTP configuration using MVIP: 10.117.148.204.
-[2021-09-10T22:17:33.076224Z]:[config_util:1664] INFO:NTP configuration file setup complete.
-[2021-09-10T22:17:33.076717Z]:[config_util:1666] INFO:Setting system clock to match MVIP's.
-[2021-09-10T22:17:39.205925Z]:[config_util:1671] INFO:NTP setup complete.
-----
-====
++
+NOTE: Starting with Element 12.3.1, substeps (a) to (e) are performed automatically. For management node 12.3.1, proceed to substep (f) to complete the time sync configuration. As a result of NTP automation, when you run the setup command, you see link:task_mnode_install.html#auto-ntp[this output] in the setup script.
 
 .. Log in to the management node using SSH or the console provided by your hypervisor.
 .. Stop NTPD:
@@ -174,6 +165,18 @@ NOTE: You will be prompted to enter passwords in a secure prompt. If your cluste
 ----
 /sf/packages/mnode/setup-mnode --mnode_admin_user [username] --storage_mvip [mvip] --storage_username [username] --telemetry_active [true]
 ----
++
+[NOTE]
+====
+As a result of NTP automation, when you run the setup command, you see the following output in the setup script:
+[[auto_ntp]]
+----
+[2021-09-10T22:17:33.014675Z]:[config_util:1649] INFO:Setting up NTP configuration using MVIP: 10.117.148.204.
+[2021-09-10T22:17:33.076224Z]:[config_util:1664] INFO:NTP configuration file setup complete.
+[2021-09-10T22:17:33.076717Z]:[config_util:1666] INFO:Setting system clock to match MVIP's.
+[2021-09-10T22:17:39.205925Z]:[config_util:1671] INFO:NTP setup complete.
+----
+====
 
 .. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:
 +
