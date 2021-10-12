@@ -42,11 +42,11 @@ You can configure or remove FQDN web UI access using NetApp Hybrid Cloud Control
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click the menu icon at the top right of the page.
+. Select the menu icon at the top right of the page.
 . Select *Configure*.
-. In the *Fully Qualified Domain Names* pane, click *Set Up*.
+. In the *Fully Qualified Domain Names* pane, select *Set Up*.
 . In the resulting window, enter the FQDNs for the management node and each storage cluster.
-. Click *Save*.
+. Select *Save*.
 +
 The *Fully Qualified Domain Names* pane lists each storage cluster with its associated MVIP and FQDN.
 +
@@ -75,16 +75,16 @@ https://<Cluster_MVIP>/json-rpc/12.2?method=CreateClusterInterfacePreference&nam
 ----
 https://<management_node_IP>/mnode/2/
 ----
-.. Click *Authorize* or any lock icon and enter the Element cluster user name and password.
+.. Select *Authorize* or any lock icon and enter the Element cluster user name and password.
 .. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session.
+.. Select *Authorize* to begin a session.
 .. Close the window.
-.. Click *GET /settings*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. Select *GET /settings*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. Note whether or not the proxy is used as indicated in `"use_proxy"` by `true` or `false`.
-.. Click *PUT /settings*.
-.. Click *Try it out*.
+.. Select *PUT /settings*.
+.. Select *Try it out*.
 .. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter. Also specify whether the proxy should be used (`true` or `false` from the previous step) for the `use_proxy` parameter.
 +
 ----
@@ -93,15 +93,15 @@ https://<management_node_IP>/mnode/2/
   "use_proxy": false
 }
 ----
-.. Click *Execute*.
+.. Select *Execute*.
 
 == Remove FQDN web UI access using NetApp Hybrid Cloud Control
 
 .Steps
 
-. In the *Fully Qualified Domain Names* pane, click *Edit*.
+. In the *Fully Qualified Domain Names* pane, select *Edit*.
 . In the resulting window, delete the contents in the *FQDN* text field.
-. Click *Save*.
+. Select *Save*.
 +
 The window closes and the storage cluster is no longer listed in the *Fully Qualified Domain Names* pane.
 
@@ -128,12 +128,12 @@ https://<Cluster_MVIP>/json-rpc/12.2?method=DeleteClusterInterfacePreference&nam
 ----
 https://<management_node_IP>/mnode/2/
 ----
-.. Click *Authorize* or any lock icon and enter the Element cluster user name and password.
+.. Select *Authorize* or any lock icon and enter the Element cluster user name and password.
 .. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session.
+.. Select *Authorize* to begin a session.
 .. Close the window.
-.. Click *PUT /settings*.
-.. Click *Try it out*.
+.. Select *PUT /settings*.
+.. Select *Try it out*.
 .. In the request body area, do not enter a value for the `mnode_fqdn` parameter, and specify `false` for the `use_proxy` parameter.
 +
 ----
@@ -142,7 +142,7 @@ https://<management_node_IP>/mnode/2/
   "use_proxy": false
 }
 ----
-.. Click *Execute*.
+.. Select *Execute*.
 
 == Troubleshooting
 If FQDNs are configured incorrectly, you might have problems accessing either the management node, a storage cluster, or both. Use the following information to help troubleshoot the issue.
