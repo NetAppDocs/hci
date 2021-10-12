@@ -169,7 +169,7 @@ a|
 * You get a browser error when attempting to access the management node FQDN.
 * You can log in to the management node and storage cluster using an IP address.
 |The management node FQDN is incorrectly configured, but the storage cluster FQDN is correctly configured.
-|Log in to NetApp Hybrid Cloud Control to correct the FQDN settings in the UI, or use the REST API instructions on this page to correct the settings.
+|Use the NetApp Hybrid Control or REST API instructions on this page to correct the FQDN settings.
 |===
 
 
