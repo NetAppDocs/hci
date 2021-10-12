@@ -88,6 +88,9 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 == Configure time sync
 
 . Ensure time is synced between the management node and the storage cluster using NTP:
+
+NOTE: Starting with Element 12.3.1, substeps (a) to (e) are performed automatically. For management node 12.3.1, proceed to <<substep_f_recover_config_time_sync,substep (f)>> to complete the time sync configuration.
+
 .. Log in to the management node using SSH or the console provided by your hypervisor.
 .. Stop NTPD:
 +
@@ -122,7 +125,7 @@ sudo ntpd -gq
 sudo service ntpd start
 ----
 
-.. Disable time synchronization with host via the hypervisor (the following is a VMware example):
+.. [[substep_f_recover_config_time_sync]]Disable time synchronization with host via the hypervisor (the following is a VMware example):
 +
 NOTE: If you deploy the mNode in a hypervisor environment other than VMware, for example, from the .iso image in an Openstack environment, refer to the hypervisor documentation for the equivalent commands.
 
@@ -138,8 +141,10 @@ vmware-toolbox-cmd timesync disable
 vmware-toolbox-cmd timesync status
 ----
 ...	In vSphere, verify that the `Synchronize guest time with host` box is un-checked in the VM options.
-
++
 NOTE: Do not enable this option if you make future changes to the VM.
+
+NOTE: Do not edit the NTP after you complete the time sync configuration because it affects the NTP when you run the <<step_6_recover_mnode_redeploy,redeploy command>> on the management node.
 
 == Configure the management node
 
