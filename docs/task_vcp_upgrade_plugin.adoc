@@ -41,7 +41,7 @@ IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of t
 * *Management services updates*: You have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle] to the latest version. Updates to the vCenter plug-in are distributed using management services updates that are released outside of major product releases for NetApp HCI and SolidFire all-flash storage.
 * *Management node upgrades*: You are running a management node that has been link:task_hcc_upgrade_management_node.html[upgraded] to version 11.3 or later. vCenter Plug-in 4.4 or later requires a an 11.3 or later management node with a modular architecture that provides individual services. Your management node must be powered on with its IP address or DHCP address configured.
 * *Element storage upgrades*: You have a cluster running NetApp Element software 11.3 or later.
-* *vSphere Web Client*: (For all vSphere users) You have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out.
+* *vSphere Web Client*: You have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client will not recognize updates made during this process to your plug-in if you do not log out.
 
 .Steps
 
@@ -71,7 +71,7 @@ NOTE: You can click *Custom URL* to customize the URL if you are using an HTTP o
 +
 A banner appears in the registration utility UI when the registration is successful.
 
-. (For all vSphere users) Log in to the vSphere Web Client as a vCenter Administrator. If you are already logged in to the vSphere Web Client, you must first log out and then log in again.
+. Log in to the vSphere Web Client as a vCenter Administrator. If you are already logged in to the vSphere Web Client, you must first log out, wait two to three minutes, and then log in again.
 +
 NOTE: This action creates a new database and completes the installation in the vSphere Web Client.
 
