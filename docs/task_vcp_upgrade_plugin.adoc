@@ -71,7 +71,7 @@ NOTE: You can click *Custom URL* to customize the URL if you are using an HTTP o
 +
 A banner appears in the registration utility UI when the registration is successful.
 
-. (For all vSphere users) Log in to the vSphere Web Client as a vCenter Administrator. If you are already logged in to the vSphere Client, you must first log out and then log in again.
+. (For all vSphere users) Log in to the vSphere Web Client as a vCenter Administrator. If you are already logged in to the vSphere Web Client, you must first log out and then log in again.
 +
 NOTE: This action creates a new database and completes the installation in the vSphere Web Client.
 
@@ -83,12 +83,9 @@ image::vcp_shortcuts_page_accessing_plugin.png[depicts the plug-in extension poi
 +
 [NOTE]
 ====
-You might encounter the following issues:
+If the vCenter Plug-in icons are not visible, see link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[Element Plug-in for vCenter Server] documentation about troubleshooting the plug-in.
 
-* The vCenter Plug-in icons are not visible.
-* After you upgrade to VCP 4.8 with VMware vCenter Server 6.7U1, the storage clusters are not listed or a server error appears in the *Clusters and QoSSIOC Settings* section of the NetApp Element Configuration.
-
-If these issues occur, see link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[Element Plug-in for vCenter Server^] documentation about troubleshooting the plug-in.
+After you upgrade to VCP 4.8 with VMware vCenter Server 6.7U1, if the storage clusters are not listed or a server error appears in the *Clusters and QoSSIOC Settings* section of the NetApp Element Configuration, see link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1[Element Plug-in for vCenter Server] documentation about troubleshooting these errors.
 ====
 
 . Verify the version change in the *About* tab in the *NetApp Element Configuration* extension point of the plug-in.
