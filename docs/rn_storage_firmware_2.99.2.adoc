@@ -28,12 +28,12 @@ This firmware package contains the following firmware versions for hardware comp
 |Component |SolidFire SF-series |H410S |H610S
 
 |BIOS
-|N/A
+|Not included
 |NA2.1
 |3B06
 
 |BMC
-|N/A
+|Not included
 |6.84.00
 |*3.91.07*
 
