@@ -30,22 +30,8 @@ IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for VCP 
 * You are upgrading to a 6.7 Flash vSphere Web Client.
 +
 IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in].
-+
-[IMPORTANT]
-====
-After you upgrade to VCP 4.8 with VMware vCenter Server 6.7U1, you might encounter the following issues:
 
-* The clusters are not listed in the *Clusters* section.
-* A server error appears in the *Clusters and QoSSIOC Settings* section of the NetApp Element Configuration.
 
-To resolve the issue, restore the clusters and QoSSIOC settings:
-
-. Log out of vCenter and then log back in.
-. In your current vSphere Client view, select the refresh icon.
-. Check if the clusters and QoSSIOC settings are restored.
-+
-If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters^].
-====
 
 .What you'll need
 
@@ -55,7 +41,7 @@ If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_ta
 * *Management services updates*: You have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle] to the latest version. Updates to the vCenter plug-in are distributed using management services updates that are released outside of major product releases for NetApp HCI and SolidFire all-flash storage.
 * *Management node upgrades*: You are running a management node that has been link:task_hcc_upgrade_management_node.html[upgraded] to version 11.3 or later. vCenter Plug-in 4.4 or later requires a an 11.3 or later management node with a modular architecture that provides individual services. Your management node must be powered on with its IP address or DHCP address configured.
 * *Element storage upgrades*: You have a cluster running NetApp Element software 11.3 or later.
-* *vSphere Web Client*: For vSphere 6.5 and 6.7, you have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out. For vSphere 7.0, you do not need to log out of the web client.
+* *vSphere Web Client*: (For all vSphere users) You have logged out of the vSphere Web Client before beginning any plug-in upgrade. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out.
 
 .Steps
 
@@ -85,7 +71,7 @@ NOTE: You can click *Custom URL* to customize the URL if you are using an HTTP o
 +
 A banner appears in the registration utility UI when the registration is successful.
 
-. (For vSphere 6.5 and 6.7 users) Log in to the vSphere Web Client as a vCenter Administrator.
+. (For all vSphere users) Log in to the vSphere Web Client as a vCenter Administrator. If you are already logged in to the vSphere Client, you must first log out and then log in again.
 +
 NOTE: This action creates a new database and completes the installation in the vSphere Web Client.
 
@@ -95,7 +81,15 @@ NOTE: This action creates a new database and completes the installation in the v
 +
 image::vcp_shortcuts_page_accessing_plugin.png[depicts the plug-in extension points after a successful upgrade or install]
 +
-NOTE: If the vCenter Plug-in icons are not visible, see Element Plug-in for vCenter Server documentation about troubleshooting the plug-in.
+[NOTE]
+====
+You might encounter the following issues:
+
+* The vCenter Plug-in icons are not visible.
+* After you upgrade to VCP 4.8 with VMware vCenter Server 6.7U1, the storage clusters are not listed or a server error appears in the *Clusters and QoSSIOC Settings* section of the NetApp Element Configuration.
+
+If these issues occur, see link:https://review.docs.netapp.com/us-en/vcp_2.19_vcp4.8_release_vcp_repo/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[Element Plug-in for vCenter Server^] documentation about troubleshooting the plug-in.
+====
 
 . Verify the version change in the *About* tab in the *NetApp Element Configuration* extension point of the plug-in.
 +
