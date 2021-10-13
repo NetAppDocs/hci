@@ -115,7 +115,7 @@ The window closes and the FQDN is no longer listed in the *Fully Qualified Domai
 .Steps
 
 . Change the storage cluster settings using the Element API.
-. Access the Element API and delete the following cluster interface preference using the `DeleteClusterInterfacePreference` API method, and insert the cluster MVIP FQDN for the preference value:
+..  Access the Element API and delete the following cluster interface preference using the `DeleteClusterInterfacePreference` API method, and insert the cluster MVIP FQDN for the preference value:
 +
 * Name: `mvip_fqdn`
 +
