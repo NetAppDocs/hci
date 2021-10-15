@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_nde_access_ui_fqdn.html
-summary: Learn how to configure your system for FQDN access to the web UIs.
+summary: Learn how to configure, remove and troubleshoot your system FQDN web UI access.
 keywords: netapp, hci, fqdn, ui, access, web, administration
 ---
 
@@ -15,6 +15,8 @@ keywords: netapp, hci, fqdn, ui, access, web, administration
 
 [.lead]
 
+NetApp HCI with Element software 12.2 or later enables you to access storage cluster web interfaces using the Fully Qualified Domain Name (FQDN). If you want to use the FQDN to access web user interfaces such as the Element web UI, per-node UI, or management node UI, you must first add a storage cluster setting to identify the FQDN used by the cluster.
+
 You to can now access storage cluster web interfaces using the Fully Qualified Domain Name (FQDN). If you want to use the FQDN to access web user interfaces such as the Element web UI, per-node UI, or management node UI, you must first add a storage cluster setting to identify the FQDN used by the cluster. This enables the cluster to properly redirect a login session and improves integration with external services such as key managers and identity providers for multi-factor authentication.
 
 .What you'll need
@@ -23,6 +25,14 @@ You to can now access storage cluster web interfaces using the Fully Qualified D
 * Configuring this feature using the NetApp Hybrid Cloud Control UI requires management services 2.19 or later.
 * To use REST APIs, you must have deployed a management node running version 11.5 or later.
 * You need fully qualified domain names for the management node and each storage cluster that resolve correctly to the management node IP address and each storage cluster IP address.
+
+You can configure or remove FQDN web UI access using NetApp Hybrid Cloud Control and the REST API. You can also troubleshoot incorrectly configured FQDNs.
+
+* <<Configure FQDN web UI access using NetApp Hybrid Cloud Control>>
+* <<Configure FQDN web UI access using the REST API>>
+* <<Remove FQDN web UI access using NetApp Hybrid Cloud Control>>
+* <<Remove FQDN web UI access using the REST API>>
+* <<Troubleshooting>>
 
 == Configure FQDN web UI access using NetApp Hybrid Cloud Control
 
@@ -34,13 +44,15 @@ You to can now access storage cluster web interfaces using the Fully Qualified D
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click the menu icon at the top right of the page.
+. Select the menu icon at the top right of the page.
 . Select *Configure*.
-. In the *Fully Qualified Domain Names* pane, click *Set Up*.
+. In the *Fully Qualified Domain Names* pane, select *Set Up*.
 . In the resulting window, enter the FQDNs for the management node and each storage cluster.
-. Click *Save*.
+. Select *Save*.
 +
 The *Fully Qualified Domain Names* pane lists each storage cluster with its associated MVIP and FQDN.
++
+NOTE: Only connected storage clusters with the FQDN set are listed in the *Fully Qualified Domain Names* pane.
 
 == Configure FQDN web UI access using the REST API
 
@@ -49,7 +61,9 @@ The *Fully Qualified Domain Names* pane lists each storage cluster with its asso
 . Ensure that the Element storage nodes and the management node have DNS configured correctly for the network environment so that FQDNs in the environment can be resolved. To set DNS, go to the per-node UI for storage nodes and to the management node, then select *Network Settings* > *Management Network*.
 .. Per-node UI for storage nodes: `https://<storage_node_management_IP>:442`
 .. Per-node UI for the management node: `https://<management_node_IP>:442`
-. Access the Element API and create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, and insert the cluster MVIP FQDN for the preference value:
+
+. Change the storage cluster settings using the Element API.
+.. Access the Element API and create the following cluster interface preference using the `CreateClusterInterfacePreference` API method, and insert the cluster MVIP FQDN for the preference value:
 +
 * Name: `mvip_fqdn`
 * Value: <Fully Qualified Domain Name for the Cluster MVIP>
@@ -59,22 +73,23 @@ For example, the FQDN here is `storagecluster.my.org`:
 ----
 https://<Cluster_MVIP>/json-rpc/12.2?method=CreateClusterInterfacePreference&name=mvip_fqdn&value=storagecluster.my.org
 ----
+
 . Change the management node settings using the REST API on the management node:
 .. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example:
 +
 ----
 https://<management_node_IP>/mnode/2/
 ----
-.. Click *Authorize* or any lock icon and enter the Element cluster user name and password.
+.. Select *Authorize* or any lock icon and enter the Element cluster user name and password.
 .. Enter the client ID as `mnode-client`.
-.. Click *Authorize* to begin a session.
+.. Select *Authorize* to begin a session.
 .. Close the window.
-.. Click *GET /settings*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. Select *GET /settings*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. Note whether or not the proxy is used as indicated in `"use_proxy"` by `true` or `false`.
-.. Click *PUT /settings*.
-.. Click *Try it out*.
+.. Select *PUT /settings*.
+.. Select *Try it out*.
 .. In the request body area, enter the management node FQDN as the value for the `mnode_fqdn` parameter. Also specify whether the proxy should be used (`true` or `false` from the previous step) for the `use_proxy` parameter.
 +
 ----
@@ -83,7 +98,55 @@ https://<management_node_IP>/mnode/2/
   "use_proxy": false
 }
 ----
-.. Click *Execute*.
+.. Select *Execute*.
+
+== Remove FQDN web UI access using NetApp Hybrid Cloud Control
+
+You can use this procedure to remove FQDN web access for the management node and the storage clusters.
+
+.Steps
+
+. In the *Fully Qualified Domain Names* pane, select *Edit*.
+. In the resulting window, delete the contents in the *FQDN* text field.
+. Select *Save*.
++
+The window closes and the FQDN is no longer listed in the *Fully Qualified Domain Names* pane.
+
+== Remove FQDN web UI access using the REST API
+
+.Steps
+
+. Change the storage cluster settings using the Element API.
+..  Access the Element API and delete the following cluster interface preference using the `DeleteClusterInterfacePreference` API method:
++
+* Name: `mvip_fqdn`
++
+For example:
++
+----
+https://<Cluster_MVIP>/json-rpc/12.2?method=DeleteClusterInterfacePreference&name=mvip_fqdn
+----
+. Change the management node settings using the REST API on the management node:
+.. Access the REST API UI for the management node by entering the management node IP address followed by `/mnode/2/`. For example:
++
+----
+https://<management_node_IP>/mnode/2/
+----
+.. Select *Authorize* or any lock icon and enter the Element cluster user name and password.
+.. Enter the client ID as `mnode-client`.
+.. Select *Authorize* to begin a session.
+.. Close the window.
+.. Select *PUT /settings*.
+.. Select *Try it out*.
+.. In the request body area, do not enter a value for the `mnode_fqdn` parameter. Also specify whether the proxy should be used (`true` or `false`) for the `use_proxy` parameter.
++
+----
+{
+  "mnode_fqdn": "",
+  "use_proxy": false
+}
+----
+.. Select *Execute*.
 
 == Troubleshooting
 If FQDNs are configured incorrectly, you might have problems accessing either the management node, a storage cluster, or both. Use the following information to help troubleshoot the issue.
@@ -96,21 +159,21 @@ a|
 * You get a browser error when attempting to access either the management node or the storage cluster using the FQDN.
 * You cannot log in to either the management node or the storage cluster using an IP address.
 |The management node FQDN and storage cluster FQDN are both incorrectly configured.
-|Use the REST API instructions on this page to remove the FQDN settings and configure them again.
+|Use the REST API instructions on this page to remove the management node and storage cluster FQDN settings and configure them again.
 
 a|
 
 * You get a browser error when attempting to access the storage cluster FQDN.
 * You cannot log in to either the management node or the storage cluster using an IP address.
 |The management node FQDN is correctly configured, but the storage cluster FQDN is incorrectly configured.
-|Use the REST API instructions on this page to remove the FQDN settings and configure them again.
+|Use the REST API instructions on this page to remove the storage cluster FQDN settings and configure them again.
 
 a|
 
 * You get a browser error when attempting to access the management node FQDN.
 * You can log in to the management node and storage cluster using an IP address.
 |The management node FQDN is incorrectly configured, but the storage cluster FQDN is correctly configured.
-|Log in to NetApp Hybrid Cloud Control to correct the FQDN settings in the UI, or use the REST API instructions on this page to correct the settings.
+|Log in to NetApp Hybrid Cloud Control to correct the management node FQDN settings in the UI, or use the REST API instructions on this page to correct the settings.
 |===
 
 
