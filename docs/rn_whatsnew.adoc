@@ -46,22 +46,20 @@ NetApp HCI 1.9P1 includes security and stability improvements.
 NetApp HCI 1.9P1 includes Element 12.3.1 for storage clusters.
 //Element 12.3 introduces software encryption at rest enhancements, security enhancements, storage firmware updates, enhanced snapshot functionality, and improved behavior for failing drives.
 
-<<<<<<< HEAD
-. Go to https://mysupport.netapp.com/site/products/all/details/solidfire-elementos/bugsonline-tab[NetApp Bugs Online^].
-. In the  *Search by Keyword* field, type in the product name, for example, Element.
-. Select the image:icon_plus.PNG[plus icon], select the  *Fixed in Versions* filter, and select *OK*.
-+
-image:bol_filters.PNG[BOL filters align="center"]
-. Select *New Search*.
-. Type the release version in the *Fixed in Versions* field.
-=======
 === Storage Firmware Bundle 2.99.2
 The Element 12.3.1 release includes the storage firmware bundle version 2.99.2. If your storage cluster is already at Element 12.3, you have the option to simply install the new 2.99.2 firmware bundle.
 
 === NetApp Bugs Online contains known and resolved issues
-//Beginning with Element 12.3,
 Known and resolved issues are listed in the NetApp Bugs Online tool. You can browse these issues for Element and other products at https://mysupport.netapp.com/site/products/all/details/solidfire-elementos/bugsonline-tab[NetApp Bugs Online].
->>>>>>> b9bf1f0dcd72e0206f3820ceab3ca0763136995a
+
+.Steps
+. Go to https://mysupport.netapp.com/site/products/all/details/solidfire-elementos/bugsonline-tab[NetApp Bugs Online^].
+. In the  *Search by Keyword* field, type in the product name, for example, "Element".
+. Select the image:icon_plus.PNG[plus icon], select the *Fixed in Versions* filter, and select *OK*.
++
+image:bol_filters.PNG[BOL filters align="center"]
+. Select *New Search*.
+. Type the release version in the *Fixed in Versions* field.
 
 //=== FIFO snapshot queue support
 //Element 12.3 enables you to create a First-In-First-Out (FIFO) queue for volume snapshots. Using the Element API, you can specify the minimum and maximum number of FIFO snapshot slots that should be reserved when you create a volume. When the FIFO snapshot queue for a volume is full, the next snapshot you create for that volume removes the oldest snapshot of that volume from the system. FIFO and non-FIFO snapshots both use the same pool of available snapshot slots on a volume.

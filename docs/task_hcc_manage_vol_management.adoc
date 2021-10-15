@@ -168,6 +168,7 @@ NOTE: Increasing the volume size of a clone results in a new volume with additio
 
 +
 .. Click *Clone Volumes*.
++
 NOTE: The time to complete a cloning operation is affected by volume size and current cluster load. Refresh the page if the cloned volume does not appear in the volume list.
 
 == Add volumes to a volume access group

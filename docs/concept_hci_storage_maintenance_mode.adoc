@@ -15,6 +15,8 @@ keywords: netapp, hci, storage nodes, maintenance, mode
 [.lead]
 If you need to take a storage node offline for maintenance such as software upgrades or host repairs, you can minimize the I/O impact to the rest of the storage cluster by enabling maintenance mode for that node. You can use maintenance mode with both appliance nodes as well as SolidFire Enterprise SDS nodes.
 
+NOTE: When a storage node is powered off, it displays as *Unavailable* in the Node Status column on the Storage page in HCC, as this column displays the status of the node from the cluster's perspective. The powered off status of the node is indicated by the *Offline* icon next to the node's hostname.
+
 You can only transition a storage node to maintenance mode if the node is healthy (has no blocking cluster faults) and the storage cluster is tolerant to a single node failure. Once you enable maintenance mode for a healthy and tolerant node, the node is not immediately transitioned; it is monitored until the following conditions are true:
 
 * All volumes hosted on the node have failed over
@@ -41,6 +43,8 @@ You can see the states of maintenance mode operations when working with maintena
 
 == Find more information
 
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_enablemaintenancemode.html[Enable maintenance mode with the Element API^]
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_disablemaintenancemode.html[Disable maintenance mode with the Element API^]
 *	https://docs.netapp.com/us-en/element-software/api/concept_element_api_about_the_api.html[NetApp Element API documentation^]
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
