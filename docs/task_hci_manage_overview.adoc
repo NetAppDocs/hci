@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hci_manage_overview.html
-summary: You can manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
-keywords: netapp, hci, install, deploy, get started
+summary: You can configure the FQDM and manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
+keywords: netapp, hci, install, deploy, get started, configure, fqdn, fully qualified domain name
 ---
 
 = NetApp HCI management overview
@@ -14,10 +14,12 @@ keywords: netapp, hci, install, deploy, get started
 :imagesdir: ../media/
 
 [.lead]
-You can manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
+You can configure the Fully Qualified Domain Name and manage credentials for NetApp HCI, user accounts, storage clusters, volumes, volume access groups, initiators, volume QoS policies and the management node.
 
 Here are the items you can work with:
 
+* link:task_nde_access_ui_fqdn.html[Configure Fully Qualified Domain Name web UI access]
+* link:task_post_deploy_credentials.html[Change credentials in NetApp HCI]
 * link:task_hci_credentials_vcenter_esxi.html[Update vCenter and ESXi credentials]
 * link:task_hcc_manage_storage_overview.html[Manage NetApp HCI storage assets]
 * link:task_mnode_work_overview.html[Work with the management node]
