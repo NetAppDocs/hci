@@ -101,7 +101,7 @@ The Storage Performance pane helps you identify whether the performance is reach
 
 The information on this pane refreshes every 10 seconds and shows an average of all the points on the graph.
 
-For details about the associated Element API method, see the https://docs.netapp.com/us-en/element-software/api/reference_element_api_getclusterstats.html[GetClusterStats] method in the _Element software API documentation_.
+For details about the associated Element API method, see the https://docs.netapp.com/us-en/element-software/api/reference_element_api_getclusterstats.html[GetClusterStats^] method in the _Element software API documentation_.
 
 .Steps
 
