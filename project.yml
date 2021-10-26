@@ -1,3 +1,12 @@
+---
+settings:
+  name: HCI
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: true
+    langs: us-en,ja-jp
 sidebar:
   entries:
     - title: NetApp HCI Documentation
