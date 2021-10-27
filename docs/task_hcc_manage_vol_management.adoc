@@ -117,7 +117,6 @@ NOTE: The default volume size selection is in GB. You can create volumes using s
 .. Select the account that should have access to the volume.
 +
 Begin typing and the auto-complete function displays possible values for you to choose.
-
 +
 If an account does not exist, click *Create New Account*, enter a new account name, and click *Create*. The account is created and associated with the existing volume.
 
@@ -168,6 +167,7 @@ NOTE: Increasing the volume size of a clone results in a new volume with additio
 
 +
 .. Click *Clone Volumes*.
++
 NOTE: The time to complete a cloning operation is affected by volume size and current cluster load. Refresh the page if the cloned volume does not appear in the volume list.
 
 == Add volumes to a volume access group

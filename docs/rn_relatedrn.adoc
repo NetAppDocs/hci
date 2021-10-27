@@ -19,12 +19,14 @@ You can find links to the latest and earlier release notes for various component
 NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == NetApp HCI
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879274[NetApp HCI 1.9P1 Release Notes] _NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876591[NetApp HCI 1.9 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873790[NetApp HCI 1.8P1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes]
 
 == NetApp Element software
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2878089[NetApp Element Software 12.3.1 Release Notes] _NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876498[NetApp Element Software 12.3 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2877210[NetApp Element Software 12.2.1 Release Notes]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789[NetApp Element Software 12.2 Release Notes]
@@ -40,11 +42,12 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes]
 
 == NetApp Element Plug-in for vCenter Server
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296[vCenter Plug-in 4.8 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748[vCenter Plug-in 4.7 Release Notes^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[vCenter Plug-in 4.6 Release Notes]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396[vCenter Plug-in 4.5 Release Notes]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[vCenter Plug-in 4.4 Release Notes]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[vCenter Plug-in 4.6 Release Notes^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396[vCenter Plug-in 4.5 Release Notes^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[vCenter Plug-in 4.4 Release Notes^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes^]
 
 == Compute firmware
 * link:rn_compute_firmware_2.76.10.html[Compute Firmware Bundle 2.76.10 Release Notes (latest)]
@@ -53,7 +56,8 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes]
 
 == Storage firmware
-* link:rn_storage_firmware_2.76.html[Storage Firmware Bundle 2.76 Release Notes (latest)]
+* link:rn_storage_firmware_2.99.2.html[Storage Firmware Bundle 2.99.2 Release Notes (latest)]
+* link:rn_storage_firmware_2.76.html[Storage Firmware Bundle 2.76 Release Notes]
 * link:rn_storage_firmware_2.27.html[Storage Firmware Bundle 2.27 Release Notes]
 * link:rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes]
 

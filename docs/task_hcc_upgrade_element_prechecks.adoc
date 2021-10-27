@@ -49,14 +49,14 @@ Using NetApp Hybrid Cloud Control (HCC), you can verify that a storage cluster i
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click *Upgrade* near the top right of the interface.
+. Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select the *Storage* tab.
-. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
-. On the *Storage Health Check* page, click *Run Health Check*.
+. Select the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
+. On the *Storage Health Check* page, select *Run Health Check*.
 . If there are issues, do the following:
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
-.. After you have resolved cluster issues, click *Re-Run Health Check*.
+.. After you have resolved cluster issues, select *Re-Run Health Check*.
 
 After the health check completes without errors, the storage cluster is ready to upgrade. See storage node upgrade link:task_hcc_upgrade_element_software.html[instructions] to proceed.
 
@@ -69,36 +69,46 @@ You can use REST API to verify that a storage cluster is ready to be upgraded. T
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://[management node IP]/mnode
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET /installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
-.. From the response, copy the installation asset ID (`"id"`).
-.. From the REST API UI, click *GET /installations/{id}*.
-.. Click *Try it out*.
-.. Paste the installation asset ID into the *id* field.
-.. Click *Execute*.
-.. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to check for upgrade readiness.
+.. From the REST API UI, select `GET /assets`.
+.. Select *Try it out*.
+.. Select *Execute*.
+.. From the response, copy the `"id"` from the `"storage"` section of the cluster you intend to check for upgrade readiness.
++
+NOTE: Do not use the `"parent"` value in this section because this is the management node’s ID, not the storage cluster’s ID.
++
+[subs=+quotes]
+----
+"config": {},
+"credentialid": "12bbb2b2-f1be-123b-1234-12c3d4bc123e",
+"host_name": "SF_DEMO",
+*"id": "12cc3a45-e6e7-8d91-a2bb-0bdb3456b789",*
+"ip": "10.123.12.12",
+"parent": "d123ec42-456e-8912-ad3e-4bd56f4a789a",
+"sshcredentialid": null,
+"ssl_certificate": null
+----
+
 . Run health checks on the storage cluster:
 .. Open the storage REST API UI on the management node:
 +
 ----
 https://[management node IP]/storage/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. Click *POST /health-checks*.
-.. Click *Try it out*.
-.. Enter the storage cluster ID in the parameter field.
+.. Select *POST /health-checks*.
+.. Select *Try it out*.
+.. In the parameter field, enter the storage cluster ID obtained in Step 1.
 +
 ----
 {
@@ -107,7 +117,7 @@ https://[management node IP]/storage/1/
 }
 ----
 
-.. Click *Execute* to run a health check on the specified storage cluster.
+.. Select *Execute* to run a health check on the specified storage cluster.
 +
 The response should indicate state as `initializing`:
 +
@@ -130,22 +140,29 @@ The response should indicate state as `initializing`:
 ----
 .. Copy the `healthCheckID` that is part of response.
 . Verify the results of the health checks:
-.. Click *GET ​/health-checks​/{healthCheckId}*.
-.. Click *Try it out*.
+.. Select *GET ​/health-checks​/{healthCheckId}*.
+.. Select *Try it out*.
 .. Enter the health check ID in the parameter field.
-.. Click *Execute*.
+.. Select *Execute*.
 .. Scroll to the bottom of the response body.
-. If the `message` return indicates that there were problems regarding cluster health, do the following:
-.. Go to the specific KB article listed for each issue or perform the specified remedy.
-.. If a KB is specified, complete the process described in the relevant KB article.
-.. After you have resolved cluster issues, run *GET ​/health-checks​/{healthCheckId}* again.
-
++
 If all health checks are successful, the return is similar to the following example:
++
 ----
 "message": "All checks completed successfully.",
 "percent": 100,
 "timestamp": "2020-03-06T00:03:16.321621Z"
 ----
+
+. If the `message` return indicates that there were problems regarding cluster health, do the following:
+.. Select *GET ​/health-checks​/{healthCheckId}/log*
+.. Select *Try it out*.
+.. Enter the health check ID in the parameter field.
+.. Select *Execute*.
+.. Review any specific errors and obtain their associated KB article links.
+.. Go to the specific KB article listed for each issue or perform the specified remedy.
+.. If a KB is specified, complete the process described in the relevant KB article.
+.. After you have resolved cluster issues, run *GET ​/health-checks​/{healthCheckId}/log* again.
 
 == Use HealthTools to run Element storage health checks prior to upgrading storage
 

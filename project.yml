@@ -1,3 +1,12 @@
+---
+settings:
+  name: HCI
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: true
+    langs: us-en,ja-jp
 sidebar:
   entries:
     - title: NetApp HCI Documentation
@@ -134,12 +143,12 @@ sidebar:
              url: /docs/task_nde_supported_net_changes.html
            - title: Disable the smartd service on NetApp HCI compute nodes
              url: /docs/task_nde_disable_smartd.html
+           - title: Create a NetApp HCC role in vCenter
+             url: /docs/task_mnode_create_netapp_hcc_role_vcenter.html
            - title: Keep VMware vSphere up to date
              url: /docs/task_nde_update_vsphere.html
            - title: Install GPU drivers for GPU-enabled compute nodes
              url: /docs/task_nde_install_GPU_drivers.html
-           - title: Configure Fully Qualified Domain Name web UI access
-             url: /docs/task_nde_access_ui_fqdn.html
            - title: Access NetApp Hybrid Cloud Control
              url: /docs/task_nde_access_hcc.html
            - title: Reduce boot media wear on a NetApp HCI compute node
@@ -148,6 +157,8 @@ sidebar:
       entries:
         - title: Manage NetApp HCI overview
           url: /docs/task_hci_manage_overview.html
+        - title: Configure Fully Qualified Domain Name web UI access
+          url: /docs/task_nde_access_ui_fqdn.html
         - title: Change credentials in NetApp HCI
           url: /docs/task_post_deploy_credentials.html
         - title: Update vCenter and ESXi credentials
@@ -259,9 +270,9 @@ sidebar:
           url: /docs/concept_hci_upgrade_overview.html
         - title: Upgrade sequences
           entries:
-            - title: Upgrade your NetApp HCI system for version 1.9
+            - title: Upgrade your NetApp HCI system for version 1.9 or 1.9P1
               url: /docs/task_hcc_upgrade_all.html
-            - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.3
+            - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.3.x
               url: /docs/task_sf_upgrade_all.html
         - title: System upgrade procedures
           entries:
