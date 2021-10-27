@@ -60,7 +60,7 @@ To see details, in the Compute panes, select *Show Details*.
 
 NOTE: Your vCenter instances only show in the Compute pane when at least one NetApp HCI compute node is associated with that instance. To list the vCenter instances linked in NetApp Hybrid Cloud Control, you can use the link:task_mnode_edit_vcenter_assets.html[APIs].
 
-NOTE: In order to manage a compute node in HCC, you must add the compute node to a vCenter host cluster. In the following example, Node1 and Node2 are in the host cluster and Node3 is outside the host cluster. In this scenario, Node3 is displayed in the HCC nodes view but cannot be managed.
+NOTE: To manage a compute node in HCC, you must add the compute node to a vCenter host cluster. link:add_link[KB].
 
 image::hcc_monitor_compute_resources.PNG[Monitor compute resources]
 
