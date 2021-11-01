@@ -38,7 +38,7 @@ This firmware package contains the following firmware versions for hardware comp
 |*3.91.07*
 
 |NIC / Mellanox
-|-
+|Not included
 |14.25.1020
 |14.25.1020
 

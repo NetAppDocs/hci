@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hcc_manage_storage_clusters.html
-summary: You can add, remove, and change storage clusters using the NetApp Hybrid Control UI.
-keywords: netapp, hci, element, storage cluster, hybrid cloud control, hcc
+summary: You can add, remove, change, and enable and disable maintenance mode for storage clusters using the NetApp Hybrid Control UI.
+keywords: netapp, hci, element, storage cluster, hybrid cloud control, hcc, maintenance mode, enable, disable
 ---
 
 = Add and manage storage clusters using NetApp Hybrid Cloud Control
@@ -18,6 +18,8 @@ You can add storage clusters to the management node assets inventory so that the
 
 After a storage cluster is added, you can monitor cluster performance, change storage cluster credentials for the managed asset, or remove a storage cluster from the management node asset inventory if it no longer needs to be managed using HCC.
 
+Starting with Element 12.2, you can use the link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature options to enable and disable maintenance mode for your storage cluster nodes.
+
 .What you'll need
 * *Cluster administrator permissions*: You have permissions as administrator on the link:concept_hci_clusters.html#authoritative-storage-clusters[authoritative storage cluster]. The authoritative cluster is the first cluster added to the management node inventory during system setup.
 * *Element software*: Your storage cluster version is running NetApp Element software 11.3 or later.
@@ -29,6 +31,7 @@ After a storage cluster is added, you can monitor cluster performance, change st
 * <<Confirm storage cluster status>>
 * <<Edit storage cluster credentials>>
 * <<Remove a storage cluster>>
+* <<Enable and disable maintenance mode>>
 
 === Add a storage cluster
 You can add a storage cluster to the  management node assets inventory using NetApp Hybrid Cloud Control. This allows you to manage and monitor the cluster using the HCC UI.
@@ -89,6 +92,62 @@ CAUTION: Clicking *Yes* next removes the cluster from the installation.
 . Select *Yes*.
 
 [discrete]
+
+=== Enable and disable maintenance mode
+This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature options give you the capability to <<enable_main_mode,enable>> and <<disable_main_mode,disable>> maintenance mode for a storage cluster node.
+
+.What you'll need
+* *Element software*: Your storage cluster version is running NetApp Element software 12.2 or later.
+* *Management node*: You have deployed a management node running version 12.2 or later.
+* *Management services*: You have updated your management services bundle to version 2.19 or later.
+* You have access to log in at the administrator level.
+
+==== [[enable_main_mode]]Enable maintenance mode
+You can use the following procedure to enable maintenance mode for a storage cluster node.
+
+NOTE: Only one node can be in maintenance mode at a time.
+
+.Steps
+.	Open a web browser and browse to the IP address of the management node. For example:
++
+`https://[management node IP address]`
+.	Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
++
+NOTE: The maintenance mode feature options are disabled at the read-only level.
+
+.	In the left navigation blue box, select the NetApp HCI installation.
+.	In the left navigation pane, select *Nodes*.
+.	To view storage inventory information, select *Storage*.
+.	Enable maintenance mode on a storage node:
++
+[NOTE]
+====
+The storage nodes table is updated automatically every two minutes for non-user initiated actions. Before an action, to ensure that you have the most up-to-date status, you can refresh the nodes table by using the refresh icon located on the upper-right side of the nodes table.
+
+image:hcc_enable_maintenance_mode.PNG[Enable maintenance mode]
+====
+
+..	Under *Actions*, select *Enable Maintenance Mode*.
++
+While *Maintenance Mode* is being enabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
++
+After *Enabling Maintenance Mode* completes, the *Node Status* column displays a wrench icon and the text "*Maintenance Mode*" for the node that is in maintenance mode.
+
+==== [[disable_main_mode]]Disable maintenance mode
+After a node is successfully placed in maintenance mode, the *Disable Maintenance Mode* action is available for this node. Actions on the other nodes are unavailable until maintenance mode is disabled successfully on the node undergoing maintenance.
+
+.Steps
+.	For the node under maintenance mode, under *Actions*, select *Disable Maintenance Mode*.
++
+While *Maintenance Mode* is being disabled, maintenance mode actions are unavailable for the selected node and all other nodes on the same cluster.
++
+After *Disabling Maintenance Mode* completes, the *Node Status* column displays *Active*.
++
+NOTE: When a node is in maintenance mode, it does not accept new data. As a result, it can take longer to disable maintenance mode because the node must sync its data back up before it can exit maintenance mode. The longer you spend in maintenance mode, the longer it can take to disable maintenance mode.
+
+==== Troubleshoot
+If you encounter errors when you are either enabling or disabling maintenance mode, a banner error displays at the top of the nodes table. For more information on the error, you can select the *Show Details* link that is provided on the banner to show what the API returns are.
+
 == Find more information
 * link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

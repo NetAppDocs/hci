@@ -1,3 +1,12 @@
+---
+settings:
+  name: HCI
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: true
+    langs: us-en,ja-jp
 sidebar:
   entries:
     - title: NetApp HCI Documentation
@@ -140,8 +149,6 @@ sidebar:
              url: /docs/task_nde_update_vsphere.html
            - title: Install GPU drivers for GPU-enabled compute nodes
              url: /docs/task_nde_install_GPU_drivers.html
-           - title: Configure Fully Qualified Domain Name web UI access
-             url: /docs/task_nde_access_ui_fqdn.html
            - title: Access NetApp Hybrid Cloud Control
              url: /docs/task_nde_access_hcc.html
            - title: Reduce boot media wear on a NetApp HCI compute node
@@ -150,6 +157,8 @@ sidebar:
       entries:
         - title: Manage NetApp HCI overview
           url: /docs/task_hci_manage_overview.html
+        - title: Configure Fully Qualified Domain Name web UI access
+          url: /docs/task_nde_access_ui_fqdn.html
         - title: Change credentials in NetApp HCI
           url: /docs/task_post_deploy_credentials.html
         - title: Update vCenter and ESXi credentials
