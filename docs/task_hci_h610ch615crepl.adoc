@@ -152,9 +152,7 @@ You can monitor the progress while NetApp HCI adds and configures the resources.
 . Optional: Verify that any new compute nodes are visible in vCenter.
 
 == Install the GPU drivers
-Compute nodes with NVIDIA graphics processing units (GPUs), like the H610C node, need the NVIDIA software drivers installed in VMware ESXi so that they can take advantage of the increased processing power.
-
-NOTE: You can only install the GPU drivers when the compute node has a GPU card.
+Compute nodes with NVIDIA graphics processing units (GPUs), like the H610C node, need the NVIDIA software drivers installed in VMware ESXi so that they can take advantage of the increased processing power. To install the GPU drivers, the compute node must have a GPU card.
 
 .Steps
 . Open a browser and browse to the NVIDIA licensing portal at the following URL:
