@@ -28,10 +28,12 @@ IMPORTANT: For H610S storage nodes running Element software version 12.0, you sh
 
 IMPORTANT: You must upgrade to the latest management services bundle before upgrading the firmware on your storage nodes.  If you are updating your Element software to version 12.2 or later, you need management services 2.14.60 or later to proceed.
 
+IMPORTANT: To update your iDRAC/BIOS firmware, contact NetApp Support. For additional information, see this link:https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes[KB article^].
+
 * *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
 
-NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article] (login required).
 
 .Upgrade options
 
@@ -159,7 +161,7 @@ a|
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://<ManagementNodeIP>/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -185,7 +187,7 @@ a|
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://<ManagementNodeIP>/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -209,7 +211,7 @@ The response indicates `state` as `SUCCESS` when complete.
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -254,7 +256,7 @@ https://[management node IP]/inventory/1/
 .. Open the storage REST API UI on the management node:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
