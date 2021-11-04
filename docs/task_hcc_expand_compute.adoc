@@ -30,7 +30,7 @@ After you finish NetApp HCI deployment, you can expand and configure NetApp HCI 
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
-https://[management node IP address]
+https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . Click *Expand* at the top right corner of the interface.

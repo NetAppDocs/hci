@@ -36,7 +36,7 @@ You can use the REST API get the installation ID and the ID of the storage clust
 . Access the REST API UI for the inventory service by entering the management node IP address followed by `/inventory/1/`:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -67,7 +67,7 @@ The API returns a list of all known installations.
 . Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -96,7 +96,7 @@ NOTE: All users defined on the authoritative cluster are defined as users on all
 . Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 .. Enter the cluster user name and password.
@@ -150,7 +150,7 @@ NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and c
 . Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +
@@ -193,7 +193,7 @@ NOTE: Ensure you have followed the steps in <<Retrieve the installation ID and c
 . Access the REST API UI for the storage service by entering the management node IP address followed by `/storage/1/`:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 . Click *Authorize* or any lock icon and complete the following:
 +

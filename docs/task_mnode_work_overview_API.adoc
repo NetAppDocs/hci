@@ -14,7 +14,7 @@ keywords: netapp, mnode api, management node api, rest api
 :imagesdir: ../media/
 
 [.lead]
-By using the built-in REST API UI (`https://<managementNodeIP>/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
+By using the built-in REST API UI (`https://<ManagementNodeIP>/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
 
 Tasks you can perform with REST APIs:
 

@@ -85,7 +85,7 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes].
 
 .Steps
-. Open the REST API UI on the management node: `https://[management node IP]/mnode`
+. Open the REST API UI on the management node: `https://<ManagementNodeIP>/mnode`
 . Click *Authorize* and complete the following:
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client` if the value is not already populated.
@@ -123,7 +123,7 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 * You have downloaded the service bundle update from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site] to a device that can be used in the dark site.
 
 .Steps
-. Open the REST API UI on the management node: `https://[management node IP]/mnode`
+. Open the REST API UI on the management node: `https://<ManagementNodeIP>/mnode`
 . Click *Authorize* and complete the following:
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client` if the value is not already populated.

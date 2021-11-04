@@ -35,7 +35,7 @@ TOKEN=`curl -k -X POST https://MVIP/auth/connect/token -F client_id=mnode-client
 . Access the REST API UI for the service by entering the management node IP address followed by the service name, for example `/mnode/`:
 +
 ----
-https://<managementNodeIP>/mnode/
+https://<ManagementNodeIP>/mnode/
 ----
 
 . Click *Authorize*.

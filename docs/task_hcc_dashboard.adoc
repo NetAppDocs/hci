@@ -33,7 +33,7 @@ Only compute nodes that are managed and clusters with at least one managed node 
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
-https://[management node IP address]
+https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . View the Hybrid Cloud Control Dashboard.

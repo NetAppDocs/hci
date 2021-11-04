@@ -183,7 +183,7 @@ You can use APIs to upgrade each compute node in a cluster to the latest firmwar
 
 .What you'll need
 
-Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://[management node IP]/inventory/1/`).
+Compute node assets, including vCenter and hardware assets, must be known to management node assets. You can use the inventory service APIs to verify assets (`https://<ManagementNodeIP>/inventory/1/`).
 
 .Steps
 
@@ -200,7 +200,7 @@ a|
 .. Open the package service REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://<ManagementNodeIP>/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -227,7 +227,7 @@ TIP: For dark site upgrades, you can reduce upload time if the upgrade package a
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://<ManagementNodeIP>/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -252,7 +252,7 @@ The response indicates `state` as `SUCCESS` when complete.
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -301,7 +301,7 @@ https://[management node IP]/inventory/1/
 .. Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware/2/
+https://<ManagementNodeIP>/hardware/2/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -365,7 +365,7 @@ The upgrade has finished successfully when the status for each step is `complete
 .. Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware/2/
+https://<ManagementNodeIP>/hardware/2/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.

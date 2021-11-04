@@ -24,7 +24,7 @@ You can retrieve logs from the services running on the management node using the
 . Open the REST API UI on the management node:
 +
 ----
-https://[managementNodeIP]/mnode
+https://<ManagementNodeIP>/mnode
 ----
 
 . Select *Authorize* or any lock icon and complete the following:

@@ -116,7 +116,7 @@ curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: applicat
 . Open the management node REST API UI on the management node:
 +
 ----
-https://<managementNodeIP>/k8sdeployer/api/
+https://<ManagementNodeIP>/k8sdeployer/api/
 ----
 . Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.
@@ -166,7 +166,7 @@ curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: applicat
 . Open the management node REST API UI on the management node:
 +
 ----
-https://<managementNodeIP>/k8sdeployer/api/
+https://<ManagementNodeIP>/k8sdeployer/api/
 ----
 . Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.
@@ -219,7 +219,7 @@ curl -X GET "https://<mNodeIP>/k8sdeployer/1/task/<taskID>" -H "accept: applicat
 . Open the management node REST API UI on the management node:
 +
 ----
-https://<managementNodeIP>/k8sdeployer/api/
+https://<ManagementNodeIP>/k8sdeployer/api/
 ----
 . Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.

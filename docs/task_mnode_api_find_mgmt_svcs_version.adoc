@@ -30,12 +30,12 @@ You can verify the version numbers of the management node OS, management service
 * Get version information about the management node OS, the management services bundle, and the management node API (mnode-api) service that are running on the management node:
 +
 ----
-curl -X GET "https://<managementNodeIP>/mnode/about" -H  "accept: application/json"
+curl -X GET "https://<ManagementNodeIP>/mnode/about" -H  "accept: application/json"
 ----
 * Get version information about individual services running on the management node:
 +
 ----
-curl -X GET "https://<managementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer ${TOKEN}"
+curl -X GET "https://<ManagementNodeIP>/mnode/services?status=running" -H  "accept: */*" -H  "Authorization: Bearer ${TOKEN}"
 ----
 +
 NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:task_mnode_api_get_authorizationtouse.html[authorize]. The bearer `${TOKEN}` is in the curl response.
@@ -45,7 +45,7 @@ NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:t
 . Access the REST API UI for the service by entering the management node IP address followed by `/mnode/`:
 +
 ----
-https://<managementNodeIP>/mnode/
+https://<ManagementNodeIP>/mnode/
 ----
 . Do one of the following:
 * Get version information about the management node OS, the management services bundle, and the management node API (mnode-api) service that are running on the management node:
