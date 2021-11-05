@@ -14,7 +14,7 @@ keywords: netapp, hci, element, Witness Node
 :keywords: netapp, hci, element, Witness Node
 
 [.lead]
-NetApp HCI supports a minimum installation size of two storage nodes and two compute nodes. When you install NetApp HCI using a two or three-node storage cluster, you need to be aware of NetApp HCI Witness Nodes and their VM resource requirements.
+NetApp HCI supports a minimum installation size of two storage nodes and two compute nodes. When you install NetApp HCI using a two or three-node storage cluster, you need to be aware of NetApp HCI Witness Nodes and their virtual machine (VM) resource requirements.
 
 When a storage cluster uses two or three nodes, it also deploys a pair of Witness Nodes alongside each storage cluster. Witness Nodes have the following VM resource requirements:
 
@@ -33,7 +33,12 @@ When a storage cluster uses two or three nodes, it also deploys a pair of Witnes
 
 NetApp HCI supports only certain storage node models in two-node or three-node storage clusters. For more information, see the Release Notes for your NetApp HCI version.
 
-NOTE: When the NetApp HCI installation process installs Witness Nodes, a virtual machine template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the *Redeploy Witness Nodes for two and three-node storage clusters* section link:task_hci_h410crepl.html[here^].
+|===
+a|
+*Best practice:* Configure the Witness Node VMs to use the compute node's local datastore (default set by NDE), do not configure them on shared storage, such as SolidFire storage volumes. To prevent the VMs migrating automatically, set the Witness Node VM's Distributed Resource Scheduler (DRS) automation level to *Disabled*. This prevents both Witness Nodes running on the same compute node and creating a non-high availability (HA) pair configuration.
+|===
+
+NOTE: When the NetApp HCI installation process installs Witness Nodes, a VM template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the *Redeploy Witness Nodes for two and three-node storage clusters* section link:task_hci_h410crepl.html[here^].
 
 [discrete]
 == Find more information
