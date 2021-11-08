@@ -55,7 +55,7 @@ NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first ti
 
 TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
 
-NOTE: To manage a compute node in NetApp Hybrid Cloud Control, you must add the compute node to a vCenter host cluster, see the #KB article#.
+NOTE: To manage a compute node in NetApp Hybrid Cloud Control, you must add the compute node to a vCenter host cluster, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control[KB article].
 
 [discrete]
 == Find more information
