@@ -69,7 +69,10 @@ Perform the following steps to upgrade the BMC firmware version on your H610S no
 
 .What you'll need
 * You have checked for alerts by clicking *Reporting* > *Alerts* in the NetApp Element software web UI to ensure that there are no errors.
-* You have downloaded the BMC update package.
+* You have downloaded the BMC update package. Download the BMC update package https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/H610S_BMC_3.84[here^].
+
+NOTE: This update package includes the `rom.ima_enc` file and all files needed for the firmware update.
+
 * You have ensured that the BMC and the computer you are using to perform the update are located on the same network.
 * You have contacted NetApp Support for assistance with the BMC upgrade.
 
