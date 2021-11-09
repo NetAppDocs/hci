@@ -28,17 +28,17 @@ This firmware package contains the following firmware versions for hardware comp
 |Component |SolidFire SF-series |H410S |H610S
 
 |BIOS
-|N/A
+|Not included
 |NA2.1
 |3B06
 
 |BMC
-|N/A
+|Not included
 |6.84.00
 |*3.91.07*
 
 |NIC / Mellanox
-|-
+|Not included
 |14.25.1020
 |14.25.1020
 
@@ -244,3 +244,4 @@ The following are security vulnerabilities that have been resolved in this relea
 == Find more information
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes[KB: How to update iDRAC/BIOS firmware on SF Series nodes^]
