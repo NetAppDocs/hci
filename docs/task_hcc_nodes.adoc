@@ -17,6 +17,7 @@ keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute
 You can view both your storage and compute assets in your system and determine their IP addresses, names, and software versions.
 
 You can view storage information for your multiple node systems and any NetApp HCI Witness Nodes associated with two-node or three-node clusters. If link:concept_hcc_custom_protection_domains.html[custom protection domains^] are assigned, you can see which protection domains are assigned to specific nodes.
+
 Witness Nodes manage quorum within the cluster; they are not used for storage. Witness Nodes are applicable only to NetApp HCI and not to all-flash storage environments.
 
 For more information about Witness Nodes, see link:concept_hci_nodes.html[Nodes definitions].
@@ -45,6 +46,7 @@ NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first ti
 .. The firmware bundle version: Starting with management services version 2.14, if you have clusters running Element 12.0 or later, you can see the firmware bundle version for these clusters. If the nodes in a cluster have different firmware versions on them, you can see *Multiple* in the *Firmware Bundle Version* column.
 .. Custom protection domains: If custom protection domains are in use on the cluster, you can see custom protection domain assignments for each node in the cluster. If custom protection domains are not enabled, this column does not appear.
 . To view compute inventory information, click *Compute*.
+
 . You can manipulate the information on these pages in several ways:
 .. To filter the list of items in the results, click the *Filter* icon and select the filters. You can also enter text for the filter.
 .. To show or hide columns, click the *Show/Hide Columns* icon.
@@ -53,6 +55,7 @@ NOTE: When you launch a new NetApp Hybrid Cloud Control session for the first ti
 
 TIP: To view the number of storage and compute resources, look at the NetApp Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
 
+NOTE: To manage a compute node in NetApp Hybrid Cloud Control, you must https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control[add the compute node to a vCenter host cluster^].
 
 [discrete]
 == Find more information
