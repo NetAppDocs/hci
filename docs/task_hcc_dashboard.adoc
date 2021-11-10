@@ -60,7 +60,7 @@ To see details, in the Compute panes, select *Show Details*.
 
 NOTE: Your vCenter instances only show in the Compute pane when at least one NetApp HCI compute node is associated with that instance. To list the vCenter instances linked in NetApp Hybrid Cloud Control, you can use the link:task_mnode_edit_vcenter_assets.html[APIs].
 
-NOTE: To manage a compute node in NetApp Hybrid Cloud Control, you must add the compute node to a vCenter host cluster, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control[KB article^].
+NOTE: To manage a compute node in NetApp Hybrid Cloud Control, you must https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control[add the compute node to a vCenter host cluster^].
 
 == Monitor storage capacity
 Monitoring the storage capacity of your environment is critical. Using the Storage Capacity pane, you can determine your storage capacity efficiency gains with or without compression, deduplication, and thin provisioning features enabled.
