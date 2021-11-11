@@ -146,7 +146,7 @@ If a controller asset already exists on the management node, perform the followi
 .Steps
 . Access the mnode service API UI on the management node:
 +
-`https://[management node IP]/mnode`
+`https://<ManagementNodeIP>/mnode`
 . Select *Authorize* and enter the credentials to access the API calls.
 . Select `GET /assets` to get the parent ID.
 . Select `PUT /assets /{asset_id} /controllers /{controller_id}`.

@@ -34,11 +34,11 @@ You can disable or re-enable SSH capability on the management node. SSH capabili
 .API command
 For management services 2.18 or later:
 ----
-curl -k -X PUT "https://<<managementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+curl -k -X PUT "https://<<ManagementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
 ----
 For management services 2.17 or earlier:
 ----
-curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+curl -X PUT "https://<ManagementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
 ----
 // Will follow up on management node endpoints at a future date.
 
@@ -48,7 +48,7 @@ NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:t
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
 +
 ----
-https://<managementNodeIP>/mnode/
+https://<ManagementNodeIP>/mnode/
 ----
 . Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.
@@ -66,11 +66,11 @@ You can determine whether or not SSH capability is enabled on the management nod
 .API command
 For management services 2.18 or later:
 ----
-curl -k -X PUT "https://<<managementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+curl -k -X PUT "https://<<ManagementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
 ----
 For management services 2.17 or earlier:
 ----
-curl -X PUT "https://<managementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+curl -X PUT "https://<ManagementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
 ----
 // Will follow up on management node endpoints at a future date.
 
@@ -80,7 +80,7 @@ NOTE: You can find the bearer `${TOKEN}` used by the API command when you link:t
 . Access the REST API UI for the management node API service by entering the management node IP address followed by `/mnode/`:
 +
 ----
-https://<managementNodeIP>/mnode/
+https://<ManagementNodeIP>/mnode/
 ----
 . Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.

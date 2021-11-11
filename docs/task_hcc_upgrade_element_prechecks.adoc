@@ -69,7 +69,7 @@ You can use REST API to verify that a storage cluster is ready to be upgraded. T
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://<ManagementNodeIP>/mnode
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -99,7 +99,7 @@ NOTE: Do not use the `"parent"` value in this section because this is the manage
 .. Open the storage REST API UI on the management node:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.

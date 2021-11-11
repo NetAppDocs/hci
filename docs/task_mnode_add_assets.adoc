@@ -33,7 +33,7 @@ NOTE: When manually adding compute nodes, make sure that you also add the BMC as
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -76,7 +76,7 @@ NOTE: Your installation has a base asset configuration that was created during i
 a| . Open the mNode service REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://<ManagementNodeIP>/mnode
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -92,7 +92,7 @@ https://[management node IP]/mnode
 a| . Open the mNode service REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://<ManagementNodeIP>/mnode
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.

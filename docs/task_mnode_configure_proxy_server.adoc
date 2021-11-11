@@ -30,7 +30,7 @@ The command to configure a proxy server updates and then returns the current pro
 . Access the REST API UI on the management node by entering the management node IP address followed by `/mnode`:
 +
 ----
-https://[management node IP]/mnode
+https://<ManagementNodeIP>/mnode
 ----
 
 . Click *Authorize* or any lock icon and complete the following:

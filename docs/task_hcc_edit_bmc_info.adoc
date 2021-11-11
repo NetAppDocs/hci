@@ -36,7 +36,7 @@ You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control Da
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
-https://[management node IP address]
+https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the left navigation blue box, select the NetApp HCI installation.
@@ -61,7 +61,7 @@ You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control RE
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -97,7 +97,7 @@ https://[management node IP]/inventory/1/
 . Open the hardware service REST API UI on the management node:
 +
 ----
-https://[management node IP]/hardware/2/
+https://<ManagementNodeIP>/hardware/2/
 ----
 . Click *Authorize* and complete the following:
 .. Enter the cluster user name and password.
