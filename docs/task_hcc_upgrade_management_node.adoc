@@ -417,7 +417,7 @@ This action causes certificate to be accepted for the next step.
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -560,7 +560,7 @@ You can keep your existing management node if you have sequentially upgraded (1)
 . Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/mnode
+https://<ManagementNodeIP>/mnode
 ----
 . Click *Authorize* and complete the following:
 .. Enter the cluster user name and password.

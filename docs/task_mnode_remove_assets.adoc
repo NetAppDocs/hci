@@ -26,7 +26,7 @@ If you physically replace a compute node or need to remove it from the NetApp HC
 . Enter the management node IP address followed by `/mnode/1/`:
 +
 ----
-https://<managementNodeIP>/mnode/1/
+https://<ManagementNodeIP>/mnode/1/
 ----
 . Click *Authorize* or any lock icon and enter cluster admin credentials for permissions to use APIs.
 .. Enter the cluster user name and password.

@@ -28,7 +28,7 @@ You can view information about and edit existing VMware vCenter controllers in t
 . Access the REST API UI for management services by entering the management node IP address followed by `/vcenter/1/`:
 +
 ----
-https://[management node IP]/vcenter/1/
+https://<ManagementNodeIP>/vcenter/1/
 ----
 
 . Click *Authorize* or any lock icon and complete the following:

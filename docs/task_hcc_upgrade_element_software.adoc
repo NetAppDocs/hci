@@ -157,7 +157,7 @@ a|
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://<ManagementNodeIP>/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -183,7 +183,7 @@ a|
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/package-repository/1/
+https://<ManagementNodeIP>/package-repository/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -207,7 +207,7 @@ The response indicates `state` as `SUCCESS` when complete.
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -227,7 +227,7 @@ https://[management node IP]/inventory/1/
 .. Open the storage REST API UI on the management node:
 +
 ----
-https://[management node IP]/storage/1/
+https://<ManagementNodeIP>/storage/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.

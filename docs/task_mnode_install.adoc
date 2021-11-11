@@ -206,7 +206,7 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 .. Open the inventory service REST API UI on the management node:
 +
 ----
-https://[management node IP]/inventory/1/
+https://<ManagementNodeIP>/inventory/1/
 ----
 .. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -227,7 +227,7 @@ Your installation has a base asset configuration that was created during install
 .. Access the mnode service API UI on the management node by entering the management node IP address followed by `/mnode`:
 +
 ----
-https://[management node IP]/mnode
+https:/<ManagementNodeIP>/mnode
 ----
 
 .. Select *Authorize* or any lock icon and complete the following:

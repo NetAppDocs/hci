@@ -89,7 +89,7 @@ If you configured users on the storage cluster with LDAP, those accounts show a 
 . Log out of NetApp Hybrid Cloud Control.
 . link:task_mnode_manage_storage_cluster_assets.html#edit-the-stored-credentials-for-a-storage-cluster-asset[Update the credentials] for the authoritative cluster asset using the NetApp Hybrid Cloud Control API.
 +
-NOTE: It might take the NetApp Hybrid Cloud Control UI up to 2 minutes to refresh the inventory. To manually refresh inventory, access the REST API UI inventory service `https://[management node IP]/inventory/1/` and run `GET /installations​/{id}` for the cluster.
+NOTE: It might take the NetApp Hybrid Cloud Control UI up to 2 minutes to refresh the inventory. To manually refresh inventory, access the REST API UI inventory service `https://<ManagementNodeIP>/inventory/1/` and run `GET /installations​/{id}` for the cluster.
 
 . Log into NetApp Hybrid Cloud Control.
 

@@ -54,7 +54,7 @@ Here are the common URLs you use with NetApp HCI:
 |`https://[IPv4 address of Bond1G interface on a storage node]`
 |Access the NetApp Deployment Engine wizard to install and configure NetApp HCI. link:concept_nde_access_overview.html[Learn more.]
 
-|`https://[management node IP address]`
+|`https://<ManagementNodeIP>`
 |Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services. link:task_nde_access_hcc.html[Learn more.]
 
 |`https://[IP address]:442`
@@ -66,7 +66,7 @@ Here are the common URLs you use with NetApp HCI:
 |`https://activeiq.solidfire.com`
 |Monitor data and receive alerts to any performance bottlenecks or potential system issues.
 
-|`https://[management node IP address]/mnode`
+|`https://<ManagementNodeIP>/mnode`
 |Manually update management services using the REST API UI from the management node.
 
 |`https://[storage cluster MVIP address]`

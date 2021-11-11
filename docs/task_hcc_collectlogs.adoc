@@ -35,7 +35,7 @@ You can access the log collection area from the NetApp Hybrid Cloud Control Dash
 . Open a web browser and browse to the IP address of the management node. For example:
 +
 ----
-https://[management node IP address]
+https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI or Element storage cluster administrator credentials.
 . From the Dashboard, click the menu on the upper right.
@@ -66,7 +66,7 @@ You can use REST API to collect NetApp HCI or Element logs.
 .. Open the management node REST API UI on the management node:
 +
 ----
-https://[management node IP]/logs/1/
+https://<ManagementNodeIP>/logs/1/
 ----
 .. Click *Authorize* and complete the following:
 ... Enter the cluster user name and password.
@@ -90,7 +90,7 @@ https://[management node IP]/logs/1/
 
 |`computeIds`
 |UUID array
-|If `computeLogs` is set to `true`, populate this parameter with the management node asset IDs of compute nodes to limit log collection to those specific compute nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
+|If `computeLogs` is set to `true`, populate this parameter with the management node asset IDs of compute nodes to limit log collection to those specific compute nodes. Use the `GET https://<ManagementNodeIP>/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
 
 |`mnodeLogs`
 |Boolean
@@ -106,7 +106,7 @@ https://[management node IP]/logs/1/
 
 |`storageNodeIds`
 |UUID array
-|If `storageLogs` is set to `true`, populate this parameter with the storage cluster node IDs to limit log collection to those specific storage nodes. Use the `GET https://[management node IP]/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
+|If `storageLogs` is set to `true`, populate this parameter with the storage cluster node IDs to limit log collection to those specific storage nodes. Use the `GET https://<ManagementNodeIP>/logs/1/bundle/options` endpoint to see all possible node IDs you can use.
 |===
 .. Click *Execute* to begin log collection.
 The response should return a response similar to the following:
