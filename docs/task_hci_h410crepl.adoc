@@ -166,7 +166,7 @@ You can use NetApp Hybrid Cloud Control only if your NetApp HCI installation run
 * Ensure that you have free and unused IPv4 addresses on the same network segment as existing nodes (each new node must be installed on the same network as existing nodes of its type).
 * Ensure that you have the vCenter administrator account credentials ready.
 * Ensure that each new node uses the same network topology and cabling as the existing storage or compute clusters.
-* Ensure that you link:task_hcc_manage_vol_access_groups.html[manage the initiators and volume access groups] for the new compute node.
+* link:task_hcc_manage_vol_access_groups.html[Manage the initiators and volume access groups] for the new compute node.
 
 .Steps
 . Open a web browser and browse to the IP address of the management node. For example:
