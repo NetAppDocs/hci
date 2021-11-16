@@ -31,6 +31,8 @@ This is due to the following reasons:
 * Four storage nodes require eight (8) Cat 5e/6 cables and eight (8) Twinax cables.
 * Three compute nodes using the six-cable configuration require six (6) Cat 5e/6 cables and twelve (12) Twinax cables.
 
+NOTE: In a six-cable configuration, two ports are reserved for ESX and set up and managed by the NDE. You cannot access or manage these ESX dedicated ports using the Ember or Element UI, or the web GUI.
+
 [discrete]
 == Find more information
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
