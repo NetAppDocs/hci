@@ -38,7 +38,7 @@ The workflow diagrams here provide a high-level overview of the installation ste
 
 === H410C and H410S
 
-image::h410c_workflow.png[H410C and H410S installation workflow]
+image::workflow_h410c.PNG[H410C and H410S installation workflow]
 
 === H610C and H615C
 
