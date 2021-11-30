@@ -71,6 +71,14 @@ Nodes that do not have the correct number of connected cables cannot participate
 
 NOTE: You can adjust the NetApp HCI network configuration after deployment to meet infrastructure needs. However, when you expand NetApp HCI resources, remember that new nodes must have the same cable configuration as the existing compute and storage nodes.
 
+[NOTE]
+====
+If the NetApp Deployment Engine fails because your network does not support jumbo frames, you can perform one of the following workarounds:
+
+* Use a static IP address and manually set a maximum transmission unit (MTU) of 9000 bytes on the Bond10G network.
+* Configure the Dynamic Host Configuration Protocol to advertise an interface MTU of 9000 bytes on the Bond10G network.
+====
+
 .Network configuration options
 
 * link:hci_prereqs_network_configuration_option_A.html[Network configuration option A]
