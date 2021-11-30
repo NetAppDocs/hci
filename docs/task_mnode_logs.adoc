@@ -49,7 +49,7 @@ TIP: Use the `GET /services` command to list services on the management node.
 
 * `stopped`: Set to `true` to retrieve logs from stopped services.
 . Select *Execute*.
-. In the response body, select *Download* to save the log output.
+. From the response body, select *Download* to save the log output.
 
 [discrete]
 == Find more Information
