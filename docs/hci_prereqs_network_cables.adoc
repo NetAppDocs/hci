@@ -31,6 +31,8 @@ This is due to the following reasons:
 * Four storage nodes require eight (8) Cat 5e/6 cables and eight (8) Twinax cables.
 * Three compute nodes using the six-cable configuration require six (6) Cat 5e/6 cables and twelve (12) Twinax cables.
 
+NOTE: In a six-cable configuration, two ports are reserved for VMware ESXi and set up and managed by the NetApp Deployment Engine. You cannot access or manage these ESXi-dedicated ports using the Element TUI or the Element web GUI.
+
 [discrete]
 == Find more information
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
