@@ -95,7 +95,7 @@ IMPORTANT: Do *NOT* select *Propagate to children*.
 Perform the following steps to assign the user permissions to the NetApp HCI datastores in vCenter.
 
 .Steps
-. In the left pane, select the *Datacenter*.
+. In the left pane, select *Datacenter*.
 . Create a new storage folder. Right-click on *Datacenter* and select *Create storage folder*.
 . Transfer all the NetApp HCI datastores from the storage cluster and local to the compute node to the new storage folder.
 . Select the new storage folder.
