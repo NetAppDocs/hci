@@ -75,6 +75,39 @@ IMPORTANT: Do *NOT* select  *Propagate to children*.
 +
 image::mnode_new_HCC_role_vcenter.PNG[depicts the Add permission window]
 
+=== Assign user permissions to the datacenter
+Perform the following steps to assign the user permissions to the datacenter in vCenter.
+
+.Steps
+. In the left pane, select *Datacenter*.
+. In the right navigation pane, select *Permissions*.
+. Select the *+* icon to add the new user.
++
+Add the following details in the *Add permission* window:
+
+.. Select `vsphere.local` or your LDAP domain.
+.. Use the search to find the new HCC user that you created in <<Set up a new user account in vCenter>>.
+.. Select `ReadOnly role`.
++
+IMPORTANT: Do *NOT* select *Propagate to children*.
+
+=== Assign user permissions to NetApp HCI datastores
+Perform the following steps to assign the user permissions to the NetApp HCI datastores in vCenter.
+
+.Steps
+. In the left pane, select *Datacenter*.
+. Create a new storage folder. Right-click on *Datacenter* and select *Create storage folder*.
+. Transfer all the NetApp HCI datastores from the storage cluster and local to the compute node to the new storage folder.
+. Select the new storage folder.
+. In the right navigation pane, select *Permissions*.
+. Select the *+* icon to add the new user.
++
+Add the following details in the *Add permission* window:
+
+.. Select `vsphere.local` or your LDAP domain.
+.. Use the search to find the new HCC user that you created in <<Set up a new user account in vCenter>>.
+.. Select `Administrator role`.
+.. Select *Propagate to children*.
 
 === Assign user permissions to a NetApp host cluster
 Perform the following steps to assign the user permissions to a NetApp host cluster in vCenter.
