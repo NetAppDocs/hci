@@ -67,7 +67,7 @@ NOTE: Your installation has a base asset configuration that was created during i
 .. Paste the installation asset ID into the *id* field.
 .. Select *Execute*.
 .. From the response, copy and save the cluster controller ID (`"controllerId"`) for use in a later step.
-. (For compute nodes only) To locate the hardware tag for your compute node in vSphere, go to xref:task_mnode_locate_hardware_tag.adoc[How to locate a hardware tag for compute node].
+. (For compute nodes only) xref:task_mnode_locate_hardware_tag.adoc[Locate the hardware tag for your compute node] in vSphere.
 
 . To add a controller asset (vCenter), compute node (ESXi), or hardware (BMC) to an existing base asset, select one of the following.
 +
