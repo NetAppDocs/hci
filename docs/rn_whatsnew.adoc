@@ -14,11 +14,11 @@ keywords: netapp, hci, element, new, whatsnew
 :keywords: hci, cloud, onprem, documentation, help, element
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.9P1 includes Element 12.3.1 for storage clusters.
+NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.9P1 includes Element 12.3.2 for storage clusters.
 
 * The <<NetApp HCI 1.9P1>> section describes new features and updates in NetApp HCI version 1.9P1.
 
-* The <<Element 12.3.1>> section describes new features and updates in NetApp Element 12.3.1.
+* The <<Element 12.3.2>> section describes new features and updates in NetApp Element 12.3.2.
 
 //* The <<NetApp HCI 1.9P1>> section describes new features and updates in NetApp HCI version 1.9P1.
 
