@@ -15,7 +15,7 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10,
 
 [.lead]
 
-You can upgrade your management node to management node version 12.3.x or 12.3 from version 11.0 or later.
+You can upgrade your management node to management node version 12.3.x from version 11.0 or later.
 
 //NOTE: If you upgrade your management node version from 12.3.0 to a later version, for example Element 12.3.1, on management nodes deployed using NDE, the upgrade might fail. If this occurs you should reboot the management node.
 
