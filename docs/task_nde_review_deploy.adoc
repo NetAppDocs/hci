@@ -20,7 +20,7 @@ NOTE: During deployment, the management node installation process creates volume
 .Steps
 . Optional: Click the *Download* icon to download installation information in CSV format. You can save this file and refer to it later for configuration information.
 +
-NOTE: You can import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine if needed during a future installation.
+NOTE: You can import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine (NDE) if needed during a future installation.
 
 . Expand each section and review the information. To expand all sections at once, click *Expand All*.
 . Optional: To make changes to information in any displayed section:
@@ -34,6 +34,9 @@ This disables real-time health and diagnostic monitoring for NetApp HCI. Disabli
 . If all information is correct, click *Start Deployment*.
 +
 A dialog box appears. In the event of network connectivity issues or power loss during the final setup process, or if your browser session is lost, you can copy the URL displayed in the dialog and use it to browse to the final setup progress page.
++
+NOTE: In two storage or three storage node configurations, the NetApp Deployment Engine configures Witness Nodes to use the local datastore on the compute nodes. As a result, your vSphere Client displays two *Datastore usage on disk* error messages. To continue, select the *Reset To Green* link in each error message.
+
 . Review the information in the dialog and click *Copy to Clipboard* to copy the URL to your clipboard.
 . Save the URL to a text file on your computer.
 . When you are ready to proceed with deployment, click *OK*.
