@@ -32,7 +32,7 @@ By default, the Mellanox switch `lacp-individual` command and the Cisco switch `
 .. For a Mellanox switch:
 +
 `no interface mlag-port-channel xxx-xxx lacp-individual enable force`
-.. For a Cisco swithc:
+.. For a Cisco switch:
 `no interface mlag-port-channel xxx-xxx lacp suspend-individual enable force`
 . Repeat these steps for each switch in your configuration.
 
