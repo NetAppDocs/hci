@@ -26,6 +26,8 @@ NOTE: Depending on node hardware configuration, H410S storage nodes might appear
 
 NetApp HCI supports only certain storage node models in two-node or three-node storage clusters. For more information, see the Release Notes for your NetApp HCI version.
 
+NOTE: For two-node storage cluster deployments, the storage node types are limited to nodes with 480GB and 1TB drives.
+
 == Compute node compatibility
 Compute nodes must meet the following requirements to be selectable as inventory:
 
