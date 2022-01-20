@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_nde_disable_lacp_individual.html
-summary: Learn about how to keep VMware vSphere up to date after you deploy NetApp HCI.
+summary: Learn how to disable the `lacp-individual` command on configured switches after you deploy NetApp HCI.
 keywords: netapp, hci, deployment, review, deploy
 ---
 
@@ -23,7 +23,7 @@ By default, the Mellanox switch `lacp-individual` command and the Cisco switch `
 
 . Check the switch configuration output for the `lacp-individual` or `lacp suspend-individual` command.
 +
-NOTE: The `xxx-xxx` is your user supplied interface number(s). If required, you can access the interface number by displaying the Multi-chassis Link Aggregation Group interfaces: `show mlag interfaces` 
+NOTE: The `xxx-xxx` is your user supplied interface number(s). If required, you can access the interface number by displaying the Multi-chassis Link Aggregation Group interfaces: `show mlag interfaces`
 
 .. For a Mellanox switch, check if the output contains the following line:
 +
