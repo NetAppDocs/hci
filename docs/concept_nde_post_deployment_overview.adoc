@@ -20,7 +20,7 @@ Depending on your choices during the deployment process, you need to complete so
 * link:task_nde_disable_lacp_individual.html[Disable the `lacp-individual` command on configured switches]
 * link:task_nde_update_vsphere.html[Keep VMware vSphere up to date]
 * link:task_nde_install_GPU_drivers.html[Install GPU drivers for GPU-enabled compute nodes]
-* link:task_nde_access_hcc.html[Access NetApp Hybrid Cloud Control^]
+* link:task_nde_access_hcc.html[Access NetApp Hybrid Cloud Control]
 * link:task_reduce_boot_media_wear.html[Reduce boot media wear on a NetApp HCI compute node]
 
 == Find more information
