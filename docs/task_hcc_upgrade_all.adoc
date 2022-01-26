@@ -5,7 +5,7 @@ summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrade your NetApp HCI system for version 1.9 or 1.9P1
+= Upgrade sequence for a NetApp HCI system 1.9 or 1.9P1
 
 :hardbreaks:
 :nofooter:
@@ -16,7 +16,11 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 [.lead]
 You can keep your NetApp HCI system up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
 
-These components include management services, HealthTools, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.
+These components include management services, HealthTools, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.​
+
+The <<system upgrade sequence>> content describes the tasks that are needed to complete a NetApp HCI system upgrade. Ideally you perform these procedures as part of the larger upgrade sequence and not in isolation. If a component-based upgrade or update is needed, see the procedure prerequisites to ensure additional complexities are addressed.
+
+The xref:task_hci_upgrade_all_vsphere.adoc[vSphere upgrade sequence] including Element Plug-in for vCenter Server content describes additional pre- and post-upgrade steps required to re-install the Element Plug-in for vCenter Server.
 
 .What you'll need
 
@@ -29,6 +33,8 @@ TIP: To check the version, log in to your management node and view the Element v
 Upgrades using HCC are not available in earlier service bundle versions.
 
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
+
+== System upgrade sequence
 
 .Steps
 
@@ -62,3 +68,4 @@ NOTE: Upgrading the management node operating system is no longer required to up
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all.html[Upgrade your NetApp SolidFire all-flash storage system for Element 12.3.x]

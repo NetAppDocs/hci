@@ -266,16 +266,10 @@ sidebar:
           url: /docs/task_hcc_activeiq.html
         - title: Collect logs for troubleshooting
           url: /docs/task_hcc_collectlogs.html
-    - title: Upgrade your NetApp HCI or SolidFire system
+    - title: Upgrade your NetApp HCI system
       entries:
-        - title: Upgrades overview
-          url: /docs/concept_hci_upgrade_overview.html
-        - title: Upgrade sequences
-          entries:
-            - title: Upgrade your NetApp HCI system for version 1.9 or 1.9P1
-              url: /docs/task_hcc_upgrade_all.html
-            - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.3.x
-              url: /docs/task_sf_upgrade_all.html
+        - title: Upgrade sequence for a NetApp HCI system 1.9 or 1.9P1
+          url: /docs/task_hcc_upgrade_all.html
         - title: System upgrade procedures
           entries:
             - title: Update management services
@@ -300,12 +294,8 @@ sidebar:
               url: /docs/task_hcc_upgrade_compute_node_firmware.html
             - title: Automate compute node firmware upgrades with Ansible
               url: /docs/task_hcc_upgrade_compute_firmware_ansible.html
-        - title: vSphere upgrade sequences with vCenter Plug-in
-          entries:
-            - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
-              url: /docs/task_hci_upgrade_all_vsphere.html
-            - title: Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server
-              url: /docs/task_sf_upgrade_all_vsphere.html
+        - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
+          url: /docs/task_hci_upgrade_all_vsphere.html
     - title: Expand your NetApp HCI system
       entries:
        - title: Expand overview
