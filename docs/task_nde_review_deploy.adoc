@@ -18,25 +18,26 @@ You can review the information you provided before beginning deployment. You can
 NOTE: During deployment, the management node installation process creates volumes with names beginning with `NetApp-HCI-` in the Element storage cluster, and a SolidFire account beginning with the name `tenant_`. Do not delete these volumes or accounts; doing so will cause a loss in management functionality.
 
 .Steps
-. Optional: Click the *Download* icon to download installation information in CSV format. You can save this file and refer to it later for configuration information.
+. Optional: Select the *Download* icon to download installation information in CSV format. You can save this file and refer to it later for configuration information.
 +
-NOTE: You can import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine if needed during a future installation.
+NOTE: You can import the CSV file as an installation profile on the *Installation Profile* page of the NetApp Deployment Engine (NDE) if needed during a future installation.
 
-. Expand each section and review the information. To expand all sections at once, click *Expand All*.
+. Expand each section and review the information. To expand all sections at once, select *Expand All*.
 . Optional: To make changes to information in any displayed section:
-.. Click *Edit* in the corresponding section.
+.. Select *Edit* in the corresponding section.
 .. Make the necessary changes.
-.. Click *Continue* until you reach the *Review* page. Your previous settings are saved on each page.
+.. Select *Continue* until you reach the *Review* page. Your previous settings are saved on each page.
 .. Repeat steps 2 and 3 to make any other necessary changes.
 . If you do not want to send cluster statistics and support information to NetApp-hosted SolidFire Active IQ servers, clear the final checkbox.
 +
 This disables real-time health and diagnostic monitoring for NetApp HCI. Disabling this feature removes the ability for NetApp to proactively support and monitor NetApp HCI to detect and resolve problems before production is affected.
-. If all information is correct, click *Start Deployment*.
+. If all information is correct, select *Start Deployment*.
 +
 A dialog box appears. In the event of network connectivity issues or power loss during the final setup process, or if your browser session is lost, you can copy the URL displayed in the dialog and use it to browse to the final setup progress page.
-. Review the information in the dialog and click *Copy to Clipboard* to copy the URL to your clipboard.
+
+. Review the information in the dialog and select *Copy to Clipboard* to copy the URL to your clipboard.
 . Save the URL to a text file on your computer.
-. When you are ready to proceed with deployment, click *OK*.
+. When you are ready to proceed with deployment, select *OK*.
 +
 Deployment begins and a progress page is displayed. Do not close the browser window or navigate away from the progress page until deployment is complete. If your browser session is lost for any reason, you can browse to the URL you copied earlier (and accept any security warnings that appear) to regain access to the final setup progress page.
 +
@@ -46,9 +47,14 @@ NOTE: If the deployment fails, save any error message text and contact NetApp Su
 After deployment is complete, the compute nodes might reboot more than once before becoming ready for service.
 
 .After you finish
-Begin using NetApp HCI by clicking *Launch vSphere*.
+Begin using NetApp HCI by selecting *Launch vSphere*.
 
-NOTE: For NetApp HCI installations using vSphere 6.7, this link launches the HTML5 vSphere web interface. For installations using vSphere 6.5, this link launches the Adobe Flash vSphere web interface.
+[NOTE]
+====
+* For NetApp HCI installations using vSphere 6.7, this link launches the HTML5 vSphere web interface. For installations using vSphere 6.5, this link launches the Adobe Flash vSphere web interface.
+
+* In two storage or three storage node configurations, the NDE configures the Witness Nodes to use the local datastore on the compute nodes. As a result, your vSphere Client displays two *Datastore usage on disk* warnings. To continue, select the *Reset To Green* link in each warning.
+====
 
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
