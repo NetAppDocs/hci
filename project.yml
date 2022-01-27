@@ -410,7 +410,7 @@ homepage:
         - title: Expand NetApp HCI
           url: /docs/concept_hcc_expandoverview.html
         - title: Upgrade NetApp HCI
-          url: /docs/concept_hci_upgrade_overview.html
+          url: /docs/task_hcc_upgrade_all.html
     - title: Troubleshoot
       links:
         - title: Troubleshoot NetApp HCI and Rancher
