@@ -6,7 +6,6 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
-    langs: us-en,ja-jp
 sidebar:
   entries:
     - title: NetApp HCI Documentation
