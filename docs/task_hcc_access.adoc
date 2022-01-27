@@ -20,7 +20,7 @@ You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the m
 Using the Hybrid Cloud Control, you can do the following:
 
 * link:task_hcc_dashboard.html[Monitor your NetApp HCI installation]
-* link:task_hcc_upgrade_all.html[Upgrade your NetApp HCI system]
+* link:concept_hci_upgrade_overview.html[Upgrade your NetApp HCI system]
 * link:concept_hcc_expandoverview.html[Expand your NetApp HCI storage or compute resources]
 
 *Steps*
