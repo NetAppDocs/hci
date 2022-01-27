@@ -36,7 +36,7 @@ jobs:
       before_install:
       - echo -e "machine github.com\n login $GH_TOKEN" >> ~/.netrc && chmod 600 ~/.netrc
       - git submodule add -b $FRAMEWORK_BRANCH https://github.com/NetAppDocs/jekyll dependencies/jekyll
-      - git submodule add https://github.com/NetAppDocs/jekyll-harmony dependencies/jekyll-harmony
+      - git submodule add -b truncated-log https://github.com/NetAppDocs/jekyll-harmony dependencies/jekyll-harmony
       - source dependencies/jekyll/.ci/env/configure_travis.bash
       - source dependencies/jekyll/.ci/i18n/before_install.bash
       - cp -r dependencies/jekyll/.ci/ .ci/
