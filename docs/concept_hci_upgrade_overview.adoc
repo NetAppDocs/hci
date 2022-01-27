@@ -35,6 +35,7 @@ Upgrades using HCC are not available in earlier service bundle versions.
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 
 == [[sys_upgrade_seq]]System upgrade sequence
+You can use the following sequence to upgrade your NetApp HCI system.
 
 .Steps
 
