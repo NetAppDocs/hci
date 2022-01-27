@@ -45,3 +45,4 @@ jobs:
       - source .ci/i18n/install.bash
       script:
       - source .ci/i18n/post_install.bash
+      - sleep 5
