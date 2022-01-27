@@ -268,7 +268,7 @@ sidebar:
           url: /docs/task_hcc_collectlogs.html
     - title: Upgrade your NetApp HCI system version 1.9 or 1.9P1
       entries:
-        - title: Upgrade overview
+        - title: Upgrade sequence overview
           url: /docs/concept_hci_upgrade_overview.html
         - title: System upgrade procedures
           entries:
