@@ -14,11 +14,11 @@ keywords: netapp, hci, element, new, whatsnew
 :keywords: hci, cloud, onprem, documentation, help, element
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.9P1 includes Element 12.3.1 for storage clusters.
+NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.9P1 includes Element 12.3.2 for storage clusters.
 
 * The <<NetApp HCI 1.9P1>> section describes new features and updates in NetApp HCI version 1.9P1.
 
-* The <<Element 12.3.1>> section describes new features and updates in NetApp Element 12.3.1.
+* The <<Element 12.3.2>> section describes new features and updates in NetApp Element 12.3.2.
 
 //* The <<NetApp HCI 1.9P1>> section describes new features and updates in NetApp HCI version 1.9P1.
 
@@ -42,24 +42,9 @@ NetApp HCI 1.9P1 includes security and stability improvements.
 //=== NetApp Hybrid Cloud Control enhancements
 //NetApp Hybrid Cloud Control is enhanced for version 1.9. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Learn more].
 
-== Element 12.3.1
-NetApp HCI 1.9P1 includes Element 12.3.1 for storage clusters.
-//Element 12.3 introduces software encryption at rest enhancements, security enhancements, storage firmware updates, enhanced snapshot functionality, and improved behavior for failing drives.
+== Element 12.3.2
 
-=== Storage Firmware Bundle 2.99.2
-The Element 12.3.1 release includes the storage firmware bundle version 2.99.2. If your storage cluster is already at Element 12.3, you have the option to simply install the new 2.99.2 firmware bundle.
-
-=== NetApp Bugs Online contains known and resolved issues
-Known and resolved issues are listed in the NetApp Bugs Online tool. You can browse these issues for Element and other products at https://mysupport.netapp.com/site/products/all/details/solidfire-elementos/bugsonline-tab[NetApp Bugs Online].
-
-.Steps
-. Go to https://mysupport.netapp.com/site/products/all/details/solidfire-elementos/bugsonline-tab[NetApp Bugs Online^].
-. In the  *Search by Keyword* field, type in the product name, for example, "Element".
-. Select the image:icon_plus.PNG[plus icon], select the *Fixed in Versions* filter, and select *OK*.
-+
-image:bol_filters.PNG[BOL filters align="center"]
-. Select *New Search*.
-. Type the release version in the *Fixed in Versions* field.
+The Element software 12.3.2 release contains the mitigation that closes the Element software exposure to the Apache Log4j vulnerability. NetApp SolidFire storage clusters with the Virtual Volumes (VVols) feature enabled are exposed to this vulnerability.
 
 //=== FIFO snapshot queue support
 //Element 12.3 enables you to create a First-In-First-Out (FIFO) queue for volume snapshots. Using the Element API, you can specify the minimum and maximum number of FIFO snapshot slots that should be reserved when you create a volume. When the FIFO snapshot queue for a volume is full, the next snapshot you create for that volume removes the oldest snapshot of that volume from the system. FIFO and non-FIFO snapshots both use the same pool of available snapshot slots on a volume.

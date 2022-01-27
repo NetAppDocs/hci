@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: docs/task_nde_disable_lacp_individual.html
+summary: Learn how to disable the `lacp-individual` command on configured switches after you deploy NetApp HCI.
+keywords: netapp, hci, deployment, review, deploy
+---
+
+= Disable the `lacp-individual` command on configured switches
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+By default, the Mellanox switch `lacp-individual` command and the Cisco switch `lacp suspend-individual` command remain configured post deployment. This command is not required post installation; if it remains configured, it can cause volume access issues when troubleshooting or rebooting a switch. Post deployment, you should check each Mellanox switch and Cisco switch configuration and remove the `lacp-individual` or `lacp suspend-individual` command.
+
+.Steps
+. Using SSH, open a session to the switch.
+. Show the running configuration:
++
+`show running-config`
+
+. Check the switch configuration output for the `lacp-individual` or `lacp suspend-individual` command.
++
+NOTE: The `xxx-xxx` is your user supplied interface number(s). If required, you can access the interface number by displaying the Multi-chassis Link Aggregation Group interfaces: `show mlag interfaces`
+
+.. For a Mellanox switch, check if the output contains the following line:
++
+`interface mlag-port-channel xxx-xxx lacp-individual enable force`
+.. For a Cisco switch, check if the output contains the following line:
++
+`interface mlag-port-channel xxx-xxx lacp suspend-individual enable force`
+. If the command is present, remove it from the configuration.
+.. For a Mellanox switch:
++
+`no interface mlag-port-channel xxx-xxx lacp-individual enable force`
+.. For a Cisco switch:
+`no interface mlag-port-channel xxx-xxx lacp suspend-individual enable force`
+. Repeat these steps for each switch in your configuration.
+
+[discrete]
+== Find more information
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/SolidFire_Bond10G_goes_down_when_flapping_an_interface_during_troubleshooting[Storage node goes down during troubleshooting^]
