@@ -30,7 +30,7 @@ TIP: To check the version, log in to your management node and view the Element v
 
 * You have upgraded your management services to at least version 2.1.326.
 +
-Upgrades using HCC are not available in earlier service bundle versions.
+Upgrades using NetApp Hybrid Cloud Control are not available in earlier service bundle versions.
 
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 
