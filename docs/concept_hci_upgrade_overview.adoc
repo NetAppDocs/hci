@@ -1,40 +1,72 @@
 ---
 sidebar: sidebar
 permalink: docs/concept_hci_upgrade_overview.html
-summary: This overview introduces how to perform upgrades for a NetApp HCI or SolidFire Element storage system.
-keywords: netapp, hci upgrade, solidfire upgrade, VCP upgrade, element upgrade, vSphere upgrade
+summary: You can upgrade NetApp HCI and all of its components.
+keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
 
-= Upgrades overview
+= Upgrade sequence overview
+
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
-The content in this section introduces recommended upgrade sequences for components in a NetApp HCI system or SolidFire all-flash storage system. ​
+You can keep your NetApp HCI system up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
 
-*System upgrade sequences* content describes the tasks that are needed to complete a NetApp HCI system or SolidFire all-flash storage system upgrade. Ideally these procedures are performed as part of the larger upgrade sequence and not in isolation. If a component-based upgrade or update is needed, see the procedure prerequisites to ensure additional complexities are addressed.
+These components include management services, HealthTools, NetApp Hybrid Cloud Control (HCC), Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.​
 
-*vSphere upgrade sequences including Element Plug-in for vCenter Server* content describes additional pre- and post-upgrade steps required to re-install the Element Plug-in for vCenter Server.
+The <<sys_upgrade_seq,system upgrade sequence>> content describes the tasks that are needed to complete a NetApp HCI system upgrade. Ideally you perform these procedures as part of the larger upgrade sequence and not in isolation. If a component-based upgrade or update is needed, see the procedure prerequisites to ensure additional complexities are addressed.
 
-== System upgrade sequences
+The xref:task_hci_upgrade_all_vsphere.adoc[vSphere upgrade sequence] including Element Plug-in for vCenter Server content describes additional pre- and post-upgrade steps required to re-install the Element Plug-in for vCenter Server.
 
-Choose one of the following sequences based on your system:
+.What you'll need
 
-* link:task_hcc_upgrade_all.html[Upgrade your NetApp HCI installation for version 1.9 or 1.9P1].
-* link:task_sf_upgrade_all.html[Upgrade your NetApp SolidFire all-flash storage system for Element 12.3.x].
+* You are running management node 11.3 or later. Newer versions of the management node have a modular architecture that provides individual services.
++
+TIP: To check the version, log in to your management node and view the Element version number in the login banner. If you do not have 11.3, see link:task_hcc_upgrade_management_node.html[Upgrade your management node].
 
-== vSphere upgrade sequences including Element Plug-in for vCenter Server
+* You have upgraded your management services to at least version 2.1.326.
++
+Upgrades using HCC are not available in earlier service bundle versions.
 
-Choose one of the following sequences based on your system:
+* You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 
-* link:task_hci_upgrade_all_vsphere.html[Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server].
-* link:task_sf_upgrade_all_vsphere.html[Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server].
+== [[sys_upgrade_seq]]System upgrade sequence
+You can use the following sequence to upgrade your NetApp HCI system.
+
+.Steps
+
+. link:task_hcc_update_management_services.html[Update management services from Hybrid Cloud Control].
++
+IMPORTANT: If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services.
++
+IMPORTANT: You must update to the latest management services bundle before upgrading your Element software.
+
+. link:task_upgrade_element_latest_healthtools.html[(Optional) Upgrade to the latest HealthTools].
++
+NOTE: Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for performing Element upgrades using NetApp Hybrid Cloud Control.
+
+. link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
+. link:task_hcc_upgrade_element_software.html[Upgrade your Element software and storage firmware].
+. link:task_hcc_upgrade_storage_firmware.html[(Optional) Upgrade your Element storage firmware only].
++
+NOTE: You might perform this task when a new storage firmware upgrade becomes available outside of a major release.
+
+. link:task_hcc_upgrade_management_node.html[(Optional) Upgrade your management node].
++
+NOTE: Upgrading the management node operating system is no longer required to upgrade Element software on the storage cluster. If the management node is version 11.3 or higher, you can simply upgrade the management services to the latest version to perform Element upgrades using NetApp Hybrid Cloud Control. Follow the management node upgrade procedure for your scenario if you would like to upgrade the management node operating system for other reasons, such as security remediation.
+
+. link:task_vcp_upgrade_plugin.html[Upgrade your Element Plug-in for vCenter Server].
+. link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
+. link:task_hcc_upgrade_compute_node_drivers.html[Update your compute node drivers].
+. link:task_hcc_upgrade_compute_node_firmware.html[Update your compute node firmware using NetApp Hybrid Cloud Control] or link:task_hcc_upgrade_compute_firmware_ansible.html[Automate your compute firmware upgrades with Ansible].
 
 [discrete]
 == Find more information
+
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all.html[Upgrade a NetApp SolidFire all-flash storage system^]
