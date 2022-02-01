@@ -37,7 +37,7 @@ Starting with NetApp HCI 1.8, you can set up a storage cluster with two storage 
 
 * You can use certain types of nodes to form the two-node storage cluster. See https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes].
 +
-NOTE: The storage nodes in a two-node cluster must be the same model type.
+NOTE: In a two-node cluster, the storage nodes are limited to nodes with 480GB and 960GB drives and the nodes must be the same model type.
 
 * Two-node storage clusters are best suited for small-scale deployments with workloads that are not dependent on large capacity and high performance requirements.
 
