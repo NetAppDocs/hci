@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar
-permalink: docs/rn_storage_firmware_5.00.html
+permalink: docs/rn_storage_firmware_2.146.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, storage firmware
 ---
 ////
 This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Storage Firmware Bundle 2.XX Release Notes
+= Storage Firmware Bundle 2.146 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
-The storage firmware bundle version 2.XX contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+The storage firmware bundle version 2.146 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
@@ -196,11 +196,9 @@ image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="cen
 == Resolved security vulnerabilities
 The following are security vulnerabilities that have been resolved in this release:
 
-=== H610S BMC 3.91.07
+* CVE-2020-14386, CVE-2020-14314, CVE-2020-25641
 
-* CVE-2019-20636
-* CVE-2019-11599, CVE-2020-12826, CVE-2020-12464, CVE-2020-12114
-* CVE-2016-3706, CVE-2011-5320, CVE-2015-8984, CVE-2015-8983, CVE-2015-8982, CVE-2006-7254, CVE-2005-3590
+* CVE-2019-0151, CVE-2019-0123, CVE-2019-0117
 
 [discrete]
 == Find more information
