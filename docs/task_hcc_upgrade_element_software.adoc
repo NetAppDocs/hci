@@ -32,7 +32,6 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
 
 .Upgrade options
-
 Choose one of the following Element software upgrade options:
 
 * <<Use NetApp Hybrid Cloud Control UI to upgrade Element storage>>
