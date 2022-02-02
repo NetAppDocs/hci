@@ -47,6 +47,7 @@ Choose one of the following storage firmware upgrade options:
 You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware of the storage nodes in your cluster.
 
 .What you'll need
+
 * If your management node is not connected to the internet, you have https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[downloaded the storage firmware bundle^].
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
