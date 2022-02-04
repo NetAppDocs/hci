@@ -47,9 +47,7 @@ Choose one of the following storage firmware upgrade options:
 You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware of the storage nodes in your cluster.
 
 .What you'll need
-* If your management node is not connected to the internet, you have downloaded the package from the relevant location:
-** https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[Storage firmware package for NetApp HCI storage clusters^]
-** https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Storage firmware package for SolidFire storage clusters running Element software^]
+If your management node is not connected to the internet, you have https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[downloaded the Storage firmware package for NetApp HCI storage clusters^].
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
@@ -180,9 +178,8 @@ https://<ManagementNodeIP>/package-repository/1/
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Download the storage firmware upgrade package to a device that is accessible to the management node:
-* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage firmware image.
-* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage firmware image.
+. Download the latest storage firmware upgrade package to a device that is accessible to the management node; go to the https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[Element software storage firmware bundle page^] and download the latest storage firmware image.
+
 . Upload the storage firmware upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
 +
