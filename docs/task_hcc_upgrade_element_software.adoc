@@ -175,7 +175,7 @@ https://<ManagementNodeIP>/package-repository/1/
 a|
 . Download the storage upgrade package to a device that is accessible to the management node:
 +
-For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image.
+For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image.
 
 . Upload the storage upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
@@ -377,7 +377,7 @@ CAUTION: Aborting the cluster upgrade while a node is being updated might result
 
 .Steps
 
-. Download the storage upgrade package. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image to a device that is not the management node.
+. Download the storage upgrade package. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image to a device that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
@@ -529,12 +529,12 @@ You can use the HealthTools suite of tools to update NetApp Element software at 
 
 .What you'll need
 
-. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page].
+. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
-. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file^] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
 . Copy the ISO file to the management node in an accessible location like `/tmp`.
 +
 TIP: You can do this by using, for example, SCP. When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.

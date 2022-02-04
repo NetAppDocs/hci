@@ -178,7 +178,7 @@ https://<ManagementNodeIP>/package-repository/1/
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Download the latest storage firmware upgrade package to a device that is accessible to the management node; go to the https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[Element software storage firmware bundle page] and download the latest storage firmware image.
+. Download the latest storage firmware upgrade package to a device that is accessible to the management node; go to the https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[Element software storage firmware bundle page^] and download the latest storage firmware image.
 
 . Upload the storage firmware upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
