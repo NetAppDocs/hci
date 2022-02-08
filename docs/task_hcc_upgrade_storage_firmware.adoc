@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_storage_firmware.html
-summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade the firmware associated with your storage nodes.
+summary: As part of a NetApp HCI system upgrade, you upgrade the firmware associated with your storage nodes.
 keywords: netapp, element, hcc, firmware, storage firmware
 ---
 
@@ -33,7 +33,7 @@ IMPORTANT: To update your iDRAC/BIOS firmware, contact NetApp Support. For addit
 * *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
 
-NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article] (login required).
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article^] (login required).
 
 .Upgrade options
 

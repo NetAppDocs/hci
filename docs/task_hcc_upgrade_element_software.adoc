@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_element_software.html
-summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade NetApp Element software.
+summary: As part of a NetApp HCI system upgrade, you upgrade NetApp Element software.
 keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 ---
 
@@ -173,9 +173,7 @@ https://<ManagementNodeIP>/package-repository/1/
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Download the storage upgrade package to a device that is accessible to the management node:
-+
-For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image.
+. Download the storage upgrade package to a device that is accessible to the management node. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^] and download the latest storage node image.
 
 . Upload the storage upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
@@ -377,7 +375,7 @@ CAUTION: Aborting the cluster upgrade while a node is being updated might result
 
 .Steps
 
-. Download the storage upgrade package. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image to a device that is not the management node.
+. Download the storage upgrade package. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^] and download the latest storage node image to a device that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 

@@ -24,12 +24,12 @@ IMPORTANT: Element software 12.3.2 is the final version that you can upgrade to 
 * You have upgraded your management services to at least version 2.1.326.
 +
 NetApp Hybrid Cloud Control upgrades are not available in earlier service bundle versions.
-* You have downloaded the latest version of https://mysupport.netapp.com/site/products/all/details/element-healthtools/downloads-tab[HealthTools] and copied the installation file to the management node.
+* You have downloaded the latest version of https://mysupport.netapp.com/site/products/all/details/element-healthtools/downloads-tab[HealthTools^] and copied the installation file to the management node.
 +
 TIP: You can check the locally installed version of HealthTools by running the `sfupdate-healthtools -v` command.
 
 * To use HealthTools with dark sites, you need to do these additional steps:
-** Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+** Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file^] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
 ** Have the management node up and running at the dark site.
 
 .About this task

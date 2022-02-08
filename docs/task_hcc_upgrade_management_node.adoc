@@ -81,7 +81,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 
 .Steps
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI^] from the NetApp Support Site to the management node virtual machine.
+. Download the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[management node ISO^] for NetApp HCI from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -163,7 +163,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] from the NetApp Support Site to the management node virtual machine.
+. Download the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[management node ISO^] for NetApp HCI from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -246,7 +246,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] from the NetApp Support Site to the management node virtual machine.
+. Download the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[management node ISO^] for NetApp HCI from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -326,7 +326,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] from the NetApp Support Site to the management node virtual machine.
+. Download the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[management node ISO^] for NetApp HCI from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -413,7 +413,7 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent vo
 sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent volumes>
 ----
 
-. (For all NetApp HCI installations and SolidFire all-flash storage installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.3.x management node by following the steps in the link:task_vcp_upgrade_plugin.html[Upgrade the Element Plug-in for vCenter Server] topic.
+. (For all NetApp HCI installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.3.x management node by following the steps in the link:task_vcp_upgrade_plugin.html[Upgrade the Element Plug-in for vCenter Server] topic.
 . Locate the asset ID for your installation using the management node API:
 .. From a browser, log into the management node REST API UI:
 ... Go to the storage MVIP and log in.
@@ -435,17 +435,17 @@ https://<ManagementNodeIP>/inventory/1/
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 
-. If you have a NetApp HCI installation, locate the hardware tag for your compute node in vSphere:
+. Locate the hardware tag for your compute node in vSphere:
 .. Select the host in the vSphere Web Client navigator.
 .. Click the *Monitor* tab, and click *Hardware Health*.
 .. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
-. Add a vCenter controller asset for HCI monitoring (NetApp HCI installations only) and Hybrid Cloud Control (for all installations) to the management node known assets:
+. Add a vCenter controller asset for HCI monitoring and Hybrid Cloud Control to the management node known assets:
 .. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
 .. Click *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. Enter the required payload values with type `vCenter` and vCenter credentials.
 .. Click *Execute*.
-. (For NetApp HCI only) Add a compute node asset to the management node known assets:
+. Add a compute node asset to the management node known assets:
 .. Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
 .. Click *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
