@@ -423,34 +423,34 @@ This action causes certificate to be accepted for the next step.
 ----
 https://<ManagementNodeIP>/inventory/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the window.
-.. From the REST API UI, click *GET ​/installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET ​/installations*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the code 200 response body, copy the `id` for the installation.
 +
 Your installation has a base asset configuration that was created during installation or upgrade.
 
 . Locate the hardware tag for your compute node in vSphere:
 .. Select the host in the vSphere Web Client navigator.
-.. Click the *Monitor* tab, and click *Hardware Health*.
+.. Select the *Monitor* tab, and select *Hardware Health*.
 .. The node BIOS manufacturer and model number are listed. Copy and save the value for `tag` for use in a later step.
 . Add a vCenter controller asset for HCI monitoring and Hybrid Cloud Control to the management node known assets:
-.. Click *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
-.. Click *Try it out*.
+.. Select *POST /assets/{asset_id}/controllers* to add a controller sub-asset.
+.. Select *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. Enter the required payload values with type `vCenter` and vCenter credentials.
-.. Click *Execute*.
+.. Select *Execute*.
 . Add a compute node asset to the management node known assets:
-.. Click *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
-.. Click *Try it out*.
+.. Select *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+.. Select *Try it out*.
 .. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
 .. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and paste the hardware tag you saved during a previous step for `hardware_tag`.
-.. Click *Execute*.
+.. Select *Execute*.
 
 == Migrating from management node version 10.x to 11.x
 If you have a management node at version 10.x, you cannot upgrade from 10.x to 11.x. You can instead use this migration procedure to copy over the configuration from 10.x to a newly deployed 11.1 management node. If your management node is currently at 11.0 or higher, you should skip this procedure. You need management node 11.0 or 11.1 and the link:task_upgrade_element_latest_healthtools.html[latest HealthTools] to upgrade Element software from 10.3 + through 11.x.
@@ -467,8 +467,8 @@ If you have a management node at version 10.x, you cannot upgrade from 10.x to 1
 https://<mNode 11.1 IP address>:9443
 ----
 . In vSphere, select *NetApp Element Configuration* > *mNode Settings*. (In older versions, the top-level menu is *NetApp SolidFire Configuration*.)
-. Click *Actions* > *Clear*.
-. To confirm, click *Yes*. The mNode Status field should report Not Configured.
+. Select *Actions* > *Clear*.
+. To confirm, select *Yes*. The mNode Status field should report Not Configured.
 +
 NOTE: When you go to the *mNode Settings* tab for the first time, the mNode Status field might display as *Not Configured* instead of the expected *UP*; you might not be able to choose *Actions* > *Clear*. Refresh the browser. The mNode Status field will eventually display *UP*.
 
@@ -482,11 +482,11 @@ https://<mNode 11.1 IP address>:9443
 +
 NOTE: The default password is `solidfire`. This password is required to set the new password.
 
-. Click the *vCenter Plug-in Registration* tab.
+. Select the *vCenter Plug-in Registration* tab.
 . Select *Update Plug-in*.
-. Enter required values. When you are finished, click *UPDATE*.
+. Enter required values. When you are finished, select *UPDATE*.
 . Log in to vSphere and select *NetApp Element Configuration* > *mNode Settings*.
-. Click *Actions* > *Configure*.
+. Select *Actions* > *Configure*.
 . Provide the management node IP address, management node user ID (the user name is `admin`), password that you set on the *QoSSIOC Service Management* tab of the registration utility, and vCenter user ID and password.
 +
 In vSphere, the *mNode Settings* tab should display the mNode status as *UP*, which indicates management node 11.1 is registered to vCenter.
@@ -566,14 +566,14 @@ You can keep your existing management node if you have sequentially upgraded (1)
 ----
 https://<ManagementNodeIP>/mnode
 ----
-. Click *Authorize* and complete the following:
+. Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client` if the value is not already populated.
-.. Click *Authorize* to begin a session.
-. From the REST API UI, click *POST /services/reconfigure-auth*.
-. Click *Try it out*.
+.. Select *Authorize* to begin a session.
+. From the REST API UI, select *POST /services/reconfigure-auth*.
+. Select *Try it out*.
 . For the *load_images* parameter, select `true`.
-. Click *Execute*.
+. Select *Execute*.
 +
 The response body indicates that reconfiguration was successful.
 

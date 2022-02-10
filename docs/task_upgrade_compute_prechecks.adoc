@@ -47,14 +47,14 @@ NOTE: If you have multiple two-node storage cluster configurations, each within 
 https://<ManagementNodeIP>/hcc
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click *Upgrade* near the top right of the interface.
+. Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select the *Compute firmware* tab.
-. Click the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
-. On the *Compute Health Check* page, click *Run Health Check*.
+. Select the health check image:hcc_healthcheck_icon.png[icon] for the cluster you want to check for upgrade readiness.
+. On the *Compute Health Check* page, select *Run Health Check*.
 . If there are issues, the page provides a report. Do the following:
 .. Go to the specific KB article listed for each issue or perform the specified remedy.
 .. If a KB is specified, complete the process described in the relevant KB article.
-.. After you have resolved cluster issues, click *Re-Run Health Check*.
+.. After you have resolved cluster issues, select *Re-Run Health Check*.
 
 After the health check completes without errors, the compute nodes in the cluster are ready to upgrade. See  link:task_hcc_upgrade_compute_node_firmware.html[Update compute node firmware] to proceed.
 
@@ -70,18 +70,18 @@ You can use REST API to verify that compute nodes in a cluster are ready to be u
 ----
 https://<ManagementNodeIP>/inventory/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
-.. From the REST API UI, click *GET ​/installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
+... Select *Authorize* to begin a session.
+.. From the REST API UI, select *GET ​/installations*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the code 200 response body, copy the `"id"` for the installation you plan to use for health checks.
-.. From the REST API UI, click *GET ​/installations​/{id}*.
-.. Click *Try it out*.
+.. From the REST API UI, select *GET ​/installations​/{id}*.
+.. Select *Try it out*.
 .. Enter the installation ID.
-.. Click *Execute*.
+.. Select *Execute*.
 .. From the code 200 response body, copy the IDs for each of the following:
 ... The cluster ID (`"clusterID"`)
 ... A controller ID (`"controllerId"`)
@@ -117,12 +117,12 @@ https://<ManagementNodeIP>/inventory/1/
 ----
 https://<ManagementNodeIP>/vcenter/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client` if the value is not already populated.
-... Click *Authorize* to begin a session.
-.. Click *POST /compute​/{CONTROLLER_ID}​/health-checks*.
-.. Click *Try it out*.
+... Select *Authorize* to begin a session.
+.. Select *POST /compute​/{CONTROLLER_ID}​/health-checks*.
+.. Select *Try it out*.
 .. Enter the `"controllerId"` you copied from the previous step in the *Controller_ID* parameter field.
 .. In the payload, enter the `"clusterId"` that you copied from the previous step as the `"cluster"` value and remove the `"nodes"` parameter.
 +
@@ -131,7 +131,7 @@ https://<ManagementNodeIP>/vcenter/1/
   "cluster": "domain-1"
 }
 ----
-.. Click *Execute* to run a health check on the cluster.
+.. Select *Execute* to run a health check on the cluster.
 +
 The code 200 response gives a `"resourceLink"` URL with the task ID appended that is needed to confirm the health check results.
 +
@@ -150,10 +150,10 @@ The code 200 response gives a `"resourceLink"` URL with the task ID appended tha
 ----
 https://<ManagementNodeIP>/vcenter/1/
 ----
-.. Click *GET /compute​/tasks/{task_id}*.
-.. Click *Try it out*.
+.. Select *GET /compute​/tasks/{task_id}*.
+.. Select *Try it out*.
 .. Enter the task ID portion of the `"resourceLink"` URL from the *POST /compute​/{CONTROLLER_ID}​/health-checks* code 200 response in the `task_id` parameter field.
-.. Click *Execute*.
+.. Select *Execute*.
 .. If the `status` returned indicates that there were problems regarding compute node health, do the following:
 ... Go to the specific KB article (`KbLink`) listed for each issue or perform the specified remedy.
 ... If a KB is specified, complete the process described in the relevant KB article.

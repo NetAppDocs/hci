@@ -41,12 +41,12 @@ NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP fi
 . Create a new host baseline for the compute node.
 . Choose *Host Extension* for Name and Type and select all imported driver packages to be included in the new baseline.
 . In the *Host and Clusters* menu in vCenter, select the cluster with the compute nodes you would like to update and navigate to the *Update Manager* tab.
-. Click *Remediate* and the select the newly created host baseline. Ensure that drivers included in the baseline are selected.
+. Select *Remediate* and the select the newly created host baseline. Ensure that drivers included in the baseline are selected.
 . Proceed through the wizard to the *Host Remediation Options* and ensure that the *Do Not Change VM Power State* option is selected to keep virtual machines online during the driver update.
 +
 NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (this is the default in NetApp HCI installations), virtual machines will automatically be migrated to other nodes in the cluster.
 
-. Proceed to the *Ready to Complete* page in the wizard and click *Finish*.
+. Proceed to the *Ready to Complete* page in the wizard and select *Finish*.
 +
 The drivers for all compute nodes in the cluster are updated one node at a time while virtual machines stay online.
 
