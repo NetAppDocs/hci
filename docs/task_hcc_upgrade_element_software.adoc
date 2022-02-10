@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_element_software.html
-summary: As part of a NetApp HCI or SolidFire system upgrade, you upgrade NetApp Element software.
+summary: As part of a NetApp HCI system upgrade, you upgrade NetApp Element software.
 keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 ---
 
@@ -60,7 +60,7 @@ TIP: The upgrade process takes approximately 30 minutes per node for non-H610S p
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click *Upgrade* near the top right of the interface.
+. Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Storage*.
 +
 The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page.
@@ -73,8 +73,8 @@ The *Storage* tab lists the storage clusters that are part of your installation.
 
 |Your management node has external connectivity.
 a|
-. Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available under the *Element* tab.
-. Click *Begin Upgrade*.
+. Select the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available under the *Element* tab.
+. Select *Begin Upgrade*.
 
 TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
 
@@ -84,7 +84,7 @@ You can download logs after the upgrade is complete.
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Click *Browse* to upload the upgrade package that you downloaded.
+. Select *Browse* to upload the upgrade package that you downloaded.
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 
 CAUTION: The file upload will be lost if you navigate away from the browser window.
@@ -93,8 +93,8 @@ An on-screen message is displayed after the file is successfully uploaded and va
 
 |You are upgrading an H610S cluster running Element version earlier than 11.8.
 a|
-. Click the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
-. Click *Begin Upgrade*.
+. Select the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
+. Select *Begin Upgrade*.
 After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
 . Complete the additional steps required (phase 2) in the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^], and acknowledge in the UI that you have completed phase 2.
 
@@ -120,13 +120,13 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |The upgrade is in progress. A progress bar shows the upgrade status. On-screen messages also show node-level faults and display the node ID of each node in the cluster as the upgrade progresses. You can monitor the status of each node using the Element UI or the NetApp Element plug-in for vCenter Server UI.
 
 |Upgrade Pausing
-|You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. To ensure that the cluster is in a safe spot before pausing an upgrade, it can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, click *Resume*.
+|You can choose to pause the upgrade. Depending on the state of the upgrade process, the pause operation can succeed or fail. You will see a UI prompt asking you to confirm the pause operation. To ensure that the cluster is in a safe spot before pausing an upgrade, it can take up to two hours for the upgrade operation to be completely paused. To resume the upgrade, select *Resume*.
 
 |Paused
-|You paused the upgrade. Click *Resume* to resume the process.
+|You paused the upgrade. Select *Resume* to resume the process.
 
 |Error
-|An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and click *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
+|An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and select *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
 |Unable to Detect
 |NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. If you have external connectivity but still see this message, check your link:task_mnode_configure_proxy_server.html[proxy configuration^].
@@ -156,26 +156,24 @@ a|
 ----
 https://<ManagementNodeIP>/package-repository/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET ​/packages​/remote-repository​/connection*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
 . Find the upgrade package ID:
-.. From the REST API UI, click *GET /packages*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET /packages*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the response, copy and save the package ID for use in a later step.
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Download the storage upgrade package to a device that is accessible to the management node:
-+
-For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image.
+. Download the storage upgrade package to a device that is accessible to the management node. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^] and download the latest storage node image.
 
 . Upload the storage upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
@@ -183,21 +181,21 @@ For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.c
 ----
 https://<ManagementNodeIP>/package-repository/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *POST /packages*.
-.. Click *Try it out*.
-.. Click *Browse* and select the upgrade package.
-.. Click *Execute* to initiate the upload.
+.. From the REST API UI, select *POST /packages*.
+.. Select *Try it out*.
+.. Select *Browse* and select the upgrade package.
+.. Select *Execute* to initiate the upload.
 .. From the response, copy and save the package ID (`"id"`) for use in a later step.
 . Verify the status of the upload.
-.. From the REST API UI, click *GET​ /packages​/{id}​/status*.
-.. Click *Try it out*.
+.. From the REST API UI, select *GET​ /packages​/{id}​/status*.
+.. Select *Try it out*.
 .. Enter the package ID you copied in the previous step in *id*.
-.. Click *Execute* to initiate the status request.
+.. Select *Execute* to initiate the status request.
 +
 The response indicates `state` as `SUCCESS` when complete.
 |===
@@ -207,19 +205,19 @@ The response indicates `state` as `SUCCESS` when complete.
 ----
 https://<ManagementNodeIP>/inventory/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET /installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET /installations*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the response, copy the installation asset ID (`"id"`).
-.. From the REST API UI, click *GET /installations/{id}*.
-.. Click *Try it out*.
+.. From the REST API UI, select *GET /installations/{id}*.
+.. Select *Try it out*.
 .. Paste the installation asset ID into the *id* field.
-.. Click *Execute*.
+.. Select *Execute*.
 .. From the response, copy and save the storage cluster ID (`"id"`) of the cluster you intend to upgrade for use in a later step.
 . Run the storage upgrade:
 .. Open the storage REST API UI on the management node:
@@ -227,13 +225,13 @@ https://<ManagementNodeIP>/inventory/1/
 ----
 https://<ManagementNodeIP>/storage/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. Click *POST /upgrades*.
-.. Click *Try it out*.
+.. Select *POST /upgrades*.
+.. Select *Try it out*.
 .. Enter the upgrade package ID in the parameter field.
 .. Enter the storage cluster ID in the parameter field.
 +
@@ -246,7 +244,7 @@ The payload should look similar to the following example:
   "storageId": "884f14a4-5a2a-11e9-9088-6c0b84e211c4"
 }
 ----
-.. Click *Execute* to initiate the upgrade.
+.. Select *Execute* to initiate the upgrade.
 +
 The response should indicate the state as `initializing`:
 +
@@ -300,10 +298,10 @@ The response should indicate the state as `initializing`:
 ----
 .. Copy the upgrade ID (`"upgradeId"`) that is part of the response.
 . Verify the upgrade progress and results:
-.. Click *GET ​/upgrades/{upgradeId}*.
-.. Click *Try it out*.
+.. Select *GET ​/upgrades/{upgradeId}*.
+.. Select *Try it out*.
 .. Enter the upgrade ID from the previous step in *upgradeId*.
-.. Click *Execute*.
+.. Select *Execute*.
 .. Do one of the following if there are problems or special requirements during the upgrade:
 +
 [%header,cols=2*]
@@ -315,8 +313,8 @@ The response should indicate the state as `initializing`:
 a|
 . Go to the specific KB article listed for each issue or perform the specified remedy.
 . If a KB is specified, complete the process described in the relevant KB article.
-. After you have resolved cluster issues, reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
-. Click *Try it out*.
+. After you have resolved cluster issues, reauthenticate if needed and select *PUT ​/upgrades/{upgradeId}*.
+. Select *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"resume"` in the request body.
 +
@@ -325,12 +323,12 @@ a|
   "action": "resume"
 }
 ----
-. Click *Execute*.
+. Select *Execute*.
 
 |You need to pause the upgrade because the maintenance window is closing or for another reason.
 a|
-. Reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
-. Click *Try it out*.
+. Reauthenticate if needed and select *PUT ​/upgrades/{upgradeId}*.
+. Select *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"pause"` in the request body.
 +
@@ -339,13 +337,13 @@ a|
   "action": "pause"
 }
 ----
-. Click *Execute*.
+. Select *Execute*.
 
 |If you are upgrading an H610S cluster running an Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
 a|
 . See <<Upgrading H610S storage nodes to Element 12.3.x or later (phase 2)>> and complete the process for each node.
-. Reauthenticate if needed and click *PUT ​/upgrades/{upgradeId}*.
-. Click *Try it out*.
+. Reauthenticate if needed and select *PUT ​/upgrades/{upgradeId}*.
+. Select *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
 . Enter `"action":"acknowledge"` in the request body.
 +
@@ -354,7 +352,7 @@ a|
   "action": "acknowledge"
 }
 ----
-. Click *Execute*.
+. Select *Execute*.
 |===
 .. Run the *GET ​/upgrades/{upgradeId}* API multiple times, as needed, until the process is complete.
 +
@@ -363,12 +361,12 @@ During the upgrade, the `status` indicates `running` if no errors are encountere
 The upgrade has finished successfully when the `percent` value is `100` and the `state` indicates `finished`.
 
 == What happens if an upgrade fails using NetApp Hybrid Cloud Control
-If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, clicking *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
+If a drive or node fails during an upgrade, the Element UI will show cluster faults. The upgrade process does not proceed to the next node, and waits for the cluster faults to resolve. The progress bar in the UI shows that the upgrade is waiting for the cluster faults to resolve. At this stage, selecting *Pause* in the UI will not work, because the upgrade waits for the cluster to be healthy. You will need to engage NetApp Support to assist with the failure investigation.
 
 NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during which one of the following scenarios can happen:
 
 * The cluster faults get resolved within the three-hour window, and upgrade resumes. You do not need to take any action in this scenario.
-* The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by clicking *Resume* after the problem is resolved.
+* The problem persists after three hours, and the upgrade status shows *Error* with a red banner. You can resume the upgrade by selecting *Resume* after the problem is resolved.
 * NetApp Support has determined that the upgrade needs to be temporarily aborted to take corrective action before the three-hour window. Support will use the API to abort the upgrade.
 
 CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
@@ -377,7 +375,7 @@ CAUTION: Aborting the cluster upgrade while a node is being updated might result
 
 .Steps
 
-. Download the storage upgrade package. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image to a device that is not the management node.
+. Download the storage upgrade package. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^] and download the latest storage node image to a device that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
@@ -529,7 +527,7 @@ You can use the HealthTools suite of tools to update NetApp Element software at 
 
 .What you'll need
 
-. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^].
+. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.

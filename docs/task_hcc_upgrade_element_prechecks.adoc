@@ -294,7 +294,7 @@ Sample response:
 ----
 sfupgradecheck failed: Unable to verify latest available version of healthtools.
 ----
-. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file^] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
 . Run the following command:
 +
 ----
