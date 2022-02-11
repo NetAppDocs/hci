@@ -81,7 +81,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 
 .Steps
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] or https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element] software from the NetApp Support Site to the management node virtual machine.
+. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI^] from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -163,7 +163,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] or https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element] software from the NetApp Support Site to the management node virtual machine.
+. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -246,7 +246,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] or https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element] software from the NetApp Support Site to the management node virtual machine.
+. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 
@@ -326,7 +326,7 @@ NOTE: Persistent volumes might require an additional network adapter if eth0 is 
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 . Log in to the management node virtual machine using SSH or console access.
-. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] or https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element] software from the NetApp Support Site to the management node virtual machine.
+. Download the management node ISO for https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI] from the NetApp Support Site to the management node virtual machine.
 +
 NOTE: The name of the ISO is similar to `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
 

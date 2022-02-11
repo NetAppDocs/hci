@@ -46,9 +46,7 @@ IMPORTANT: If you are upgrading an H610S series node to Element 12.3.x and the n
 Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 
 .What you'll need
-* If your management node is not connected to the internet, you have downloaded the package from the relevant location:
-** https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software package for NetApp HCI storage clusters^]
-** https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[Element software upgrade package (.tar.gz) for SolidFire storage clusters^]
+If your management node is not connected to the internet, you have downloaded the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software package for NetApp HCI storage clusters^].
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
@@ -176,8 +174,9 @@ https://<ManagementNodeIP>/package-repository/1/
 |Your management node is within a dark site without external connectivity.
 a|
 . Download the storage upgrade package to a device that is accessible to the management node:
-* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image.
-* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage node image.
++
+For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image.
+
 . Upload the storage upgrade package to the management node:
 .. Open the management node REST API UI on the management node:
 +
@@ -378,12 +377,10 @@ CAUTION: Aborting the cluster upgrade while a node is being updated might result
 
 .Steps
 
-. Download the storage upgrade package:
+. Download the storage upgrade package. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^] and download the latest storage node image to a device that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
-* For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page] and download the latest storage node image to a device that is not the management node.
-* For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page] and download the latest storage node image to a device that not the management node.
 . Copy the ISO file to the management node in an accessible location like /tmp.
 +
 When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
@@ -532,12 +529,12 @@ You can use the HealthTools suite of tools to update NetApp Element software at 
 
 .What you'll need
 
-. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page]. For SolidFire storage systems, go to the Element software https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[download page].
+. For NetApp HCI systems, go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[download page^].
 . Select the correct software release and download the latest storage node image to a computer that is not the management node.
 +
 NOTE: You need the latest version of HealthTools to upgrade Element storage software.
 
-. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file^] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
 . Copy the ISO file to the management node in an accessible location like `/tmp`.
 +
 TIP: You can do this by using, for example, SCP. When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
