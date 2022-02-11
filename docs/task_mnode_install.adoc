@@ -57,7 +57,7 @@ Prior to following this procedure, you should have an understanding of  link:con
 
 == Download ISO or OVA and deploy the VM
 
-. Download the OVA or ISO for your installation from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tabNetApp[NetApp HCI^] page on the NetApp Support Site.
+. Download the OVA or ISO for your installation from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI^] page on the NetApp Support Site:
 
 .. Select *Download Latest Release* and accept the EULA.
 .. Select the management node image you want to download.
