@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hcc_update_management_services.html
-summary: As part of a NetApp HCI or SolidFire storage system upgrade, you should update management services.
+summary: As part of a NetApp HCI system upgrade, you should update management services.
 keywords: netapp, hci, on premise, cluster, management services
 ---
 
