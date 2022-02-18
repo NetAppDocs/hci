@@ -52,12 +52,10 @@ Here are the details of the improvements and changes included in each new firmwa
 |===
 |Node and firmware component |Improvements and changes
 
-|*NATP3.9*
+|*NATP3.10*
 a|
-* CSESF-284 Tatooine + BMC 6.71.18 does not report when PPR function work success event.
-* CSESF-289 NA3.7 BIOS does not have the ability to report a success on hPPR (hard PPR).
-* Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
-|Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.
+* CSEFS-63 New BIOS NA3.6/NA3.7 fails memTest86
+* IPU 2020.2
 
 // |H300E, H500E, H700E BMC 6.84.00
 // |Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
