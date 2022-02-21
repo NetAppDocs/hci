@@ -20,15 +20,15 @@ Before you receive your NetApp HCI hardware, ensure that you complete the checkl
 
 Here are the links to the requirements and pre-deployment tasks:
 
-* link:hci_prereqs_required_network_ports.html[Network port requirements^]
-* link:hci_prereqs_network_switch.html[Network and switch requirements^]
-* link:hci_prereqs_network_cables.html[Network cable requirements^]
-* link:hci_prereqs_ip_address.html[IP address requirements^]
-* link:hci_prereqs_network_configuration.html[Network configuration^]
-* link:hci_prereqs_timekeeping.html[DNS and timekeeping requirements^]
-* link:hci_prereqs_environmental.html[Environmental requirements^]
-* link:hci_prereqs_protection_domains.html[Protection Domains^]
-* link:hci_prereqs_witness_nodes.html[Witness Node resource requirements for two-node storage clusters^]
+* link:hci_prereqs_required_network_ports.html[Network port requirements]
+* link:hci_prereqs_network_switch.html[Network and switch requirements]
+* link:hci_prereqs_network_cables.html[Network cable requirements]
+* link:hci_prereqs_ip_address.html[IP address requirements]
+* link:hci_prereqs_network_configuration.html[Network configuration]
+* link:hci_prereqs_timekeeping.html[DNS and timekeeping requirements]
+* link:hci_prereqs_environmental.html[Environmental requirements]
+* link:hci_prereqs_protection_domains.html[Protection Domains]
+* link:hci_prereqs_witness_nodes.html[Witness Node resource requirements for two-node storage clusters]
 
 [discrete]
 == Find more information

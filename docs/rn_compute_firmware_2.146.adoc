@@ -80,9 +80,6 @@ a|
 a|
 * BIOS PPR event log parsing in BMC SEL
 * Group Domain of LDAP length to 128 chars
-
-// |H300E, H500E, H700E BMC 6.84.00
-// |Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
 |===
 
 // |H610C BIOS 3B03

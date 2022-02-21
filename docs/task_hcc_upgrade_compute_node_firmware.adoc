@@ -20,7 +20,7 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 
 .What you'll need
 
-* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)] for driver and firmware compatibility information, and check the latest link:rn_relatedrn.html[compute node firmware release notes] for important late-breaking firmware and driver details.
+* *Compute drivers*: You have upgraded your compute node drivers. If compute node drivers are not compatible with the new firmware, the upgrade will not start. See the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)^] for driver and firmware compatibility information, and check the latest link:rn_relatedrn.html[compute node firmware release notes] for important late-breaking firmware and driver details.
 * *Admin privileges*: You have cluster administrator and BMC administrator permissions to perform the upgrade.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Minimum BMC and BIOS versions*: The node you intend to upgrade using NetApp Hybrid Cloud Control meets the following minimum requirements:
@@ -55,9 +55,9 @@ NOTE: H615C compute nodes must update BMC firmware to version 4.68 using the lin
 NOTE: A Redfish license is required for H300E, H500E, and H700E compute nodes to enable NetApp Hybrid Cloud Control to perform future firmware upgrades. Contact NetApp Support to get the license installed manually until a new compute firmware bundle automates this process in a follow-on release.
 
 +
-NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article] (login required).
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this KB article^] (login required).
 
-* *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article] for more information.
+* *BIOS boot order*: Manually change the boot order in the BIOS setup for each node to ensure `USB CD/DVD` appears in the boot list. See this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades#BootOrder[article^] for more information.
 * *BMC credentials*: Update the credentials NetApp Hybrid Cloud Control uses to connect to the compute node BMC. You can do this using either the NetApp Hybrid Cloud Control link:task_hcc_edit_bmc_info.html#use-netapp-hybrid-cloud-control-to-edit-bmc-information[UI] or link:task_hcc_edit_bmc_info.html#use-the-rest-api-to-edit-bmc-information[API]. Updating BMC information prior to upgrade refreshes the inventory and ensures that management node services are aware of all hardware parameters needed to complete the upgrade.
 * *Attached media*: Disconnect any physical USB or ISO before starting a compute node upgrade.
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
@@ -68,7 +68,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 
 In production environments, upgrade the firmware on one compute node at a time.
 
-NOTE: The ESXi host must be taken out of lockdown mode prior to running a health check and proceeding with the firmware upgrade. See link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_disable_lockdown_mode_on_ESXi_host[How to disable lockdown mode on ESXi host] and link:https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-F8F105F7-CF93-46DF-9319-F8991839D265.html[VMware lockdown mode behavior] for more information.
+NOTE: The ESXi host must be taken out of lockdown mode prior to running a health check and proceeding with the firmware upgrade. See link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_disable_lockdown_mode_on_ESXi_host[How to disable lockdown mode on ESXi host^] and link:https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-F8F105F7-CF93-46DF-9319-F8991839D265.html[VMware lockdown mode behavior^] for more information.
 
 For NetApp Hybrid Cloud Control UI or API upgrades, your ESXi host will be automatically placed in maintenance mode during the upgrade process if you have the DRS feature and required licensing. The node will be rebooted and after the upgrade process is complete, the ESXi host will be taken out of maintenance mode. For USB and BMC UI options, you will need to place the ESXi host in maintenance mode manually, as described in each procedure.
 
@@ -91,7 +91,7 @@ TIP: For a successful upgrade, ensure that the health check on the vSphere clust
 
 TIP: For dark site upgrades, you can reduce upload time if the upgrade package and the management node are both local.
 
-NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host. 
+NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host.
 
 .What you'll need
 * If your management node is not connected to the internet, you have downloaded the compute node firmware package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
@@ -106,7 +106,7 @@ NOTE: You should extract the `TAR.GZ` file to a `TAR` file, and then extract the
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
-. Click *Upgrade* near the top right of the interface.
+. Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Compute firmware*.
 . Choose from the following options and perform the set of steps that are applicable to your cluster:
 +
@@ -121,13 +121,13 @@ a|
 +
 You will see the nodes in the cluster listed along with the current firmware versions and newer versions, if available for upgrade.
 . Select the upgrade package.
-. Click *Begin Upgrade*.
+. Select *Begin Upgrade*.
 +
-After you click *Begin Upgrade*, the window shows failed health checks, if any.
+After you select *Begin Upgrade*, the window shows failed health checks, if any.
 +
 CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
 
-. If the health checks at the cluster or node level passed with warnings, but without critical failures, you will see *Ready to be Upgraded*. Click *Upgrade Node*.
+. If the health checks at the cluster or node level passed with warnings, but without critical failures, you will see *Ready to be Upgraded*. Select *Upgrade Node*.
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
 
@@ -138,7 +138,7 @@ The UI displays a message after the upgrade is complete. You can download logs a
 |Your management node is within a dark site without external connectivity.
 a|
 . Select the cluster you are upgrading.
-. Click *Browse* to upload the upgrade package that you downloaded from the
+. Select *Browse* to upload the upgrade package that you downloaded from the
 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 
@@ -148,7 +148,7 @@ An on-screen message is displayed after the file is successfully uploaded and va
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
 
-TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log, which contains specific instructions or links to KB articles, to diagnose and correct any issue. For additional insight into compute node firmware upgrade issues using NetApp Hybrid Cloud Control, see this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB] article.
+TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log, which contains specific instructions or links to KB articles, to diagnose and correct any issue. For additional insight into compute node firmware upgrade issues using NetApp Hybrid Cloud Control, see this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB^] article.
 
 === Upgrade status changes
 Here are the different states that the UI shows before, during, and after the upgrade process:
@@ -171,7 +171,7 @@ Here are the different states that the UI shows before, during, and after the up
 |All the health checks passed successfully, and the node is ready to be upgraded.
 
 |An error has occurred during the upgrade.
-|The upgrade fails with this notification when a critical error occurs. Download the logs by clicking the *Download Logs* link to help resolve the error. You can try upgrading again after you resolve the error.
+|The upgrade fails with this notification when a critical error occurs. Download the logs by selecting the *Download Logs* link to help resolve the error. You can try upgrading again after you resolve the error.
 
 |Node upgrade is in progress.
 |The upgrade is in progress. A progress bar shows the upgrade status.
@@ -202,24 +202,24 @@ a|
 ----
 https://<ManagementNodeIP>/package-repository/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET ​/packages​/remote-repository​/connection*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET ​/packages​/remote-repository​/connection*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
 . Find the upgrade package ID:
-.. From the REST API UI, click *GET /packages*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET /packages*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the response, copy and save the upgrade package name (`"packageName"`) and package version (`"packageVersion"`) for use in a later step.
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page] and download the latest compute node firmware image to a device that is accessible to the management node.
+. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page^] and download the latest compute node firmware image to a device that is accessible to the management node.
 +
 TIP: For dark site upgrades, you can reduce upload time if the upgrade package and the management node are both local.
 
@@ -229,21 +229,21 @@ TIP: For dark site upgrades, you can reduce upload time if the upgrade package a
 ----
 https://<ManagementNodeIP>/package-repository/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *POST /packages*.
-.. Click *Try it out*.
-.. Click *Browse* and select the upgrade package.
-.. Click *Execute* to initiate the upload.
+.. From the REST API UI, select *POST /packages*.
+.. Select *Try it out*.
+.. Select *Browse* and select the upgrade package.
+.. Select *Execute* to initiate the upload.
 .. From the response, copy and save the package ID (`"id"`) for use in a later step.
 . Verify the status of the upload.
-.. From the REST API UI, click *GET​ /packages​/{id}​/status*.
-.. Click *Try it out*.
+.. From the REST API UI, select *GET​ /packages​/{id}​/status*.
+.. Select *Try it out*.
 .. Enter the package ID you copied in the previous step in *id*.
-.. Click *Execute* to initiate the status request.
+.. Select *Execute* to initiate the status request.
 +
 The response indicates `state` as `SUCCESS` when complete.
 .. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
@@ -254,19 +254,19 @@ The response indicates `state` as `SUCCESS` when complete.
 ----
 https://<ManagementNodeIP>/inventory/1/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET /installations*.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. From the REST API UI, select *GET /installations*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. From the response, copy the installation asset ID (`"id"`).
-.. From the REST API UI, click *GET /installations/{id}*.
-.. Click *Try it out*.
+.. From the REST API UI, select *GET /installations/{id}*.
+.. Select *Try it out*.
 .. Paste the installation asset ID into the *id* field.
-.. Click *Execute*.
+.. Select *Execute*.
 .. From the response, copy and save the cluster controller ID (`"controllerId"`)and node hardware ID (`"hardwareId"`) for use in a later step:
 +
 [subs=+quotes]
@@ -303,13 +303,13 @@ https://<ManagementNodeIP>/inventory/1/
 ----
 https://<ManagementNodeIP>/hardware/2/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. Click *POST /nodes/{hardware_id}/upgrades*.
-.. Click *Try it out*.
+.. Select *POST /nodes/{hardware_id}/upgrades*.
+.. Select *Try it out*.
 .. Enter the hardware host asset ID (`"hardwareId"` saved from a previous step) in the parameter field.
 .. Do the following with the payload values:
 ... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
@@ -328,16 +328,16 @@ https://<ManagementNodeIP>/hardware/2/
 }
 ----
 
-.. Click *Execute* to initiate the upgrade.
+.. Select *Execute* to initiate the upgrade.
 +
 CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
 
 .. Copy the upgrade task ID that is part of the resource link (`"resourceLink"`) URL in the response.
 . Verify the upgrade progress and results:
-.. Click *GET /task/{task_id}/logs*.
-.. Click *Try it out*.
+.. Select *GET /task/{task_id}/logs*.
+.. Select *Try it out*.
 .. Enter the task ID from the previous step in *task_Id*.
-.. Click *Execute*.
+.. Select *Execute*.
 .. Do one of the following if there are problems or special requirements during the upgrade:
 +
 [%header,cols=2*]
@@ -349,12 +349,12 @@ CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated 
 a|
 . Go to the specific KB article listed for each issue or perform the specified remedy.
 . If a KB is specified, complete the process described in the relevant KB article.
-. After you have resolved cluster issues, reauthenticate if needed and click *POST /nodes/{hardware_id}/upgrades*.
+. After you have resolved cluster issues, reauthenticate if needed and select *POST /nodes/{hardware_id}/upgrades*.
 . Repeat the steps as described previously in the upgrade step.
 
 |The upgrade fails and the mitigation steps are not listed in upgrade log.
 a|
-. See this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB article (login required]).
+. See this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB article^] (login required).
 |===
 .. Run the *GET ​/task/{task_id}/logs* API multiple times, as needed, until the process is complete.
 +
@@ -367,16 +367,16 @@ The upgrade has finished successfully when the status for each step is `complete
 ----
 https://<ManagementNodeIP>/hardware/2/
 ----
-.. Click *Authorize* and complete the following:
+.. Select *Authorize* and complete the following:
 ... Enter the cluster user name and password.
 ... Enter the client ID as `mnode-client`.
-... Click *Authorize* to begin a session.
+... Select *Authorize* to begin a session.
 ... Close the authorization window.
-.. From the REST API UI, click *GET ​/nodes​/{hardware_id}​/upgrades*.
+.. From the REST API UI, select *GET ​/nodes​/{hardware_id}​/upgrades*.
 .. (Optional) Enter date and status parameters to filter the results.
 .. Enter the hardware host asset ID (`"hardwareId"` saved from a previous step) in the parameter field.
-.. Click *Try it out*.
-.. Click *Execute*.
+.. Select *Try it out*.
+.. Select *Execute*.
 .. Verify in the response that firmware for all components has been successfully upgraded from the previous version to the latest firmware.
 
 == Use a USB drive imaged with the latest compute node firmware bundle ISO
@@ -385,7 +385,7 @@ You can insert a USB drive with the latest compute node firmware ISO downloaded 
 
 .Steps
 
-. Browse to the https://mysupport.netapp.com/site/downloads[NetApp software downloads] page, click *NetApp HCI*, and click the download link for correct version of NetApp HCI.
+. Browse to the https://mysupport.netapp.com/site/downloads[NetApp software downloads^] page, select *NetApp HCI*, and select the download link for correct version of NetApp HCI.
 . Accept the End User License Agreement.
 . Under the *Compute and Storage Nodes* section, download the compute node image.
 . Use the Etcher utility to flash the compute node firmware ISO to a USB drive.
@@ -425,7 +425,7 @@ TIP: Ignore the following informational message you see during the process: `Unt
 . If your node is part of a cluster, place it in maintenance mode as follows. If not, skip to step 2.
 .. Log in to the VMware vCenter web client.
 .. Right-click the host (compute node) name and select *Maintenance Mode > Enter Maintenance Mode*.
-.. Click *OK*.
+.. Select *OK*.
 VMs on the host will be migrated to another available host. VM migration can take time depending on the number of VMs that need to be migrated.
 +
 CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
@@ -433,19 +433,19 @@ CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 . Navigate to the BMC UI, `https://BMCIP/#login`, where BMCIP is the IP address of the BMC.
 . Log in using your credentials.
 . Select *Remote Control > Console Redirection*.
-. Click *Launch Console*.
+. Select *Launch Console*.
 +
 NOTE: You might have to install Java or update it.
 
-. When the console opens, click *Virtual Media > Virtual Storage*.
-. On the *Virtual Storage* screen, click *Logical Drive Type*, and select *ISO File*.
+. When the console opens, select *Virtual Media > Virtual Storage*.
+. On the *Virtual Storage* screen, select *Logical Drive Type*, and select *ISO File*.
 +
 image:BIOS_H410C_iso.png[Shows the navigation path to select the ISO file.]
 
-. Click *Open Image* to browse to the folder where you downloaded the ISO file, and select the ISO file.
-. Click *Plug In*.
-. When the connection status shows `Device#: VM Plug-in OK!!`, click *OK*.
-. Reboot the node by pressing *F12* and clicking *Restart* or clicking *Power Control > Set Power Reset*.
+. Select *Open Image* to browse to the folder where you downloaded the ISO file, and select the ISO file.
+. Select *Plug In*.
+. When the connection status shows `Device#: VM Plug-in OK!!`, select *OK*.
+. Reboot the node by pressing *F12* and selecting *Restart* or selecting *Power Control > Set Power Reset*.
 . During reboot, press *F11* to select the boot options and load the ISO. You might have to press F11 a few times before the boot menu is displayed.
 +
 You will see the following screen:
@@ -456,7 +456,7 @@ image:boot_option_iso_h410c.png[Shows the screen the virtual ISO boots up to.]
 +
 NOTE: Some of the firmware upgrades might cause the console to disconnect and/or cause your session on the BMC to disconnect. You can log back into the BMC, however some services, such as the console, may not be available due to the firmware upgrades. After the upgrades have completed, the node will perform a cold reboot, which can take approximately five minutes.
 
-. Log back in to the BMC UI and click *System* to verify the BIOS version and build time after booting to the OS. If the upgrade completed correctly, you see the new BIOS and BMC versions.
+. Log back in to the BMC UI and select *System* to verify the BIOS version and build time after booting to the OS. If the upgrade completed correctly, you see the new BIOS and BMC versions.
 +
 NOTE: The BIOS version will not show the upgraded version until the node has finished fully booting.
 
@@ -474,32 +474,32 @@ The steps vary depending on whether the node is standalone or part of a cluster.
 . If your node is part of a cluster, place it in maintenance mode as follows. If not, skip to step 2.
 .. Log in to the VMware vCenter web client.
 .. Right-click the host (compute node) name and select *Maintenance Mode > Enter Maintenance Mode*.
-.. Click *OK*.
+.. Select *OK*.
 VMs on the host will be migrated to another available host. VM migration can take time depending on the number of VMs that need to be migrated.
 +
 CAUTION: Ensure that all the VMs on the host are migrated before you proceed.
 
 . Navigate to the BMC UI, `https://BMCIP/#login`, where BMC IP is the IP address of the BMC.
 . Log in using your credentials.
-. Click *Remote Control > Launch KVM (Java)*.
-. In the console window, click *Media > Virtual Media Wizard*.
+. Select *Remote Control > Launch KVM (Java)*.
+. In the console window, select *Media > Virtual Media Wizard*.
 +
 image::bmc_wizard.gif[Start the Virtual Media Wizard from the BMC UI.]
-. Click *Browse* and select the compute firmware `.iso` file.
-. Click *Connect*.
+. Select *Browse* and select the compute firmware `.iso` file.
+. Select *Connect*.
 A popup indicating success is displayed, along with the path and device showing at the bottom. You can close the *Virtual Media* window.
 +
 image::virtual_med_popup.gif[Popup window showing ISO upload success.]
-. Reboot the node by pressing *F12* and clicking *Restart* or clicking *Power Control > Set Power Reset*.
+. Reboot the node by pressing *F12* and selecting *Restart* or selecting *Power Control > Set Power Reset*.
 . During reboot, press *F11* to select the boot options and load the ISO.
-. Select *AMI Virtual CDROM* from the list displayed and click *Enter*. If you do not see AMI Virtual CDROM in the list, go into the BIOS and enable it in the boot list. The node will reboot after you save. During the reboot, press *F11*.
+. Select *AMI Virtual CDROM* from the list displayed and select *Enter*. If you do not see AMI Virtual CDROM in the list, go into the BIOS and enable it in the boot list. The node will reboot after you save. During the reboot, press *F11*.
 +
 image::boot_device.gif[Shows the window where you can select the boot device.]
-. On the screen displayed, click *Enter*.
+. On the screen displayed, select *Enter*.
 +
 NOTE: Some of the firmware upgrades might cause the console to disconnect and/or cause your session on the BMC to disconnect. You can log back into the BMC, however some services, such as the console, might not be available due to the firmware upgrades. After the upgrades have completed, the node will perform a cold reboot, which can take approximately five minutes.
 
-. If you get disconnected from the console, select *Remote Control* and click *Launch KVM* or *Launch KVM (Java)* to reconnect and verify when the node has finished booting back up. You might need multiple reconnects to verify that the node booted successfully.
+. If you get disconnected from the console, select *Remote Control* and select *Launch KVM* or *Launch KVM (Java)* to reconnect and verify when the node has finished booting back up. You might need multiple reconnects to verify that the node booted successfully.
 +
 CAUTION: During the powering on process, for approximately five minutes, the KVM console displays *No Signal*.
 

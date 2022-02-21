@@ -19,6 +19,8 @@ It is recommended that you create a NetApp HCC role in vCenter to manually add v
 This NetApp HCC role limits your management node services view to NetApp-only assets.
 
 .About this task
+
+* This procedure describes the steps available in version 6.7 of vSphere. Your vSphere user interface might differ slightly from what is described depending on the version of vSphere installed. For additional help, see VMware vCenter documentation.
 * To link:task_mnode_create_netapp_hcc_role_vcenter.html#create-a-new-netapp-hcc-role[create a new NetApp HCC role], you first set up a new user account in vCenter, create a NetApp HCC role, and then assign the user permissions.
 * For NetApp ESXi host configurations, you should update the NDE-created user account to the new NetApp HCC role:
 ** Use link:task_mnode_create_netapp_hcc_role_vcenter.html#netapp-esxi-host-does-not-exist-in-a-vcenter-host-cluster[this option] if your NetApp ESXi host does not exist inside a vCenter host cluster
