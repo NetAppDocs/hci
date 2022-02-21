@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/rn_compute_firmware_2.146.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
-keywords: netapp, hci, compute firmware, bundles, latest
+keywords: netapp, hci, compute firmware
 ---
 ////
 This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
@@ -81,38 +81,6 @@ a|
 * BIOS PPR event log parsing in BMC SEL
 * Group Domain of LDAP length to 128 chars
 |===
-
-// |H610C BIOS 3B03
-// a|
-//
-// * Improved handling of memory failures
-// * Added the latest Intel NVM firmware updates
-// * Updated the RC version to 602.D02 (IPU 2020.1)
-// * Updated the microcode version to MCU x6906
-// * Updated the SPS ME version to 04.01.04.381.0
-// * Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
-//
-// |H615C BIOS 3B08.CO
-// a|
-//
-// * Improved handling of memory failures
-// * Added the latest Intel NVM firmware updates
-// * Updated the microcode version to MCU x2F01
-// * Updated the RC version to 602.D02 (IPU 2020.1)
-// * Updated the SPS ME version to 04.01.04.381.0
-// * Removed the *Restore on AC Power Loss* and *Current Restore on AC Power Loss* BIOS setup options
-// * Changed the option *Attempt Fast Cold Boot* default value to `disable`
-// * Changed the option *Allow Correctables* default value to `enable`
-//
-// |H410C BMC 6.71.18
-// |Add BMC reporting for ePPR memory SEL events
-//
-// |H610C BMC 4.00.07
-// |Add remote syslog support
-//
-// |H615C BMC 4.68.07
-// |Add remote syslog support
-// |===
 
 === Mellanox NIC firmware driver compatibility
 The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
