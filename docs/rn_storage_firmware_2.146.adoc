@@ -173,8 +173,24 @@ NOTE: The following table specifies the supported component firmware versions in
 |===
 |Component |Improvement/Change
 
-| H610S BMC 3.91.07
-|Improve BMC flash wear utilization
+| *H610S 3B11*
+a|
+* IPU 2020.2 microcode
+* Enhanced logging of PPR events in SEL
+* Disarm NVDIMM and disable ADR when UECC occurs in NVDIMM
+* Reports NVDIMM ARM status in SEL log
+| *H610S 3.94.07*
+a|
+* NVDIMM log support added in WebUI
+* BIOS PPR event log parsing in BMC SEL
+| *H410S NA3.4*
+a|
+* Enable Post Packet Repair (PPR)
+* IPU 2020.2 microcode
+| *H410S 6.98.00*
+a|
+* LDAP BIND ID field length to 128 chars
+* Disable TLS 1.0 and TLS 1.1
 |===
 
 == Resolved and known issues
@@ -196,8 +212,14 @@ image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="cen
 == Resolved security vulnerabilities
 The following are security vulnerabilities that have been resolved in this release:
 
+* CVE-2021-23840, CVE-2021-23841
+* CVE-2021-20265
+* CVE-2021-29650
 * CVE-2020-14386, CVE-2020-14314, CVE-2020-25641
-
+* CVE-2020-35508, CVE-2020-36312
+* CVE-2020-20811, CVE-2020-20812
+* CVE-2020-15436
+* CVE-2020-29372
 * CVE-2019-0151, CVE-2019-0123, CVE-2019-0117
 
 [discrete]

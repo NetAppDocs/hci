@@ -52,10 +52,34 @@ Here are the details of the improvements and changes included in each new firmwa
 |===
 |Node and firmware component |Improvements and changes
 
-|*NATP3.10*
+|*H300E/H500E/H700E NA3.4*
 a|
-* CSEFS-63 New BIOS NA3.6/NA3.7 fails memTest86
-* IPU 2020.2
+* Enable Post Packet Repair (PPR)
+* IPU 2020.2 microcode
+|*H410C NATP3.10*
+a|
+* IPU 2020.2 microcode
+| *H610C 3B07*
+a|
+* Enhance logging of PPR events in SEL
+* IPU 2020.2 microcode
+| *H615C 3B12.CO*
+a|
+* Enhance logging of PPR events in SEL
+* IPU 2020.2 microcode
+| *H300E/H500E/H700E 6.98.00*
+a|
+* LDAP BIND ID field length to 128 chars
+* Disable TLS 1.0 and TLS 1.1
+| *H610C 4.04.07*
+a|
+* BIOS PPR event log parsing in BMC SEL
+* LDAP BIND ID field length to 128 chars
+* Group Domain of LDAP length to 128 chars
+| *H615C 4.72.07*
+a|
+* BIOS PPR event log parsing in BMC SEL
+* Group Domain of LDAP length to 128 chars
 
 // |H300E, H500E, H700E BMC 6.84.00
 // |Disabled TLS 1.0 and 1.1 support (this BMC version was delivered in Compute Firmware Bundle 12.2.109 as well.)
@@ -117,8 +141,14 @@ Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-managem
 == Resolved security vulnerabilities
 The following are security vulnerabilities that have been resolved in this release:
 
+* CVE-2019-20636
+* CVE-2019-11599, CVE-2020-12826, CVE-2020-12464, CVE-2020-12114
+* CVE-2019-0151, CVE-2019-0123, CVE-2019-0117
+* CVE-2016-3706, CVE-2011-5320, CVE-2015-8984, CVE-2015-8983, CVE-2015-8982, CVE-2006-7254, CVE-2005-3590
+* CVE-2020-20811, CVE-2020-20812
+* CVE-2020-25641
 * CVE-2020-14386, CVE-2020-14314, CVE-2020-25641, CVE-2020-1438, CVE-2020-14314, CVE-2020-25641
-* CVE-2019-0151, CVE-2019-0123, CVE-2019-0117, CVE-2020-8738, CVE-2020-8764, CVE-2020-0590, CVE-2020-8705
+* CVE-2020-8738, CVE-2020-8764, CVE-2020-0590, CVE-2020-8705
 * CVE-2020-0587, CVE-2020-0591, CVE-2020-0592, CVE-2020-8740
 * CVE-2020-0592, CVE-2020-0588, CVE-2020-8696
 
