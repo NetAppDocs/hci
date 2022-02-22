@@ -170,6 +170,7 @@ NOTE: The following table specifies the supported component firmware versions in
 
 == Changes in Storage firmware components
 
+
 |===
 |Component |Improvement/Change
 
