@@ -133,49 +133,6 @@ image::compute_firmware_bundle_choice.png[Storage firmware bundle release notes,
 +
 image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="center"]
 
-// |===
-// |Issue |Description |Workaround
-//
-// |CSESF-295
-// |The compute node firmware update process fails with a BIOS update error when you update the firmware on a H410C node using the downloadable firmware package.
-// a|Manually update the BIOS to version NA3.7 on the H410C node:
-//
-// . Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI Downloads page^].
-// . Enter `H410C_BIOS_3.7` in the drop down list text field.
-// . Click *Go*.
-// Instructions for updating are available in PDF format on the download page.
-//
-// After you update the BIOS and BMC, update the H410C node firmware using the compute firmware bundle 2.76 package.
-//
-// |CSESF-328
-// |On H410C and H300E/H500E/H700E nodes, one NIC sensor for the Mellanox NIC in the BMC reports status as "NA" and reads "not present".
-// |None
-//
-// |CSESF-309
-// |H410C and H300E/H500E/H700E nodes are unable to bring the Mellanox NIC port up after manually bringing the port down when running VMware EXSi 6.7u1.
-// |Run the following command to recover the ports: `esxcli network nic set -n vmnic2 -a`
-//
-// |CSESF-303
-// |Network statistics errors are seen for the Mellanox NIC on H410C nodes.
-// |None
-//
-// |CSESF-293 / PE-10130
-// |Mellanox NIC firmware can be downgraded by Bootstrap OS after you upgrade to the Compute Firmware Bundle version 2.76.
-// |Reinstall Compute Firmware Bundle version 2.76.
-//
-// |PE-11033
-// |Under heavy loads, the expected vmnic0 link message is sometimes missing from H615C node log files.
-// |None
-//
-// |PE-11032
-// |Under heavy loads, transmit errors sometimes occur for the Mellanox NIC on H610C nodes.
-// |None
-//
-// |PE-10954
-// |H610C nodes sometimes reflect the incorrect MTU setting after you set the MTU using the Element software Terminal User Interface (TUI).
-// |None
-// |===
-
 [discrete]
 == Find more information
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]

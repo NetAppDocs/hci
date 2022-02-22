@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/rn_storage_firmware_2.146.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
-keywords: netapp, hci, storage firmware bundles
+keywords: netapp, hci, storage firmware
 ---
 ////
 This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
