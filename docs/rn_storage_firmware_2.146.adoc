@@ -1,0 +1,236 @@
+---
+sidebar: sidebar
+permalink: docs/rn_storage_firmware_2.146.html
+summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
+keywords: netapp, hci, storage firmware
+---
+////
+This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
+////
+= Storage Firmware Bundle 2.146 Release Notes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+
+== What's New
+The storage firmware bundle version 2.146 contains various bug fixes and new features, including security vulnerability fixes. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+
+=== Updated firmware components
+This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
+
+==== H610S
+|===
+|Component |H610S
+
+|BIOS
+|*3B11*
+
+|BMC
+|*3.94.07*
+
+|NIC / Mellanox
+|14.25.1020
+
+|NVIDIMM, Smart Gen1
+|3.1
+
+|NVIDIMM, Smart Gen2
+|*3.3*
+
+|BPM, Smart Gen1
+|2.16
+
+|BPM, Smart Gen2
+|2.16
+
+|NVIDIMM, Micron Gen1
+|26.2c
+
+|NVIDIMM, Micron Gen2
+|25.3c
+
+|PGEM, Micron
+|1.40
+
+|PM963, SED
+|CXV8202Q
+
+|PM963, N-SED
+|CXV8501Q
+
+|PM983, SED
+|*EDA5602Q*
+
+|PM983, N-SED
+|*EDA5900Q*
+
+|*PM9A3, SED*
+|*GDC5502Q*
+
+|CD5, SED
+|0109
+
+|CD5, N-SED
+|0109
+
+|CD5, FIPS
+|0108
+
+|*PE8010, SED*
+|*11092A10*
+
+|*PE8010, N-SED*
+|*110B2A10*
+|===
+
+==== H410S
+|===
+|Component |H410S
+
+|BIOS
+|*NAT3.4*
+
+|BMC
+|*6.98.00*
+
+|NIC / Mellanox
+|14.25.1020
+
+|RMS200
+|ae3b8cc
+
+|RMS300
+|7d8422bc
+
+|PM863, SED
+|GXT5404Q
+
+|PM863, N-SED
+|GXT5103Q
+
+|PM883, SED
+|*HXT7A04Q*
+
+|Hawk-4, SED
+|8ENP7101
+
+|Hawk-4, N-SED
+|8ENP6101
+|===
+
+==== SF38410, SF19210, SF9605, and SF4805
+|===
+|Component |SF38410, SF19210, SF9605, and SF4805
+
+|Broadcom NIC
+|7.10.18
+
+|RMS200
+|ae3b8cc
+
+|RMS300
+|7d8422bc
+
+|SAS Adapter
+|16.00.01.00
+
+|PM863, SED
+|GXT5404Q
+
+|PM863, N-SED
+|GXT5103Q
+
+|PM883, SED
+|*HXT7A04Q*
+
+|Hawk-4, SED
+|8ENP7101
+
+|Hawk-4, N-SED
+|8ENP6101
+|===
+
+NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805. However, these component firmware cannot be updated via the Storage Firmware Bundle.
+
+|===
+|Component |SF38410, SF19210, SF9605, and SF4805
+
+|BIOS
+|2.8.0
+
+|iDRAC
+|2.75.75.75
+|===
+
+== Changes in storage firmware components
+
+|===
+|Component |Improvement/Change
+
+|*H610S 3B11*
+a|
+
+* IPU 2020.2 microcode
+* Enhanced logging of PPR events in SEL
+* Disarm NVDIMM and disable ADR when UECC occurs in NVDIMM
+* Reports NVDIMM ARM status in SEL log
+
+|*H610S 3.94.07*
+a|
+
+* NVDIMM log support added in WebUI
+* BIOS PPR event log parsing in BMC SEL
+
+|*H410S NA3.4*
+a|
+
+* Enable Post Packet Repair (PPR)
+* IPU 2020.2 microcode
+
+|*H410S 6.98.00*
+a|
+
+* LDAP BIND ID field length to 128 chars
+* Disable TLS 1.0 and TLS 1.1
+|===
+
+== Resolved and known issues
+See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
+
+=== Accessing the Bugs Online tool
+. Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select  *Element Software* from the drop-down list:
++
+image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
+
+. In the keyword search field, type “Storage Firmware Bundle” and click *New Search*:
++
+image::storage_firmware_bundle_choice.png[Storage firmware bundle release notes, align="center"]
+
+. A list of resolved or open bugs is displayed. You can further refine the results as shown:
++
+image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="center"]
+
+== Resolved security vulnerabilities
+The following are security vulnerabilities that have been resolved in this release:
+
+* CVE-2021-23840, CVE-2021-23841
+* CVE-2021-20265
+* CVE-2021-29650
+* CVE-2020-14386, CVE-2020-14314, CVE-2020-25641
+* CVE-2020-35508, CVE-2020-36312
+* CVE-2020-20811, CVE-2020-20812
+* CVE-2020-15436
+* CVE-2020-29372
+* CVE-2019-0151, CVE-2019-0123, CVE-2019-0117
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes[KB: How to update iDRAC/BIOS firmware on SF Series nodes^]
