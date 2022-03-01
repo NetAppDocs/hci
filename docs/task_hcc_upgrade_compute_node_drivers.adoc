@@ -37,7 +37,14 @@ You should check the current ESXi driver version before you attempt compute firm
 NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; do not extract these ZIP files.
 
 . Go to *VMware Update Manager* in VMware vCenter.
+
 . Import the driver offline bundle file for the compute nodes into the *Patch Repository*.
++
+* For VMware ESXi 7.0, all necessary drivers for NetApp H610C, H615C, H410C, and Hx00E compute nodes and their build-in system components are included in the standard VMware ESXi 7.0 installation ISO image. No additional or updated drivers are required for NetApp HCI compute nodes running VMware ESXi 7.0 (and updates).
+* For ESXi 6.x, perform the following steps to import the driver offline bundle file: 
+.. Select the *Updates* tab.
+.. Select *UPLOAD FROM FILE*.
+.. Browse to the offline bundle that was previously downloaded and select *IMPORT*.
 . Create a new host baseline for the compute node.
 . Choose *Host Extension* for Name and Type and select all imported driver packages to be included in the new baseline.
 . In the *Host and Clusters* menu in vCenter, select the cluster with the compute nodes you would like to update and navigate to the *Update Manager* tab.
