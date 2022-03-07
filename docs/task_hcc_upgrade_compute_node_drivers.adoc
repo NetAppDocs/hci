@@ -40,8 +40,8 @@ NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP fi
 
 . Import the driver offline bundle file for the compute nodes into the *Patch Repository*.
 +
-* For VMware ESXi 7.0, all necessary drivers for NetApp H610C, H615C, H410C, and Hx00E compute nodes and their build-in system components are included in the standard VMware ESXi 7.0 installation ISO image. No additional or updated drivers are required for NetApp HCI compute nodes running VMware ESXi 7.0 (and updates).
-* For VMware ESXi 6.x, perform the following steps to import the driver offline bundle file: 
+* For VMware ESXi 7.0, all the necessary drivers for NetApp H610C, H615C, H410C, and Hx00E compute nodes and their build-in system components are included in the standard VMware ESXi 7.0 installation ISO image. You do not require additional or updated drivers for NetApp HCI compute nodes running VMware ESXi 7.0 (and updates).
+* For VMware ESXi 6.x, perform the following steps to import the driver offline bundle file:
 .. Select the *Updates* tab.
 .. Select *UPLOAD FROM FILE*.
 .. Browse to the offline bundle that was previously downloaded and select *IMPORT*.
