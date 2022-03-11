@@ -22,6 +22,8 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 . For vCSA and Windows upgrades, https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html[unregister^] the plug-in from the vCenter Server with which it is associated using the registration utility.
 . https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html[Upgrade vSphere, including vCenter Server, ESXi, VMs, and other VMware components^].
 +
+IMPORTANT: When you upgrade to VMware vCenter Server 7.0 U3, all versions of the NetApp Element Plug-in for vCenter Server fail to deploy. To resolve this issue, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
++
 NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
 
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#register-the-plug-in-with-vcenter[Register^] the Element Plug-in for vCenter Server again with vCenter.
