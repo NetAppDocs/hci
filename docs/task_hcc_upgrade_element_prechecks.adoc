@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_element_prechecks.html
-summary: As part of a NetApp HCI or SolidFire storage system upgrade, you need to run health checks for NetApp Element software.
+summary: As part of a NetApp HCI system upgrade, you need to run health checks for NetApp Element software.
 keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck
 ---
 
@@ -294,7 +294,7 @@ Sample response:
 ----
 sfupgradecheck failed: Unable to verify latest available version of healthtools.
 ----
-. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
+. Download a link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file^] from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
 . Run the following command:
 +
 ----

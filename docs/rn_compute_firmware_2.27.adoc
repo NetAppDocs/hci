@@ -100,11 +100,7 @@ NOTE: Before upgrading to version 2.27, make sure you check the current ESXi dri
 While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
 
 == Download Compute Firmware Bundle 2.27
-To download the Compute Firmware Bundle:
-
-. Go to https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
-. Choose *Compute_Firmware_Bundle* from the drop down list.
-. Click *Go*.
+To download the Compute Firmware Bundle, go to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp HCI Compute Firmware Bundle^] page.
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
 

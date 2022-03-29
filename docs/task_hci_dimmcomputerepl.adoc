@@ -16,7 +16,6 @@ keywords: netapp, hci, dimm, compute nodes
 You can replace a faulty dual inline memory module (DIMM) in NetApp HCI compute nodes instead of replacing the entire node.
 
 .What you'll need
-
 * Before starting this procedure, you should have contacted NetApp Support and received a replacement part. Support will be involved during the installation of the replacement. If you have not done so already, contact https://www.netapp.com/us/contact-us/support.aspx[Support].
 * You have planned for system downtime, because you need to power down or cycle the node and boot the node to NetApp Safe Mode to access the terminal user interface (TUI).
 
