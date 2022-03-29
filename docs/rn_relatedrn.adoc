@@ -42,6 +42,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes^]
 
 == NetApp Element Plug-in for vCenter Server
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904[vCenter Plug-in 4.9 Release Notes^]_NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296[vCenter Plug-in 4.8 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748[vCenter Plug-in 4.7 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[vCenter Plug-in 4.6 Release Notes^]
@@ -50,7 +51,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes^]
 
 == Compute firmware
-* link:rn_compute_firmware_2.146.html[Compute Firmware Bundle 2.146 Release Notes (latest)] 
+* link:rn_compute_firmware_2.146.html[Compute Firmware Bundle 2.146 Release Notes (latest)]
 * link:rn_compute_firmware_2.76.html[Compute Firmware Bundle 2.76 Release Notes]
 * link:rn_compute_firmware_2.27.html[Compute Firmware Bundle 2.27 Release Notes]
 * link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes]
