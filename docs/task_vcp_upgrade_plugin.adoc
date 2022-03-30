@@ -20,7 +20,7 @@ You can update the plug-in registration on vCenter Server Virtual Appliance (vCS
 
 This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for VMware vCenter Server 4.8, 4.7, 4.6, 4.5, or 4.4.
+* You are upgrading to Element Plug-in for VMware vCenter Server 4.9, 4.8, 4.7, 4.6, 4.5, or 4.4.
 * You are upgrading to a 7.0, 6.7, or 6.5 HTML5 vSphere Web Client.
 +
 IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, and 4.8.
