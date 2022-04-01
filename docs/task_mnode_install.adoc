@@ -91,6 +91,17 @@ NOTE: Installing a management node using the image might result in 30-second del
 +
 TIP: To move through the menu options, press the Up or Down arrow keys. To move through the buttons, press Tab. To move from the buttons to the fields, press Tab. To navigate between fields, press the Up or Down arrow keys.
 
+. If there is a Dynamic Host Configuration Protocol (DHCP) server on the network that assigns IPs with a maximum transmission unit (MTU) less than 1500 bytes, you must perform the following steps:
+
+.. Temporarily put the management node on a vSphere network without DHCP, such as iSCSI.
+.. Reboot the VM or restart the VM network.
+.. Using the terminal user interface (TUI), configure the correct IP on the management network with an MTU greater than or equal to 1500 bytes.
+.. Using the TUI, configure the correct IP on the management network with an MTU greater than or equal to 1500 bytes.
+.. Re-assign the correct VM network to the VM.
+
++
+NOTE: A DHCP that assigns IPs with an MTU less than 1500 bytes can prevent you configuring the management node network or using the management node UI.
+
 . Configure the management node network (eth0).
 +
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
