@@ -95,7 +95,6 @@ TIP: To move through the menu options, press the Up or Down arrow keys. To move 
 
 .. Temporarily put the management node on a vSphere network without DHCP, such as iSCSI.
 .. Reboot the VM or restart the VM network.
-.. Using the terminal user interface (TUI), configure the correct IP on the management network with an MTU greater than or equal to 1500 bytes.
 .. Using the TUI, configure the correct IP on the management network with an MTU greater than or equal to 1500 bytes.
 .. Re-assign the correct VM network to the VM.
 
