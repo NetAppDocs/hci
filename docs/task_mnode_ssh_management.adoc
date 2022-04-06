@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: docs/task_mnode_ssh_management.html
-summary: You can disable and enable SSH capability on the management node using the NetApp Hybrid Cloud Control UI or the REST API UI, or determine the status of SSH support connection capability using the REST API UI.
+summary: You can disable and enable SSH capability on the management node using the NetApp Hybrid Cloud Control UI or the REST API UI or determine the status of SSH support connection capability using the REST API UI.
 keywords: netapp, mnode, management node, ssh, disable, enable, rest api, hybrid, cloud, control, hcc
 ---
 
