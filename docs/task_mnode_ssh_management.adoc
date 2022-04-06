@@ -33,7 +33,7 @@ Beginning with Management Services 2.20, you can enable and disable SSH capabili
 You can do any of the following tasks after you link:task_mnode_api_get_authorizationtouse.html[authenticate]:
 
 * <<Disable or enable the SSH capability on the management node using APIs>>
-* <<Determine status of the SSH capability on the management node>>
+* <<Determine status of the SSH capability on the management node using APIs>>
 
 == Disable or enable the SSH capability on the management node using NetApp Hybrid Cloud Control UI
 You can disable or re-enable SSH capability on the management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later. Disabling SSH does not terminate or disconnect existing SSH client sessions to the management node. If you disable SSH and elect to re-enable it at a later time, you can do so using the NetApp Hybrid Cloud Control UI.
@@ -77,7 +77,7 @@ https://<ManagementNodeIP>/mnode/
 .. Set the *enabled* parameter to `false` to disable SSH or `true` to re-enable SSH capability that was previously disabled.
 .. Click *Execute*.
 
-== Determine status of the SSH capability on the management node
+== Determine status of the SSH capability on the management node using APIs
 You can determine whether or not SSH capability is enabled on the management node using a management node service API. SSH is disabled by default on management nodes running management services 2.18 or later.
 
 .API command
