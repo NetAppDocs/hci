@@ -25,6 +25,21 @@ Beginning with the Element 11.3 management node release, the management node des
 
 NOTE: For the latest management services release notes describing major services, new features, bug fixes, and workarounds for each service bundle, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[the management services release notes^]
 
+.What you'll need
+
+Beginning with management services 2.20, you have accepted and saved the End User License Agreement (EULA) before using the NetApp Hybrid Cloud Control UI or API to upgrade management services:
+
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Select *Upgrade* near the top right of the interface.
+. The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
++
+NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
+
 .Update options
 
 You can update management services using the NetApp Hybrid Cloud Control UI or the management node REST API:

@@ -21,6 +21,18 @@ You must run health checks prior to upgrading compute firmware to ensure all com
 * You have updated to the latest management services bundle (2.11 or later).
 * You are running management node 11.3 or later.
 * Your storage cluster is running NetApp Element software 11.3 or later.
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you have accepted and saved the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
++
+. Open a web browser and browse to the IP address of the management node:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Select *Upgrade* near the top right of the interface.
+. The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
++
+NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .Health check options
 
@@ -35,7 +47,7 @@ You can also find out more about compute node health checks that are run by the 
 
 == Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware
 
-Using NetApp Hybrid Cloud Control (HCC), you can verify that a compute node is ready for a firmware upgrade.
+Using NetApp Hybrid Cloud Control, you can verify that a compute node is ready for a firmware upgrade.
 
 NOTE: If you have multiple two-node storage cluster configurations, each within their own vCenter, Witness Nodes health checks might not report accurately. Therefore, when you are ready to upgrade ESXi hosts, you must only shut down the Witness Node on the ESXi host that is being upgraded. You must ensure that you always have one Witness Node running in your NetApp HCI installation by powering off the Witness Nodes in an alternate fashion.
 
