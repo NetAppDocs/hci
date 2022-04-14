@@ -16,7 +16,7 @@ keywords: netapp, hci, element, Witness Node
 [.lead]
 Certain configurations are restricted in the NetApp Deployment Engine depending on the WMware vSphere version, the compute node type, and the number of storage nodes. The restricted configurations apply to VMware vSphere 7.0 with H610C or H614C compute nodes and two or three storage nodes. If you want to proceed with a restricted configuration, you must select a different vSphere version, such as vSphere 6.7, or prevent the deployment of Witness Nodes by having a minimum of four storage nodes in the configuration.
 
-If you select a restricted configuration from the Inventory page during deployment, an error message appears that indicates alternative valid configuration options.
+If you select a restricted configuration from the *Inventory* page during deployment, an error message appears with alternative valid configuration options.
 
 [discrete]
 == Find more information
