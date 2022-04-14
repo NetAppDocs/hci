@@ -28,22 +28,22 @@ This firmware package contains the following firmware versions for hardware comp
 |Component |H300E, H500E, H700E |H410C |H610C |H615C
 
 |BIOS
-|*NAT3.4*
-|*NATP3.10*
-|*3B07*
-|*3B12.CO*
+|NAT3.4
+|NATP3.10
+|3B07
+|B12.CO
 
 |BMC
-|*6.98.00*
+|6.98.00
 |6.71.20
-|*4.04.07*
-|*4.72.07*
+|4.04.07
+|4.72.07
 
 |NIC / Mellanox
-|14.25.10.20
-|14.25.10.20
-|14.25.10.20
-|14.25.10.20
+|*14.29.1016*
+|*14.29.1016*
+|*14.29.1016*
+|*14.29.1016*
 |===
 
 === Changes in firmware components
