@@ -83,6 +83,8 @@ sidebar:
          url: /docs/hci_prereqs_protection_domains.html
        - title: Witness Node resource requirements for two-node storage clusters
          url: /docs/hci_prereqs_witness_nodes.html
+       - title: Deployment configuration restrictions
+         url: /docs/hci_prereqs_deployment_restriction.html
     - title: Get started with NetApp HCI
       entries:
         - title: NetApp HCI installation and deployment overview
