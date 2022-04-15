@@ -24,9 +24,9 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 
 * *Management node*: You are running management node 11.3 or later.
 * *Element software*: Your cluster version is running NetApp Element software 11.3 or later.
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you have accepted and saved the EULA before using the NetApp Hybrid Cloud Control UI or API to run Element storage health checks:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to run Element storage health checks:
 +
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
@@ -55,7 +55,7 @@ Using NetApp Hybrid Cloud Control (HCC), you can verify that a storage cluster i
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>

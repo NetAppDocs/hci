@@ -21,9 +21,9 @@ You must run health checks prior to upgrading compute firmware to ensure all com
 * *Management services*: You have updated to the latest management services bundle (2.11 or later).
 * *Management node*: You are running management node 11.3 or later.
 * *Element software*: Your storage cluster is running NetApp Element software 11.3 or later.
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you have accepted and saved the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
 +
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
@@ -53,7 +53,7 @@ NOTE: If you have multiple two-node storage cluster configurations, each within 
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>/hcc

@@ -38,7 +38,7 @@ You can configure or remove FQDN web UI access using NetApp Hybrid Cloud Control
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>

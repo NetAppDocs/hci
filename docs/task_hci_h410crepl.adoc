@@ -169,7 +169,7 @@ You can use NetApp Hybrid Cloud Control only if your NetApp HCI installation run
 * link:task_hcc_manage_vol_access_groups.html[Manage the initiators and volume access groups] for the new compute node.
 
 .Steps
-. Open a web browser and browse to the IP address of the management node. For example:
+. Open the IP address of the management node in a web browser. For example:
 `https://<ManagementNodeIP>`
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.

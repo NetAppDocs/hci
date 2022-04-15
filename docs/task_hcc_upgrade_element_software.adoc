@@ -30,9 +30,9 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 
 * *Cluster health*: You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you have accepted and saved the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade Element software:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade Element software:
 +
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
@@ -66,7 +66,7 @@ TIP: The upgrade process takes approximately 30 minutes per node for non-H610S p
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>

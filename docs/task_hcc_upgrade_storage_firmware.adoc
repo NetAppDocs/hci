@@ -36,9 +36,9 @@ IMPORTANT: To update your iDRAC/BIOS firmware, contact NetApp Support. For addit
 
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article^] (login required).
 
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you have accepted and saved the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
 +
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
@@ -69,7 +69,7 @@ TIP: The upgrade process takes approximately 30 minutes per storage node. If you
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
