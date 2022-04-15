@@ -110,7 +110,9 @@ NOTE: Only one node can be in maintenance mode at a time.
 .Steps
 .	Open the IP address of the management node in a web browser. For example:
 +
-`https://<ManagementNodeIP>`
+----
+https://<ManagementNodeIP>
+----
 .	Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 +
 NOTE: The maintenance mode feature options are disabled at the read-only level.

@@ -99,7 +99,10 @@ You should configure NetApp HCI to use the new compute node.
 
 .Steps
 . Open the IP address of the management node in a web browser. For example:
-`https://<ManagementNodeIP>`
++
+----
+https://<ManagementNodeIP>
+----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
 The browser opens the NetApp Deployment Engine.
