@@ -15,7 +15,7 @@ keywords: netapp, hci, deployment, compatibility, nodes
 [.lead]
 On the *Inventory* page, the NetApp Deployment Engine automatically detects available compute and storage nodes, enabling you to select and add all NetApp HCI resources to the deployment. If a node does not meet the requirements for deployment, it is not selectable and problems are indicated as errors. You can position your cursor over the error in the node's row to see an explanation. When choosing node inventory on the Inventory page, the storage node that is hosting the NetApp Deployment Engine is automatically selected, and you cannot deselect it.
 
-NOTE: Restricted configurations include vSphere 7.0 with H610C or H614C compute nodes and two or three storage nodes. If you want to proceed with a restricted configuration, you must select a different vSphere version, such as vSphere 6.7, or prevent the deployment of Witness Nodes by having a minimum of four storage nodes in the configuration.
+NOTE: Restricted configurations include vSphere 7.0 with H610C or H615C compute nodes and two or three storage nodes. If you want to proceed with a restricted configuration, you must select a different vSphere version, such as vSphere 6.7, or prevent the deployment of Witness Nodes by having a minimum of four storage nodes in the configuration.
 
 .What you'll need
 Jumbo frames must be enabled for proper inventory detection. If no nodes or only a subset of nodes appear in the inventory, verify that the switch ports used for NetApp HCI nodes (all SFP+/SFP28 interfaces) are configured with jumbo frames.
