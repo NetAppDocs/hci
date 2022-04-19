@@ -33,7 +33,7 @@ When scaling H300E, H500E, H700E, H410C, H610C, and H615C compute nodes, NetApp 
 ====
 Beginning with NetApp HCI 1.10, when you scale the cluster, NetApp HCI does not expect to meet the default node configurations.
 
-After you change the default settings in VMware vSphere for one or more nodes in the existing cluster, the settings for the new node will align with the settings for the majority of the nodes in the cluster.
+After you change the default settings in VMware vSphere for one or more nodes in the existing compute cluster, the settings for the new node will align with the settings for the majority of the nodes in the cluster.
 ====
 
 == NetApp Deployment Engine default configurations
