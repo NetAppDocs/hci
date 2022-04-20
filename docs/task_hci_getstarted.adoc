@@ -202,9 +202,11 @@ Using the Hybrid Cloud Control, you can do the following:
 
 *Steps*
 
-. Open a web browser and browse to the IP address of the management node. For example:
+. Open the IP address of the management node in a web browser. For example:
 +
-https://_<ManagementNodeIP>_
+----
+https://<ManagementNodeIP>
+----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 +
 The NetApp Hybrid Cloud Control interface appears.
