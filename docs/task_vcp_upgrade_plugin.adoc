@@ -90,8 +90,8 @@ After you upgrade to VCP 4.8 or later with VMware vCenter Server 6.7U1, if the s
 +
 You should see the following version details or details of a more recent version:
 ----
-NetApp Element Plug-in Version: 4.8
-NetApp Element Plug-in Build Number: 34
+NetApp Element Plug-in Version: 4.9
+NetApp Element Plug-in Build Number: 14
 ----
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
 
