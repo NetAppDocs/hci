@@ -13,7 +13,7 @@ keywords: netapp, hci, deployment, review, deploy
 :imagesdir: ../media/
 
 [.lead]
-After you deploy NetApp HCI, you can make limited changes to the default networking configuration. However, certain settings are required for smooth operation and proper network detection. Changing these settings will cause unexpected behavior, and might prevent you from expanding compute and storage resources.
+After you deploy NetApp HCI, you can make limited changes to the default networking configuration. However, you must meet certain requirements for smooth operation and correct network detection. Not meeting these requirements will cause unexpected behavior and might prevent you from expanding compute and storage resources.
 
 After you deploy your system, you can make the following changes to the default network configuration in VMware vSphere as dictated by your network requirements:
 
@@ -22,10 +22,25 @@ After you deploy your system, you can make the following changes to the default 
 * Add and remove additional port groups
 * Change the vmnic interface failover order for any additional port groups you have added
 
-== H300E, H500E, H700E and H410C compute nodes
-NetApp HCI expects the following network configuration for H300E, H500E, H700E and H410C nodes.
+When scaling H300E, H500E, H700E, H410C, H610C, and H615C compute nodes, NetApp HCI expects the existing compute cluster on the node to meet the following requirements:
 
-The following is a six-interface configuration with VMware vSphere Distributed Switching (VDS). This configuration is only supported when used with VMware vSphere Distributed Switches, and requires VMware vSphere Enterprise Plus licensing.
+* A minimum of four vmk interfaces
+* One management vmk interface
+* One vmotion vmk interface
+* Two vmks on the same subnet with iSCSI bindings to the software iSCSI initiator
+
+[NOTE]
+====
+Beginning with NetApp HCI 1.10, when you scale the cluster, NetApp HCI does not expect to meet the default node configurations.
+
+After you change the default settings in VMware vSphere for one or more nodes in the existing compute cluster, the settings for the new node will align with the settings for the majority of the nodes in the cluster.
+====
+
+== NetApp Deployment Engine default configurations
+The NetApp Deployment Engine sets up default configurations for the compute hosts depending on the system and cable configuration.
+
+=== H300E, H500E, H700E, and H410C compute nodes
+The following is a six-interface configuration for H300E, H500E, H700E, and H410C nodes with VMware vSphere Distributed Switching (VDS). This configuration is only supported when used with VMware vSphere Distributed Switches, and requires VMware vSphere Enterprise Plus licensing.
 |===
 |Network function |vmkernel |vmnic (physical interface)
 
@@ -90,10 +105,8 @@ The following is a two-interface configuration. This configuration is only suppo
 |vmnic1 (Port C), vmnic5 (Port F)
 |===
 
-== H610C compute nodes
-NetApp HCI expects the following network configuration for H610C nodes.
-
-This configuration is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
+=== H610C compute nodes
+This configuration for H610C nodes is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
 
 NOTE: Ports A and B are unused on the H610C.
 
@@ -117,10 +130,8 @@ NOTE: Ports A and B are unused on the H610C.
 |vmnic2 (Port C), vmnic3 (Port D)
 |===
 
-== H615C compute nodes
-NetApp HCI expects the following network configuration for H615C nodes.
-
-This configuration is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
+=== H615C compute nodes
+This configuration for H615C nodes is only supported when used with VMware vSphere Distributed Switches (VDS), and requires VMware vSphere Enterprise Plus licensing.
 
 |===
 |Network function |vmkernel |vmnic (physical interface)

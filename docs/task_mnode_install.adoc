@@ -44,7 +44,7 @@ NOTE: If you need to IPv6 support, you can use the management node 11.1.
 .About this task
 The Element 12.2 management node is an optional upgrade. It is not required for existing deployments.
 
-Prior to following this procedure, you should have an understanding of  link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them. Persistent volumes are optional but recommended for management node configuration data recovery in the event of a VM loss.
+Prior to following this procedure, you should have an understanding of  link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them. Persistent volumes are optional but recommended for management node configuration data recovery in the event of a virtual machine (VM) loss.
 
 .Steps
 
@@ -57,10 +57,7 @@ Prior to following this procedure, you should have an understanding of  link:con
 
 == Download ISO or OVA and deploy the VM
 
-. Download the OVA or ISO for your installation from the NetApp Support Site:
-+
-Element software: https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab
-NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab
+. Download the OVA or ISO for your installation from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI^] page on the NetApp Support Site:
 
 .. Select *Download Latest Release* and accept the EULA.
 .. Select the management node image you want to download.
@@ -68,27 +65,41 @@ NetApp HCI: https://mysupport.netapp.com/site/products/all/details/netapp-hci/do
 .. Deploy the OVA.
 .. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (for example, eth1) or ensure that the management network can route to the storage network.
 . If you downloaded the ISO, follow these steps:
-.. Create a new 64-bit virtual machine from your hypervisor with the following configuration:
+.. Create a new 64-bit VM from your hypervisor with the following configuration:
 +
 * Six virtual CPUs
 * 24GB RAM
+* Storage adapter type set to LSI Logic Parallel
++
+IMPORTANT: The default for your management node might be LSI Logic SAS. In the *New Virtual Machine* window, verify the storage adapter configuration by selecting *Customize hardware* > *Virtual Hardware*. If required, change LSI Logic SAS to *LSI Logic Parallel*.
+
 * 400GB virtual disk, thin provisioned
 * One virtual network interface with internet access and access to the storage MVIP.
 * (Optional for SolidFire all-flash storage) One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
 +
-IMPORTANT: Do not power on the virtual machine prior to the step indicating to do so later in this procedure.
+IMPORTANT: Do not power on the VM prior to the step indicating to do so later in this procedure.
 
-.. Attach the ISO to the virtual machine and boot to the .iso install image.
+.. Attach the ISO to the VM and boot to the .iso install image.
 +
 NOTE: Installing a management node using the image might result in 30-second delay before the splash screen appears.
 
-. Power on the virtual machine for the management node after the installation completes.
+. Power on the VM for the management node after the installation completes.
 
 == Create the management node admin and configure the network
 
 . Using the terminal user interface (TUI), create a management node admin user.
 +
 TIP: To move through the menu options, press the Up or Down arrow keys. To move through the buttons, press Tab. To move from the buttons to the fields, press Tab. To navigate between fields, press the Up or Down arrow keys.
+
+. If there is a Dynamic Host Configuration Protocol (DHCP) server on the network that assigns IPs with a maximum transmission unit (MTU) less than 1500 bytes, you must perform the following steps:
+
+.. Temporarily put the management node on a vSphere network without DHCP, such as iSCSI.
+.. Reboot the VM or restart the VM network.
+.. Using the TUI, configure the correct IP on the management network with an MTU greater than or equal to 1500 bytes.
+.. Re-assign the correct VM network to the VM.
+
++
+NOTE: A DHCP that assigns IPs with an MTU less than 1500 bytes can prevent you configuring the management node network or using the management node UI.
 
 . Configure the management node network (eth0).
 +

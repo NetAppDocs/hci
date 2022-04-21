@@ -18,7 +18,7 @@ For any H-series compute node, you can update the drivers used on the nodes usin
 
 .What you'll need
 
-See the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this NetApp KB article] (login required).
+See the firmware and driver matrix for your hardware in https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[this NetApp KB article^] (login required).
 
 .About this task
 
@@ -28,7 +28,7 @@ You should check the current ESXi driver version before you attempt compute firm
 
 .Steps
 
-. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads] page and click the download link for correct version of NetApp HCI.
+. Browse to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software downloads^] page and select the download link for correct version of NetApp HCI.
 . Select *ESXI_drivers* from the drop-down list.
 . Accept the End User License Agreement.
 . Download the driver package for your node type and ESXi version.
@@ -37,16 +37,23 @@ You should check the current ESXi driver version before you attempt compute firm
 NOTE: The NetApp driver bundle includes one or more VMware Offline Bundle ZIP files; do not extract these ZIP files.
 
 . Go to *VMware Update Manager* in VMware vCenter.
+
 . Import the driver offline bundle file for the compute nodes into the *Patch Repository*.
++
+* For VMware ESXi 7.0, all the necessary drivers for NetApp H610C, H615C, H410C, and Hx00E compute nodes and their build-in system components are included in the standard VMware ESXi 7.0 installation ISO image. You do not require additional or updated drivers for NetApp HCI compute nodes running VMware ESXi 7.0 (and updates).
+* For VMware ESXi 6.x, perform the following steps to import the driver offline bundle file:
+.. Select the *Updates* tab.
+.. Select *UPLOAD FROM FILE*.
+.. Browse to the offline bundle that was previously downloaded and select *IMPORT*.
 . Create a new host baseline for the compute node.
 . Choose *Host Extension* for Name and Type and select all imported driver packages to be included in the new baseline.
 . In the *Host and Clusters* menu in vCenter, select the cluster with the compute nodes you would like to update and navigate to the *Update Manager* tab.
-. Click *Remediate* and the select the newly created host baseline. Ensure that drivers included in the baseline are selected.
+. Select *Remediate* and the select the newly created host baseline. Ensure that drivers included in the baseline are selected.
 . Proceed through the wizard to the *Host Remediation Options* and ensure that the *Do Not Change VM Power State* option is selected to keep virtual machines online during the driver update.
 +
 NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (this is the default in NetApp HCI installations), virtual machines will automatically be migrated to other nodes in the cluster.
 
-. Proceed to the *Ready to Complete* page in the wizard and click *Finish*.
+. Proceed to the *Ready to Complete* page in the wizard and select *Finish*.
 +
 The drivers for all compute nodes in the cluster are updated one node at a time while virtual machines stay online.
 

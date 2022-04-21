@@ -6,7 +6,6 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
-    langs: us-en,ja-jp
 sidebar:
   entries:
     - title: NetApp HCI Documentation
@@ -143,6 +142,8 @@ sidebar:
              url: /docs/task_nde_supported_net_changes.html
            - title: Disable the smartd service on NetApp HCI compute nodes
              url: /docs/task_nde_disable_smartd.html
+           - title: Disable the "lacp-individual" command on configured switches
+             url: /docs/task_nde_disable_lacp_individual.html
            - title: Create a NetApp HCC role in vCenter
              url: /docs/task_mnode_create_netapp_hcc_role_vcenter.html
            - title: Keep VMware vSphere up to date
@@ -264,16 +265,10 @@ sidebar:
           url: /docs/task_hcc_activeiq.html
         - title: Collect logs for troubleshooting
           url: /docs/task_hcc_collectlogs.html
-    - title: Upgrade your NetApp HCI or SolidFire system
+    - title: Upgrade your NetApp HCI system version 1.9 or 1.9P1
       entries:
-        - title: Upgrades overview
+        - title: Upgrade sequence overview
           url: /docs/concept_hci_upgrade_overview.html
-        - title: Upgrade sequences
-          entries:
-            - title: Upgrade your NetApp HCI system for version 1.9 or 1.9P1
-              url: /docs/task_hcc_upgrade_all.html
-            - title: Upgrade your NetApp SolidFire all-flash storage system for Element 12.3.x
-              url: /docs/task_sf_upgrade_all.html
         - title: System upgrade procedures
           entries:
             - title: Update management services
@@ -298,12 +293,8 @@ sidebar:
               url: /docs/task_hcc_upgrade_compute_node_firmware.html
             - title: Automate compute node firmware upgrades with Ansible
               url: /docs/task_hcc_upgrade_compute_firmware_ansible.html
-        - title: vSphere upgrade sequences with vCenter Plug-in
-          entries:
-            - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
-              url: /docs/task_hci_upgrade_all_vsphere.html
-            - title: Upgrade your vSphere components for a NetApp SolidFire storage system with the Element Plug-in for vCenter Server
-              url: /docs/task_sf_upgrade_all_vsphere.html
+        - title: Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
+          url: /docs/task_hci_upgrade_all_vsphere.html
     - title: Expand your NetApp HCI system
       entries:
        - title: Expand overview

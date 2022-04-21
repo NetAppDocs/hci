@@ -45,11 +45,7 @@ This firmware package contains the following firmware versions for hardware comp
 |14.23.1020
 |===
 
-To download the compute node firmware package:
-
-. Go to https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
-. Choose *Compute_Firmware_Bundle* from the drop down list.
-. Click *Go*.
+To download the Compute Firmware Bundle, go to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp HCI Compute Firmware Bundle^] page.
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
 

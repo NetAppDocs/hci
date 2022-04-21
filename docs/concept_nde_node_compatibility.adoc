@@ -24,7 +24,9 @@ All storage nodes must run the same minor version of Element software to be comp
 
 NOTE: Depending on node hardware configuration, H410S storage nodes might appear in the inventory list labeled as H300S, H500S, or H700S storage nodes.
 
-NetApp HCI supports only certain storage node models in two-node or three-node storage clusters. For more information, see the Release Notes for your NetApp HCI version.
+NetApp HCI supports only certain storage node models in two-node storage clusters. For more information, see link:concept_hci_clusters.html#two-node-storage-clusters[two-node storage clusters] or the Release Notes for your NetApp HCI version.
+
+NOTE: For two-node storage cluster deployments, the storage node types are limited to nodes with 480GB and 960GB drives.
 
 == Compute node compatibility
 Compute nodes must meet the following requirements to be selectable as inventory:
