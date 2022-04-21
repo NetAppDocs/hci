@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar
-permalink: docs/rn_compute_firmware_6.0.html
+permalink: docs/rn_compute_firmware_2.154.1.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, compute firmware
 ---
 ////
 This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Compute Firmware Bundle 2.xxx Release Notes
+= Compute Firmware Bundle 2.154.1 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -18,8 +18,10 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 [.lead]
 The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
 
+NOTE: You must first upgrade to NetApp Hybrid Cloud Control  version 2.20 before upgrading the firmware on your compute nodes to version 2.154.1. If you fail to do this, HCC will fail the pre-check.
+
 == What's New
-Version 2.xx contains general bugfixes.
+Version 2.154.1 contains general bugfixes.
 
 === Updated firmware components
 This firmware package contains the following firmware versions for hardware components, with updated versions in bold:
@@ -90,11 +92,11 @@ The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible 
 * *ESXi 6.7*: Version 4.17.15.16
 * *ESXi 6.5*: Version 4.16.13.5
 
-NOTE: Before upgrading to version 2.xx, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.xx for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
+NOTE: Before upgrading to version 2.154.1, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.154.1 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
 
 While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
 
-== Download Compute Firmware Bundle 2.xx
+== Download Compute Firmware Bundle 2.154.1
 To download the Compute Firmware Bundle:
 
 . Go to https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[the NetApp HCI downloads page^].
@@ -103,19 +105,19 @@ To download the Compute Firmware Bundle:
 
 Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
 
-== Resolved security vulnerabilities
-The following are security vulnerabilities that have been resolved in this release:
+//== Resolved security vulnerabilities
+// following are security vulnerabilities that have been resolved in this release:
 
-* CVE-2019-20636
-* CVE-2019-11599, CVE-2020-12826, CVE-2020-12464, CVE-2020-12114
-* CVE-2019-0151, CVE-2019-0123, CVE-2019-0117
-* CVE-2016-3706, CVE-2011-5320, CVE-2015-8984, CVE-2015-8983, CVE-2015-8982, CVE-2006-7254, CVE-2005-3590
-* CVE-2020-20811, CVE-2020-20812
-* CVE-2020-25641
-* CVE-2020-14386, CVE-2020-14314, CVE-2020-25641, CVE-2020-1438, CVE-2020-14314, CVE-2020-25641
-* CVE-2020-8738, CVE-2020-8764, CVE-2020-0590, CVE-2020-8705
-* CVE-2020-0587, CVE-2020-0591, CVE-2020-0592, CVE-2020-8740
-* CVE-2020-0592, CVE-2020-0588, CVE-2020-8696
+//* CVE-2019-20636
+//* CVE-2019-11599, CVE-2020-12826, CVE-2020-12464, CVE-2020-12114
+//* CVE-2019-0151, CVE-2019-0123, CVE-2019-0117
+//* CVE-2016-3706, CVE-2011-5320, CVE-2015-8984, CVE-2015-8983, CVE-2015-8982, CVE-2006-7254, CVE-2005-3590
+//* CVE-2020-20811, CVE-2020-20812
+//* CVE-2020-25641
+//* CVE-2020-14386, CVE-2020-14314, CVE-2020-25641, CVE-2020-1438, CVE-2020-14314, CVE-2020-25641
+//* CVE-2020-8738, CVE-2020-8764, CVE-2020-0590, CVE-2020-8705
+//* CVE-2020-0587, CVE-2020-0591, CVE-2020-0592, CVE-2020-8740
+//* CVE-2020-0592, CVE-2020-0588, CVE-2020-8696
 
 == Resolved and known issues
 See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
