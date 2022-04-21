@@ -18,7 +18,7 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 [.lead]
 The downloadable compute node firmware package contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.
 
-NOTE: You must first upgrade to NetApp Hybrid Cloud Control  version 2.20 before upgrading the firmware on your compute nodes to version 2.154.1. If you fail to do this, HCC will fail the pre-check.
+NOTE: NetApp Hybrid Cloud Control requires the latest management services bundle. You must upgrade to the latest management services bundle before upgrading the firmware on your compute nodes to version 2.154.1. If you are upgrading the firmware on your compute nodes to version 2.154.1, you need management services 2.20 to proceed.
 
 == What's New
 Version 2.154.1 contains general bugfixes.
