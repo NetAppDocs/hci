@@ -14,9 +14,9 @@ keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 :imagesdir: ../media/
 
 [.lead]
-To upgrade NetApp Element software, you can use the NetApp Hybrid Cloud Control UI, REST API, or the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+To upgrade NetApp Element software, you can use the NetApp Hybrid Cloud Control UI or REST API. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
-NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If required, you can https://docs.netapp.com/us-en/element-software/element-earlierversions.html[upgrade using Element 12.3.x and earlier versions^].
+NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
@@ -28,7 +28,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_S
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services*: You have updated your management services bundle to the latest version.
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.5. If you are updating your Element software to version 12.5, you need management services 2.20.xx or later to proceed.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.5. If you are updating your Element software to version 12.5, you need management services 2.20.67 or later to proceed.
 
 * *Cluster health*: You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
@@ -39,7 +39,7 @@ Choose one of the following Element software upgrade options:
 * <<Use NetApp Hybrid Cloud Control UI to upgrade Element storage>>
 * <<Use NetApp Hybrid Cloud Control API to upgrade Element storage>>
 
-IMPORTANT: If you are upgrading an H610S series node to Element 12.5 and the node is running a version of Element earlier than 11.8, you will need to perform the additional upgrade steps in the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^] for each storage node. If you are running Element 11.8 or later, the additional upgrade steps are not required.
+IMPORTANT: If you are upgrading an H610S series node to Element 12.5 and the node is running a version of Element earlier than 11.8, you will need to perform the additional upgrade steps in this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^] for each storage node. If you are running Element 11.8 or later, the additional upgrade steps are not required.
 
 == Use NetApp Hybrid Cloud Control UI to upgrade Element storage
 
@@ -48,15 +48,21 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 .What you'll need
 If your management node is not connected to the internet, you have downloaded the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software package for NetApp HCI storage clusters^].
 
-CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
+CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
 [TIP]
 ====
-The upgrade process time varies depending on the Element version and firmware updates.
+The upgrade process time varies depending on the Element software version and firmware updates.
 
-* For nodes running Element 12.x, when there are no firmware updates to install, the process takes approximately 20-30 minutes per node.
-* For H610S nodes running Element 12.x, when there are BIOS and BMC firmware updates to install, the process takes approximately 60-70 minutes per node.
-* For H610S nodes running Element 11.x, the firmware updates keep the node offline for a period of time. As a result, the process takes approximately 2 hours per node. You must also https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[perform a complete node shutdown and power disconnect^] for each H610S node.
+[cols=4*,options="header",cols="15,25,30,30"]
+|===
+|Node | Element software version |Firmware updates | Approximate upgrade time per node
+
+|All nodes	|12.x	|None	|20 to 30 minutes
+|H610S	| 12.x	|BIOS and BMC	|60 to 70 minutes
+|H610S	| 11.7 and earlier
+|Yes. The firmware updates keep the node offline for longer which increases the upgrade time.	|Two hours. You must also https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[perform a complete node shutdown and power disconnect^] for each H610S node.
+|===
 
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article^] (login required).
 ====
@@ -141,7 +147,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. If you have external connectivity but still see this message, check your link:task_mnode_configure_proxy_server.html[proxy configuration^].
 
 |Complete with Follow-up
-|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform the additional upgrade (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete these additional steps and acknowledge that you have completed it, the status changes to *Up to Date*.
+|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform additional upgrade steps (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete these additional steps and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
 
 == Use NetApp Hybrid Cloud Control API to upgrade Element storage
@@ -348,9 +354,9 @@ a|
 ----
 . Select *Execute*.
 
-|If you are upgrading an H610S cluster running an Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps for each H610S storage node.
+|If you are upgrading an H610S cluster running an Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You must perform additional upgrade steps for each H610S storage node.
 a|
-. Complete the additional upgrade steps in the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^] for each node.
+. Complete the additional upgrade steps in this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^] for each node.
 . Reauthenticate if needed and select *PUT ​/upgrades/{upgradeId}*.
 . Select *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
