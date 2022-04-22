@@ -16,7 +16,9 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 [.lead]
 You can keep your NetApp HCI system up-to-date after deployment by sequentially upgrading all NetApp HCI software components.
 
-These components include management services, HealthTools, NetApp Hybrid Cloud Control, Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.​
+These components include management services, NetApp Hybrid Cloud Control, Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.​
+
+NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 using NetApp Hybrid Cloud Control.
 
 The <<sys_upgrade_seq,system upgrade sequence>> content describes the tasks that are needed to complete a NetApp HCI system upgrade. Ideally you perform these procedures as part of the larger upgrade sequence and not in isolation. If a component-based upgrade or update is needed, see the procedure prerequisites to ensure additional complexities are addressed.
 
@@ -44,10 +46,6 @@ You can use the following sequence to upgrade your NetApp HCI system.
 IMPORTANT: If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services.
 +
 IMPORTANT: You must update to the latest management services bundle before upgrading your Element software.
-
-. link:task_upgrade_element_latest_healthtools.html[(Optional) Upgrade to the latest HealthTools].
-+
-NOTE: Upgrading HealthTools is only required if the management node and Element software you are running is 11.1 or earlier. HealthTools are not required for performing Element upgrades using NetApp Hybrid Cloud Control.
 
 . link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 . link:task_hcc_upgrade_element_software.html[Upgrade your Element software and storage firmware].

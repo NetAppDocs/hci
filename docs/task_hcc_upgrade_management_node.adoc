@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_management_node.html
 summary: As part of a NetApp HCI system upgrade, you upgrade the management node.
-keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x
+keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x, 12.5
 ---
 
 = Upgrade a management node
@@ -15,7 +15,7 @@ keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10,
 
 [.lead]
 
-You can upgrade your management node to management node version 12.3.x from version 11.0 or later.
+You can upgrade your management node to management node version 12.5 from version 11.0 or later.
 
 //NOTE: If you upgrade your management node version from 12.3.0 to a later version, for example Element 12.3.1, on management nodes deployed using NDE, the upgrade might fail. If this occurs you should reboot the management node.
 
@@ -27,25 +27,22 @@ NOTE: The vCenter Plug-in 4.4 or later requires a management node 11.3 or later 
 
 Choose one of the following management node upgrade options:
 
-[NOTE]
+//[NOTE]
 ====
 * Management node 12.3.2 contains a security mitigation for storage clusters with the Virtual Volumes (VVols) feature enabled. If your storage cluster is already at Element 12.3 and the VVols feature is enabled, upgrading to 12.3.2 is highly recommended.
 * There are no additional functionality changes or bug fixes in management node 12.3.1. If you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
 ====
 
-* If you are upgrading from management node 12.3:
-There are no additional functionality changes or bug fixes in management node 12.3.1. If you are already running management node 12.3, you do not need to upgrade it to 12.3.1.
-
-NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.x will complete. However, the upgrade might encounter an error during restart. If this occurs, reboot the management node so that it correctly shows 12.3.x.
+//NOTE: If you choose to proceed with an upgrade on a management node 12.3 deployed using NDE, the upgrade to 12.3.x will complete. However, the upgrade might encounter an error during restart. If this occurs, reboot the management node so that it correctly shows 12.3.x.
 
 * If you are upgrading from management node 12.2:
-<<Upgrade a management node to version 12.3.x from 12.2>>
+<<Upgrade a management node to version 12.5 from 12.2>>
 * If you are upgrading from management node 12.0:
-<<Upgrade a management node to version 12.3.x from 12.0>>
+<<Upgrade a management node to version 12.5 from 12.0>>
 * If you are upgrading from management node 11.3, 11.5, 11.7, or 11.8:
-<<Upgrade a management node to version 12.3.x from 11.3 through 11.8>>
+<<Upgrade a management node to version 12.5 from 11.3 through 11.8>>
 * If you are upgrading from management node 11.0 or 11.1:
-<<Upgrade a management node to version 12.3.x from 11.1 or 11.0>>
+<<Upgrade a management node to version 12.5 from 11.1 or 11.0>>
 * If you are upgrading from a management node version 10.x:
 <<Migrating from management node version 10.x to 11.x>>
 
@@ -56,22 +53,22 @@ NOTE: If you do not sequentially update your management services followed by Ele
 * If you are keeping existing management node:
 <<Reconfigure authentication using the management node REST API>>
 
-== Upgrade a management node to version 12.3.x from 12.2
+== Upgrade a management node to version 12.5 from 12.2
 
 You can perform an in-place upgrade of the management node from version 12.2 to version 12.3.x without needing to provision a new management node virtual machine.
 
-NOTE: The Element 12.3.x management node is an optional upgrade. It is not required for existing deployments.
+NOTE: The Element 12.5 management node is an optional upgrade. It is not required for existing deployments.
 
 .What you'll need
 
 * The RAM of the management node VM is 24GB.
-* The management node you are intending to upgrade is version 12.0 and uses IPv4 networking. The management node version 12.3.x does not support IPv6.
+* The management node you are intending to upgrade is version 12.0 and uses IPv4 networking. The management node version 12.5 does not support IPv6.
 +
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
 * You have updated your management services bundle to the latest version using NetApp Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
 
-* If you are updating your management node to version 12.3.x, you need management services 2.14.60 or later to proceed.
+* If you are updating your management node to version 12.5, you need management services 2.20.67 or later to proceed.
 
 * You have configured an additional network adapter (if required) using the instructions for link:task_mnode_install_add_storage_NIC.html[configuring an additional storage NIC].
 +
@@ -135,21 +132,21 @@ sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 
 IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
 
-== Upgrade a management node to version 12.3.x from 12.0
+== Upgrade a management node to version 12.5 from 12.0
 
 You can perform an in-place upgrade of the management node from version 12.0 to version 12.3.x without needing to provision a new management node virtual machine.
 
-NOTE: The Element 12.3.x management node is an optional upgrade. It is not required for existing deployments.
+NOTE: The Element 12.5 management node is an optional upgrade. It is not required for existing deployments.
 
 .What you'll need
 
-* The management node you are intending to upgrade is version 12.0 and uses IPv4 networking. The management node version 12.3.x does not support IPv6.
+* The management node you are intending to upgrade is version 12.0 and uses IPv4 networking. The management node version 12.5 does not support IPv6.
 +
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
 * You have updated your management services bundle to the latest version using NetApp Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
 
-* If you are updating your management node to version 12.3.x, you need management services 2.14.60 or later to proceed.
+* If you are updating your management node to version 12.5, you need management services 2.20.67 or later to proceed.
 
 * You have configured an additional network adapter (if required) using the instructions for link:task_mnode_install_add_storage_NIC.html[configuring an additional storage NIC].
 +
@@ -217,21 +214,21 @@ sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 
 IMPORTANT: SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 and later. If you had previously enabled SSH functionality on the management node, you might need to link:task_mnode_ssh_management.html[disable SSH again] on the upgraded management node.
 
-== Upgrade a management node to version 12.3.x from 11.3 through 11.8
+== Upgrade a management node to version 12.5 from 11.3 through 11.8
 
-You can perform an in-place upgrade of the management node from version 11.3, 11.5, 11.7, or 11.8 to version 12.3.x without needing to provision a new management node virtual machine.
+You can perform an in-place upgrade of the management node from version 11.3, 11.5, 11.7, or 11.8 to version 12.5 without needing to provision a new management node virtual machine.
 
-NOTE: The Element 12.3.x management node is an optional upgrade. It is not required for existing deployments.
+NOTE: The Element 12.5 management node is an optional upgrade. It is not required for existing deployments.
 
 .What you'll need
 
-* The management node you are intending to upgrade is version 11.3, 11.5, 11.7, or 11.8 and uses IPv4 networking. The management node version 12.3.x does not support IPv6.
+* The management node you are intending to upgrade is version 11.3, 11.5, 11.7, or 11.8 and uses IPv4 networking. The management node version 12.5 does not support IPv6.
 +
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
-* You have updated your management services bundle to the latest version using NetApp Hybrid Cloud Control (HCC). You can access HCC from the following IP: `https://<ManagementNodeIP>`
+* You have updated your management services bundle to the latest version using NetApp Hybrid Cloud Control. You can access HCC from the following IP: `https://<ManagementNodeIP>`
 
-* If you are updating your management node to version 12.3.x, you need management services 2.14.60 or later to proceed.
+* If you are updating your management node to version 12.5, you need management services 2.20.67 or later to proceed.
 
 * You have configured an additional network adapter (if required) using the instructions for link:task_mnode_install_add_storage_NIC.html[configuring an additional storage NIC].
 +
@@ -300,16 +297,16 @@ sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 
 IMPORTANT: SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 and later. If you had previously enabled SSH functionality on the management node, you might need to link:task_mnode_ssh_management.html[disable SSH again] on the upgraded management node.
 
-== Upgrade a management node to version 12.3.x from 11.1 or 11.0
-You can perform an in-place upgrade of the management node from 11.0 or 11.1 to version 12.3.x without needing to provision a new management node virtual machine.
+== Upgrade a management node to version 12.5 from 11.1 or 11.0
+You can perform an in-place upgrade of the management node from 11.0 or 11.1 to version 12.5 without needing to provision a new management node virtual machine.
 
 .What you'll need
 
 *  Storage nodes are running Element 11.3 or later.
 +
-NOTE: Use the latest HealthTools to upgrade Element software.
+NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 using NetApp Hybrid Cloud Control.
 
-* The management node you are intending to upgrade is version 11.0 or 11.1 and uses IPv4 networking. The management node version 12.3.x does not support IPv6.
+* The management node you are intending to upgrade is version 11.0 or 11.1 and uses IPv4 networking. The management node version 12.5 does not support IPv6.
 +
 TIP: To check the version of your management node, log in to your management node and view the Element version number in the login banner.
 
@@ -413,7 +410,7 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pv <true - persistent vo
 sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent volumes>
 ----
 
-. (For all NetApp HCI installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.3.x management node by following the steps in the link:task_vcp_upgrade_plugin.html[Upgrade the Element Plug-in for vCenter Server] topic.
+. (For all NetApp HCI installations with NetApp Element Plug-in for vCenter Server) Update the vCenter Plug-in on the 12.5 management node by following the steps in the link:task_vcp_upgrade_plugin.html[Upgrade the Element Plug-in for vCenter Server] topic.
 . Locate the asset ID for your installation using the management node API:
 .. From a browser, log into the management node REST API UI:
 ... Go to the storage MVIP and log in.
@@ -453,7 +450,9 @@ Your installation has a base asset configuration that was created during install
 .. Select *Execute*.
 
 == Migrating from management node version 10.x to 11.x
-If you have a management node at version 10.x, you cannot upgrade from 10.x to 11.x. You can instead use this migration procedure to copy over the configuration from 10.x to a newly deployed 11.1 management node. If your management node is currently at 11.0 or higher, you should skip this procedure. You need management node 11.0 or 11.1 and the link:task_upgrade_element_latest_healthtools.html[latest HealthTools] to upgrade Element software from 10.3 + through 11.x.
+If you have a management node at version 10.x, you cannot upgrade from 10.x to 11.x. You can instead use this migration procedure to copy over the configuration from 10.x to a newly deployed 11.1 management node. If your management node is currently at 11.0 or higher, you should skip this procedure. You need management node 11.0 or 11.1 to upgrade Element software from 10.3 + through 11.x.
+
+NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 10.3 + through 11.1, you must first link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 using NetApp Hybrid Cloud Control.
 
 .Steps
 
