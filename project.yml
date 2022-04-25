@@ -265,7 +265,7 @@ sidebar:
           url: /docs/task_hcc_activeiq.html
         - title: Collect logs for troubleshooting
           url: /docs/task_hcc_collectlogs.html
-    - title: Upgrade your NetApp HCI system version 1.9 or 1.9P1
+    - title: Upgrade your NetApp HCI system version 1.10
       entries:
         - title: Upgrade sequence overview
           url: /docs/concept_hci_upgrade_overview.html
