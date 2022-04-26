@@ -35,7 +35,7 @@ NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp
 
 === Resolved issues and known issues
 
-The NetApp Bugs Online tool contains resolved and known issues for NetApp HCI, Element, and other products. You can browse these issues using keywords or versions at https://mysupport.netapp.com/site/products/all/details/netapp-hci/bugsonline-tab[NetApp Bugs Online^].
+The NetApp Bugs Online tool contains resolved and known issues for NetApp HCI, Element software, and other products. You can browse these issues using keywords or versions at https://mysupport.netapp.com/site/products/all/details/netapp-hci/bugsonline-tab[NetApp Bugs Online^].
 
 == Element 12.5
 Element 12.5 introduces improved storage node access, enhanced custom Protection Domains manageability, new and improved cluster faults and events, enhanced Cluster UI functionality, enhanced security, and automated upgrades using Ansible.
@@ -47,7 +47,7 @@ Element 12.5 brings improved remote access to individual nodes using signed SSH 
 Element 12.5 features a new user interface that enables you to quickly and easily view existing custom Protection Domains and configure new custom Protection Domains.
 
 === New and improved cluster faults, events, and alerts
-Element 12.5 enhances your system troubleshooting with the introduction of the new cluster fault codes `BmcSelfTestFailed` and `CpuThermalEventThreshold`.  Element 12.5 also contains robustness improvements for existing cluster events and alerts, such as `nodeOffline`, `volumeOffline`, `driveHealthFault`, `networkEvent`, and	`cSumEvent`.
+Element 12.5 enhances your system troubleshooting with the introduction of the new cluster fault codes `BmcSelfTestFailed` and `CpuThermalEventThreshold`. Element 12.5 also contains robustness improvements for existing cluster events and alerts, such as `nodeOffline`, `volumeOffline`, `driveHealthFault`, `networkEvent`, and `cSumEvent`.
 
 
 === Enable Software Encryption at Rest from the Create Cluster UI
@@ -64,7 +64,7 @@ If you're running Element 11.x, 12.0, or 12.2 or your storage cluster is already
 Element 12.5 also includes more than 120 CVE security vulnerability remediations.
 
 == Automated upgrades using Ansible
-With Element 12.5, you can automate the Element upgrade workflow by using Ansible to perform a rolling upgrade of the entire storage cluster. To get started, navigate to the https://github.com/NetApp-Automation[NetApp Ansible repository^] on GitHub and download the `nar_solidfire_sds_upgrade` role and documentation.
+With Element 12.5, you can automate the Element software upgrade workflow by using Ansible to perform a rolling upgrade of the entire storage cluster. To get started, navigate to the https://github.com/NetApp-Automation[NetApp Ansible repository^] on GitHub and download the `nar_solidfire_sds_upgrade` role and documentation.
 
 [discrete]
 == Find more information
