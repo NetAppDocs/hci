@@ -19,7 +19,7 @@ You can find links to the latest and earlier release notes for various component
 NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == NetApp HCI
-* https://library.netapp.com/ecm/ecm_download_file/ECMLPxxxxxxx[NetApp HCI 1.10 Release Notes^] _NEW_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882194[NetApp HCI 1.10 Release Notes^] _NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2879274[NetApp HCI 1.9P1 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876591[NetApp HCI 1.9 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873790[NetApp HCI 1.8P1 Release Notes^]
@@ -27,7 +27,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes^]
 
 == NetApp Element software
-* https://library.netapp.com/ecm/ecm_download_file/ECMLPxxxxxxx[NetApp Element Software 12.3.2 Release Notes^] _NEW_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882193[NetApp Element Software 12.5 Release Notes^] _NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2881056[NetApp Element Software 12.3.2 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2878089[NetApp Element Software 12.3.1 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876498[NetApp Element Software 12.3 Release Notes^]
