@@ -48,53 +48,53 @@ This firmware package contains the following firmware versions for hardware comp
 |*14.29.1016*
 |===
 
-=== Changes in firmware components
-Here are the details of the improvements and changes included in each new firmware component:
+//=== Changes in firmware components
+//Here are the details of the improvements and changes included in each new firmware component:
 
-|===
-|Node and firmware component |Improvements and changes
+//|===
+//|Node and firmware component |Improvements and changes
 
-|*H300E/H500E/H700E NA3.4*
-a|
-* Enable Post Packet Repair (PPR)
-* IPU 2020.2 microcode
-|*H410C NATP3.10*
-a|
-* IPU 2020.2 microcode
-| *H610C 3B07*
-a|
-* Enhance logging of PPR events in SEL
-* IPU 2020.2 microcode
-| *H615C 3B12.CO*
-a|
-* Enhance logging of PPR events in SEL
-* IPU 2020.2 microcode
-| *H300E/H500E/H700E 6.98.00*
-a|
-* LDAP BIND ID field length to 128 chars
-* Disable TLS 1.0 and TLS 1.1
-| *H610C 4.04.07*
-a|
-* BIOS PPR event log parsing in BMC SEL
-* LDAP BIND ID field length to 128 chars
-* Group Domain of LDAP length to 128 chars
-| *H615C 4.72.07*
-a|
-* BIOS PPR event log parsing in BMC SEL
-* Group Domain of LDAP length to 128 chars
-|===
+//|*H300E/H500E/H700E NA3.4*
+//a|
+//* Enable Post Packet Repair (PPR)
+//* IPU 2020.2 microcode
+//|*H410C NATP3.10*
+//a|
+//* IPU 2020.2 microcode
+//| *H610C 3B07*
+//a|
+//* Enhance logging of PPR events in SEL
+//* IPU 2020.2 microcode
+//| *H615C 3B12.CO*
+//a|
+//* Enhance logging of PPR events in SEL
+//* IPU 2020.2 microcode
+//| *H300E/H500E/H700E 6.98.00*
+//a|
+//* LDAP BIND ID field length to 128 chars
+//* Disable TLS 1.0 and TLS 1.1
+//| *H610C 4.04.07*
+//a|
+//* BIOS PPR event log parsing in BMC SEL
+//* LDAP BIND ID field length to 128 chars
+//* Group Domain of LDAP length to 128 chars
+//| *H615C 4.72.07*
+//a|
+//* BIOS PPR event log parsing in BMC SEL
+//* Group Domain of LDAP length to 128 chars
+//|===
 
 === Mellanox NIC firmware driver compatibility
-The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:
+The updated Mellanox firmware version 14.29.1016 requires a minimum version of VMware ESXi driver as follows:
 
-* *ESXi 7.0*: H300E/H500E/H700E/H410C: Version 4.19.16.1
-* *ESXi 7.0*: H610C/H615C: Version 4.17.15.16
-* *ESXi 6.7*: Version 4.17.15.16
-* *ESXi 6.5*: Version 4.16.13.5
+* *ESXi 7.0*: Version 4.21.71.1
+//* *ESXi 7.0*: H610C/H615C: Version 4.17.15.16
+* *ESXi 6.7*: Version 4.17.71.1
+* *ESXi 6.5*: Version 4.16.71.1
 
 NOTE: Before upgrading to version 2.154.1, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.154.1 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
 
-While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
+When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
 
 == Download Compute Firmware Bundle 2.154.1
 To download the Compute Firmware Bundle:
