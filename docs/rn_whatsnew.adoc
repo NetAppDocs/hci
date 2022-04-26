@@ -31,7 +31,7 @@ NetApp HCI 1.10 increases your flexibility to expand NetApp HCI compute resource
 The NetApp Element Plug-in for vCenter Server 4.9 is available outside of the management node 12.5 and NetApp HCI 1.10 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades] documentation.
 
 === NetApp Hybrid Cloud Control enhancements
-NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Learn more].
+NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Learn more^].
 
 === Resolved issues and known issues
 
@@ -54,10 +54,10 @@ Element 12.5 enhances your system troubleshooting with the introduction of the n
 With the addition of a new checkbox in the Create Cluster UI, Element 12.5 gives you the option to enable cluster-wide Software Encryption at Rest for SolidFire all-flash storage clusters during cluster creation.
 
 === Storage node firmware updates
-Element 12.5 includes firmware updates for storage nodes. link:https://docs.netapp.com/us-en/element-software/concepts/concept_rn_relatedrn_element.html#storage-firmware[Learn more].
+Element 12.5 includes firmware updates for storage nodes. link:https://docs.netapp.com/us-en/element-software/concepts/concept_rn_relatedrn_element.html#storage-firmware[Learn more^].
 
 === Enhanced security
-Element 12.5 contains the mitigation that closes the Element software exposure to the Apache Log4j vulnerability. NetApp SolidFire storage clusters with the Virtual Volumes (VVols) feature enabled are exposed to the Apache Log4j vulnerability. For information on the workaround for the Apache Log4j vulnerability in NetApp Element software, see the link:+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround+[KB article^].
+Element 12.5 contains the mitigation that closes the Element software exposure to the Apache Log4j vulnerability. NetApp SolidFire storage clusters with the Virtual Volumes (VVols) feature enabled are exposed to the Apache Log4j vulnerability. For information on the workaround for the Apache Log4j vulnerability in NetApp Element software, see the link:++https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround++[KB article^].
 
 If you're running Element 11.x, 12.0, or 12.2 or your storage cluster is already at Element 12.3 or 12.3.1 with the VVols feature enabled, upgrading to 12.5 is highly recommended.
 
