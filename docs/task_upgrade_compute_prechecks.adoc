@@ -21,7 +21,7 @@ You must run health checks prior to upgrading compute firmware to ensure all com
 * *Management services*: You have updated to the latest management services bundle (2.11 or later).
 * *Management node*: You are running management node 11.3 or later.
 * *Element software*: Your storage cluster is running NetApp Element software 11.3 or later.
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to run compute node health checks:
 +
 . Open the IP address of the management node in a web browser:
 +
@@ -36,7 +36,7 @@ NOTE: When you accept the EULA, it is recorded for all future updates and the au
 
 .Health check options
 
-You can run health checks using NetApp Hybrid Cloud Control (HCC) UI or HCC API:
+You can run health checks using NetApp Hybrid Cloud Control UI or NetApp Hybrid Cloud Control API:
 
 * <<Use NetApp Hybrid Cloud Control to run compute node health checks prior to upgrading firmware>> (Preferred method)
 * <<Use API to run compute node health checks prior to upgrading firmware>>
@@ -174,7 +174,7 @@ https://<ManagementNodeIP>/vcenter/1/
 If health checks complete without issues, the response code 200 indicates a successful result.
 
 == Compute node health checks made by the service
-Compute health checks, whether performed by HCC or API methods, make the following checks per node. Depending on your environment, some of these checks might be skipped. You should re-run health checks after resolving any detected issues.
+Compute health checks, whether performed by NetApp Hybrid Cloud Control or API methods, make the following checks per node. Depending on your environment, some of these checks might be skipped. You should re-run health checks after resolving any detected issues.
 |===
 | Check description | Node/cluster | Action needed to resolve | Knowledgebase article with procedure
 
