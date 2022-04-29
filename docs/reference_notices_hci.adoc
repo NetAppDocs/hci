@@ -19,8 +19,6 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/commo
 // Include the open source notice intro
 include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
-* link:../media/SolidFire_eSDS_12.5.pdf[Notice for NetApp SolidFire Enterprise SDS 12.5^]
-* link:../media/Element_Software_12.5.pdf[Notice for Element software 12.5^]
 * link:../media/ansible-products-notice.pdf[Notice for Ansible Role for Compute Upgrades^]
 * link:../media/Ember_12.3_notice.pdf[Notice for Ember OS 12.3.1^]
 * link:../media/Ember_12.3_notice.pdf[Notice for Ember OS 12.3^]
