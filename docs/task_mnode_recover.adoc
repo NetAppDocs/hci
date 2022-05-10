@@ -86,7 +86,7 @@ NOTE: If you need an additional NIC to isolate storage traffic, see instructions
 
 . Ensure time is synced between the management node and the storage cluster using NTP:
 
-NOTE: Starting with Element 12.3.1, substeps (a) to (e) are performed automatically. For management node 12.3.1, proceed to <<substep_f_recover_config_time_sync,substep (f)>> to complete the time sync configuration.
+NOTE: Starting with Element 12.3.1, substeps (a) to (e) are performed automatically. For management node 12.3.1 or later, proceed to <<substep_f_recover_config_time_sync,substep (f)>> to complete the time sync configuration.
 
 .. Log in to the management node using SSH or the console provided by your hypervisor.
 .. Stop NTPD:
