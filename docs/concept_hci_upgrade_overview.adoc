@@ -34,6 +34,8 @@ Upgrades using NetApp Hybrid Cloud Control are not available in earlier service 
 
 * You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 
+* You have scheduled sufficient time for your link:task_hcc_upgrade_element_software.html#element-upgrade-time[Element software] and link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade[storage firmware] upgrades. When you upgrade to Element software 12.5, the upgrade process time varies depending on the Element software version and firmware updates.
+
 == [[sys_upgrade_seq]]System upgrade sequence
 You can use the following sequence to upgrade your NetApp HCI system.
 

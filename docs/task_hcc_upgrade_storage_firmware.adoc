@@ -31,9 +31,11 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 IMPORTANT: To update your iDRAC/BIOS firmware, contact NetApp Support. For additional information, see this link:https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes[KB article^].
 
 * *Cluster health*: You have run health checks. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
-* *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
+* *Updated baseboard management controller (BMC) for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
 
 NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article^] (login required).
+[[storage-firmware-upgrade]]
+include::../_include/element_software_and_storage_firmware_upgrade_time.adoc[]
 
 .Upgrade options
 
