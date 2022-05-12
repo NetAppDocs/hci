@@ -19,7 +19,7 @@ You might need to allow the following ports through your datacenter's edge firew
 
 [NOTE]
 ======================
-The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository, which uses Akamai CDN technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
+The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
 
 .Steps
 
