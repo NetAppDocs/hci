@@ -130,8 +130,11 @@ TIP: Ensure that storage capacity is split evenly across all chassis for the bes
 You can use NetApp Hybrid Cloud Control only if your NetApp HCI installation runs on version 1.6P1 or later.
 
 .Steps
-. Open a web browser and browse to the IP address of the management node. For example:
-`https://<ManagementNodeIP>/manager/login`
+. Open the IP address of the management node in a web browser. For example:
++
+----
+https://<ManagementNodeIP>/manager/login
+----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
 . Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
