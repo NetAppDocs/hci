@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_element_software.html
 summary: As part of a NetApp HCI system upgrade, you upgrade NetApp Element software.
-keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
+keywords: netapp, hci, cluster, element, H610S upgrade, hcc
 ---
 
 = Upgrade Element software
@@ -14,7 +14,9 @@ keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 :imagesdir: ../media/
 
 [.lead]
-To upgrade NetApp Element software, you can use the NetApp Hybrid Cloud Control UI, REST API, or the HealthTools suite of tools. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+To upgrade NetApp Element software, you can use the NetApp Hybrid Cloud Control UI or REST API. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
+
+NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 using NetApp Hybrid Cloud Control.
 
 .What you'll need
 
@@ -26,20 +28,19 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_S
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services*: You have updated your management services bundle to the latest version.
 
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.3.x. If you are updating your Element software to version 12.3.x, you need management services 2.14.60 or later to proceed.
+IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.5. If you are updating your Element software to version 12.5, you need management services 2.20.69 or later to proceed.
 
 * *Cluster health*: You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
-* *Updated BMC for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
-
+* *Updated baseboard management controller (BMC) for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions^].
+[[element-upgrade-time]]
+include::../_include/element_software_and_storage_firmware_upgrade_time.adoc[]
 .Upgrade options
 Choose one of the following Element software upgrade options:
 
 * <<Use NetApp Hybrid Cloud Control UI to upgrade Element storage>>
 * <<Use NetApp Hybrid Cloud Control API to upgrade Element storage>>
-* <<Upgrade Element software at connected sites using HealthTools>>
-* <<Upgrade Element software at dark sites using HealthTools>>
 
-IMPORTANT: If you are upgrading an H610S series node to Element 12.3.x and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (<<Upgrading H610S storage nodes to Element 12.3.x (phase 2),phase 2>>) for each storage node. If you are running Element 11.8 or later, the additional upgrade steps (phase 2) are not required.
+IMPORTANT: If you are upgrading an H610S series node to Element 12.5 and the node is running a version of Element software earlier than 11.8, you will need to perform the additional upgrade steps in this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^] for each storage node. If you are running Element 11.8 or later, the additional upgrade steps are not required.
 
 == Use NetApp Hybrid Cloud Control UI to upgrade Element storage
 
@@ -48,9 +49,7 @@ Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
 .What you'll need
 If your management node is not connected to the internet, you have downloaded the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software package for NetApp HCI storage clusters^].
 
-CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
-
-TIP: The upgrade process takes approximately 30 minutes per node for non-H610S platforms.
+CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
 .Steps
 
@@ -95,8 +94,8 @@ An on-screen message is displayed after the file is successfully uploaded and va
 a|
 . Select the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available.
 . Select *Begin Upgrade*.
-After the upgrade is complete, the UI prompts you to perform phase 2 of the process.
-. Complete the additional steps required (phase 2) in the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^], and acknowledge in the UI that you have completed phase 2.
+After the upgrade is complete, the UI prompts you to perform additional upgrade steps.
+. Complete the additional steps required in the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^], and acknowledge in the UI that you have completed them.
 
 You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 |===
@@ -132,7 +131,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. If you have external connectivity but still see this message, check your link:task_mnode_configure_proxy_server.html[proxy configuration^].
 
 |Complete with Follow-up
-|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform phase 2 of the upgrade (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete phase 2 and acknowledge that you have completed it, the status changes to *Up to Date*.
+|Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform additional upgrade steps (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete these additional steps and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
 
 == Use NetApp Hybrid Cloud Control API to upgrade Element storage
@@ -339,9 +338,9 @@ a|
 ----
 . Select *Execute*.
 
-|If you are upgrading an H610S cluster running an Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You need to perform additional upgrade steps (phase 2) for each H610S storage node.
+|If you are upgrading an H610S cluster running an Element version earlier than 11.8, you see the state `finishedNeedsAck` in the response body. You must perform additional upgrade steps for each H610S storage node.
 a|
-. See <<Upgrading H610S storage nodes to Element 12.3.x or later (phase 2)>> and complete the process for each node.
+. Complete the additional upgrade steps in this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^] for each node.
 . Reauthenticate if needed and select *PUT ​/upgrades/{upgradeId}*.
 . Select *Try it out*.
 . Enter the upgrade ID from the previous step in *upgradeId*.
@@ -371,253 +370,6 @@ NetApp Hybrid Cloud Control has a pre-set three-hour waiting period, during whic
 
 CAUTION: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
 
-== Upgrade Element software at connected sites using HealthTools
-
-.Steps
-
-. Download the storage upgrade package; go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^] and download the latest storage node image to a device that is not the management node.
-+
-NOTE: You need the latest version of HealthTools to upgrade Element storage software.
-
-. Copy the ISO file to the management node in an accessible location like /tmp.
-+
-When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
-
-. *Optional*: Download the ISO from the management node to the cluster nodes before the upgrade.
-+
-This step reduces the upgrade time by pre-staging the ISO on the storage nodes and running additional internal checks to ensure that the cluster is in a good state to be upgraded. Performing this operation will not put the cluster into "upgrade" mode or restrict any of the cluster operations.
-+
-----
-sfinstall <MVIP> -u <cluster_username> <path-toinstall-file-ISO> --stage
-----
-+
-NOTE: Omit the password from the command line to allow `sfinstall` to prompt for the information. For passwords that contain special characters, add a backslash (`\`) before each special character. For example, `mypass!@1` should be entered as `mypass\!\@`.
-
-+
-*Example*
-See the following sample input:
-+
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfisodium-11.0.0.345.iso --stage
-----
-+
-The output for the sample shows that `sfinstall` attempts to verify if a newer version of `sfinstall` is available:
-+
-----
-sfinstall 10.117.0.244 -u admin
-/tmp/solidfire-rtfisodium-11.0.0.345.iso 2018-10-01 16:52:15:
-Newer version of sfinstall available.
-This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
-https:// mysupport.netapp.com/NOW/cgi-bin/software/
-or rerun with --skip-version-check
-----
-See the following sample excerpt from a successful pre-stage operation:
-+
-NOTE: When staging completes, the message will display `Storage Node Upgrade Staging Successful` after the upgrade event.
-
-+
-----
-flabv0004 ~ # sfinstall -u admin
-10.117.0.87 solidfire-rtfi-sodium-patch3-11.3.0.14171.iso --stage
-2019-04-03 13:19:58: sfinstall Release Version: 2019.01.01.49 Management Node Platform:
-Ember Revision: 26b042c3e15a Build date: 2019-03-12 18:45
-2019-04-03 13:19:58: Checking connectivity to MVIP 10.117.0.87
-2019-04-03 13:19:58: Checking connectivity to node 10.117.0.86
-2019-04-03 13:19:58: Checking connectivity to node 10.117.0.87
-...
-2019-04-03 13:19:58: Successfully connected to cluster and all nodes
-...
-2019-04-03 13:20:00: Do you want to continue? ['Yes', 'No']: Yes
-...
-2019-04-03 13:20:55: Staging install pack on cluster nodes
-2019-04-03 13:20:55: newVersion: 11.3.0.14171
-2019-04-03 13:21:01: nodeToStage: nlabp2814, nlabp2815, nlabp2816, nlabp2813
-2019-04-03 13:21:02: Staging Node nlabp2815 mip=[10.117.0.87] nodeID=[2] (1 of 4 nodes)
-2019-04-03 13:21:02: Node Upgrade serving image at
-http://10.117.0.204/rtfi/solidfire-rtfisodium-
-patch3-11.3.0.14171/filesystem.squashfs
-...
-2019-04-03 13:25:40: Staging finished. Repeat the upgrade command without the --stage option to start the upgrade.
-----
-
-+
-The staged ISOs will be automatically deleted after the upgrade completes. However, if the upgrade has not started and needs to be rescheduled, ISOs can be manually de-staged using the command:
-+
-`sfinstall <MVIP> -u <cluster_username> --destage`
-
-+
-After the upgrade has started, the de-stage option is no longer available.
-
-. Start the upgrade with the `sfinstall` command and the path to the ISO file:
-+
-`sfinstall <MVIP> -u <cluster_username> <path-toinstall-file-ISO>`
-
-+
-*Example*
-+
-See the following sample input command:
-+
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
-----
-+
-The output for the sample shows that `sfinstall` attempts to verify if a newer version of `sfinstall` is available:
-+
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
-2018-10-01 16:52:15: Newer version of sfinstall available.
-This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
-https://mysupport.netapp.com/NOW/cgi-bin/software/ or rerun with --skip-version-check
-----
-+
-See the following sample excerpt from a successful upgrade. Upgrade events can be used to monitor the progress of the upgrade.
-+
-----
-# sfinstall 10.117.0.161 -u admin solidfire-rtfi-sodium-11.0.0.761.iso
-2018-10-11 18:28
-Checking connectivity to MVIP 10.117.0.161
-Checking connectivity to node 10.117.0.23
-Checking connectivity to node 10.117.0.24
-...
-Successfully connected to cluster and all nodes
-###################################################################
-You are about to start a new upgrade
-10.117.0.161
-10.3.0.161
-solidfire-rtfi-sodium-11.0.0.761.iso
-Nodes:
-10.117.0.23 nlabp1023 SF3010 10.3.0.161
-10.117.0.24 nlabp1025 SF3010 10.3.0.161
-10.117.0.26 nlabp1027 SF3010 10.3.0.161
-10.117.0.28 nlabp1028 SF3010 10.3.0.161
-###################################################################
-Do you want to continue? ['Yes', 'No']: yes
-...
-Watching for new network faults. Existing fault IDs are set([]).
-Checking for legacy network interface names that need renaming
-Upgrading from 10.3.0.161 to 11.0.0.761 upgrade method=rtfi
-Waiting 300 seconds for cluster faults to clear
-Waiting for caches to fall below threshold
-...
-Installing mip=[10.117.0.23] nodeID=[1] (1 of 4 nodes)
-Starting to move primaries.
-Loading volume list
-Moving primary slice=[7] away from mip[10.117.0.23] nodeID[1] ssid[11] to new ssid[15]
-Moving primary slice=[12] away from mip[10.117.0.23] nodeID[1] ssid[11] to new ssid[15]
-...
-Installing mip=[10.117.114.24] nodeID=[2] (2 of 4 nodes)
-Starting to move primaries.
-Loading volume list
-Moving primary slice=[5] away from mip[10.117.114.24] nodeID[2] ssid[7] to new ssid[11]
-...
-Install of solidfire-rtfi-sodium-11.0.0.761 complete.
-Removing old software
-No staged builds present on nodeID=[1]
-No staged builds present on nodeID=[2]
-...
-Starting light cluster block service check
-----
-
-IMPORTANT: If you are upgrading an H610S series node to Element 12.3.x and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (<<Upgrading H610S storage nodes to Element 12.3.x (phase 2),phase 2>>) for each storage node. If you are running Element 11.8 or later, the additional upgrade steps (phase 2) are not required.
-
-== Upgrade Element software at dark sites using HealthTools
-You can use the HealthTools suite of tools to update NetApp Element software at a dark site that has no external connectivity.
-
-.What you'll need
-
-. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^].
-. Select the correct software release and download the latest storage node image to a computer that is not the management node.
-+
-NOTE: You need the latest version of HealthTools to upgrade Element storage software.
-
-. Download this https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740[JSON file^] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740) from the NetApp Support Site on a computer that is not the management node and rename it to `metadata.json`.
-. Copy the ISO file to the management node in an accessible location like `/tmp`.
-+
-TIP: You can do this by using, for example, SCP. When you upload the ISO file, make sure that the name of the file does not change, otherwise later steps will fail.
-
-.Steps
-
-. Run the `sfupdate-healthtools` command:
-+
-----
-sfupdate-healthtools <path-to-healthtools-package>
-----
-. Check the installed version:
-+
-----
-sfupdate-healthtools -v
-----
-. Check the latest version against the metadata JSON file:
-+
-----
-sfupdate-healthtools -l --metadata=<path-to-metadata-json>
-----
-. Ensure that the cluster is ready:
-+
-----
-sudo sfupgradecheck -u <cluster_username> -p <cluster_password> MVIP --metadata=<path-to-metadata-json>
-----
-. Run the `sfinstall` command with the path to the ISO file and the metadata JSON file:
-+
-----
-sfinstall -u <cluster_username> <MVIP> <path-toinstall-file-ISO> --metadata=<path-to-metadata-json-file>
-----
-+
-See the following sample input command:
-+
-----
-sfinstall -u admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/tmp/metadata.json
-----
-+
-*Optional* You can add the `--stage` flag to the `sfinstall` command to pre-stage the upgrade in advance.
-
-IMPORTANT: If you are upgrading an H610S series node to Element 12.3.x and the node is running a version of Element earlier than 11.8, you will need to perform additional upgrade steps (<<Upgrading H610S storage nodes to Element 12.3.x (phase 2), phase 2>>) for each storage node. If you are running Element 11.8 or later, the additional upgrade steps (phase 2) are not required.
-
-== What happens if an upgrade fails using HealthTools
-If the software upgrade fails, you can pause the upgrade.
-
-TIP: You should pause an upgrade only with Ctrl-C. This enables the system to clean itself up.
-
-When `sfinstall` waits for cluster faults to clear and if any failure causes the faults to remain, `sfinstall` will not proceed to the next node.
-
-.Steps
-. You should stop `sfinstall` with Ctrl+C.
-. Contact NetApp Support to assist with the failure investigation.
-. Resume the upgrade with the same `sfinstall` command.
-. When an upgrade is paused by using Ctrl+C, if the upgrade is currently upgrading a node, choose one of these options:
-
-* *Wait*: Allow the currently upgrading node to finish before resetting the cluster constants.
-* *Continue*: Continue the upgrade, which cancels the pause.
-* *Abort*: Reset the cluster constants and abort the upgrade immediately.
-+
-NOTE: Aborting the cluster upgrade while a node is being updated might result in the drives being ungracefully removed from the node. If the drives are ungracefully removed, adding the drives back during an upgrade will require manual intervention by NetApp Support. The node might be taking longer to do firmware updates or post update syncing activities. If the upgrade progress seems stalled, contact NetApp Support for assistance.
-
-== Upgrading H610S storage nodes to Element 12.3.x (phase 2)
-
-If you are upgrading an H610S series node to Element 12.3.x and the node is running a version of Element earlier than 11.8, the upgrade process involves two phases.
-
-Phase 1, which is performed first, follows the same steps as the standard upgrade to Element 12.3.x process. It installs Element Software and all 5 firmware updates in a rolling fashion across the cluster one node at a time. Due to the firmware payload, the process is estimated to take approximately 1.5 to 2 hours per H610S node, including a single cold-boot cycle at the end of the upgrade for each node.
-
-Phase 2 involves completing steps to perform a complete node shutdown and power disconnect for each H610S node that are described in a required https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB^]. This phase is estimated to take approximately one hour per H610S node.
-
-IMPORTANT: After you complete phase 1, four of the five firmware updates are activated during the cold boot on each H610S node; however, the Complex Programmable Logic Device (CPLD) firmware requires a complete power disconnect and reconnect to fully install. The CPLD firmware update protects against NVDIMM failures and metadata drive eviction during future reboots or power cycles. This power reset is estimated to take approximately one hour per H610S node. It requires shutting down the node, removing power cables or disconnecting power via a smart PDU, waiting approximately 3 minutes, and reconnecting power.
-
-.Before you begin
-
-* You have completed phase 1 of the H610S upgrade process and have upgraded your storage nodes using one the standard Element storage upgrade procedures.
-
-NOTE: Phase 2 requires on-site personnel.
-
-.Steps
-
-. (Phase 2) Complete the power reset process required for each H610S node in the cluster:
-
-NOTE: If the cluster also has non-H610S nodes, these non-H610S nodes are exempt from phase 2 and do not need to be shut down or have their power disconnected.
-
-.. Contact NetApp Support for assistance and to schedule this upgrade.
-.. Follow the phase 2 upgrade procedure in this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB^] that is required to complete an upgrade for each H610S node.
 
 [discrete]
 == Find more information
