@@ -275,8 +275,9 @@ sidebar:
           entries:
             - title: Update management services
               url: /docs/task_hcc_update_management_services.html
-            - title: Upgrade to the latest HealthTools
-              url: /docs/task_upgrade_element_latest_healthtools.html
+          # HealthTools no longer supported from Element 12.5
+          # - title: Upgrade to the latest HealthTools
+          #   url: /docs/task_upgrade_element_latest_healthtools.html
             - title: Run Element storage health checks prior to upgrading storage
               url: /docs/task_hcc_upgrade_element_prechecks.html
             - title: Upgrade Element software
