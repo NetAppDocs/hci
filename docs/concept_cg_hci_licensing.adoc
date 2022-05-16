@@ -16,7 +16,6 @@ keywords: netapp, hci, license
 When you use NetApp HCI, you might need additional licenses depending on what you are using.
 
 == NetApp HCI and VMware vSphere licensing
-
 VMware vSphere licensing depends on your configuration:
 
 [cols=2*,options="header",cols="25,75"]

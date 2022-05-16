@@ -25,7 +25,7 @@ You can access this information only if you have NetApp Hybrid Cloud Control adm
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node. For example:
+. Open the IP address of the management node in a web browser. For example:
 +
 ----
 https://<ManagementNodeIP>
