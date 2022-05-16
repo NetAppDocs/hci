@@ -33,7 +33,7 @@ Choose one of the following options to change BMC credentials:
 You can edit the stored BMC credentials using the NetApp Hybrid Cloud Control Dashboard.
 
 .Steps
-. Open a web browser and browse to the IP address of the management node. For example:
+. Open the IP address of the management node in a web browser. For example:
 +
 ----
 https://<ManagementNodeIP>

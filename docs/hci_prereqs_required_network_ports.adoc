@@ -17,16 +17,17 @@ keywords: netapp, hci, ports, tcp, udp
 
 You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system. All ports are TCP unless stated otherwise.
 
-IMPORTANT: NetApp is in the process of rebuilding the online repository that hosts software and firmware bundle downloads that support the NetApp Hybrid Cloud Control automated upgrade workflow. https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU474[Learn More]
-
 [NOTE]
 ======================
-The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository, which uses JFrog Artifactory Cloud as a distribution hub and CDN technologies for file hosting. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
+The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
 
 .Steps
 
-. Use the Wget or cURL utilities to access a URL (repo.netapp.com, for example).
-. Receive a failure to access the URL (different from repo.netapp.com).
+. Use the Wget or cURL utilities to access a URL (support-sg-nawest.netapp.com, for example).
+. Check for connectivity as shown in the following example:
++
+image::network_ports.PNG[Check port connectivity]
+. Receive a failure to access the URL (different from support-sg-nawest.netapp.com).
 . Edit the firewall rules to allow the new URL.
 . Repeat the above steps until the access attempt succeeds.
 ======================
@@ -135,11 +136,15 @@ All ports in the table are TCP unless stated otherwise.
 
 |Management node
 a|
-Online software repository:
+New release notification:
 
-* `https://repo.netapp.com/bintray/api/package`
-* `https://repo.netapp.com/downloads`
-* `https://netappdownloads.jfrog.io:443`
+* `https://support.netapp.com/aods/`
+
+Software download:
+
+* `https://support-sg-emea.netapp.com`
+* `https://support-sg-naeast.netapp.com`
+* `https://support-sg-nawest.netapp.com`
 
 |443
 |Management node service upgrades

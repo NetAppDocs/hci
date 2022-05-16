@@ -56,6 +56,18 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
 * *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade compute node firmware:
++
+. Open the IP address of the management node in a web browser:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Select *Upgrade* near the top right of the interface.
+. The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
++
+NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .About this task
 
@@ -96,7 +108,7 @@ NOTE: You should extract the `TAR.GZ` file to a `TAR` file, and then extract the
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
