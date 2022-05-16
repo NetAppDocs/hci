@@ -302,7 +302,7 @@ NOTE: All the other NetApp HCI nodes will be discovered automatically.
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node.
+. Open the IP address of the management node in a web browser.
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . Follow the steps in the wizard to add storage and/or compute nodes to your NetApp HCI installation.
 +

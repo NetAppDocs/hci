@@ -29,7 +29,7 @@ Only compute nodes that are managed and clusters with at least one managed node 
 
 == Access the NetApp HCC Dashboard
 
-. Open a web browser and browse to the IP address of the management node. For example:
+. Open the IP address of the management node in a web browser. For example:
 +
 ----
 https://<ManagementNodeIP>

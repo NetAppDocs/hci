@@ -44,6 +44,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes^]
 
 == NetApp Element Plug-in for vCenter Server
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904[vCenter Plug-in 4.9 Release Notes^] _NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296[vCenter Plug-in 4.8 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748[vCenter Plug-in 4.7 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[vCenter Plug-in 4.6 Release Notes^]
