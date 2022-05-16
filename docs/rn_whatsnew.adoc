@@ -26,6 +26,12 @@ NetApp HCI 1.10 includes security and stability improvements, and increases post
 === Post deployment scaling flexibility
 NetApp HCI 1.10 increases your flexibility to expand NetApp HCI compute resources by removing the requirement to meet the default deployment vmk and vmnic configuration settings on the compute nodes. Beginning with NetApp HCI 1.10, only general vmk configurations on the compute nodes are expected by NetApp HCI when you expand compute resources. link:task_nde_supported_net_changes.html[Learn more].
 
+== Storage node firmware updates
+NetApp HCI 1.10 includes firmware updates for storage nodes. link:rn_relatedrn.html#storage-firmware[Learn more].
+
+== Compute node firmware updates
+NetApp HCI 1.10 includes firmware updates for compute nodes. link:rn_relatedrn.html#compute-firmware[Learn more].
+
 === NetApp Element Plug-in for vCenter Server 4.9 availability
 The NetApp Element Plug-in for vCenter Server 4.9 is available outside of the management node 12.5 and NetApp HCI 1.10 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades] documentation.
 
