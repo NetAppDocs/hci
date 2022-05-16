@@ -15,7 +15,7 @@ keywords: netapp, hci, Rancher, install, installation, requirements
 [.lead]
 Before you install Rancher on NetApp HCI, ensure your environment and your NetApp HCI system meet these requirements.
 
-NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the deployment without removing it and redeploying. You will need to remove the Rancher on NetApp HCI instance and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[Remove a Rancher installation on NetApp HCI^] for more information.
+NOTE: If you accidentally deploy Rancher on NetApp HCI with incorrect information (such as an incorrect Rancher server FQDN), there is no way to correct the deployment without removing it and redeploying. You will need to remove the Rancher on NetApp HCI instance and then redeploy Rancher on NetApp HCI from NetApp Hybrid Cloud Control UI. See link:task_rancher_remove_deployment.html[Remove a Rancher installation on NetApp HCI] for more information.
 
 == Node requirements
 
