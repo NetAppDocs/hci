@@ -59,7 +59,8 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes]
 
 == Storage firmware
-* link:rn_storage_firmware_2.146.html[Storage Firmware Bundle 2.146 Release Notes] _NEW_
+* link:rn_storage_firmware_2.150.html[Storage Firmware Bundle 2.150 Release Notes] _NEW_
+* link:rn_storage_firmware_2.146.html[Storage Firmware Bundle 2.146 Release Notes]
 * link:rn_storage_firmware_2.99.2.html[Storage Firmware Bundle 2.99.2 Release Notes]
 * link:rn_storage_firmware_2.76.html[Storage Firmware Bundle 2.76 Release Notes]
 * link:rn_storage_firmware_2.27.html[Storage Firmware Bundle 2.27 Release Notes]
