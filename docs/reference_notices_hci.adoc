@@ -26,6 +26,8 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-
 * link:../media/mNode_12.3_notice.pdf[Notice for Management Node 12.3^]
 * link:../media/NetApp_HCI_1.9_notice.pdf[Notice for NetApp HCI 1.9P1^]
 * link:../media/NetApp_HCI_1.9_notice.pdf[Notice for NetApp HCI 1.9^]
+* link:../media/storage_firmware_bundle_2.150_notices.pdf[Notice for Storage Firmware Bundle 2.150^]
+* link:../media/compute_firmware_bundle_2.154.1_notices.pdf[Notice for Compute Firmware Bundle 2.154.1^]
 * link:../media/storage_firmware_bundle_2.146_notices.pdf[Notice for Storage Firmware Bundle 2.146^]
 * link:../media/compute_firmware_bundle_2.146_notices.pdf[Notice for Compute Firmware Bundle 2.146^]
 * link:../media/storage_firmware_bundle_2.99_notices.pdf[Notice for Storage Firmware Bundle 2.99.2^]
