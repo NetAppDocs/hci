@@ -18,17 +18,17 @@ By using the built-in REST API UI (`https://<ManagementNodeIP>/mnode`), you can 
 
 Tasks you can perform with REST APIs:
 
-=== Authorization
+== Authorization
 * link:task_mnode_api_get_authorizationtouse.html[Get authorization to use REST APIs]
 
-=== Asset configuration
+== Asset configuration
 * link:task_mnode_enable_activeIQ.html[Enable Active IQ and NetApp HCI monitoring]
 * link:task_mnode_configure_proxy_server.html[Configure a proxy server for the management node]
 * link:task_mnode_multi_vcenter_config.html[Configure NetApp Hybrid Cloud Control for multiple vCenters]
 * link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
 * link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
 
-=== Asset management
+== Asset management
 //* link:task_mnode_change_storage_cluster_admin_password.html[Change the storage cluster administrator password]
 * link:task_mnode_edit_vcenter_assets.html[View or edit existing controller assets]
 * link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]

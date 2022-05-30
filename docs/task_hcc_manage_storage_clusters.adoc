@@ -33,7 +33,7 @@ Starting with Element 12.2, you can use the link:concept_hci_storage_maintenance
 * <<Remove a storage cluster>>
 * <<Enable and disable maintenance mode>>
 
-=== Add a storage cluster
+== Add a storage cluster
 You can add a storage cluster to the  management node assets inventory using NetApp Hybrid Cloud Control. This allows you to manage and monitor the cluster using the HCC UI.
 
 .Steps
@@ -55,7 +55,7 @@ NOTE: After you add the storage cluster, the cluster inventory can take up to 2 
 
 . If you are adding Element eSDS clusters, enter or upload your SSH private key and SSH user account.
 
-=== Confirm storage cluster status
+== Confirm storage cluster status
 You can monitor the connection status of storage clusters assets using the NetApp Hybrid Cloud Control UI.
 
 .Steps
@@ -65,7 +65,7 @@ You can monitor the connection status of storage clusters assets using the NetAp
 . From the *Storage Clusters* pane, select *Storage Cluster Details* for additional detail.
 
 
-=== Edit storage cluster credentials
+== Edit storage cluster credentials
 You can edit the storage cluster's administrator user name and password using the NetApp Hybrid Cloud Control UI.
 
 .Steps
@@ -76,7 +76,7 @@ You can edit the storage cluster's administrator user name and password using th
 . Update the storage cluster user name and password.
 . Select *Save*.
 
-=== Remove a storage cluster
+== Remove a storage cluster
 Removing a storage cluster from NetApp Hybrid Cloud Control removes the cluster from the management node inventory. After you remove a storage cluster, the cluster can no longer be managed by HCC and you can access it only by navigating directly to its management IP address.
 
 IMPORTANT: You cannot remove the authoritative cluster from the inventory. To determine the authoritative cluster, go to *User Management > Users*. The authoritative cluster is listed next to the heading *Users*.
@@ -93,7 +93,7 @@ CAUTION: Clicking *Yes* next removes the cluster from the installation.
 
 [discrete]
 
-=== Enable and disable maintenance mode
+== Enable and disable maintenance mode
 This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature options give you the capability to <<enable_main_mode,enable>> and <<disable_main_mode,disable>> maintenance mode for a storage cluster node.
 
 .What you'll need
@@ -102,7 +102,7 @@ This link:concept_hci_storage_maintenance_mode.html[maintenance mode] feature op
 * *Management services*: You have updated your management services bundle to version 2.19 or later.
 * You have access to log in at the administrator level.
 
-==== [[enable_main_mode]]Enable maintenance mode
+=== [[enable_main_mode]]Enable maintenance mode
 You can use the following procedure to enable maintenance mode for a storage cluster node.
 
 NOTE: Only one node can be in maintenance mode at a time.
@@ -135,7 +135,7 @@ While *Maintenance Mode* is being enabled, maintenance mode actions are unavaila
 +
 After *Enabling Maintenance Mode* completes, the *Node Status* column displays a wrench icon and the text "*Maintenance Mode*" for the node that is in maintenance mode.
 
-==== [[disable_main_mode]]Disable maintenance mode
+=== [[disable_main_mode]]Disable maintenance mode
 After a node is successfully placed in maintenance mode, the *Disable Maintenance Mode* action is available for this node. Actions on the other nodes are unavailable until maintenance mode is disabled successfully on the node undergoing maintenance.
 
 .Steps
@@ -147,7 +147,7 @@ After *Disabling Maintenance Mode* completes, the *Node Status* column displays 
 +
 NOTE: When a node is in maintenance mode, it does not accept new data. As a result, it can take longer to disable maintenance mode because the node must sync its data back up before it can exit maintenance mode. The longer you spend in maintenance mode, the longer it can take to disable maintenance mode.
 
-==== Troubleshoot
+=== Troubleshoot
 If you encounter errors when you are either enabling or disabling maintenance mode, a banner error displays at the top of the nodes table. For more information on the error, you can select the *Show Details* link that is provided on the banner to show what the API returns are.
 
 == Find more information
