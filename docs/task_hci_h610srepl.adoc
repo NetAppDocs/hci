@@ -19,7 +19,7 @@ NOTE: See the link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage
 
 TIP: The terms "node" and "chassis" are used interchangeably in the case of H610S, which is a one rack unit (1U) chassis.
 
-=== Best practices for adding and removing drives
+== Best practices for adding and removing drives
 You should follow these best practices for adding drives to the cluster:
 
 * Add all the block drives and ensure that block syncing is complete before you add the slice drives.

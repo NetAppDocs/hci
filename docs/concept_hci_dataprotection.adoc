@@ -25,6 +25,7 @@ NetApp HCI data protection includes the following concepts:
 * <<Double Helix high availability>>
 
 == Remote replication types
+
 Remote replication of data can take the following forms:
 
 * <<Synchronous and asynchronous replication between clusters>>

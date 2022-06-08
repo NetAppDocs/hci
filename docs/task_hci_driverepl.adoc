@@ -18,7 +18,7 @@ If a drive is faulty or if the drive wear level falls below a threshold, you sho
 .About this task
 This procedure is for replacing drives in H410S and H610S storage nodes. Removing a drive takes the drive offline. Any data on the drive is removed and migrated to other drives in the cluster. The data migration to other active drives in the system can take a few minutes to an hour depending on capacity utilization and active I/O on the cluster.
 
-=== Best practices for handling drives
+== Best practices for handling drives
 You should follow these best practices for handling drives:
 
 * Keep the drive in the ESD bag until you are ready to install it.
@@ -29,7 +29,7 @@ You should follow these best practices for handling drives:
 * Always use approved packaging when shipping drives.
 * Do not stack drives on top of each other.
 
-=== Best practices for adding and removing drives
+== Best practices for adding and removing drives
 You should follow these best practices for adding drives to the cluster and removing drives from the cluster:
 
 * Add all the block drives and ensure that block syncing is complete before you add the slice drives.
