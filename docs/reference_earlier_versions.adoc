@@ -16,5 +16,6 @@ summary: Documentation for previous releases of NetApp HCI is available in case 
 [.lead]
 Documentation for previous releases of NetApp HCI is available in case you're not running the latest version.
 
+* http://docs.netapp.com/us-en/hci19/index.html[NetApp HCI 1.9 and 1.9P1^]
 * http://docs.netapp.com/us-en/hci18/docs/index.html[NetApp HCI 1.8P1^]
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI 1.8 and earlier^]

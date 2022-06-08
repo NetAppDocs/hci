@@ -56,6 +56,18 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
 * *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
+* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade compute node firmware:
++
+. Open the IP address of the management node in a web browser:
++
+----
+https://<ManagementNodeIP>
+----
+. Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
+. Select *Upgrade* near the top right of the interface.
+. The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
++
+NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .About this task
 
@@ -73,7 +85,7 @@ Choose the option that is relevant to your upgrade scenario:
 
 * <<Use NetApp Hybrid Cloud Control UI to upgrade a compute node>> (Recommended)
 * <<Use NetApp Hybrid Cloud Control API to upgrade a compute node>>
-* <<Use a USB drive imaged with the latest compute node firmware bundle ISO>>
+* <<Use a USB drive imaged with the latest compute firmware bundle>>
 * <<Use the Baseboard Management Controller (BMC) user interface (UI)>>
 
 == Use NetApp Hybrid Cloud Control UI to upgrade a compute node
@@ -82,21 +94,21 @@ Starting with management services 2.14, you can upgrade a compute node using the
 
 TIP: For a successful upgrade, ensure that the health check on the vSphere cluster is successful.
 
-TIP: For dark site upgrades, you can reduce upload time if the upgrade package and the management node are both local.
+TIP: For dark site upgrades, you can reduce upload time if the compute firmware bundle and the management node are both local.
 
 NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host.
 
-NOTE: Using the NetApp Hybrid Cloud Control UI to upgrade compute firmware on H300E/H500E/H700E compute nodes is no longer supported. To upgrade, it is recommended that you use a <<manual_method_USB,USB drive>> or the <<manual_method_BMC, BMC UI>> to mount the compute firmware ISO.
+NOTE: Using the NetApp Hybrid Cloud Control UI to upgrade compute firmware on H300E/H500E/H700E compute nodes is no longer supported. To upgrade, it is recommended that you use a <<manual_method_USB,USB drive>> or the <<manual_method_BMC, BMC UI>> to mount the compute firmware bundle.
 
 
 .What you'll need
-* If your management node is not connected to the internet, you have downloaded the compute node firmware package from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
+* If your management node is not connected to the internet, you have downloaded the compute firmware bundle from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
 +
-NOTE: You should extract the `TAR.GZ` file to a `TAR` file, and then extract the `TAR` file to the ISO.
+NOTE: You should extract the `TAR.GZ` file to a `TAR` file, and then extract the `TAR` file to the compute firmware bundle.
 
 .Steps
 
-. Open a web browser and browse to the IP address of the management node:
+. Open the IP address of the management node in a web browser:
 +
 ----
 https://<ManagementNodeIP>
@@ -116,7 +128,7 @@ a|
 . Select the cluster you are upgrading.
 +
 You will see the nodes in the cluster listed along with the current firmware versions and newer versions, if available for upgrade.
-. Select the upgrade package.
+. Select the compute firmware bundle.
 . Select *Begin Upgrade*.
 +
 After you select *Begin Upgrade*, the window shows failed health checks, if any.
@@ -127,14 +139,14 @@ CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated 
 
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
 
-CAUTION: While upgrading the firmware on H610C and H615S compute nodes, do not open the Serial-Over-LAN (SOL) console through the BMC web UI. This might cause the upgrade to fail.
+CAUTION: While upgrading the firmware on H610C and H615C compute nodes, do not open the Serial-Over-LAN (SOL) console through the BMC web UI. This might cause the upgrade to fail.
 
 The UI displays a message after the upgrade is complete. You can download logs after the upgrade is complete.
 
 |Your management node is within a dark site without external connectivity.
 a|
 . Select the cluster you are upgrading.
-. Select *Browse* to upload the upgrade package that you downloaded from the
+. Select *Browse* to upload the compute firmware bundle that you downloaded from the
 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 
@@ -177,7 +189,7 @@ Here are the different states that the UI shows before, during, and after the up
 
 You can use APIs to upgrade each compute node in a cluster to the latest firmware version. You can use an automation tool of your choice to run the APIs. The API workflow documented here uses the REST API UI available on the management node as an example.
 
-NOTE: Using the NetApp Hybrid Cloud Control UI to upgrade compute firmware on H300E/H500E/H700E compute nodes is no longer supported. To upgrade, it is recommended that you use a <<manual_method_USB,USB drive>> or the <<manual_method_BMC, BMC UI>> to mount the compute firmware ISO.
+NOTE: Using the NetApp Hybrid Cloud Control UI to upgrade compute firmware on H300E/H500E/H700E compute nodes is no longer supported. To upgrade, it is recommended that you use a <<manual_method_USB,USB drive>> or the <<manual_method_BMC, BMC UI>> to mount the compute firmware bundle.
 
 .What you'll need
 
@@ -209,19 +221,19 @@ https://<ManagementNodeIP>/package-repository/1/
 .. Select *Try it out*.
 .. Select *Execute*.
 .. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
-. Find the upgrade package ID:
+. Find the compute firmware bundle ID:
 .. From the REST API UI, select *GET /packages*.
 .. Select *Try it out*.
 .. Select *Execute*.
-.. From the response, copy and save the upgrade package name (`"packageName"`) and package version (`"packageVersion"`) for use in a later step.
+.. From the response, copy and save the compute firmware bundle name (`"packageName"`) and version (`"packageVersion"`) for use in a later step.
 
 |Your management node is within a dark site without external connectivity.
 a|
-. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page^] and download the latest compute node firmware image to a device that is accessible to the management node.
+. Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page^] and download the latest compute firmware bundle to a device that is accessible to the management node.
 +
-TIP: For dark site upgrades, you can reduce upload time if the upgrade package and the management node are both local.
+TIP: For dark site upgrades, you can reduce upload time if the compute firmware bundle and the management node are both local.
 
-. Upload the compute firmware upgrade package to the management node:
+. Upload the compute firmware bundle to the management node:
 .. Open the management node REST API UI on the management node:
 +
 ----
@@ -234,17 +246,17 @@ https://<ManagementNodeIP>/package-repository/1/
 ... Close the authorization window.
 .. From the REST API UI, select *POST /packages*.
 .. Select *Try it out*.
-.. Select *Browse* and select the upgrade package.
+.. Select *Browse* and select the compute firmware bundle.
 .. Select *Execute* to initiate the upload.
-.. From the response, copy and save the package ID (`"id"`) for use in a later step.
+.. From the response, copy and save the compute firmware bundle ID (`"id"`) for use in a later step.
 . Verify the status of the upload.
 .. From the REST API UI, select *GET​ /packages​/{id}​/status*.
 .. Select *Try it out*.
-.. Enter the package ID you copied in the previous step in *id*.
+.. Enter the compute firmware bundle ID you copied in the previous step in *id*.
 .. Select *Execute* to initiate the status request.
 +
 The response indicates `state` as `SUCCESS` when complete.
-.. From the response, copy and save the upgrade package name (`"name"`) and package version (`"version"`) for use in a later step.
+.. From the response, copy and save the compute firmware bundle name (`"name"`) and version (`"version"`) for use in a later step.
 |===
 . Locate the compute controller ID and node hardware ID for the node you intend to upgrade:
 .. Open the inventory service REST API UI on the management node:
@@ -312,7 +324,7 @@ https://<ManagementNodeIP>/hardware/2/
 .. Do the following with the payload values:
 ... Retain the values `"force": false` and `"maintenanceMode": true"` so that health checks are performed on the node and the ESXi host is set to maintenance mode.
 ... Enter the cluster controller ID (`"controllerId"` saved from a previous step).
-... Enter the package name and package version you saved from a previous step.
+... Enter the compute firmware bundle name and version that you saved from a previous step.
 +
 ----
 {
@@ -378,16 +390,17 @@ https://<ManagementNodeIP>/hardware/2/
 .. Verify in the response that firmware for all components has been successfully upgraded from the previous version to the latest firmware.
 
 [[manual_method_USB]]
-== Use a USB drive imaged with the latest compute node firmware bundle ISO
+== Use a USB drive imaged with the latest compute firmware bundle
 
-You can insert a USB drive with the latest compute node firmware ISO downloaded to a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the ISO on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure that your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
+You can insert a USB drive with the latest compute firmware bundle downloaded to a USB port on the compute node. As an alternative to using the USB thumb drive method described in this procedure, you can mount the compute firmware bundle on the compute node using the *Virtual CD/DVD* option in the Virtual Console in the Baseboard Management Controller (BMC) interface. The BMC method takes considerably longer than the USB thumb drive method. Ensure that your workstation or server has the necessary network bandwidth and that your browser session with the BMC does not time out.
+
+.What you'll need
+* If your management node is not connected to the internet, you have downloaded the compute firmware bundle from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp Support Site^].
++
+NOTE: You should extract the `TAR.GZ` file to a `TAR` file, and then extract the `TAR` file to the compute firmware bundle.
 
 .Steps
-
-. Browse to the https://mysupport.netapp.com/site/downloads[NetApp software downloads^] page, select *NetApp HCI*, and select the download link for correct version of NetApp HCI.
-. Accept the End User License Agreement.
-. Under the *Compute and Storage Nodes* section, download the compute node image.
-. Use the Etcher utility to flash the compute node firmware ISO to a USB drive.
+. Use the Etcher utility to flash the compute firmware bundle to a USB drive.
 . Place the compute node in maintenance mode using VMware vCenter, and evacuate all virtual machines from the host.
 +
 NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (this is the default in NetApp HCI installations), virtual machines will automatically be migrated to other nodes in the cluster.
@@ -405,7 +418,7 @@ After firmware flashing is complete and the node reboots, it might take a few mi
 [[manual_method_BMC]]
 == Use the Baseboard Management Controller (BMC) user interface (UI)
 
-You must perform the sequential steps to load the compute node firmware ISO and reboot the node to the ISO to ensure that the upgrade is successful. The ISO should be located on the system or virtual machine (VM) hosting the web browser. Ensure that you have downloaded the ISO before you start the process.
+You must perform the sequential steps to load the compute firmware bundle and reboot the node to the compute firmware bundle to ensure that the upgrade is successful. The compute firmware bundle should be located on the system or virtual machine (VM) hosting the web browser. Verify that you have downloaded the compute firmware bundle before you start the process.
 
 TIP: The recommendation is to have the system or VM and the node on the same network.
 
@@ -440,13 +453,13 @@ NOTE: You might have to install Java or update it.
 . When the console opens, select *Virtual Media > Virtual Storage*.
 . On the *Virtual Storage* screen, select *Logical Drive Type*, and select *ISO File*.
 +
-image:BIOS_H410C_iso.png[Shows the navigation path to select the ISO file.]
+image:BIOS_H410C_iso.png[Shows the navigation path to select the compute firmware bundle file.]
 
-. Select *Open Image* to browse to the folder where you downloaded the ISO file, and select the ISO file.
+. Select *Open Image* to browse to the folder where you downloaded the compute firmware bundle file, and select the compute firmware bundle file.
 . Select *Plug In*.
 . When the connection status shows `Device#: VM Plug-in OK!!`, select *OK*.
 . Reboot the node by pressing *F12* and selecting *Restart* or selecting *Power Control > Set Power Reset*.
-. During reboot, press *F11* to select the boot options and load the ISO. You might have to press F11 a few times before the boot menu is displayed.
+. During reboot, press *F11* to select the boot options and load the compute firmware bundle. You might have to press F11 a few times before the boot menu is displayed.
 +
 You will see the following screen:
 +
@@ -467,7 +480,7 @@ NOTE: The BIOS version will not show the upgraded version until the node has fin
 
 === Upgrade firmware on H610C/H615C nodes
 
-The steps vary depending on whether the node is standalone or part of a cluster. The procedure can take approximately 25 minutes and includes powering the node off, uploading the ISO, flashing the devices, and powering the node back on after the upgrade.
+The steps vary depending on whether the node is standalone or part of a cluster. The procedure can take approximately 25 minutes and includes powering the node off, uploading the compute firmware bundle, flashing the devices, and powering the node back on after the upgrade.
 
 .Steps
 
@@ -491,7 +504,7 @@ A popup indicating success is displayed, along with the path and device showing 
 +
 image::virtual_med_popup.gif[Popup window showing ISO upload success.]
 . Reboot the node by pressing *F12* and selecting *Restart* or selecting *Power Control > Set Power Reset*.
-. During reboot, press *F11* to select the boot options and load the ISO.
+. During reboot, press *F11* to select the boot options and load the compute firmware bundle.
 . Select *AMI Virtual CDROM* from the list displayed and select *Enter*. If you do not see AMI Virtual CDROM in the list, go into the BIOS and enable it in the boot list. The node will reboot after you save. During the reboot, press *F11*.
 +
 image::boot_device.gif[Shows the window where you can select the boot device.]
