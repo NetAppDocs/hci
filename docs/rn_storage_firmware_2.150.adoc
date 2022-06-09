@@ -19,7 +19,8 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
-The storage firmware bundle version 2.150 contains a critical bug fix. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+
+The storage firmware bundle version 2.150 contains a critical bug fix for H410S (PE-14168). See https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for further details. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
 This firmware package contains the following firmware versions for hardware components:
@@ -175,6 +176,7 @@ See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^]
 
 === Accessing the Bugs Online tool
 . Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select  *Element Software* from the drop-down list:
+
 +
 image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
 
