@@ -14,7 +14,7 @@ keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring
 :imagesdir: ../media/
 
 [.lead]
-You can enable Active IQ storage monitoring (for SolidFire all-flash storage and NetApp HCI) and NetApp HCI compute monitoring (for NetApp HCI only) if you did not already do so during installation or upgrade. You might need to use this procedure if you disabled telemetry using the NetApp HCI Deployment Engine or did not set up SolidFire Active IQ during installation for a SolidFire all-flash storage system.
+You can enable Active IQ storage monitoring for NetApp HCI and NetApp HCI compute monitoring if you did not already do so during installation or upgrade. You might need to use this procedure if you disabled telemetry using the NetApp HCI Deployment Engine.
 
 The Active IQ collector service forwards configuration data and Element software-based cluster performance metrics to NetApp Active IQ for historical reporting and near real-time performance monitoring. The NetApp HCI monitoring service enables forwarding of storage cluster faults to vCenter for alert notification.
 
