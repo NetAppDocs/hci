@@ -1,0 +1,298 @@
+---
+sidebar: sidebar
+permalink: docs/firmware_driver_versions.html
+keywords: documentation, earlier, previous, versions
+summary: Documentation for previous releases of NetApp HCI is available in case you're not running the latest version.
+---
+
+= Supported firmware and driver versions in NetApp HCI and NetApp Element software
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, earlier, documentation, versions
+
+[.lead]
+The firmware and driver versions outlined here apply to:
+
+* NetApp HCI compute bootstrap OS
+* NetApp HCI storage nodes running Element software
+* SolidFire cluster performance
+* NetApp Element software
+
+== Triton
+*ODM:* Quanta
+*Platform:* QS52B-1Ud
+*Model Number (Family portion):* H610S
+*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, H610S-2F
+
+.Component firmware managed via Storage Firmware Bundle
+
+[cols=23*,options="header"]
+|===
+| Release Vehicle | BIOS  | BMC | CPLD | 1/10 GbE NIC Quanta Intel | 10/25 GbE NIC Quanta Mellanox | Boot Device Inno disk | Cache NVDIMM NVDIMM module Smart (Gen1) | Cache NVDIMM Energy Source (BPM) Smart (Gen1) | Cache NVDIMM NVDIMM module Smart (Gen2) | Cache NVDIMM Energy Source (BPM) Smart (Gen2) | Cache NVDIMM NVDIMM module Micron (Gen1) | Cache NVDIMM Energy Source (PGEM) Agigatech (Gen1) | Cache NVDIMM NVDIMM module Micron (Gen2)  | Cache NVDIMM Energy Source (PGEM) Agigatech (Gen2) | Cache NVDIMM Energy Source (PGEM) Agigatech (Gen3) | Drive PM963, SED Samsung | Drive PM983, SED Samsung | Drive CD5, SED Kioxia | Drive PM963, N-SED Samsung | Drive PM983, N-SED Samsung | Drive CD5, N-SED Kioxia | Drive CD5, FIPS Kioxia
+| *Storage Firmware Bundle 2.99 via Element 12.3*
+| 3B06 |
+3.86.07 |
+122 |
+-|
+14.25.1020 |
+-|
+3.1 |
+-|
+3.1 |
+2.16 |
+26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| CXV8202Q
+| EDA5402Q
+| 0109
+| CXV8501Q
+| EDA5700Q
+| 0109
+| 0108
+| *Storage Firmware Bundle 2.76*
+| 3B06 |
+3.86.07 |
+122 |
+-|
+14.25.1020 |
+-|
+3.1 |
+-|
+-|
+-| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| CXV8202Q
+| EDA5402Q
+| 0109
+| CXV8501Q
+| EDA5700Q
+| 0109
+| 0108
+| *Storage Firmware Bundle 2.27*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Storage Firmware Bundle 2.21 via Element 12.2*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+| *Storage Firmware Bundle 2.xx via Element 12.0*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Element 11.8*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Element 11.7*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Element 11.5*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Element 11.3*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Element 11.1*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| *Element 11.0*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|===
+
+.Component firmware not managed via Storage Firmware Bundle
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| 1/10 GbE NIC | 3.2d
+0x80000b4b
+| Boot device | 3GM2-P
+|===
