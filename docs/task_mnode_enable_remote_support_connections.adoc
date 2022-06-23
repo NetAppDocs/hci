@@ -14,7 +14,7 @@ keywords: netapp, mnode, management node, connect to support, support tunnel, rs
 :imagesdir: ../media/
 
 [.lead]
-If you require technical support for your NetApp HCI or SolidFire all-flash storage system, NetApp Support can connect remotely with your system. To start a session and gain remote access, NetApp Support can open a reverse Secure Shell (SSH) connection to your environment.
+If you require technical support for your NetApp HCI system, NetApp Support can connect remotely with your system. To start a session and gain remote access, NetApp Support can open a reverse Secure Shell (SSH) connection to your environment.
 
 You can open a TCP port for an SSH reverse tunnel connection with NetApp Support. This connection enables NetApp Support to log in to your management node.
 

@@ -62,7 +62,7 @@ You can deploy a new OVA and run a redeploy script to pull configuration data fr
 * 24GB RAM
 * 400GB virtual disk, thin provisioned
 * One virtual network interface with internet access and access to the storage MVIP.
-* (Optional for SolidFire all-flash storage) One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
+* One virtual network interface with management network access to the storage cluster. If your storage cluster is on a separate subnet from your management node (eth0) and you want to use persistent volumes, add a second network interface controller (NIC) to the VM on the storage subnet (eth1) or ensure that the management network can route to the storage network.
 +
 IMPORTANT: Do not power on the virtual machine prior to the step indicating to do so later in this procedure.
 

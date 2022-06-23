@@ -18,8 +18,6 @@ You can configure settings to monitor alerts on your NetApp HCI system.
 
 NetApp HCI alert monitoring forwards NetApp HCI storage cluster system alerts to vCenter Server, enabling you to view all alerts for NetApp HCI from the vSphere Web Client interface.
 
-NOTE: These tools are not configured or used for storage-only clusters, such as SolidFire all-flash storage. Running the tools for these clusters results in the following 405 error, which is expected given the configuration: `webUIParseError : Invalid response from server. 405`
-
 . Open the per-node management node UI (`https://[IP address]:442`).
 . Click the *Alert Monitor* tab.
 . Configure the alert monitoring options.
