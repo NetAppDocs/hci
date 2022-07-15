@@ -21,273 +21,735 @@ The firmware and driver versions outlined here apply to:
 * SolidFire cluster performance
 * NetApp Element software
 
-== Triton
+.Storage Nodes
+* <<H610S (Triton)>>
+* <<Tatooine>>
+
+.Compute Nodes
+* Coruscant
+* Kamino
+* Tatooine plus
+* Tatooine
+
+
+
+.Dell Nodes
+nnnnn
+
+.Cisco Nodes
+kjkgjghgjjjggjgj
+
+== H610S (Triton)
 *ODM:* Quanta
 *Platform:* QS52B-1Ud
+//*Model Number (Family portion):* H610S
+//*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, H610S-2F
+
+.Vendor/Part number for all components
+
 *Model Number (Family portion):* H610S
-*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, H610S-2F
+*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, and H610S-2F
+
+[cols=3*,options="header"]
+|===
+| Component
+| Vendor
+| Part number
+| BIOS
+| Quanta
+| Motherboard
+| BMC
+| Quanta
+| Motherboard
+| CPLD
+| Quanta
+| Motherboard
+| 1/10 GbE NIC
+| Quanta/Intel
+| 3GS5BMA00D0
+| 10/25 GbE NIC
+| Mellanox
+| MCX4121A-ACAT
+.2+a| NVDIMM Module
+.2+a| Smart
+| STN722G4QNT26MP1SC (Gen 2)
+//NVDIMM Module #4
+| SH2047NJ420472SB3 (Gen 1)
+//NVDIMM Module #1
+.2+a| Energy Source (BPM)
+.2+a| Smart
+| STC48042QNTDE82BVG (Gen 2)
+//Energy Source #5
+| SSC48042SMTDE82B (Gen 1)
+//Energy Source #1
+.2+a| NVDIMM Module
+.2+a| Micron
+| 18ASF2G72PF12G9WP1AB (Gen 2)
+// NVDIMM Module #3
+| 18ASF2G72PF12G6V21AB (Gen 1)
+//NVDIMM Module #2
+.3+a| Energy Source (PGEM)
+.3+a| Micron/Agigatech
+| AGIGA9834-203JCA (Gen 3)
+// Energy Source #4
+| AGIGA9824-103JCB (Gen 2)
+//Energy Source #3
+| AGIGA9824-103JCA (Gen 1)
+//Energy Source #2
+| Boot Device
+| Innodisk
+| 3GM2-P
+.3+a| Drives
+.3+a| Samsung
+| PM9A3
+| PM983
+| PM963
+| Drives
+| Kioxia
+| CD5
+| Drives
+| Solidigm (SK Hynix)
+| PE8010
+|===
 
 .Component firmware managed via Storage Firmware Bundle
+During 11.x timeframe, Element Software was the only way to release firmware.  Starting with Element 12.0, the concept of a *Storage Firmware Bundle (SFB)* was introduced and firmware updates were now possible via an independently released SFB or SFB included as part of a 12.x Element release.
 
-[cols=23*,options="header"]
+Note that a *-* in table below indicates that particular hardware component was NOT supported in that given release vehicle.
+
+
+[cols=25*,options="header"]
 |===
-| Release Vehicle | BIOS  | BMC | CPLD | 1/10 GbE NIC Quanta Intel | 10/25 GbE NIC Quanta Mellanox | Boot Device Inno disk | Cache NVDIMM NVDIMM module Smart (Gen1) | Cache NVDIMM Energy Source (BPM) Smart (Gen1) | Cache NVDIMM NVDIMM module Smart (Gen2) | Cache NVDIMM Energy Source (BPM) Smart (Gen2) | Cache NVDIMM NVDIMM module Micron (Gen1) | Cache NVDIMM Energy Source (PGEM) Agigatech (Gen1) | Cache NVDIMM NVDIMM module Micron (Gen2)  | Cache NVDIMM Energy Source (PGEM) Agigatech (Gen2) | Cache NVDIMM Energy Source (PGEM) Agigatech (Gen3) | Drive PM963, SED Samsung | Drive PM983, SED Samsung | Drive CD5, SED Kioxia | Drive PM963, N-SED Samsung | Drive PM983, N-SED Samsung | Drive CD5, N-SED Kioxia | Drive CD5, FIPS Kioxia
-| *Storage Firmware Bundle 2.99 via Element 12.3*
-| 3B06 |
-3.86.07 |
-122 |
--|
-14.25.1020 |
--|
-3.1 |
--|
-3.1 |
-2.16 |
-26.2C
+| Release Vehicle
+| Release Date
+| BIOS
+| BMC
+| CPLD
+| 10/25 GbE NIC Quanta Mellanox
+| Cache NVDIMM NVDIMM module Smart (Gen1)
+| Cache NVDIMM Energy Source (BPM) Smart (Gen1)
+| Cache NVDIMM NVDIMM module Smart (Gen2)
+| Cache NVDIMM Energy Source (BPM) Smart (Gen2)
+| Cache NVDIMM NVDIMM module Micron (Gen1)
+| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen1)
+| Cache NVDIMM NVDIMM module Micron (Gen2)
+| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen2)
+| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen3)
+| Drive PM963 (SED)
+| Drive PM963 (N-SED)
+| Drive PM983 (SED)
+| Drive PM983 (N-SED)
+| Drive CD5 (SED)
+| Drive CD5 (N-SED)
+| Drive CD5 (FIPS)
+| PM9A3 (SED)
+| PE8010 (SED)
+| PE8010 (N-SED)
+| *SFB 2.150.4*
+| 06/08/2022
+| 3B11
+| 3.94.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
 | 1.30
 | 25.3C
 | 1.40
 | 1.10
+| 3.3
+| 2.16
 | CXV8202Q
-| EDA5402Q
-| 0109
 | CXV8501Q
-| EDA5700Q
+| EDA5602Q
+| EDA5900Q
+| 0109
 | 0109
 | 0108
-| *Storage Firmware Bundle 2.76*
-| 3B06 |
-3.86.07 |
-122 |
--|
-14.25.1020 |
--|
-3.1 |
--|
--|
--| 26.2C
+| GDC5502Q
+| 11092A10
+| 110B2A10
+| *SFB 2.150.4 via Element 12.5*
+| 06/08/2022
+| 3B11
+| 3.94.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.3
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5602Q
+| EDA5900Q
+| 0109
+| 0109
+| 0108
+| GDC5502Q
+| 11092A10
+| 110B2A10
+| *SFB 2.146.2*
+| 02/22/2022
+| 3B11
+| 3.94.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.3
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5602Q
+| EDA5900Q
+| 0109
+| 0109
+| 0108
+| GDC5502Q
+| 11092A10
+| 110B2A10
+| *SFB 2.99.4 via Element 12.3.2*
+| 09/16/2021
+| 3B06
+| 3.91.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.99.4 via Element 12.3.1.165*
+| 12/06/2021
+| 3B06
+| 3.91.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.99.2*
+| 12/06/2021
+| 3B06
+| 3.91.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.99.1 via Element 12.3.1.103*
+| 09/16/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.99 via Element 12.3*
+| 04/15/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.76.8*
+| 02/03/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
 | 1.30
 | 25.3C
 | 1.40
 | -
+| -
+| -
 | CXV8202Q
-| EDA5402Q
-| 0109
 | CXV8501Q
+| EDA5402Q
 | EDA5700Q
 | 0109
+| 0109
 | 0108
-| *Storage Firmware Bundle 2.27*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-| *Storage Firmware Bundle 2.21 via Element 12.2*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
-| *Storage Firmware Bundle 2.xx via Element 12.0*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+| -
+| -
+| -
+| *SFB 2.27.1*
+| 09/29/2020
+| 3B03
+| 3.84.07
+| 122
+| 14.02.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5302Q
+| EDA5600Q
+| 0108
+| 0108
+| 0108
+| -
+| -
+| -
+| *SFB 2.76.8 via Element 12.2.1*
+| 06/02/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.21 via Element 12.2*
+| 09/29/2020
+| 3B03
+| 3.84.07
+| 122
+| 14.22.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5302Q
+| EDA5600Q
+| 0108
+| 0108
+| 0108
+| -
+| -
+| -
+| *SFB 2.76.8 via Element 12.0.1*
+| 06/02/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+| *SFB 2.17 via Element 12.0*
+| 03/20/2020
+| 3B03
+| 3.78.07
+| 122
+| 14.22.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0108
+| -
+| -
+| -
 | *Element 11.8*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+| 03/11/2020
+| 3B03
+| 3.78.07
+| 122
+| 14.22.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0107
+| -
+| -
+| -
 | *Element 11.7*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+| 11/21/2019
+| 3A10
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0107
+| -
+| -
+| -
+| *Element 11.5.1*
+| 02/20/2020
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0107
+| -
+| -
+| -
 | *Element 11.5*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-| *Element 11.3*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+| 09/26/2019
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| 0107
+| -
+| -
+| -
+| *Element 11.3.2*
+| 02/19/2020
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| -
+| -
+| -
+| -
+| *Element 11.3.1*
+| 08/19/2019
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| -
+| -
+| -
+| -
+| *Element 11.1.1*
+| 02/19/2020
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| -
+| -
+| -
+| -
 | *Element 11.1*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-| *Element 11.0*
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+| 04/25/2019
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| -
+| -
+| -
+| -
+| *Element 11.0.2*
+| 02/19/2020
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| -
+| -
+| -
+| -
+| *Element 11*
+| 11/29/2018
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| -
+| -
+| -
+| -
 |===
 
 .Component firmware not managed via Storage Firmware Bundle
+
+The following firmware is not managed via a Storage Firmware Bundle:
 
 [cols=2*,options="header"]
 |===
@@ -296,3 +758,7 @@ The firmware and driver versions outlined here apply to:
 0x80000b4b
 | Boot device | 3GM2-P
 |===
+
+== Tatooine
+*ODM:*
+*Platform:*
