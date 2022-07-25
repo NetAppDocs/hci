@@ -29,8 +29,6 @@ IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for Elem
 +
 IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in^].
 
-
-
 .What you'll need
 
 * *Admin privileges*: You have vCenter Administrator role privileges to install a plug-in.
@@ -79,8 +77,12 @@ NOTE: This action creates a new database and completes the installation in the v
 +
 image::vcp_shortcuts_page_accessing_plugin.png[depicts the plug-in extension points after a successful upgrade or install]
 +
-NOTE: If the vCenter Plug-in icons are not visible, see link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[Element Plug-in for vCenter Server^] documentation about troubleshooting the plug-in.
-After upgrading to NetApp Element Plug-in for vCenter Server 4.8 or later with VMware vCenter Server 6.7U1, if the storage clusters are not listed or a server error appears in the *Clusters* and *QoSSIOC Settings* sections of the NetApp Element Configuration, see link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1[Element Plug-in for vCenter Server^] documentation about troubleshooting these errors.
+[NOTE]
+====
+If the vCenter Plug-in icons are not visible, see link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[Element Plug-in for vCenter Server^] documentation about troubleshooting the plug-in.
+
+After upgrading to NetApp Element Plug-in for vCenter Server 4.8 or later with VMware vCenter Server 6.7U1, if the storage clusters are not listed or a server error appears in the *Clusters* and *QoSSIOC Settings* sections of the NetApp Element Configuration, see link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#error_vcp48_67u1[Element Plug-in for vCenter Server^] documentation about troubleshooting these errors.
+====
 
 . Verify the version change in the *About* tab in the *NetApp Element Configuration* extension point of the plug-in.
 +
