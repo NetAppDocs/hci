@@ -6,7 +6,6 @@ keywords: netapp, hci, on premise, cluster, management services
 ---
 
 = Update management services
-
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -84,6 +83,8 @@ NOTE: If your installation cannot access the internet, only the current software
 . If your installation cannot access the internet, do the following:
 .. Follow the instructions on the page to download and save a management services upgrade package to your computer.
 .. Select *Browse* to locate the package you saved and upload it.
++
+After you upload the package, the upgrade starts automatically.
 
 After the upgrade begins, you can see the upgrade status on this page. During the upgrade, you might lose connection with NetApp Hybrid Cloud Control and have to log back in to see the results of the upgrade.
 
