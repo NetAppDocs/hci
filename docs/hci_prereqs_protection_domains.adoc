@@ -14,7 +14,7 @@ keywords: netapp, hci, element, storage, protection domains
 :keywords: netapp, hci, element, storage, protection domains
 
 [.lead]
-NetApp Element software supports https://docs.netapp.com/us-en/hci/docs/concept_hci_dataprotection.html#protection-domains[protection domains^] functionality, which optimizes data layout on storage nodes for the best data availability. To use this feature, you should split storage capacity evenly across three or more NetApp H-series chassis for optimal storage reliability. In this scenario, the storage cluster automatically enables protection domains.
+NetApp Element software supports link:concept_hci_dataprotection.html#protection-domains[protection domains] functionality, which optimizes data layout on storage nodes for the best data availability. To use this feature, you should split storage capacity evenly across three or more NetApp H-series chassis for optimal storage reliability. In this scenario, the storage cluster automatically enables protection domains.
 
 [discrete]
 == Find more information

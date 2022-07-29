@@ -6,7 +6,6 @@ keywords: netapp, element, management node ui, mnode ui, system utilities
 ---
 
 = Run system utilities from the management node
-
 :hardbreaks:
 :nofooter:
 :icons: font

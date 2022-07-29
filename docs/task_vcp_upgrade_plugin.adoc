@@ -6,7 +6,6 @@ keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9
 ---
 
 = Upgrade the Element Plug-in for vCenter Server
-
 :hardbreaks:
 :nofooter:
 :icons: font

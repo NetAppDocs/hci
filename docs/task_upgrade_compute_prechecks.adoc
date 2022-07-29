@@ -6,7 +6,6 @@ keywords: netapp, compute prechecks, compute node upgrade, netapp hci
 ---
 
 = Run compute node health checks prior to upgrading compute firmware
-
 :hardbreaks:
 :nofooter:
 :icons: font

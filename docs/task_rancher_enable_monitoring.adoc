@@ -15,11 +15,11 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes, telemetry, monitori
 [.lead]
 After you deploy Rancher on NetApp HCI, You can enable Active IQ storage monitoring (for SolidFire all-flash storage and NetApp HCI) and NetApp HCI compute monitoring (for NetApp HCI only) if you did not already do so during installation or upgrade.
 
-For instructions on how to enable monitoring, see link:task_mnode_enable_activeIQ.html[Enable Active IQ and NetApp HCI monitoring^].
+For instructions on how to enable monitoring, see link:task_mnode_enable_activeIQ.html[Enable Active IQ and NetApp HCI monitoring].
 
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

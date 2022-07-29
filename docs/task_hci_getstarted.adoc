@@ -47,7 +47,7 @@ This setup uses two network cables on the compute nodes for connectivity to all 
 Read these resources:
 
 * Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
-* For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
+* For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^].
 * For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
 * For details about configuring Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes, see link:hci_prereqs_LACP_configuration.html[Configure LCAP for optimal storage performance].
 

@@ -35,7 +35,7 @@ If a newly added node accounts for more than 50 percent of the total cluster cap
 == Two-node storage clusters
 Starting with NetApp HCI 1.8, you can set up a storage cluster with two storage nodes.
 
-* You can use certain types of nodes to form the two-node storage cluster. See https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes].
+* You can use certain types of nodes to form the two-node storage cluster. See https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021[NetApp HCI 1.8 Release Notes^].
 +
 NOTE: In a two-node cluster, the storage nodes are limited to nodes with 480GB and 960GB drives and the nodes must be the same model type.
 
@@ -67,6 +67,6 @@ When you expand a three-node storage cluster to a four-node cluster, capacity an
 You can expand to up to 64 compute nodes and 40 storage nodes.
 
 == Find more information
-* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823]
+* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

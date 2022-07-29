@@ -20,16 +20,16 @@ After deploying Rancher on NetApp HCI, you can set up user clusters and add appl
 After deployment, Dev and Ops teams can then deploy their Kubernetes user clusters, similar to any Rancher deployment, on which they can deploy apps.
 
 . Access the Rancher UI using that URL provided to you at the end of the Rancher deployment.
-. Create user clusters. See Rancher documentation about https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/workload/[deploying workloads].
-. Provision user clusters in Rancher on NetApp HCI. See Rancher documentation about https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/[setting up Kubernetes clusters in Rancher].
+. Create user clusters. See Rancher documentation about https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/workload/[deploying workloads^].
+. Provision user clusters in Rancher on NetApp HCI. See Rancher documentation about https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/[setting up Kubernetes clusters in Rancher^].
 
 == Deploy applications on user clusters
 Similar to any Rancher deployment, you add applications on Kubernetes clusters.
 
-See Rancher documentation about https://rancher.com/docs/rancher/v2.x/en/deploy-across-clusters/[deploying applications across clusters].
+See Rancher documentation about https://rancher.com/docs/rancher/v2.x/en/deploy-across-clusters/[deploying applications across clusters^].
 
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

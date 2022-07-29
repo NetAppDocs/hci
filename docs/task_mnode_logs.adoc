@@ -6,7 +6,6 @@ keywords: netapp, element, management node, management services, mnode, logs
 ---
 
 = Getting logs from management services
-
 :hardbreaks:
 :nofooter:
 :icons: font

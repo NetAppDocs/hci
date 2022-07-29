@@ -6,7 +6,6 @@ keywords: netapp, mnode api, management node api, rest api
 ---
 
 = Management node REST API UI overview
-
 :hardbreaks:
 :nofooter:
 :icons: font

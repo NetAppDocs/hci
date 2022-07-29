@@ -17,7 +17,7 @@ NetApp HCI is available in a range of configuration options for both compute and
 
 * NetApp HCI supports various H-series storage node models, such as, H300S, H500S, H700S, H410S, and H610S.
 +
-See https://www.netapp.com/us/products/converged-systems/hyper-converged-infrastructure.aspx#modelsAndSpecs[NetApp HCI models and specifications]
+See https://www.netapp.com/us/products/converged-systems/hyper-converged-infrastructure.aspx#modelsAndSpecs[NetApp HCI models and specifications^]
 * The storage layer in NetApp HCI is provided by NetApp Element software and the management layer is provided by the NetApp Element Plug-in for vCenter Server.
 +
 * A storage node is a server containing a collection of drives that communicate with each other through the Bond10G network interface.
