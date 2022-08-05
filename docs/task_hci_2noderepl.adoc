@@ -45,7 +45,7 @@ NOTE: Do not remove the node from the cluster at this point.
 .. Configure the new node with the new management IP and storage IP addresses, and the Cluster Name.
 . After the node is added to the cluster, add the drives.
 . After the sync is finished, remove the failed drives and the failed node from the cluster.
-. Use NetApp Hybrid Cloud Control to configure the new storage node that you added. See link:https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_storage.html[Expand NetApp HCI storage resources^].
+. Use NetApp Hybrid Cloud Control to configure the new storage node that you added. See link:task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
