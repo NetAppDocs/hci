@@ -74,7 +74,7 @@ NOTE: During the NDE process, all nodes will then be assigned permanent IP addre
 
 To ensure network readiness for NetApp HCI, install the NetApp Active IQ Config Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
 
-For details, see link:hci_prereqs_task_validate_config_advisor.html[Validate your environment with Active IQ Config Advisor]
+For details, see link:hci_prereqs_task_validate_config_advisor.html[Validate your environment with Active IQ Config Advisor].
 
 == Work with your NetApp team
 Your NetApp team uses the NetApp Active IQ Config Advisor report and the _Discovery Workbook_ to validate that your network environment is ready.
