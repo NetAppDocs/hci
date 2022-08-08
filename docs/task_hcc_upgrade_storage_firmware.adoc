@@ -24,7 +24,7 @@ Starting with Element 12.0 and management services version 2.14, you can perform
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
 * *Management services*: You have updated your management services bundle to the latest version.
 
-IMPORTANT: For H610S storage nodes running Element software version 12.0, you should apply D-patch SUST-909 before you upgrade to storage firmware bundle 2.27. Contact NetApp Support to obtain the D-patch before you upgrade. See link:http://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html[Storage Firmware Bundle 2.27 Release Notes^].
+IMPORTANT: For H610S storage nodes running Element software version 12.0, you should apply D-patch SUST-909 before you upgrade to storage firmware bundle 2.27. Contact NetApp Support to obtain the D-patch before you upgrade. See link:rn_storage_firmware_2.27.html[Storage Firmware Bundle 2.27 Release Notes].
 
 IMPORTANT: You must upgrade to the latest management services bundle before upgrading the firmware on your storage nodes.  If you are updating your Element software to version 12.2 or later, you need management services 2.14.60 or later to proceed.
 
