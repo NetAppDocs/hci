@@ -17,7 +17,7 @@ Learn basic concepts related to Rancher on NetApp HCI.
 
 * *Rancher server* or *Control plane*: The Rancher control plane, sometimes called the _Rancher Server_, provisions, manages, and monitors Kubernetes clusters used by Development and Operations teams.
 
-* *Catalogs*: Catalogs are GitHub repositories or Helm Chart repositories filled with applications that are ready-made for deployment. Rancher provides the ability to use a catalog of Helm charts that make it easy to deploy applications repeatedly. Rancher includes two types of catalogs: built-in global catalogs and custom catalogs. Trident is deployed as a catalog.  See https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/[Rancher documentation about catalogs].
+* *Catalogs*: Catalogs are GitHub repositories or Helm Chart repositories filled with applications that are ready-made for deployment. Rancher provides the ability to use a catalog of Helm charts that make it easy to deploy applications repeatedly. Rancher includes two types of catalogs: built-in global catalogs and custom catalogs. Trident is deployed as a catalog. See https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/[Rancher documentation about catalogs^].
 
 * *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 
@@ -26,7 +26,7 @@ Learn basic concepts related to Rancher on NetApp HCI.
 * *Rancher node template*: Hybrid Cloud Control uses a Rancher node template to make deployment simpler.
 
 +
-See  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/[Rancher documentation about node templates].
+See  https://rancher.com/docs/rancher/v2.x/en/user-settings/node-templates/[Rancher documentation about node templates^].
 
 == Trident software and persistent storage concepts
 Trident, itself a Kubernetes-native application, runs directly within a Kubernetes cluster. With Trident, Kubernetes users (such as developers, data scientists, and Kubernetes administrators) can create, manage, and interact with persistent storage volumes in the standard Kubernetes format that they are already familiar with. With Trident, NetApp solutions can meet persistent volume claims that are made by Kubernetes clusters.
@@ -39,10 +39,10 @@ A Trident catalog is available to Rancher on NetApp HCI and runs in the user clu
 
 See link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
 
-For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
+For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation^].
 
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

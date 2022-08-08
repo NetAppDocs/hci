@@ -23,5 +23,5 @@ L4 load balancing is a technique where a virtual machine or container hosting an
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

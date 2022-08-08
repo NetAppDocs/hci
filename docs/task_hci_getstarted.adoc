@@ -47,7 +47,7 @@ This setup uses two network cables on the compute nodes for connectivity to all 
 Read these resources:
 
 * Use the _NetApp HCI Installation Discovery Workbook_ to configure your network before the installation.
-* For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_].
+* For details and other supported configurations, see https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^] and the https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[_NetApp HCI Installation and Setup Instructions_^].
 * For information about NetApp HCI configurations smaller than four storage nodes, see https://www.netapp.com/us/media/tr-4823.pdf[_TR-4823: NetApp HCI 2-Node Storage Cluster_^].
 * For details about configuring Link Aggregation Control Protocol (LACP) on the switch ports used for each of the storage nodes, see link:hci_prereqs_LACP_configuration.html[Configure LCAP for optimal storage performance].
 
@@ -74,7 +74,7 @@ NOTE: During the NDE process, all nodes will then be assigned permanent IP addre
 
 To ensure network readiness for NetApp HCI, install the NetApp Active IQ Config Advisor 5.8.1 or later. This network validation tool is located with other link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp Support Tools^]. Use this tool to validate connectivity, VLAN IDs, IP address requirements, switch connectivity and more.
 
-For details, see link:hci_prereqs_task_validate_config_advisor.html[Validate your environment with Active IQ Config Advisor]
+For details, see link:hci_prereqs_task_validate_config_advisor.html[Validate your environment with Active IQ Config Advisor].
 
 == Work with your NetApp team
 Your NetApp team uses the NetApp Active IQ Config Advisor report and the _Discovery Workbook_ to validate that your network environment is ready.

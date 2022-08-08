@@ -6,7 +6,6 @@ keywords: netapp, mnode, management node, rest api, hci
 ---
 
 = View or edit existing controller assets
-
 :hardbreaks:
 :nofooter:
 :icons: font

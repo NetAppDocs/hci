@@ -221,7 +221,7 @@ The cluster membership changes from Available to Pending.
 +
 NOTE: It might take up to 2 minutes for the node to be added to the cluster and displayed under Nodes > Active.
 +
-IMPORTANT: Adding the drives all at once can lead to disruptions. For best practices related to adding and removing drives, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_best_practice_on_adding_or_removing_drives_from_a_cluster_on_Element%3F[this KB article] (login required).
+IMPORTANT: Adding the drives all at once can lead to disruptions. For best practices related to adding and removing drives, see https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_best_practice_on_adding_or_removing_drives_from_a_cluster_on_Element%3F[this KB article^] (login required).
 . Select *Drives*.
 . Select *Available* from the drop-down list to view the available drives.
 . Select the drives you want to add, and select *Add*.

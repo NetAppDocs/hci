@@ -6,7 +6,6 @@ keywords: netapp, mnode, management node, connect to support, support tunnel, rs
 ---
 
 = Start a remote NetApp Support session
-
 :hardbreaks:
 :nofooter:
 :icons: font

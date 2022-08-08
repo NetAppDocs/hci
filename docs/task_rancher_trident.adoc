@@ -21,13 +21,13 @@ TIP: For more information about Trident, see the https://netapp-trident.readthed
 
 * You have installed Rancher on NetApp HCI.
 * You have deployed your user clusters.
-* You have configured your user cluster networks for Trident. See link:task_trident_configure_networking.html[Enable Trident support for user clusters^] for instructions.
-* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation].
+* You have configured your user cluster networks for Trident. See link:task_trident_configure_networking.html[Enable Trident support for user clusters] for instructions.
+* You have completed the necessary prerequisite steps for work node preparation for Trident. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation^].
 
 .About this task
 
 The Trident installer catalog is installed as part of the Rancher installation using NetApp Hybrid Cloud Control. In this task, you use the installer catalog to install and configure Trident.
-As part of the Rancher installation, NetApp provides a node template. If you are not planning to use the node template that NetApp provides, and you want to provision on RHEL or CentOS, there might be additional requirements. If you change your worker node to RHEL or CentOS, there are several prerequisites that should be met. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation].
+As part of the Rancher installation, NetApp provides a node template. If you are not planning to use the node template that NetApp provides, and you want to provision on RHEL or CentOS, there might be additional requirements. If you change your worker node to RHEL or CentOS, there are several prerequisites that should be met. See the https://netapp-trident.readthedocs.io/en/stable-v20.10/kubernetes/operations/tasks/worker.html[Trident documentation^].
 
 .Steps
 
@@ -43,7 +43,7 @@ image::rancher-install-trident.jpg[Shows the navigation to launch the Trident in
 +
 image::rancher-trident.jpg[The Trident installer on the Catalog page in Rancher.]
 +
-NOTE: On the page that opens, you can select the *Detailed Descriptions* arrow to learn more about the Trident app and also to find the link to the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation].
+NOTE: On the page that opens, you can select the *Detailed Descriptions* arrow to learn more about the Trident app and also to find the link to the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation^].
 
 . Select the *Configurations Options* arrow, and enter the credentials and storage configuration information.
 +
@@ -67,6 +67,6 @@ NOTE: The three storage classes are *solidfire-gold*, *solidfire-silver*, and *s
 == Find more information
 * link:task_trident_configure_networking.html[Enable Trident support for user clusters]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
