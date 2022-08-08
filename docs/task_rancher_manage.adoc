@@ -32,5 +32,5 @@ The Rancher Server Clusters page displays a list of Rancher server clusters that
 == Find more information
 * link:task_rancher_remove_deployment.html[Remove Rancher]
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

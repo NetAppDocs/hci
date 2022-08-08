@@ -6,7 +6,6 @@ keywords: netapp, hci, mnode, api, management node, add proxy, proxy server
 ---
 
 = Configure a proxy server
-
 :hardbreaks:
 :nofooter:
 :icons: font

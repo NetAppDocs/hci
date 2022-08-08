@@ -15,7 +15,7 @@ keywords: netapp, hci, deployment, review, deploy, boot, drive, wear
 [.lead]
 When you use flash memory or NVDIMM boot media with a NetApp HCI compute node, keeping the system logs on that media results in frequent writes to that media. This can eventually degrade the flash memory. Use the instructions in the following KB article to move host logging and the core dump file to a shared storage location, which can help prevent degradation of the boot media over time and help prevent full boot disk errors.
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_reduce_wear_on_the_boot_drive_of_a_Netapp_HCI_compute_node[How to reduce wear on the boot drive of a NetApp HCI compute node]
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_reduce_wear_on_the_boot_drive_of_a_Netapp_HCI_compute_node[How to reduce wear on the boot drive of a NetApp HCI compute node^]
 
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

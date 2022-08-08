@@ -32,7 +32,7 @@ Alarms in the VMware vSphere Web Client alert you when a host fails. You must ma
 
 .Steps
 
-. Physically remove the faulty node from the rack. The steps depend on the type of storage node you have. See link:task_hci_h410srepl.html[Replace H410S nodes^] and link:task_hci_h610srepl.html[Replace H610S nodes^].
+. Physically remove the faulty node from the rack. The steps depend on the type of storage node you have. See link:task_hci_h410srepl.html[Replace H410S nodes] and link:task_hci_h610srepl.html[Replace H610S nodes].
 +
 NOTE: Do not remove the node from the cluster at this point.
 
@@ -45,7 +45,7 @@ NOTE: Do not remove the node from the cluster at this point.
 .. Configure the new node with the new management IP and storage IP addresses, and the Cluster Name.
 . After the node is added to the cluster, add the drives.
 . After the sync is finished, remove the failed drives and the failed node from the cluster.
-. Use NetApp Hybrid Cloud Control to configure the new storage node that you added. See link:https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
+. Use NetApp Hybrid Cloud Control to configure the new storage node that you added. See link:task_hcc_expand_storage.html[Expand NetApp HCI storage resources].
 
 == Find more information
 * http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

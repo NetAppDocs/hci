@@ -103,14 +103,14 @@ The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible 
 * *ESXi 6.7*: Version 4.17.15.16
 * *ESXi 6.5*: Version 4.16.13.5
 
-NOTE: Before upgrading to version 2.76.10, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.99 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers^] for instructions on updating your compute node drivers, which include the ESXi driver.
+NOTE: Before upgrading to version 2.76.10, make sure you check the current ESXi driver version. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.99 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers] for instructions on updating your compute node drivers, which include the ESXi driver.
 
 While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
 
 == Download Compute Firmware Bundle 2.76.10
 To download the Compute Firmware Bundle, go to the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[NetApp HCI Compute Firmware Bundle^] page.
 
-Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware^] for instructions on updating your compute node firmware.
+Visit link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui[Update compute node firmware] for instructions on updating your compute node firmware.
 
 == Resolved security vulnerabilities
 The following are security vulnerabilities that have been resolved in this release:
