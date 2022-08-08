@@ -17,7 +17,7 @@ Learn basic concepts related to Rancher on NetApp HCI.
 
 * *Rancher server* or *Control plane*: The Rancher control plane, sometimes called the _Rancher Server_, provisions, manages, and monitors Kubernetes clusters used by Development and Operations teams.
 
-* *Catalogs*: Catalogs are GitHub repositories or Helm Chart repositories filled with applications that are ready-made for deployment. Rancher provides the ability to use a catalog of Helm charts that make it easy to deploy applications repeatedly. Rancher includes two types of catalogs: built-in global catalogs and custom catalogs. Trident is deployed as a catalog.  See https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/[Rancher documentation about catalogs^].
+* *Catalogs*: Catalogs are GitHub repositories or Helm Chart repositories filled with applications that are ready-made for deployment. Rancher provides the ability to use a catalog of Helm charts that make it easy to deploy applications repeatedly. Rancher includes two types of catalogs: built-in global catalogs and custom catalogs. Trident is deployed as a catalog. See https://rancher.com/docs/rancher/v2.x/en/helm-charts/legacy-catalogs/[Rancher documentation about catalogs^].
 
 * *Management cluster*: Rancher on NetApp HCI deploys three virtual machines on the Rancher management cluster, which you can see using Rancher, Hybrid Cloud Control, and the vCenter Plug-in. The management cluster virtual machines host the Rancher server, the Rancher Kubernetes Engine (RKE), and the Linux OS.
 

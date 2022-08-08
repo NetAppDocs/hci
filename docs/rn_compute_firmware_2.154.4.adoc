@@ -92,7 +92,7 @@ The updated Mellanox firmware version 14.29.1016 requires a minimum version of V
 * *ESXi 6.7*: Version 4.17.71.1
 * *ESXi 6.5*: Version 4.16.71.1
 
-NOTE: Before upgrading to version 2.154.4, make sure you check the current ESXi driver version.  If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.154.4 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers] for instructions on updating your compute node drivers, which include the ESXi driver.
+NOTE: Before upgrading to version 2.154.4, make sure you check the current ESXi driver version. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.154.4 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers] for instructions on updating your compute node drivers, which include the ESXi driver.
 
 When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.
 
