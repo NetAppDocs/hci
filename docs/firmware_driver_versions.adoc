@@ -21,15 +21,15 @@ The firmware and driver versions apply to:
 * SolidFire cluster performance
 * NetApp Element software
 
-link:docs/fw_storage_nodes.html[*Storage Nodes*]
-* *H610S*
-* *H410S*
+link:fw_storage_nodes.html[Storage Nodes]
+* H610S
+* H410S
 
-link:docs/fw_compute_nodes.html[*Compute Nodes*]
-* *H615C*
-* *H610C*
-* *H410C*
-* *H300E/H500E/H700E*
+link:fw_compute_nodes.html[Compute Nodes]
+* H615C
+* H610C
+* H410C
+* H300E/H500E/H700E
 
 //== Dell Nodes
 //* Info here
