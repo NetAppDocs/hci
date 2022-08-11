@@ -36,6 +36,9 @@ NetApp HCI 1.10 includes firmware updates for compute nodes. link:rn_relatedrn.h
 === NetApp Element Plug-in for vCenter Server 4.9 availability
 The NetApp Element Plug-in for vCenter Server 4.9 is available outside of the management node 12.5 and NetApp HCI 1.10 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades] documentation.
 
+=== Supported versions of VMware vSphere updates
+With NetApp HCI 1.10, VMware vSphere 7.0 is supported for deployment and expansion.
+
 === NetApp Hybrid Cloud Control enhancements
 NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Learn more^].
 
