@@ -104,31 +104,31 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 
 [cols=25*,options="header"]
 |===
-| Release Vehicle
-| Release Date
-| BIOS
-| BMC
-| CPLD
-| 10/25 GbE NIC Quanta Mellanox
-| Cache NVDIMM NVDIMM module Smart (Gen1)
-| Cache NVDIMM Energy Source (BPM) Smart (Gen1)
-| Cache NVDIMM NVDIMM module Smart (Gen2)
-| Cache NVDIMM Energy Source (BPM) Smart (Gen2)
-| Cache NVDIMM NVDIMM module Micron (Gen1)
-| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen1)
-| Cache NVDIMM NVDIMM module Micron (Gen2)
-| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen2)
-| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen3)
-| Drive Samsung PM963 (SED)
-| Drive Samsung PM963 (N-SED)
-| Drive Samsung PM983 (SED)
-| Drive Samsung PM983 (N-SED)
-| Drive Kioxia CD5 (SED)
-| Drive Kioxia CD5 (N-SED)
-| Drive CD5 (FIPS)
-| Drive Samsung PM9A3 (SED)
-| Drive SK Hynix PE8010 (SED)
-| Drive SK Hynix PE8010 (N-SED)
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| CPLD
+h| 10/25 GbE NIC Quanta Mellanox
+h| Cache NVDIMM NVDIMM module Smart (Gen1)
+h| Cache NVDIMM Energy Source (BPM) Smart (Gen1)
+h| Cache NVDIMM NVDIMM module Smart (Gen2)
+h| Cache NVDIMM Energy Source (BPM) Smart (Gen2)
+h| Cache NVDIMM NVDIMM module Micron (Gen1)
+h| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen1)
+h| Cache NVDIMM NVDIMM module Micron (Gen2)
+h| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen2)
+h| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen3)
+h| Drive Samsung PM963 (SED)
+h| Drive Samsung PM963 (N-SED)
+h| Drive Samsung PM983 (SED)
+h| Drive Samsung PM983 (N-SED)
+h| Drive Kioxia CD5 (SED)
+h| Drive Kioxia CD5 (N-SED)
+h| Drive CD5 (FIPS)
+h| Drive Samsung PM9A3 (SED)
+h| Drive SK Hynix PE8010 (SED)
+h| Drive SK Hynix PE8010 (N-SED)
 h| *SFB 2.150.4*
 | 06/08/2022
 | 3B11
@@ -809,18 +809,18 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 
 [cols=12*,options="header"]
 |===
-| Release Vehicle
-| Release Date
-| BIOS
-| BMC
-| 10/25 GbE NIC SMCI Mellanox
-| Cache NVDIMM RMS200
-| Cache NVDIMM RMS300
-| Drive Samsung PM863 (SED)
-| Drive Samsung PM863 (N-SED)
-| Drive Toshiba Hawk-4 (SED)
-| Drive Toshiba Hawk-4 (N-SED)
-| Drive Samsung PM883 (SED)
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| 10/25 GbE NIC SMCI Mellanox
+h| Cache NVDIMM RMS200
+h| Cache NVDIMM RMS300
+h| Drive Samsung PM863 (SED)
+h| Drive Samsung PM863 (N-SED)
+h| Drive Toshiba Hawk-4 (SED)
+h| Drive Toshiba Hawk-4 (N-SED)
+h| Drive Samsung PM883 (SED)
 h| *SFB 1.2.17 via Element 12.0*
 | 03/20/2020
 | NA2.1
