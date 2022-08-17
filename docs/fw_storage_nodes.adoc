@@ -129,7 +129,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | Drive Samsung PM9A3 (SED)
 | Drive SK Hynix PE8010 (SED)
 | Drive SK Hynix PE8010 (N-SED)
-| *SFB 2.150.4*
+h| *SFB 2.150.4*
 | 06/08/2022
 | 3B11
 | 3.94.07
@@ -154,7 +154,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | GDC5502Q
 | 11092A10
 | 110B2A10
-| *SFB 2.150.4 via Element 12.5*
+h| *SFB 2.150.4 via Element 12.5*
 | 06/08/2022
 | 3B11
 | 3.94.07
@@ -179,7 +179,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | GDC5502Q
 | 11092A10
 | 110B2A10
-| *SFB 2.146.2*
+h| *SFB 2.146.2*
 | 02/22/2022
 | 3B11
 | 3.94.07
@@ -204,7 +204,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | GDC5502Q
 | 11092A10
 | 110B2A10
-| *SFB 2.99.4 via Element 12.3.2*
+h| *SFB 2.99.4 via Element 12.3.2*
 | 09/16/2021
 | 3B06
 | 3.91.07
@@ -229,7 +229,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.99.4 via Element 12.3.1.165*
+h| *SFB 2.99.4 via Element 12.3.1.165*
 | 12/06/2021
 | 3B06
 | 3.91.07
@@ -254,7 +254,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.99.2*
+h| *SFB 2.99.2*
 | 12/06/2021
 | 3B06
 | 3.91.07
@@ -279,7 +279,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.99.1 via Element 12.3.1.103*
+h| *SFB 2.99.1 via Element 12.3.1.103*
 | 09/16/2021
 | 3B06
 | 3.86.07
@@ -304,7 +304,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.99 via Element 12.3*
+h| *SFB 2.99 via Element 12.3*
 | 04/15/2021
 | 3B06
 | 3.86.07
@@ -329,7 +329,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.76.8*
+h| *SFB 2.76.8*
 | 02/03/2021
 | 3B06
 | 3.86.07
@@ -354,7 +354,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.27.1*
+h| *SFB 2.27.1*
 | 09/29/2020
 | 3B03
 | 3.84.07
@@ -379,7 +379,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.76.8 via Element 12.2.1*
+h| *SFB 2.76.8 via Element 12.2.1*
 | 06/02/2021
 | 3B06
 | 3.86.07
@@ -404,7 +404,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.21 via Element 12.2*
+h| *SFB 2.21 via Element 12.2*
 | 09/29/2020
 | 3B03
 | 3.84.07
@@ -429,7 +429,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 2.76.8 via Element 12.0.1*
+h| *SFB 2.76.8 via Element 12.0.1*
 | 06/02/2021
 | 3B06
 | 3.86.07
@@ -454,7 +454,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *SFB 1.2.17 via Element 12.0*
+h| *SFB 1.2.17 via Element 12.0*
 | 03/20/2020
 | 3B03
 | 3.78.07
@@ -479,7 +479,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.8*
+h| *Element 11.8*
 | 03/11/2020
 | 3B03
 | 3.78.07
@@ -504,7 +504,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.7*
+h| *Element 11.7*
 | 11/21/2019
 | 3A10
 | 3.76.07
@@ -529,7 +529,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.5.1*
+h| *Element 11.5.1*
 | 02/20/2020
 | 3A08
 | 3.76.07
@@ -554,7 +554,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.5*
+h| *Element 11.5*
 | 09/26/2019
 | 3A08
 | 3.76.07
@@ -579,7 +579,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.3.2*
+h| *Element 11.3.2*
 | 02/19/2020
 | 3A08
 | 3.76.07
@@ -604,7 +604,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.3.1*
+h| *Element 11.3.1*
 | 08/19/2019
 | 3A08
 | 3.76.07
@@ -629,7 +629,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.1.1*
+h| *Element 11.1.1*
 | 02/19/2020
 | 3A06
 | 3.70.07
@@ -654,7 +654,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.1*
+h| *Element 11.1*
 | 04/25/2019
 | 3A06
 | 3.70.07
@@ -679,7 +679,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11.0.2*
+h| *Element 11.0.2*
 | 02/19/2020
 | 3A06
 | 3.70.07
@@ -704,7 +704,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | -
 | -
 | -
-| *Element 11*
+h| *Element 11*
 | 11/29/2018
 | 3A06
 | 3.70.07
@@ -821,7 +821,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | Drive Toshiba Hawk-4 (SED)
 | Drive Toshiba Hawk-4 (N-SED)
 | Drive Samsung PM883 (SED)
-| *SFB 1.2.17 via Element 12.0*
+h| *SFB 1.2.17 via Element 12.0*
 | 03/20/2020
 | NA2.1
 | 3.25
@@ -833,7 +833,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7104Q
-| *SFB 2.150.4 via Element 12.5*
+h| *SFB 2.150.4 via Element 12.5*
 | 06/08/2022
 | NAT3.4
 | 6.98.00
@@ -845,7 +845,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7A04Q
-| *SFB 2.99 via Element 12.3*
+h| *SFB 2.99 via Element 12.3*
 | 04/15/2021
 | NA2.1
 | 6.84.00
@@ -857,7 +857,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *SFB 2.76.8 via Element 12.2.1*
+h| *SFB 2.76.8 via Element 12.2.1*
 | 06/02/2021
 | NA2.1
 | 6.84.00
@@ -869,7 +869,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *SFB 1.2.17 via Element 12.0*
+h| *SFB 1.2.17 via Element 12.0*
 | 03/20/2020
 | NA2.1
 | 3.25
@@ -881,7 +881,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.8.2*
+h| *Element 11.8.2*
 | 02/22/2022
 | NA2.1
 | 3.25
@@ -893,7 +893,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.8.1*
+h| *Element 11.8.1*
 | 06/02/2021
 | NA2.1
 | 3.25
@@ -905,7 +905,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.8*
+h| *Element 11.8*
 | 03/11/2020
 | NA2.1
 | 3.25
@@ -917,7 +917,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.7*
+h| *Element 11.7*
 | 11/21/2019
 | NA2.1
 | 3.25
@@ -929,7 +929,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.5.1*
+h| *Element 11.5.1*
 | 02/19/2020
 | NA2.1
 | 3.25
@@ -941,7 +941,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.5*
+h| *Element 11.5*
 | 09/26/2019
 | NA2.1
 | 3.25
@@ -953,7 +953,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.3.2*
+h| *Element 11.3.2*
 | 02/19/2020
 | NA2.1
 | 3.25
@@ -965,7 +965,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.3.1*
+h| *Element 11.3.1*
 | 08/19/2019
 | NA2.1
 | 3.25
@@ -977,7 +977,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.1.1*
+h| *Element 11.1.1*
 | 02/19/2020
 | NA2.1
 | 3.25
@@ -989,7 +989,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.1*
+h| *Element 11.1*
 | 04/25/2019
 | NA2.1
 | 3.25
@@ -1001,7 +1001,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.0.2*
+h| *Element 11.0.2*
 | 02/19/2020
 | NA2.1
 | 3.25
@@ -1013,7 +1013,7 @@ Component firmware managed via a Storage Firmware Bundle (SFB).
 | 8ENP7101
 | 8ENP6101
 | HXT7904Q
-| *Element 11.0*
+h| *Element 11.0*
 | 11/29/2018
 | NA2.1
 | 3.25
