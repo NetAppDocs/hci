@@ -13,6 +13,8 @@ keywords: netapp, hci, solutions, performance, scale, multiple, workloads
 :imagesdir: ../media/
 
 [.lead]
+NetApp HCI solutions can help you achieve performance at scale with multiple workloads on the same infrastructure without friction.
+
 NetApp HCI enables you to deploy cloud services across multiple public cloud providers and on premise. You can use NetApp HCI to deploy services similar to what you might do with a cloud provider-all in a self-service mode without IT involvement.
 
 To learn about NetApp HCI solutions, see the https://docs.netapp.com/us-en/hci-solutions/index.html[NetApp HCI Solutions documentation^].
