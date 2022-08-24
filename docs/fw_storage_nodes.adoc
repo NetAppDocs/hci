@@ -14,23 +14,12 @@ summary: Supported firmware and driver versions for storage nodes.
 :keywords: hci, earlier, documentation, versions
 
 [.lead]
-The firmware and driver versions outlined here apply to:
-
-//* NetApp HCI compute bootstrap OS
-//* NetApp HCI storage nodes running Element software
-* SolidFire cluster performance
-* NetApp Element software
-
-== Storage nodes
+Storage nodes
 * <<H610S>>
 * <<H410S>>
 
 === H610S
-//*ODM:* Quanta
-//*Platform:* QS52B-1Ud
-//*Model Number (Family portion):* H610S
-//*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, H610S-2F
-//==== Vendor/Part number for all components
+
 *Model Number (Family portion):* H610S
 *Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, and H610S-2F
 
@@ -744,9 +733,6 @@ The following firmware is not managed via a Storage Firmware Bundle:
 |===
 
 === H410S
-//*ODM:* SuperMicro (MSC)
-//*Platform:* BigTwin X10 - Broadwell
-//==== Vendor/Part number for all components
 *Model Number (Family portion):* H410S
 *Full Model Numbers:* H410S-0, H410S-1, H410S-1-NE, and H410S-2
 

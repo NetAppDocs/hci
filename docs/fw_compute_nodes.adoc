@@ -14,22 +14,14 @@ summary: Supported firmware and driver versions for Compute nodes.
 :keywords: hci, earlier, documentation, versions
 
 [.lead]
-The firmware and driver versions outlined here apply to:
-
-* NetApp HCI compute bootstrap OS
-//* NetApp HCI storage nodes running Element software
-//* SolidFire cluster performance
-//* NetApp Element software
-
-== Compute nodes
+Compute nodes
 * <<H615C>>
 * <<H610C>>
 * <<H410C>>
 * <<H300E/H500E/H700E>>
 
 === H615C
-//*ODM:* Quanta
-//*Platform:* D52B-1U Cascade Lake
+
 *Model Number (Family portion):* H615C
 
 //==== Vendor/Part number for all components
@@ -127,9 +119,7 @@ M161225i
 |===
 
 === H610C
-//*ODM:* Quanta
-//*Platform:* D52BV-2U Skylake
-//==== Vendor/Part number for all components
+
 *Model Number (Family portion):* H610C
 
 //[cols=3*,options="header"]
@@ -235,9 +225,7 @@ DGSML-A28D81BCBQCA-B196
 |===
 
 === H410C
-//*ODM:* SuperMicro (SMCI)
-//*Platform:* BigTwin X11 - Skylake
-//==== Vendor/Part number for all components
+
 *Model Number (Family portion):* H410C
 
 //[cols=3*,options="header"]
@@ -347,9 +335,7 @@ MTFDDAV240TCB1AR
 |===
 
 === H300E/H500E/H700E
-//*ODM:* SuperMicro (SMC)
-//*Platform:* BigTwin X10 - Broadwell
-//==== Vendor/Part number for all components
+
 *Model Number (Family portion):* H300E/H500E/H700E
 
 //[cols=3*,options="header"]
