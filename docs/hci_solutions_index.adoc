@@ -21,4 +21,4 @@ To learn about NetApp HCI solutions, see the https://docs.netapp.com/us-en/hci-s
 
 [discrete]
 == Find more information
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
+https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
