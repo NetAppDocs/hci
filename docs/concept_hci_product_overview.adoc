@@ -31,17 +31,17 @@ image::hci_prodoverview.png[The image shows the various components in the NetApp
 
 * *Management services* or microservices include the Active IQ collector, QoSSIOC for the vCenter Plug-in, and mNode service; they are updated frequently as service bundles. As of the Element 11.3 release, *management services* are hosted on the management node, allowing for quicker updates of select software services outside of major releases. The *management node* (mNode) is a virtual machine that runs in parallel with one or more Element software-based storage clusters. It is used to upgrade and provide system services including monitoring and telemetry, manage cluster assets and settings, run system tests and utilities, and enable NetApp Support access for troubleshooting.
 +
-TIP: Learn more about link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[management services releases].
+TIP: Learn more about link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[management services releases^].
 
 * *NetApp Hybrid Cloud Control* enables you to manage NetApp HCI. You can upgrade management services, expand your system, collect logs, and monitor your installation by using NetApp SolidFire Active IQ. You log in to NetApp Hybrid Cloud Control by browsing to the IP address of the management node.
 
-* The *NetApp Element Plug-in for vCenter Server* (VCP) is a web-based tool integrated with the vSphere user interface (UI). The plug-in is an extension and scalable, user-friendly interface for VMware vSphere that can manage and monitor storage clusters running *NetApp Element software*. The plug-in provides an alternative to the Element UI. You can use the plug-in user interface to discover and configure clusters, and to manage, monitor, and allocate storage from cluster capacity to configure datastores and virtual datastores (for virtual volumes). A cluster appears on the network as a single local group that is represented to hosts and administrators by virtual IP addresses. You can also monitor cluster activity with real-time reporting, including error and alert messaging for any event that might occur while performing various operations.
+* The *NetApp Element Plug-in for vCenter Server* is a web-based tool integrated with the vSphere user interface (UI). The plug-in is an extension and scalable, user-friendly interface for VMware vSphere that can manage and monitor storage clusters running *NetApp Element software*. The plug-in provides an alternative to the Element UI. You can use the plug-in user interface to discover and configure clusters, and to manage, monitor, and allocate storage from cluster capacity to configure datastores and virtual datastores (for virtual volumes). A cluster appears on the network as a single local group that is represented to hosts and administrators by virtual IP addresses. You can also monitor cluster activity with real-time reporting, including error and alert messaging for any event that might occur while performing various operations.
 +
-TIP: Learn more about https://docs.netapp.com/us-en/vcp/concept_vcp_product_overview.html[VCP].
+TIP: Learn more about https://docs.netapp.com/us-en/vcp/concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server^].
 
 * By default, NetApp HCI sends performance and alert statistics to the *NetApp SolidFire Active IQ* service. As part of your normal support contract, NetApp Support monitors this data and alerts you to any performance bottlenecks or potential system issues. You need to create a NetApp Support account if you do not already have one (even if you have an existing SolidFire Active IQ account) so that you can take advantage of this service.
 +
-TIP: Learn more about link:https://help.monitoring.solidfire.com/[NetApp SolidFire Active IQ].
+TIP: Learn more about link:https://help.monitoring.solidfire.com/[NetApp SolidFire Active IQ^].
 
 == NetApp HCI URLs
 Here are the common URLs you use with NetApp HCI:
@@ -58,7 +58,7 @@ Here are the common URLs you use with NetApp HCI:
 |Access NetApp Hybrid Cloud Control to upgrade, expand, and monitor your NetApp HCI installation, and update management services. link:task_nde_access_hcc.html[Learn more.]
 
 |`https://[IP address]:442`
-|From the per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html#access-the-management-node-per-node-ui[Learn more.]
+|From the per-node UI, access network and cluster settings and utilize system tests and utilities. link:task_mnode_access_ui.html#access-the-management-node-per-node-ui[Learn more].
 
 |`https://[management node IP address]:9443`
 |Register the vCenter Plug-in package in the vSphere Web Client.

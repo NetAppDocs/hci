@@ -6,7 +6,6 @@ keywords: netapp, mnode, management node, rest api, hci, assets
 ---
 
 = Create and manage storage cluster assets
-
 :hardbreaks:
 :nofooter:
 :icons: font
