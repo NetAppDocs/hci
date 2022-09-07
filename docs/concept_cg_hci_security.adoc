@@ -23,7 +23,7 @@ All drives in storage nodes that are capable of encryption use AES 256-bit encry
 
 When you enable Encryption at Rest, performance and efficiency of the storage cluster are unaffected. Additionally, if you remove an encryption-enabled drive or node from the storage cluster with the Element API or Element UI, Encryption at Rest is disabled on the drives and the drives are securely erased, protecting the data that was previously stored on those drives. After you remove the drive, you can securely erase the drive with the `SecureEraseDrives` API method. If you forcibly remove a drive or node from the storage cluster, the data remains protected by the cluster-wide password and the drive’s individual encryption keys.
 
-For information on enabling and disabling Encryption at Rest, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EE404D52-B621-4DE5-B141-2559768FB1D0.html[Enabling and disabling encryption for a cluster] in the SolidFire and Element Documentation Center.
+For information on enabling and disabling Encryption at Rest, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-EE404D52-B621-4DE5-B141-2559768FB1D0.html[Enabling and disabling encryption for a cluster^] in the SolidFire and Element Documentation Center.
 
 == Software Encryption at Rest
 
@@ -40,7 +40,7 @@ Element can use the following key management services:
 * Vormetric Data Security Manager
 * IBM Security Key Lifecycle Manager
 
-For more information on configuring External Key Management, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[Getting started with External Key Management] in the SolidFire and Element Documentation Center.
+For more information on configuring External Key Management, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-057D852C-9C1C-458A-9161-328EDA349B00.html[Getting started with External Key Management^] in the SolidFire and Element Documentation Center.
 
 == Multi-factor authentication
 
@@ -49,7 +49,7 @@ You can configure Element to integrate with an existing SAML 2.0 identity provid
 
 You can pair multi-factor authentication with common SAML 2.0 compatible identity providers (IdPs), such as Microsoft Active Directory Federation Services (ADFS) and Shibboleth.
 
-To configure MFA, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-B1C8D8E2-CE95-41FD-9A3E-A0C424EC84F3.html[Enabling multi-factor authentication] in the SolidFire and Element Documentation Center.
+To configure MFA, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-B1C8D8E2-CE95-41FD-9A3E-A0C424EC84F3.html[Enabling multi-factor authentication^] in the SolidFire and Element Documentation Center.
 
 == FIPS 140-2 for HTTPS and data at rest encryption
 
@@ -57,6 +57,6 @@ NetApp SolidFire storage clusters and NetApp HCI systems support encryption that
 
 When you enable FIPS 140-2 operating mode on your cluster, the cluster activates the NetApp Cryptographic Security Module (NCSM) and leverages FIPS 140-2 Level 1 certified encryption for all communication via HTTPS to the NetApp Element UI and API. You use the `EnableFeature` Element API with the `fips` parameter to enable FIPS 140-2 HTTPS encryption. On storage clusters with FIPS-compatible hardware, you can also enable FIPS drive encryption for data at rest using the `EnableFeature` Element API with the `FipsDrives` parameter.
 
-For more information about preparing a new storage cluster for FIPS 140-2 encryption, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-4645FF0D-3FCD-4440-91A9-A47F7BCC5C50.html[Creating a cluster supporting FIPS drives].
+For more information about preparing a new storage cluster for FIPS 140-2 encryption, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-4645FF0D-3FCD-4440-91A9-A47F7BCC5C50.html[Creating a cluster supporting FIPS drives^].
 
-For more information about enabling FIPS 140-2 on an existing, prepared cluster, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-F2726BCA-D59C-47EE-B86C-DC465C96563B.html[The EnableFeature Element API].
+For more information about enabling FIPS 140-2 on an existing, prepared cluster, see http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/GUID-F2726BCA-D59C-47EE-B86C-DC465C96563B.html[The EnableFeature Element API^].

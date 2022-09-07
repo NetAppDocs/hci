@@ -40,7 +40,7 @@ Using the Rancher UI, you can see information about Rancher on NetApp HCI manage
 TIP: In the Rancher UI, management clusters are referred to as "local clusters."
 
 . Access the Rancher UI using that URL provided to you at the end of the Rancher deployment.
-. See https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/[Monitoring in Rancher v2.5].
+. See https://rancher.com/docs/rancher/v2.x/en/monitoring-alerting/v2.5/[Monitoring in Rancher v2.5^].
 
 
 == Monitor Rancher using NetApp Active IQ
@@ -59,6 +59,6 @@ Using vCenter Server, you can monitor the Rancher virtual machines.
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

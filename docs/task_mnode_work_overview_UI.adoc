@@ -6,7 +6,6 @@ keywords: netapp, management node ui, mnode ui, :442, element
 ---
 
 = Management node UI overview
-
 :hardbreaks:
 :nofooter:
 :icons: font

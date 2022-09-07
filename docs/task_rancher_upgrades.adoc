@@ -6,7 +6,6 @@ keywords: netapp, hci, rancher, upgrade, hcc
 ---
 
 = Upgrade Rancher on NetApp HCI
-
 :hardbreaks:
 :nofooter:
 :icons: font

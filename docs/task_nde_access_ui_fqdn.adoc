@@ -6,7 +6,6 @@ keywords: netapp, hci, fqdn, ui, access, web, administration
 ---
 
 = Configure Fully Qualified Domain Name web UI access
-
 :hardbreaks:
 :nofooter:
 :icons: font
