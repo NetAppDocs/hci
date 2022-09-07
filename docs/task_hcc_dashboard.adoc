@@ -142,3 +142,4 @@ image::hcc_dashboard_compute_util_cpu.png[Compute Utilization panes]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://docs.netapp.com/us-en/solidfire-active-iq/index.html[NetApp SolidFire Active IQ documentation^]
