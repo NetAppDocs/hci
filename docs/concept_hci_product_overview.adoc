@@ -41,7 +41,7 @@ TIP: Learn more about https://docs.netapp.com/us-en/vcp/concept_vcp_product_over
 
 * By default, NetApp HCI sends performance and alert statistics to the *NetApp SolidFire Active IQ* service. As part of your normal support contract, NetApp Support monitors this data and alerts you to any performance bottlenecks or potential system issues. You need to create a NetApp Support account if you do not already have one (even if you have an existing SolidFire Active IQ account) so that you can take advantage of this service.
 +
-TIP: Learn more about link:https://help.monitoring.solidfire.com/[NetApp SolidFire Active IQ^].
+TIP: Learn more about link:https://docs.netapp.com/us-en/solidfire-active-iq/index.html[NetApp SolidFire Active IQ^].
 
 == NetApp HCI URLs
 Here are the common URLs you use with NetApp HCI:
