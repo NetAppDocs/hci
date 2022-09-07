@@ -6,7 +6,6 @@ keywords: netapp, mnode, management node, multi-vcenter, hci
 ---
 
 = Configure NetApp Hybrid Cloud Control for multiple vCenters
-
 :hardbreaks:
 :nofooter:
 :icons: font

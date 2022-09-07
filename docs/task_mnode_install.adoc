@@ -6,7 +6,6 @@ keywords: netapp, element, management node, mnode, storage, install
 ---
 
 = Install a management node
-
 :hardbreaks:
 :nofooter:
 :icons: font

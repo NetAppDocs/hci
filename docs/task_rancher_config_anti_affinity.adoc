@@ -19,13 +19,13 @@ To ensure that each VM and its resources remain on a different physical host, yo
 
 For instructions on how to configure DRS anti-affinity rules, see the following VMware documentation resources:
 
-https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-FBE46165-065C-48C2-B775-7ADA87FF9A20.html[Create VM Anti-Affinity Rules]
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-FBE46165-065C-48C2-B775-7ADA87FF9A20.html[Create VM Anti-Affinity Rules^]
 
-https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-E137A9F8-17E4-4DE7-B986-94A0999CF327.html[vSphere HA and DRS Affinity Rules]
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-E137A9F8-17E4-4DE7-B986-94A0999CF327.html[vSphere HA and DRS Affinity Rules^]
 
 [discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
-* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher]
+* https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]

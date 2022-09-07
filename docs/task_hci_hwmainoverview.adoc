@@ -6,7 +6,6 @@ keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, ra
 ---
 
 = H-series hardware maintenance overview
-
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -18,21 +17,21 @@ You should perform hardware maintenance tasks, such as replace faulty nodes, rep
 
 Here are the links to the hardware maintenance tasks:
 
-* link:task_hci_hserieschassisrepl.html[Replace 2U H-series chassis^]
-* link:task_hci_dcpsurepl.html[Replace DC power supply units in H615C and H610S nodes^]
-* link:task_hci_dimmcomputerepl.html[Replace DIMMs in compute nodes^]
-* link:task_hci_driverepl.html[Replace drives for storage nodes^]
-* link:task_hci_h410crepl.html[Replace H410C nodes^]
-* link:task_hci_h410srepl.html[Replace H410S nodes^]
-* link:task_hci_h610ch615crepl.html[Replace H610C and H615C nodes^]
-* link:task_hci_h610srepl.html[Replace H610S nodes^]
-* link:task_hci_psurepl.html[Replace power supply units^]
+* link:task_hci_hserieschassisrepl.html[Replace 2U H-series chassis]
+* link:task_hci_dcpsurepl.html[Replace DC power supply units in H615C and H610S nodes]
+* link:task_hci_dimmcomputerepl.html[Replace DIMMs in compute nodes]
+* link:task_hci_driverepl.html[Replace drives for storage nodes]
+* link:task_hci_h410crepl.html[Replace H410C nodes]
+* link:task_hci_h410srepl.html[Replace H410S nodes]
+* link:task_hci_h610ch615crepl.html[Replace H610C and H615C nodes]
+* link:task_hci_h610srepl.html[Replace H610S nodes]
+* link:task_hci_psurepl.html[Replace power supply units]
 * link:task_hci_snswitches.html[Replace SN2010, SN2100, and SN2700 switches]
-* link:task_hci_2noderepl.html[Replace storage node in a two-node cluster^]
+* link:task_hci_2noderepl.html[Replace storage node in a two-node cluster]
 
 [discrete]
 == Find more information
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/media/tr-4820.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
-* https://mysupport.netapp.com/site/tools[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
+* https://mysupport.netapp.com/site/tools[NetApp Configuration Advisor^] 5.8.1 or later network validation tool

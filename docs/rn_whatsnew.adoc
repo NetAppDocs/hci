@@ -6,6 +6,7 @@ keywords: netapp, hci, element, new, whatsnew
 ---
 
 = What's new in NetApp HCI
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,14 +15,13 @@ keywords: netapp, hci, element, new, whatsnew
 :keywords: hci, cloud, onprem, documentation, help, element
 
 [.lead]
-NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.10 includes Element 12.5 for storage clusters.
+NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.10 includes Element software 12.5 for storage clusters.
 
 * The <<NetApp HCI 1.10>> section describes new features and updates in NetApp HCI version 1.10.
 
-* The <<Element 12.5>> section describes new features and updates in NetApp Element 12.5.
+* The <<Element software 12.5>> section describes new features and updates in Element 12.5.
 
 == NetApp HCI 1.10
-
 NetApp HCI 1.10 includes security and stability improvements, and increases post deployment scaling flexibility.
 
 === Post deployment scaling flexibility
@@ -36,6 +36,9 @@ NetApp HCI 1.10 includes firmware updates for compute nodes. link:rn_relatedrn.h
 === NetApp Element Plug-in for vCenter Server 4.9 availability
 The NetApp Element Plug-in for vCenter Server 4.9 is available outside of the management node 12.5 and NetApp HCI 1.10 releases. To upgrade the plug-in, follow the instructions in the link:concept_hci_upgrade_overview.html[NetApp HCI Upgrades] documentation.
 
+=== Supported versions of VMware vSphere updates
+With NetApp HCI 1.10, VMware vSphere 7.0 is supported for deployment and expansion.
+
 === NetApp Hybrid Cloud Control enhancements
 NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Learn more^].
 
@@ -43,7 +46,7 @@ NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp
 
 The NetApp Bugs Online tool contains resolved and known issues for NetApp HCI, Element software, and other products. You can browse these issues using keywords or versions at https://mysupport.netapp.com/site/products/all/details/netapp-hci/bugsonline-tab[NetApp Bugs Online^].
 
-== Element 12.5
+== Element software 12.5
 Element 12.5 introduces improved storage node access, enhanced custom Protection Domains manageability, new and improved cluster faults and events, enhanced Cluster UI functionality, enhanced security, and automated upgrades using Ansible.
 
 === Improved storage node access
@@ -63,7 +66,7 @@ With the addition of a new checkbox in the Create Cluster UI, Element 12.5 gives
 Element 12.5 includes firmware updates for storage nodes. link:https://docs.netapp.com/us-en/element-software/concepts/concept_rn_relatedrn_element.html#storage-firmware[Learn more^].
 
 === Enhanced security
-Element 12.5 contains the mitigation that closes the Element software exposure to the Apache Log4j vulnerability. NetApp SolidFire storage clusters with the Virtual Volumes (VVols) feature enabled are exposed to the Apache Log4j vulnerability. For information on the workaround for the Apache Log4j vulnerability in NetApp Element software, see the link:++https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround++[KB article^].
+Element 12.5 contains the mitigation that closes the Element software exposure to the Apache Log4j vulnerability. NetApp SolidFire storage clusters with the Virtual Volumes (VVols) feature enabled are exposed to the Apache Log4j vulnerability. For information on the workaround for the Apache Log4j vulnerability in NetApp Element software, see the {url-peak}[KB article^].
 
 If you're running Element 11.x, 12.0, or 12.2 or your storage cluster is already at Element 12.3 or 12.3.1 with the VVols feature enabled, upgrading to 12.5 is highly recommended.
 
