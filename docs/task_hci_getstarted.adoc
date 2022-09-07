@@ -220,4 +220,4 @@ The NetApp Hybrid Cloud Control interface appears.
 * https://www.netapp.com/us/media/tr-4820.pdf[TR-4820: NetApp HCI Networking Quick Planning Guide^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server documentation^]
 * https://mysupport-beta.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2[NetApp  Configuration Advisor^] 5.8.1 or later network validation tool
-* https://help.monitoring.solidire.com[NetApp SolidFire Active IQ Documentation^]
+* https://docs.netapp.com/us-en/solidfire-active-iq/index.html[NetApp SolidFire Active IQ Documentation^]
