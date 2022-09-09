@@ -11,7 +11,7 @@ sidebar:
     - title: NetApp HCI Documentation
       url: /index.html
     - title: NetApp HCI Solutions
-      url: https://docs.netapp.com/us-en/hci-solutions/index.html
+      url: /docs/hci_solutions_index.html
     - title: Release Notes
       entries:
         - title: What's new in NetApp HCI
