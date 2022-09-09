@@ -34,6 +34,7 @@ IMPORTANT: You must upgrade to the latest management services bundle before upgr
 * *Updated baseboard management controller (BMC) for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions].
 [[element-upgrade-time]]
 include::../_include/element_software_and_storage_firmware_upgrade_time.adoc[]
+
 * *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade Element software:
 +
 . Open the IP address of the management node in a web browser:
