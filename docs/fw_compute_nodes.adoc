@@ -1,0 +1,445 @@
+---
+sidebar: sidebar
+permalink: docs/fw_compute_nodes.html
+keywords: documentation, earlier, previous, versions
+summary: Supported firmware and driver versions for Compute nodes.
+---
+
+= Compute Nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, earlier, documentation, versions
+
+[.lead]
+Compute nodes
+* <<H615C>>
+* <<H610C>>
+* <<H410C>>
+* <<H300E/H500E/H700E>>
+
+=== H615C
+
+*Model Number (Family portion):* H615C
+
+//==== Vendor/Part number for all components
+
+//*Model Number (Family portion):* H615C
+
+//[cols=3*,options="header"]
+//|===
+//| Component
+//| Vendor
+//| Part number
+//| BIOS | Quanta	| Motherboard
+//| BMC	| Quanta	| Motherboard
+//| CPLD	| Quanta	| Motherboard
+//| 10/25 GbE NIC	| Quanta/Mellanox | 3GS5BMA0000/MCX4421A-ACQN
+//| GPU	| NVIDIA	| T4
+//| Boot Device	| Innodisk	| DGSML-A28D81BCBQCA-B196
+//|===
+
+==== Component firmware managed via Compute Firmware Bundle
+During 11.x timeframe, Element Software was the only way to release firmware.  Starting with Element 12.0, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates were now possible via an independently released CFB.
+
+The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
+
+NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
+
+[cols=8*,options="header"]
+|===
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| 10/25 GbE NIC
+h| VMware ESXi 6.5 driver version
+h| VMware ESXi 6.7 driver version
+h| VMware ESXi 7.0 driver version
+h| *CFB 2.154.4*
+| 06/08/2022
+| 3B12.CO	| 4.72.07	| 14.29.1016	| 4.16.71.1	| 4.17.71.1	| 4.21.71.1
+h| *SFB 2.150.4 via HCI 1.10*
+| 06/08/2022
+| 3B12.CO	| 4.72.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *SFB 2.146.2*
+| 02/022/2022
+| 3B12.CO	| 4.72.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *CFB 2.99.4 via HCI 1.9P1*
+| 12/06/2021
+| 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *CFB 2.76.10*
+| 08/29/2021
+| 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *CFB 2.99 via HCI 1.9*
+| 04/15/2021
+| 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *CFB 2.76.8*
+| 02/03/2021
+| 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *CFB 2.27.1*
+| 09/18/2020
+| 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
+h| *CFB 2.21 via HCI 1.8P1*
+| 09/29/2020
+| 3B08.CO	| 4.64.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
+h| *CFB 12.2.109*
+| 08/07/2020
+| 3B08.CO	| 4.64.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
+h| *CFB 12.2.92*
+| 06/22/2020
+| 3B06.CO	| 4.64.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
+h| *CFB 1.2.17 via HCI 1.8*
+| 03/20/2020
+| 3B06.CO	| 4.60.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
+h| *HCI 1.7P1*
+| 11/21/2019
+| 3B06.CO	| 4.60.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
+h| *HCI 1.7*
+| 09/26/2019
+| 3B06.CO	| 4.60.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
+|===
+
+==== Component firmware not managed via Compute Firmware Bundle
+
+The following firmware is not managed via a Compute Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| CPLD	| 120
+| GPU
+T4 | 90.04.38.00.03 (BIOS)
+410.48 (Driver)
+| Boot Device
+DGSML-A28D81BCBQCA-B196 |
+M161225i
+|===
+
+=== H610C
+
+*Model Number (Family portion):* H610C
+
+//[cols=3*,options="header"]
+//|===
+//| Component
+//| Vendor
+//| Part number
+//| BIOS | Quanta	| Motherboard
+//| BMC	| Quanta	| Motherboard
+//| CPLD	| Quanta	| Motherboard
+//| 1/10 GbE NIC | Quanta/Intel |	Motherboard/OCP PHY board
+//| 10/25 GbE NIC	| Quanta/Mellanox | 3GS5BMA00C0/MCX4121A-ACAT
+//| GPU NVIDIA | M10
+//| Boot Device	| Innodisk	| DGSML-A28D81BCBQCA-B196
+//|===
+
+==== Component firmware managed via Compute Firmware Bundle
+During HCI 1.0 - HCI 1.7, HCI was the only way to release firmware.  Starting with HCI 1.8, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates are now possible via an independently released CFB.
+
+The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
+
+NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
+
+[cols=8*,options="header"]
+|===
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| 10/25 GbE NIC
+h| VMware ESXi 6.5 driver version
+h| VMware ESXi 6.7 driver version
+h| VMware ESXi 7.0 driver version
+h| *CFB 2.154.4*
+| 06/08/2022
+| 3B07 | 4.04.07 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
+h| *SFB 2.150.4 via HCI 1.10*
+| 06/08/2022
+| 3B07 | 4.04.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *SFB 2.146.2*
+| 02/22/2022
+| 3B07 | 4.04.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *CFB 2.99.4 via HCI 1.9P1*
+| 12/06/2021
+| 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *CFB 2.76.10*
+| 08/29/2021
+| 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *CFB 2.99 via HCI 1.9*
+| 04/15/2021
+| 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *CFB 2.76.8*
+| 02/03/2021
+| 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *CFB 2.27.1*
+| 09/18/2020
+| 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
+h| *CFB 2.21 via HCI 1.8P1*
+| 09/29/2020
+| 3B01 | 3.96.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *CFB 12.2.109*
+| 08/07/2020
+| 3B01 | 3.96.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *CFB 12.2.92*
+| 06/22/2020
+| 3B01 | 3.96.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *CFB 1.2.17 via HCI 1.8*
+| 03/20/2020
+| 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.7P1*
+| 11/21/2019
+| 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.7*
+| 09/26/2019
+| 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.6*
+| 08/19/2019
+| 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.4P1*
+| 04/25/2019
+| 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.4*
+| 11/29/2018
+| 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
+|===
+
+==== Component firmware not managed via Compute Firmware Bundle
+
+The following firmware is not managed via a Compute Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| CPLD	| 120
+| 1/10 GbE NIC	| 3.2d
+0x80000b4b
+| GPU
+M10
+| 82.07.ab.00.12 82.07.ab.00.13 82.07.ab.00.14 82.07.ab.00.15
+| Boot Device
+DGSML-A28D81BCBQCA-B196
+| M161225i
+|===
+
+=== H410C
+
+*Model Number (Family portion):* H410C
+
+//[cols=3*,options="header"]
+//|===
+//| Component
+//| Vendor
+//| Part number
+//| BIOS | Quanta	| Motherboard
+//| BMC	| Quanta	| Motherboard
+//| CPLD	| Quanta	| Motherboard
+//| SAS Adapter | SMCI/Broadcom | BPN-6S3008N4-1UB-NA11
+//| SIOM 1/10 GbE NIC | SMCI/Intel | AOC-MH25G-M2S2TM-NA011
+//| SIOM 10/25 GbE NIC | SMCI/Mellanox | AOC-MH25G-M2S2TM-NA011
+//| AOC 10/25 GbE NIC | SMCI/Mellanox | AOC-S25G-M2S-NA011
+//| Power Supply | SMCI | PWS-2K22A-1R-NA011
+//| Boot Device | Intel | SSDSCKJB240G7
+//| Boot Device | Micron | MTFDDAV240TCB1AR
+//|===
+
+==== Component firmware managed via Compute Firmware Bundle
+During HCI 1.0 - HCI 1.7, HCI was the only way to release firmware.  Starting with HCI 1.8, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates are now possible via an independently released CFB.
+
+The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
+
+NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
+
+[cols=8*,options="header"]
+|===
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| 10/25 GbE NIC
+h| VMware ESXi 6.5 driver version
+h| VMware ESXi 6.7 driver version
+h| VMware ESXi 7.0 driver version
+h| *CFB 2.154.4*
+| 06/08/2022
+| NATP3.10 | 6.71.20 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
+h| *SFB 2.150.4 via HCI 1.10*
+| 06/08/2022
+| NATP3.10 | 6.71.20 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *SFB 2.146.2*
+| 02/22/2022
+| NATP3.10 | 6.71.20 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.99.4 via HCI 1.9P1*
+| 12/06/2021
+| NATP3.9 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.76.10*
+| 08/29/2021
+| NATP3.9 | 6.71.20 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 |4.19.16.1
+h| *CFB 2.99 via HCI 1.9*
+| 04/15/2021
+| NATP3.9 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.76.8*
+| 02/03/2021
+| NATP3.9 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.27.1*
+| 09/18/2020
+| NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.21 via HCI 1.8P1*
+| 09/29/2020
+| NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *CFB 12.2.109*
+| 08/07/2020
+| NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *CFB 12.2.92*
+| 06/22/2020
+| NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *CFB 1.2.17 via HCI 1.8*
+| 03/20/2020
+| NA3.4 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *HCI 1.7P1*
+| 11/21/2019
+| NA3.3	| 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *HCI 1.7*
+| 09/26/2019
+| NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *HCI 1.6*
+| 08/19/2019
+| NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *HCI 1.4P1*
+| 04/25/2019
+| NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+h| *HCI 1.4*
+| 11/29/2018
+| NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
+|===
+
+==== Component firmware not managed via Compute Firmware Bundle
+
+The following firmware is not managed via a Compute Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| CPLD	| 03.B0.09
+| SAS Adapter	| 16.00.01.00
+| SIOM 1/10 GbE NIC	| 1.93
+| Power Supply | 1.3
+| Boot Device
+SSDSCKJB240G7
+| N2010121
+| Boot Device
+MTFDDAV240TCB1AR
+| DOMU037
+|===
+
+=== H300E/H500E/H700E
+
+*Model Number (Family portion):* H300E/H500E/H700E
+
+//[cols=3*,options="header"]
+//|===
+//| Component
+//| Vendor
+//| Part number
+//| BIOS | Quanta	| Motherboard
+//| BMC	| Quanta	| Motherboard
+//| CPLD	| Quanta	| Motherboard
+//| SAS Adapter | SMCI/Broadcom | BPN-6S3008N4-1UB-NA11
+//| SIOM 1/10 GbE NIC | SMCI/Intel | AOC-MH25G-M2S2TM-NA011
+//| SIOM 10/25 GbE NIC | SMCI/Mellanox | AOC-MH25G-M2S2TM-NA011
+//| AOC 10/25 GbE NIC | SMCI/Mellanox | AOC-S25G-M2S-NA011
+//| Power Supply | SMCI | PWS-2K22A-1R-NA011
+//| Boot Device | Intel | SSDSCKJB240G7
+//| Boot Device | Micron | MTFDDAV240TCB1AR
+//|===
+
+==== Component firmware managed via Compute Firmware Bundle
+During HCI 1.0 - HCI 1.7, HCI was the only way to release firmware.  Starting with HCI 1.8, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates are now possible via an independently released CFB.
+
+The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
+
+NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
+
+[cols=8*,options="header"]
+|===
+| Release Vehicle
+| Release Date
+| BIOS
+| BMC
+| 10/25 GbE NIC
+| VMware ESXi 6.5 driver version
+| VMware ESXi 6.7 driver version
+| VMware ESXi 7.0 driver version
+h| *CFB 2.154.4*
+| 06/08/2022
+| NAT3.4 | 6.98.00 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
+h| *SFB 2.150.4 via HCI 1.10*
+| 06/08/2022
+| NAT3.4 | 6.98.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *SFB 2.146.2*
+| 02/22/2022
+| NAT3.4 | 6.98.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.99.4 via HCI 1.9P1*
+| 12/06/2021
+| NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.76.10*
+| 08/29/2021
+| NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.99 via HCI 1.9*
+| 04/15/2021
+| NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.76.8*
+| 02/03/2021
+| NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.27.1*
+| 09/18/2020
+| NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
+h| *CFB 2.21 via HCI 1.8P1*
+| 09/29/2020
+| NA2.1 | 6.84.00 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *CFB 12.2.109*
+| 08/07/2020
+| NA2.1 | 6.84.00 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *CFB 12.2.92*
+| 06/22/2020
+| NA2.1 | 6.84.00 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *CFB 1.2.17 via HCI 1.8*
+| 03/20/2020
+| NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.7P1*
+| 11/21/2019
+| NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.7*
+| 09/26/2019
+| NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.6*
+| 08/19/2019
+| NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.4P1*
+| 04/25/2019
+| NA2.1 | 3.25 | 14.17.2020 | 4.16.13.5 | 4.17.13.8 | -
+h| *HCI 1.4*
+| 11/29/2018
+| NA2.1 | 3.25 | 14.17.2020 | 4.16.13.5 | 4.17.13.8 | -
+|===
+
+==== Component firmware not managed via Compute Firmware Bundle
+
+The following firmware is not managed via a Compute Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| CPLD | 01.A1.06
+| SAS Adapter | 16.00.01.00
+| SIOM 1/10 GbE NIC	| 1.93
+| Power Supply | 1.3
+| Boot Device
+SSDSCKJB240G7
+| N2010121
+| Boot Device
+MTFDDAV240TCB1AR
+| DOMU037
+|===
