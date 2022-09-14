@@ -5,7 +5,7 @@ keywords: documentation, earlier, previous, versions
 summary: Supported firmware and driver versions in NetApp HCI and NetApp Element software.
 ---
 
-= Supported firmware and driver versions in NetApp HCI and NetApp Element software
+= Supported firmware and ESXi driver versions for NetApp HCI and Firmware versions for NetApp HCI storage nodes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,12 +14,12 @@ summary: Supported firmware and driver versions in NetApp HCI and NetApp Element
 :keywords: hci, earlier, documentation, versions
 
 [.lead]
-The firmware and driver versions apply to:
+Supported firmware and ESXi driver versions for NetApp HCI and Firmware versions for NetApp HCI storage nodes.
 
-* NetApp HCI compute bootstrap OS
-* NetApp HCI storage nodes running NetApp Element software
-* SolidFire cluster performance
-* NetApp Element software
+//* NetApp HCI compute bootstrap OS
+//* NetApp HCI storage nodes running NetApp Element software
+//* SolidFire cluster performance
+//* NetApp Element software
 
 link:fw_storage_nodes.html[Storage nodes]
 * H610S

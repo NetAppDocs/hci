@@ -14,12 +14,7 @@ summary: Supported firmware and driver versions for storage nodes.
 :keywords: hci, earlier, documentation, versions
 
 [.lead]
-The firmware and driver versions outlined here apply to:
 
-//* NetApp HCI compute bootstrap OS
-//* NetApp HCI storage nodes running Element software
-* SolidFire cluster performance
-* NetApp Element software
 
 == Storage nodes
 * <<H610S>>
