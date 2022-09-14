@@ -5,7 +5,7 @@ keywords: documentation, earlier, previous, versions
 summary: Supported firmware and driver versions for Compute nodes.
 ---
 
-= Compute Nodes
+= Compute nodes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,14 +14,22 @@ summary: Supported firmware and driver versions for Compute nodes.
 :keywords: hci, earlier, documentation, versions
 
 [.lead]
-Compute nodes
+The firmware and driver versions outlined here apply to:
+
+* NetApp HCI compute bootstrap OS
+//* NetApp HCI storage nodes running Element software
+//* SolidFire cluster performance
+//* NetApp Element software
+
+== Compute nodes
 * <<H615C>>
 * <<H610C>>
 * <<H410C>>
 * <<H300E/H500E/H700E>>
 
-=== H615C
-
+== H615C
+//*ODM:* Quanta
+//*Platform:* D52B-1U Cascade Lake
 *Model Number (Family portion):* H615C
 
 //==== Vendor/Part number for all components
@@ -41,8 +49,8 @@ Compute nodes
 //| Boot Device	| Innodisk	| DGSML-A28D81BCBQCA-B196
 //|===
 
-==== Component firmware managed via Compute Firmware Bundle
-During 11.x timeframe, Element Software was the only way to release firmware.  Starting with Element 12.0, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates were now possible via an independently released CFB.
+=== Component firmware managed by a Compute Firmware Bundle
+During 11.x timeframe, Element Software was the only way to release firmware. Starting with Element 12.0, the concept of a *Compute Firmware Bundle* was introduced and firmware updates were now possible through an independently released Compute Firmware Bundle.
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
@@ -58,53 +66,53 @@ h| 10/25 GbE NIC
 h| VMware ESXi 6.5 driver version
 h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
-h| *CFB 2.154.4*
+h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | 3B12.CO	| 4.72.07	| 14.29.1016	| 4.16.71.1	| 4.17.71.1	| 4.21.71.1
-h| *SFB 2.150.4 via HCI 1.10*
+h| *Storage Firmware Bundle 2.150.4 through NetApp HCI 1.10*
 | 06/08/2022
 | 3B12.CO	| 4.72.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *SFB 2.146.2*
+h| *Storage Firmware Bundle 2.146.2*
 | 02/022/2022
 | 3B12.CO	| 4.72.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *CFB 2.99.4 via HCI 1.9P1*
+h| *Compute Firmware Bundle 2.99.4 through NetApp HCI 1.9P1*
 | 12/06/2021
 | 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *CFB 2.76.10*
+h| *Compute Firmware Bundle 2.76.10*
 | 08/29/2021
 | 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *CFB 2.99 via HCI 1.9*
+h| *Compute Firmware Bundle 2.99 through NetApp HCI 1.9*
 | 04/15/2021
 | 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *CFB 2.76.8*
+h| *Compute Firmware Bundle 2.76.8*
 | 02/03/2021
 | 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *CFB 2.27.1*
+h| *Compute Firmware Bundle 2.27.1*
 | 09/18/2020
 | 3B08.CO	| 4.68.07	| 14.24.1000	| 4.16.13.5	| 4.17.16.15	| 4.17.16.15
-h| *CFB 2.21 via HCI 1.8P1*
+h| *Compute Firmware Bundle 2.21 through NetApp HCI 1.8P1*
 | 09/29/2020
 | 3B08.CO	| 4.64.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
-h| *CFB 12.2.109*
+h| *Compute Firmware Bundle 12.2.109*
 | 08/07/2020
 | 3B08.CO	| 4.64.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
-h| *CFB 12.2.92*
+h| *Compute Firmware Bundle 12.2.92*
 | 06/22/2020
 | 3B06.CO	| 4.64.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
-h| *CFB 1.2.17 via HCI 1.8*
+h| *Compute Firmware Bundle 1.2.17 through NetApp HCI 1.8*
 | 03/20/2020
 | 3B06.CO	| 4.60.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
-h| *HCI 1.7P1*
+h| *NetApp HCI 1.7P1*
 | 11/21/2019
 | 3B06.CO	| 4.60.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
-h| *HCI 1.7*
+h| *NetApp HCI 1.7*
 | 09/26/2019
 | 3B06.CO	| 4.60.07	| 14.23.1020	| 4.16.13.5	| 4.17.13.8	| -
 |===
 
-==== Component firmware not managed via Compute Firmware Bundle
+=== Component firmware not managed by a Compute Firmware Bundle
 
-The following firmware is not managed via a Compute Firmware Bundle:
+The following firmware is not managed by a Compute Firmware Bundle:
 
 [cols=2*,options="header"]
 |===
@@ -118,8 +126,10 @@ DGSML-A28D81BCBQCA-B196 |
 M161225i
 |===
 
-=== H610C
-
+== H610C
+//*ODM:* Quanta
+//*Platform:* D52BV-2U Skylake
+//==== Vendor/Part number for all components
 *Model Number (Family portion):* H610C
 
 //[cols=3*,options="header"]
@@ -136,8 +146,8 @@ M161225i
 //| Boot Device	| Innodisk	| DGSML-A28D81BCBQCA-B196
 //|===
 
-==== Component firmware managed via Compute Firmware Bundle
-During HCI 1.0 - HCI 1.7, HCI was the only way to release firmware.  Starting with HCI 1.8, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates are now possible via an independently released CFB.
+=== Component firmware managed by a Compute Firmware Bundle
+During NetApp HCI 1.0 - NetApp HCI 1.7, NetApp HCI was the only way to release firmware.  Starting with NetApp HCI 1.8, the concept of a *Compute Firmware Bundle* was introduced and firmware updates are now possible by an independently released Compute Firmware Bundle.
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
@@ -153,62 +163,62 @@ h| 10/25 GbE NIC
 h| VMware ESXi 6.5 driver version
 h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
-h| *CFB 2.154.4*
+h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | 3B07 | 4.04.07 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
-h| *SFB 2.150.4 via HCI 1.10*
+h| *Storage Firmware Bundle 2.150.4 through NetApp HCI 1.10*
 | 06/08/2022
 | 3B07 | 4.04.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *SFB 2.146.2*
+h| *Storage Firmware Bundle 2.146.2*
 | 02/22/2022
 | 3B07 | 4.04.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *CFB 2.99.4 via HCI 1.9P1*
+h| *Compute Firmware Bundle 2.99.4 through NetApp HCI 1.9P1*
 | 12/06/2021
 | 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *CFB 2.76.10*
+h| *Compute Firmware Bundle 2.76.10*
 | 08/29/2021
 | 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *CFB 2.99 via HCI 1.9*
+h| *Compute Firmware Bundle 2.99 through NetApp HCI 1.9*
 | 04/15/2021
 | 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *CFB 2.76.8*
+h| *Compute Firmware Bundle 2.76.8*
 | 02/03/2021
 | 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *CFB 2.27.1*
+h| *Compute Firmware Bundle 2.27.1*
 | 09/18/2020
 | 3B03 | 4.00.07 | 14.25.1020 | 4.16.13.5 | 4.17.16.15 | 4.17.16.15
-h| *CFB 2.21 via HCI 1.8P1*
+h| *Compute Firmware Bundle 2.21 through NetApp HCI 1.8P1*
 | 09/29/2020
 | 3B01 | 3.96.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *CFB 12.2.109*
+h| *Compute Firmware Bundle 12.2.109*
 | 08/07/2020
 | 3B01 | 3.96.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *CFB 12.2.92*
+h| *Compute Firmware Bundle 12.2.92*
 | 06/22/2020
 | 3B01 | 3.96.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *CFB 1.2.17 via HCI 1.8*
+h| *Compute Firmware Bundle 1.2.17 through NetApp HCI 1.8*
 | 03/20/2020
 | 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.7P1*
+h| *NetApp HCI 1.7P1*
 | 11/21/2019
 | 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.7*
+h| *NetApp HCI 1.7*
 | 09/26/2019
 | 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.6*
+h| *NetApp HCI 1.6*
 | 08/19/2019
 | 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.4P1*
+h| *NetApp HCI 1.4P1*
 | 04/25/2019
 | 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.4*
+h| *NetApp HCI 1.4*
 | 11/29/2018
 | 3A02 | 3.91.07 | 14.22.1002 | 4.16.13.5 | 4.17.13.8 | -
 |===
 
-==== Component firmware not managed via Compute Firmware Bundle
+=== Component firmware not managed by a Compute Firmware Bundle
 
-The following firmware is not managed via a Compute Firmware Bundle:
+The following firmware is not managed by a Compute Firmware Bundle:
 
 [cols=2*,options="header"]
 |===
@@ -224,8 +234,10 @@ DGSML-A28D81BCBQCA-B196
 | M161225i
 |===
 
-=== H410C
-
+== H410C
+//*ODM:* SuperMicro (SMCI)
+//*Platform:* BigTwin X11 - Skylake
+//==== Vendor/Part number for all components
 *Model Number (Family portion):* H410C
 
 //[cols=3*,options="header"]
@@ -245,8 +257,8 @@ DGSML-A28D81BCBQCA-B196
 //| Boot Device | Micron | MTFDDAV240TCB1AR
 //|===
 
-==== Component firmware managed via Compute Firmware Bundle
-During HCI 1.0 - HCI 1.7, HCI was the only way to release firmware.  Starting with HCI 1.8, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates are now possible via an independently released CFB.
+=== Component firmware managed by a Compute Firmware Bundle
+During NetApp HCI 1.0 - NetApp HCI 1.7, NetApp HCI was the only way to release firmware.  Starting with NetApp HCI 1.8, the concept of a *Compute Firmware Bundle* was introduced and firmware updates are now possible by an independently released Compute Firmware Bundle.
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
@@ -262,62 +274,62 @@ h| 10/25 GbE NIC
 h| VMware ESXi 6.5 driver version
 h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
-h| *CFB 2.154.4*
+h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | NATP3.10 | 6.71.20 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
-h| *SFB 2.150.4 via HCI 1.10*
+h| *Storage Firmware Bundle 2.150.4 through NetApp HCI 1.10*
 | 06/08/2022
 | NATP3.10 | 6.71.20 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *SFB 2.146.2*
+h| *Storage Firmware Bundle 2.146.2*
 | 02/22/2022
 | NATP3.10 | 6.71.20 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.99.4 via HCI 1.9P1*
+h| *Compute Firmware Bundle 2.99.4 through NetApp HCI 1.9P1*
 | 12/06/2021
 | NATP3.9 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.76.10*
+h| *Compute Firmware Bundle 2.76.10*
 | 08/29/2021
 | NATP3.9 | 6.71.20 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 |4.19.16.1
-h| *CFB 2.99 via HCI 1.9*
+h| *Compute Firmware Bundle 2.99 through NetApp HCI 1.9*
 | 04/15/2021
 | NATP3.9 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.76.8*
+h| *Compute Firmware Bundle 2.76.8*
 | 02/03/2021
 | NATP3.9 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.27.1*
+h| *Compute Firmware Bundle 2.27.1*
 | 09/18/2020
 | NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.21 via HCI 1.8P1*
+h| *Compute Firmware Bundle 2.21 through NetApp HCI 1.8P1*
 | 09/29/2020
 | NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *CFB 12.2.109*
+h| *Compute Firmware Bundle 12.2.109*
 | 08/07/2020
 | NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *CFB 12.2.92*
+h| *Compute Firmware Bundle 12.2.92*
 | 06/22/2020
 | NA3.7 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *CFB 1.2.17 via HCI 1.8*
+h| *Compute Firmware Bundle 1.2.17 through NetApp HCI 1.8*
 | 03/20/2020
 | NA3.4 | 6.71.18 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *HCI 1.7P1*
+h| *NetApp HCI 1.7P1*
 | 11/21/2019
 | NA3.3	| 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *HCI 1.7*
+h| *NetApp HCI 1.7*
 | 09/26/2019
 | NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *HCI 1.6*
+h| *NetApp HCI 1.6*
 | 08/19/2019
 | NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *HCI 1.4P1*
+h| *NetApp HCI 1.4P1*
 | 04/25/2019
 | NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
-h| *HCI 1.4*
+h| *NetApp HCI 1.4*
 | 11/29/2018
 | NA2.2 | 6.53 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | -
 |===
 
-==== Component firmware not managed via Compute Firmware Bundle
+=== Component firmware not managed by a Compute Firmware Bundle
 
-The following firmware is not managed via a Compute Firmware Bundle:
+The following firmware is not managed by a Compute Firmware Bundle:
 
 [cols=2*,options="header"]
 |===
@@ -334,8 +346,10 @@ MTFDDAV240TCB1AR
 | DOMU037
 |===
 
-=== H300E/H500E/H700E
-
+== H300E/H500E/H700E
+//*ODM:* SuperMicro (SMC)
+//*Platform:* BigTwin X10 - Broadwell
+//==== Vendor/Part number for all components
 *Model Number (Family portion):* H300E/H500E/H700E
 
 //[cols=3*,options="header"]
@@ -355,8 +369,8 @@ MTFDDAV240TCB1AR
 //| Boot Device | Micron | MTFDDAV240TCB1AR
 //|===
 
-==== Component firmware managed via Compute Firmware Bundle
-During HCI 1.0 - HCI 1.7, HCI was the only way to release firmware.  Starting with HCI 1.8, the concept of a *Compute Firmware Bundle (CFB)* was introduced and firmware updates are now possible via an independently released CFB.
+=== Component firmware managed by a Compute Firmware Bundle
+During NetApp HCI 1.0 - NetApp HCI 1.7, NetApp HCI was the only way to release firmware.  Starting with NetApp HCI 1.8, the concept of a *Compute Firmware Bundle* was introduced and firmware updates are now possible by an independently released Compute Firmware Bundle.
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
@@ -372,62 +386,62 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | VMware ESXi 6.5 driver version
 | VMware ESXi 6.7 driver version
 | VMware ESXi 7.0 driver version
-h| *CFB 2.154.4*
+h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | NAT3.4 | 6.98.00 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
-h| *SFB 2.150.4 via HCI 1.10*
+h| *Storage Firmware Bundle 2.150.4 through NetApp HCI 1.10*
 | 06/08/2022
 | NAT3.4 | 6.98.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *SFB 2.146.2*
+h| *Storage Firmware Bundle 2.146.2*
 | 02/22/2022
 | NAT3.4 | 6.98.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.99.4 via HCI 1.9P1*
+h| *Compute Firmware Bundle 2.99.4 through NetApp HCI 1.9P1*
 | 12/06/2021
 | NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.76.10*
+h| *Compute Firmware Bundle 2.76.10*
 | 08/29/2021
 | NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.99 via HCI 1.9*
+h| *Compute Firmware Bundle 2.99 through NetApp HCI 1.9*
 | 04/15/2021
 | NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.76.8*
+h| *Compute Firmware Bundle 2.76.8*
 | 02/03/2021
 | NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.27.1*
+h| *Compute Firmware Bundle 2.27.1*
 | 09/18/2020
 | NA2.1 | 6.84.00 | 14.25.1020 | 4.16.13.5 | 4.17.15.16 | 4.19.16.1
-h| *CFB 2.21 via HCI 1.8P1*
+h| *Compute Firmware Bundle 2.21 through NetApp HCI 1.8P1*
 | 09/29/2020
 | NA2.1 | 6.84.00 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *CFB 12.2.109*
+h| *Compute Firmware Bundle 12.2.109*
 | 08/07/2020
 | NA2.1 | 6.84.00 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *CFB 12.2.92*
+h| *Compute Firmware Bundle 12.2.92*
 | 06/22/2020
 | NA2.1 | 6.84.00 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *CFB 1.2.17 via HCI 1.8*
+h| *Compute Firmware Bundle 1.2.17 through NetApp HCI 1.8*
 | 03/20/2020
 | NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.7P1*
+h| *NetApp HCI 1.7P1*
 | 11/21/2019
 | NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.7*
+h| *NetApp HCI 1.7*
 | 09/26/2019
 | NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.6*
+h| *NetApp HCI 1.6*
 | 08/19/2019
 | NA2.1 | 3.25 | 14.21.1000 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.4P1*
+h| *NetApp HCI 1.4P1*
 | 04/25/2019
 | NA2.1 | 3.25 | 14.17.2020 | 4.16.13.5 | 4.17.13.8 | -
-h| *HCI 1.4*
+h| *NetApp HCI 1.4*
 | 11/29/2018
 | NA2.1 | 3.25 | 14.17.2020 | 4.16.13.5 | 4.17.13.8 | -
 |===
 
-==== Component firmware not managed via Compute Firmware Bundle
+=== Component firmware not managed by a Compute Firmware Bundle
 
-The following firmware is not managed via a Compute Firmware Bundle:
+The following firmware is not managed by a Compute Firmware Bundle:
 
 [cols=2*,options="header"]
 |===
