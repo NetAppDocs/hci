@@ -21,8 +21,7 @@ NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for
 .What you'll need
 
 * *Admin privileges*: You have storage cluster administrator permissions to perform the upgrade.
-* *Valid upgrade path*: You have checked upgrade path information for the Element version you are upgrading to and verified that the upgrade path is valid.
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software%3F[NetApp KB: Upgrade matrix for storage clusters running NetApp Element Software^]
+* *Valid upgrade path*: You have checked upgrade path information for the Element version you are upgrading to and verified that the upgrade path is valid. See https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software%3F[NetApp KB: Upgrade matrix for storage clusters running NetApp Element Software^]
 * *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
