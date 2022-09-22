@@ -336,6 +336,11 @@ Software download:
 |vCenter Plug-in API access
 
 |vCenter Server
+|Remote plug-in
+|8333
+|Remote vCenter Plug-in service
+
+|vCenter Server
 |Management node
 |8443
 |(Optional) vCenter Plug-in QoSSIOC service.
