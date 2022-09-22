@@ -19,7 +19,7 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
-The storage firmware bundle version 2.164.0 contains support for NIC, Mellanox CX5 16.32.1010.
+The storage firmware bundle version 2.164.0 contains support for NIC, Mellanox CX5 16.32.1010 and a firmware update for PM9A3 drive.
 //a critical bug fix for H410S (PE-14168). See https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for further details. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
