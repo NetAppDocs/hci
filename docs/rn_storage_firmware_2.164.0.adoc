@@ -16,7 +16,7 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 :keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
-Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+Beginning with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
 The storage firmware bundle version 2.164.0 contains support for NIC, Mellanox CX5 16.32.1010 and a firmware update for PM9A3 drive.
@@ -160,7 +160,7 @@ This firmware package contains the following firmware versions for hardware comp
 |8ENP6101
 |===
 
-NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805. However, these component firmware cannot be updated via the Storage Firmware Bundle.
+NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805. However, these component firmware cannot be updated by way of the Storage Firmware Bundle.
 
 |===
 |Component |SF38410, SF19210, SF9605, and SF4805
@@ -178,7 +178,7 @@ NOTE: There has been no payload updates since Storage Firmware bundle 2.146.
 See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
 
 === Accessing the Bugs Online tool
-. Navigate to the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select  *Element Software* from the drop-down list:
+. Navigate to the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select *Element Software* from the drop-down list:
 +
 image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
 
