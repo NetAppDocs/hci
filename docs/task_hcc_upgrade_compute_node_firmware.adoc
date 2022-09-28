@@ -56,7 +56,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 * *KVM ESXi console*: Close all open Serial-Over-LAN (SOL) sessions and active KVM sessions in the BMC UI before starting a compute node upgrade.
 * *Witness Node requirements*: In two- and three-node storage clusters, one link:concept_hci_nodes.html[Witness Node] must be running in the NetApp HCI installation at all times.
 * *Compute node health check*: You have verified that the node is ready to be upgraded. See link:task_upgrade_compute_prechecks.html[Run compute node health checks prior to upgrading compute firmware].
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade compute node firmware:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20.69, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade compute node firmware:
 +
 . Open the IP address of the management node in a web browser:
 +
