@@ -1,0 +1,1039 @@
+---
+sidebar: sidebar
+permalink: docs/fw_storage_nodes.html
+keywords: documentation, earlier, previous, versions
+summary: Supported firmware and driver versions for storage nodes.
+---
+
+= Storage nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, earlier, documentation, versions
+
+[.lead]
+
+
+== Storage nodes
+* <<H610S>>
+* <<H410S>>
+
+== H610S
+//*ODM:* Quanta
+//*Platform:* QS52B-1Ud
+//*Model Number (Family portion):* H610S
+//*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, H610S-2F
+//==== Vendor/Part number for all components
+*Model Number (Family portion):* H610S
+*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, and H610S-2F
+
+//[cols=3*,options="header"]
+//|===
+//| Component
+//| Vendor
+//| Part number
+//| BIOS
+//| Quanta
+//| Motherboard
+//| BMC
+//| Quanta
+//| Motherboard
+//| CPLD
+//| Quanta
+//| Motherboard
+//| 1/10 GbE NIC
+//| Quanta/Intel
+//| 3GS5BMA00D0
+//| 10/25 GbE NIC
+//| Mellanox
+//| MCX4121A-ACAT
+//.2+a| NVDIMM Module
+//.2+a| Smart
+//| STN722G4QNT26MP1SC (Gen 2)
+//NVDIMM Module #4
+//| SH2047NJ420472SB3 (Gen 1)
+//NVDIMM Module #1
+//.2+a| Energy Source (BPM)
+//.2+a| Smart
+//| STC48042QNTDE82BVG (Gen 2)
+//Energy Source #5
+//| SSC48042SMTDE82B (Gen 1)
+//Energy Source #1
+//.2+a| NVDIMM Module
+//.2+a| Micron
+//| 18ASF2G72PF12G9WP1AB (Gen 2)
+// NVDIMM Module #3
+//| 18ASF2G72PF12G6V21AB (Gen 1)
+//NVDIMM Module #2
+//.3+a| Energy Source (PGEM)
+//.3+a| Micron/Agigatech
+//| AGIGA9834-203JCA (Gen 3)
+// Energy Source #4
+//| AGIGA9824-103JCB (Gen 2)
+//Energy Source #3
+//| AGIGA9824-103JCA (Gen 1)
+//Energy Source #2
+//| Boot Device
+//| Innodisk
+//| 3GM2-P
+//.3+a| Drives
+//.3+a| Samsung
+//| PM9A3
+//| PM983
+//| PM963
+//| Drives
+//| Kioxia
+//| CD5
+//| Drives
+//| Solidigm (SK Hynix)
+//| PE8010
+//|===
+
+=== Component firmware managed by a Storage Firmware Bundle
+During 11.x timeframe, NetApp Element software was the only way to release firmware. Starting with Element 12.0, the concept of a *Storage Firmware Bundle* was introduced and firmware updates were now possible by an independently released Storage Firmware Bundle or Storage Firmware Bundle included as part of a 12.x Element release.
+
+NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
+
+
+[cols=25*,options="header"]
+|===
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| CPLD
+h| 10/25 GbE NIC Quanta Mellanox
+h| Cache NVDIMM NVDIMM module Smart (Gen1)
+h| Cache NVDIMM Energy Source (BPM) Smart (Gen1)
+h| Cache NVDIMM NVDIMM module Smart (Gen2)
+h| Cache NVDIMM Energy Source (BPM) Smart (Gen2)
+h| Cache NVDIMM NVDIMM module Micron (Gen1)
+h| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen1)
+h| Cache NVDIMM NVDIMM module Micron (Gen2)
+h| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen2)
+h| Cache NVDIMM Energy Source (PGEM) Agigatech (Gen3)
+h| Drive Samsung PM963 (SED)
+h| Drive Samsung PM963 (N-SED)
+h| Drive Samsung PM983 (SED)
+h| Drive Samsung PM983 (N-SED)
+h| Drive Kioxia CD5 (SED)
+h| Drive Kioxia CD5 (N-SED)
+h| Drive CD5 (FIPS)
+h| Drive Samsung PM9A3 (SED)
+h| Drive SK Hynix PE8010 (SED)
+h| Drive SK Hynix PE8010 (N-SED)
+h| *Storage Firmware Bundle 2.150.4*
+| 06/08/2022
+| 3B11
+| 3.94.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.3
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5602Q
+| EDA5900Q
+| 0109
+| 0109
+| 0108
+| GDC5502Q
+| 11092A10
+| 110B2A10
+h| *Storage Firmware Bundle 2.150.4 through NetApp Element 12.5*
+| 06/08/2022
+| 3B11
+| 3.94.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.3
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5602Q
+| EDA5900Q
+| 0109
+| 0109
+| 0108
+| GDC5502Q
+| 11092A10
+| 110B2A10
+h| *Storage Firmware Bundle 2.146.2*
+| 02/22/2022
+| 3B11
+| 3.94.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.3
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5602Q
+| EDA5900Q
+| 0109
+| 0109
+| 0108
+| GDC5502Q
+| 11092A10
+| 110B2A10
+h| *Storage Firmware Bundle 2.99.4 through NetApp Element 12.3.2*
+| 09/16/2021
+| 3B06
+| 3.91.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.99.4 through NetApp Element 12.3.1.165*
+| 12/06/2021
+| 3B06
+| 3.91.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.99.2*
+| 12/06/2021
+| 3B06
+| 3.91.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.99.1 through NetApp Element 12.3.1.103*
+| 09/16/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.99 through NetApp Element 12.3*
+| 04/15/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.76.8*
+| 02/03/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.27.1*
+| 09/29/2020
+| 3B03
+| 3.84.07
+| 122
+| 14.02.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5302Q
+| EDA5600Q
+| 0108
+| 0108
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.76.8 through NetApp Element 12.2.1*
+| 06/02/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.21 through NetApp Element 12.2*
+| 09/29/2020
+| 3B03
+| 3.84.07
+| 122
+| 14.22.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5302Q
+| EDA5600Q
+| 0108
+| 0108
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 2.76.8 through NetApp Element 12.0.1*
+| 06/02/2021
+| 3B06
+| 3.86.07
+| 122
+| 14.25.1020
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| 1.10
+| 3.1
+| 2.16
+| CXV8202Q
+| CXV8501Q
+| EDA5402Q
+| EDA5700Q
+| 0109
+| 0109
+| 0108
+| -
+| -
+| -
+h| *Storage Firmware Bundle 1.2.17 through NetApp Element 12.0*
+| 03/20/2020
+| 3B03
+| 3.78.07
+| 122
+| 14.22.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0108
+| -
+| -
+| -
+h| *NetApp Element 11.8*
+| 03/11/2020
+| 3B03
+| 3.78.07
+| 122
+| 14.22.1002
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0107
+| -
+| -
+| -
+h| *NetApp Element 11.7*
+| 11/21/2019
+| 3A10
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0107
+| -
+| -
+| -
+h| *NetApp Element 11.5.1*
+| 02/20/2020
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| 0107
+| -
+| -
+| -
+h| *NetApp Element 11.5*
+| 09/26/2019
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| 0107
+| -
+| -
+| -
+h| *NetApp Element 11.3.2*
+| 02/19/2020
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| -
+| -
+| -
+| -
+h| *NetApp Element 11.3.1*
+| 08/19/2019
+| 3A08
+| 3.76.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| -
+| -
+| -
+| -
+h| *NetApp Element 11.1.1*
+| 02/19/2020
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| -
+| -
+| -
+| -
+h| *NetApp Element 11.1*
+| 04/25/2019
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| -
+| -
+| -
+| -
+h| *NetApp Element 11.0.2*
+| 02/19/2020
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| 25.3C
+| 1.40
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| 0108
+| 0108
+| -
+| -
+| -
+| -
+h| *NetApp Element 11*
+| 11/29/2018
+| 3A06
+| 3.70.07
+| 117
+| 14.22.1002
+| 2.C
+| 2.07
+| 26.2C
+| 1.30
+| -
+| -
+| -
+| -
+| -
+| CXV8202Q
+| CXV8501Q
+| EDA5202Q
+| EDA5200Q
+| -
+| -
+| -
+| -
+| -
+| -
+|===
+
+=== Component firmware not managed by a Storage Firmware Bundle
+
+The following firmware is not managed by a Storage Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| 1/10 GbE NIC | 3.2d
+0x80000b4b
+| Boot device | M161225i
+|===
+
+== H410S
+//*ODM:* SuperMicro (MSC)
+//*Platform:* BigTwin X10 - Broadwell
+//==== Vendor/Part number for all components
+*Model Number (Family portion):* H410S
+*Full Model Numbers:* H410S-0, H410S-1, H410S-1-NE, and H410S-2
+
+//[cols=3*,options="header"]
+//|===
+//| Component
+//| Vendor
+//| Part number
+//| BIOS
+//| SMCI
+//| Motherboard
+//| BMC
+//| SMCI
+//| Motherboard
+//| CPLD
+//| SMCI
+//| Motherboard
+//| SAS Adapter
+//| SMCI/Broadcom
+//| BPN-6S3008N4-1UB-NA11
+//| MicroController Unit (MCU)
+//| SMCI
+//| BPN-SAS3-217BHQ-N4-NA11
+//| SIOM 1/10 GbE NIC
+//| SMCI/Intel
+//| AOC-MH25G-M2S2TM-NA011
+//| SIOM 10/25 GbE NIC
+//| SMCI/Mellanox
+//| AOC-MH25G-M2S2TM-NA011
+//| AOC 10/25 GbE NIC
+//| SMCI/Mellanox
+//| AOC-S25G-M2S-NA011
+//| Cache NVDIMM
+//| Radian
+//| RMS-200
+//| Cache NVDIMM
+//| Radian
+//| RMS-300
+//| Power Supply
+//| SMCI
+//| PWS-2K22A-1R-NA011
+//| Boot Device
+//| Intel
+//| SSDSCKJB240G7
+//| Boot Device
+//| Micron
+//| MTFDDAV240TCB1AR
+//.2+a| Drives
+//.2+a| Samsung
+//| PM883
+//| PM863
+//| Drives
+//| Toshiba
+//| Hawk-4
+//|===
+
+=== Component firmware managed by a Storage Firmware Bundle
+
+Component firmware managed by a Storage Firmware Bundle.
+
+[cols=12*,options="header"]
+|===
+h| Release Vehicle
+h| Release Date
+h| BIOS
+h| BMC
+h| 10/25 GbE NIC SMCI Mellanox
+h| Cache NVDIMM RMS200
+h| Cache NVDIMM RMS300
+h| Drive Samsung PM863 (SED)
+h| Drive Samsung PM863 (N-SED)
+h| Drive Toshiba Hawk-4 (SED)
+h| Drive Toshiba Hawk-4 (N-SED)
+h| Drive Samsung PM883 (SED)
+h| *Storage Firmware Bundle 1.2.17 through NetApp Element 12.0*
+| 03/20/2020
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7104Q
+h| *Storage Firmware Bundle 2.150.4 through NetApp Element 12.5*
+| 06/08/2022
+| NAT3.4
+| 6.98.00
+| 14.25.1020
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7A04Q
+h| *Storage Firmware Bundle 2.99 through NetApp Element 12.3*
+| 04/15/2021
+| NA2.1
+| 6.84.00
+| 14.25.1020
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *Storage Firmware Bundle 2.76.8 through NetApp Element 12.2.1*
+| 06/02/2021
+| NA2.1
+| 6.84.00
+| 14.25.1020
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *SFB 1.2.17 through NetApp Element 12.0*
+| 03/20/2020
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.8.2*
+| 02/22/2022
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.8.1*
+| 06/02/2021
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.8*
+| 03/11/2020
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.7*
+| 11/21/2019
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.5.1*
+| 02/19/2020
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.5*
+| 09/26/2019
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.3.2*
+| 02/19/2020
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.3.1*
+| 08/19/2019
+| NA2.1
+| 3.25
+| 14.21.1000
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.1.1*
+| 02/19/2020
+| NA2.1
+| 3.25
+| 14.17.2020
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.1*
+| 04/25/2019
+| NA2.1
+| 3.25
+| 14.17.2020
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.0.2*
+| 02/19/2020
+| NA2.1
+| 3.25
+| 14.17.2020
+| ae3b8cc
+| 7d8422bc
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+h| *NetApp Element 11.0*
+| 11/29/2018
+| NA2.1
+| 3.25
+| 14.17.2020
+| ae3b8cc
+| -
+| GXT5404Q
+| GXT5103Q
+| 8ENP7101
+| 8ENP6101
+| HXT7904Q
+|===
+
+=== Component firmware not managed by a Storage Firmware Bundle
+
+The following firmware is not managed by a Storage Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| CPLD	| 01.A1.06
+| SAS Adapter	| 16.00.01.00
+| Microcontroller Unit (MCU)	| 1.18
+| SIOM 1/10 GbE NIC	| 1.93
+| Power Supply	| 1.3
+| Boot Device SSDSCKJB240G7 | N2010121
+| Boot Device MTFDDAV240TCB1AR | DOMU037
+|===

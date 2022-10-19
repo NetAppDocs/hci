@@ -6,7 +6,6 @@ keywords: netapp, hci, management node, mnode, api, token
 ---
 
 = Get authorization to use REST APIs
-
 :hardbreaks:
 :nofooter:
 :icons: font

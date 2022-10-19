@@ -6,7 +6,6 @@ keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring
 ---
 
 = Enable Active IQ and NetApp HCI monitoring
-
 :hardbreaks:
 :nofooter:
 :icons: font

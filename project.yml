@@ -11,7 +11,7 @@ sidebar:
     - title: NetApp HCI Documentation
       url: /index.html
     - title: NetApp HCI Solutions
-      url: https://docs.netapp.com/us-en/hci-solutions/index.html
+      url: /docs/hci_solutions_index.html
     - title: Release Notes
       entries:
         - title: What's new in NetApp HCI
@@ -383,6 +383,8 @@ homepage:
       links:
         - title: Product overview
           url: /docs/concept_hci_product_overview.html
+        - title: Supported firmware and ESXi driver versions
+          url: docs/firmware_driver_versions.html
         - title: Release notes
           url: /docs/rn_relatedrn.html
         - title: What's new

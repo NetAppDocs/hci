@@ -6,7 +6,6 @@ keywords: netapp, hci, api, REST, remove, compute, asset
 ---
 
 = Remove an asset from the management node
-
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -15,7 +15,7 @@ keywords: netapp, hci, deployment, review, deploy
 [.lead]
 After deploying NetApp HCI, you should use VMware vSphere Lifecycle Manager to apply the latest security patches for the version of VMware vSphere used with NetApp HCI.
 
-Use the https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Tool] to ensure that all versions of software are compatible. See the https://docs.vmware.com/en/VMware-vSphere/index.html[VMware vSphere Lifecycle Manager documentation] for more information.
+Use the https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Tool^] to ensure that all versions of software are compatible. See the https://docs.vmware.com/en/VMware-vSphere/index.html[VMware vSphere Lifecycle Manager documentation^] for more information.
 
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

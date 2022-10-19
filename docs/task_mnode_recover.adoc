@@ -6,7 +6,6 @@ keywords: netapp, element, management node, mnode, disaster recovery, redeploy, 
 ---
 
 = Recover a management node
-
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -185,7 +184,7 @@ NOTE: You can add the user name or allow the script to prompt you for the inform
 
 +
 .. Run the `redeploy-mnode` command. The script displays a success message when the redeployment is complete.
-.. If you access Element or NetApp HCI web interfaces (such as the management node or NetApp Hybrid Cloud Control) using the Fully Qualified Domain Name (FQDN) of the system, link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api[reconfigure authentication for the management node^].
+.. If you access Element or NetApp HCI web interfaces (such as the management node or NetApp Hybrid Cloud Control) using the Fully Qualified Domain Name (FQDN) of the system, link:task_hcc_upgrade_management_node.html#reconfigure-authentication-using-the-management-node-rest-api[reconfigure authentication for the management node].
 
 IMPORTANT: SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 and later. If you had previously enabled SSH functionality on the management node, you might need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node.
 

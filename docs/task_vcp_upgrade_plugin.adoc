@@ -2,11 +2,10 @@
 sidebar: sidebar
 permalink: docs/task_vcp_upgrade_plugin.html
 summary: As part of a NetApp HCI system upgrade, you can upgrade the Element Plug-in for vCenter Server.
-keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10
 ---
 
 = Upgrade the Element Plug-in for vCenter Server
-
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -20,11 +19,13 @@ You can update the plug-in registration on vCenter Server Virtual Appliance (vCS
 
 This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for VMware vCenter Server 4.9, 4.8, 4.7, 4.6, 4.5, or 4.4.
+* You are upgrading to Element Plug-in for VMware vCenter Server 4.10, 4.9, 4.8, 4.7, 4.6, 4.5, or 4.4.
 * You are upgrading to a 7.0, 6.7, or 6.5 HTML5 vSphere Web Client.
 +
-IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, and 4.8.
-
+[IMPORTANT]
+====
+* The plug-in is not compatible with VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, and 4.8.
+====
 * You are upgrading to a 6.7 Flash vSphere Web Client.
 +
 IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in^].
@@ -88,8 +89,8 @@ After upgrading to NetApp Element Plug-in for vCenter Server 4.8 or later with V
 +
 You should see the following version details or details of a more recent version:
 ----
-NetApp Element Plug-in Version: 4.9
-NetApp Element Plug-in Build Number: 14
+NetApp Element Plug-in Version: 4.10
+NetApp Element Plug-in Build Number: 12
 ----
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
 
