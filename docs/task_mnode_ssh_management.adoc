@@ -15,7 +15,7 @@ keywords: netapp, mnode, management node, ssh, disable, enable, rest api, hybrid
 [.lead]
 You can disable, re-enable, or determine the status of the SSH capability on the management node (mNode) using the REST API. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 or later.
 
-Beginning with Management Services 2.20, you can enable and disable SSH capability on the management node using the NetApp Hybrid Cloud Control UI.
+Beginning with Management Services 2.20.69, you can enable and disable SSH capability on the management node using the NetApp Hybrid Cloud Control UI.
 
 .What you'll need
 * *NetApp Hybrid Cloud Control permissions*: You have permissions as administrator.
@@ -23,7 +23,7 @@ Beginning with Management Services 2.20, you can enable and disable SSH capabili
 * *Element software*: Your cluster is running NetApp Element software 11.3 or later.
 * *Management node*: You have deployed a management node running version 11.3 or later.
 * *Management services updates*:
-** To use the NetApp Hybrid Cloud Control UI, you have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle^] to version 2.20.
+** To use the NetApp Hybrid Cloud Control UI, you have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle^] to version 2.20.69 or later.
 ** To use the REST API UI, you have updated your https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[management services bundle^] to version 2.17.
 
 .Options
