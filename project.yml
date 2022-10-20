@@ -311,39 +311,41 @@ sidebar:
        - title: Remove Witness Nodes after expanding cluster
          url: /docs/task_hci_removewn.html
     - title: Use Rancher on NetApp HCI
-      entries:
-       - title: Rancher on NetApp HCI overview
-         url: /docs/concept_rancher_product_overview.html
-       - title: Concepts
-         url: /docs/concept_rancher_concepts.html
-       - title: Requirements for Rancher on NetApp HCI
-         url: /docs/rancher_prereqs_overview.html
-       - title: Deploy Rancher on NetApp HCI
-         url: /docs/task_rancher_deploy.html
-       - title: Post-deployment tasks
-         entries:
-          - title: Post-deployment tasks overview
-            url: /docs/concept_rancher_post_deployment_overview.html
-          - title: Ensure Rancher Support parity
-            url: /docs/task_rancher_ensure_rancher_support_parity.html
-          - title: Improve Rancher VM resiliency
-            url: /docs/task_rancher_config_anti_affinity.html
-          - title: Configure monitoring
-            url: /docs/task_rancher_enable_monitoring.html
-          - title: Install Trident
-            url: /docs/task_rancher_trident.html
-          - title: Enable Trident support for user clusters
-            url: /docs/task_trident_configure_networking.html
-       - title: Deploy user clusters and applications
-         url: /docs/task_rancher_deploy_user_clusters.html
-       - title: Manage Rancher on NetApp HCI
-         url: /docs/task_rancher_manage.html
-       - title: Monitor Rancher on NetApp HCI
-         url: /docs/task_rancher_monitor.html
-       - title: Upgrade Rancher on NetApp HCI
-         url: /docs/task_rancher_upgrades.html
-       - title: Remove a Rancher installation on NetApp HCI
-         url: /docs/task_rancher_remove_deployment.html
+      url: /docs/concept_rancher_index.html
+      # Rancher no longer supported beginning with management services 2.21.61
+      # entries:
+       # - title: Rancher on NetApp HCI overview
+      #   url: /docs/concept_rancher_product_overview.html
+      # - title: Concepts
+      #   url: /docs/concept_rancher_concepts.html
+      # - title: Requirements for Rancher on NetApp HCI
+      #   url: /docs/rancher_prereqs_overview.html
+      # - title: Deploy Rancher on NetApp HCI
+      #   url: /docs/task_rancher_deploy.html
+      # - title: Post-deployment tasks
+      #   entries:
+      #    - title: Post-deployment tasks overview
+      #      url: /docs/concept_rancher_post_deployment_overview.html
+      #    - title: Ensure Rancher Support parity
+      #      url: /docs/task_rancher_ensure_rancher_support_parity.html
+      #    - title: Improve Rancher VM resiliency
+      #      url: /docs/task_rancher_config_anti_affinity.html
+      #    - title: Configure monitoring
+      #      url: /docs/task_rancher_enable_monitoring.html
+      #    - title: Install Trident
+      #      url: /docs/task_rancher_trident.html
+      #    - title: Enable Trident support for user clusters
+      #      url: /docs/task_trident_configure_networking.html
+      # - title: Deploy user clusters and applications
+      #   url: /docs/task_rancher_deploy_user_clusters.html
+      # - title: Manage Rancher on NetApp HCI
+      #   url: /docs/task_rancher_manage.html
+      # - title: Monitor Rancher on NetApp HCI
+      #   url: /docs/task_rancher_monitor.html
+      # - title: Upgrade Rancher on NetApp HCI
+      #   url: /docs/task_rancher_upgrades.html
+      # - title: Remove a Rancher installation on NetApp HCI
+      #   url: /docs/task_rancher_remove_deployment.html
     - title: Maintain H-series hardware
       entries:
        - title: H-series hardware maintenance overview
@@ -409,8 +411,6 @@ homepage:
           url: /docs/task_mnode_work_overview.html
         - title: Use NetApp Element Plug-in for vCenter Server
           url: https://docs.netapp.com/us-en/vcp/index.html
-        - title: Use Rancher
-          url: /docs/concept_rancher_product_overview.html
         - title: Expand NetApp HCI
           url: /docs/concept_hcc_expandoverview.html
         - title: Upgrade NetApp HCI

@@ -39,7 +39,7 @@ NOTE: For a complete matrix of firmware and driver firmware for your hardware, s
 [[storage-firmware-upgrade]]
 include::../_include/element_software_and_storage_firmware_upgrade_time.adoc[]
 
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20.69, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
 +
 . Open the IP address of the management node in a web browser:
 +

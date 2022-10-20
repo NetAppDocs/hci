@@ -25,7 +25,7 @@ Upgrades are available by component instead of a cumulative package. As such, so
 IMPORTANT: You must upgrade to the latest management services bundle 2.17 or later for Rancher functionality.
 
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:rancher_prereqs_overview.html#required-ports[Network ports] for more information.
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade a Rancher deployment:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20.69, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade a Rancher deployment:
 +
 . Open the IP address of the management node in a web browser:
 +
