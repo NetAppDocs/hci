@@ -60,16 +60,17 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * link:rn_compute_firmware_2.76.html[Compute Firmware Bundle 2.76 Release Notes]
 * link:rn_compute_firmware_2.27.html[Compute Firmware Bundle 2.27 Release Notes]
 * link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes]
-* link:firmware_driver_versions.html[Supported firmware and driver versions] _NEW_
+* link:firmware_driver_versions.html[Supported firmware and ESXi driver versions] _NEW_
 
 == Storage firmware
-* link:rn_storage_firmware_2.150.html[Storage Firmware Bundle 2.150 Release Notes] _NEW_
+* link:rn_storage_firmware_2.164.0.html[Storage Firmware Bundle 2.164.0 Release Notes] _NEW_
+* link:rn_storage_firmware_2.150.html[Storage Firmware Bundle 2.150 Release Notes]
 * link:rn_storage_firmware_2.146.html[Storage Firmware Bundle 2.146 Release Notes]
 * link:rn_storage_firmware_2.99.2.html[Storage Firmware Bundle 2.99.2 Release Notes]
 * link:rn_storage_firmware_2.76.html[Storage Firmware Bundle 2.76 Release Notes]
 * link:rn_storage_firmware_2.27.html[Storage Firmware Bundle 2.27 Release Notes]
 * link:rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes]
-* link:firmware_driver_versions.html[Supported firmware and driver versions] _NEW_
+* link:firmware_driver_versions.html[Supported firmware and ESXi driver versions] _NEW_
 
 ////
 * link:rn_storage_firmware_2.27.html[Storage firmware 2.27 Release Notes]

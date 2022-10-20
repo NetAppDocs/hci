@@ -102,7 +102,6 @@ The updated Mellanox firmware version 14.29.1016 requires a minimum version of V
 | 6.5 | 4.16.71.1
 |===
 
-
 //* *ESXi 7.0*: Version 4.21.71.1
 //* *ESXi 7.0*: H610C/H615C: Version 4.17.15.16
 //* *ESXi 6.7*: Version 4.17.71.1
