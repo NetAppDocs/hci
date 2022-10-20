@@ -17,9 +17,11 @@ keywords: netapp, hci, element, new, whatsnew
 [.lead]
 NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.10 includes Element software 12.5 for storage clusters.
 
+NOTE: Element software 12.7 is the latest release and includes security and system component updates, operational improvements, and resolved issues. https://docs.netapp.com/us-en/element-software/concepts/concept_rn_whats_new_element.html[Learn more about what's new in Element 12.7^]. 
+
 * The <<NetApp HCI 1.10>> section describes new features and updates in NetApp HCI version 1.10.
 
-* The <<Element 12.5>> section describes new features and updates in NetApp Element 12.5.
+* The <<Element software 12.5>> section describes new features and updates in Element 12.5.
 
 == NetApp HCI 1.10
 NetApp HCI 1.10 includes security and stability improvements, and increases post deployment scaling flexibility.
@@ -46,7 +48,7 @@ NetApp Hybrid Cloud Control is enhanced for version 1.10. link:https://kb.netapp
 
 The NetApp Bugs Online tool contains resolved and known issues for NetApp HCI, Element software, and other products. You can browse these issues using keywords or versions at https://mysupport.netapp.com/site/products/all/details/netapp-hci/bugsonline-tab[NetApp Bugs Online^].
 
-== Element 12.5
+== Element software 12.5
 Element 12.5 introduces improved storage node access, enhanced custom Protection Domains manageability, new and improved cluster faults and events, enhanced Cluster UI functionality, enhanced security, and automated upgrades using Ansible.
 
 === Improved storage node access

@@ -1,26 +1,26 @@
 ---
 sidebar: sidebar
-permalink: docs/rn_storage_firmware_2.150.html
+permalink: docs/rn_storage_firmware_2.164.0.html
 summary: Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.
 keywords: netapp, hci, storage firmware
 ---
 ////
 This file isn't included in the sidebar nav system. It is only linked to from the rn_relatedrn.adoc file, and this is by design. It might be a totally poor design, but we're going to try it out. -MW, 6-3-2020
 ////
-= Storage Firmware Bundle 2.150 Release Notes
+= Storage Firmware Bundle 2.164.0 Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
+:keywords: hci, release notes, vcp, element, management services, firmware bundle
 
 [.lead]
-Starting with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
+Beginning with Element 12.0 and management services version 2.14, you can perform firmware-only upgrades on your storage nodes using the NetApp Hybrid Cloud Control UI and REST API. This procedure does not upgrade Element software and enables you to upgrade storage firmware outside of a major Element release.
 
 == What's New
-
-The storage firmware bundle version 2.150 contains a critical bug fix for H410S (PE-14168). See https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for further details. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
+The storage firmware bundle version 2.164.0 contains support for NIC, Mellanox CX5 16.32.1010 and a firmware update for PM9A3 drive.
+//a critical bug fix for H410S (PE-14168). See https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for further details. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
 This firmware package contains the following firmware versions for hardware components:
@@ -35,8 +35,11 @@ This firmware package contains the following firmware versions for hardware comp
 |BMC
 |3.94.07
 
-|NIC / Mellanox
+|NIC, Mellanox CX4
 |14.25.1020
+
+|NIC, Mellanox CX5
+|*16.32.1010*
 
 |NVIDIMM, Smart Gen1
 |3.1
@@ -72,7 +75,7 @@ This firmware package contains the following firmware versions for hardware comp
 |EDA5900Q
 
 |PM9A3, SED
-|GDC5502Q
+|*GDC5602Q*
 
 |CD5, SED
 |0109
@@ -157,7 +160,7 @@ This firmware package contains the following firmware versions for hardware comp
 |8ENP6101
 |===
 
-NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805. However, these component firmware cannot be updated via the Storage Firmware Bundle.
+NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805. However, these component firmware cannot be updated by way of the Storage Firmware Bundle.
 
 |===
 |Component |SF38410, SF19210, SF9605, and SF4805
@@ -175,8 +178,7 @@ NOTE: There has been no payload updates since Storage Firmware bundle 2.146.
 See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for details of issues that have been resolved and for any new issues.
 
 === Accessing the Bugs Online tool
-. Navigate to the  https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select  *Element Software* from the drop-down list:
-
+. Navigate to the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] and select *Element Software* from the drop-down list:
 +
 image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
 
