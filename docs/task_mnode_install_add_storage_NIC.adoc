@@ -6,7 +6,6 @@ keywords: netapp, element, management node, mnode, network, nic, storage nic
 ---
 
 = Configure a storage Network Interface Controller (NIC)
-
 :hardbreaks:
 :nofooter:
 :icons: font

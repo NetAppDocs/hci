@@ -38,14 +38,16 @@ As part of your normal support contract, NetApp Support monitors this data and a
 https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
-. From the Dashboard, click the menu on the upper right.
+. From the Dashboard, select the menu on the upper right.
 . Select *View Active IQ*.
 +
 The link:https://activeiq.solidfire.com[SolidFire Active IQ Dashboard^] appears.
-. To learn about SolidFire Active IQ, from the Dashboard, click the menu icon on the upper right and click *Documentation*.
+. To learn about SolidFire Active IQ, see the https://docs.netapp.com/us-en/solidfire-active-iq/index.html[SolidFire Active IQ Documentation^].
++
+You can also access the SolidFire Active IQ documentation from the dashboard by selecting the menu icon on the upper right and selecting *Documentation*.
 . From the SolidFire Active IQ interface, verify that the NetApp HCI compute and storage nodes are reporting telemetry correctly to Active IQ:
-.. If you have more than one NetApp HCI installation, click *Select a Cluster* and choose the cluster from the list.
-.. In the left navigation pane, click *Nodes*.
+.. If you have more than one NetApp HCI installation, select *Select a Cluster* and choose the cluster from the list.
+.. In the left navigation pane, select *Nodes*.
 . If a node or nodes are missing from the list, contact NetApp Support.
 
 TIP: To view the number of storage and compute resources, look at the Hybrid Cloud Control (HCC) Dashboard. See link:task_hcc_dashboard.html[Monitor storage and compute resources with the HCC Dashboard].
@@ -53,6 +55,6 @@ TIP: To view the number of storage and compute resources, look at the Hybrid Clo
 
 [discrete]
 == Find more information
-* https://help.monitoring.solidfire.com[NetApp SolidFire Active IQ Documentation^]
+* https://docs.netapp.com/us-en/solidfire-active-iq/index.html[NetApp SolidFire Active IQ Documentation^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

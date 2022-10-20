@@ -92,7 +92,7 @@ NOTE: Total Efficiencies equals (maxUsedSpace * efficiency factor) / 2, where ef
 +
 See link:concept_hcc_expandoverview.html[Expansion overview].
 
-.	For further analysis and historical context, look at https://activeiq.solidfire.com/[NetApp SolidFire Active IQ details].
+.	For further analysis and historical context, look at https://activeiq.solidfire.com/[NetApp SolidFire Active IQ details^].
 
 
 == Monitor storage performance
@@ -136,9 +136,10 @@ image::hcc_dashboard_compute_util_cpu.png[Compute Utilization panes]
 ..	*CPU* tab: See the current average of CPU utilization on the compute cluster.
 ..	*Memory* tab: See the current average memory usage on the compute cluster.
 
-. For further analysis on compute information, see https://activeiq.solidfire.com[NetApp SolidFire Active IQ for historical data].
+. For further analysis on compute information, see https://activeiq.solidfire.com[NetApp SolidFire Active IQ for historical data^].
 
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://docs.netapp.com/us-en/solidfire-active-iq/index.html[NetApp SolidFire Active IQ documentation^]

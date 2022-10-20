@@ -62,7 +62,7 @@ This disables real-time health and diagnostic monitoring for NetApp HCI. Disabli
 You can monitor the progress while NetApp HCI adds and configures the resources.
 . *Optional*: Verify that any new storage nodes are visible in the Element Plug-in for vCenter Server.
 +
-NOTE: If you expanded a two-node storage cluster to four nodes or more, the pair of Witness Nodes previously used by the storage cluster are still visible as standby virtual machines in vSphere. The newly expanded storage cluster does not use them; if you want to reclaim VM resources, you can link:task_hci_removewn.html[manually remove^] the Witness Node virtual machines.
+NOTE: If you expanded a two-node storage cluster to four nodes or more, the pair of Witness Nodes previously used by the storage cluster are still visible as standby virtual machines in vSphere. The newly expanded storage cluster does not use them; if you want to reclaim VM resources, you can link:task_hci_removewn.html[manually remove] the Witness Node virtual machines.
 
 [discrete]
 == Find more information
