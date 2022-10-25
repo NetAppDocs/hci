@@ -19,78 +19,12 @@ summary: Supported firmware and driver versions for storage nodes.
 == Storage nodes
 * <<H610S>>
 * <<H410S>>
-* <<SF38410 SF19210 SF9605 SF4805>>
+* <<SF38410, SF19210, SF9605, and SF4805>>
 
 == H610S
-//*ODM:* Quanta
-//*Platform:* QS52B-1Ud
-//*Model Number (Family portion):* H610S
-//*Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, H610S-2F
-//==== Vendor/Part number for all components
 *Model Number (Family portion):* H610S
 *Full Model Numbers:* H610S-1, H610S-1-NE, H610S-2, H610S-2-NE, H610S-4, H610S-4-NE, and H610S-2F
 
-//[cols=3*,options="header"]
-//|===
-//| Component
-//| Vendor
-//| Part number
-//| BIOS
-//| Quanta
-//| Motherboard
-//| BMC
-//| Quanta
-//| Motherboard
-//| CPLD
-//| Quanta
-//| Motherboard
-//| 1/10 GbE NIC
-//| Quanta/Intel
-//| 3GS5BMA00D0
-//| 10/25 GbE NIC
-//| Mellanox
-//| MCX4121A-ACAT
-//.2+a| NVDIMM Module
-//.2+a| Smart
-//| STN722G4QNT26MP1SC (Gen 2)
-//NVDIMM Module #4
-//| SH2047NJ420472SB3 (Gen 1)
-//NVDIMM Module #1
-//.2+a| Energy Source (BPM)
-//.2+a| Smart
-//| STC48042QNTDE82BVG (Gen 2)
-//Energy Source #5
-//| SSC48042SMTDE82B (Gen 1)
-//Energy Source #1
-//.2+a| NVDIMM Module
-//.2+a| Micron
-//| 18ASF2G72PF12G9WP1AB (Gen 2)
-// NVDIMM Module #3
-//| 18ASF2G72PF12G6V21AB (Gen 1)
-//NVDIMM Module #2
-//.3+a| Energy Source (PGEM)
-//.3+a| Micron/Agigatech
-//| AGIGA9834-203JCA (Gen 3)
-// Energy Source #4
-//| AGIGA9824-103JCB (Gen 2)
-//Energy Source #3
-//| AGIGA9824-103JCA (Gen 1)
-//Energy Source #2
-//| Boot Device
-//| Innodisk
-//| 3GM2-P
-//.3+a| Drives
-//.3+a| Samsung
-//| PM9A3
-//| PM983
-//| PM963
-//| Drives
-//| Kioxia
-//| CD5
-//| Drives
-//| Solidigm (SK Hynix)
-//| PE8010
-//|===
 
 === Component firmware managed by a Storage Firmware Bundle
 During 11.x timeframe, NetApp Element software was the only way to release firmware. Starting with Element 12.0, the concept of a *Storage Firmware Bundle* was introduced and firmware updates were now possible by an independently released Storage Firmware Bundle or Storage Firmware Bundle included as part of a 12.x Element release.
@@ -740,64 +674,8 @@ The following firmware is not managed by a Storage Firmware Bundle:
 |===
 
 == H410S
-//*ODM:* SuperMicro (MSC)
-//*Platform:* BigTwin X10 - Broadwell
-//==== Vendor/Part number for all components
 *Model Number (Family portion):* H410S
 *Full Model Numbers:* H410S-0, H410S-1, H410S-1-NE, and H410S-2
-
-//[cols=3*,options="header"]
-//|===
-//| Component
-//| Vendor
-//| Part number
-//| BIOS
-//| SMCI
-//| Motherboard
-//| BMC
-//| SMCI
-//| Motherboard
-//| CPLD
-//| SMCI
-//| Motherboard
-//| SAS Adapter
-//| SMCI/Broadcom
-//| BPN-6S3008N4-1UB-NA11
-//| MicroController Unit (MCU)
-//| SMCI
-//| BPN-SAS3-217BHQ-N4-NA11
-//| SIOM 1/10 GbE NIC
-//| SMCI/Intel
-//| AOC-MH25G-M2S2TM-NA011
-//| SIOM 10/25 GbE NIC
-//| SMCI/Mellanox
-//| AOC-MH25G-M2S2TM-NA011
-//| AOC 10/25 GbE NIC
-//| SMCI/Mellanox
-//| AOC-S25G-M2S-NA011
-//| Cache NVDIMM
-//| Radian
-//| RMS-200
-//| Cache NVDIMM
-//| Radian
-//| RMS-300
-//| Power Supply
-//| SMCI
-//| PWS-2K22A-1R-NA011
-//| Boot Device
-//| Intel
-//| SSDSCKJB240G7
-//| Boot Device
-//| Micron
-//| MTFDDAV240TCB1AR
-//.2+a| Drives
-//.2+a| Samsung
-//| PM883
-//| PM863
-//| Drives
-//| Toshiba
-//| Hawk-4
-//|===
 
 === Component firmware managed by a Storage Firmware Bundle
 
@@ -1039,7 +917,7 @@ The following firmware is not managed by a Storage Firmware Bundle:
 | Boot Device MTFDDAV240TCB1AR | DOMU037
 |===
 
-== SF38410 SF19210 SF9605 SF4805
+== SF38410, SF19210, SF9605, and SF4805
 
 *Full Model Numbers:* H410S-0, H410S-1, H410S-1-NE, and H410S-2
 
@@ -1048,12 +926,11 @@ During 11.x timeframe, NetApp Element software was the only way to release firmw
 
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
-
 [cols=10*,options="header"]
 |===
 h| Release Vehicle
 h| Release Date
-H| NIC
+h| NIC
 h| Cache NVDIMM RMS200 (RMS200)
 h| Cache NVDIMM RMS200 (RMS300)
 h| Drive Samsung PM863 (SED)
@@ -1062,25 +939,25 @@ h| Drive Toshiba Hawk-4 (SED)
 h| Drive Toshiba Hawk-4 (N-SED)
 h| Drive Samsung PM883 (SED)
 h| *Storage Firmware Bundle 2.164.0*
-h| 10/20/2022
-h| 7.10.18	
-h| ae3b8cc	
-h| 7d8422bc	
-h| GXT5404Q	
-h| GXT5103Q	
-h| 8ENP7101	
-h| 8ENP6101	
-h| HXT7A04Q
+| 10/20/2022
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7A04Q
 h| *Storage Firmware Bundle 2.164.0 through NetApp Element 12.7*
-h| 10/20/2022
-h| 7.10.18	
-h| ae3b8cc	
-h| 7d8422bc	
-h| GXT5404Q	
-h| GXT5103Q	
-h| 8ENP7101	
-h| 8ENP6101	
-h| HXT7A04Q
+| 10/20/2022
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7A04Q
 h| *Storage Firmware Bundle 2.150.4*
 | 06/08/2022
 | 7.10.18	
