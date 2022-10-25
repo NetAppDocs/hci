@@ -19,6 +19,7 @@ summary: Supported firmware and driver versions for storage nodes.
 == Storage nodes
 * <<H610S>>
 * <<H410S>>
+* <<SF38410 SF19210 SF9605 SF4805>>
 
 == H610S
 //*ODM:* Quanta
@@ -1036,4 +1037,323 @@ The following firmware is not managed by a Storage Firmware Bundle:
 | Power Supply	| 1.3
 | Boot Device SSDSCKJB240G7 | N2010121
 | Boot Device MTFDDAV240TCB1AR | DOMU037
+|===
+
+== SF38410 SF19210 SF9605 SF4805
+
+*Full Model Numbers:* H410S-0, H410S-1, H410S-1-NE, and H410S-2
+
+=== Component firmware managed by a Storage Firmware Bundle
+During 11.x timeframe, NetApp Element software was the only way to release firmware. Starting with Element 12.0, the concept of a *Storage Firmware Bundle* was introduced and firmware updates were now possible by an independently released Storage Firmware Bundle or Storage Firmware Bundle included as part of a 12.x Element release.
+
+NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
+
+
+[cols=10*,options="header"]
+|===
+h| Release Vehicle
+h| Release Date
+H| NIC
+h| Cache NVDIMM RMS200 (RMS200)
+h| Cache NVDIMM RMS200 (RMS300)
+h| Drive Samsung PM863 (SED)
+h| Drive Samsung PM863 (N-SED)
+h| Drive Toshiba Hawk-4 (SED)
+h| Drive Toshiba Hawk-4 (N-SED)
+h| Drive Samsung PM883 (SED)
+h| *Storage Firmware Bundle 2.164.0*
+h| 10/20/2022
+h| 7.10.18	
+h| ae3b8cc	
+h| 7d8422bc	
+h| GXT5404Q	
+h| GXT5103Q	
+h| 8ENP7101	
+h| 8ENP6101	
+h| HXT7A04Q
+h| *Storage Firmware Bundle 2.164.0 through NetApp Element 12.7*
+h| 10/20/2022
+h| 7.10.18	
+h| ae3b8cc	
+h| 7d8422bc	
+h| GXT5404Q	
+h| GXT5103Q	
+h| 8ENP7101	
+h| 8ENP6101	
+h| HXT7A04Q
+h| *Storage Firmware Bundle 2.150.4*
+| 06/08/2022
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7A04Q
+h| *Storage Firmware Bundle 2.150.4 through NetApp Element 12.5*
+| 06/08/2022
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7A04Q
+h| *Storage Firmware Bundle 2.146.2*
+| 02/22/2022
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7A04Q
+h| *Storage Firmware Bundle 2.99.4 through NetApp Element 12.3.2*
+| 09/16/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.99.4 through NetApp Element 12.3.1.165*
+| 12/06/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.99.2*
+| 08/03/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.99.1 through NetApp Element 12.3.1.103*
+| 09/16/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.99 through NetApp Element 12.3*
+| 04/15/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.76.8*
+| 02/03/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.27.1*
+| 09/29/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *Storage Firmware Bundle 2.76.8 through NetApp Element 12.2.1*
+| 06/02/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 2.21 through NetApp Element 12.2*
+| 09/29/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *Storage Firmware Bundle 2.76.8 through NetApp Element 12.0.1*
+| 06/02/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7904Q
+h| *Storage Firmware Bundle 1.2.17 through NetApp Element 12.0*
+| 03/20/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.8.2*
+| 02/22/2022
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.8.1*
+| 06/02/2021
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.8*
+| 03/11/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.7*
+| 11/21/2019
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.5.1*
+| 02/19/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.5*
+| 09/26/2019
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.3.2*
+| 02/19/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.3.1*
+| 08/19/2019
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.1.1*
+| 02/19/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.1*
+| 04/25/2019
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11.0.2*
+| 02/19/2020
+| 7.10.18	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+h| *NetApp Element 11*
+| 11/29/2018
+| 7.10.18	
+| ae3b8cc
+| -	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7104Q
+|===
+
+=== Component firmware not managed by a Storage Firmware Bundle
+
+The following firmware is not managed by a Storage Firmware Bundle:
+
+[cols=2*,options="header"]
+|===
+| Component | Current version
+| BIOS	| 2.8.0
+| iDRAC	| 2.75.75.75
+| Identity Module | N41WC 1.02
+| SAS Adapter | 16.00.01.00
+| Power Supply	| 1.3
+| Boot Device | M161225i
 |===
