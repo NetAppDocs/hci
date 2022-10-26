@@ -32,7 +32,7 @@ During 11.x timeframe, NetApp Element software was the only way to release firmw
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
 
-[cols=25*,options="header"]
+[cols=26*,options="header"]
 |===
 h| Release Vehicle
 h| Release Date
@@ -782,6 +782,8 @@ h| *Storage Firmware Bundle 2.164.0*
 | 8ENP7101	
 | 8ENP6101	
 | HXT7A04Q
+| -
+| -
 h| *Storage Firmware Bundle 2.164.0 through NetApp Element 12.7*
 | 10/20/2022
 | 7.10.18	
@@ -792,6 +794,8 @@ h| *Storage Firmware Bundle 2.164.0 through NetApp Element 12.7*
 | 8ENP7101	
 | 8ENP6101	
 | HXT7A04Q
+| -
+| -
 h| *Storage Firmware Bundle 2.150.4 through NetApp Element 12.5*
 | 06/08/2022
 | NAT3.4
