@@ -776,7 +776,7 @@ h| *Storage Firmware Bundle 2.164.0*
 | 10/20/2022
 | NAT3.4 
 | 6.98.00
-| 7.10.18	
+| 14.25.1020	
 | ae3b8cc	
 | 7d8422bc	
 | GXT5404Q	
@@ -788,7 +788,7 @@ h| *Storage Firmware Bundle 2.164.0 through NetApp Element 12.7*
 | 10/20/2022
 | NAT3.4 
 | 6.98.00
-| 7.10.18	
+| 14.25.1020	
 | ae3b8cc	
 | 7d8422bc	
 | GXT5404Q	
