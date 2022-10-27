@@ -19,7 +19,7 @@ summary: Supported firmware and driver versions for storage nodes.
 == Storage nodes
 * <<H610S>>
 * <<H410S>>
-* <<sf_nodes, SF38410, SF19210, SF9605, and SF4805>
+* <<sf_nodes, SF38410, SF19210, SF9605, and SF4805>>
 
 == H610S
 *Model Number (Family portion):* H610S
