@@ -16,7 +16,6 @@ keywords: netapp, hci, on premise, administrator, user account, cloud services, 
 To access storage resources on your system, you'll need to set up user accounts.
 
 == User account management
-
 User accounts are used to control access to the storage resources on a NetApp Element software-based network. At least one user account is required before a volume can be created.
 
 When you create a volume, it is assigned to an account. If you have created a virtual volume, the account is the storage container.
