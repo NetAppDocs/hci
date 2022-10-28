@@ -30,10 +30,6 @@ Beginning with Element Plug-in for VMware vCenter Server 5.0, this upgrade proce
 +
 IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.7 and 6.5 for Element Plug-in for VMware vCenter Server 5.0.
 
-* You are upgrading to a 6.7 Flash vSphere Web Client.
-+
-IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). For more information about supported vSphere versions, see the release notes for https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server[your version of the plug-in^].
-
 NOTE: When you upgrade from Element Plug-in for VMware vCenter Server 4.x to 5.0, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance on a local plug-in to a vCenter instance on a remote plug-in. You must re-add the clusters to the remote plug-in. This is on a one-time activity when upgrading from a local plug-in to a remote plug-in.
 --
 
