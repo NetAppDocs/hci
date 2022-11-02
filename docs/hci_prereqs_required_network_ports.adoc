@@ -313,7 +313,7 @@ Software download:
 |System administrator PC
 |Compute node BMC/IPMI H410 and H600 series	
 |443
-|HTTPS UI and API access to node remote control.
+|HTTPS UI and API access to node remote control
 
 |System administrator PC
 |Management node
@@ -328,7 +328,7 @@ Software download:
 |System administrator PC
 |Storage node BMC/IPMI H410 and H600 series	
 |443
-|HTTPS UI and API access to node remote control.
+|HTTPS UI and API access to node remote control
 
 |System administrator PC
 |Storage node MIP
