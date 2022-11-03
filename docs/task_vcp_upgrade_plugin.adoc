@@ -16,7 +16,7 @@ For existing vSphere environments with a registered NetApp Element Plug-in for v
 
 You can update the plug-in registration on vCenter Server Virtual Appliance (vCSA) or Windows using the registration utility. You must change your registration for the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
 
-This upgrade procedure covers the following upgrade scenarios:
+This upgrade procedure covers the following upgrade scenarios.
 
 NOTE: Management services 2.22.7 includes NetApp Element Plug-in for VMware vCenter Server 5.0 which contains the remote plug-in. If you use the Element plug-in, upgrading to version 5.0 is highly recommended to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^]. If you do not use the plug-in, this is an optional upgrade.
 
