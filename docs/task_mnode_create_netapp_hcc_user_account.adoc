@@ -63,8 +63,8 @@ Perform the following steps to assign the user permissions to the new NetApp HCC
 +
 [NOTE]
 ====
-* Beginning with Element vCenter plug-in 5.0, to use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node for each vCenter Server that will be managing NetApp SolidFire storage clusters. 
-* Using Element vCenter plug-in 4.10 and earlier to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+* Beginning with Element vCenter plug-in 5.0, to use https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^], you register the Element Plug-in from a separate management node for each vCenter Server that will be managing NetApp SolidFire storage clusters. 
+* Using Element vCenter plug-in 4.10 and earlier to manage cluster resources from other vCenter Servers using https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^] is limited to local storage clusters only.
 ====
 
 .	In the right navigation pane, select *Permissions*.
