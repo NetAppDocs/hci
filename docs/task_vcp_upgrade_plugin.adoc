@@ -2,9 +2,8 @@
 sidebar: sidebar
 permalink: docs/task_vcp_upgrade_plugin.html
 summary: As part of a NetApp HCI system upgrade, you can upgrade the Element Plug-in for vCenter Server.
-keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10, 5.0
 ---
-
 = Upgrade the Element Plug-in for vCenter Server
 :hardbreaks:
 :nofooter:
@@ -18,6 +17,8 @@ For existing vSphere environments with a registered NetApp Element Plug-in for v
 You can update the plug-in registration on vCenter Server Virtual Appliance (vCSA) or Windows using the registration utility. You must change your registration for the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
 
 This upgrade procedure covers the following upgrade scenarios:
+
+NOTE: Management services 2.22.7 includes NetApp Element Plug-in for VMware vCenter Server 5.0 which contains the remote plug-in. If you use the Element plug-in, upgrading to version 5.0 is highly recommended to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^]. If you do not use the plug-in, this is an optional upgrade.
 
 [role="tabbed-block"] 
 ==== 
@@ -37,7 +38,7 @@ NOTE: When you upgrade from Element Plug-in for VMware vCenter Server 4.x to 5.0
 -- 
 For Element Plug-in for VMware vCenter Server 4.10 or earlier, this upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for VMware vCenter Server 4.9, 4.8, 4.7, 4.6, 4.5, or 4.4.
+* You are upgrading to Element Plug-in for VMware vCenter Server 4.10, 4.9, 4.8, 4.7, 4.6, 4.5, or 4.4.
 * You are upgrading to a 7.0, 6.7, or 6.5 HTML5 vSphere Web Client.
 +
 [IMPORTANT] 
@@ -124,7 +125,7 @@ After upgrading to NetApp Element Plug-in for vCenter Server 4.8 or later with V
 You should see the following version details or details of a more recent version:
 ----
 NetApp Element Plug-in Version: 5.0
-NetApp Element Plug-in Build Number: 7
+NetApp Element Plug-in Build Number: 37
 ----
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
 
