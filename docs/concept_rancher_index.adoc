@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: docs/concept_rancher_product_overview.html
+permalink: docs/concept_rancher_index.html
 summary: Beginning with management services 2.21.61, Rancher is no longer supported for existing and new Rancher deployments. You can continue to manage Rancher using earlier versions of management services.
-keywords: netapp, hci, rancher, architecture, kubernetes, cluster
+keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes
 ---
 
-= Rancher on NetApp HCI overview
+= Use Rancher on NetApp HCI
 :hardbreaks:
 :nofooter:
 :icons: font
