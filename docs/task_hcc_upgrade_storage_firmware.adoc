@@ -34,12 +34,12 @@ IMPORTANT: To update your iDRAC/BIOS firmware, contact NetApp Support. For addit
 
 * *Updated baseboard management controller (BMC) for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions].
 
-NOTE: For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article^] (login required).
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see link:firmware_driver_versions.html[supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes].
 
 [[storage-firmware-upgrade]]
 include::../_include/element_software_and_storage_firmware_upgrade_time.adoc[]
 
-* *End User License Agreement (EULA)*: Beginning with management services 2.20, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
+* *End User License Agreement (EULA)*: Beginning with management services 2.20.69, you must accept and save the EULA before using the NetApp Hybrid Cloud Control UI or API to upgrade storage firmware:
 +
 . Open the IP address of the management node in a web browser:
 +
@@ -66,7 +66,7 @@ You can use the NetApp Hybrid Cloud Control UI to upgrade the firmware of the st
 .What you'll need
 If your management node is not connected to the internet, you have https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[downloaded the Storage firmware package for NetApp HCI storage clusters^].
 
-CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
+CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
 TIP: The upgrade process takes approximately 30 minutes per storage node. If you are upgrading an Element storage cluster to storage firmware newer than version 2.76, individual storage nodes will only reboot during the upgrade if new firmware was written to the node.
 

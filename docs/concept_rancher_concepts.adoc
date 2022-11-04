@@ -41,7 +41,6 @@ See link:task_rancher_trident.html[Install Trident with Rancher on NetApp HCI].
 
 For details, visit the https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html[Trident documentation^].
 
-[discrete]
 == Find more information
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/[Rancher documentation about architecture^]
 * https://rancher.com/docs/rancher/v2.x/en/overview/concepts/[Kubernetes terminology for Rancher^]

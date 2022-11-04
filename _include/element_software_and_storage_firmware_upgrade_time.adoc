@@ -1,4 +1,4 @@
-* *Upgrade process time*: You have scheduled sufficient time to perform your upgrade. When you upgrade to Element software 12.5, the upgrade process time varies depending on your current Element software version and firmware updates.
+* *Upgrade process time*: You have scheduled sufficient time to perform your upgrade. When you upgrade to Element software 12.5 or later, the upgrade process time varies depending on your current Element software version and firmware updates.
 +
 [cols=5*,options="header",cols="20,20,20,20,20"]
 |===
@@ -10,6 +10,6 @@
 You must also https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[perform a complete node shutdown and power disconnect^] for each H610S node.
 |===
 +
-^1^For a complete matrix of firmware and driver firmware for your hardware, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[KB article^] (login required).
+^1^For a complete matrix of firmware and driver firmware for your hardware, see link:firmware_driver_versions.html[supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes].
 +
 ^2^If you combine a cluster with a heavy write IOPS load with a longer firmware update time, the data synchronization time will increase.

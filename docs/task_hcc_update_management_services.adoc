@@ -30,7 +30,7 @@ Beginning with the Element 11.3 management node release, the management node des
 
 .What you'll need
 
-Beginning with management services 2.20, you must accept and save the End User License Agreement (EULA) before using the NetApp Hybrid Cloud Control UI or API to upgrade management services:
+Beginning with management services 2.20.69, you must accept and save the End User License Agreement (EULA) before using the NetApp Hybrid Cloud Control UI or API to upgrade management services:
 
 . Open the IP address of the management node in a web browser:
 +

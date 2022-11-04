@@ -87,10 +87,26 @@ This firmware package contains the following firmware versions for hardware comp
 === Mellanox NIC firmware driver compatibility
 The updated Mellanox firmware version 14.29.1016 requires a minimum version of VMware ESXi driver as follows:
 
-* *ESXi 7.0*: Version 4.21.71.1
+*VMware ESXi Driver versions*
+|===
+| ESXi | Driver
+| 7.0	| 4.19.71.101
+4.19.71.1
+| 7.0 Update 1 | 4.19.71.101
+4.19.71.1
+| 7.0 Update 2 | 4.21.71.101
+4.21.71.1
+| 7.0 Update 3 | 4.21.71.101
+4.21.71.1
+| 6.7 | 4.17.71.1
+| 6.5 | 4.16.71.1
+|===
+
+//* *ESXi 7.0*: Version 4.21.71.1
 //* *ESXi 7.0*: H610C/H615C: Version 4.17.15.16
-* *ESXi 6.7*: Version 4.17.71.1
-* *ESXi 6.5*: Version 4.16.71.1
+//* *ESXi 6.7*: Version 4.17.71.1
+//* *ESXi 6.5*: Version 4.16.71.1
+NOTE: The drivers for 7.0, 7.0 U1, 7.0 U2, and 7.0 U3 are available from the link:https://customerconnect.vmware.com/downloads/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/7_0[VMware vSphere download^] page.
 
 NOTE: Before upgrading to version 2.154.4, make sure you check the current ESXi driver version. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.154.4 for your compute nodes. Visit link:task_hcc_upgrade_compute_node_drivers.html[Update compute node drivers] for instructions on updating your compute node drivers, which include the ESXi driver.
 
