@@ -27,7 +27,7 @@ NOTE: Management services 2.22.7 includes NetApp Element Plug-in for VMware vCen
 Beginning with Element Plug-in for VMware vCenter Server 5.0, this upgrade procedure covers the following upgrade scenarios:
 
 * You are upgrading to Element Plug-in for VMware vCenter Server 5.0.
-* You are upgrading to a 8.0 or 7.0 HTML5 vSphere Web Client.
+* You are upgrading to an 8.0 or 7.0 HTML5 vSphere Web Client.
 +
 IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.7 and 6.5 for Element Plug-in for VMware vCenter Server 5.0.
 
