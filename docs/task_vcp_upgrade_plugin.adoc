@@ -22,19 +22,19 @@ NOTE: Management services 2.22.7 includes NetApp Element Plug-in for VMware vCen
 
 [role="tabbed-block"] 
 ==== 
-.Element vCenter Plug-in 5.0 and later 
+.Element Plug-in for vCenter 5.0 and later 
 -- 
 Beginning with Element Plug-in for VMware vCenter Server 5.0, this upgrade procedure covers the following upgrade scenarios:
 
 * You are upgrading to Element Plug-in for VMware vCenter Server 5.0.
 * You are upgrading to an 8.0 or 7.0 HTML5 vSphere Web Client.
 +
-IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.7 and 6.5 for Element Plug-in for VMware vCenter Server 5.0.
+IMPORTANT: Element Plug-in for vCenter 5.0 is not compatible with VMware vCenter Server 6.7 and 6.5.
 
-NOTE: When you upgrade from Element Plug-in for VMware vCenter Server 4.x to 5.0, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance on a local plug-in to a vCenter instance on a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local plug-in to a remote plug-in.
+NOTE: When you upgrade from Element Plug-in for VMware vCenter Server 4.x to 5.0, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance to a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local plug-in to a remote plug-in.
 --
 
-.Element vCenter Plug-in 4.10 and earlier 
+.Element Plug-in for vCenter 4.10 and earlier 
 -- 
 For Element Plug-in for VMware vCenter Server 4.10 or earlier, this upgrade procedure covers the following upgrade scenarios:
 
@@ -43,8 +43,8 @@ For Element Plug-in for VMware vCenter Server 4.10 or earlier, this upgrade proc
 +
 [IMPORTANT] 
 =====
-* The plug-in is not compatible with VMware vCenter Server 8.0 for Element Plug-in for VMware vCenter Server 4.x.
-* The plug-in is not compatible with VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, 4.8, 4.9, and 4.10.
+* Element Plug-in for vCenter 4.x is not compatible with VMware vCenter Server 8.0.
+* Element Plug-in for vCenter 4.6, 4.7, 4.8, 4.9, and 4.10 is not compatible with VMware vCenter Server 6.5.
 =====
 
 * You are upgrading to a 6.7 Flash vSphere Web Client.
@@ -89,7 +89,12 @@ image::vcp_registration_utility_ui.png[depicts the registration utility UI for t
 NOTE: The user name and password credentials you enter must be for a user with vCenter Administrator role privileges.
 
 .. The vCenter Administrator password.
-.. (For in-house servers/dark sites) A custom URL for the plug-in ZIP.
+.. (For in-house servers/dark sites) Depending on your Element Plug-in for vCenter version, a custom URL for plug-in JSON file or plug-in ZIP: 
+... Beginning with Element Plug-in for vCenter Server 5.10, a custom URL for the plug-in JSON file.
++
+NOTE: You can select *Custom URL* to customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the JSON file name or network settings. For additional configuration steps if you intend to customize a URL, see Element Plug-in for vCenter Server documentation about modifying vCenter properties for an in-house (dark site) HTTP server.
+
+... For Element Plug-in for vCenter Server 4.10 or earlier, a custom URL for the plug-in ZIP.
 +
 NOTE: You can select *Custom URL* to customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings. For additional configuration steps if you intend to customize a URL, see Element Plug-in for vCenter Server documentation about modifying vCenter properties for an in-house (dark site) HTTP server.
 
