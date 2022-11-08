@@ -94,7 +94,7 @@ NOTE: The user name and password credentials you enter must be for a user with v
 
 .. The vCenter Administrator password.
 .. (For in-house servers/dark sites) Depending on your Element Plug-in for vCenter version, a custom URL for plug-in JSON file or plug-in ZIP: 
-... Beginning with Element Plug-in for vCenter Server 5.10, a custom URL for the plug-in JSON file.
+... Beginning with Element Plug-in for vCenter Server 5.0, a custom URL for the plug-in JSON file.
 +
 NOTE: You can select *Custom URL* to customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the JSON file name or network settings. For additional configuration steps if you intend to customize a URL, see Element Plug-in for vCenter Server documentation about modifying vCenter properties for an in-house (dark site) HTTP server.
 
