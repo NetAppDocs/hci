@@ -22,7 +22,12 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 . For vCSA and Windows upgrades, https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html[unregister^] the plug-in from the vCenter Server with which it is associated using the registration utility.
 . https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html[Upgrade vSphere, including vCenter Server, ESXi, VMs, and other VMware components^].
 +
-IMPORTANT:  When you upgrade to VMware vCenter Server 7.0 U3, the Element Plug-in fails to deploy. To resolve this issue using Spring Framework 4, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article].
+[IMPORTANT]
+====
+It is recommended to upgrade to NetApp Element Plug-in for vCenter Server 5.0 to give you the capability to deploy the plug-in with VMware vCenter 7.0 Update 3 without having to apply a workaround. 
+
+With Element Plug-in for vCenter Server 4.x, when you upgrade to VMware vCenter Server 7.0 U3, the plug-in 4.x fails to deploy. To resolve this issue using Spring Framework 4, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
+====
 +
 NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
 
@@ -32,9 +37,9 @@ NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/medi
 . https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#enabling-qossioc-automation-on-datastores[Enable QoSSIOC^] for all datastores controlled by the plug-in.
 
 
-[discrete]
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 * https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster Technical Report^]
+
