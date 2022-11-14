@@ -24,9 +24,9 @@ When you upgrade the VMware vSphere components of your NetApp HCI installation, 
 +
 [IMPORTANT]
 ====
-It is recommended to upgrade to NetApp Element Plug-in for vCenter Server 5.0 to give you the capability to deploy the plug-in with VMware vCenter 7.0 Update 3 without having to apply a workaround. 
+You should upgrade to NetApp Element Plug-in for vCenter Server 5.0 to give you the capability to deploy the plug-in with VMware vCenter 7.0 Update 3 without having to apply a workaround. 
 
-With Element Plug-in for vCenter Server 4.x, when you upgrade to VMware vCenter Server 7.0 U3, the plug-in fails to deploy. To resolve this issue using Spring Framework 4, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
+With Element Plug-in for vCenter Server 4.x, when you upgrade to VMware vCenter Server 7.0 Update 3, the plug-in fails to deploy. To resolve this issue using Spring Framework 4, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
 ====
 +
 NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.

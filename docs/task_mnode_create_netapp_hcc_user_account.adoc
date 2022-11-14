@@ -13,7 +13,7 @@ keywords: netapp, mnode, management node, vcenter, hci, role
 :imagesdir: ../media/
 
 [.lead]
-It is recommended that you create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes.
+You should create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes.
 
 This NetApp HCC role limits your management node services view to NetApp-only assets.
 
