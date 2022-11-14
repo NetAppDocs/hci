@@ -28,7 +28,7 @@ If you join multiple vCenter Server systems that are connected using vCenter Lin
 
 [NOTE]
 ====
-* Beginning with Element Plug-in for vCenter Server 5.0, to use https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^], you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters. 
+* Beginning with Element Plug-in for vCenter Server 5.0, to use https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^], you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters (recommended). 
 * Using Element Plug-in for vCenter Server 4.10 and earlier to manage cluster resources from other vCenter Servers using https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^] is limited to local storage clusters only.
 ====
 
