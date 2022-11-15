@@ -4,7 +4,6 @@ permalink: docs/concept_hcc_expandoverview.html
 summary: You can expand your NetApp HCI system using NetApp Hybrid Cloud Control.
 keywords: NetApp, HCI, on premise, expand, hcc, hybrid cloud control
 ---
-
 = Expansion overview
 :hardbreaks:
 :nofooter:
