@@ -70,7 +70,7 @@ Element 12.5 includes firmware updates for storage nodes. link:https://docs.neta
 === Enhanced security
 Element 12.5 contains the mitigation that closes the Element software exposure to the Apache Log4j vulnerability. NetApp SolidFire storage clusters with the Virtual Volumes (VVols) feature enabled are exposed to the Apache Log4j vulnerability. For information on the workaround for the Apache Log4j vulnerability in NetApp Element software, see the {url-peak}[KB article^].
 
-If you're running Element 11.x, 12.0, or 12.2 or your storage cluster is already at Element 12.3 or 12.3.1 with the VVols feature enabled, upgrading to 12.5 is highly recommended.
+If you're running Element 11.x, 12.0, or 12.2 or your storage cluster is already at Element 12.3 or 12.3.1 with the VVols feature enabled, you should upgrade to 12.5.
 
 Element 12.5 also includes more than 120 CVE security vulnerability remediations.
 

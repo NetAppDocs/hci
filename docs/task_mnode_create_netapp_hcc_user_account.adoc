@@ -13,7 +13,7 @@ keywords: netapp, mnode, management node, vcenter, hci, role
 :imagesdir: ../media/
 
 [.lead]
-It is recommended that you create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes.
+You should create a NetApp HCC role in vCenter to manually add vCenter assets (controllers) or compute nodes (nodes) to the management node post installation, or to modify existing controllers or nodes.
 
 This NetApp HCC role limits your management node services view to NetApp-only assets.
 
@@ -61,7 +61,11 @@ Perform the following steps to assign the user permissions to the new NetApp HCC
 * The top level vCenter.
 * Your desired vCenter if you are in Linked Mode.
 +
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^] is limited to local storage clusters only.
+[NOTE]
+====
+* Beginning with NetApp Element Plug-in for vCenter Server 5.0, to use https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^], you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters (recommended).
+* Using NetApp Element Plug-in for vCenter Server 4.10 and earlier to manage cluster resources from other vCenter Servers using https://docs.netapp.com/us-en/vcp/vcp_concept_linkedmode.html[vCenter Linked Mode^] is limited to local storage clusters only.
+====
 
 .	In the right navigation pane, select *Permissions*.
 .	Select the *+* icon to add the new user.
