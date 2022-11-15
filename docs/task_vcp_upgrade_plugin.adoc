@@ -112,13 +112,13 @@ NOTE: This action creates a new database and completes the installation in the v
 
 . In the vSphere Web Client, look for the following completed tasks in the task monitor to ensure installation has completed: `Download plug-in` and `Deploy plug-in`.
 
-. Verify that the NetApp Element Configuration and Management extension points appear in the *Shortcuts* tab of the vSphere Web Client and in the side panel.
+. Verify that the plug-in extension points appear in the *Shortcuts* tab of the vSphere Web Client and in the side panel.
 +
-Beginning with Element Plug-in for vCenter Server 5:0:
+Beginning with Element Plug-in for vCenter Server 5:0, the NetApp Remote Plugin extension point:
 +
 image::vcp_remote_plugin_icons_home_page.png[depicts the plug-in extension point after a successful upgrade or install for ELement Plug-in 5.10 or later]
 +
-Element Plug-in for vCenter Server 4.10 or earlier:
+Element Plug-in for vCenter Server 4.10 or earlier, NetApp Element Configuration and Management extension points:
 +
 image::vcp_shortcuts_page_accessing_plugin.png[depicts the plug-in extension points after a successful upgrade or install for ELement Plug-in 4.10 or earlier]
 +
