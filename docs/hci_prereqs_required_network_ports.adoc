@@ -163,7 +163,7 @@ Software download:
 |Management node
 |Compute node BMC/IPMI
 |623 UDP
-|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+|RMCP port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
 
 |Management node
 |VMware vCenter
@@ -311,6 +311,11 @@ Software download:
 |HTTPS UI and API access to storage node, (NetApp HCI only) Configuration and deployment monitoring in NetApp Deployment Engine
 
 |System administrator PC
+|Compute node BMC/IPMI H410 and H600 series	
+|443
+|HTTPS UI and API access to node remote control
+
+|System administrator PC
 |Management node
 |443
 |HTTPS UI and API access to management node
@@ -321,9 +326,24 @@ Software download:
 |HTTPS UI and API access to storage cluster
 
 |System administrator PC
+|Storage node BMC/IPMI H410 and H600 series	
+|443
+|HTTPS UI and API access to node remote control
+
+|System administrator PC
 |Storage node MIP
 |443
 |HTTPS storage cluster creation, post-deployment UI access to storage cluster
+
+|System administrator PC
+|Compute node BMC/IPMI H410 and H600 series
+|623 UDP
+|RMCP port. This is required to manage IPMI-enabled systems.
+
+|System administrator PC
+|Storage node BMC/IPMI H410 and H600 series	
+|623 UDP
+|RMCP port. This is required to manage IPMI-enabled systems.
 
 |System administrator PC
 |Witness Node
@@ -356,7 +376,6 @@ Software download:
 |vCenter Plug-in registration. The port can be closed after registration is complete.
 |===
 
-[discrete]
 == Find more information
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
