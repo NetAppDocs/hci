@@ -77,11 +77,11 @@ image::vcp_registration_utility_ui_qossioc.png[depicts the registration utility 
 
 . Select *vCenter Plug-in Registration*.
 +
-Beginning with Element Plug-in for vCenter Server 5:0:
+* The vCenter Plug-in Registration page for Element Plug-in for vCenter Server 5.0:
 +
 image::vcp_remote_plugin_registration_ui.png[depicts the registration utility UI for a remote plug-in]
 +
-Element Plug-in for vCenter Server 4.10 or earlier:
+* The vCenter Plug-in Registration page for Element Plug-in for vCenter Server 4.x:
 +
 image::vcp_registration_utility_ui.png[depicts the registration utility UI for a local plug-in]
 
@@ -93,7 +93,7 @@ image::vcp_registration_utility_ui.png[depicts the registration utility UI for a
 NOTE: The user name and password credentials you enter must be for a user with vCenter Administrator role privileges.
 
 .. The vCenter Administrator password.
-.. (For in-house servers/dark sites) Depending on your Element Plug-in for vCenter version, a custom URL for plug-in JSON file or plug-in ZIP: 
+.. (For in-house servers/dark sites) Depending on your Element Plug-in for vCenter version, a custom URL for the plug-in JSON file or plug-in ZIP: 
 ... Beginning with Element Plug-in for vCenter Server 5.0, a custom URL for the plug-in JSON file.
 +
 NOTE: You can select *Custom URL* to customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the JSON file name or network settings. For additional configuration steps if you intend to customize a URL, see Element Plug-in for vCenter Server documentation about modifying vCenter properties for an in-house (dark site) HTTP server.
@@ -114,11 +114,11 @@ NOTE: This action creates a new database and completes the installation in the v
 
 . Verify that the plug-in extension points appear in the *Shortcuts* tab of the vSphere Web Client and in the side panel.
 +
-Beginning with Element Plug-in for vCenter Server 5.0, the NetApp Element Remote Plugin extension point:
+* Beginning with Element Plug-in for vCenter Server 5.0, the NetApp Element Remote Plugin extension point appears:
 +
 image::vcp_remote_plugin_icons_home_page.png[depicts the plug-in extension point after a successful upgrade or install for ELement Plug-in 5.10 or later]
 +
-Element Plug-in for vCenter Server 4.10 or earlier, NetApp Element Configuration and Management extension points:
+* For Element Plug-in for vCenter Server 4.10 or earlier, the NetApp Element Configuration and Management extension points appear:
 +
 image::vcp_shortcuts_page_accessing_plugin.png[depicts the plug-in extension points after a successful upgrade or install for ELement Plug-in 4.10 or earlier]
 +
