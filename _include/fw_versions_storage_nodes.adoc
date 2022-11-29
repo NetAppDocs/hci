@@ -13,7 +13,7 @@ The supported firmware versions for H-series and SolidFire storage nodes.
 
 
 === Component firmware managed by a Storage Firmware Bundle
-During 11.x timeframe, NetApp Element software was the only way to release firmware. Starting with Element 12.0, the concept of a *Storage Firmware Bundle* was introduced and firmware updates were now possible by an independently released Storage Firmware Bundle or Storage Firmware Bundle included as part of a Element 12.x release.
+During 11.x timeframe, NetApp Element software was the only way to release firmware. Starting with Element 12.0, the concept of a *Storage Firmware Bundle* was introduced and firmware updates were now possible by an independently released Storage Firmware Bundle or Storage Firmware Bundle included as part of an Element 12.x release.
 
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
