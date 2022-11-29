@@ -14,4 +14,4 @@ summary: Supported firmware and driver versions for storage nodes.
 :keywords: hci, earlier, documentation, versions
 
 [.lead]
-include::../_include/fw_driver_versions.adoc[]
+include::../_include/fw_versions_storage_nodes.adoc[]
