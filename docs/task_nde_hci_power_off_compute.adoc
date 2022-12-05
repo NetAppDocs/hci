@@ -34,4 +34,4 @@ This disconnects any iSCSI sessions open to the NetApp HCI storage cluster.
 
 [discrete]
 == Find more information
-* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
+* link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]

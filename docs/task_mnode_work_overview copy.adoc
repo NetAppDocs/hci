@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: docs/task_mnode_work_overview.html
+summary: You can use the management node (mNode) to use system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
+keywords: netapp, mnode, api, rest api, mnode ui, management node ui
+---
+
+= Management node overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can use the management node (mNode) to use system services, manage cluster assets and settings, run system tests and utilities, configure Active IQ for system monitoring, and enable NetApp Support access for troubleshooting.
+
+NOTE: As a best practice, only associate one management node with one VMware vCenter instance, and avoid defining the same storage and compute resources or vCenter instances in multiple management nodes.
+
+For clusters running Element software version 11.3 or later, you can work with the management node by using one of two interfaces:
+
+* With the management node UI (`https://[mNode IP]:442`), you can make changes to network and cluster settings, run system tests, or use system utilities.
+* With the built-in REST API UI (`https://[mNode IP]/mnode`), you can run or understand APIs relating to the management node services, including proxy server configuration, service level updates, or asset management.
+
+Install or recover a management node:
+
+* link:task_mnode_install.html[Install a management node]
+* link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)]
+* link:task_mnode_recover.html[Recover a management node]
+
+Access the management node:
+
+* link:task_mnode_access_ui.html[Access the management node (UI or REST API)]
+
+Perform tasks with the management node UI:
+
+* link:task_mnode_work_overview_UI.html[Management node UI overview]
+
+Perform tasks with the management node REST APIs:
+
+* link:task_mnode_work_overview_API.html[Management node REST API UI overview]
+
+Disable or enable remote SSH functionality or start a remote support tunnel session with NetApp Support to help you troubleshoot:
+
+* link:task_mnode_enable_remote_support_connections.html[Enable remote NetApp Support connections]
+* link:task_mnode_ssh_management.html[Manage SSH functionality on the management node]
+
+[discrete]
+== Find more information
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
