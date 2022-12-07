@@ -18,6 +18,7 @@ Depending on your choices during the deployment process, you need to complete so
 * link:task_nde_supported_net_changes.html[Supported networking changes]
 * link:task_nde_disable_smartd.html[Disable the smartd service on NetApp HCI compute nodes]
 * link:task_nde_disable_lacp_individual.html[Disable the "lacp-individual" command on configured switches]
+* link:task_mnode_create_netapp_hcc_role_vcenter.html[Create a NetApp HCC role in vCenter]
 * link:task_nde_update_vsphere.html[Keep VMware vSphere up to date]
 * link:task_nde_install_GPU_drivers.html[Install GPU drivers for GPU-enabled compute nodes]
 * link:task_nde_access_hcc.html[Access NetApp Hybrid Cloud Control]
