@@ -342,13 +342,16 @@ NOTE: The port must be open between the management node and the BMC for the stor
 |System administrator PC
 |Compute node BMC/IPMI H410 and H600 series
 |623 UDP
-.2+a|RMCP port. This is required to manage IPMI-enabled systems.
+a|RMCP port. This is required to manage IPMI-enabled systems.
 
 NOTE: The port must be open between the management node and the BMC for the storage node.
 
 |System administrator PC
 |Storage node BMC/IPMI H410 and H600 series	
 |623 UDP
+a|RMCP port. This is required to manage IPMI-enabled systems.
+
+NOTE: The port must be open between the management node and the BMC for the storage node.
 
 |System administrator PC
 |Witness Node
