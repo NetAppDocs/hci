@@ -62,7 +62,9 @@ All ports in the table are TCP unless stated otherwise.
 |Compute node BMC/IPMI
 |Management node
 |623 UDP
-|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+a|Remote Management Control Protocol (RMCP) port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+
+NOTE: The port must be open between the management node and the BMC for the storage node.
 
 |Compute node BMC/IPMI
 |Management node
@@ -163,7 +165,9 @@ Software download:
 |Management node
 |Compute node BMC/IPMI
 |623 UDP
-|RMCP port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+a|RMCP port. Required for NetApp Hybrid Cloud Control compute firmware upgrades.
+
+NOTE: The port must be open between the management node and the BMC for the storage node.
 
 |Management node
 |VMware vCenter
@@ -338,12 +342,13 @@ Software download:
 |System administrator PC
 |Compute node BMC/IPMI H410 and H600 series
 |623 UDP
-|RMCP port. This is required to manage IPMI-enabled systems.
+.2+a|RMCP port. This is required to manage IPMI-enabled systems.
+
+NOTE: The port must be open between the management node and the BMC for the storage node.
 
 |System administrator PC
 |Storage node BMC/IPMI H410 and H600 series	
 |623 UDP
-|RMCP port. This is required to manage IPMI-enabled systems.
 
 |System administrator PC
 |Witness Node
