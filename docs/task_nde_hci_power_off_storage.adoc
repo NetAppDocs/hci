@@ -20,6 +20,15 @@ When you power off storage resources for NetApp HCI, you need to use the `Shutdo
 After you power off the compute resources, you use a web browser to shut down all the nodes of the NetApp HCI storage cluster.
 
 . Log in to the storage cluster and verify that you are connected to the correct MVIP.
++
+[NOTE]
+====
+If required, you can verify that all I/O from the hosts have stopped prior to shutting down the storage cluster:
+
+.. Quiesce I/O from the host side using the appropriate commands for the one or more hypervisors in use.
+.. In the Cluster UI, select *Reporting* > *Overview*. There should be no activity on the "Cluster Input/Output" graph.
+.. After all I/O has stopped, wait for 20 minutes before shutting down the cluster.
+====
 . Verify that the iSCSI session count is zero.
 . Navigate to *Cluster > Nodes > Active*, and record the node IDs for all of the active nodes in the cluster.
 . To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 2. For example:
@@ -27,11 +36,14 @@ After you power off the compute resources, you use a web browser to shut down al
 ----
 https://{MVIP}/json-rpc/1.0?method=Shutdown&nodes=[1,2,3,4]&option=halt
 ----
++
+NOTE: You can run the command in an incognito window to avoid running it again at a later stage from the saved URL.
+
 . Enter the cluster administrator user name and password.
 . Validate that the API call returned successfully by verifying that all storage cluster nodes are included in the `successful` section of the API result.
 +
 You have successfully powered off all the NetApp HCI storage nodes.
+. Close the browser or tab to avoid selecting the "back" button and repeating the API call.
 
-[discrete]
 == Find more information
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
