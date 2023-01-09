@@ -23,11 +23,11 @@ After you power off the compute resources, you use a web browser to shut down al
 +
 [NOTE]
 ====
-If required, you can verify that all I/O from the hosts have stopped prior to shutting down the storage cluster:
+If required, you can verify that all I/O operations from the hosts have stopped:
 
 .. Quiesce I/O from the host side using the appropriate commands for the one or more hypervisors in use.
 .. In the Cluster UI, select *Reporting* > *Overview*. There should be no activity on the "Cluster Input/Output" graph.
-.. After all I/O has stopped, wait for 20 minutes before shutting down the cluster.
+.. After all I/O operations have stopped, wait for 20 minutes before shutting down the cluster.
 ====
 . Verify that the iSCSI session count is zero.
 . Navigate to *Cluster > Nodes > Active*, and record the node IDs for all of the active nodes in the cluster.
