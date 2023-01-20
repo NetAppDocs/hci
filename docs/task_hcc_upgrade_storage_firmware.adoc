@@ -49,8 +49,6 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Select *Upgrade* near the top right of the interface.
 . The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
-+
-NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .Upgrade options
 
@@ -81,39 +79,29 @@ https://<ManagementNodeIP>
 . Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Storage*.
 +
-NOTE: The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page. If you have clusters running Element 12.0 or later, you will see the current firmware bundle version listed for these clusters. If the nodes in a single cluster have different firmware versions on them or as the upgrade progresses, you will see *Multiple* in the *Current Firmware Bundle Version* column. You can select *Multiple* to navigate to the *Nodes* page to compare firmware versions. If all your clusters are running Element versions earlier than 12.0, you will not see any information about firmware bundle version numbers. This information is also available on the *Nodes* page. See link:task_hcc_nodes.html[View your inventory].
+[NOTE]
+====
+The *Storage* tab lists the storage clusters that are part of your installation. If a cluster is inaccessible by NetApp Hybrid Cloud Control, it will not be displayed on the *Upgrades* page. If you have clusters running Element 12.0 or later, you will see the current firmware bundle version listed for these clusters. If the nodes in a single cluster have different firmware versions on them or as the upgrade progresses, you will see *Multiple* in the *Current Firmware Bundle Version* column. You can select *Multiple* to navigate to the *Nodes* page to compare firmware versions. If all your clusters are running Element versions earlier than 12.0, you will not see any information about firmware bundle version numbers. This information is also available on the *Nodes* page. See link:task_hcc_nodes.html[View your inventory].
+
 If the cluster is up to date and/or no upgrade packages are available, the *Element* and *Firmware Only* tabs are not displayed. These tabs are also not displayed when an upgrade is in progress. If the *Element* tab is displayed, but not the *Firmware Only* tab, no firmware packages are available.
+====
 
-. Choose from the following options and perform the set of steps that are applicable to your cluster:
-+
-[%header,cols=2*]
-|===
-|Option
-|Steps
-
-|Your management node has external connectivity.
-a|
-. Select the drop-down arrow next to the cluster you are upgrading.
-. Select *Firmware Only*, and select from the upgrade versions available.
-. Select *Begin Upgrade*.
-
-TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
-
-NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page.
-
-You can download logs after the upgrade is complete.
-
-|Your management node is within a dark site without external connectivity.
-a|
 . Select the drop-down arrow next to the cluster you are upgrading.
 . Select *Browse* to upload the upgrade package that you downloaded.
 . Wait for the upload to complete. A progress bar shows the status of the upload.
-
++
 CAUTION: The file upload will be lost if you navigate away from the browser window.
-
++
 An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
-You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
-|===
+
+. Select *Firmware Only*, and select from the upgrade versions available.
+. Select *Begin Upgrade*.
++
+TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
++
+NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page.
++
+You can download logs after the upgrade is complete.
 
 === Upgrade status changes
 
@@ -163,38 +151,6 @@ You can use APIs to upgrade storage nodes in a cluster to the latest Element sof
 
 .Steps
 
-. Do one of the following depending on your connection:
-+
-[%header,cols=2*]
-|===
-|Option
-|Steps
-
-|Your management node has external connectivity.
-a|
-. Verify the repository connection:
-.. Open the management node REST API UI on the management node:
-+
-----
-https://<ManagementNodeIP>/package-repository/1/
-----
-.. Select *Authorize* and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client`.
-... Select *Authorize* to begin a session.
-... Close the authorization window.
-.. From the REST API UI, select *GET ​/packages​/remote-repository​/connection*.
-.. Select *Try it out*.
-.. Select *Execute*.
-.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
-. Find the upgrade package ID:
-.. From the REST API UI, select *GET /packages*.
-.. Select *Try it out*.
-.. Select *Execute*.
-.. From the response, copy and save the firmware package ID for use in a later step.
-
-|Your management node is within a dark site without external connectivity.
-a|
 . Download the latest storage firmware upgrade package to a device that is accessible to the management node; go to the https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle[Element software storage firmware bundle page^] and download the latest storage firmware image.
 
 . Upload the storage firmware upgrade package to the management node:
@@ -220,7 +176,7 @@ https://<ManagementNodeIP>/package-repository/1/
 .. Select *Execute* to initiate the status request.
 +
 The response indicates `state` as `SUCCESS` when complete.
-|===
+
 . Locate the installation asset ID:
 .. Open the management node REST API UI on the management node:
 +

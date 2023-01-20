@@ -40,8 +40,6 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Select *Upgrade* near the top right of the interface.
 . The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
-+
-NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .Update options
 
@@ -49,7 +47,6 @@ You can update management services using the NetApp Hybrid Cloud Control UI or t
 
 * <<Update management services using Hybrid Cloud Control>> (Recommended method)
 * <<Update management services using the management node API>>
-* <<Update management services using the management node API for dark sites>>
 
 == Update management services using Hybrid Cloud Control
 
@@ -94,47 +91,6 @@ After the upgrade begins, you can see the upgrade status on this page. During th
 
 == Update management services using the management node API
 
-Users should ideally perform management services updates from NetApp Hybrid Cloud Control. You can however manually update management services using the REST API UI from the management node.
-
-.Before you begin
-* You are running management node 11.3 or later.
-* If you are updating management services to version 2.16 or later and you are running a management node 11.3 to 11.8, you will need to increase your management node VM's RAM prior to updating management services:
-.. Power off the management node VM.
-.. Change the RAM of the management node VM from 12GB to 24GB RAM.
-.. Power on the management node VM.
-
-* Your cluster version is running NetApp Element software 11.3 or later.
-* You have upgraded your management services to at least version 2.1.326. NetApp Hybrid Cloud Control upgrades are not available in earlier service bundles.
-
-NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes^].
-
-.Steps
-. Open the REST API UI on the management node: `https://<ManagementNodeIP>/mnode`
-. Select *Authorize* and complete the following:
-.. Enter the cluster user name and password.
-.. Enter the client ID as `mnode-client` if the value is not already populated.
-.. Select *Authorize* to begin a session.
-.. Close the window.
-. (Optional) Confirm available versions of management node services: `GET /services/versions`
-. (Optional) Get detailed information about the latest version: `GET /services/versions/latest`
-. (Optional) Get detailed information about a specific version: `GET /services/versions/{version}/info`
-. Perform one of the following management services update options:
-.. Run this command to update to the most recent version of management node services: `PUT /services/update/latest`
-.. Run this command to update to a specific version of management node services: `PUT /services/update/{version}`
-. Run `GET/services/update/status` to monitor the status of the update.
-+
-A successful update returns a result similar to the following example:
-+
-----
-{
-"current_version": "2.10.29",
-"details": "Updated to version 2.14.60",
-"status": "success"
-}
-----
-
-== Update management services using the management node API for dark sites
-
 Users should ideally perform management services updates from NetApp Hybrid Cloud Control. You can however manually upload, extract, and deploy a service bundle update for management services to the management node using the REST API. You can run each command from the REST API UI for the management node.
 
 .Before you begin
@@ -144,10 +100,14 @@ Users should ideally perform management services updates from NetApp Hybrid Clou
 .. Change the RAM of the management node VM from 12GB to 24GB RAM.
 .. Power on the management node VM.
 * Your cluster version is running NetApp Element software 11.3 or later.
-* You have downloaded the service bundle update from the https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab[NetApp Support Site^] to a device that can be used in the dark site.
+* You have upgraded your management services to at least version 2.1.326. NetApp Hybrid Cloud Control upgrades are not available in earlier service bundles.
++
+NOTE: For a list of available services for each service bundle version, see the https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes^].
 
 .Steps
-. Open the REST API UI on the management node: `https://<ManagementNodeIP>/mnode`
+. Open the REST API UI on the management node:
++
+`https://<ManagementNodeIP>/mnode`
 . Select *Authorize* and complete the following:
 .. Enter the cluster user name and password.
 .. Enter the client ID as `mnode-client` if the value is not already populated.
