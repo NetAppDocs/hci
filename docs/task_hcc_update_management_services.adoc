@@ -86,7 +86,7 @@ NOTE: If your installation cannot access the internet, only the current software
 .. Select *Browse* to locate the package you saved and upload it.
 +
 After you upload the package, the upgrade starts automatically.
-
++
 After the upgrade begins, you can see the upgrade status on this page. During the upgrade, you might lose connection with NetApp Hybrid Cloud Control and have to log back in to see the results of the upgrade.
 
 == Update management services using the management node API
