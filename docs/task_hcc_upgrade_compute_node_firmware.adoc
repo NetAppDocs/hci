@@ -112,13 +112,11 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Compute firmware*.
-.
 . Select the cluster you are upgrading.
 +
 You will see the nodes in the cluster listed along with the current firmware versions and newer versions, if available for upgrade.
 
-. Select *Browse* to upload the compute firmware bundle that you downloaded from the
-https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
+. Select *Browse* to upload the compute firmware bundle that you downloaded from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
 . Wait for the upload to complete. A progress bar shows the status of the upload.
 +
 TIP: The file upload will happen in the background if you navigate away from the browser window.

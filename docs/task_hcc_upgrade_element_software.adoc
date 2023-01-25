@@ -77,7 +77,7 @@ The *Storage* tab lists the storage clusters that are part of your installation.
 |Option
 |Steps
 
-|All cluster running Element 11.8 and later
+|All clusters running Element 11.8 and later
 a|
 . Select *Browse* to upload the upgrade package that you downloaded.
 . Wait for the upload to complete. A progress bar shows the status of the upload.
