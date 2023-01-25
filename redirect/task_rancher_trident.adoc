@@ -1,5 +1,5 @@
 ---
-permalink: docs/task_rancher_resiliency.html
+permalink: docs/task_rancher_trident.html
 redirect: hci/docs/concept_rancher_index.html
 ---
 
