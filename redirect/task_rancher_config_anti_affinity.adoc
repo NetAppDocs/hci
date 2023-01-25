@@ -1,0 +1,6 @@
+---
+permalink: docs/task_rancher_config_anti_affinity.html
+redirect: hci/docs/concept_rancher_index.html
+---
+
+// 2022 JAN 24, DOC-4672
