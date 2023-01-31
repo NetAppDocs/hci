@@ -2,7 +2,7 @@
 // hci
 // hci19
 // hci18
-Supported firmware and ESXi driver versions for NetApp HCI and Firmware versions for NetApp HCI storage nodes.
+Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes.
 
 //* NetApp HCI compute bootstrap OS
 //* NetApp HCI storage nodes running NetApp Element software
