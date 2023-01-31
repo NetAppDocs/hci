@@ -34,7 +34,7 @@ IMPORTANT: To update your iDRAC/BIOS firmware, contact NetApp Support. For addit
 
 * *Updated baseboard management controller (BMC) for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions].
 
-NOTE: For a complete matrix of firmware and driver firmware for your hardware, see link:firmware_driver_versions.html[supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes].
+NOTE: For a complete matrix of firmware and driver firmware for your hardware, see link:firmware_driver_versions.html[supported firmware versions for NetApp HCI storage nodes].
 
 [[storage-firmware-upgrade]]
 include::../_include/element_software_and_storage_firmware_upgrade_time.adoc[]
