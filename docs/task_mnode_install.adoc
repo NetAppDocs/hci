@@ -173,7 +173,7 @@ NOTE: You will be prompted to enter passwords in a secure prompt. If your cluste
 
 +
 ----
-/sf/packages/mnode/setup-mnode --mnode_admin_user [username] --storage_mvip [mvip] --storage_username [username] --telemetry_active [true]
+sudo /sf/packages/mnode/setup-mnode --mnode_admin_user [username] --storage_mvip [mvip] --storage_username [username] --telemetry_active [true]
 ----
 
 .. Replace the value in [ ] brackets (including the brackets) for each of the following required parameters:

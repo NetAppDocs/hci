@@ -176,7 +176,7 @@ NOTE: You will be prompted to enter passwords in a secure prompt. If your cluste
 
 +
 ----
-/sf/packages/mnode/redeploy-mnode --mnode_admin_user [username]
+sudo /sf/packages/mnode/redeploy-mnode --mnode_admin_user [username]
 ----
 .. Replace the value in [ ] brackets (including the brackets) with the user name for the management node administrator account. This is likely to be the username for the user account you used to log into the management node.
 +
