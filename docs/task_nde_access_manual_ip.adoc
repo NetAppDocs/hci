@@ -40,6 +40,5 @@ http://<Bond1G IP address>
 ----
 This takes you to the NetApp Deployment Engine user interface.
 
-[discrete]
 == Find more information
 * link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]
