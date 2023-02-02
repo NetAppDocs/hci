@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: docs/task_vcp_upgrade_plugin.html
 summary: As part of a NetApp HCI system upgrade, you can upgrade the Element Plug-in for vCenter Server.
-keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10, 5.0
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10, 5.0, 5.1
 ---
 = Upgrade the Element Plug-in for vCenter Server
 :hardbreaks:
@@ -18,15 +18,15 @@ You can update the plug-in registration on vCenter Server Virtual Appliance (vCS
 
 This upgrade procedure covers the following upgrade scenarios.
 
-NOTE: Management services 2.22.7 includes NetApp Element Plug-in for vCenter Server 5.0 which contains the remote plug-in. If you use the Element plug-in, you should upgrade to version 5.0 to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^]. If you do not use the plug-in, this is an optional upgrade.
+NOTE: Beginning with management services 2.22.7, the remote plug-in was introduced with NetApp Element Plug-in for VMware vCenter Server 5.0 to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^].
 
 [role="tabbed-block"] 
 ==== 
 .Element Plug-in for vCenter 5.0 and later 
 -- 
-Beginning with Element Plug-in for vCenter Server 5.0, this upgrade procedure covers the following upgrade scenarios:
+This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for vCenter Server 5.0.
+* You are upgrading to Element Plug-in for vCenter Server 5.0 or later.
 * You are upgrading to an 8.0 or 7.0 HTML5 vSphere Web Client.
 +
 IMPORTANT: Element Plug-in for vCenter 5.0 and later is not compatible with vCenter Server 6.7 and 6.5.
@@ -36,7 +36,7 @@ NOTE: When you upgrade from Element Plug-in for vCenter Server 4.x to 5.0, the c
 
 .Element Plug-in for vCenter 4.10 and earlier 
 -- 
-For Element Plug-in for vCenter Server 4.10 or earlier, this upgrade procedure covers the following upgrade scenarios:
+This upgrade procedure covers the following upgrade scenarios:
 
 * You are upgrading to Element Plug-in for vCenter Server 4.10, 4.9, 4.8, 4.7, 4.6, 4.5, or 4.4.
 * You are upgrading to a 7.0, 6.7, or 6.5 HTML5 vSphere Web Client.
@@ -77,7 +77,7 @@ image::vcp_registration_utility_ui_qossioc.png[depicts the registration utility 
 
 . Select *vCenter Plug-in Registration*.
 +
-* The vCenter Plug-in Registration page for Element Plug-in for vCenter Server 5.0:
+* The vCenter Plug-in Registration page for Element Plug-in for vCenter Server 5.x:
 +
 image::vcp_remote_plugin_registration_ui.png[depicts the registration utility UI for a remote plug-in]
 +
