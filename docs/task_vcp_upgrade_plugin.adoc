@@ -31,7 +31,7 @@ This upgrade procedure covers the following upgrade scenarios:
 +
 IMPORTANT: Element Plug-in for vCenter 5.0 and later is not compatible with vCenter Server 6.7 and 6.5.
 
-NOTE: When you upgrade from Element Plug-in for vCenter Server 4.x to 5.0, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance to a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local plug-in to a remote plug-in.
+NOTE: When you upgrade from Element Plug-in for vCenter Server 4.x to 5.x, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance to a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local plug-in to a remote plug-in.
 --
 
 .Element Plug-in for vCenter 4.10 and earlier 
@@ -143,3 +143,5 @@ NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2022 FEB 03, DOC-4651
