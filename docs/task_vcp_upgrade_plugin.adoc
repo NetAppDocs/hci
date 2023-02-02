@@ -26,7 +26,7 @@ NOTE: Beginning with management services 2.22.7, the remote plug-in was introduc
 -- 
 This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for vCenter Server 5.0 or later.
+* You are upgrading to Element Plug-in for vCenter Server 5.0 or 5.1.
 * You are upgrading to an 8.0 or 7.0 HTML5 vSphere Web Client.
 +
 IMPORTANT: Element Plug-in for vCenter 5.0 and later is not compatible with vCenter Server 6.7 and 6.5.
