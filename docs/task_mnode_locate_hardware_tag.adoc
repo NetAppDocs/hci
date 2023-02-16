@@ -29,8 +29,8 @@ Locate the hardware tag for a compute node in VMware vSphere Web Client 8.0 and 
 . From the sidebar, select *Hardware* > *Overview*. Check if the hardware tag is listed in the `System` table.
 +
 image:../media/hw_tag_70.PNG[Screenshot of the System table]
-. Copy and save the value for `Tag`.
-. To add your compute node asset to the management node, go to xref:task_mnode_add_assets.adoc[Add compute and controller assets to the management node].
+. Copy and save the value for *Tag*.
+. xref:task_mnode_add_assets.adoc[Add your compute and controller assets to the management node]..
 --
 
 .VMware vSphere 6.7 and 6.5
@@ -45,7 +45,7 @@ Locate the hardware tag for a compute node in VMware vSphere Web Client 6.7 and 
 . Check if the tag is listed with the BIOS manufacturer and model number.
 +
 image:../media/hw_tag_67.PNG[Screenshot of the System table]
-. Copy and save the value for `Tag`.
+. Copy and save the value for *Tag*.
 . xref:task_mnode_add_assets.adoc[Add your compute and controller assets to the management node].
 --
 ====
