@@ -21,7 +21,9 @@ You require the hardware tag to add your compute node assets to the management n
 .VMware vSphere 8.0 and 7.0 
 -- 
 Locate the hardware tag for a compute node in VMware vSphere Web Client 8.0 and 7.0.
-*Steps*
+
+.Steps
+
 . Select the host in the vSphere Web Client navigator.
 . Select the *Configure* tab. 
 . From the sidebar, select *Hardware* > *Overview*. Check if the hardware tag is listed in the `System` table.
@@ -34,7 +36,9 @@ image:../media/hw_tag_70.PNG[Screenshot of the System table]
 .VMware vSphere 6.7 and 6.5
 -- 
 Locate the hardware tag for a compute node in VMware vSphere Web Client 6.7 and 6.5.
-*Steps*
+
+.Steps
+
 . Select the host in the vSphere Web Client navigator.
 . Select the *Monitor* tab, and select *Hardware Health*.
 
