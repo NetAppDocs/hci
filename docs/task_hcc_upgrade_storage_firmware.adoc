@@ -116,7 +116,7 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |The cluster was upgraded to the latest Element version available or the firmware was upgraded to the latest version.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. This status is also displayed when the storage service API returns an upgrade status that is not in the enumerated list of possible upgrade statuses.
+|This status is displayed when the storage service API returns an upgrade status that is not in the enumerated list of possible upgrade statuses.
 
 |Versions Available
 |Newer versions of Element and/or storage firmware are available for upgrade.
