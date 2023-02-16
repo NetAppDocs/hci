@@ -16,23 +16,39 @@ keywords: netapp, management node, rest api, hci, hardware tag
 [.lead]
 You require the hardware tag to add your compute node assets to the management node configuration using the REST API UI.
 
-This section shows you how to locate the hardware tag for your compute node.
+[role="tabbed-block"] 
+==== 
+.VMware vSphere 8.0 and 7.0 
+-- 
+Locate the hardware tag for a compute node in VMware vSphere Web Client 8.0 and 7.0.
 
 .Steps
+
+. Select the host in the vSphere Web Client navigator.
+. Select the *Configure* tab. 
+. From the sidebar, select *Hardware* > *Overview*. Check if the hardware tag is listed in the `System` table.
++
+image:../media/hw_tag_70.PNG[Screenshot of the System table]
+. Copy and save the value for *Tag*.
+. xref:task_mnode_add_assets.adoc[Add your compute and controller assets to the management node]..
+--
+
+.VMware vSphere 6.7 and 6.5
+-- 
+Locate the hardware tag for a compute node in VMware vSphere Web Client 6.7 and 6.5.
+
+.Steps
+
 . Select the host in the vSphere Web Client navigator.
 . Select the *Monitor* tab, and select *Hardware Health*.
-+
-. Depending on the version of vSphere that you are running, you can locate the hardware tag in one of the following locations on the *Hardware Health* screen.
 
-** Check if the tag is listed with the BIOS manufacturer and model number.
+. Check if the tag is listed with the BIOS manufacturer and model number.
 +
-image:../media/hw_tag_67.PNG[Hardware Health]
-+
-** Select the *Configure* tab. From the sidebar, select *Hardware* and *Overview*. Check if the hardware tag is listed in the `System` table.
-+
-image:../media/hw_tag_70.PNG[Hardware Health]
-+
-. Copy and save the value for `Tag`.
-. To add your compute node asset to the management node, go to xref:task_mnode_add_assets.adoc[Add compute and controller assets to the management node].
+image:../media/hw_tag_67.PNG[Screenshot of the System table]
+. Copy and save the value for *Tag*.
+. xref:task_mnode_add_assets.adoc[Add your compute and controller assets to the management node].
+--
+====
 
-// Doc-3482 06/09/2021
+// 2022 FEB 15, DOC-4676
+// 2021 SEP 06, DOC-3482
