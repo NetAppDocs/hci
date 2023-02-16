@@ -30,7 +30,7 @@ Locate the hardware tag for a compute node in VMware vSphere Web Client 8.0 and 
 +
 image:../media/hw_tag_70.PNG[Screenshot of the System table]
 . Copy and save the value for *Tag*.
-. xref:task_mnode_add_assets.adoc[Add your compute and controller assets to the management node]..
+. xref:task_mnode_add_assets.adoc[Add your compute and controller assets to the management node].
 --
 
 .VMware vSphere 6.7 and 6.5
