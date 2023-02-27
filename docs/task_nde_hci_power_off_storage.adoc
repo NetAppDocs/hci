@@ -4,7 +4,6 @@ permalink: docs/task_nde_hci_power_off_storage.html
 summary: Learn how to power off NetApp HCI compute nodes.
 keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 ---
-
 = Power off storage resources for a NetApp HCI system
 :hardbreaks:
 :nofooter:
@@ -23,9 +22,9 @@ After you power off the compute resources, you use a web browser to shut down al
 +
 [NOTE]
 ====
-If required, you can verify that all I/O operations from the hosts have stopped:
+If required, verify that all I/O operations from the hosts have stopped:
 
-.. Quiesce I/O from the host side using the appropriate commands for the one or more hypervisors in use.
+.. Quiesce I/O from the host side by using the appropriate commands for the one or more hypervisors in use.
 .. In the Cluster UI, select *Reporting* > *Overview*. There should be no activity on the "Cluster Input/Output" graph.
 .. After all I/O operations have stopped, wait for 20 minutes before shutting down the cluster.
 ====
@@ -44,6 +43,17 @@ NOTE: You can run the command in an incognito window to avoid running it again a
 +
 You have successfully powered off all the NetApp HCI storage nodes.
 . Close the browser or tab to avoid selecting the "back" button and repeating the API call.
+
+[NOTE]
+====
+When you restart the cluster, you must follow certain steps to verify that all nodes come online:
+
+. Verify that all Critical severity and `volumesOffline` cluster faults have been resolved.
+. Wait for 10 to 15 minutes for the cluster to settle.
+. Start bringing up the hosts to access the data. 
+
+If you want allow more time when powering on nodes and verifying that they are healthy after maintenance, contact technical support for assistance with delaying data synchronization to prevent unnecessary bin syncing.
+====
 
 == Find more information
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
