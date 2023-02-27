@@ -19,15 +19,10 @@ When you power off storage resources for NetApp HCI, you need to use the `Shutdo
 After you power off the compute resources, you use a web browser to shut down all the nodes of the NetApp HCI storage cluster.
 
 . Log in to the storage cluster and verify that you are connected to the correct MVIP.
-+
-[NOTE]
-====
-If required, verify that all I/O operations from the hosts have stopped:
-
+. (Optional) Verify that all I/O operations from the hosts have stopped:
 .. Quiesce I/O from the host side by using the appropriate commands for the one or more hypervisors in use.
 .. In the Cluster UI, select *Reporting* > *Overview*. There should be no activity on the "Cluster Input/Output" graph.
 .. After all I/O operations have stopped, wait for 20 minutes before shutting down the cluster.
-====
 . Verify that the iSCSI session count is zero.
 . Navigate to *Cluster > Nodes > Active*, and record the node IDs for all of the active nodes in the cluster.
 . To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 2. For example:
