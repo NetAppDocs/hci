@@ -25,7 +25,7 @@ After you power off the compute resources, you use a web browser to shut down al
 .. After all I/O operations have stopped, wait for 20 minutes before shutting down the cluster.
 . Verify that the iSCSI session count is zero.
 . Navigate to *Cluster > Nodes > Active*, and record the node IDs for all of the active nodes in the cluster.
-. To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 2. For example:
+. To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 4. For example:
 +
 ----
 https://{MVIP}/json-rpc/1.0?method=Shutdown&nodes=[1,2,3,4]&option=halt
@@ -47,8 +47,10 @@ When you restart the cluster, you must follow certain steps to verify that all n
 . Wait for 10 to 15 minutes for the cluster to settle.
 . Start bringing up the hosts to access the data. 
 
-If you want allow more time when powering on nodes and verifying that they are healthy after maintenance, contact technical support for assistance with delaying data synchronization to prevent unnecessary bin syncing.
+If you want to allow more time when powering on nodes and verifying that they are healthy after maintenance, contact technical support for assistance with delaying data synchronization to prevent unnecessary bin syncing.
 ====
 
 == Find more information
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software[Firmware and driver versions in NetApp HCI and NetApp Element software^]
+
+// 2023 MAR 1, DOC-4661
