@@ -5,7 +5,7 @@ keywords: documentation, earlier, previous, versions
 summary: Supported firmware and driver versions in NetApp HCI and NetApp Element software.
 ---
 
-= Supported firmware and ESXi driver versions for NetApp HCI and Firmware versions for NetApp HCI storage nodes
+= Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes
 :hardbreaks:
 :nofooter:
 :icons: font
