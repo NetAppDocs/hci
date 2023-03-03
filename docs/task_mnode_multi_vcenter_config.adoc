@@ -4,7 +4,6 @@ permalink: docs/task_mnode_multi_vcenter_config.html
 summary: You can configure the NetApp Hybrid Cloud Control to use multiple vCenters using the REST API UI.
 keywords: netapp, mnode, management node, multi-vcenter, hci
 ---
-
 = Configure NetApp Hybrid Cloud Control for multiple vCenters
 :hardbreaks:
 :nofooter:
