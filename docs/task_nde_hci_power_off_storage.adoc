@@ -4,7 +4,6 @@ permalink: docs/task_nde_hci_power_off_storage.html
 summary: Learn how to power off NetApp HCI compute nodes.
 keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 ---
-
 = Power off storage resources for a NetApp HCI system
 :hardbreaks:
 :nofooter:
@@ -20,18 +19,38 @@ When you power off storage resources for NetApp HCI, you need to use the `Shutdo
 After you power off the compute resources, you use a web browser to shut down all the nodes of the NetApp HCI storage cluster.
 
 . Log in to the storage cluster and verify that you are connected to the correct MVIP.
+. (Optional) Verify that all I/O operations from the hosts have stopped:
+.. Quiesce I/O from the host side by using the appropriate commands for the one or more hypervisors in use.
+.. In the Cluster UI, select *Reporting* > *Overview*. There should be no activity on the "Cluster Input/Output" graph.
+.. After all I/O operations have stopped, wait for 20 minutes before shutting down the cluster.
 . Verify that the iSCSI session count is zero.
 . Navigate to *Cluster > Nodes > Active*, and record the node IDs for all of the active nodes in the cluster.
-. To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 2. For example:
+. To power off the NetApp HCI storage cluster, open a web browser and use the following URL to invoke the power off and halt procedure, where `{MVIP}` is the management IP address of the NetApp HCI storage system and the `nodes=[]` array includes the node IDs that you recorded in step 4. For example:
 +
 ----
 https://{MVIP}/json-rpc/1.0?method=Shutdown&nodes=[1,2,3,4]&option=halt
 ----
++
+NOTE: You can run the command in an incognito window to avoid running it again at a later stage from the saved URL.
+
 . Enter the cluster administrator user name and password.
 . Validate that the API call returned successfully by verifying that all storage cluster nodes are included in the `successful` section of the API result.
 +
 You have successfully powered off all the NetApp HCI storage nodes.
+. Close the browser or tab to avoid selecting the "back" button and repeating the API call.
 
-[discrete]
+[NOTE]
+====
+When you restart the cluster, you must follow certain steps to verify that all nodes come online:
+
+. Verify that all Critical severity and `volumesOffline` cluster faults have been resolved.
+. Wait for 10 to 15 minutes for the cluster to settle.
+. Start bringing up the hosts to access the data. 
+
+If you want to allow more time when powering on nodes and verifying that they are healthy after maintenance, contact technical support for assistance with delaying data synchronization to prevent unnecessary bin syncing.
+====
+
 == Find more information
-* link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]
+link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]
+ 
+ // 2023-MAR-3, DOC-4661
