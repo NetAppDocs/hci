@@ -18,7 +18,7 @@ For any H-series compute node, you can update the drivers used on the nodes usin
 
 .What you'll need
 
-See the firmware and driver matrix for your hardware at https://docs.netapp.com/us-en/hci/docs/firmware_driver_versions.html[Supported firmware and ESXi driver versions^].
+See the firmware and driver matrix for your hardware at link:firmware_driver_versions.html[supported firmware and ESXi driver versions].
 
 .About this task
 
