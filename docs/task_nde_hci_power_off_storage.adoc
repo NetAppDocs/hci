@@ -53,4 +53,4 @@ If you want to allow more time when powering on nodes and verifying that they ar
 == Find more information
 link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]
  
- // 2023-MAR-3, DOC-4662
+ // 2023-MAR-3, DOC-4661
