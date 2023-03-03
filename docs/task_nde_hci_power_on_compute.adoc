@@ -33,4 +33,6 @@ If you do not wait long enough, a message appears stating that the vSphere Clien
 
 [discrete]
 == Find more information
-* link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]
+link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]
+
+// 2023 MAR 3, DOC-4661
