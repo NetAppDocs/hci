@@ -18,7 +18,7 @@ You can update the plug-in registration on vCenter Server Virtual Appliance (vCS
 
 This upgrade procedure covers the following upgrade scenarios.
 
-NOTE: Management services 2.22.7 includes NetApp Element Plug-in for vCenter Server 5.0 which contains the remote plug-in. If you use the Element plug-in, you should upgrade to version 5.0 to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^]. If you do not use the plug-in, this is an optional upgrade.
+NOTE: Management services 2.22.7 includes Element Plug-in for vCenter Server 5.0 which contains the remote plug-in. If you use the Element plug-in, you should upgrade to management services 2.22.7 or later to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^].
 
 [role="tabbed-block"] 
 ==== 
