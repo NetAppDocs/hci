@@ -155,7 +155,7 @@ Here are the different states that the UI shows before, during, and after the up
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control does not have external connectivity to reach the online software repository. This status is also displayed if NetApp Hybrid Cloud Control is unable to query the compute node when the compute node asset does not have the hardware tag.
+|This status is displayed if NetApp Hybrid Cloud Control is unable to query the compute node when the compute node asset does not have the hardware tag.
 
 |Ready to be Upgraded.
 |All the health checks passed successfully, and the node is ready to be upgraded.
@@ -472,3 +472,5 @@ CAUTION: During the powering on process, for approximately five minutes, the KVM
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2023 FEB 23, DOC-4667
