@@ -15,21 +15,6 @@ keywords: netapp, hci, ports, tcp, udp
 [.lead]
 You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system. All ports are TCP unless stated otherwise.
 
-[NOTE]
-======================
-The NetApp Hybrid Cloud Control web UI and API download software packages from the NetApp online software repository. Because of this, some URLs or IP addresses might resolve to other URLs or IP addresses based on the content delivery network. If possible, you should work with a network engineer to add these URLs or IP addresses to the firewall rules, using the following general steps:
-
-.Steps
-
-. Use the Wget or cURL utilities to access a URL (support-sg-nawest.netapp.com, for example).
-. Check for connectivity as shown in the following example:
-+
-image::network_ports.PNG[Check port connectivity]
-. Receive a failure to access the URL (different from support-sg-nawest.netapp.com).
-. Edit the firewall rules to allow the new URL.
-. Repeat the above steps until the access attempt succeeds.
-======================
-
 The following abbreviations are used in the table:
 
 * MIP: Management IP address, a per-node address
@@ -131,21 +116,6 @@ All ports in the table are TCP unless stated otherwise.
 |`monitoring.solidfire.com`
 |443
 |Storage cluster reporting to Active IQ
-
-|Management node
-a|
-New release notification:
-
-* `https://support.netapp.com/aods/`
-
-Software download:
-
-* `https://support-sg-emea.netapp.com`
-* `https://support-sg-naeast.netapp.com`
-* `https://support-sg-nawest.netapp.com`
-
-|443
-|Management node service upgrades
 
 |Management node
 |Storage cluster MVIP
@@ -388,4 +358,5 @@ Software download:
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
+// 2023 FEB 23, DOC-4667
 // 2022 DEC 8, DOC-4644

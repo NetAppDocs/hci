@@ -43,8 +43,6 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Select *Upgrade* near the top right of the interface.
 . The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
-+
-NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .Upgrade options
 Choose one of the following Element software upgrade options:
@@ -57,9 +55,6 @@ IMPORTANT: If you are upgrading an H610S series node to Element 12.5 or later an
 == Use NetApp Hybrid Cloud Control UI to upgrade Element storage
 
 Using the NetApp Hybrid Cloud Control UI, you can upgrade a storage cluster.
-
-.What you'll need
-If your management node is not connected to the internet, you have downloaded the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI software package for NetApp HCI storage clusters^].
 
 CAUTION: For potential issues while upgrading storage clusters using NetApp Hybrid Cloud Control and their workarounds, see this https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control[KB article^].
 
@@ -82,25 +77,22 @@ The *Storage* tab lists the storage clusters that are part of your installation.
 |Option
 |Steps
 
-|Your management node has external connectivity.
-a|
-. Select the drop-down arrow next to the cluster you are upgrading, and select from the upgrade versions available under the *Element* tab.
-. Select *Begin Upgrade*.
-
-TIP: The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
-
-NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page.
-
-You can download logs after the upgrade is complete.
-
-|Your management node is within a dark site without external connectivity.
+|All clusters running Element 11.8 and later
 a|
 . Select *Browse* to upload the upgrade package that you downloaded.
 . Wait for the upload to complete. A progress bar shows the status of the upload.
-
++
 CAUTION: The file upload will be lost if you navigate away from the browser window.
-
++
 An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes. If you navigate away from the browser window at this stage, the file upload is preserved.
+
+. Select *Begin Upgrade*.
++
+TIP:	The *Upgrade Status* changes during the upgrade to reflect the status of the process. It also changes in response to actions you take, such as pausing the upgrade, or if the upgrade returns an error. See <<Upgrade status changes>>.
++
+NOTE:	While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. The page does not dynamically update status and current version if the cluster row is collapsed. The cluster row must be expanded to update the table or you can refresh the page.
++
+You can download logs after the upgrade is complete.
 
 |You are upgrading an H610S cluster running Element version earlier than 11.8.
 a|
@@ -139,9 +131,6 @@ Here are the different states that the *Upgrade Status* column in the UI shows b
 |Error
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support. After you resolve the error, you can return to the page, and select *Resume*.  When you resume the upgrade, the progress bar goes backwards for a few minutes while the system runs the health check and checks the current state of the upgrade.
 
-|Unable to Detect
-|NetApp Hybrid Cloud Control shows this status instead of *Versions Available* when it does not have external connectivity to reach the online software repository. If you have external connectivity but still see this message, check your link:task_mnode_configure_proxy_server.html[proxy configuration].
-
 |Complete with Follow-up
 |Only for H610S nodes upgrading from Element version earlier than 11.8. After phase 1 of the upgrade process is complete, this state prompts you to perform additional upgrade steps (see the https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure[KB article^]). After you complete these additional steps and acknowledge that you have completed it, the status changes to *Up to Date*.
 |===
@@ -152,38 +141,6 @@ You can use APIs to upgrade storage nodes in a cluster to the latest Element sof
 
 .Steps
 
-. Do one of the following depending on your connection:
-+
-[%header,cols=2*]
-|===
-|Option
-|Steps
-
-|Your management node has external connectivity.
-a|
-. Verify the repository connection:
-.. Open the management node REST API UI on the management node:
-+
-----
-https://<ManagementNodeIP>/package-repository/1/
-----
-.. Select *Authorize* and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client`.
-... Select *Authorize* to begin a session.
-... Close the authorization window.
-.. From the REST API UI, select *GET ​/packages​/remote-repository​/connection*.
-.. Select *Try it out*.
-.. Select *Execute*.
-.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
-. Find the upgrade package ID:
-.. From the REST API UI, select *GET /packages*.
-.. Select *Try it out*.
-.. Select *Execute*.
-.. From the response, copy and save the package ID for use in a later step.
-
-|Your management node is within a dark site without external connectivity.
-a|
 . Download the storage upgrade package to a device that is accessible to the management node; go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[downloads page^] and download the latest storage node image.
 
 . Upload the storage upgrade package to the management node:
@@ -209,7 +166,7 @@ https://<ManagementNodeIP>/package-repository/1/
 .. Select *Execute* to initiate the status request.
 +
 The response indicates `state` as `SUCCESS` when complete.
-|===
+
 . Locate the storage cluster ID:
 .. Open the management node REST API UI on the management node:
 +
@@ -388,3 +345,5 @@ CAUTION: Aborting the cluster upgrade while a node is being updated might result
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2023 FEB 23, DOC-4667

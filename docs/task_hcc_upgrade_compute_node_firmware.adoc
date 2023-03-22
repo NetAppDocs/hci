@@ -66,8 +66,6 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Select *Upgrade* near the top right of the interface.
 . The EULA pops up. Scroll down, select *I accept for current and all future updates*, and select *Save*.
-+
-NOTE: When you accept the EULA, it is recorded for all future updates and the automatic download feature is enabled. You will receive updates on NetApp software updates and upgrades, which you can install at your discretion and convenience. You can disable the automatic download feature by disabling network connectivity to the NetApp online software repository.
 
 .About this task
 
@@ -94,8 +92,6 @@ Starting with management services 2.14, you can upgrade a compute node using the
 
 TIP: For a successful upgrade, ensure that the health check on the vSphere cluster is successful.
 
-TIP: For dark site upgrades, you can reduce upload time if the compute firmware bundle and the management node are both local.
-
 NOTE: Upgrading the NIC, BIOS, and BMC can take approximately 60 minutes per node depending on the speed of network connectivity between the management node and the BMC host.
 
 NOTE: Using the NetApp Hybrid Cloud Control UI to upgrade compute firmware on H300E/H500E/H700E compute nodes is no longer supported. To upgrade, you should use a <<manual_method_USB,USB drive>> or the <<manual_method_BMC, BMC UI>> to mount the compute firmware bundle.
@@ -116,18 +112,17 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the storage cluster administrator credentials.
 . Select *Upgrade* near the top right of the interface.
 . On the *Upgrades* page, select *Compute firmware*.
-. Choose from the following options and perform the set of steps that are applicable to your cluster:
-+
-[%header,cols=2*]
-|===
-|Option
-|Steps
-
-|Your management node has external connectivity.
-a|
 . Select the cluster you are upgrading.
 +
 You will see the nodes in the cluster listed along with the current firmware versions and newer versions, if available for upgrade.
+
+. Select *Browse* to upload the compute firmware bundle that you downloaded from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
+. Wait for the upload to complete. A progress bar shows the status of the upload.
++
+TIP: The file upload will happen in the background if you navigate away from the browser window.
++
+An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes.
+
 . Select the compute firmware bundle.
 . Select *Begin Upgrade*.
 +
@@ -136,25 +131,12 @@ After you select *Begin Upgrade*, the window shows failed health checks, if any.
 CAUTION: The upgrade cannot be paused after you begin. Firmware will be updated sequentially in the following order: NIC, BIOS, and BMC. Do not log in to the BMC UI during upgrade. Logging into the BMC terminates the Hybrid Cloud Control Serial-Over-LAN (SOL) session that monitors upgrade process.
 
 . If the health checks at the cluster or node level passed with warnings, but without critical failures, you will see *Ready to be Upgraded*. Select *Upgrade Node*.
-
++
 NOTE: While the upgrade is in progress, you can leave the page and come back to it later to continue monitoring the progress. During the upgrade, the UI shows various messages about the status of the upgrade.
-
++
 CAUTION: While upgrading the firmware on H610C and H615C compute nodes, do not open the Serial-Over-LAN (SOL) console through the BMC web UI. This might cause the upgrade to fail.
-
-The UI displays a message after the upgrade is complete. You can download logs after the upgrade is complete.
-
-|Your management node is within a dark site without external connectivity.
-a|
-. Select the cluster you are upgrading.
-. Select *Browse* to upload the compute firmware bundle that you downloaded from the
-https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site^].
-. Wait for the upload to complete. A progress bar shows the status of the upload.
-
-TIP: The file upload will happen in the background if you navigate away from the browser window.
-
-An on-screen message is displayed after the file is successfully uploaded and validated. Validation might take several minutes.
-You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
-|===
++
+The UI displays a message after the upgrade is complete. You can download logs after the upgrade is complete. For information about the various upgrade status changes, see <<Upgrade status changes>>.
 
 TIP: If a failure happens during the upgrade, NetApp Hybrid Cloud Control will reboot the node, take it out of maintenance mode, and display the failure status with a link to the error log. You can download the error log, which contains specific instructions or links to KB articles, to diagnose and correct any issue. For additional insight into compute node firmware upgrade issues using NetApp Hybrid Cloud Control, see this link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Known_issues_and_workarounds_for_Compute_Node_upgrades[KB^] article.
 
@@ -173,7 +155,7 @@ Here are the different states that the UI shows before, during, and after the up
 |An error has occurred during the upgrade. You can download the error log and send it to NetApp Support.
 
 |Unable to Detect
-|NetApp Hybrid Cloud Control does not have external connectivity to reach the online software repository. This status is also displayed if NetApp Hybrid Cloud Control is unable to query the compute node when the compute node asset does not have the hardware tag.
+|This status is displayed if NetApp Hybrid Cloud Control is unable to query the compute node when the compute node asset does not have the hardware tag.
 
 |Ready to be Upgraded.
 |All the health checks passed successfully, and the node is ready to be upgraded.
@@ -197,41 +179,7 @@ Compute node assets, including vCenter and hardware assets, must be known to man
 
 .Steps
 
-. Do one of the following depending on your connection:
-+
-[%header,cols=2*]
-|===
-|Option
-|Steps
-
-|Your management node has external connectivity.
-a|
-. Verify the repository connection:
-.. Open the package service REST API UI on the management node:
-+
-----
-https://<ManagementNodeIP>/package-repository/1/
-----
-.. Select *Authorize* and complete the following:
-... Enter the cluster user name and password.
-... Enter the client ID as `mnode-client`.
-... Select *Authorize* to begin a session.
-... Close the authorization window.
-.. From the REST API UI, select *GET ​/packages​/remote-repository​/connection*.
-.. Select *Try it out*.
-.. Select *Execute*.
-.. If code 200 is returned, go to the next step. If there is no connection to the remote repository, establish the connection or use the dark site option.
-. Find the compute firmware bundle ID:
-.. From the REST API UI, select *GET /packages*.
-.. Select *Try it out*.
-.. Select *Execute*.
-.. From the response, copy and save the compute firmware bundle name (`"packageName"`) and version (`"packageVersion"`) for use in a later step.
-
-|Your management node is within a dark site without external connectivity.
-a|
 . Go to the NetApp HCI software https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle[download page^] and download the latest compute firmware bundle to a device that is accessible to the management node.
-+
-TIP: For dark site upgrades, you can reduce upload time if the compute firmware bundle and the management node are both local.
 
 . Upload the compute firmware bundle to the management node:
 .. Open the management node REST API UI on the management node:
@@ -257,7 +205,7 @@ https://<ManagementNodeIP>/package-repository/1/
 +
 The response indicates `state` as `SUCCESS` when complete.
 .. From the response, copy and save the compute firmware bundle name (`"name"`) and version (`"version"`) for use in a later step.
-|===
+
 . Locate the compute controller ID and node hardware ID for the node you intend to upgrade:
 .. Open the inventory service REST API UI on the management node:
 +
@@ -520,8 +468,9 @@ CAUTION: During the powering on process, for approximately five minutes, the KVM
 . If you placed the node in maintenance mode, after the node boots to ESXi, right-click the host (compute node) name, and select *Maintenance Mode > Exit Maintenance Mode*, and migrate the VMs back to the host.
 . In vCenter, with the host name selected, configure and verify the BIOS version.
 
-[discrete]
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2023 FEB 23, DOC-4667
