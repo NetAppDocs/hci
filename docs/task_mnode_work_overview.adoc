@@ -32,6 +32,10 @@ Access the management node:
 
 * link:task_mnode_access_ui.html[Access the management node (UI or REST API)]
 
+Change the default SSL certificate:
+
+* link:reference_change_mnode_default_ssl_certificate.html[Change the management node default SSL certificate]
+
 Perform tasks with the management node UI:
 
 * link:task_mnode_work_overview_UI.html[Management node UI overview]

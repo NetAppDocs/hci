@@ -199,6 +199,8 @@ sidebar:
               #    url: /docs/task_management_services_restore.html
             - title: Access the management node
               url: /docs/task_mnode_access_ui.html
+            - title: Change the management node default SSL certificate
+              url: /mnode/reference_change_mnode_default_ssl_certificate.htm
             - title: Work with the management node UI
               entries:
                 - title: Management node UI overview
