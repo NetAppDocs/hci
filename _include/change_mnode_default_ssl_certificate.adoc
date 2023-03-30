@@ -1,5 +1,5 @@
-// This include file is used in the element-software, element-software-123, hci, hci19, and hci18 repos.
-// You must assess updates to this content for impact on all Element software and HCI documentation versions.
+// This include file is used in the hci, hci19, and hci18 repos.
+// You must assess updates to this content for impact on all HCI documentation versions.
 You can change the default SSL certificate and private key of the management node using the NetApp Element API.
 
 When you configure a management node, it creates a unique self-signed Secure Sockets Layer (SSL) certificate and private key that is used for all HTTPS communication by way of the the Element UI, per-node UI, or APIs. Element software supports self-signed certificates as well as certificates that are issued and verified by a trusted Certificate Authority (CA). 
