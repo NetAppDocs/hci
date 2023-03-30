@@ -1,0 +1,26 @@
+// This include file is used in the element-software, element-software-123, hci, hci19, and hci18 repos.
+// You must assess updates to this content for impact on all Element software and HCI documentation versions.
+You can change the default SSL certificate and private key of the management node using the NetApp Element API.
+
+When you configure a management node, it creates a unique self-signed Secure Sockets Layer (SSL) certificate and private key that is used for all HTTPS communication by way of the the Element UI, per-node UI, or APIs. Element software supports self-signed certificates as well as certificates that are issued and verified by a trusted Certificate Authority (CA). 
+
+You can use the following API methods to get more information about the default SSL certificate and make changes.
+
+* *GetNodeSSLCertificate*
++
+You can use the https://docs.netapp.com/us-en/element-software/api/reference_element_api_getnodesslcertificate.html[GetNodeSSLCertificate method^] to retrieve information about the currently installed SSL certificate including all certificate details.
+
+* *SetNodeSSLCertificate*
++
+You can use the https://docs.netapp.com/us-en/element-software/api/reference_element_api_setnodesslcertificate.html[SetNodeSSLCertificate method^] to set the cluster and per-node SSL certificates to the certificate and private key you supply. The system validates the certificate and private key to prevent an invalid certificate from being applied.
+
+* *RemoveNodeSSLCertificate*
++
+This https://docs.netapp.com/us-en/element-software/api/reference_element_api_removenodesslcertificate.html[RemoveNodeSSLCertificate method^] removes the currently installed SSL certificate and private key. The cluster then generates a new self-signed certificate and private key.
+
+
+== Find more information
+* https://docs.netapp.com/us-en/element-software/storage/reference_post_deploy_change_default_ssl_certificate.html[Change the Element software default SSL certificate^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_are_the_requirements_around_setting_custom_SSL_certificates_in_Element_Software%3F[What are the requirements around setting custom SSL certificates in Element Software?^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
