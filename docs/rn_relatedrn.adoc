@@ -58,7 +58,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes^]
 
 == Compute firmware
-* link:rn_compute_firmware_2.171.0.html[Compute Firmware Bundle 2.171.0 Release Notes] _NEW_
+* link:rn_compute_firmware_2.174.0.html[Compute Firmware Bundle 2.174.0 Release Notes] _NEW_
 * link:rn_compute_firmware_2.154.4.html[Compute Firmware Bundle 2.154.4 Release Notes]
 * link:rn_compute_firmware_2.146.html[Compute Firmware Bundle 2.146 Release Notes]
 * link:rn_compute_firmware_2.76.html[Compute Firmware Bundle 2.76 Release Notes]
