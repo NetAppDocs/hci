@@ -48,6 +48,9 @@ h| 10/25 GbE NIC
 h| VMware ESXi 6.5 driver version
 h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
+h| *Compute Firmware Bundle 2.174.0*
+| 04/12/2023
+| 3B12.CO	| 4.72.07	| 14.29.1016	| 4.16.71.1	| 4.17.71.1	| 4.21.71.1
 h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | 3B12.CO	| 4.72.07	| 14.29.1016	| 4.16.71.1	| 4.17.71.1	| 4.21.71.1
@@ -145,6 +148,9 @@ h| 10/25 GbE NIC
 h| VMware ESXi 6.5 driver version
 h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
+h| *Compute Firmware Bundle 2.174.0*
+| 04/12/2023
+| 3B07 | 4.04.07 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
 h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | 3B07 | 4.04.07 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
@@ -256,6 +262,9 @@ h| 10/25 GbE NIC
 h| VMware ESXi 6.5 driver version
 h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
+h| *Compute Firmware Bundle 2.174.0*
+| 04/12/2023
+| NATP3.10 | 6.71.20 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
 h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | NATP3.10 | 6.71.20 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
@@ -368,6 +377,9 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | VMware ESXi 6.5 driver version
 | VMware ESXi 6.7 driver version
 | VMware ESXi 7.0 driver version
+h| *Compute Firmware Bundle 2.174.0*
+| 04/12/2023
+| NAT3.4 | 07.02.00 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
 h| *Compute Firmware Bundle 2.154.4*
 | 06/08/2022
 | NAT3.4 | 6.98.00 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
@@ -439,3 +451,5 @@ SSDSCKJB240G7
 MTFDDAV240TCB1AR
 | DOMU037
 |===
+
+// Updated after Compute f/w bundle release 2.174.0, 2023-APR-19
