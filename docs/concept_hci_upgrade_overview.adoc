@@ -69,4 +69,4 @@ NOTE: Upgrading the management node operating system is no longer required to up
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
-* https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all.html[Upgrade a NetApp SolidFire all-flash storage system^]
+* https://docs.netapp.com/us-en/element-software/upgrade/concept_element_upgrade_overview.html[Upgrade a NetApp SolidFire all-flash storage system^]

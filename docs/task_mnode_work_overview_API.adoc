@@ -38,6 +38,6 @@ Tasks you can perform with REST APIs:
 
 [discrete]
 == Find more information
-* link:task_mnode_access.html[Access the management node]
+* link:task_mnode_access_ui.html[Access the management node]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
