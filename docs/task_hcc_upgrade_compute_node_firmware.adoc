@@ -31,6 +31,10 @@ After the upgrade, the compute node boots into ESXi and works as before, retaini
 |Minimum BMC version
 |Minimum BIOS version
 
+|H300E/H500E/H700E
+|6.84.00
+|NA2.1
+
 |H410C​
 |All versions supported (no upgrade required)​
 |All versions supported (no upgrade required)​
@@ -474,3 +478,4 @@ CAUTION: During the powering on process, for approximately five minutes, the KVM
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 
 // 2023 FEB 23, DOC-4667
+// Added details for H300E/H500E/H700E as per gh issue #302. 2023-APR-27
