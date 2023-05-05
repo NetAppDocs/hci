@@ -29,4 +29,4 @@ Contact NetApp support for further details on using custom protection domains.
 
 == Find more information
 
-link:api/index.html[Manage storage with the Element API]
+https://docs.netapp.com/us-en/element-software/api/index.html[Manage storage with the Element API^]
