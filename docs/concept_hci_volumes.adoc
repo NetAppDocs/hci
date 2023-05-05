@@ -31,6 +31,6 @@ NOTE: Persistent volumes that are associated with management services are create
 
 
 == Find more information
-* link:hci_task_manage_vol_management.html[Manage volumes]
+* link:task_hcc_manage_vol_management.html[Manage volumes]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
