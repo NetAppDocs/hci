@@ -160,7 +160,7 @@ This firmware package contains the following firmware versions (highlighted in *
 |8ENP6101
 |===
 
-NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805. However, these component firmware cannot be updated by way of the Storage Firmware Bundle.
+NOTE: The following table specifies the supported component firmware versions in this Storage Firmware Bundle release for the SF38410, SFG19210, SF9605, and SF4805 storage nodes. However, these component firmware cannot be updated by way of the Storage Firmware Bundle.
 
 |===
 |Component |SF38410, SF19210, SF9605, and SF4805
