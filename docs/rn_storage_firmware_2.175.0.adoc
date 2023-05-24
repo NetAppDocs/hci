@@ -182,7 +182,7 @@ See the https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^]
 +
 image::bol_dashboard.png[Storage firmware bundle release notes, align="center"]
 
-. In the keyword search field, type “Storage Firmware Bundle” and click *New Search*:
+. In the keyword search field, type “Storage Firmware Bundle” and select *New Search*:
 +
 image::storage_firmware_bundle_choice.png[Storage firmware bundle release notes, align="center"]
 
