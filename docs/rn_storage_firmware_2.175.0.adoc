@@ -23,7 +23,7 @@ The storage firmware bundle version 2.175.0 contains general bugfixes.
 //a critical bug fix for H410S (PE-14168). See https://mysupport.netapp.com/site/bugs-online/product[Bugs Online tool^] for further details. You can upgrade the storage firmware using the instructions in link:task_hcc_upgrade_storage_firmware.html[Upgrade storage firmware].
 
 === Updated firmware components
-This firmware package contains the following firmware versions for hardware components:
+This firmware package contains the following firmware versions (highlighted in *bold* text) for hardware components:
 
 ==== H610S
 |===
