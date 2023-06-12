@@ -338,7 +338,7 @@ Configure networking so that the node is synchronized with the other nodes in th
 ====
 .Element Plug-in for vCenter 5.0 and later
 --
-.. In the VMware vSphere Web Client, select *Inventory > Hosts and Clusters*.
+.. Beginning with Element Plug-in for vCenter 5.0, in the VMware vSphere Web Client, select *Inventory > Hosts and Clusters*.
 .. Right-click on the datacenter, and select *Add Host*.
 +
 The wizard guides you through adding the host.
@@ -472,7 +472,7 @@ Leave the default port number as is. It should be 3260.
 
 .Element Plug-in for vCenter 4.10 and earlier
 --
-.. In the VMware vSphere Web Client, select *Hosts and Clusters*.
+..  For Element Plug-in for vCenter 4.10 and earlier, in the VMware vSphere Web Client, select *Hosts and Clusters*.
 .. Right-click the cluster that you want to add the node to, and select *Add Host*.
 The wizard guides you through adding the host.
 +
