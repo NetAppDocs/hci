@@ -287,9 +287,9 @@ NOTE: You should have a console or keyboard, video, mouse (KVM) to perform these
 
 [role="tabbed-block"]
 ====
-.Element Plug-in for vCenter 5.0 or later
+.Element Plug-in for vCenter 5.0 and later
 --
-Add a node back to a VMware ESXi cluster running Element Plug-in for vCenter 5.0 or later.
+Add a node back to a VMware ESXi cluster running Element Plug-in for vCenter 5.0 and later.
 
 .Steps
 . Install and configure VMware ESXi version 6.0.0 as follows:
@@ -350,7 +350,7 @@ It might take a few minutes for the node to get added to the cluster. After the 
 
 .. Select the node, and then select *Configure > Networking > Virtual switches*, and perform the following steps:
 ... Expand  *vSwitch0*.
-... In the graphic that is displayed, remove the VM network.
+... In the graphic that is displayed, select the VM Network image:three_horizontal_dots.PNG[menu icon] icon followed by *Remove*.
 +
 image::h410c-esxi-vm.PNG[Shows the screen to remove the VM.]
 
@@ -359,7 +359,7 @@ image::h410c-esxi-vm.PNG[Shows the screen to remove the VM.]
 ... In the vSwitch0 - Edit settings window, select *Teaming and failover*.
 ... Verify that vmnic3 is listed under Standby adapters, and select *OK*.
 
-... In the graphic that is displayed, select *Edit Settings*.
+... In the graphic that is displayed, select the Management Network image:three_horizontal_dots.PNG[menu icon] icon followed by *Edit Settings*.
 +
 image::h410c-esxi-mgmt-network.PNG[Shows the screen to edit the management network.]
 
@@ -375,8 +375,8 @@ image::h410c-esxi-mgmt-network.PNG[Shows the screen to edit the management netwo
 
 .. Expand vSwitch1 and select *EDIT* to edit the settings as follows:
 ... Under Properties, set MTU to 9000, and select *OK*.
-.. In the graphic that is displayed, select edit for *VM Network* to edit the setting as follows:
-.. Select *Security*, and make the following selections:
+.. In the graphic that is displayed, select the VM Network image:three_horizontal_dots.PNG[menu icon] icon followed by *Edit*.
+... Select *Security*, and make the following selections:
 +
 image::vswitch1_vcp_50.PNG[Shows the security selections to make for the VM network.]
 ... Select *Teaming and failover*, and select the *Override* checkbox.
@@ -390,7 +390,7 @@ image::vswitch1_vcp_50.PNG[Shows the security selections to make for the VM netw
 ... Under IPv4 settings, provide the IPv4 information, and select *Next*.
 ... If you are ready to proceed, select *Finish*.
 
-.. In the graphic that is displayed, select *Edit* for vMotion.
+.. In the graphic that is displayed, select the vMotion image:three_horizontal_dots.PNG[menu icon] icon followed by *Edit*.
 ... Select *Security*, and make the following selections:
 +
 image::vmotion_vcp_50.PNG[Shows the security selections for the vMotion.]
@@ -459,16 +459,16 @@ NOTE: To get the SVIP IP address, select *NetApp Element Management*, and copy t
 Leave the default port number as is. It should be 3260.
 
 ... Select *OK*.
-... Select *Network Port Binding*, and selec *ADD*.
-...	Select iSCSI-A and iSCSI-B. Select *OK*
+... Select *Network Port Binding*, and select *ADD*.
+...	Select iSCSI-A and iSCSI-B, and Select *OK*
 ...	Select *RESCAN ADAPTER*.
 ...	Select *RESCAN STORAGE*. Scan for new VMFS Volumes and select *OK*.
 ... After the rescan is complete, verify if the volumes in the cluster and datastores are visible on the new compute node (host).
 --
 
-.Element Plug-in for vCenter 4.10 or earlier
+.Element Plug-in for vCenter 4.10 and earlier
 --
-Add a node back to a VMware ESXi cluster running Element Plug-in for vCenter 4.10 or later.
+Add a node back to a VMware ESXi cluster running Element Plug-in for vCenter 4.10 and later.
 
 .Steps
 . Install and configure VMware ESXi version 6.0.0 as follows:
