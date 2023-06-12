@@ -285,12 +285,6 @@ After you physically replace the node, you should add it back to the VMware ESXi
 
 NOTE: You should have a console or keyboard, video, mouse (KVM) to perform these steps.
 
-[role="tabbed-block"]
-====
-.Element Plug-in for vCenter 5.0 and later
---
-Add a node back to a VMware ESXi cluster running Element Plug-in for vCenter 5.0 and later.
-
 .Steps
 . Install and configure VMware ESXi version 6.0.0 as follows:
 .. On the remote console or KVM screen, select *Power Control > Set Power Reset*.
@@ -336,7 +330,13 @@ You can reuse the information that you copied before you removed the node. The I
 .. Press *Esc* to exit the Configure Management Network section.
 .. Select *Yes* to apply the changes.
 
-. Add the node (host) to the cluster and configure networking so that the node is synchronized with the other nodes in the cluster as follows:
+. Beginning with Element Plug-in for vCenter 5.0, add the node (host) to the datacenter. For Element Plug-in for vCenter 4.10 and earlier, add the node (host) to the cluster.
++
+Configure networking so that the node is synchronized with the other nodes in the cluster as follows:
+[role="tabbed-block"]
+====
+.Element Plug-in for vCenter 5.0 and later
+--
 .. In the VMware vSphere Web Client, select *Inventory > Hosts and Clusters*.
 .. Right-click on the datacenter, and select *Add Host*.
 +
@@ -471,53 +471,6 @@ Leave the default port number as is. It should be 3260.
 
 .Element Plug-in for vCenter 4.10 and earlier
 --
-Add a node back to a VMware ESXi cluster running Element Plug-in for vCenter 4.10 and later.
-
-.Steps
-. Install and configure VMware ESXi version 6.0.0 as follows:
-.. On the remote console or KVM screen, select *Power Control > Set Power Reset*.
-This restarts the node.
-.. In the Boot Menu window that opens, select *ESXi Install* by pressing the Down Arrow key.
-+
-NOTE: This window stays open for only five seconds. If you do not make the selection in five seconds, you should restart the node again.
-
-.. Press *Enter* to start the installation process.
-.. Complete the steps in the installation wizard.
-+
-NOTE: When asked to select the disk to install ESXi on, you should select the second disk drive in the list by selecting the Down Arrow key. When asked to enter a root password, you should enter the same password that you configured in the NetApp Deployment Engine when you set up NetApp HCI.
-
-.. After the installation is complete, press *Enter* to restart the node.
-+
-NOTE: By default, the node restarts with the NetApp HCI Bootstrap OS. You should perform a one-time configuration on the node for it to use VMware ESXi.
-
-. Configure VMware ESXi on the node as follows:
-.. In the NetApp HCI Bootstrap OS terminal user interface (TUI) login window, enter the following information:
-... User name: element
-... Password: catchTheFire!
-.. Press the Down Arrow key to select *OK*.
-.. Press *Enter* to log in.
-.. In the main menu, use the Down Arrow key to select *Support Tunnel > Open Support Tunnel*.
-.. In the window that is displayed, enter the port information.
-+
-NOTE: You should contact NetApp Support for this information. NetApp Support logs in to the node to set the boot configuration file and complete the configuration task.
-
-.. Restart the node.
-. Configure the management network as follows:
-.. Log in to VMware ESXi by entering the following credentials:
-... User name: root
-... Password: The password you set when you installed VMware ESXi.
-+
-NOTE: The password should match what you configured in the NetApp Deployment Engine when you set up NetApp HCI.
-
-.. Select *Configure Management Network*, and press *Enter*.
-.. Select *Network Adapters*, and press *Enter*.
-.. Select *vmnic2* and *vmnic3*, and press *Enter*.
-.. Select *IPv4 Configuration*, and press the Spacebar on the keyboard to select the static configuration option.
-.. Enter the IP address, subnet mask, and default gateway information, and press *Enter*.
-You can reuse the information that you copied before you removed the node. The IP address you enter here is the Management Network IP address that you copied earlier.
-.. Press *Esc* to exit the Configure Management Network section.
-.. Select *Yes* to apply the changes.
-. Add the node (host) to the cluster and configure networking so that the node is synchronized with the other nodes in the cluster as follows:
 .. In the VMware vSphere Web Client, select *Hosts and Clusters*.
 .. Right-click the cluster that you want to add the node to, and select *Add Host*.
 The wizard guides you through adding the host.
