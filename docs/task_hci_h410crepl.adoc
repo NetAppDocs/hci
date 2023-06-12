@@ -333,6 +333,7 @@ You can reuse the information that you copied before you removed the node. The I
 . Beginning with Element Plug-in for vCenter 5.0, add the node (host) to the datacenter. For Element Plug-in for vCenter 4.10 and earlier, add the node (host) to the cluster.
 +
 Configure networking so that the node is synchronized with the other nodes in the cluster as follows:
++
 [role="tabbed-block"]
 ====
 .Element Plug-in for vCenter 5.0 and later
@@ -600,7 +601,6 @@ A message recommending a rescan of the storage adapter is displayed.
 ... Select the rescan icon.
 After the rescan is complete, verify if the volumes in the cluster are visible on the new compute node (host).
 --
-
 ====
 
 
