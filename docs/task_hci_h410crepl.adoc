@@ -474,6 +474,7 @@ Leave the default port number as is. It should be 3260.
 --
 ..  For Element Plug-in for vCenter 4.10 and earlier, in the VMware vSphere Web Client, select *Hosts and Clusters*.
 .. Right-click the cluster that you want to add the node to, and select *Add Host*.
++
 The wizard guides you through adding the host.
 +
 NOTE: When you are asked to enter the user name and password, use the following credentials:
