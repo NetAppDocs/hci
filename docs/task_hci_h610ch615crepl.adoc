@@ -37,9 +37,7 @@ Here is a high-level overview of the steps in this procedure:
 <<Install the GPU drivers>>
 
 == Prepare to replace the node
-Before you replace the node, you should migrate the virtual machines (VMs) hosted on the node to an available host, and remove the node from the cluster. You should get details about the node, such as serial number and networking information.
-
-NOTE: In the case of component failures where the node is still online and functioning, for example, a dual inline memory module (DIMM) failure, you should remove the drives from the cluster before you remove the failed node.
+Before you replace the node, you should migrate the virtual machines (VMs) hosted on the node to an available host, and remove the node from the cluster. You should get details about the node, such as serial number and networking information. Migrating the VMs and getting the node details also applies in the case of component failures where the node is still online and functioning, for example, a dual inline memory module (DIMM) failure. 
 
 .Steps
 
@@ -233,3 +231,5 @@ The command should return output similar to the following: `nvidia 816 13808`
 == Find more information
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
+
+// 2023 JULY 6, DOC-4696
