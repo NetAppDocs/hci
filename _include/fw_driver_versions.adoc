@@ -10,10 +10,12 @@ Supported firmware and ESXi driver versions for NetApp HCI and firmware versions
 //* NetApp Element software
 
 link:fw_storage_nodes.html[Storage nodes]
+
 * H610S
 * H410S
 
 link:fw_compute_nodes.html[Compute nodes]
+
 * H615C
 * H610C
 * H410C
