@@ -46,6 +46,32 @@ h| Drive CD5 (FIPS)
 h| Drive Samsung PM9A3 (SED)
 h| Drive SK Hynix PE8010 (SED)
 h| Drive SK Hynix PE8010 (N-SED)
+h| *Storage Firmware Bundle 2.175.0*
+| 06/15/2023
+| 3B11	
+| 3.94.07	
+| 122	
+| 14.25.1020	 
+| 16.32.1010	
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C	
+| 1.40	
+| 1.10	
+| 3.5	
+| 2.17	
+| CXV8202Q	
+| CXV8501Q	
+| EDA5602Q	
+| EDA5900Q	
+| 0109	
+| 0109	
+| 0108	
+| GDC5602Q	
+| 11092A10	
+| 110B2A10
 h| *Storage Firmware Bundle 2.164.0*
 | 10/20/2022
 | 3B11	
