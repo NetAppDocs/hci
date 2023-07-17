@@ -137,7 +137,9 @@ https://<ManagementNodeIP>/manager/login
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
-. Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
++
+NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . On the Welcome page, select *No*.
 . Select *Continue*.
 . On the Available Inventory page, select the storage node you want to add to the existing NetApp HCI installation.
@@ -165,7 +167,9 @@ If your NetApp HCI installation runs version 1.4P2, 1.4, or 1.3, you can use the
 .Steps
 . Browse to the management IP address of one of the existing storage nodes:
 `http://<storage_node_management_IP_address>/`
-. Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
++
+NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . Select *Expand Your Installation*.
 . On the Welcome page, select *No*.
 . Click *Continue*.
@@ -229,3 +233,5 @@ IMPORTANT: Adding the drives all at once can lead to disruptions. For best pract
 == Find more information
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
+
+// 2023 JULY 13, DOC-4699
