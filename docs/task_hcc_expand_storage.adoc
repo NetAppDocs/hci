@@ -40,7 +40,9 @@ https://<ManagementNodeIP>
 . Click *Expand* at the top right corner of the interface.
 +
 The browser opens the NetApp Deployment Engine.
-. Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
++
+NOTE: You cannot log in using Lightweight Directory Access Protocol credentials. 
 . On the *Welcome* page, click *No* and click *Continue*.
 . On the *Available Inventory* page, select the storage nodes you want to add and click *Continue*.
 . On the *Network Settings* page, some of the network information has been detected from the initial deployment. Each new storage node is listed by serial number, and you need to assign the new network information to it. For each new storage node, complete the following steps:
@@ -68,3 +70,5 @@ NOTE: If you expanded a two-node storage cluster to four nodes or more, the pair
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2023 JULY 13, DOC-4699

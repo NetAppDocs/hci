@@ -36,7 +36,9 @@ https://<ManagementNodeIP>
 . Click *Expand* at the top right corner of the interface.
 +
 The browser opens the NetApp Deployment Engine.
-. Log in to the NetApp Deployment Engine by providing the NetApp HCI storage cluster administrator credentials.
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
++
+NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . On the *Welcome* page, click *Yes* and click *Continue*.
 . On the *End User License* page, read the VMware End User License Agreement and click *I accept* to accept the terms and click *Continue*.
 . On the *vCenter* page, complete the following steps:
@@ -90,3 +92,5 @@ You can monitor the progress while NetApp HCI adds and configures the resources.
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[NetApp HCI Compute and Storage Nodes Installation and Setup Instructions^]
 * https://kb.vmware.com/s/article/1003212[VMware Knowledge Base: Enhanced vMotion Compatibility (EVC) processor support^]
+
+// 2023 JULY 13, DOC-4699
