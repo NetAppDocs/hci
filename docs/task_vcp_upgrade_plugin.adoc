@@ -24,10 +24,10 @@ NOTE: Management services 2.22.7 includes Element Plug-in for vCenter Server 5.0
 -- 
 This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for vCenter Server 5.1 or 5.0.
+* You are upgrading to Element Plug-in for vCenter Server 5.2, 5.1 or 5.0.
 * You are upgrading to an 8.0 or 7.0 HTML5 vSphere Web Client.
 +
-IMPORTANT: Element Plug-in for vCenter 5.0 and later is not compatible with vCenter Server 6.7 and 6.5.
+IMPORTANT: Element Plug-in for vCenter 5.0 or later is not compatible with vCenter Server 6.7 and 6.5.
 
 NOTE: When you upgrade from Element Plug-in for vCenter Server 4.x to 5.x, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance to a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local plug-in to a remote plug-in.
 --
@@ -132,8 +132,8 @@ After upgrading to NetApp Element Plug-in for vCenter Server 4.8 or later with V
 You should see the following version details or details of a more recent version:
 +
 ----
-NetApp Element Plug-in Version: 5.1
-NetApp Element Plug-in Build Number: 12
+NetApp Element Plug-in Version: 5.2
+NetApp Element Plug-in Build Number: 5
 ----
 
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
