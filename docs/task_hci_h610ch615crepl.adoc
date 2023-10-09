@@ -231,10 +231,8 @@ The command should return output similar to the following: `nvidia 816 13808`
 .. If you are using vGPU-enabled desktops in a virtual desktop infrastructure (VDI) context, configure VMware Horizon View for NVIDIA vGPU software.
 
 == Find more information
-* https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to manually install ESXi on a NetApp HCI compute node^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
 
-// 2023 OCT 6, DOC-4705
 // 2023 JULY 13, DOC-4699
 // 2023 JULY 6, DOC-4696
