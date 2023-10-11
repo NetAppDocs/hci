@@ -1,0 +1,6 @@
+---
+permalink: docs/task_upgrade_element_latest_healthtools.html
+redirect: hci/docs/concept_hci_upgrade_overview.html
+---
+
+// 2023 OCT 11, DOC-4712
