@@ -1,7 +1,7 @@
 ---
 layout: astra
 permalink: index.html
-lead: "NetApp HCI is a scalable, on-premises hyper converged infrastructure for hybrid clouds. Learn more by using NetApp HCI configuration and management documentation and NetApp HCI solutions information."
+lead: "NetApp HCI is a scalable, on-premises hyper converged infrastructure for hybrid clouds. Learn more by using NetApp HCI configuration and management documentation and NetApp HCI solutions information. This site contains the documentation for NetApp HCI 1.10."
 summary: Learn more by using NetApp HCI configuration and management documentation and NetApp HCI solutions information.
 keywords: netapp, hci, on premise,
 ---
