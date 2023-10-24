@@ -322,7 +322,7 @@ sidebar:
        - title: Remove Witness Nodes after expanding cluster
          url: /docs/task_hci_removewn.html
     - title: Use Rancher on NetApp HCI
-      url: /docs/concept_rancher_index.html
+      url: /docs/concept_rancher_concept.html
       # Rancher no longer supported beginning with management services 2.21.61
       # entries:
        # - title: Rancher on NetApp HCI overview
