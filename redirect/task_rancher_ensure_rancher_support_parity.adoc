@@ -1,6 +1,6 @@
 ---
 permalink: docs/task_rancher_ensure_rancher_support_parity.html
-redirect: hci/docs/concept_rancher_concept.html
+redirect: hci/docs/concept_rancher_product_overview.html
 ---
 
 // 2022 JAN 24, DOC-4672
