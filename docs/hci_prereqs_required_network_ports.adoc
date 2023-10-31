@@ -13,7 +13,9 @@ keywords: netapp, hci, ports, tcp, udp
 :keywords: netapp, hci, ports, tcp, udp
 
 [.lead]
-You might need to allow the following ports through your datacenter's edge firewall so that you can manage the system remotely, allow clients outside of your datacenter to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system. All ports are TCP unless stated otherwise.
+You might need to allow the following ports through your data center's edge firewall so that you can manage the system remotely, allow clients outside of your data center to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system.
+
+All ports are TCP unless stated otherwise, and all TCP ports must support three-way handshake communication between the NetApp Support Server, management node, and nodes running Element software. For example, the host on a management node source communicates with the host on a storage cluster MVIP destination through TCP port 443, and the destination host communicates back to the source host through any port.
 
 The following abbreviations are used in the table:
 
@@ -21,8 +23,6 @@ The following abbreviations are used in the table:
 * SIP: Storage IP address, a per-node address
 * MVIP: Management virtual IP address
 * SVIP: Storage virtual IP address
-
-All ports in the table are TCP unless stated otherwise.
 
 |===
 |Source |Destination |Port |Description
@@ -358,5 +358,6 @@ All ports in the table are TCP unless stated otherwise.
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
+// 2023 OCT 27, DOC-4713
 // 2023 FEB 23, DOC-4667
 // 2022 DEC 8, DOC-4644
