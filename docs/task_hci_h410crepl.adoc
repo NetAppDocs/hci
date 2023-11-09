@@ -46,11 +46,11 @@ When replacing an H410C compute node, consider the following:
 
 Here is a high-level overview of the steps in this procedure:
 
-<<Step 1: Prepare to replace the compute node>>
-<<Step 2: Replace the compute node in the chassis>>
-<<Step 3: Remove the compute node asset in NetApp HCI 1.7 and later>>
-<<Step 4: Add the compute node to the cluster>>
-<<Step 5: Redeploy Witness Nodes for two and three-node storage clusters>>
+* <<Step 1: Prepare to replace the compute node>>
+* <<Step 2: Replace the compute node in the chassis>>
+* <<Step 3: Remove the compute node asset in NetApp HCI 1.7 and later>>
+* <<Step 4: Add the compute node to the cluster>>
+* <<Step 5: Redeploy Witness Nodes for two and three-node storage clusters>>
 
 Here are some additional tasks, which you might need to perform if your system has the specific conditions they are applicable to:
 
