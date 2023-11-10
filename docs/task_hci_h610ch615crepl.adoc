@@ -101,8 +101,8 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
 +
-The browser opens the NetApp Deployment Engine.
-. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
+The browser opens the NDE.
+. Log in to the NetApp NDE by providing the local NetApp HCI storage cluster administrator credentials. 
 +
 NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . On the Welcome page, select *Yes*.
