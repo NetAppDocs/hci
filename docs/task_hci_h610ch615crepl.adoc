@@ -183,7 +183,7 @@ NVIDIA-GRID-vSphere-6.7-410.92-410.91-412.16.zip
 
 . Extract the driver package on your computer.
 The resulting .VIB file is the uncompressed driver file.
-. Copy the .VIB driver file from your computer to ESXi running on the compute node. The SCP utility is readily available in most Linux distributions, or available as a downloadable utility for all versions of Windows.
+. Copy the .VIB driver file from your computer to ESXi running on the compute node. The Secure Copy Protocol (SCP) utility is readily available in most Linux distributions, or available as a downloadable utility for all versions of Windows.
 +
 The following example shows the commands for ESXi 6.0, 6.5, and 6.7. The commands assume that the driver is located in the $HOME/NVIDIA/ESX6.x/ directory on the management host:
 +
