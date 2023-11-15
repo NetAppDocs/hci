@@ -19,7 +19,7 @@ You should replace a chassis to repair compute node failures related to the CPU,
 ====
 For H610C and H615C, the terms "node" and "chassis" are used interchangeably, because the node and chassis are not separate components.
 
-NetApp recommends using the NetApp Deployment Engine (NDE) to add a replacement compute node. If you cannot proceed with using the NDE for ESXi installation, see the NetApp Knowledge Base article https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to install ESXi on NetApp HCI compute node manually^].
+NetApp recommends using the NetApp Deployment Engine to add a replacement compute node. If you cannot proceed with using the NetApp Deployment Engine for ESXi installation, see the NetApp Knowledge Base article https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to install ESXi on NetApp HCI compute node manually^].
 ====
 
 .What you'll need
@@ -101,8 +101,8 @@ https://<ManagementNodeIP>
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
 +
-The browser opens the NDE.
-. Log in to the NetApp NDE by providing the local NetApp HCI storage cluster administrator credentials. 
+The browser opens the NetApp Deployment Engine.
+. Log in to the NetApp NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
 +
 NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . On the Welcome page, select *Yes*.

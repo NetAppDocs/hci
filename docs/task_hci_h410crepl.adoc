@@ -19,7 +19,7 @@ You should replace a compute node in the event of CPU failure, other motherboard
 ====
 The replacement node should have the same version of NetApp HCI Bootstrap OS as the rest of the compute nodes in the NetApp HCI installation.
 
-NetApp recommends using the NetApp Deployment Engine (NDE) to add a replacement compute node. If you cannot proceed with using the NDE for ESXi installation, see the NetApp Knowledge Base article https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to install ESXi on NetApp HCI compute node manually^].
+NetApp recommends using the NetApp Deployment Engine to add a replacement compute node. If you cannot proceed with using the NetApp Deployment Engine for ESXi installation, see the NetApp Knowledge Base article https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to install ESXi on NetApp HCI compute node manually^].
 ====
 
 .What you'll need
@@ -183,7 +183,7 @@ https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
-. Log in to the NDE by providing the local NetApp HCI storage cluster administrator credentials. 
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
 +
 NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . On the Welcome page, select *Yes*.
@@ -234,7 +234,7 @@ You can monitor the progress while NetApp HCI adds and configures the resources.
 . Optional: Verify that the new compute node is visible in vCenter.
 
 === NetApp HCI 1.4 P2, 1.4, and 1.3
-If your NetApp HCI installation runs version 1.4P2, 1.4, or 1.3, you can use the NDE to add the node to the cluster.
+If your NetApp HCI installation runs version 1.4P2, 1.4, or 1.3, you can use the NetApp Deployment Engine to add the node to the cluster.
 
 .What you'll need
 
@@ -247,7 +247,7 @@ If your NetApp HCI installation runs version 1.4P2, 1.4, or 1.3, you can use the
 .Steps
 . Browse to the management IP address of one of the existing storage nodes:
 `http://<storage_node_management_IP_address>/`
-. Log in to the NDE by providing the local NetApp HCI storage cluster administrator credentials. 
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
 +
 NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . Select *Expand Your Installation*.
@@ -307,7 +307,7 @@ NOTE: This window stays open for only five seconds. If you do not make the selec
 .. Press *Enter* to start the installation process.
 .. Complete the steps in the installation wizard.
 +
-NOTE: When asked to select the disk to install ESXi on, you should select the second disk drive in the list by selecting the Down Arrow key. When asked to enter a root password, you should enter the same password that you configured in the NDE when you set up NetApp HCI.
+NOTE: When asked to select the disk to install ESXi on, you should select the second disk drive in the list by selecting the Down Arrow key. When asked to enter a root password, you should enter the same password that you configured in the NetApp Deployment Engine when you set up NetApp HCI.
 
 .. After the installation is complete, press *Enter* to restart the node.
 +
@@ -330,7 +330,7 @@ NOTE: You should contact NetApp Support for this information. NetApp Support log
 ... User name: root
 ... Password: The password you set when you installed VMware ESXi.
 +
-NOTE: The password should match what you configured in the NDE when you set up NetApp HCI.
+NOTE: The password should match what you configured in the NetApp Deployment Engine when you set up NetApp HCI.
 
 .. Select *Configure Management Network*, and press *Enter*.
 .. Select *Network Adapters*, and press *Enter*.
@@ -356,7 +356,7 @@ The wizard guides you through adding the host.
 +
 NOTE: When you are asked to enter the user name and password, use the following credentials:
 User name: root
-Password: The password you configured in the NDE when you set up NetApp HCI
+Password: The password you configured in the NetApp Deployment Engine when you set up NetApp HCI
 +
 It might take a few minutes for the node to get added to the cluster. After the process is complete, the newly added node is listed under the cluster.
 
@@ -490,7 +490,7 @@ The wizard guides you through adding the host.
 +
 NOTE: When you are asked to enter the user name and password, use the following credentials:
 User name: root
-Password: The password you configured in the NDE when you set up NetApp HCI
+Password: The password you configured in the NNetApp Deployment Engine when you set up NetApp HCI
 +
 It might take a few minutes for the node to get added to the cluster. After the process is complete, the newly added node is listed under the cluster.
 
@@ -641,7 +641,7 @@ You should redeploy Witness Nodes in the following scenarios:
 * You performed the return to factory image (RTFI) procedure on the compute node.
 * The Witness Node VM is corrupted.
 * The Witness Node VM was accidentally removed from ESXi.
-The VM is configured using the template that is created as part of initial deployment using the NDE. Here is an example of what a Witness Node VM looks like:
+The VM is configured using the template that is created as part of initial deployment using the NetApp Deployment Engine. Here is an example of what a Witness Node VM looks like:
 +
 image::vm-template.png[Shows a screenshot of the Witness Node VM template.]
 
