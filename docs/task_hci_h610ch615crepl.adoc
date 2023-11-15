@@ -102,7 +102,7 @@ https://<ManagementNodeIP>
 . In the Expand Installation pane, select *Expand*.
 +
 The browser opens the NetApp Deployment Engine.
-. Log in to the NetApp NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
+. Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
 +
 NOTE: You cannot log in using Lightweight Directory Access Protocol credentials.
 . On the Welcome page, select *Yes*.
