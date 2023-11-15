@@ -15,7 +15,12 @@ keywords: netapp, hci, H410C nodes, replacement, node replacement
 [.lead]
 You should replace a compute node in the event of CPU failure, other motherboard issues, or if it does not power on. The instructions apply to H410C nodes. If you have a H410C compute node that runs NetApp HCI Bootstrap OS version 1.6P1 or later, you do not have to replace the node if the memory DIMM fails; you need replace only the failed DIMM. If the DIMMs in your node have not failed, you can use them in the replacement node.
 
-NOTE: The replacement node should have the same version of NetApp HCI Bootstrap OS as the rest of the compute nodes in the NetApp HCI installation.
+[NOTE]
+====
+The replacement node should have the same version of NetApp HCI Bootstrap OS as the rest of the compute nodes in the NetApp HCI installation.
+
+NetApp recommends using the NetApp Deployment Engine to add a replacement compute node. If you cannot proceed with using the NetApp Deployment Engine for ESXi installation, see the NetApp Knowledge Base article https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to install ESXi on NetApp HCI compute node manually^].
+====
 
 .What you'll need
 
@@ -40,18 +45,20 @@ When replacing an H410C compute node, consider the following:
 .Steps overview
 
 Here is a high-level overview of the steps in this procedure:
-<<Prepare to replace the compute node>>
-<<Replace the compute node in the chassis>>
-<<Remove the compute node asset in NetApp HCI 1.7 and later>>
-<<Add the compute node to the cluster>>
-<<Redeploy Witness Nodes for two and three-node storage clusters>>
+
+* <<Step 1: Prepare to replace the compute node>>
+* <<Step 2: Replace the compute node in the chassis>>
+* <<Step 3: Remove the compute node asset in NetApp HCI 1.7 and later>>
+* <<Step 4: Add the compute node to the cluster>>
+* <<Step 5: Redeploy Witness Nodes for two and three-node storage clusters>>
 
 Here are some additional tasks, which you might need to perform if your system has the specific conditions they are applicable to:
-link:task_hci_removewn.html[Remove Witness Nodes to free up compute resources]
-<<Change the password if you received a replacement node with a non-standard BMC password>>
-<<Upgrade the BMC firmware on your node>>
 
-== Prepare to replace the compute node
+* link:task_hci_removewn.html[Remove Witness Nodes to free up compute resources]
+* <<Change the password if you received a replacement node with a non-standard BMC password>>
+* <<Upgrade the BMC firmware on your node>>
+
+== Step 1: Prepare to replace the compute node
 You should migrate the virtual machines (VMs) hosted on the node to an available host, and remove the failed node from the cluster. You should get details about the failed node, such as serial number and networking information.
 
 .Steps
@@ -88,7 +95,7 @@ You can reuse this information when you perform the initial network configuratio
 
 |===
 
-== Replace the compute node in the chassis
+== Step 2: Replace the compute node in the chassis
 After you remove the failed node from the cluster, you can remove the node from the chassis, and install the replacement node.
 
 NOTE: Ensure that you have antistatic protection before you perform the steps here.
@@ -128,7 +135,7 @@ Do not force the cables into the ports; you might damage the cables, ports, or b
 +
 TIP: Ensure that the replacement node is cabled in the same way as the other nodes in the chassis.
 
-== Remove the compute node asset in NetApp HCI 1.7 and later
+== Step 3: Remove the compute node asset in NetApp HCI 1.7 and later
 In NetApp HCI 1.7 and later, after you physically replace the node, you should remove the compute node asset using the management node APIs. To use REST APIs, your storage cluster must be running NetApp Element software 11.5 or later and you should have deployed a management node running version 11.5 or later.
 
 .Steps
@@ -153,7 +160,7 @@ Scroll down in the response body to the Compute section, and copy the parent and
 Enter the parent and id values you got in step 7.
 . Select *Execute*.
 
-== Add the compute node to the cluster
+== Step 4: Add the compute node to the cluster
 You should add the compute node back to the cluster. The steps vary depending on the version of NetApp HCI you are running.
 
 === NetApp HCI 1.6P1 and later
@@ -609,7 +616,7 @@ After the rescan is complete, verify if the volumes in the cluster are visible o
 ====
 
 
-== Redeploy Witness Nodes for two and three-node storage clusters
+== Step 5: Redeploy Witness Nodes for two and three-node storage clusters
 After you physically replace the failed compute node, you should redeploy the NetApp HCI Witness Node VM if the failed compute node was hosting the Witness Node. These instructions apply only to compute nodes that are part of a NetApp HCI installation with two or three-node storage clusters.
 
 .What you'll need
@@ -742,5 +749,6 @@ Log in after the upgrade, and select *System* to verify that the *Firmware Revis
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
 
+// 2023 NOV 6, DOC-4705
 // 2023 JULY 13, DOC-4699
 // 2023 JUN-12, DOC-4688

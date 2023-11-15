@@ -15,7 +15,12 @@ keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement
 [.lead]
 You should replace a chassis to repair compute node failures related to the CPU, the motherboard, or if it does not power on. If you have a faulty DIMM in your H610C compute node that runs NetApp HCI Bootstrap OS version 1.6 or later, you can replace the DIMM and do not have to replace the chassis. For H615C nodes, you need not replace the chassis if a DIMM fails; you can replace only the failed DIMM.
 
-NOTE: For H610C and H615C, the terms "node" and "chassis" are used interchangeably, because the node and chassis are not separate components.
+[NOTE] 
+====
+For H610C and H615C, the terms "node" and "chassis" are used interchangeably, because the node and chassis are not separate components.
+
+NetApp recommends using the NetApp Deployment Engine to add a replacement compute node. If you cannot proceed with using the NetApp Deployment Engine for ESXi installation, see the NetApp Knowledge Base article https://kb.netapp.com/Legacy/NetApp_HCI/OS/How_to_install_ESXi_on_NetApp_HCI_compute_node_manually[How to install ESXi on NetApp HCI compute node manually^].
+====
 
 .What you'll need
 
@@ -28,15 +33,7 @@ To order a replacement, you should contact NetApp Support.
 .About this task
 Alarms in the VMware vSphere Web Client alert you when a host fails. You must match the serial number of the failed host from the VMware vSphere Web Client with the serial number on the sticker at the back of the node.
 
-.Steps overview
-
-Here is a high-level overview of the steps in this procedure:
-<<Prepare to replace the node>>
-<<Replace the node>>
-<<Add the node to the cluster>>
-<<Install the GPU drivers>>
-
-== Prepare to replace the node
+== Step 1: Prepare to replace the node
 Before you replace the node, you should migrate the virtual machines (VMs) hosted on the node to an available host, and remove the node from the cluster. You should record details about the node, such as the serial number and networking information. Migrating the VMs and recording the node details also applies in the case of component failures where the node is still online and functioning, for example, a dual inline memory module (DIMM) failure. 
 
 .Steps
@@ -55,7 +52,7 @@ You need the serial number to identify the chassis by matching the number that y
 . Right-click the failed node and select *Remove from Inventory*.
 . Click *Yes* to confirm the action.
 
-== Replace the node
+== Step 2: Replace the node
 After you remove the failed node from the cluster, you can remove the failed chassis, and install the replacement chassis.
 
 NOTE: Ensure that you have antistatic protection before you perform the steps here.
@@ -86,7 +83,7 @@ Do not force the cables into the ports; you might damage the cables, ports, or b
 
 . Power on the chassis.
 
-== Add the node to the cluster
+== Step 3: Add the node to the cluster
 You should configure NetApp HCI to use the new compute node.
 
 .What you'll need
@@ -103,6 +100,7 @@ https://<ManagementNodeIP>
 ----
 . Log in to NetApp Hybrid Cloud Control by providing the NetApp HCI storage cluster administrator credentials.
 . In the Expand Installation pane, select *Expand*.
++
 The browser opens the NetApp Deployment Engine.
 . Log in to the NetApp Deployment Engine by providing the local NetApp HCI storage cluster administrator credentials. 
 +
@@ -154,15 +152,16 @@ This disables real-time health and diagnostic monitoring for NetApp HCI. Disabli
 You can monitor the progress while NetApp HCI adds and configures the resources.
 . Optional: Verify that any new compute nodes are visible in vCenter.
 
-== Install the GPU drivers
+== Step 4: Install the GPU drivers
 Compute nodes with NVIDIA graphics processing units (GPUs), like the H610C node, need the NVIDIA software drivers installed in VMware ESXi so that they can take advantage of the increased processing power. To install the GPU drivers, the compute node must have a GPU card.
 
 .Steps
 . Open a browser and browse to the NVIDIA licensing portal at the following URL:
 `https://nvid.nvidia.com/dashboard/`
-. Download one of the following driver packages to your computer, depending on your environment:
+. Download the driver package version to your computer, depending on your environment. 
 +
-
+The following example shows the driver package version for vSphere 6.0, 6.5, and 6.7:
++
 [%header,cols=2*]
 |===
 |vSphere version
@@ -184,9 +183,10 @@ NVIDIA-GRID-vSphere-6.7-410.92-410.91-412.16.zip
 
 . Extract the driver package on your computer.
 The resulting .VIB file is the uncompressed driver file.
-. Copy the .VIB driver file from your computer to ESXi running on the compute node. The following example commands for each version assume that the driver is located in the $HOME/NVIDIA/ESX6.x/ directory on the management host. The SCP utility is readily available in most Linux distributions, or available as a downloadable utility for all versions of Windows:
+. Copy the .VIB driver file from your computer to ESXi running on the compute node. The Secure Copy Protocol (SCP) utility is readily available in most Linux distributions, or available as a downloadable utility for all versions of Windows.
 +
-
+The following example shows the commands for ESXi 6.0, 6.5, and 6.7. The commands assume that the driver is located in the $HOME/NVIDIA/ESX6.x/ directory on the management host:
++
 [%header,cols=2*]
 |===
 |Option
@@ -234,5 +234,6 @@ The command should return output similar to the following: `nvidia 816 13808`
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
 
+// 2023 NOV 6, DOC-4705
 // 2023 JULY 13, DOC-4699
 // 2023 JULY 6, DOC-4696
