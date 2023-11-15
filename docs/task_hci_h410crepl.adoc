@@ -490,7 +490,7 @@ The wizard guides you through adding the host.
 +
 NOTE: When you are asked to enter the user name and password, use the following credentials:
 User name: root
-Password: The password you configured in the NNetApp Deployment Engine when you set up NetApp HCI
+Password: The password you configured in the NetApp Deployment Engine when you set up NetApp HCI
 +
 It might take a few minutes for the node to get added to the cluster. After the process is complete, the newly added node is listed under the cluster.
 
