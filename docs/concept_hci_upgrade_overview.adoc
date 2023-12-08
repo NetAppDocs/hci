@@ -4,7 +4,6 @@ permalink: docs/concept_hci_upgrade_overview.html
 summary: You can upgrade NetApp HCI and all of its components.
 keywords: netapp, hci, on premise, cluster, upgrade, element
 ---
-
 = Upgrade sequence overview
 
 :hardbreaks:
@@ -18,7 +17,12 @@ You can keep your NetApp HCI system up-to-date after deployment by sequentially 
 
 These components include management services, NetApp Hybrid Cloud Control, Element software, management node, compute firmware, compute drivers, and the Element Plug-in for vCenter Server.​
 
-NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 or later using NetApp Hybrid Cloud Control.
+[NOTE]
+====
+* Beginning November 2023, you cannot start a component upgrade using NetApp Hybrid Cloud Control or REST API because the signing key certificates (private and public) expired on November 5, 2023. You can resolve this issue by following the workaround documented in the Knowledge Base article https://kb.netapp.com/onprem/solidfire/Element_OS/SolidFire_and_HCI_upgrades_unable_to_start_due_to_upgrade_package_upload_error[SolidFire and HCI upgrades unable to start due to upgrade package upload error^].
+
+* Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 or later using NetApp Hybrid Cloud Control.
+====
 
 The <<sys_upgrade_seq,system upgrade sequence>> content describes the tasks that are needed to complete a NetApp HCI system upgrade. Ideally you perform these procedures as part of the larger upgrade sequence and not in isolation. If a component-based upgrade or update is needed, see the procedure prerequisites to ensure additional complexities are addressed.
 
@@ -70,3 +74,5 @@ NOTE: Upgrading the management node operating system is no longer required to up
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 * https://docs.netapp.com/us-en/element-software/upgrade/concept_element_upgrade_overview.html[Upgrade a NetApp SolidFire all-flash storage system^]
+
+// 2023 DEC 8, DOC-4720
