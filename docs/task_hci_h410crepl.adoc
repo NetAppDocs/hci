@@ -341,15 +341,15 @@ You can reuse the information that you copied before you removed the node. The I
 .. Press *Esc* to exit the Configure Management Network section.
 .. Select *Yes* to apply the changes.
 
-. Beginning with Element Plug-in for vCenter 5.0, add the node (host) to the datacenter. For Element Plug-in for vCenter 4.10 and earlier, add the node (host) to the cluster.
-+
-Configure networking so that the node is synchronized with the other nodes in the cluster as follows:
+. Configure networking so that the node is synchronized with the other nodes in the cluster as follows:
 +
 [role="tabbed-block"]
 ====
 .Element Plug-in for vCenter 5.0 and later
 --
-.. Beginning with Element Plug-in for vCenter 5.0, in the VMware vSphere Web Client, select *Inventory > Hosts and Clusters*.
+Beginning with Element Plug-in for vCenter 5.0, add the node (host) to the datacenter. 
+
+.. In the VMware vSphere Web Client, select *Inventory > Hosts and Clusters*.
 .. Right-click on the datacenter, and select *Add Host*.
 +
 The wizard guides you through adding the host.
@@ -483,7 +483,9 @@ Leave the default port number as is. It should be 3260.
 
 .Element Plug-in for vCenter 4.10 and earlier
 --
-..  For Element Plug-in for vCenter 4.10 and earlier, in the VMware vSphere Web Client, select *Hosts and Clusters*.
+For Element Plug-in for vCenter 4.10 and earlier, add the node (host) to the cluster.
+
+.. In the VMware vSphere Web Client, select *Hosts and Clusters*.
 .. Right-click the cluster that you want to add the node to, and select *Add Host*.
 +
 The wizard guides you through adding the host.
