@@ -11,7 +11,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 Before continuing with your NetApp HCI deployment, you need to read and understand the end user license agreements.

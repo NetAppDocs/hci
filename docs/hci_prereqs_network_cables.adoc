@@ -11,7 +11,6 @@ keywords: netapp, hci, network, cable, requirements
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, network, cable, requirements
 
 [.lead]
 You can use the following guidelines to ensure that you have enough of the right type of network cables for the size of your deployment. For RJ45 ports, you must use Cat 5e or Cat 6 rated cables.

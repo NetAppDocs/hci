@@ -12,7 +12,6 @@ keywords: netapp, hci, element, new, whatsnew
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help, element
 
 [.lead]
 NetApp periodically updates NetApp HCI to bring you new features, enhancements, and bug fixes. NetApp HCI 1.10 includes Element software 12.5 for storage clusters.

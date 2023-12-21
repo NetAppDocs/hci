@@ -11,7 +11,6 @@ keywords: netapp, hci, management node, mnode, best practice
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, management node, mnode, best practice
 
 [.lead]
 As a best practice, only associate one management node with one VMware vCenter instance, and avoid defining the same storage and compute resources or vCenter instances in multiple management nodes. Defining the same resources in multiple management nodes can cause problems such as incorrect resource reporting in NetApp ActiveIQ.

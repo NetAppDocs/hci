@@ -11,7 +11,6 @@ keywords: netapp, hci, element, Witness Node
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, element, Witness Node
 
 [.lead]
 NetApp HCI supports a minimum installation size of two storage nodes and two compute nodes. When you install NetApp HCI using a two or three-node storage cluster, you need to be aware of NetApp HCI Witness Nodes and their virtual machine (VM) resource requirements.

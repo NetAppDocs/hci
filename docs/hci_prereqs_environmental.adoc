@@ -11,7 +11,6 @@ keywords: netapp, hci, environment, requirements
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, environment, requirements
 
 [.lead]
 Ensure that the power for the rack used to install NetApp HCI is supplied by AC power outlets, and that your datacenter provides adequate cooling for the size of your NetApp HCI installation.

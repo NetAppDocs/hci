@@ -11,7 +11,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 
 [.lead]
 You can power off or power on your NetApp HCI system if you have a scheduled outage, need to perform hardware maintenance, or need to expand the system. Use the following tasks to power off or power on your NetApp HCI system as required.
