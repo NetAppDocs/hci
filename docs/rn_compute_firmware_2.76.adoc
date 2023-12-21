@@ -13,7 +13,6 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 The downloadable compute firmware bundle contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.

@@ -10,7 +10,6 @@ keywords: netapp, hci, ports, tcp, udp
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, ports, tcp, udp
 
 [.lead]
 You might need to allow the following ports through your data center's edge firewall so that you can manage the system remotely, allow clients outside of your data center to connect to resources, and ensure that internal services can function properly. Some of these ports, URLs, or IP addresses might not be required, depending on how you use the system.

@@ -11,7 +11,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 In environments where servers automatically acquire IPv4 configuration from DHCP, you can access the NetApp Deployment Engine using the IPv4 address assigned to the Bond1G interface on one of the storage nodes. You can use a USB stick to retrieve the IPv4 address from one of the storage nodes. The NetApp Deployment Engine will automatically discover other compute and storage nodes that use DHCP-assigned IPv4 addresses. You should not use this method unless your network has special requirements.

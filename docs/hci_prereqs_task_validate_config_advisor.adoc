@@ -11,7 +11,6 @@ keywords: netapp, hci, element, configuration, validation
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, element, configuration, validation
 
 [.lead]
 Before you rack NetApp HCI hardware and perform the installation of NetApp HCI, you need to verify that your environment meets NetApp HCI networking requirements. Active IQ Config Advisor runs checks on your environment by validating network, switch, and VMware vSphere configurations. The tool generates a report which you can use to help you resolve issues, and you can forward the report to your Professional Services engineer to prepare and schedule an installation.

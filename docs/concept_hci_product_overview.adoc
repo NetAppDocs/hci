@@ -11,7 +11,6 @@ keywords: netapp, hci, on premise, cloud,
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
 NetApp HCI is an enterprise-scale hybrid cloud infrastructure design that combines storage, compute, networking, and hypervisor—and adds capabilities that span public and private clouds.
