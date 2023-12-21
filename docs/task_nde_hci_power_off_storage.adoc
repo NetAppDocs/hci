@@ -10,7 +10,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 
 [.lead]
 When you power off storage resources for NetApp HCI, you need to use the `Shutdown` Element API method to properly halt the storage nodes.
