@@ -134,7 +134,7 @@ CAUTION: If the airflow vents at the rear of the chassis are blocked by cables o
 Do not force the cables into the ports; you might damage the cables, ports, or both.
 +
 TIP: Ensure that the replacement node is cabled in the same way as the other nodes in the chassis.
-. Configure your BMC, see link: hci_prereqs_final_prep.html[Configure IPMI for each node].
+. Configure your BMC, see link:hci_prereqs_final_prep.html[Configure IPMI for each node].
 . See the NetApp Knowledge Base article https://kb.netapp.com/onprem/solidfire/Element_OS/How_to_disable_BMC_web_UI_access_on_HCI_and_SolidFire_H-Series_systems[How to disable BMC web UI access on HCI and SolidFire H-Series systems^] to determine if your BMC web access needs to be disabled. 
 
 == Step 3: Remove the compute node asset in NetApp HCI 1.7 and later
