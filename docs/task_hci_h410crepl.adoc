@@ -134,6 +134,8 @@ CAUTION: If the airflow vents at the rear of the chassis are blocked by cables o
 Do not force the cables into the ports; you might damage the cables, ports, or both.
 +
 TIP: Ensure that the replacement node is cabled in the same way as the other nodes in the chassis.
+. Configure your BMC, see link:hci_prereqs_final_prep.html[Configure IPMI for each node] for details.
+. See the NetApp Knowledge Base article https://kb.netapp.com/onprem/solidfire/Element_OS/How_to_disable_BMC_web_UI_access_on_HCI_and_SolidFire_H-Series_systems[How to disable BMC web UI access on HCI and SolidFire H-Series systems^] to determine if your BMC web access needs to be disabled. 
 
 == Step 3: Remove the compute node asset in NetApp HCI 1.7 and later
 In NetApp HCI 1.7 and later, after you physically replace the node, you should remove the compute node asset using the management node APIs. To use REST APIs, your storage cluster must be running NetApp Element software 11.5 or later and you should have deployed a management node running version 11.5 or later.
@@ -723,29 +725,28 @@ image::bmc pw sticker.png[Shows the back of the node with the sticker under the 
 . Select *Restore*.
 . Log out and then log back in to confirm that the credentials are now changed.
 
-== Upgrade the BMC firmware on your node
-After you replace the compute node, you might have to upgrade the firmware version.
-You can download the latest firmware file from the drop-down menu on the link:https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp Support Site (login required)^].
+== Upgrade the firmware on your node
+After you replace the compute node, you might have to upgrade the firmware version. See link:task_hcc_upgrade_compute_node_firmware.html[Upgrade compute node firmware] for details.
 
-.Steps
-. Log in to the baseboard management controller (BMC) UI.
-. Select *Maintenance > Firmware Update*.
-+
-image::h410c-bmc1.png[Shows the BMC UI navigation for firmware updates.]
-. From within the BMC console, select *Maintenance*.
-+
-image::h410c-bmc2.png[Shows the maintenance screen in the BMC UI.]
-. From within the Maintenance tab, select *Firmware Update* from the navigation on the left of the UI, and select *Enter Update Mode*.
-+
-image::h410c-bmc3.png[Shows the firmware update screen in the BMC UI.]
-. Select *Yes* in the confirmation dialog box.
-. Select *Browse* to select the firmware image to upload, and select *Upload Firmware*.
-Loading firmware from a location outside of the direct vicinity of the node might cause extended load times and possible timeouts.
-. Allow the preserve configuration checks, and select *Start Upgrade*.
-The upgrade should take approximately 5 minutes. If your upload time exceeds 60 minutes, cancel the upload and transfer the file to a local machine within the vicinity of the node.
-If your session times out, you might see a number of alerts while attempting to log back in to the firmware update area of the BMC UI. If you cancel the upgrade, you are redirected to the login page.
-. After the update is complete, select *OK*, and wait for the node to reboot.
-Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
+//.Steps
+//. Log in to the baseboard management controller (BMC) UI.
+//. Select *Maintenance > Firmware Update*.
+//+
+//image::h410c-bmc1.png[Shows the BMC UI navigation for firmware updates.]
+//. From within the BMC console, select *Maintenance*.
+//+
+//image::h410c-bmc2.png[Shows the maintenance screen in the BMC UI.]
+//. From within the Maintenance tab, select *Firmware Update* from the navigation on the left of the UI, and select *Enter Update Mode*.
+//+
+//image::h410c-bmc3.png[Shows the firmware update screen in the BMC UI.]
+//. Select *Yes* in the confirmation dialog box.
+//. Select *Browse* to select the firmware image to upload, and select *Upload Firmware*.
+//Loading firmware from a location outside of the direct vicinity of the node might cause extended load times and possible timeouts.
+//. Allow the preserve configuration checks, and select *Start Upgrade*.
+//The upgrade should take approximately 5 minutes. If your upload time exceeds 60 minutes, cancel the upload and transfer the file to a local machine within the vicinity of the node.
+//If your session times out, you might see a number of alerts while attempting to log back in to the firmware update area of the BMC UI. If you cancel the upgrade, you are redirected to the login page.
+//. After the update is complete, select *OK*, and wait for the node to reboot.
+//Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
 
 == Find more information
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
@@ -754,3 +755,4 @@ Log in after the upgrade, and select *System* to verify that the *Firmware Revis
 // 2023 NOV 6, DOC-4705
 // 2023 JULY 13, DOC-4699
 // 2023 JUN-12, DOC-4688
+// 2024-JAN-11, DOC-4735
