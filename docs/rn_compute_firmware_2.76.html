@@ -1,0 +1,3485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Compute Firmware Bundle 2.76 Release Notes</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Compute Firmware Bundle 2.76 Release Notes" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html" />
+	<meta property="og:description" content="Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/hci/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Get links to release notes for the firmware packages that you can download and apply to NetApp HCI nodes.">
+  <meta name="keywords" content=" netapp, hci, compute firmware"><!-- Icons -->
+  <link rel="icon" href="/us-en/hci/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/hci/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/us-en/hci/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/us-en/hci/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/hci/docs/rn_compute_firmware_2.76.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/hci/docs/rn_compute_firmware_2.76.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/hci/js/na-search.js'></script><script src='/us-en/hci/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/us-en/hci/js/custom-dropdown.js'></script>
+  <script src='/us-en/hci/js/FileSaver.min.js'></script>
+  <script src='/us-en/hci/js/jszip-utils.min.js'></script>
+  <script src='/us-en/hci/js/jszip.min.js'></script><script src='/us-en/hci/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/us-en/hci/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/">
+                <image id="ie-header-logo" src="/us-en/hci/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">Docs</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/us-en/hci/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">English</span>
+                    <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/hci/docs/rn_compute_firmware_2.76.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/us-en/hci/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">All NetApp</span>
+                    <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Support</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/us-en/hci/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/us-en/hci/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">All docs</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/us-en/hci/">-->
+      HCI
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 1.10">
+    <label>Version</label>
+    <span translate="no" class="notranslate">1.10</span>
+    <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 1.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/hci19/docs/rn_compute_firmware_2.76.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 1.9</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/hci18/docs/rn_compute_firmware_2.76.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 1.8</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div></div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/us-en/hci/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/us-en/hci/search.html" 
+        data-type="widget"
+        data-placeholder="Search documentation"
+        data-no-results-found="No results were found for {query}"
+        data-did-you-mean="Search for {suggestion}."
+        data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?"
+        data-results-found="{hitCount} results found"
+        data-error-message="An error occurred. Please try again."
+        data-error-reset="Reset search"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp HCI Documentation"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/hci/index.html">
+        NetApp HCI Documentation
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp HCI Solutions"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_solutions_index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/hci/docs/hci_solutions_index.html">
+        NetApp HCI Solutions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Release Notes"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Release Notes</div>-->
+         Release Notes
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="What's new in NetApp HCI"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/rn_whatsnew.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/rn_whatsnew.html">
+        What's new in NetApp HCI
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Additional release information"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/rn_relatedrn.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/rn_relatedrn.html">
+        Additional release information
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concepts"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Concepts</div>-->
+         Concepts
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Product overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_product_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hci_product_overview.html">
+        Product overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accounts"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_cg_hci_accounts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_cg_hci_accounts.html">
+        Accounts
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data protection"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_dataprotection.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hci_dataprotection.html">
+        Data protection
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Clusters"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_clusters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hci_clusters.html">
+        Clusters
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hci_nodes.html">
+        Nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Storage</div>-->
+         Storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Maintenance mode"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_storage_maintenance_mode.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_hci_storage_maintenance_mode.html">
+        Maintenance mode
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_hci_volumes.html">
+        Volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volume access groups"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_volume_access_groups.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_hci_volume_access_groups.html">
+        Volume access groups
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Initiators"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_initiators.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_hci_initiators.html">
+        Initiators
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Custom protection domains"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hcc_custom_protection_domains.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_hcc_custom_protection_domains.html">
+        Custom protection domains
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Licensing"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_cg_hci_licensing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_cg_hci_licensing.html">
+        Licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Hybrid Cloud Control configuration maximums"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/reference_hcc_config_maximums.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/reference_hcc_config_maximums.html">
+        NetApp Hybrid Cloud Control configuration maximums
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_cg_hci_security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_cg_hci_security.html">
+        Security
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_performance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hci_performance.html">
+        Performance
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requirements and pre-deployment tasks"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Requirements and pre-deployment tasks</div>-->
+         Requirements and pre-deployment tasks
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requirements for NetApp HCI deployment"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_overview.html">
+        Requirements for NetApp HCI deployment
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Management node requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_management_node.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_management_node.html">
+        Management node requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network port requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_required_network_ports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_required_network_ports.html">
+        Network port requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network and switch requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_network_switch.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_network_switch.html">
+        Network and switch requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network cable requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_network_cables.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_network_cables.html">
+        Network cable requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="IP address requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_ip_address.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_ip_address.html">
+        IP address requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network configuration"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Network configuration</div>-->
+         Network configuration
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network configuration options overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_network_configuration.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/hci_prereqs_network_configuration.html">
+        Network configuration options overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network configuration option A"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_network_configuration_option_A.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/hci_prereqs_network_configuration_option_A.html">
+        Network configuration option A
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network configuration option B"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_network_configuration_option_B.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/hci_prereqs_network_configuration_option_B.html">
+        Network configuration option B
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Network configuration option C"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_network_configuration_option_C.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/hci_prereqs_network_configuration_option_C.html">
+        Network configuration option C
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="DNS and timekeeping requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_timekeeping.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_timekeeping.html">
+        DNS and timekeeping requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Environmental requirements"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_environmental.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_environmental.html">
+        Environmental requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Protection Domains"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_protection_domains.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_protection_domains.html">
+        Protection Domains
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Witness Node resource requirements for two-node storage clusters"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_witness_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_witness_nodes.html">
+        Witness Node resource requirements for two-node storage clusters
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deployment configuration restrictions"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_deployment_configuration_restriction.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_deployment_configuration_restriction.html">
+        Deployment configuration restrictions
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started with NetApp HCI"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started with NetApp HCI</div>-->
+         Get started with NetApp HCI
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp HCI installation and deployment overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_getstarted.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_getstarted.html">
+        NetApp HCI installation and deployment overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install H-series hardware"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_installhw.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_installhw.html">
+        Install H-series hardware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure LACP for optimal storage performance"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_LACP_configuration.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_LACP_configuration.html">
+        Configure LACP for optimal storage performance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Validate your environment with Active IQ Config Advisor"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_task_validate_config_advisor.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_task_validate_config_advisor.html">
+        Validate your environment with Active IQ Config Advisor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure IPMI for each node"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/hci_prereqs_final_prep.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/hci_prereqs_final_prep.html">
+        Configure IPMI for each node
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy NetApp HCI"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Deploy NetApp HCI</div>-->
+         Deploy NetApp HCI
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Access the NetApp Deployment Engine"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Access the NetApp Deployment Engine</div>-->
+         Access the NetApp Deployment Engine
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Deployment Engine access options overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_nde_access_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_nde_access_overview.html">
+        NetApp Deployment Engine access options overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Access the NetApp Deployment Engine in environments without DHCP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_access_no_dhcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_access_no_dhcp.html">
+        Access the NetApp Deployment Engine in environments without DHCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Access the NetApp Deployment Engine in environments with DHCP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_access_dhcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_access_dhcp.html">
+        Access the NetApp Deployment Engine in environments with DHCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manually assign IP addresses to access the NetApp Deployment Engine"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_access_manual_ip.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_access_manual_ip.html">
+        Manually assign IP addresses to access the NetApp Deployment Engine
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Start your deployment"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_start_deployment.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_start_deployment.html">
+        Start your deployment
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Import an installation profile"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_import_installation_profile.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_import_installation_profile.html">
+        Import an installation profile
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure VMware vSphere"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Configure VMware vSphere</div>-->
+         Configure VMware vSphere
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vSphere configuration overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_nde_config_vsphere_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_nde_config_vsphere_overview.html">
+        vSphere configuration overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a new VMware vSphere environment"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_configure_new_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_configure_new_vsphere.html">
+        Configure a new VMware vSphere environment
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Join an existing VMware vSphere deployment"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_join_existing_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_join_existing_vsphere.html">
+        Join an existing VMware vSphere deployment
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure NetApp HCI credentials"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_configure_credentials.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_configure_credentials.html">
+        Configure NetApp HCI credentials
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Select a network topology"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_select_net_topology.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_select_net_topology.html">
+        Select a network topology
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inventory selection"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Inventory selection</div>-->
+         Inventory selection
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inventory selection and node compatibility"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_nde_node_compatibility.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_nde_node_compatibility.html">
+        Inventory selection and node compatibility
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Select inventory"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_select_inventory.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_select_inventory.html">
+        Select inventory
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure network settings"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_configure_net_settings.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_configure_net_settings.html">
+        Configure network settings
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Review and deploy"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_review_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_review_deploy.html">
+        Review and deploy
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Post-deployment tasks"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Post-deployment tasks</div>-->
+         Post-deployment tasks
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Post-deployment tasks overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_nde_post_deployment_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_nde_post_deployment_overview.html">
+        Post-deployment tasks overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supported networking changes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_supported_net_changes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_supported_net_changes.html">
+        Supported networking changes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disable the smartd service on NetApp HCI compute nodes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_disable_smartd.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_disable_smartd.html">
+        Disable the smartd service on NetApp HCI compute nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disable the "lacp-individual" command on configured switches"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_disable_lacp_individual.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_disable_lacp_individual.html">
+        Disable the "lacp-individual" command on configured switches
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create a NetApp HCC role in vCenter"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_create_netapp_hcc_role_vcenter.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_mnode_create_netapp_hcc_role_vcenter.html">
+        Create a NetApp HCC role in vCenter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Keep VMware vSphere up to date"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_update_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_update_vsphere.html">
+        Keep VMware vSphere up to date
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install GPU drivers for GPU-enabled compute nodes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_install_GPU_drivers.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_install_GPU_drivers.html">
+        Install GPU drivers for GPU-enabled compute nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Access NetApp Hybrid Cloud Control"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_access_hcc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_access_hcc.html">
+        Access NetApp Hybrid Cloud Control
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reduce boot media wear on a NetApp HCI compute node"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_reduce_boot_media_wear.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_reduce_boot_media_wear.html">
+        Reduce boot media wear on a NetApp HCI compute node
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage NetApp HCI"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage NetApp HCI</div>-->
+         Manage NetApp HCI
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage NetApp HCI overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_manage_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_manage_overview.html">
+        Manage NetApp HCI overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure Fully Qualified Domain Name web UI access"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_access_ui_fqdn.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_nde_access_ui_fqdn.html">
+        Configure Fully Qualified Domain Name web UI access
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change credentials in NetApp HCI"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_post_deploy_credentials.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_post_deploy_credentials.html">
+        Change credentials in NetApp HCI
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Update vCenter and ESXi credentials"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_credentials_vcenter_esxi.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_credentials_vcenter_esxi.html">
+        Update vCenter and ESXi credentials
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage NetApp HCI storage"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage NetApp HCI storage</div>-->
+         Manage NetApp HCI storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage NetApp HCI storage overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_manage_storage_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_manage_storage_overview.html">
+        Manage NetApp HCI storage overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage user accounts"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_manage_accounts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_manage_accounts.html">
+        Create and manage user accounts
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Add and manage storage clusters"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_manage_storage_clusters.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_manage_storage_clusters.html">
+        Add and manage storage clusters
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_manage_vol_management.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_manage_vol_management.html">
+        Create and manage volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage volume access groups"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_manage_vol_access_groups.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_manage_vol_access_groups.html">
+        Create and manage volume access groups
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage initiators"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_manage_initiators.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_manage_initiators.html">
+        Create and manage initiators
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage volume QoS policies"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_qos_policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_qos_policies.html">
+        Create and manage volume QoS policies
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Work with the management node"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Work with the management node</div>-->
+         Work with the management node
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Management node overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_work_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_mnode_work_overview.html">
+        Management node overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install or recover a management node"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Install or recover a management node</div>-->
+         Install or recover a management node
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install a management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_install.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_install.html">
+        Install a management node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a storage Network Interface Controller (NIC)"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_install_add_storage_NIC.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_install_add_storage_NIC.html">
+        Configure a storage Network Interface Controller (NIC)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Recover a management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_recover.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_recover.html">
+        Recover a management node
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Access the management node"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_access_ui.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_mnode_access_ui.html">
+        Access the management node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change the management node default SSL certificate"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/reference_change_mnode_default_ssl_certificate.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/reference_change_mnode_default_ssl_certificate.html">
+        Change the management node default SSL certificate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Work with the management node UI"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Work with the management node UI</div>-->
+         Work with the management node UI
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Management node UI overview"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_work_overview_UI.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_work_overview_UI.html">
+        Management node UI overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure alert monitoring on NetApp HCI"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_enable_alerts.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_enable_alerts.html">
+        Configure alert monitoring on NetApp HCI
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modify and test the management node network, cluster, and system settings"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_settings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_settings.html">
+        Modify and test the management node network, cluster, and system settings
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Run system utilities from the management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_run_system_utilities.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_run_system_utilities.html">
+        Run system utilities from the management node
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Work with the management node REST API"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Work with the management node REST API</div>-->
+         Work with the management node REST API
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Management node REST API UI overview"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_work_overview_API.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_work_overview_API.html">
+        Management node REST API UI overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get authorization to use REST APIs"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_api_get_authorizationtouse.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_api_get_authorizationtouse.html">
+        Get authorization to use REST APIs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Enable Active IQ and NetApp HCI monitoring"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_enable_activeIQ.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_enable_activeIQ.html">
+        Enable Active IQ and NetApp HCI monitoring
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure NetApp Hybrid Cloud Control for multiple vCenters"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_multi_vcenter_config.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_multi_vcenter_config.html">
+        Configure NetApp Hybrid Cloud Control for multiple vCenters
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Add compute and controller assets to the management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_add_assets.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_add_assets.html">
+        Add compute and controller assets to the management node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="How to locate a hardware tag for compute node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_locate_hardware_tag.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_locate_hardware_tag.html">
+        How to locate a hardware tag for compute node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage storage cluster assets"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_manage_storage_cluster_assets.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_manage_storage_cluster_assets.html">
+        Create and manage storage cluster assets
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="View or edit existing controller assets"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_edit_vcenter_assets.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_edit_vcenter_assets.html">
+        View or edit existing controller assets
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Remove an asset from the management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_remove_assets.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_remove_assets.html">
+        Remove an asset from the management node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a proxy server for the management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_configure_proxy_server.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_configure_proxy_server.html">
+        Configure a proxy server for the management node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verify management node OS and services versions"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_api_find_mgmt_svcs_version.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_api_find_mgmt_svcs_version.html">
+        Verify management node OS and services versions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Getting logs from management services"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_logs.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_logs.html">
+        Getting logs from management services
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage support connections"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage support connections</div>-->
+         Manage support connections
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Start a remote NetApp Support session"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_enable_remote_support_connections.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_enable_remote_support_connections.html">
+        Start a remote NetApp Support session
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage SSH functionality on the management node"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_mnode_ssh_management.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/hci/docs/task_mnode_ssh_management.html">
+        Manage SSH functionality on the management node
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Power your NetApp HCI system off or on"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Power your NetApp HCI system off or on</div>-->
+         Power your NetApp HCI system off or on
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp HCI power overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_nde_hci_power_off_on.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/concept_nde_hci_power_off_on.html">
+        NetApp HCI power overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Power off compute resources for a NetApp HCI system"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_hci_power_off_compute.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_hci_power_off_compute.html">
+        Power off compute resources for a NetApp HCI system
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Power off storage resources for a NetApp HCI system"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_hci_power_off_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_hci_power_off_storage.html">
+        Power off storage resources for a NetApp HCI system
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Power on storage resources for a NetApp HCI system"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_hci_power_on_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_hci_power_on_storage.html">
+        Power on storage resources for a NetApp HCI system
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Power on compute resources for a NetApp HCI system"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_nde_hci_power_on_compute.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_nde_hci_power_on_compute.html">
+        Power on compute resources for a NetApp HCI system
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor your NetApp HCI system with NetApp Hybrid Cloud Control"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Monitor your NetApp HCI system with NetApp Hybrid Cloud Control</div>-->
+         Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="View resources on the Dashboard of NetApp Hybrid Cloud Control"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_dashboard.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_dashboard.html">
+        View resources on the Dashboard of NetApp Hybrid Cloud Control
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="View your inventory on the Nodes page of NetApp Hybrid Cloud Control"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_nodes.html">
+        View your inventory on the Nodes page of NetApp Hybrid Cloud Control
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Edit BMC connection information with NetApp Hybrid Cloud Control"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_edit_bmc_info.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_edit_bmc_info.html">
+        Edit BMC connection information with NetApp Hybrid Cloud Control
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_volumes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_volumes.html">
+        Monitor volumes on your storage cluster with NetApp Hybrid Cloud Control
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_activeiq.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_activeiq.html">
+        Monitor performance, capacity, and cluster health with NetApp Hybrid Cloud Control connections to Active IQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Collect logs for troubleshooting"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_collectlogs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_collectlogs.html">
+        Collect logs for troubleshooting
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade your NetApp HCI system version 1.10"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Upgrade your NetApp HCI system version 1.10</div>-->
+         Upgrade your NetApp HCI system version 1.10
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade sequence overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hci_upgrade_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hci_upgrade_overview.html">
+        Upgrade sequence overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="System upgrade procedures"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> System upgrade procedures</div>-->
+         System upgrade procedures
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Update management services"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_update_management_services.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_update_management_services.html">
+        Update management services
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Run Element storage health checks prior to upgrading storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_element_prechecks.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_element_prechecks.html">
+        Run Element storage health checks prior to upgrading storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade Element software"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_element_software.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_element_software.html">
+        Upgrade Element software
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade storage firmware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_storage_firmware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_storage_firmware.html">
+        Upgrade storage firmware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade a management node"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_management_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_management_node.html">
+        Upgrade a management node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade the NetApp Element Plug-in for vCenter Server"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_vcp_upgrade_plugin.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_vcp_upgrade_plugin.html">
+        Upgrade the NetApp Element Plug-in for vCenter Server
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Run compute node health checks prior to upgrading compute firmware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_upgrade_compute_prechecks.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_upgrade_compute_prechecks.html">
+        Run compute node health checks prior to upgrading compute firmware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Update compute node drivers"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_compute_node_drivers.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_compute_node_drivers.html">
+        Update compute node drivers
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade compute node firmware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_compute_node_firmware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_compute_node_firmware.html">
+        Upgrade compute node firmware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Automate compute node firmware upgrades with Ansible"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_upgrade_compute_firmware_ansible.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/hci/docs/task_hcc_upgrade_compute_firmware_ansible.html">
+        Automate compute node firmware upgrades with Ansible
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_upgrade_all_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_upgrade_all_vsphere.html">
+        Upgrade your vSphere components for a NetApp HCI system with the Element Plug-in for vCenter Server
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Expand your NetApp HCI system"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Expand your NetApp HCI system</div>-->
+         Expand your NetApp HCI system
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Expand overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_hcc_expandoverview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/concept_hcc_expandoverview.html">
+        Expand overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Expand NetApp HCI storage resources"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_expand_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_expand_storage.html">
+        Expand NetApp HCI storage resources
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Expand NetApp HCI compute resources"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_expand_compute.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_expand_compute.html">
+        Expand NetApp HCI compute resources
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Expand NetApp storage and compute resources"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hcc_expand_compute_and_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hcc_expand_compute_and_storage.html">
+        Expand NetApp storage and compute resources
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Remove Witness Nodes after expanding cluster"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_removewn.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_removewn.html">
+        Remove Witness Nodes after expanding cluster
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Rancher on NetApp HCI"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/concept_rancher_product_overview.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/hci/docs/concept_rancher_product_overview.html">
+        Use Rancher on NetApp HCI
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Maintain H-series hardware"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/hci/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/hci/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Maintain H-series hardware</div>-->
+         Maintain H-series hardware
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="H-series hardware maintenance overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_hwmainoverview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_hwmainoverview.html">
+        H-series hardware maintenance overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace 2U H-series chassis"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_hserieschassisrepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_hserieschassisrepl.html">
+        Replace 2U H-series chassis
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace DC power supply units in H615C and H610S nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_dcpsurepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_dcpsurepl.html">
+        Replace DC power supply units in H615C and H610S nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace DIMMs in compute nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_dimmcomputerepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_dimmcomputerepl.html">
+        Replace DIMMs in compute nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace drives for storage nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_driverepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_driverepl.html">
+        Replace drives for storage nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace H410C nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_h410crepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_h410crepl.html">
+        Replace H410C nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace H410S nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_h410srepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_h410srepl.html">
+        Replace H410S nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace H610C and H615C nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_h610ch615crepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_h610ch615crepl.html">
+        Replace H610C and H615C nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace H610S nodes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_h610srepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_h610srepl.html">
+        Replace H610S nodes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace power supply units"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_psurepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_psurepl.html">
+        Replace power supply units
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace SN2010, SN2100, and SN2700 switches"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_snswitches.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_snswitches.html">
+        Replace SN2010, SN2100, and SN2700 switches
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replace storage node in a two-node cluster"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/task_hci_2noderepl.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/hci/docs/task_hci_2noderepl.html">
+        Replace storage node in a two-node cluster
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Earlier versions"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/reference_earlier_versions.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/hci/docs/reference_earlier_versions.html">
+        Earlier versions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Legal notices"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/docs/rn_compute_firmware_2.76.html" 
+      dale-entry-url="/docs/reference_notices_hci.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/hci/docs/reference_notices_hci.html">
+        Legal notices
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/us-en/hci"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/us-en/hci"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Compute Firmware Bundle 2.76 Release Notes</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-12-21 19:16:10 +0000">12/21/2023</time>
+        
+    
+    
+        <span>Contributors
+            <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-pcarriga"><img  class="avatar avatar-small" alt="netapp-pcarriga" width="20" height="20" src="https://avatars.githubusercontent.com/u/77334475?v=4" style="border-radius: 50%;"/></a>
+        
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/us-en/hci/images/discuss-sm.svg" alt="" class="github-icon" />Suggest changes</span>
+        <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/us-en/hci/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/hci/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html&page-title=Compute Firmware Bundle 2.76 Release Notes" class="page-nav-contribute-link" role="button">Request doc changes</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/hci/blob/main/docs/rn_compute_firmware_2.76.adoc" class="page-nav-contribute-link" role="button">Edit this page</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Learn how to contribute</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>PDFs<img src="/us-en/hci/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/us-en/hci/pdfs/fullsite-sidebar/NetApp_HCI_Documentation.pdf" >
+                    <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>PDF of this doc site</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Release_Notes.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Release Notes
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Concepts.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Concepts
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Storage.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Storage
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Requirements_and_pre_deployment_tasks.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Requirements and pre-deployment tasks
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Network_configuration.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Network configuration
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Get_started_with_NetApp_HCI.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started with NetApp HCI
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Deploy_NetApp_HCI.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Deploy NetApp HCI
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Access_the_NetApp_Deployment_Engine.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Access the NetApp Deployment Engine
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Configure_VMware_vSphere.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Configure VMware vSphere
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Inventory_selection.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Inventory selection
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Post_deployment_tasks.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Post-deployment tasks
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Manage_NetApp_HCI.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage NetApp HCI
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Manage_NetApp_HCI_storage.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage NetApp HCI storage
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Work_with_the_management_node.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Work with the management node
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Install_or_recover_a_management_node.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Install or recover a management node
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Work_with_the_management_node_UI.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Work with the management node UI
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Work_with_the_management_node_REST_API.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Work with the management node REST API
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Manage_support_connections.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage support connections
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Power_your_NetApp_HCI_system_off_or_on.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Power your NetApp HCI system off or on
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Monitor_your_NetApp_HCI_system_with_NetApp_Hybrid_Cloud_Control.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Monitor your NetApp HCI system with NetApp Hybrid Cloud Control
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Upgrade_your_NetApp_HCI_system_version_1_10.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Upgrade your NetApp HCI system version 1.10
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/System_upgrade_procedures.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            System upgrade procedures
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Expand_your_NetApp_HCI_system.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Expand your NetApp HCI system
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/hci/pdfs/sidebar/Maintain_H_series_hardware.pdf" 
+            
+          >
+            <img src="/us-en/hci/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Maintain H-series hardware
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/us-en/hci/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Collection of separate PDF docs<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>The downloadable compute firmware bundle contains the latest BIOS and BMC feature enhancements, bugfixes, and hardware support for all supported NetApp HCI compute nodes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="whats-new">What's New</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Version 2.76 contains general bugfixes.</p>
+</div>
+<div class="sect2">
+<h3 id="updated-firmware-components">Updated firmware components</h3>
+<div class="paragraph">
+<p>This firmware package contains the following firmware versions for hardware components, with updated versions in bold:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">H300E, H500E, H700E</th>
+<th class="tableblock halign-left valign-top">H410C</th>
+<th class="tableblock halign-left valign-top">H610C</th>
+<th class="tableblock halign-left valign-top">H615C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BIOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NATP3.9</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B08.CO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BMC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.84.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.71.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.00.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.68.07</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NIC / Mellanox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.24.1000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="changes-in-firmware-components">Changes in firmware components</h3>
+<div class="paragraph">
+<p>Here are the details of the improvements and changes included in each new firmware component:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node and firmware component</th>
+<th class="tableblock halign-left valign-top">Improvements and changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NATP3.9</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>CSESF-284 Tatooine + BMC 6.71.18 does not report when PPR function work success event.</p>
+</li>
+<li>
+<p>CSESF-289 NA3.7 BIOS does not have the ability to report a success on hPPR (hard PPR).</p>
+</li>
+<li>
+<p>Updated SKX ucode to 0x6906 and CLX ucode to 0x2F01.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="mellanox-nic-firmware-driver-compatibility">Mellanox NIC firmware driver compatibility</h3>
+<div class="paragraph">
+<p>The updated Mellanox firmware versions 14.25.1020 and 14.24.1000 are compatible only with the following versions of the VMware ESXi driver:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ESXi 7.0</strong>: H300E/H500E/H700E/H410C: Version 4.19.16.1</p>
+</li>
+<li>
+<p><strong>ESXi 7.0</strong>: H610C/H615C: Version 4.17.15.16</p>
+</li>
+<li>
+<p><strong>ESXi 6.7</strong>: Version 4.17.15.16</p>
+</li>
+<li>
+<p><strong>ESXi 6.5</strong>: Version 4.16.13.5</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Before upgrading to version 2.76, make sure you check the current ESXi driver version. If the driver is out of date, upgrade the driver first. Then upgrade the compute firmware to version 2.76 for your compute nodes. Visit <a href="task_hcc_upgrade_compute_node_drivers.html">Update compute node drivers</a> for instructions on updating your compute node drivers, which include the ESXi driver.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>While NetApp Deployment Engine 1.8P1 does not deploy ESXi version 7.0, ESXi 7.0 is supported as a self-install or manual upgrade option. When you manually install or upgrade host OSes, NetApp cannot control the drivers and firmware for these OSes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="download-compute-firmware-bundle-2-76">Download Compute Firmware Bundle 2.76</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To download the Compute Firmware Bundle, go to the <a href="https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle" target="_blank" rel="noopener">NetApp HCI Compute Firmware Bundle</a> page.</p>
+</div>
+<div class="paragraph">
+<p>Visit <a href="task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui">Update compute node firmware</a> for instructions on updating your compute node firmware.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-security-vulnerabilities">Resolved security vulnerabilities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following are security vulnerabilities that have been resolved in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CVE2020-0548, CVE2020-0549</p>
+</li>
+<li>
+<p>CVE2019-11157, CVE2019-14607</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-and-known-issues">Resolved and known issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See the <a href="https://mysupport.netapp.com/site/bugs-online/product" target="_blank" rel="noopener">Bugs Online tool</a> for details of issues that have been resolved and for any new issues.</p>
+</div>
+<div class="sect2">
+<h3 id="accessing-the-bol-tool">Accessing the BOL tool</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the  <a href="https://mysupport.netapp.com/site/bugs-online/product" target="_blank" rel="noopener">BOL tool</a> and select  <strong>Element Software</strong> from the drop-down list:</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../media/bol_dashboard.png" alt="Storage firmware bundle release notes">
+</div>
+</div>
+</li>
+<li>
+<p>In the keyword search field, type “Compute Firmware Bundle” and click <strong>New Search</strong>:</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../media/compute_firmware_bundle_choice.png" alt="Storage firmware bundle release notes">
+</div>
+</div>
+</li>
+<li>
+<p>A list of resolved or open bugs is displayed. You can further refine the results as shown:</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../media/bol_list_bugs_found.png" alt="Storage firmware bundle release notes">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="find-more-information" class="discrete">Find more information</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="firmware_driver_versions.html">Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/us-en/hci/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/us-en/hci/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">On this page</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of use</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie settings</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Send feedback about this page</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/hci/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/hci/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/hci/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/hci/js/ie-tabbed-blocks.js'></script>
+    <script src='/us-en/hci/js/ie-sidebar.js'></script>
+  </body>
+
+</html>

@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_cg_hci_accounts.html</loc>
+        
+      
+      <lastmod>2022-11-29T11:57:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_cg_hci_licensing.html</loc>
+        
+      
+      <lastmod>2022-04-20T14:22:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_cg_hci_security.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hcc_custom_protection_domains.html</loc>
+        
+      
+      <lastmod>2023-04-25T15:19:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hcc_expandoverview.html</loc>
+        
+      
+      <lastmod>2022-11-08T19:16:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_clusters.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_dataprotection.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_initiators.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html</loc>
+        
+      
+      <lastmod>2023-08-08T09:14:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_product_overview.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_storage.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_storage_maintenance_mode.html</loc>
+        
+      
+      <lastmod>2021-09-02T16:29:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_upgrade_overview.html</loc>
+        
+      
+      <lastmod>2023-12-08T15:48:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html</loc>
+        
+      
+      <lastmod>2021-06-22T22:42:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_hci_volumes.html</loc>
+        
+      
+      <lastmod>2023-04-25T15:19:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_nde_access_overview.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_nde_config_vsphere_overview.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_nde_hci_power_off_on.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_nde_node_compatibility.html</loc>
+        
+      
+      <lastmod>2022-01-28T16:48:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_nde_post_deployment_overview.html</loc>
+        
+      
+      <lastmod>2022-11-18T14:47:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_rancher_concepts.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_rancher_post_deployment_overview.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/concept_rancher_product_overview.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/firmware_driver_versions.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/fw_compute_nodes.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/fw_storage_nodes.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_LACP_configuration.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_deployment_configuration_restriction.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_environmental.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_final_prep.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_ip_address.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_management_node.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_cables.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_configuration.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_configuration_option_A.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_configuration_option_B.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_configuration_option_C.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_switch.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_overview.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_protection_domains.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_task_validate_config_advisor.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_timekeeping.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_prereqs_witness_nodes.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hci_solutions_</loc>
+        
+      
+      <lastmod>2022-08-24T13:00:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/</loc>
+        
+      
+      <lastmod>2023-12-21T16:38:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rancher_prereqs_overview.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/reference_change_mnode_default_ssl_certificate.html</loc>
+        
+      
+      <lastmod>2023-04-03T15:39:04+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/reference_earlier_versions.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/reference_hcc_config_maximums.html</loc>
+        
+      
+      <lastmod>2021-08-25T21:17:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/reference_notices_hci.html</loc>
+        
+      
+      <lastmod>2023-09-15T16:57:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_H610S_BMC_3.84.07.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.146.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.154.1.html</loc>
+        
+      
+      <lastmod>2022-04-26T15:21:29+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.154.4.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.174.0.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.27.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.10.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_firmware_12.2.109.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_relatedrn.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.146.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.150.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:47:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.164.0.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.175.0.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.76.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.99.2.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/rn_whatsnew.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:47:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci//search.html</loc>
+        
+      
+      <lastmod>2024-02-12T01:24:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_access.html</loc>
+        
+      
+      <lastmod>2022-04-15T11:08:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_activeiq.html</loc>
+        
+      
+      <lastmod>2022-09-07T08:51:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hcc_dashboard.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_collectlogs.html</loc>
+        
+      
+      <lastmod>2022-04-15T10:48:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_dashboard.html</loc>
+        
+      
+      <lastmod>2022-09-07T09:26:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_edit_bmc_info.html</loc>
+        
+      
+      <lastmod>2022-04-15T10:48:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_compute.html</loc>
+        
+      
+      <lastmod>2023-07-17T17:01:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_compute_and_storage.html</loc>
+        
+      
+      <lastmod>2023-07-17T17:01:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_expand_storage.html</loc>
+        
+      
+      <lastmod>2023-07-13T15:36:51+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/hcc_inventory.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_manage_accounts.html</loc>
+        
+      
+      <lastmod>2023-04-25T15:19:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_manage_initiators.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_manage_storage_clusters.html</loc>
+        
+      
+      <lastmod>2022-05-30T16:57:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_manage_storage_overview.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_manage_vol_access_groups.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_manage_vol_management.html</loc>
+        
+      
+      <lastmod>2021-10-22T09:43:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_nodes.html</loc>
+        
+      
+      <lastmod>2022-08-05T17:15:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_qos_policies.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_update_management_services.html</loc>
+        
+      
+      <lastmod>2023-03-15T12:38:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_compute_firmware_ansible.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_compute_node_drivers.html</loc>
+        
+      
+      <lastmod>2022-12-07T14:45:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_compute_node_firmware.html</loc>
+        
+      
+      <lastmod>2023-04-27T16:15:29+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_element_prechecks.html</loc>
+        
+      
+      <lastmod>2023-02-27T12:48:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_element_software.html</loc>
+        
+      
+      <lastmod>2023-02-27T12:48:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_management_node.html</loc>
+        
+      
+      <lastmod>2022-10-19T14:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_upgrade_storage_firmware.html</loc>
+        
+      
+      <lastmod>2023-03-22T13:39:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hcc_volumes.html</loc>
+        
+      
+      <lastmod>2022-04-15T10:48:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_2noderepl.html</loc>
+        
+      
+      <lastmod>2022-08-05T15:51:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_credentials_vcenter_esxi.html</loc>
+        
+      
+      <lastmod>2021-11-04T23:18:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_dcpsurepl.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_dimmcomputerepl.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_driverepl.html</loc>
+        
+      
+      <lastmod>2022-05-30T16:57:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_getstarted.html</loc>
+        
+      
+      <lastmod>2023-04-25T15:19:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_h410crepl.html</loc>
+        
+      
+      <lastmod>2024-02-01T14:32:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_h410srepl.html</loc>
+        
+      
+      <lastmod>2023-07-17T17:01:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_h610ch615crepl.html</loc>
+        
+      
+      <lastmod>2023-11-15T12:49:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_h610srepl.html</loc>
+        
+      
+      <lastmod>2022-05-30T16:57:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_hserieschassisrepl.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_hwmainoverview.html</loc>
+        
+      
+      <lastmod>2022-08-09T11:44:29+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_installhw.html</loc>
+        
+      
+      <lastmod>2022-08-08T10:22:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_manage_overview.html</loc>
+        
+      
+      <lastmod>2021-10-07T13:59:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_psurepl.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_removewn.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_snswitches.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_hci_upgrade_all_vsphere.html</loc>
+        
+      
+      <lastmod>2023-02-02T12:36:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html</loc>
+        
+      
+      <lastmod>2021-07-21T09:43:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_add_assets.html</loc>
+        
+      
+      <lastmod>2021-12-15T11:03:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_api_find_mgmt_svcs_version.html</loc>
+        
+      
+      <lastmod>2021-11-04T23:18:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_api_get_authorizationtouse.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_configure_proxy_server.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_create_netapp_hcc_role_vcenter.html</loc>
+        
+      
+      <lastmod>2022-11-14T17:12:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_edit_vcenter_assets.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_enable_activeIQ.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_enable_alerts.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_enable_remote_support_connections.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_install.html</loc>
+        
+      
+      <lastmod>2023-01-06T15:09:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_install_add_storage_NIC.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_locate_hardware_tag.html</loc>
+        
+      
+      <lastmod>2023-02-16T18:09:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_logs.html</loc>
+        
+      
+      <lastmod>2022-10-13T13:09:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_manage_storage_cluster_assets.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_multi_vcenter_config.html</loc>
+        
+      
+      <lastmod>2023-03-03T13:24:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_recover.html</loc>
+        
+      
+      <lastmod>2023-01-06T15:09:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_remove_assets.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_run_system_utilities.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_settings.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_ssh_management.html</loc>
+        
+      
+      <lastmod>2022-09-28T11:10:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_work_overview.html</loc>
+        
+      
+      <lastmod>2023-03-24T16:55:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_work_overview_API.html</loc>
+        
+      
+      <lastmod>2023-04-25T15:19:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_mnode_work_overview_UI.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_access_dhcp.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_access_hcc.html</loc>
+        
+      
+      <lastmod>2022-04-15T10:48:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_access_manual_ip.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_access_no_dhcp.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_access_ui_fqdn.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_configure_credentials.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_configure_net_settings.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_configure_new_vsphere.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_disable_lacp_individual.html</loc>
+        
+      
+      <lastmod>2023-10-11T17:03:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_disable_smartd.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_hci_power_off_compute.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_hci_power_off_storage.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_hci_power_on_compute.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_hci_power_on_storage.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_import_installation_profile.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_install_GPU_drivers.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_join_existing_vsphere.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_review_deploy.html</loc>
+        
+      
+      <lastmod>2022-01-25T16:58:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_select_inventory.html</loc>
+        
+      
+      <lastmod>2022-04-19T12:50:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_select_net_topology.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_start_deployment.html</loc>
+        
+      
+      <lastmod>2023-12-21T19:16:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_supported_net_changes.html</loc>
+        
+      
+      <lastmod>2022-04-19T08:47:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_nde_update_vsphere.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_post_deploy_credentials.html</loc>
+        
+      
+      <lastmod>2022-08-08T11:13:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_config_anti_affinity.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_createcluster.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_deploy.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_deploy_user_clusters.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_enable_monitoring.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_ensure_rancher_support_parity.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_load_balancing.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_manage.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_monitor.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_post-deploy.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_remove_deployment.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_resiliency.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_trident.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_rancher_upgrades.html</loc>
+        
+      
+      <lastmod>2023-10-24T15:53:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_reduce_boot_media_wear.html</loc>
+        
+      
+      <lastmod>2022-07-29T12:30:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_trident_configure_networking.html</loc>
+        
+      
+      <lastmod>2021-05-26T20:39:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_upgrade_compute_prechecks.html</loc>
+        
+      
+      <lastmod>2023-02-27T12:48:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_upgrade_element_latest_healthtools.html</loc>
+        
+      
+      <lastmod>2023-10-11T17:03:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html</loc>
+        
+      
+      <lastmod>2023-10-02T11:10:21+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
