@@ -13,7 +13,6 @@ This file isn't included in the sidebar nav system. It is only linked to from th
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 The downloadable BMC update contains BMC feature enhancements and bug fixes for NetApp H610S nodes.

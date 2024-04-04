@@ -11,7 +11,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 When DHCP is not in use on the network, you need to set a static IPv4 address on the Bond1G interface of one of the storage nodes (also known as a controlling storage node) that you will use to access the NetApp Deployment Engine. The NetApp Deployment Engine on the controlling storage node will discover and communicate with other compute and storage nodes using IPv4 addresses that have been auto-configured on the Bond10G interfaces of all nodes. You should use this method unless your network has special requirements.
