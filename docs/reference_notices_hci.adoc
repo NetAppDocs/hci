@@ -42,7 +42,7 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-
 * link:../media/storage_firmware_bundle_2.27_notices.pdf[Notice for Storage Firmware Bundle 2.27^]
 * link:../media/compute_iso_notice.pdf[Notice for Compute Firmware ISO^]
 * link:../media/H610S_BMC_notice.pdf[Notice for H610S BMC^]
-* link:../media/mgmt_svcs_2.25_notice.pdf[Notice for Management Services 2.25.40 (NetApp Element Plug-in for VMware vCenter Server 5.3.xx)^]
+* link:../media/mgmt_svcs_2.25_notice.pdf[Notice for Management Services 2.25.40 (NetApp Element Plug-in for VMware vCenter Server 5.3.9)^]
 * link:../media/mgmt_svcs_2.24_notice.pdf[Notice for Management Services 2.24.40 (NetApp Element Plug-in for VMware vCenter Server 5.2.12)^]
 * link:../media/mgmt_svcs_2.23_notice.pdf[Notice for Management Services 2.23.64 (NetApp Element Plug-in for VMware vCenter Server 5.1.12)^]
 * link:../media/mgmt_svcs_2.22_notice.pdf[Notice for Management Services 2.22.7 (NetApp Element Plug-in for VMware vCenter Server 5.0.37)^]
