@@ -89,13 +89,13 @@ image::vcp_registration_utility_ui_qossioc.png[depicts the registration utility 
 ==== 
 .Element Plug-in for vCenter 5.0 and later 
 -- 
-The vCenter Plug-in Registration page for Element Plug-in for vCenter Server 5.x:
+The vCenter Plug-in Registration page appears:
 
 image::vcp_remote_plugin_registration_ui.png[depicts the registration utility UI for a remote plug-in]
 --
 .Element Plug-in for vCenter 4.10 and earlier 
 --
-The vCenter Plug-in Registration page for Element Plug-in for vCenter Server 4.x:
+The vCenter Plug-in Registration page appears:
 
 image::vcp_registration_utility_ui.png[depicts the registration utility UI for a local plug-in]
 --
