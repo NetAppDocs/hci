@@ -5,7 +5,6 @@ lead: "NetApp HCI is a scalable, on-premises hyper converged infrastructure for 
 summary: Learn more by using NetApp HCI configuration and management documentation and NetApp HCI solutions information.
 keywords: netapp, hci, on premise
 ---
-
 = NetApp HCI Documentation
 :hardbreaks:
 :nofooter:
