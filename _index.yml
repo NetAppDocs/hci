@@ -68,7 +68,9 @@ indexpage:
           url: https://mysupport.netapp.com/site/products/all/details/netapp-hci/guideme-tab
     - title: Earlier versions
       links:
+        - title: NetApp HCI 1.9 documentation
+          url: https://docs.netapp.com/us-en/hci19/index.html
         - title: NetApp HCI 1.8 documentation
           url: https://docs.netapp.com/us-en/hci18/index.html
         - title: NetApp HCI Documentation Center
-          url: https://docs.netapp.com/hci/index.jsp
+          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62542&language=en&archive=false
