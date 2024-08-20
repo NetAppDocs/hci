@@ -29,7 +29,7 @@ You should upgrade to NetApp Element Plug-in for vCenter Server 5.0 or later to 
 With Element Plug-in for vCenter Server 4.x, when you upgrade to VMware vCenter Server 7.0 Update 3, the plug-in fails to deploy. To resolve this issue using Spring Framework 4, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
 ====
 +
-NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/media/tr-4823.pdf[two-node cluster^], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
+NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf[two-node cluster^], upgrade only one compute node at a time so that only one witness node is temporarily unavailable and cluster quorum can be maintained.
 
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#register-the-plug-in-with-vcenter[Register^] the Element Plug-in for vCenter Server again with vCenter.
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[Add clusters^] using the plug-in.
@@ -41,6 +41,6 @@ NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/us/medi
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
-* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster Technical Report^]
+* https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf[NetApp HCI Two-Node Storage Cluster Technical Report^]
 
 // 2022 FEB 03, DOC-4651

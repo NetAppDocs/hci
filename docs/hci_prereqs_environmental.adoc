@@ -15,7 +15,7 @@ keywords: netapp, hci, environment, requirements
 [.lead]
 Ensure that the power for the rack used to install NetApp HCI is supplied by AC power outlets, and that your datacenter provides adequate cooling for the size of your NetApp HCI installation.
 
-For detailed capabilities of each component of NetApp HCI, see the NetApp HCI http://www.netapp.com/us/media/ds-3881.pdf[datasheet^].
+For detailed capabilities of each component of NetApp HCI, see the NetApp HCI https://www.netapp.com/pdf.html?item=/media/7977-ds-3881.pdf[datasheet^].
 
 NOTE: The H410C compute node operates only on high-line voltage (200-240 VAC). You must ensure that the power requirements are met when you add H410C nodes to an existing NetApp HCI installation.
 
