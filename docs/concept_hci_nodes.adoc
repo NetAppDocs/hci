@@ -44,6 +44,6 @@ In a two-node storage cluster, a minimum of two Witness Nodes are deployed for r
 TIP: Learn more about link:hci_prereqs_witness_nodes.html[Witness Node resource requirements] and link:hci_prereqs_ip_address.html[Witness Node IP address requirements].
 
 == Find more information
-* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823^]
+* https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
