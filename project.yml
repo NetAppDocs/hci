@@ -17,7 +17,7 @@ settings:
       url: /hci18
 sidebar:
   entries:
-    - title: NetApp HCI Documentation
+    - title: NetApp HCI Documentation 1.10
       url: /index.html
     - title: NetApp HCI Solutions
       url: /docs/hci_solutions_index.html
