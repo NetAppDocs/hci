@@ -7,6 +7,7 @@ translate: false
 ---
 
 = Legal notices
+
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -28,6 +29,8 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-
 * link:../media/SolidFire_eSDS_12.5.pdf[Notice for NetApp SolidFire Enterprise SDS 12.5^]
 * link:../media/mNode_12.5.pdf[Notice for Management Node 12.5^]
 * link:../media/ansible-products-notice.pdf[Notice for Ansible Role for Compute Upgrades^]
+* link:../media/storage_firmware_bundle_2.182.0_notices.pdf[Notice for Storage Firmware Bundle 2.182.0^]
+* link:../media/compute_firmware_bundle_2.179.0_notices.pdf[Notice for Compute Firmware Bundle 2.179.0^] 
 * link:../media/storage_firmware_bundle_2.175.0_notices.pdf[Notice for Storage Firmware Bundle 2.175.0^]
 * link:../media/compute_firmware_bundle_2.174.0_notices.pdf[Notice for Compute Firmware Bundle 2.174.0^] 
 * link:../media/storage_firmware_bundle_2.164.0_notices.pdf[Notice for Storage Firmware Bundle 2.164^]
@@ -50,3 +53,5 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-
 * link:../media/2.20_notice.pdf[Notice for Management Services 2.20.69 (NetApp Element Plug-in for vCenter Server 4.9.14)^]
 * link:../media/2.19_notice.pdf[Notice for Management Services 2.19.48 (NetApp Element Plug-in for vCenter Server 4.8.34)^]
 * link:../media/2.18_notice.pdf[Notice for Management Services 2.18.91 (NetApp Element Plug-in for vCenter Server 4.7.10)^]
+
+// Updates for compute & storage f/w bundles, 2024-OCT-02
