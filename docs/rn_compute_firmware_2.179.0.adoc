@@ -101,7 +101,7 @@ The updated Mellanox firmware version 14.29.1016 requires a minimum version of V
 | 6.5 | 4.16.71.1
 |===
 
-IMPORTANT: For VMware ESXi version 8.0, see the following Knowledge Base article link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond[What is supported with NetApp HCI and VMware ESXi version 8.0 and beyond?^] for further details.
+IMPORTANT: For VMware ESXi version 8.0, see the following Knowledge Base article link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond[What is supported with NetApp HCI and VMware ESXi version 8.0 and beyond?^] for details.
 
 
 NOTE: The drivers for 7.0, 7.0 U1, 7.0 U2, and 7.0 U3 are available from the link:https://customerconnect.vmware.com/downloads/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/7_0[VMware vSphere download^] page.
