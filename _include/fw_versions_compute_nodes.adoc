@@ -36,6 +36,8 @@ During 11.x timeframe, Element Software was the only way to release firmware. St
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
+IMPORTANT: For VMware ESXi version 8.0, see the following Knowledge Base article link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond[What is supported with NetApp HCI and VMware ESXi version 8.0 and beyond?^] for further details.
+
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
 [cols=8*,options="header"]
@@ -50,7 +52,7 @@ h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
 h| *Compute Firmware Bundle 2.179.0*
 | 10/15/2024
-| 3B14.CO	| 4.79.07	| 14.29.1016	| 4.16.71.1	| 4.17.71.1	| 4.21.71.1
+| 3B14.CO	| 4.79.07	| 14.29.1016	| -	| - | 4.21.71.1
 h| *Compute Firmware Bundle 2.174.0*
 | 04/12/2023
 | 3B12.CO	| 4.72.07	| 14.29.1016	| 4.16.71.1	| 4.17.71.1	| 4.21.71.1
@@ -139,6 +141,8 @@ During NetApp HCI 1.0 - NetApp HCI 1.7, NetApp HCI was the only way to release f
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
+IMPORTANT: For VMware ESXi version 8.0, see the following Knowledge Base article link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond[What is supported with NetApp HCI and VMware ESXi version 8.0 and beyond?^] for further details.
+
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
 [cols=8*,options="header"]
@@ -153,7 +157,7 @@ h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
 h| *Compute Firmware Bundle 2.179.0*
 | 10/15/2024
-| 3B09 | 4.11.07 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
+| 3B09 | 4.11.07 | 14.29.1016 | - | - | 4.21.71.1
 h| *Compute Firmware Bundle 2.174.0*
 | 04/12/2023
 | 3B07 | 4.04.07 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
@@ -256,6 +260,8 @@ During NetApp HCI 1.0 - NetApp HCI 1.7, NetApp HCI was the only way to release f
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
+IMPORTANT: For VMware ESXi version 8.0, see the following Knowledge Base article link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond[What is supported with NetApp HCI and VMware ESXi version 8.0 and beyond?^] for further details.
+
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
 [cols=8*,options="header"]
@@ -270,7 +276,7 @@ h| VMware ESXi 6.7 driver version
 h| VMware ESXi 7.0 driver version
 h| *Compute Firmware Bundle 2.179.0*
 | 10/15/2024
-| NATP3.12 | 6.71.26 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
+| NATP3.12 | 6.71.26 | 14.29.1016 | - | - | 4.21.71.1
 h| *Compute Firmware Bundle 2.174.0*
 | 04/12/2023
 | NATP3.10 | 6.71.20 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
@@ -374,6 +380,8 @@ During NetApp HCI 1.0 - NetApp HCI 1.7, NetApp HCI was the only way to release f
 
 The ESXi driver that is compatible with the 10/25 GbE NIC is NOT included in Compute Firmware Bundle, it is specified for reference.
 
+IMPORTANT: For VMware ESXi version 8.0, see the following Knowledge Base article link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond[What is supported with NetApp HCI and VMware ESXi version 8.0 and beyond?^] for further details.
+
 NOTE: A dash (*-*) in the following table indicates that the particular hardware component was NOT supported in that given release vehicle.
 
 [cols=8*,options="header"]
@@ -388,7 +396,7 @@ NOTE: A dash (*-*) in the following table indicates that the particular hardware
 | VMware ESXi 7.0 driver version
 h| *Compute Firmware Bundle 2.179.0*
 | 10/15/2024
-| NAT3.6 | 07.02.00 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
+| NAT3.6 | 07.02.00 | 14.29.1016 | - | - | 4.21.71.1
 h| *Compute Firmware Bundle 2.174.0*
 | 04/12/2023
 | NAT3.4 | 07.02.00 | 14.29.1016 | 4.16.71.1 | 4.17.71.1 | 4.21.71.1
