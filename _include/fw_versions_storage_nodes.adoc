@@ -47,7 +47,7 @@ h| Drive Samsung PM9A3 (SED)
 h| Drive SK Hynix PE8010 (SED)
 h| Drive SK Hynix PE8010 (N-SED)
 h| *Storage Firmware Bundle 2.182.0*
-| 10/15/2024
+| 10/17/2024
 | 3B14	
 | 4.01.07	
 | 122	
@@ -811,7 +811,7 @@ h| Drive Toshiba Hawk-4 (SED)
 h| Drive Toshiba Hawk-4 (N-SED)
 h| Drive Samsung PM883 (SED)
 h| *Storage Firmware Bundle 2.182.0*
-| 01/15/2024
+| 10/17/2024
 | NAT3.6 
 | 07.02.00
 | 14.25.1020	
