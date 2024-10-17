@@ -46,6 +46,32 @@ h| Drive CD5 (FIPS)
 h| Drive Samsung PM9A3 (SED)
 h| Drive SK Hynix PE8010 (SED)
 h| Drive SK Hynix PE8010 (N-SED)
+h| *Storage Firmware Bundle 2.182.0*
+| 10/17/2024
+| 3B14	
+| 4.01.07	
+| 122	
+| 14.25.1020	 
+| 16.32.1010	
+| 3.1
+| 2.16
+| 26.2C
+| 1.30
+| 25.3C	
+| 1.40	
+| 1.10	
+| 3.5	
+| 2.17	
+| CXV8202Q	
+| CXV8501Q	
+| EDA5602Q	
+| EDA5900Q	
+| 0109	
+| 0109	
+| 0108	
+| GDC5A02Q	
+| 11093A10	
+| 110B3A10
 h| *Storage Firmware Bundle 2.175.0*
 | 06/15/2023
 | 3B11	
@@ -784,6 +810,18 @@ h| Drive Samsung PM863 (N-SED)
 h| Drive Toshiba Hawk-4 (SED)
 h| Drive Toshiba Hawk-4 (N-SED)
 h| Drive Samsung PM883 (SED)
+h| *Storage Firmware Bundle 2.182.0*
+| 10/17/2024
+| NAT3.6 
+| 07.02.00
+| 14.25.1020	
+| ae3b8cc	
+| 7d8422bc	
+| GXT5404Q	
+| GXT5103Q	
+| 8ENP7101	
+| 8ENP6101	
+| HXT7A04Q
 h| *Storage Firmware Bundle 2.175.0*
 | 06/15/2023
 | NAT3.4 
@@ -1359,3 +1397,5 @@ The following firmware is not managed by a Storage Firmware Bundle:
 | Power Supply	| 1.3
 | Boot Device | M161225i
 |===
+
+// Updated for Storage f/w bundle release 2.182.0, 2024-SEP-30
