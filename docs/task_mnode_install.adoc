@@ -4,7 +4,6 @@ permalink: docs/task_mnode_install.html
 summary: You can install the management node for your cluster running NetApp Element software.
 keywords: netapp, element, management node, mnode, storage, install
 ---
-
 = Install a management node
 :hardbreaks:
 :nofooter:
@@ -17,7 +16,7 @@ You can manually install the management node for your cluster running NetApp Ele
 
 This manual process is intended for NetApp HCI administrators who are not using the NetApp Deployment Engine for management node installation.
 
-.What you'll need
+.Before you begin
 
 * Your cluster version is running NetApp Element software 11.3 or later.
 * Your installation uses IPv4. The management node 11.3 does not support IPv6.
@@ -45,17 +44,10 @@ The Element 12.2 management node is an optional upgrade. It is not required for 
 
 Prior to following this procedure, you should have an understanding of  link:concept_hci_volumes.html#persistent-volumes[persistent volumes] and whether or not you want to use them. Persistent volumes are optional but recommended for management node configuration data recovery in the event of a virtual machine (VM) loss.
 
+== Step 1: Download ISO or OVA and deploy the VM
+Download the appropriate ISO or OVA from the NetApp Support Site and install the VM.
+
 .Steps
-
-. <<Download ISO or OVA and deploy the VM>>
-. <<Create the management node admin and configure the network>>
-. <<Configure time sync>>
-. <<Set up the management node>>
-. <<Configure controller assets>>
-. <<Configure compute node assets,(NetApp HCI only) Configure compute node assets>>
-
-== Download ISO or OVA and deploy the VM
-
 . Download the OVA or ISO for your installation from the https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab[NetApp HCI^] page on the NetApp Support Site:
 
 .. Select *Download Latest Release* and accept the EULA.
@@ -84,8 +76,10 @@ NOTE: Installing a management node using the image might result in 30-second del
 
 . Power on the VM for the management node after the installation completes.
 
-== Create the management node admin and configure the network
+== Step 2: Create the management node admin and configure the network
+After the VM installation completes, you create the management node admin user and configure the management node network. 
 
+.Steps
 . Using the terminal user interface (TUI), create a management node admin user.
 +
 TIP: To move through the menu options, press the Up or Down arrow keys. To move through the buttons, press Tab. To move from the buttons to the fields, press Tab. To navigate between fields, press the Up or Down arrow keys.
@@ -104,8 +98,10 @@ NOTE: A DHCP that assigns IPs with an MTU less than 1500 bytes can prevent you c
 +
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
-== Configure time sync
+== Step 3: Configure time sync
+Before setting up the management node, you sync the time between the management node and the storage cluster.
 
+.Steps
 . Ensure time is synced between the management node and the storage cluster using NTP:
 +
 NOTE: Starting with Element 12.3.1, substeps (a) to (e) are performed automatically. For management node 12.3.1 or later, proceed to <<substep_f_install_config_time_sync,substep (f)>> to complete the time sync configuration.
@@ -165,8 +161,11 @@ NOTE: Do not enable this option if you make future changes to the VM.
 
 NOTE: Do not edit the NTP after you complete the time sync configuration because it affects the NTP when you run the link:task_mnode_install.html#set-up-the-management-node[setup command] on the management node.
 
-== Set up the management node
+== Step 4: Set up the management node
 
+Configure the management node using the `setup-mnode` command.
+
+.Steps
 . Configure and run the management node setup command:
 +
 NOTE: You will be prompted to enter passwords in a secure prompt. If your cluster is behind a proxy server, you must configure the proxy settings so you can reach a public network.
@@ -208,7 +207,11 @@ NOTE: Use a unique account name for persistent volumes that is different from an
 * *--help (-h)*: Returns information about each parameter. Parameters are defined as required or optional based on initial deployment. Upgrade and redeployment parameter requirements might vary.
 .. Run the `setup-mnode` command.
 
-== Configure controller assets
+== Step 5: Configure controller assets
+
+Locate the installation ID and add a vCenter controller asset.
+
+.Steps
 
 . Locate the installation ID:
 .. From a browser, log into the management node REST API UI:
@@ -254,20 +257,36 @@ NOTE: You should create a new NetApp HCC role in vCenter to add a controller sub
 .. Enter the required payload values with type `vCenter` and vCenter credentials.
 .. Select *Execute*.
 
-== (NetApp HCI only) Configure compute node assets
+== Step 6: (NetApp HCI only) Configure compute node assets
+Add a compute node asset to the management node known assets
 
-. (For NetApp HCI only) Add a compute node asset to the management node known assets:
-.. Select *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
-.. Select *Try it out*.
-.. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
-.. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and enter the hardware tag you saved during a previous step for `hardware_tag`.
-.. Select *Execute*.
+.Steps
+. Select *POST /assets/{asset_id}/compute-nodes* to add a compute node sub-asset with credentials for the compute node asset.
+. Select *Try it out*.
+. Enter the parent base asset ID you copied to your clipboard in the *asset_id* field.
+. In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and enter the hardware tag you saved during a previous step for `hardware_tag`.
+. Select *Execute*.
 
+[[upgrade-vm-hardware]]
+== Step 7: Upgrade the VM hardware version on the management node
+If your NetApp HCI installation is running Element software 12.8, you must upgrade the VM hardware version on the management node after upgrading to vSphere to 7.x or 8.x.
 
-[discrete]
+NOTE: You can also follow these steps to upgrade the VM hardware version on a Witness Node.
+
+.Steps
+. Log in to the vSphere Web Client as a vCenter Administrator.
+. From the vSphere Client menu, select *VMs* and *Templates*.
+. Right click on the virtual machine, and select *Compatibility* > *Upgrade VM Compatibility*.
+. Select *Yes*.
+. Select ESXi 6.7 or a later version, depending on the version of your vSphere environment. 
+. Select *OK*.
+. After the upgrade completes, select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
+
 == Find more Information
 * link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
 * link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
 * link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2024 NOV 6, DOC-4773

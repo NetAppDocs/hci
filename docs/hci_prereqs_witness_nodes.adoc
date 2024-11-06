@@ -36,10 +36,14 @@ NetApp HCI supports only certain storage node models in two-node or three-node s
 ====
 *Requirement*: Configure the Witness Node VMs to use the local datastore (default set by NDE) for the compute node. You should not configure them on shared storage, such as SolidFire storage volumes. To prevent the VMs migrating automatically, set the Distributed Resource Scheduler (DRS) automation level for the Witness Node VM to *Disabled*. This prevents both Witness Nodes running on the same compute node and creating a non-high availability (HA) pair configuration.
 
-When the NetApp HCI installation process installs Witness Nodes, a VM template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see the *Redeploy Witness Nodes for two and three-node storage clusters* section link:task_hci_h410crepl.html[here^].
+When the NetApp HCI installation process installs Witness Nodes, a VM template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see link:task_hci_h410crepl.html[Redeploy Witness Nodes for two and three-node storage clusters].
+
+If your NetApp HCI installation is running Element 12.8, you must upgrade the VM hardware version on the witness node. 
 ====
 
 
 == Find more information
 *	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+
+// 2024 NOV 6, DOC-4773
