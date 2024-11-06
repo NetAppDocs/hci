@@ -38,7 +38,7 @@ NetApp HCI supports only certain storage node models in two-node or three-node s
 
 When the NetApp HCI installation process installs Witness Nodes, a VM template is stored in VMware vCenter that you can use to redeploy a Witness Node in case it is accidentally removed, lost, or corrupted. You can also use the template to redeploy a Witness Node if you need to replace a failed compute node that was hosting the Witness Node. For instructions, see link:task_hci_h410crepl.html[Redeploy Witness Nodes for two and three-node storage clusters].
 
-If your NetApp HCI installation is running Element 12.8, you must upgrade the VM hardware version on the witness node. 
+If your NetApp HCI installation is running Element 12.8, you must link:task_mnode_install.html#upgrade-vm-hardware[upgrade the VM hardware version on the witness node]. 
 ====
 
 
