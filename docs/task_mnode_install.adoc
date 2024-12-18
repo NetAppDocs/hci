@@ -269,9 +269,9 @@ Add a compute node asset to the management node known assets
 
 [[upgrade-vm-hardware]]
 == Step 7: Upgrade the VM hardware version on the management node
-If your NetApp HCI installation is running Element 12.8, link:../mnode/task_mnode_install.html[upgrade the VM hardware version] on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
+If your NetApp HCI installation is running Element 12.8, upgrade the VM hardware version on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
 
-NOTE: You can also follow these steps to upgrade the VM hardware version on a Witness Node.
+NOTE: You can also follow these steps to upgrade the VM hardware version on the Witness Nodes.
 
 .Steps
 . Log in to the vSphere Web Client as a vCenter Administrator.
