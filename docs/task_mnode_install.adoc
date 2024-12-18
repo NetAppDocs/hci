@@ -77,7 +77,7 @@ NOTE: Installing a management node using the image might result in 30-second del
 . Power on the VM for the management node after the installation completes.
 
 == Step 2: Create the management node admin and configure the network
-After the VM installation completes, you create the management node admin user and configure the management node network. 
+After the VM installation completes, create the management node admin user and configure the management node network. 
 
 .Steps
 . Using the terminal user interface (TUI), create a management node admin user.
@@ -99,7 +99,7 @@ NOTE: A DHCP that assigns IPs with an MTU less than 1500 bytes can prevent you c
 NOTE: If you need an additional NIC to isolate storage traffic, see instructions on configuring another NIC: link:task_mnode_install_add_storage_NIC.html[Configure a storage Network Interface Controller (NIC)].
 
 == Step 3: Configure time sync
-Before setting up the management node, you sync the time between the management node and the storage cluster.
+Before setting up the management node, sync the time between the management node and the storage cluster.
 
 .Steps
 . Ensure time is synced between the management node and the storage cluster using NTP:
@@ -269,7 +269,7 @@ Add a compute node asset to the management node known assets
 
 [[upgrade-vm-hardware]]
 == Step 7: Upgrade the VM hardware version on the management node
-If your NetApp HCI installation is running Element software 12.8, you must upgrade the VM hardware version on the management node after upgrading to vSphere to 7.x or 8.x.
+If your NetApp HCI installation is running Element 12.8, link:../mnode/task_mnode_install.html[upgrade the VM hardware version] on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
 
 NOTE: You can also follow these steps to upgrade the VM hardware version on a Witness Node.
 

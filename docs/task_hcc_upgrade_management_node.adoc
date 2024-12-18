@@ -53,9 +53,7 @@ TIP: To check the version of your management node, log in to your management nod
 NOTE: Persistent volumes might require an additional network adapter if eth0 is not able to be routed to the SVIP. Configure a new network adapter on the iSCSI storage network to allow the configuration of persistent volumes.
 
 * Storage nodes are running Element 12.3.x or later.
-* If your NetApp HCI installation is running Element 12.8, link:task_mnode_install.html#upgrade-vm-hardware[upgrade the VM hardware version on the management node].
-
-* Element 12.8 includes vSphere 7.x or 8. As a result, you must link:../mnode/task_mnode_install.html[upgrade the VM hardware version] on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
+* Element 12.8 includes vSphere 7.x or 8. If your NetApp HCI installation is running Element 12.8, you must link:../mnode/task_mnode_install.html[upgrade the VM hardware version] on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
 
 .Steps
 . Log in to the management node virtual machine using SSH or console access.
