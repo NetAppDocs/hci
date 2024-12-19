@@ -19,9 +19,24 @@ Upgrading the management node operating system is no longer required to upgrade 
 
 NOTE: If you require information on upgrading management nodes 12.2 or earlier, see the https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_management_node.html[NetApp HCI 1.9 management node upgrade documentation^].
 
-.Upgrade options
+[[upgrade-vm-hardware]]
+== Step 1: Upgrade the VM hardware version on the management node
+If your NetApp HCI installation is running Element 12.8, upgrade the VM hardware version on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
 
-Choose one of the following options:
+NOTE: You can also follow these steps to upgrade the VM hardware version on the Witness Nodes.
+
+.Steps
+. Log in to the vSphere Web Client as a vCenter Administrator.
+. From the vSphere Client menu, select *VMs* and *Templates*.
+. Right click on the virtual machine, and select *Compatibility* > *Upgrade VM Compatibility*.
+. Select *Yes*.
+. Select ESXi 6.7 or a later version, depending on the version of your vSphere environment. 
+. Select *OK*.
+. After the upgrade completes, select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
+]
+== Step 2: Upgrade a management node to Element 12.5 or later
+
+Choose one of the following upgrade options:
 
 * <<Upgrade a management node to version 12.5 or later from version 12.3.x or later>>
 
@@ -31,7 +46,7 @@ Choose this option if you have *sequentially* updated (1) your management servic
 
 NOTE: If you do not sequentially update your management services followed by Element storage, you cannot reconfigure reauthentication using this procedure. Follow the appropriate upgrade procedure instead.
 
-== Upgrade a management node to version 12.5 or later from version 12.3.x or later
+=== Upgrade a management node to version 12.5 or later from version 12.3.x or later
 
 You can perform an in-place upgrade of the management node from version 12.3.x or later to version 12.5 or later without needing to provision a new management node virtual machine.
 
@@ -53,7 +68,6 @@ TIP: To check the version of your management node, log in to your management nod
 NOTE: Persistent volumes might require an additional network adapter if eth0 is not able to be routed to the SVIP. Configure a new network adapter on the iSCSI storage network to allow the configuration of persistent volumes.
 
 * Storage nodes are running Element 12.3.x or later.
-* Element 12.8 includes vSphere 7.x or 8. If your NetApp HCI installation is running Element 12.8, you must link:../mnode/task_mnode_install.html[upgrade the VM hardware version] on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
 
 .Steps
 . Log in to the management node virtual machine using SSH or console access.
@@ -110,7 +124,7 @@ sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 
 IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
 
-== Reconfigure authentication using the management node REST API
+=== Reconfigure authentication using the management node REST API
 
 You can keep your existing management node if you have sequentially upgraded (1) management services and (2) Element storage. If you have followed a different upgrade order, see the procedures for in-place management node upgrades.
 

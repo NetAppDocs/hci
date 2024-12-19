@@ -267,26 +267,9 @@ Add a compute node asset to the management node known assets
 . In the payload, enter the required payload values as defined in the Model tab. Enter `ESXi Host` as `type` and enter the hardware tag you saved during a previous step for `hardware_tag`.
 . Select *Execute*.
 
-[[upgrade-vm-hardware]]
-== Step 7: Upgrade the VM hardware version on the management node
-If your NetApp HCI installation is running Element 12.8, upgrade the VM hardware version on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
-
-NOTE: You can also follow these steps to upgrade the VM hardware version on the Witness Nodes.
-
-.Steps
-. Log in to the vSphere Web Client as a vCenter Administrator.
-. From the vSphere Client menu, select *VMs* and *Templates*.
-. Right click on the virtual machine, and select *Compatibility* > *Upgrade VM Compatibility*.
-. Select *Yes*.
-. Select ESXi 6.7 or a later version, depending on the version of your vSphere environment. 
-. Select *OK*.
-. After the upgrade completes, select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
-
 == Find more Information
 * link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
 * link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
 * link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
-
-// 2024 NOV 6, DOC-4773
