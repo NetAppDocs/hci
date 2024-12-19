@@ -33,7 +33,7 @@ NOTE: You can also follow these steps to upgrade the VM hardware version on the 
 . Select ESXi 6.7 or a later version, depending on the version of your vSphere environment. 
 . Select *OK*.
 . After the upgrade completes, select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
-]
+
 == Step 2: Upgrade a management node to Element 12.5 or later
 
 Choose one of the following upgrade options:
