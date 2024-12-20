@@ -20,8 +20,8 @@ Upgrading the management node operating system is no longer required to upgrade 
 NOTE: If you require information on upgrading management nodes 12.2 or earlier, see the https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_management_node.html[NetApp HCI 1.9 management node upgrade documentation^].
 
 [[upgrade-vm-hardware]]
-== Step 1: Upgrade the VM hardware version on the management node
-If your NetApp HCI installation is running Element 12.8, upgrade the VM hardware version on the management node to ESXi 6.7 or later before you upgrade the management node. This ensures that you have a supported ESXi version.
+== Step 1: Upgrade VM hardware version on a management node
+If you are performing an in-place upgrade of an existing management node to Element 12.8, before you upgrade, you must ensure that the VM hardware version on the management node is compatible with ESXi 6.7 (VM hardware version 14) or later depending on your environment. 
 
 NOTE: You can also follow these steps to upgrade the VM hardware version on the Witness Nodes.
 
