@@ -2,9 +2,8 @@
 sidebar: sidebar
 permalink: docs/task_hcc_upgrade_management_node.html
 summary: As part of a NetApp HCI system upgrade, you upgrade the management node.
-keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x, 12.5, 12.7
+keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x, 12.5, 12.7, 12.8
 ---
-
 = Upgrade a management node
 
 :hardbreaks:
@@ -20,9 +19,24 @@ Upgrading the management node operating system is no longer required to upgrade 
 
 NOTE: If you require information on upgrading management nodes 12.2 or earlier, see the https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_management_node.html[NetApp HCI 1.9 management node upgrade documentation^].
 
-.Upgrade options
+[[upgrade-vm-hardware]]
+== Step 1: Upgrade VM hardware version on a management node
+If you are performing an in-place upgrade of an existing management node to Element 12.8, before you upgrade, you must ensure that the VM hardware version on the management node is compatible with ESXi 6.7 (VM hardware version 14) or later depending on your environment. 
 
-Choose one of the following options:
+NOTE: You can also follow these steps to upgrade the VM hardware version on the Witness Nodes.
+
+.Steps
+. Log in to the vSphere Web Client as a vCenter Administrator.
+. From the vSphere Client menu, select *VMs* and *Templates*.
+. Right click on the virtual machine, and select *Compatibility* > *Upgrade VM Compatibility*.
+. Select *Yes*.
+. Select ESXi 6.7 or a later version, depending on the version of your vSphere environment. 
+. Select *OK*.
+. After the upgrade completes, select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
+
+== Step 2: Upgrade a management node to Element 12.5 or later
+
+Choose one of the following upgrade options:
 
 * <<Upgrade a management node to version 12.5 or later from version 12.3.x or later>>
 
@@ -32,13 +46,13 @@ Choose this option if you have *sequentially* updated (1) your management servic
 
 NOTE: If you do not sequentially update your management services followed by Element storage, you cannot reconfigure reauthentication using this procedure. Follow the appropriate upgrade procedure instead.
 
-== Upgrade a management node to version 12.5 or later from version 12.3.x or later
+=== Upgrade a management node to version 12.5 or later from version 12.3.x or later
 
 You can perform an in-place upgrade of the management node from version 12.3.x or later to version 12.5 or later without needing to provision a new management node virtual machine.
 
 NOTE: The Element 12.5 or later management node is an optional upgrade. It is not required for existing deployments.
 
-.What you'll need
+.Before you begin
 
 * The RAM of the management node VM is 24GB.
 * The management node you are intending to upgrade is version 12.0 and uses IPv4 networking. The management node version 12.5 or later does not support IPv6.
@@ -110,7 +124,7 @@ sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 
 IMPORTANT: If you had previously disabled SSH functionality on the management node, you need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node. SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is enabled on the management node by default.
 
-== Reconfigure authentication using the management node REST API
+=== Reconfigure authentication using the management node REST API
 
 You can keep your existing management node if you have sequentially upgraded (1) management services and (2) Element storage. If you have followed a different upgrade order, see the procedures for in-place management node upgrades.
 
@@ -138,8 +152,9 @@ https://<ManagementNodeIP>/mnode
 +
 The response body indicates that reconfiguration was successful.
 
-[discrete]
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+
+// 2024 NOV 6, DOC-4773
