@@ -21,7 +21,7 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/commo
 include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
 * link:./media/NetApp_HCI_1.11_notice.pdf[Notice for NetApp HCI 1.11^]
-* link:../media/Element_Software_12.8.pdf[Notice for Element software 12.8^]
+* link:./media/Element_Software_12.8.pdf[Notice for Element software 12.8^]
 * link:./media/Element_Software_12.7.pdf[Notice for Element software 12.7^]
 * link:./media/Ember_OS_12.7.pdf[Notice for Ember OS 12.7^]
 * link:./media/mNode_12.7.pdf[Notice for Management Node 12.7^]
