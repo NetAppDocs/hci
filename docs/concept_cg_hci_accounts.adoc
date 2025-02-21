@@ -4,7 +4,6 @@ permalink: docs/concept_cg_hci_accounts.html
 summary: Each NetApp HCI system that has cloud services enabled is associated with a NetApp Cloud Central account.
 keywords: netapp, hci, on premise, administrator, user account, cloud services, cluster
 ---
-
 = User accounts
 :hardbreaks:
 :nofooter:
