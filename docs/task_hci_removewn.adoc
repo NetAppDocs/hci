@@ -35,7 +35,7 @@ image::vcp-witnessnode.gif[Shows the NetApp Element Management > Clusters page w
 . Confirm the action in the prompt.
 
 == Find more information
-* https://www.netapp.com/us/media/tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823^]
+* https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf[NetApp HCI Two-Node Storage Cluster | TR-4823^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

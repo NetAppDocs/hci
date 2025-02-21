@@ -11,7 +11,6 @@ keywords: netapp, hci, IP address, requirements
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, IP address, requirements
 
 [.lead]
 NetApp HCI has specific IP address requirements that depend on the size of your deployment. Note that by default the initial IP addresses you assign to each node before using the NetApp Deployment Engine to deploy the system are temporary and cannot be reused. You need to set aside a second permanent set of unused IP addresses that you can assign during final deployment.

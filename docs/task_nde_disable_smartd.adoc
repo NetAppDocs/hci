@@ -11,7 +11,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere, ESXi, comp
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 
 [.lead]
 By default, the `smartd` service periodically polls the drives in your compute nodes. You should disable this service on all compute nodes after you deploy NetApp HCI.

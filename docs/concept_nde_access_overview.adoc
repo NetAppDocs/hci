@@ -11,7 +11,6 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 To deploy NetApp HCI, you need to access the NetApp Deployment Engine on one of the NetApp H-Series storage nodes via the IPv4 address assigned to the Bond1G interface, which is the logical interface that combines ports A and B for storage nodes. This storage node becomes the controlling storage node for the deployment process. Depending on your environment, you need to either configure the IPv4 address or retrieve it from one of the storage nodes.

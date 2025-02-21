@@ -32,7 +32,7 @@ Remote replication of data can take the following forms:
 * <<Snapshot-only replication>>
 * <<Replication between Element and ONTAP clusters using SnapMirror>>
 
-See https://www.netapp.com/us/media/tr-4741.pdf[TR-4741: NetApp Element Software Remote Replication^].
+See https://www.netapp.com/pdf.html?item=/media/10607-tr4741pdf.pdf[TR-4741: NetApp Element Software Remote Replication^].
 
 
 === Synchronous and asynchronous replication between clusters

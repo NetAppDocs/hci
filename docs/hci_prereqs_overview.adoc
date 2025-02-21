@@ -11,7 +11,6 @@ keywords: netapp, hci, deployment, requirements
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, environment, requirements
 
 [.lead]
 NetApp HCI has specific physical and network requirements for proper operation in your datacenter. Ensure that you implement the following requirements and recommendations before you begin deployment.
@@ -29,6 +28,7 @@ Here are the links to the requirements and pre-deployment tasks:
 * link:hci_prereqs_environmental.html[Environmental requirements]
 * link:hci_prereqs_protection_domains.html[Protection Domains]
 * link:hci_prereqs_witness_nodes.html[Witness Node resource requirements for two-node storage clusters]
+* link:hci_prereqs_deployment_configuration_restriction.html[Deployment configuration restrictions]
 
 [discrete]
 == Find more information
