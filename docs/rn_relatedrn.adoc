@@ -4,14 +4,12 @@ permalink: docs/rn_relatedrn.html
 summary: Get links to release notes for products or components that are part of the NetApp HCI environment.
 keywords: netapp, hci, element, vcp, vcenter plugin, storage, management services, compute firmware
 ---
-
 = Additional release information
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, release notes, vcp, element, management services, firmware
 
 [.lead]
 You can find links to the latest and earlier release notes for various components of the NetApp HCI and Element storage environment.
@@ -27,7 +25,8 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes^]
 
 == NetApp Element software
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2884468[NetApp Element Software 12.7 Release Notes^] _NEW_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886996[NetApp Element Software 12.8 Release Notes^] _NEW_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2884468[NetApp Element Software 12.7 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2882193[NetApp Element Software 12.5 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2881056[NetApp Element Software 12.3.2 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2878089[NetApp Element Software 12.3.1 Release Notes^]
@@ -47,7 +46,9 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Management Services Release Notes^]
 
 == NetApp Element Plug-in for vCenter Server
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272[vCenter Plug-in 5.2 Release Notes^] _NEW_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3330676[vCenter Plug-in 5.4 Release Notes^] _NEW_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3316480[vCenter Plug-in 5.3 Release Notes^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272[vCenter Plug-in 5.2 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734[vCenter Plug-in 5.1 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[vCenter Plug-in 5.0 Release Notes^] 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458[vCenter Plug-in 4.10 Release Notes^]
@@ -60,7 +61,8 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[vCenter Plug-in 4.3 Release Notes^]
 
 == Compute firmware
-* link:rn_compute_firmware_2.174.0.html[Compute Firmware Bundle 2.174.0 Release Notes] _NEW_
+* link:rn_compute_firmware_2.179.0.html[Compute Firmware Bundle 2.179.0 Release Notes] _NEW_
+* link:rn_compute_firmware_2.174.0.html[Compute Firmware Bundle 2.174.0 Release Notes]
 * link:rn_compute_firmware_2.154.4.html[Compute Firmware Bundle 2.154.4 Release Notes]
 * link:rn_compute_firmware_2.146.html[Compute Firmware Bundle 2.146 Release Notes]
 * link:rn_compute_firmware_2.76.html[Compute Firmware Bundle 2.76 Release Notes]
@@ -69,7 +71,8 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * link:firmware_driver_versions.html[Supported firmware and ESXi driver versions]
 
 == Storage firmware
-* link:rn_storage_firmware_2.175.0.html[Storage Firmware Bundle 2.175.0 Release Notes] _NEW_
+* link:rn_storage_firmware_2.182.0.html[Storage Firmware Bundle 2.182.0 Release Notes] _NEW_
+* link:rn_storage_firmware_2.175.0.html[Storage Firmware Bundle 2.175.0 Release Notes] 
 * link:rn_storage_firmware_2.164.0.html[Storage Firmware Bundle 2.164.0 Release Notes]
 * link:rn_storage_firmware_2.150.html[Storage Firmware Bundle 2.150 Release Notes]
 * link:rn_storage_firmware_2.146.html[Storage Firmware Bundle 2.146 Release Notes]

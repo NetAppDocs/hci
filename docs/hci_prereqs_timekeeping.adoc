@@ -11,7 +11,6 @@ keywords: netapp, hci, timekeeping, NTP, DNS
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, hci, timekeeping, NTP, DNS
 
 [.lead]
 Before deployment, you need to prepare Domain Name System (DNS) records for your NetApp HCI system and gather NTP server information. NetApp HCI requires a DNS server with the correct DNS entries and an NTP server for a successful deployment.
