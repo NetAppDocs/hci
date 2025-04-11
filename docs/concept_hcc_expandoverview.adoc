@@ -10,7 +10,6 @@ keywords: NetApp, HCI, on premise, expand, hcc, hybrid cloud control
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
 You can expand your NetApp HCI system by using NetApp Hybrid Cloud Control. You can expand storage or compute resources separately or expand them at the same time.
