@@ -40,7 +40,6 @@ NOTE: When upgrading ESXi for compute nodes for a https://www.netapp.com/pdf.htm
 == Find more information
 
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 * https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf[NetApp HCI Two-Node Storage Cluster Technical Report^]
 
 // 2022 FEB 03, DOC-4651

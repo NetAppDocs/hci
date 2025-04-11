@@ -64,8 +64,6 @@ NOTE: If you turned off the *Send data to AIQ* option using NetApp Deployment En
 
 |===
 
-[discrete]
 == Find more Information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

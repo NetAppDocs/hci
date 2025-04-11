@@ -83,8 +83,6 @@ You can edit the stored user name or password for any of the existing vCenter co
 +
 The API returns updated controller information.
 
-[discrete]
 == Find more information
 * link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^] 

@@ -158,8 +158,7 @@ The response body indicates that reconfiguration was successful.
 
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
 // 2025 APR 11, DOC-4783
 // 2024 NOV 6, DOC-4773

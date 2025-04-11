@@ -194,5 +194,4 @@ If a controller asset already exists on the management node, perform the followi
 If you need to manually add a new asset or a compute node (and BMC assets) post installation, use the new HCC user account that you created in <<Set up a new user account in vCenter>>. For more information, see link:task_mnode_add_assets.html[Add compute and controller assets to the management node].
 
 == Find more information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

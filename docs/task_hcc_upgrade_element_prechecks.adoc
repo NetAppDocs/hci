@@ -198,10 +198,8 @@ Storage health checks make the following checks per cluster.
 | check_pending_nodes | Cluster | 	Verifies that there are no pending nodes on the cluster.
 |===
 
-[discrete]
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
 // 2023 FEB 23, DOC-4667
