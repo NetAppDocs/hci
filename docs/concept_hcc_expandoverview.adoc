@@ -10,7 +10,6 @@ keywords: NetApp, HCI, on premise, expand, hcc, hybrid cloud control
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: hci, cloud, onprem, documentation, help
 
 [.lead]
 You can expand your NetApp HCI system by using NetApp Hybrid Cloud Control. You can expand storage or compute resources separately or expand them at the same time.
@@ -32,10 +31,9 @@ In the following situations, you might need to manually change EVC settings in t
 
 NOTE: When expanding NetApp HCI compute or storage resources in the NetApp Deployment Engine, you should connect to the vCenter instance that manages your existing NetApp HCI compute nodes.
 
-[discrete]
+
 == Find more information
 * link:task_hcc_expand_compute.html[Expand NetApp HCI compute resources]
 * link:task_hcc_expand_storage.html[Expand NetApp HCI storage resources]
 * link:task_hcc_expand_compute_and_storage.html[Expand NetApp HCI storage and compute resources at the same time]
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

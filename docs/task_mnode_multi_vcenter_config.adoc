@@ -50,7 +50,5 @@ NOTE: As an alternative, you can wait 2 minutes for the inventory to update in N
 .. Click *Execute*.
 . Refresh the NetApp Hybrid Cloud Control browser to see the changes.
 
-[discrete]
 == Find more information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

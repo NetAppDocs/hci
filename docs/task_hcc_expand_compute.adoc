@@ -87,9 +87,7 @@ This disables real-time health and diagnostic monitoring for NetApp HCI. Disabli
 You can monitor the progress while NetApp HCI adds and configures the resources.
 . *Optional*: Verify that any new compute nodes are visible in the VMware vSphere Web Client.
 
-[discrete]
 == Find more information
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176[NetApp HCI Compute and Storage Nodes Installation and Setup Instructions^]
 * https://kb.vmware.com/s/article/1003212[VMware Knowledge Base: Enhanced vMotion Compatibility (EVC) processor support^]
 

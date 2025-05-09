@@ -32,7 +32,6 @@ This is due to the following reasons:
 
 NOTE: In a six-cable configuration, two ports are reserved for VMware ESXi and set up and managed by the NetApp Deployment Engine. You cannot access or manage these ESXi-dedicated ports using the Element TUI or the Element web GUI.
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+ 
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

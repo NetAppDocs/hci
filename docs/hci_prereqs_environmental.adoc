@@ -19,7 +19,6 @@ For detailed capabilities of each component of NetApp HCI, see the NetApp HCI ht
 
 NOTE: The H410C compute node operates only on high-line voltage (200-240 VAC). You must ensure that the power requirements are met when you add H410C nodes to an existing NetApp HCI installation.
 
-[discrete]
+
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

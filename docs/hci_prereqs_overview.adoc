@@ -30,7 +30,6 @@ Here are the links to the requirements and pre-deployment tasks:
 * link:hci_prereqs_witness_nodes.html[Witness Node resource requirements for two-node storage clusters]
 * link:hci_prereqs_deployment_configuration_restriction.html[Deployment configuration restrictions]
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+ 
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

@@ -58,7 +58,5 @@ The proxy user name, proxy password, and SSH port are optional and should be omi
 
 NOTE: You might need to reboot your management node depending on your environment.
 
-[discrete]
 == Find more information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
