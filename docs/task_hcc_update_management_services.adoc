@@ -121,11 +121,9 @@ A successful update returns a result similar to the following example:
 }
 ----
 
-[discrete]
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
 // 2022 FEB 03, DOC-4651
 // 2023 FEB 23, DOC-4667

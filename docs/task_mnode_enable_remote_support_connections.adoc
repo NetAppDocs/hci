@@ -45,7 +45,5 @@ You can open a TCP port for an SSH reverse tunnel connection with NetApp Support
 +
 NOTE: SSH remains enabled if you do not disable it. SSH enabled configuration persists on the management node through updates and upgrades until it is manually disabled.
 
-[discrete]
 == Find more information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

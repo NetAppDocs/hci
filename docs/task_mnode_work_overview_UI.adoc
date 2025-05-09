@@ -21,8 +21,6 @@ Tasks you can perform with the management node UI:
 * link:task_mnode_settings.html[Modify and test the management node network, cluster, and system settings]
 * link:task_mnode_run_system_utilities.html[Run system utilities from the management node]
 
-[discrete]
 == Find more information
 * link:task_mnode_access_ui.html[Access the management node]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

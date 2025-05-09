@@ -191,7 +191,6 @@ image::bol_list_bugs_found.png[Storage firmware bundle release notes, align="cen
 
 == Find more information
 * https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_to_update_iDRAC%2F%2FBIOS_firmware_on_SF_Series_nodes[KB: How to update iDRAC/BIOS firmware on SF Series nodes^]
 
 // New storage f/w release notes for the 23.1 stack, 2024-SEP-30

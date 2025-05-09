@@ -156,9 +156,7 @@ NOTE: Persistent volumes that are associated with management services are assign
 . In the *Actions* column in the table, expand the menu for the account and select *Delete*.
 . Confirm the deletion by selecting *Yes*.
 
-[discrete]
 == Find more information
 * link:concept_cg_hci_accounts.html[Learn about accounts]
 * http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-E93D3BAF-5A60-414D-86AF-0C1F86D43F26.html[Work with user accounts^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

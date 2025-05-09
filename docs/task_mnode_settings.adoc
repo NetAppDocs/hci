@@ -84,8 +84,6 @@ After you change management and network settings for the management node and com
 * *Total Timeout Sec*: Specify the time in seconds the ping should wait for a system response before issuing the next ping attempt or ending the process. Default: 5.
 * *Prohibit Fragmentation*: Enable the DF (do not fragment) flag for the ICMP packets.
 
-[discrete]
 == Find more Information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

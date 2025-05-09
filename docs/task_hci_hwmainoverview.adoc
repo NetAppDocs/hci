@@ -29,9 +29,7 @@ Here are the links to the hardware maintenance tasks:
 * link:task_hci_snswitches.html[Replace SN2010, SN2100, and SN2700 switches]
 * link:task_hci_2noderepl.html[Replace storage node in a two-node cluster]
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/pdf.html?item=/media/9413-tr4820pdf.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
 * https://mysupport.netapp.com/site/tools[NetApp Configuration Advisor^] 5.8.1 or later network validation tool

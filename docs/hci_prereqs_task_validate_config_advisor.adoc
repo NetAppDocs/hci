@@ -95,7 +95,6 @@ NOTE: PDF and Microsoft Word document outputs include the switch configuration i
 
 . Send the exported report file to your NetApp Professional Services representative.
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+ 
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

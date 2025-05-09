@@ -331,9 +331,7 @@ Install the GPU drivers in ESXi for each H610C node that you installed, and vali
 
 If your H615C node has GPUs in it, install GPU drivers in ESXi for each H615C node that you installed, and validate their functionality.
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
 *	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 * https://www.netapp.com/pdf.html?item=/media/9413-tr4820pdf.pdf[_TR-4820: NetApp HCI Networking Quick Planning Guide_^]
 * https://mysupport.netapp.com/site/tools[NetApp Configuration Advisor^] 5.8.1 or later network validation tool

@@ -188,8 +188,6 @@ NOTE: You can add the user name or allow the script to prompt you for the inform
 
 IMPORTANT: SSH capability that provides link:task_mnode_enable_remote_support_connections.html[NetApp Support remote support tunnel (RST) session access] is disabled by default on management nodes running management services 2.18 and later. If you had previously enabled SSH functionality on the management node, you might need to link:task_mnode_ssh_management.html[disable SSH again] on the recovered management node.
 
-[discrete]
 == Find more Information
 * link:concept_hci_volumes.html#persistent-volumes[Persistent volumes]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -23,8 +23,6 @@ With NetApp HCI, you can manage these storage assets by using the NetApp Hybrid 
 * link:task_hcc_manage_initiators.html[Create and manage initiators]
 * link:task_hcc_qos_policies.html[Create and manage volume QoS policies]
 
-[discrete]
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
