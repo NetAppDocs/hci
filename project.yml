@@ -1,6 +1,6 @@
 ---
 settings:
-  name: HCI
+  name: NetApp HCI
   internal:
     pdf_enabled: true
   prod:
