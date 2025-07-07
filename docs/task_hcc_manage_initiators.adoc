@@ -111,9 +111,7 @@ You can delete one or more initiators. When you delete an initiator, the system 
 .. Select *Actions > Delete*.
 .. Confirm the delete operation and select *Yes*.
 
-[discrete]
 == Find more information
 * link:concept_hci_initiators.html[Learn about initiators]
 * link:concept_hci_volume_access_groups.html[Learn about volume access groups]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -57,7 +57,5 @@ TIP: To view the number of storage and compute resources, look at the NetApp Hyb
 
 NOTE: To manage a compute node in NetApp Hybrid Cloud Control, you must https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/How_to_set_up_compute_node_management_in_NetApp_Hybrid_Cloud_Control[add the compute node to a vCenter host cluster^].
 
-[discrete]
 == Find more information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

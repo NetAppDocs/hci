@@ -19,6 +19,3 @@ NetApp HCI enables you to deploy cloud services across multiple public cloud pro
 
 To learn about NetApp HCI solutions, see the https://docs.netapp.com/us-en/hci-solutions/index.html[NetApp HCI Solutions documentation^].
 
-[discrete]
-== Find more information
-https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]

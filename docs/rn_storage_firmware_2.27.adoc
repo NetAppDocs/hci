@@ -205,7 +205,6 @@ The following are security vulnerabilities that have been resolved in this relea
 == Known issues
 There are no known issues in this release.
 
-[discrete]
 == Find more information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+

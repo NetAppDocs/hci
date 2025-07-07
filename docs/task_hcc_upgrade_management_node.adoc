@@ -27,12 +27,16 @@ NOTE: You can also follow these steps to upgrade the VM hardware version on the 
 
 .Steps
 . Log in to the vSphere Web Client as a vCenter Administrator.
-. From the vSphere Client menu, select *VMs* and *Templates*.
-. Right click on the virtual machine, and select *Compatibility* > *Upgrade VM Compatibility*.
+. From the vSphere Client Menu, select *VMs and Templates*.
+. Right-click on the virtual machine (VM), and select *Power* > *Shut Down Guest OS*.
++
+Wait until the VM is powered off.
+. Right-click on the VM, and select *Compatibility* > *Upgrade VM Compatibility*.
 . Select *Yes*.
 . Select ESXi 6.7 or a later version, depending on the version of your vSphere environment. 
 . Select *OK*.
-. After the upgrade completes, select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
+. After the upgrade is completed, right-click on the VM, and select *Power* > *Power On*.
+. Select *vSphere client refresh* and verify that the VM Compatibility is at the desired version.
 
 == Step 2: Upgrade a management node to Element 12.5 or later
 
@@ -154,7 +158,7 @@ The response body indicates that reconfiguration was successful.
 
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
+// 2025 APR 11, DOC-4783
 // 2024 NOV 6, DOC-4773

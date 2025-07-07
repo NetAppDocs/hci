@@ -207,8 +207,6 @@ https://<ManagementNodeIP>/storage/1/
 +
 Upon success, the API returns an empty response.
 
-[discrete]
 == Find more information
 * link:concept_hci_clusters.html#authoritative-storage-clusters[Authoritative cluster]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

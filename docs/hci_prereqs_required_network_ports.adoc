@@ -349,8 +349,8 @@ The following abbreviations are used in the table:
 |===
 
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+ 
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
 // 2023 OCT 6, DOC-4709
 // 2023 OCT 27, DOC-4713

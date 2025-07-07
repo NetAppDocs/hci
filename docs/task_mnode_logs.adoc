@@ -58,7 +58,5 @@ TIP: Use the `GET /services` command to list services on the management node.
 . Select *Execute*.
 . From the response body, select *Download* to save the log output.
 
-[discrete]
 == Find more Information
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

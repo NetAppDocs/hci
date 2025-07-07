@@ -474,8 +474,7 @@ CAUTION: During the powering on process, for approximately five minutes, the KVM
 
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^] 
 
 // 2023 FEB 23, DOC-4667
 // Added details for H300E/H500E/H700E as per gh issue #302. 2023-APR-27
