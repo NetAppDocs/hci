@@ -57,8 +57,6 @@ NOTE: If VMware Distributed Resource Scheduler (DRS) is enabled on the cluster (
 +
 The drivers for all compute nodes in the cluster are updated one node at a time while virtual machines stay online.
 
-[discrete]
 == Find more information
 
-* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

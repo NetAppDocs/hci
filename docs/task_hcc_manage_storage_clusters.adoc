@@ -151,5 +151,4 @@ NOTE: When a node is in maintenance mode, it does not accept new data. As a resu
 If you encounter errors when you are either enabling or disabling maintenance mode, a banner error displays at the top of the nodes table. For more information on the error, you can select the *Show Details* link that is provided on the banner to show what the API returns are.
 
 == Find more information
-* link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]
+link:task_mnode_manage_storage_cluster_assets.html[Create and manage storage cluster assets]

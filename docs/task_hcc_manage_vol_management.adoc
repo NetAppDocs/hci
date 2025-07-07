@@ -232,9 +232,7 @@ After storage volumes are deleted, they remain available for approximately eight
 . In the *Actions* column of the Volumes table, expand the menu for the volume and select *Purge*.
 . Confirm the process by selecting *Yes*.
 
-[discrete]
 == Find more information
 * link:concept_hci_volumes.html[Learn about volumes]
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

@@ -272,4 +272,3 @@ Add a compute node asset to the management node known assets
 * link:task_mnode_add_assets.html[Add compute and controller assets to the management node]
 * link:task_mnode_install_add_storage_NIC.html[Configure a storage NIC]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

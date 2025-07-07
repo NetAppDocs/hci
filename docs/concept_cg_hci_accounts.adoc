@@ -63,9 +63,7 @@ Volume-specific accounts are specific only to the storage cluster on which they 
 
 Volume accounts are managed within the NetApp Hybrid Cloud Control Volumes table.
 
-[discrete]
 == Find more information
 * link:task_hcc_manage_accounts.html[Manage user accounts]
 * link:concept_hci_clusters.html[Learn about clusters]
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

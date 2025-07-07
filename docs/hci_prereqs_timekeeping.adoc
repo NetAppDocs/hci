@@ -23,7 +23,6 @@ Make the following DNS and timeserver preparations before deploying NetApp HCI:
 * NetApp HCI requires a valid NTP server for timekeeping. You can use a publicly available time server if you do not have one in your environment.
 * Ensure that all storage and compute node clocks are in sync with each other, and that the clocks of devices you use to log in to NetApp HCI are in sync with the NetApp HCI nodes. 
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+ 
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]

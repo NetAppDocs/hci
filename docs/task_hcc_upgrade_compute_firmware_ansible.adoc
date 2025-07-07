@@ -33,7 +33,4 @@ In a production environment, you should update compute nodes in a cluster in a N
 
 To get started, navigate to the https://github.com/NetApp-Automation/nar_compute_firmware_upgrade[NetApp Ansible repository on GitHub^] and download the `nar_compute_nodes_firmware_upgrades` role and documentation.
 
-[discrete]
-== Find more information
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources Page^]

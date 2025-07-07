@@ -84,7 +84,6 @@ If the NetApp Deployment Engine fails because your network does not support jumb
 * link:hci_prereqs_network_configuration_option_B.html[Network configuration option B]
 * link:hci_prereqs_network_configuration_option_C.html[Network configuration option C]
 
-[discrete]
 == Find more information
-*	https://www.netapp.com/hybrid-cloud/hci-documentation/[NetApp HCI Resources page^]
-*	https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+ 
+https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
