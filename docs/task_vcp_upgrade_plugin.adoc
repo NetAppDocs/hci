@@ -16,7 +16,12 @@ For existing vSphere environments with a registered NetApp Element Plug-in for V
 
 You can update the plug-in registration on vCenter Server Virtual Appliance (vCSA) or Windows using the registration utility. You must change your registration for the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
 
-NOTE: Management services 2.22.7 includes Element Plug-in for vCenter Server 5.0 which contains the remote plug-in. If you use the Element plug-in, you should upgrade to management services 2.22.7 or later to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^].
+[NOTE]
+====
+The management services 2.27 bundle includes Element Plug-in for vCenter Server 5.5, which is only compatible with management node 12.8. When you update to management services 2.27, you must change the upgrade sequence and update the management services bundle _after_ upgrading to Element 12.8 to ensure compatibility between the management node and management services.
+
+The management services 2.22.7 bundle includes Element Plug-in for vCenter Server 5.0, which contains the remote plug-in. If you use the Element plug-in, you should upgrade to management services 2.22.7 or later to comply with the VMware directive that removes support for local plug-ins. https://kb.vmware.com/s/article/87880[Learn more^].
+====
 
 [role="tabbed-block"] 
 ==== 
@@ -24,7 +29,7 @@ NOTE: Management services 2.22.7 includes Element Plug-in for vCenter Server 5.0
 -- 
 This upgrade procedure covers the following upgrade scenarios:
 
-* You are upgrading to Element Plug-in for vCenter Server 5.4, 5.3, 5.2, 5.1, or 5.0.
+* You are upgrading to Element Plug-in for vCenter Server 5.5, 5.4, 5.3, 5.2, 5.1, or 5.0.
 * You are upgrading to an 8.0 or 7.0 HTML5 vSphere Web Client.
 +
 IMPORTANT: Element Plug-in for vCenter 5.0 or later is not compatible with vCenter Server 6.7 and 6.5.
@@ -163,11 +168,11 @@ After upgrading to NetApp Element Plug-in for vCenter Server 4.8 or later with V
 
 . Verify the version change in the *About* tab in the *NetApp Element Configuration* extension point of the plug-in.
 +
-You should see the following version details or details of a more recent version:
+You should see the following version details:
 +
 ----
-NetApp Element Plug-in Version: 5.4
-NetApp Element Plug-in Build Number: 1
+NetApp Element Plug-in Version: 5.5
+NetApp Element Plug-in Build Number: 16
 ----
 
 NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help contains the latest content, clear your browser cache after upgrading your plug-in.
@@ -176,6 +181,7 @@ NOTE: The vCenter Plug-in contains online Help content. To ensure that your Help
 
 https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^] 
 
+// 2025 APR 4, DOC-4765
 // 2024 NOV 20, DOC-4768
 // 2024 APR 4, DOC-4749
 // 2022 FEB 03, DOC-4651
