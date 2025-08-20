@@ -97,11 +97,6 @@ The following abbreviations are used in the table:
 |UI and API access to storage node and Element software upgrades
 
 |Management node
-|`23.32.54.122`, `216.240.21.15`
-|443
-|Element software upgrades
-
-|Management node
 |Baseboard management controller (BMC)
 |443
 |Hardware monitoring and inventory connection (Redfish and IPMI commands)
@@ -357,6 +352,7 @@ The following abbreviations are used in the table:
  
 https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
+// 2023 OCT 6, DOC-4709
 // 2023 OCT 27, DOC-4713
 // 2023 FEB 23, DOC-4667
 // 2022 DEC 8, DOC-4644
