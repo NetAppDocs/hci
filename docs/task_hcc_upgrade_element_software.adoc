@@ -4,7 +4,6 @@ permalink: docs/task_hcc_upgrade_element_software.html
 summary: As part of a NetApp HCI system upgrade, you upgrade NetApp Element software.
 keywords: netapp, hci, cluster, element, H610S upgrade, hcc
 ---
-
 = Upgrade Element software
 
 :hardbreaks:
@@ -16,18 +15,22 @@ keywords: netapp, hci, cluster, element, H610S upgrade, hcc
 [.lead]
 To upgrade NetApp Element software, you can use the NetApp Hybrid Cloud Control UI or REST API. Certain operations are suppressed during an Element software upgrade, such as adding and removing nodes, adding and removing drives, and commands associated with initiators, volume access groups, and virtual networks, among others.
 
-NOTE: Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 or later using NetApp Hybrid Cloud Control.
+CAUTION: 
+====
+The management services 2.27 bundle includes Element Plug-in for vCenter Server 5.5, which is only compatible with management node 12.8. When you update to management services 2.27, you must change the upgrade sequence and update the management services bundle after upgrading to Element 12.8 to ensure compatibility between the management node and management services.
 
-.What you'll need
+If you’re updating to management services 2.21.61 through 2.26.40, you must update the management services bundle before upgrading to Element 12.8.
+====
+
+.Before you begin
 
 * *Admin privileges*: You have storage cluster administrator permissions to perform the upgrade.
 * *Valid upgrade path*: You have checked upgrade path information for the Element version you are upgrading to and verified that the upgrade path is valid. See https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software%3F[NetApp KB: Upgrade matrix for storage clusters running NetApp Element Software^]
++
+Beginning with Element 12.5, NetApp HealthTools is no longer supported for Element software upgrades. If you are running Element 11.0 or 11.1, you must first link:https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools[upgrade to Element 12.3 using HealthTools^] and then upgrade to Element 12.5 or later using NetApp Hybrid Cloud Control.
 * *System time sync*: You have ensured that the system time on all nodes is synced and that NTP is correctly configured for the storage cluster and nodes. Each node must be configured with a DNS nameserver in the per-node web UI (`https://[IP address]:442`) with no unresolved cluster faults related to time skew.
 * *System ports*: If you are using NetApp Hybrid Cloud Control for upgrades, you have ensured that the necessary ports are open. See link:hci_prereqs_required_network_ports.html[Network ports] for more information.
 * *Management node*: For NetApp Hybrid Cloud Control UI and API, the management node in your environment is running version 11.3.
-* *Management services*: You have updated your management services bundle to the latest version.
-
-IMPORTANT: You must upgrade to the latest management services bundle before upgrading your Element software to version 12.5 or later. If you are updating your Element software to version 12.5 or later, you need management services 2.21.61 or later to proceed.
 
 * *Cluster health*: You have verified that the cluster is ready to be upgraded. See link:task_hcc_upgrade_element_prechecks.html[Run Element storage health checks prior to upgrading storage].
 * *Updated baseboard management controller (BMC) for H610S nodes*: You have upgraded the BMC version for your H610S nodes. See the link:rn_H610S_BMC_3.84.07.html[release notes and upgrade instructions].
@@ -343,4 +346,5 @@ CAUTION: Aborting the cluster upgrade while a node is being updated might result
 
 https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
+// 2025 APR 4, DOC-4765
 // 2023 FEB 23, DOC-4667
