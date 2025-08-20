@@ -22,7 +22,7 @@ Beginning with the Element 11.3 management node release, the management node des
 
 * You must upgrade to the latest management services bundle before upgrading your Element software.
 +
-CAUTION: The management services 2.27 bundle includes Element Plug-in for vCenter Server 5.5, which is only compatible with management node 12.8. When you update to management services 2.27, you must change the upgrade sequence and update the management services bundle _after_ upgrading to Element 12.8 to ensure compatibility between the management node and management services. 
+CAUTION: The management services 2.27 bundle includes Element Plug-in for vCenter Server 5.5, which is only compatible with management node 12.8. When you update to management services 2.27, you must change the upgrade sequence and update the management services bundle _after_ upgrading to Element 12.8 to have compatibility between the management node and management services.
 +
 [NOTE]
 ====
