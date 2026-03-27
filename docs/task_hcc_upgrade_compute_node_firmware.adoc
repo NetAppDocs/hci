@@ -474,7 +474,9 @@ CAUTION: During the powering on process, for approximately five minutes, the KVM
 
 == Find more information
 
-https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^] 
+* link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/vmnic1_and_vmnic4_is_swapped_by_compute_node_firmware_upgrade[Compute node firmware upgrade swaps vmnic1 and vmnic4^]
+* link:https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
 
+// 2026 MAR 23, DOC-4817
 // 2023 FEB 23, DOC-4667
 // Added details for H300E/H500E/H700E as per gh issue #302. 2023-APR-27
