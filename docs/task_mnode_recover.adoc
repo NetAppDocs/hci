@@ -140,7 +140,7 @@ vmware-toolbox-cmd timesync status
 +
 NOTE: Do not enable this option if you make future changes to the VM.
 
-NOTE: Do not edit the NTP after you complete the time sync configuration because it affects the NTP when you run the <<step_6_recover_mnode_redeploy,redeploy command>> on the management node.
+NOTE: Do not edit the NTP after you complete the time sync configuration because it affects the NTP when you run the <<Configure the management node,redeploy command>> on the management node.
 
 == Configure the management node
 
