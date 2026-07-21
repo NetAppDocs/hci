@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: docs/hcc_inventory.html
+permalink: docs/task_hcc_inventory.html
 summary: You can view your system's inventory in the Hybrid Cloud Control.
 keywords: netapp, hci, hcc, on premise, inventory, hybrid cloud control
 ---

@@ -89,7 +89,7 @@ CAUTION: Ensure that you do not force the cables into the ports; you might damag
 . Confirm that the compute node (host) is listed in the ESXi cluster in the VMware vSphere Web Client.
 . Perform these steps for all the compute nodes in the failed chassis.
 
-=== Move a storage node
+=== [[first-step]]Move a storage node
 Before you move the storage nodes to the new chassis, you should remove the drives, shut down the nodes correctly, and label all the components.
 
 .Steps
@@ -170,7 +170,7 @@ NOTE: See the VMware documentation for the migration steps.
 You are now ready to physically removing the node from the chassis.
 
 === Shut down a storage node
-See the steps <<move a storage node,here>>.
+See the steps <<first-step,here>>.
 
 === Remove the node
 You should ensure that you remove the node carefully from the chassis and label all the components. The steps to physically remove the node are the same for both storage and compute nodes. For a storage node, remove the drive before you remove the node.
