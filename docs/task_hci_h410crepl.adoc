@@ -747,7 +747,6 @@ After you replace the compute node, you might have to upgrade the firmware versi
 //Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
 
 == Find more information
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
 
 // 2023 NOV 6, DOC-4705

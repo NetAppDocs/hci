@@ -242,5 +242,4 @@ NOTE: It might take up to 2 minutes for the node to get added and be displayed u
 . Verify that the volumes and datastores are up and accessible.
 
 == Find more information
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]

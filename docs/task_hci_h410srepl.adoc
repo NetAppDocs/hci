@@ -231,7 +231,6 @@ IMPORTANT: Adding the drives all at once can lead to disruptions. For best pract
 . Select the drives you want to add, and select *Add*.
 
 == Find more information
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
 
 // 2023 JULY 13, DOC-4699

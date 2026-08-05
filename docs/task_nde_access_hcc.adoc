@@ -33,5 +33,4 @@ The NetApp Hybrid Cloud Control interface appears.
 NOTE: If you logged in using insufficient permissions, you will see an "Unable to load" message throughout HCC resource pages and resources will not be available.
 
 == Find more information
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]

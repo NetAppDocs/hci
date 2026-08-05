@@ -179,5 +179,4 @@ a|
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/element-software/api/reference_element_api_createclusterinterfacepreference.html[CreateClusterInterfacePreference API information in the SolidFire and Element Documentation^]
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]

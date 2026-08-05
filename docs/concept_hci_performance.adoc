@@ -88,4 +88,4 @@ NOTE: The selected cluster must be Element 10.0 or later to use QoS policies; ot
 [discrete]
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
+* https://www.netapp.com/us/documentation/hci.aspx[ources page^]

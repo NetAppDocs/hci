@@ -19,5 +19,4 @@ Use the https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Too
 
 == Find more information
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]

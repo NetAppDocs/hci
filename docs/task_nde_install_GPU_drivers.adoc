@@ -97,5 +97,4 @@ esxcli system maintenanceMode set --enable false
 .. If you are using vGPU-enabled desktops in a virtual desktop infrastructure (VDI) context, configure VMware Horizon View for NVIDIA vGPU software.
 
 == Find more information
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]
