@@ -65,7 +65,7 @@ See information about link:concept_cg_hci_accounts.html[NetApp HCI user accounts
 
 .. *QoS Policies*: You can see the QoS policy applied to the volume. A QoS policy applies standardized settings for minimum IOPS, maximum IOPS, and burst IOPS to multiple volumes.
 +
-See information about link:concept_hci_performance#qos-performance.html[performance and QoS policies].
+See information about link:concept_hci_performance.html#qos-policies[performance and QoS policies].
 
 == Find more information
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation^]

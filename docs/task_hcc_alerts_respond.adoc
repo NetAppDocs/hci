@@ -34,5 +34,5 @@ Using Cloud Central, you can set up accounts either as individual accounts or as
 
 [discrete]
 == Find more information
-* https://cloud.netapp.com/home[NetApp Cloud Central^]
+* https://www.netapp.com/google-cloud/netapp-volumes/[NetApp Cloud Central^]
 * https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation^]

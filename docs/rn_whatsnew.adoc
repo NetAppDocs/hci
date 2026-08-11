@@ -80,6 +80,5 @@ With Element 12.5, you can automate the Element software upgrade workflow by usi
 == Find more information
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[NetApp Hybrid Cloud Control and Management Services Release Notes^]
 * https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation^]
 * link:firmware_driver_versions.html[Supported firmware and ESXi driver versions for NetApp HCI and firmware versions for NetApp HCI storage nodes]

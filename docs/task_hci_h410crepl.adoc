@@ -56,7 +56,7 @@ Here are some additional tasks, which you might need to perform if your system h
 
 * link:task_hci_removewn.html[Remove Witness Nodes to free up compute resources]
 * <<Change the password if you received a replacement node with a non-standard BMC password>>
-* <<Upgrade the BMC firmware on your node>>
+* link:task_hcc_upgrade_compute_node_firmware.html[Upgrade the BMC firmware on your node]
 
 == Step 1: Prepare to replace the compute node
 You should migrate the virtual machines (VMs) hosted on the node to an available host, and remove the failed node from the cluster. You should get details about the failed node, such as serial number and networking information.
@@ -749,7 +749,6 @@ After you replace the compute node, you might have to upgrade the firmware versi
 //Log in after the upgrade, and select *System* to verify that the *Firmware Revision* version matches the version you uploaded.
 
 == Find more information
-* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
 * http://docs.netapp.com/sfe-122/index.jsp[SolidFire and Element Software Documentation Center^]
 
 // 2023 NOV 6, DOC-4705
